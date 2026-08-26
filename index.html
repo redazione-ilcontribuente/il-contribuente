@@ -1302,8 +1302,12 @@
   .sidebar-stat-value{ font-family:'Fraunces',serif; font-weight:800; font-size:23px; color:var(--ink); line-height:1; }
   .sidebar-stat-label{ font-family:'JetBrains Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); margin-top:4px; }
   @media (max-width:900px){
+    /* Su schermi stretti la prima notizia deve restare in cima: il contenuto
+       principale passa avanti nell'ordine visivo, la colonna "Approfondimenti"
+       scorre più in basso, dopo tutte le sezioni (regola di Mario, 26/8/2026). */
     .page-grid{ grid-template-columns:1fr; gap:0; }
-    .side-col{ position:static; margin-bottom:28px; }
+    .main-col{ order:1; }
+    .side-col{ order:2; position:static; margin-top:36px; margin-bottom:0; }
     .sidebar-block{
       background:linear-gradient(160deg, #eaeef3, #dde4ec);
       border-left:5px solid var(--navy);
@@ -1455,6 +1459,12 @@
       <div class="market-delta up">80.507$, +2% nelle ultime 24 ore</div>
       <div class="market-source">quotazione (cambio Eur/Usd 1,1673; Bloomberg/FirstOnline, notte 25-26/8)</div>
     </div>
+    <div class="market-card" style="border-color:#7c1d16;">
+      <div class="market-label">Palestinesi uccisi</div>
+      <div class="market-value" style="color:#e07a5f;">oltre 73.400</div>
+      <div class="market-delta up">di cui 1.296 dalla tregua dell'11 ottobre 2025</div>
+      <div class="market-source">dal 7/10/2023, dati sanitari Gaza (Al Jazeera, 25/8/2026)</div>
+    </div>
   </div>
 </div>
 <div class="wrap">
@@ -1478,11 +1488,11 @@
         <span class="sidebar-item-title">Cosa significa</span>
         <span class="sidebar-item-desc">Il piccolo glossario dei termini che tornano ogni giorno nella rassegna.</span>
       </a>
-      <a href="dazi/dazi1.html" class="sidebar-item">
+      <a href="dazi/index.html" class="sidebar-item">
         <span class="sidebar-item-title">Dazi e guerre commerciali</span>
         <span class="sidebar-item-desc">Dal "Liberation Day" 2025 alla sentenza della Corte Suprema, fino al nuovo fronte con il Canada.</span>
       </a>
-      <a href="sanzioni/sanzioni1.html" class="sidebar-item">
+      <a href="sanzioni/index.html" class="sidebar-item">
         <span class="sidebar-item-title">Sanzioni nel mondo</span>
         <span class="sidebar-item-desc">Iran, Russia, Corea del Nord: come funzionano i tre principali regimi sanzionatori attivi.</span>
       </a>
