@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanzioni nel mondo — Approfondimenti fissi | Il Contribuente</title>
+<meta name="description" content="Iran, Russia, Corea del Nord: come funzionano i tre principali regimi sanzionatori attivi, con date e cifre verificate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9da;
+    --paper2:#e4dcc7;
+    --ink:#1b1e22;
+    --ink-soft:#565c64;
+    --rule:#c7bc9f;
+    --red:#a3291f;
+    --red-deep:#7c1d16;
+    --navy:#1f3a5f;
+    --navy-deep:#122438;
+    --gold:#a97a1f;
+    --gold-deep:#7d5a13;
+    --green:#3d6b4f;
+    --green-deep:#264734;
+    --wine:#6b2438;
+    --wine-deep:#481725;
+    --card:#fdfcf7;
+    --shadow-sm:0 1px 3px rgba(27,30,34,.12);
+    --shadow-md:0 4px 16px rgba(27,30,34,.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:900px; margin:0 auto; padding:0 6vw 80px 6vw; }
+  .topnav{ max-width:900px; margin:0 auto; padding:22px 6vw 0 6vw; }
+  .topnav a{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+  }
+  .topnav a:hover{ color:var(--ink); border-bottom-color:var(--ink); }
+  .masthead{ padding:30px 6vw 34px 6vw; border-bottom:3px solid var(--ink); max-width:900px; margin:0 auto; }
+  .dossier-kicker{
+    display:inline-block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#fff;
+    background:linear-gradient(160deg,#8a3350,var(--wine-deep));
+    padding:5px 12px;
+    border-radius:4px;
+    margin-bottom:16px;
+  }
+  h1.title{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(32px,5vw,50px);
+    line-height:1.08;
+    margin:0 0 14px 0;
+    color:var(--ink);
+  }
+  .subtitle{ font-family:'Inter',sans-serif; font-size:17px; color:var(--ink-soft); max-width:640px; margin:0; }
+  .brand-line{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:20px;
+  }
+  .brand-line em{ font-style:normal; color:var(--ink); font-weight:700; }
+  .intro{ margin:36px 0 8px 0; font-size:17.5px; color:var(--ink); }
+  .intro strong{ color:var(--wine); }
+  .updated-note{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft); margin:6px 0 32px 0; }
+  .explainer-box{
+    background:linear-gradient(160deg, #f3e6c4, #ecdcb2);
+    border-left:5px solid var(--gold);
+    border-radius:10px;
+    padding:22px 26px;
+    margin:0 0 48px 0;
+    box-shadow:var(--shadow-sm);
+  }
+  .explainer-box h2{ font-family:'Fraunces',serif; font-weight:800; font-size:21px; margin:0 0 12px 0; }
+  .explainer-box p{ font-size:15.5px; margin:0 0 10px 0; }
+  .explainer-box p:last-child{ margin-bottom:0; }
+  .explainer-box strong{ color:var(--gold-deep); }
+  .country-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin:56px 0 20px 0;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--ink);
+  }
+  .country-tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.1em;
+    padding:5px 11px;
+    border-radius:4px;
+    color:#fff;
+    text-transform:uppercase;
+  }
+  .country-head h2{ font-family:'Fraunces',serif; font-weight:800; font-size:clamp(24px,3vw,32px); margin:0; }
+  .timeline{ position:relative; margin:28px 0; padding-left:28px; border-left:3px solid var(--gold); }
+  .era{ position:relative; margin-bottom:32px; }
+  .era::before{
+    content:'';
+    position:absolute; left:-35px; top:4px;
+    width:14px; height:14px; border-radius:50%;
+    background:var(--gold); border:3px solid var(--paper); box-shadow:0 0 0 2px var(--gold);
+  }
+  .era.current::before{ background:var(--red-deep); box-shadow:0 0 0 2px var(--red-deep); }
+  .era-years{
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--gold-deep); font-weight:700; margin-bottom:6px;
+  }
+  .era.current .era-years{ color:var(--red-deep); }
+  .era-title{ font-family:'Fraunces',serif; font-weight:800; font-size:21px; margin:0 0 8px 0; color:var(--ink); }
+  .era-body{ font-size:15.5px; color:var(--ink); }
+  .era-body p{ margin:0 0 10px 0; }
+  .era-numbers{
+    background:var(--card); border-left:4px solid var(--gold); border-radius:6px;
+    padding:14px 18px; margin:12px 0; box-shadow:var(--shadow-sm);
+  }
+  .era.current .era-numbers{ border-left-color:var(--red-deep); }
+  .era-numbers-label{
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;
+  }
+  .era-numbers p{ margin:0; font-size:14.5px; }
+  .era-numbers strong{ color:var(--ink); }
+  .era-source{ font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--ink-soft); margin-top:8px; }
+  .note-box{
+    background:linear-gradient(160deg, #eef3f8, #e3ebf3);
+    border-left:4px solid var(--navy);
+    border-radius:8px; padding:16px 20px; margin:20px 0; font-size:14.5px;
+  }
+  .note-box .label{
+    font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--navy); font-weight:700; margin-bottom:8px;
+  }
+  .cumulative-box{
+    background:linear-gradient(160deg,#8a3350,var(--wine-deep));
+    color:#fff; border-radius:10px; padding:26px 30px; margin:52px 0; box-shadow:var(--shadow-md);
+  }
+  .cumulative-box .k{
+    font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:#e8c9d3; margin-bottom:10px;
+  }
+  .cumulative-box p{ margin:0 0 10px 0; font-size:16px; }
+  .cumulative-box p:last-child{ margin-bottom:0; }
+  .cumulative-box strong{ color:#fff; }
+  .sources-box{ margin:44px 0 0 0; padding-top:24px; border-top:1px solid var(--rule); }
+  .sources-box h3{
+    font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 12px 0;
+  }
+  .sources-box ul{ margin:0; padding-left:18px; font-size:13.5px; color:var(--ink-soft); }
+  .sources-box li{ margin-bottom:5px; }
+  footer{ max-width:900px; margin:60px auto 0 auto; padding:28px 6vw 40px 6vw; border-top:3px solid var(--ink); }
+  .footer-back{
+    display:inline-block; margin-bottom:22px; font-family:'JetBrains Mono',monospace;
+    font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft);
+    text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:2px;
+  }
+  .footer-legal p{ font-size:12px; color:var(--ink-soft); line-height:1.6; margin:0 0 8px 0; }
+  .footer-legal p:last-child{ margin-bottom:0; }
+  @media (max-width:640px){
+    .timeline{ padding-left:20px; }
+    .era::before{ left:-27px; width:11px; height:11px; }
+    .country-head{ flex-direction:column; align-items:flex-start; gap:8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="../index.html">&larr; Il Contribuente</a>
+</div>
+
+<div class="masthead">
+  <span class="dossier-kicker">Approfondimenti fissi</span>
+  <h1 class="title">Sanzioni nel mondo</h1>
+  <p class="subtitle">Iran, Russia, Corea del Nord: come funzionano i tre principali regimi sanzionatori attivi oggi, e perché tornano così spesso nelle notizie.</p>
+  <div class="brand-line">Dossier di <em>Il Contribuente</em></div>
+</div>
+
+<div class="wrap">
+
+  <p class="intro">"Nuove sanzioni" è una delle frasi che ricorre più spesso nella rassegna quotidiana — eppure sanzioni diverse, imposte da soggetti diversi, per ragioni diverse, vengono spesso raccontate come se fossero un unico blocco indistinto. Questa pagina separa i tre dossier principali e spiega, una volta sola, come funziona davvero il meccanismo.</p>
+  <div class="updated-note">Ultimo aggiornamento: 26 agosto 2026 &middot; i nuovi sviluppi vengono comunque ripresi anche nella rassegna quotidiana quando rilevanti</div>
+
+  <div class="explainer-box">
+    <h2>Sanzioni primarie e sanzioni secondarie: la differenza</h2>
+    <p><strong>Le sanzioni primarie</strong> colpiscono direttamente i soggetti sotto giurisdizione di chi le impone: per gli Usa, cittadini e residenti americani ovunque nel mondo, chiunque si trovi sul territorio Usa, aziende americane e beni con una quota minima di componentistica statunitense. Vietano semplicemente di fare affari, direttamente, con il Paese o l'entità sanzionata.</p>
+    <p><strong>Le sanzioni secondarie</strong> sono invece extraterritoriali: colpiscono soggetti stranieri — banche, aziende, singoli individui di Paesi terzi — che continuano a intrattenere rapporti con l'entità sanzionata, a prescindere dalla loro nazionalità. Il meccanismo è una scelta forzata: o si smette di fare affari con il soggetto sanzionato, o si rischia l'esclusione dal sistema finanziario in dollari e dal mercato Usa. Un caso storico noto anche in Italia: la banca UniCredit, tramite la controllata tedesca HVB, fu multata per 1,3 miliardi di euro dall'Ofac Usa per transazioni con l'Iran tra il 2002 e il 2011.</p>
+  </div>
+
+  <div class="country-head">
+    <span class="country-tag" style="background:linear-gradient(160deg,#8a3350,var(--wine-deep));">Dossier</span>
+    <h2>Iran</h2>
+  </div>
+  <div class="timeline">
+
+    <div class="era">
+      <div class="era-years">2015 – 2018</div>
+      <h2 class="era-title">Il JCPOA e l'uscita unilaterale Usa</h2>
+      <div class="era-body">
+        <p>Il 14 luglio 2015 Iran e le grandi potenze firmano a Vienna l'accordo sul nucleare (JCPOA): in cambio di limiti verificabili al programma nucleare iraniano, vengono sollevate le sanzioni Onu, Ue e Usa, sbloccando circa 100 miliardi di dollari di asset iraniani congelati. L'8 maggio 2018 Trump annuncia il ritiro unilaterale degli Stati Uniti dall'accordo, avviando da novembre una nuova campagna di "massima pressione": ritorno delle sanzioni su petrolio e settore bancario iraniano.</p>
+      </div>
+      <div class="era-source">Fonte: Council on Foreign Relations</div>
+    </div>
+
+    <div class="era">
+      <div class="era-years">28 agosto – settembre 2025</div>
+      <h2 class="era-title">Lo "snapback" delle sanzioni Onu</h2>
+      <div class="era-body">
+        <p>Francia, Germania e Regno Unito notificano al Consiglio di sicurezza Onu la "non conformità significativa" dell'Iran al JCPOA, attivando il meccanismo di "snapback": trascorsi 30 giorni senza una nuova risoluzione che lo blocchi, tutte le sanzioni Onu pre-2015 tornano automaticamente in vigore, senza possibilità di veto. Vengono ripristinati l'embargo sulle armi, le restrizioni sul programma nucleare e missilistico, il congelamento degli asset della Banca centrale iraniana.</p>
+      </div>
+      <div class="era-source">Fonte: Consiglio dell'Unione europea, Skadden</div>
+    </div>
+
+    <div class="era">
+      <div class="era-years">28 febbraio – maggio 2026</div>
+      <h2 class="era-title">L'escalation militare e la crisi di Hormuz</h2>
+      <div class="era-body">
+        <p>Il 28 febbraio 2026 un raid aereo Usa-Israele su Teheran uccide la Guida suprema Ali Khamenei. Nelle settimane successive l'Iran risponde attaccando navi mercantili nello Stretto di Hormuz e dichiarandone il controllo, fino a una vera e propria crisi: gli Usa avviano a loro volta un blocco navale il 13 aprile, in quella che gli analisti definiscono "la più grave disruzione energetica globale dagli anni Settanta", prima che una nuova trattativa ponga fine al blocco a fine maggio.</p>
+      </div>
+      <div class="era-numbers">
+        <div class="era-numbers-label">I numeri</div>
+        <p>Petrolio Brent fino a <strong>126 dollari</strong> al barile al picco della crisi; oltre <strong>150 navi</strong> e circa <strong>20.000 marittimi</strong> bloccati nel Golfo; perdite iraniane stimate dal Pentagono in <strong>4,8 miliardi di dollari</strong> di mancati ricavi petroliferi.</p>
+        <div class="era-source">Fonti: Wikipedia (2026 Strait of Hormuz crisis), CNBC</div>
+      </div>
+    </div>
+
+    <div class="era current">
+      <div class="era-years">24 agosto 2026</div>
+      <h2 class="era-title">"Economic D-Day": le sanzioni secondarie di Bessent</h2>
+      <div class="era-body">
+        <p>Il segretario al Tesoro Usa Scott Bessent annuncia un pacchetto di sanzioni secondarie ribattezzato "economic D-Day": quasi 60 tra entità, individui e navi sanzionati per coinvolgimento in procurement nucleare, tecnologia missilistica, cyber-operazioni e contrabbando di petrolio iraniano, con l'estensione delle sanzioni a settori come criptovalute, tecnologia, oro, aviazione e trasporto marittimo. Cina, Russia, India, Pakistan, Qatar e Turchia — tra i principali partner commerciali di Teheran — sono i destinatari impliciti della pressione: riceveranno tempistiche per interrompere gli scambi con l'Iran prima di subire sanzioni dirette.</p>
+      </div>
+      <div class="note-box">
+        <div class="label">Da verificare nei prossimi giorni</div>
+        Al momento dell'annuncio non erano ancora pubblici tutti i dettagli operativi — elenco completo delle entità e scadenze precise per i singoli Paesi terzi. La rassegna quotidiana seguirà gli sviluppi.
+      </div>
+      <div class="era-source">Fonti: Nbc News, Axios</div>
+    </div>
+
+  </div>
+
+  <div class="country-head">
+    <span class="country-tag" style="background:linear-gradient(160deg,#2c5c8a,var(--navy-deep));">Dossier</span>
+    <h2>Russia</h2>
+  </div>
+  <div class="timeline">
+
+    <div class="era">
+      <div class="era-years">Febbraio – dicembre 2022</div>
+      <h2 class="era-title">Le misure base dopo l'invasione dell'Ucraina</h2>
+      <div class="era-body">
+        <p>Dopo l'invasione russa dell'Ucraina, il 24 febbraio 2022 la Banca centrale russa viene privata dell'accesso a gran parte delle proprie riserve valutarie detenute all'estero; il 27 febbraio alcune banche russe vengono escluse dal sistema di pagamenti internazionale Swift; il 5 dicembre G7 e Australia introducono un tetto (price cap) di 60 dollari al barile sul petrolio russo trasportato via mare.</p>
+      </div>
+      <div class="note-box">
+        <div class="label">Un dato molto citato, ma impreciso</div>
+        La cifra di "circa 300 miliardi di dollari" di riserve russe congelate, ricorrente nel dibattito pubblico, è una stima approssimativa: le fonti dirette riportano valori diversi (400, 630, fino a 1.000 miliardi secondo il perimetro considerato). Va quindi trattata come ordine di grandezza, non come cifra esatta.
+      </div>
+    </div>
+
+    <div class="era current">
+      <div class="era-years">Febbraio 2025 – luglio 2026</div>
+      <h2 class="era-title">I pacchetti Ue 16-21: la stretta si intensifica</h2>
+      <div class="era-body">
+        <p>Contrariamente a quanto si potrebbe pensare, le sanzioni Ue contro la Russia non si sono fermate nel 2022: l'Unione europea ha continuato ad approvare nuovi pacchetti a cadenza regolare, colpendo in particolare la cosiddetta "flotta ombra" (shadow fleet) di petroliere usate per aggirare l'embargo, il sistema bancario e l'export di gas naturale liquefatto.</p>
+      </div>
+      <div class="era-numbers">
+        <div class="era-numbers-label">I numeri (16°-21° pacchetto, 2025-2026)</div>
+        <p>Price cap sul petrolio abbassato da 60 a <strong>47,6 dollari</strong>/barile (18° pacchetto, luglio 2025); divieto totale di import di Gnl russo in Ue (19° pacchetto, ottobre 2025); transazioni bloccate con oltre <strong>50 banche russe</strong> complessivamente tra i pacchetti 19-21; centinaia di navi della flotta ombra sanzionate; sanzionate anche 14 piattaforme crypto in Paesi terzi (21° pacchetto, luglio 2026).</p>
+        <div class="era-source">Fonti: Consilium (Commissione europea), DLA Piper, Covington &amp; Burling</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="country-head">
+    <span class="country-tag" style="background:linear-gradient(160deg,#4a4f57,#22262b);">Dossier</span>
+    <h2>Corea del Nord</h2>
+  </div>
+  <div class="timeline">
+
+    <div class="era">
+      <div class="era-years">2006 – 2017</div>
+      <h2 class="era-title">Le risoluzioni del Consiglio di sicurezza Onu</h2>
+      <div class="era-body">
+        <p>A ogni test nucleare o missilistico nordcoreano corrisponde storicamente una nuova risoluzione del Consiglio di sicurezza Onu: dalla prima (2006, dopo il primo test nucleare) fino alla più recente (dicembre 2017, dopo il lancio di un missile intercontinentale), il regime sanzionatorio si è esteso progressivamente a embargo sulle armi, export di minerali e carbone, tetti alle importazioni di petrolio ed espulsione dei lavoratori nordcoreani all'estero.</p>
+      </div>
+      <div class="era-source">Fonte: Arms Control Association</div>
+    </div>
+
+    <div class="era current">
+      <div class="era-years">Dal 2024</div>
+      <h2 class="era-title">Il veto russo e la fine del monitoraggio Onu</h2>
+      <div class="era-body">
+        <p>Nel marzo 2024 la Russia pone il veto al rinnovo del mandato del Panel of Experts Onu, l'organo che dal 2009 monitorava il rispetto delle sanzioni sulla Corea del Nord: di fatto, nessun nuovo strumento di verifica Onu è stato istituito da allora, anche se le sanzioni restano formalmente in vigore. Al suo posto è nato un meccanismo informale, il Multilateral Sanctions Monitoring Team (MSMT) — una coalizione di Paesi tra cui Usa, Giappone e Corea del Sud, fuori dal quadro delle Nazioni Unite — che pubblica report periodici sull'elusione delle sanzioni, incluse le attività informatiche e i lavoratori It nordcoreani all'estero.</p>
+      </div>
+      <div class="era-source">Fonti: Pbs, 38 North, Dipartimento di Stato Usa</div>
+    </div>
+
+  </div>
+
+  <div class="cumulative-box">
+    <div class="k">Il quadro d'insieme</div>
+    <p>I tre regimi raccontano tre logiche diverse: su <strong>Iran</strong> le sanzioni Onu sono tornate in vigore in blocco (snapback) e si affiancano ora a una pressione economica extraterritoriale sempre più ampia; su <strong>Russia</strong> l'Unione europea continua ad allargare gradualmente le maglie del regime sanzionatorio, pacchetto dopo pacchetto, senza interruzioni dal 2022; su <strong>Corea del Nord</strong> il sistema di sorveglianza Onu si è di fatto fermato dal 2024 per il veto russo, sostituito da una coalizione informale di Paesi alleati.</p>
+  </div>
+
+  <div class="sources-box">
+    <h3>Fonti citate in questa pagina</h3>
+    <ul>
+      <li>Council on Foreign Relations — storia del JCPOA</li>
+      <li>Consiglio dell'Unione europea, Skadden — snapback sanzioni Onu Iran, settembre 2025</li>
+      <li>Wikipedia (2026 Strait of Hormuz crisis; 2026 United States naval blockade of Iran), CNBC — crisi militare e blocco navale 2026</li>
+      <li>Nbc News, Axios — "economic D-Day", agosto 2026</li>
+      <li>Wikipedia (Sanzioni internazionali durante il conflitto russo-ucraino) — misure base 2022</li>
+      <li>Consilium, DLA Piper, Covington &amp; Burling, Mayer Brown — pacchetti sanzioni Ue 16°-21°, 2025-2026</li>
+      <li>Arms Control Association — risoluzioni Consiglio di sicurezza Onu su Corea del Nord</li>
+      <li>Pbs, 38 North, Dipartimento di Stato Usa — fine del Panel of Experts e nascita del Msmt</li>
+      <li>ExportPlanning — differenza tra sanzioni primarie e secondarie, caso UniCredit</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <a href="../index.html" class="footer-back">&larr; Torna a Il Contribuente</a>
+  <div class="footer-legal">
+    <p>Pubblicazione indipendente e personale, priva di finalità commerciali. Non sono presenti pubblicità, abbonamenti, sponsorizzazioni o finanziamenti di alcun tipo, pubblici o privati.</p>
+    <p>I contenuti pubblicati costituiscono sintesi originali e rielaborazioni redazionali di notizie di pubblico dominio, diffuse da fonti terze regolarmente citate accanto a ciascun contenuto. Non viene riprodotto integralmente alcun testo, titolo, fotografia o materiale protetto da diritto d'autore appartenente alle fonti citate. Si invita alla consultazione delle fonti originali.</p>
+    <p>Le sintesi riportano posizioni e opinioni riconducibili esclusivamente alle fonti citate, non a chi cura questa pubblicazione, il cui intento è offrire un quadro informativo comparato e non esprimere posizioni editoriali proprie.</p>
+    <p>Eventuali richieste di rettifica o rimozione di contenuti possono essere inoltrate a <a href="mailto:ilcontribuente@gmail.com" style="color:var(--ink-soft);">ilcontribuente@gmail.com</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

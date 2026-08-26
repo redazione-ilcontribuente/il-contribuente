@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archivio — Il Contribuente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9da;
+    --paper2:#e4dcc7;
+    --ink:#1b1e22;
+    --ink-soft:#565c64;
+    --rule:#c7bc9f;
+    --red:#a3291f;
+    --red-deep:#7c1d16;
+    --navy:#1f3a5f;
+    --navy-deep:#122438;
+    --gold:#a97a1f;
+    --card:#fdfcf7;
+    --shadow-sm: 0 1px 2px rgba(20,15,5,.06), 0 2px 6px rgba(20,15,5,.05);
+    --shadow-md: 0 4px 10px rgba(20,15,5,.10), 0 10px 26px rgba(20,15,5,.10);
+    --shadow-lg: 0 10px 24px rgba(20,15,5,.16), 0 22px 50px rgba(20,15,5,.14);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;overflow-x:hidden;max-width:100%;}
+  body{
+    background: linear-gradient(180deg, var(--paper) 0%, var(--paper2) 100%);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:0 0 60px 0;
+  }
+  .masthead{
+    position:relative;
+    background: linear-gradient(160deg, #23282e 0%, #14171b 100%);
+    color:var(--paper);
+    padding:34px 6vw 24px 6vw;
+    box-shadow: var(--shadow-lg);
+  }
+  .masthead::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:0;
+    height:6px;
+    background:linear-gradient(90deg, var(--red-deep), var(--red) 40%, var(--gold) 70%, var(--navy) 100%);
+  }
+  .masthead-top{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#a8a196;
+    margin-bottom:14px;
+  }
+  .masthead-title{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(32px,7vw,56px);
+    line-height:.95;
+    margin:0;
+  }
+  .masthead-title em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--red);
+  }
+  .masthead-sub{
+    font-size:15.5px;
+    color:#9aa0aa;
+    margin-top:10px;
+    max-width:600px;
+    line-height:1.5;
+  }
+  .back-link{
+    display:inline-block;
+    margin-top:14px;
+    color:#e9e4d6;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    text-decoration:none;
+    border-bottom:1px solid #565c64;
+    padding-bottom:2px;
+  }
+  .wrap{
+    max-width:900px;
+    margin:0 auto;
+    padding:36px 6vw 0 6vw;
+  }
+  .list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .entry{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:linear-gradient(165deg, #ffffff 0%, var(--card) 60%);
+    border-radius:10px;
+    padding:18px 22px;
+    box-shadow: var(--shadow-md);
+    text-decoration:none;
+    color:var(--ink);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .entry:hover{
+    transform:translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  .entry-date{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:19px;
+  }
+  .entry-arrow{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--ink-soft);
+    font-size:14px;
+  }
+  @media (max-width:640px){
+    .masthead{ padding:22px 5vw 18px 5vw; }
+    .masthead-title{ font-size:38px; }
+    .masthead-sub{ font-size:14px; }
+    .wrap{ padding:24px 5vw 0 5vw; }
+    .entry{ padding:14px 16px; }
+    .entry-date{ font-size:16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-top">Archivio edizioni</div>
+  <h1 class="masthead-title">Il <em>Contribuente</em></h1>
+  <div class="masthead-sub">Tutte le rassegne stampa pubblicate, in ordine cronologico.</div>
+  <a href="index.html" class="back-link">&larr; Torna all'edizione di oggi</a>
+</div>
+
+<div class="wrap">
+  <div class="list">
+    <a href="rassegne/2026-08-25.html" class="entry">
+      <span class="entry-date">25 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-24.html" class="entry">
+      <span class="entry-date">24 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-23.html" class="entry">
+      <span class="entry-date">23 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-22.html" class="entry">
+      <span class="entry-date">22 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-21.html" class="entry">
+      <span class="entry-date">21 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-20.html" class="entry">
+      <span class="entry-date">20 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-19.html" class="entry">
+      <span class="entry-date">19 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-18.html" class="entry">
+      <span class="entry-date">18 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+     <a href="rassegne/2026-08-17.html" class="entry">
+      <span class="entry-date">17 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-16.html" class="entry">
+      <span class="entry-date">16 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-15.html" class="entry">
+      <span class="entry-date">15 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-14.html" class="entry">
+      <span class="entry-date">14 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-13.html" class="entry">
+      <span class="entry-date">13 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+    <a href="rassegne/2026-08-12.html" class="entry">
+      <span class="entry-date">12 Agosto 2026</span>
+      <span class="entry-arrow">Leggi &rarr;</span>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

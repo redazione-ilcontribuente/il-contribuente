@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosa significa — Il Contribuente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9da;
+    --paper2:#e4dcc7;
+    --ink:#1b1e22;
+    --ink-soft:#565c64;
+    --rule:#c7bc9f;
+    --red:#a3291f;
+    --red-deep:#7c1d16;
+    --navy:#1f3a5f;
+    --navy-deep:#122438;
+    --gold:#a97a1f;
+    --gold-deep:#7d5a13;
+    --card:#fdfcf7;
+    --shadow-sm: 0 1px 2px rgba(20,15,5,.06), 0 2px 6px rgba(20,15,5,.05);
+    --shadow-md: 0 4px 10px rgba(20,15,5,.10), 0 10px 26px rgba(20,15,5,.10);
+    --shadow-lg: 0 10px 24px rgba(20,15,5,.16), 0 22px 50px rgba(20,15,5,.14);
+    --shadow-inset: inset 0 1px 0 rgba(255,255,255,.5);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;overflow-x:hidden;max-width:100%;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 10% -10%, #f8f4e8 0%, transparent 60%),
+      radial-gradient(1000px 500px at 100% 0%, #e9e0c8 0%, transparent 55%),
+      linear-gradient(180deg, var(--paper) 0%, var(--paper2) 100%);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:0 0 70px 0;
+  }
+  .masthead{
+    position:relative;
+    background:
+      radial-gradient(900px 300px at 20% -60%, rgba(255,255,255,.08), transparent 60%),
+      linear-gradient(160deg, #23282e 0%, #14171b 100%);
+    color:var(--paper);
+    padding:44px 6vw 34px 6vw;
+    box-shadow: var(--shadow-lg);
+    overflow:hidden;
+  }
+  .masthead::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:0;
+    height:6px;
+    background:linear-gradient(90deg, var(--red-deep), var(--red) 40%, var(--gold) 70%, var(--navy) 100%);
+    box-shadow:0 2px 8px rgba(0,0,0,.4);
+  }
+  .masthead-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:10px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#a8a196;
+    margin-bottom:22px;
+    border-bottom:1px solid #34383e;
+    padding-bottom:16px;
+  }
+  .masthead-title{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(32px,5.2vw,58px);
+    line-height:.98;
+    letter-spacing:-.01em;
+    margin:0;
+    text-shadow: 0 2px 0 rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.5);
+  }
+  .masthead-title em{
+    font-style:italic;
+    font-weight:400;
+    background:linear-gradient(180deg, #d84d3e, #a3291f);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .masthead-sub{
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    color:#9aa0aa;
+    margin-top:14px;
+    max-width:760px;
+    line-height:1.6;
+  }
+  .back-link{
+    display:inline-block;
+    margin-top:16px;
+    color:#e9e4d6;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    text-decoration:none;
+    border-bottom:1px solid #565c64;
+    padding-bottom:2px;
+  }
+  .wrap{
+    max-width:1100px;
+    margin:0 auto;
+    padding:40px 6vw 0 6vw;
+  }
+  .page-head{ margin-bottom:24px; }
+  .page-tag{
+    display:inline-block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    letter-spacing:.1em;
+    padding:6px 12px;
+    border-radius:4px;
+    color:#fff;
+    text-transform:uppercase;
+    background:linear-gradient(160deg,#4a4f57,#22262b);
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.25);
+    margin-bottom:14px;
+  }
+  .page-title{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:clamp(30px,4vw,44px);
+    margin:0 0 12px 0;
+    color:var(--ink);
+  }
+  .page-note{
+    font-size:15.5px;
+    line-height:1.65;
+    color:var(--ink-soft);
+    max-width:760px;
+  }
+  /* ===== Barra ricerca + categorie, sticky ===== */
+  .toolbar{
+    position:sticky;
+    top:0;
+    z-index:20;
+    background:rgba(239,233,218,.94);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+    padding:14px 0 12px 0;
+    margin:0 0 30px 0;
+  }
+  .search-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:10px;
+    padding:10px 16px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom:12px;
+  }
+  .search-box .icon{ font-size:16px; opacity:.6; flex-shrink:0; }
+  .search-box input{
+    border:none;
+    background:none;
+    outline:none;
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    color:var(--ink);
+    width:100%;
+  }
+  .search-box input::placeholder{ color:var(--ink-soft); }
+  .cat-pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .cat-pill{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    padding:6px 13px;
+    border-radius:20px;
+    background:#fff;
+    color:var(--ink);
+    text-decoration:none;
+    border:1.5px solid var(--pill, var(--gold));
+    transition:background .18s ease, color .18s ease;
+  }
+  .cat-pill:hover{ background:var(--pill, var(--gold)); color:#fff; }
+  .no-results{
+    display:none;
+    text-align:center;
+    padding:40px 20px;
+    color:var(--ink-soft);
+    font-size:15px;
+  }
+  .no-results.show{ display:block; }
+  /* ===== Sezioni per categoria ===== */
+  .glossario-section{
+    margin-bottom:40px;
+    scroll-margin-top:150px;
+  }
+  .cat-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    border-radius:10px;
+    padding:14px 20px;
+    color:#fff;
+    margin-bottom:18px;
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.2);
+  }
+  .cat-head h2{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:22px;
+    margin:0;
+  }
+  .cat-count{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    opacity:.85;
+  }
+  .term-grid{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .term-card{
+    background:linear-gradient(165deg, #ffffff 0%, var(--card) 60%);
+    border-radius:10px;
+    padding:18px 22px;
+    box-shadow: var(--shadow-sm), var(--shadow-inset);
+    transition: box-shadow .18s ease;
+  }
+  .term-card:hover{ box-shadow: var(--shadow-md), var(--shadow-inset); }
+  .term-name{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:19px;
+    margin:0 0 8px 0;
+    color:var(--ink);
+  }
+  .term-def{
+    font-size:15px;
+    line-height:1.65;
+    color:var(--ink);
+    margin:0;
+  }
+  .term-example{
+    margin-top:12px;
+    padding:10px 14px;
+    background:rgba(169,122,31,.08);
+    border-left:3px solid var(--gold);
+    border-radius:4px;
+  }
+  .term-example-label{
+    display:block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  .term-example p{
+    font-size:13.5px;
+    line-height:1.55;
+    color:var(--ink);
+    margin:0;
+    font-style:italic;
+  }
+  .footer{
+    max-width:1100px;
+    margin:30px auto 0 auto;
+    padding:22px 6vw;
+    border-top:3px double var(--ink);
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .footer-note{
+    max-width:1100px;
+    margin:14px auto 0 auto;
+    padding:0 6vw 8px 6vw;
+    font-family:'Inter',sans-serif;
+    font-style:italic;
+    font-size:12.5px;
+    line-height:1.5;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+  @media (max-width:640px){
+    .masthead{ padding:24px 5vw 18px 5vw; }
+    .masthead-title{ font-size:36px; }
+    .wrap{ padding:24px 5vw 0 5vw; }
+    .page-title{ font-size:24px; }
+    .cat-head h2{ font-size:19px; }
+    .term-card{ padding:14px 16px; }
+    .term-name{ font-size:17px; }
+    .term-def{ font-size:14px; }
+  }
+</style>
+</head>
+<body>
+<div class="masthead">
+  <div class="masthead-top">
+    <span>Approfondimento fisso</span>
+    <span>Aggiornato al 24 Agosto 2026</span>
+  </div>
+  <h1 class="masthead-title">Cosa <em>significa</em></h1>
+  <div class="masthead-sub">Il piccolo glossario dei termini che tornano ogni giorno nella rassegna — utile se apri "Il Contribuente" senza aver seguito le settimane precedenti. Cresce ogni volta che compare un termine nuovo da spiegare.</div>
+  <a href="../index.html" class="back-link">&larr; Torna a Il Contribuente</a>
+</div>
+<div class="wrap">
+  <div class="page-head">
+    <span class="page-tag">Cosa significa</span>
+    <h2 class="page-title">32 termini, spiegati una volta sola</h2>
+    <p class="page-note">Non un dizionario generico: solo le parole ed espressioni che ricorrono davvero nella rassegna quotidiana, spiegate in modo neutro e — dove utile — agganciate a un caso concreto già raccontato.</p>
+  </div>
+
+  <div class="toolbar">
+    <div class="search-box">
+      <span class="icon">&#128269;</span>
+      <input type="text" id="searchInput" placeholder="Cerca un termine (es. dublinanti, spread, riesame)...">
+    </div>
+    <div class="cat-pills">
+      <a href="#immigrazione" class="cat-pill" style="--pill:#c79433">Immigrazione</a>
+<a href="#europa" class="cat-pill" style="--pill:#3c6e5a">Europa &amp; Mondo</a>
+<a href="#finanza" class="cat-pill" style="--pill:#9c6a2c">Finanza &amp; Economia</a>
+<a href="#italia" class="cat-pill" style="--pill:#2c5c8a">Italia &amp; Giustizia</a>
+    </div>
+  </div>
+
+  <div class="no-results" id="noResults">Nessun termine trovato. Prova con un'altra parola.</div>
+
+  
+  <div class="glossario-section" id="immigrazione">
+    <div class="cat-head" style="background:linear-gradient(160deg,#c79433,#7d5a13)">
+      <h2>Immigrazione</h2>
+      <span class="cat-count">13 termini</span>
+    </div>
+    <div class="term-grid">
+        <div class="term-card" data-term="dublinanti" data-def="i richiedenti asilo che, dopo essere entrati per la prima volta in un paese ue (spesso l'italia, per la posizione geografica), si spostano in un secondo paese membro per presentare domanda d'asilo lì. in base al regolamento di dublino, quel secondo paese può rimandarli al primo stato d'ingresso.">
+          <h3 class="term-name">Dublinanti</h3>
+          <p class="term-def">I richiedenti asilo che, dopo essere entrati per la prima volta in un Paese Ue (spesso l'Italia, per la posizione geografica), si spostano in un secondo Paese membro per presentare domanda d'asilo lì. In base al regolamento di Dublino, quel secondo Paese può rimandarli al primo Stato d'ingresso.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>La Svizzera ha prenotato i primi voli per fine agosto 2026 per riprendere i trasferimenti verso l'Italia, fermi di fatto dal dicembre 2022.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="regolamento di dublino" data-def="la norma europea (oggi alla sua terza versione, "dublino iii") che stabilisce quale stato ue è competente a esaminare una domanda d'asilo: di norma il primo paese in cui il richiedente ha messo piede, identificato tramite le impronte digitali registrate nel sistema eurodac.">
+          <h3 class="term-name">Regolamento di Dublino</h3>
+          <p class="term-def">La norma europea (oggi alla sua terza versione, "Dublino III") che stabilisce quale Stato Ue è competente a esaminare una domanda d'asilo: di norma il primo Paese in cui il richiedente ha messo piede, identificato tramite le impronte digitali registrate nel sistema Eurodac.</p>
+        </div>
+        <div class="term-card" data-term="return hub" data-def="centri esterni all'unione europea, in paesi terzi considerati sicuri, dove i migranti irregolari verrebbero trasferiti in attesa di essere rimpatriati nel proprio paese d'origine. il nuovo regolamento ue sui rimpatri li prevede come opzione per gli stati membri, sul modello dei centri italia-albania.">
+          <h3 class="term-name">Return hub</h3>
+          <p class="term-def">Centri esterni all'Unione europea, in Paesi terzi considerati sicuri, dove i migranti irregolari verrebbero trasferiti in attesa di essere rimpatriati nel proprio Paese d'origine. Il nuovo regolamento Ue sui rimpatri li prevede come opzione per gli Stati membri, sul modello dei centri Italia-Albania.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>L'Italia ha proposto di estendere il modello a livello europeo dopo la crisi di Ceuta di fine luglio 2026.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="modello albania" data-def="l'accordo tra italia e albania, in vigore dal 2024, che prevede due centri sul territorio albanese dove esaminare in via extraterritoriale le domande d'asilo di migranti soccorsi in mare da navi italiane. più volte sospeso e riattivato dopo pronunce della magistratura italiana.">
+          <h3 class="term-name">Modello Albania</h3>
+          <p class="term-def">L'accordo tra Italia e Albania, in vigore dal 2024, che prevede due centri sul territorio albanese dove esaminare in via extraterritoriale le domande d'asilo di migranti soccorsi in mare da navi italiane. Più volte sospeso e riattivato dopo pronunce della magistratura italiana.</p>
+        </div>
+        <div class="term-card" data-term="patto ue su migrazione e asilo" data-def="il nuovo quadro normativo europeo, in vigore dal 12 giugno 2026, che riforma le regole su asilo e rimpatri nell'unione: introduce un meccanismo di solidarietà tra stati membri (redistribuzione o contributi finanziari), procedure di frontiera accelerate e la possibilità di return hub in paesi terzi.">
+          <h3 class="term-name">Patto Ue su migrazione e asilo</h3>
+          <p class="term-def">Il nuovo quadro normativo europeo, in vigore dal 12 giugno 2026, che riforma le regole su asilo e rimpatri nell'Unione: introduce un meccanismo di solidarietà tra Stati membri (redistribuzione o contributi finanziari), procedure di frontiera accelerate e la possibilità di return hub in Paesi terzi.</p>
+        </div>
+        <div class="term-card" data-term="hotspot" data-def="i centri di primo soccorso e identificazione situati nei punti di sbarco (lampedusa è il principale in italia), dove i migranti vengono fotosegnalati, sottoposti a controlli sanitari e smistati verso le strutture di accoglienza sul territorio nazionale.">
+          <h3 class="term-name">Hotspot</h3>
+          <p class="term-def">I centri di primo soccorso e identificazione situati nei punti di sbarco (Lampedusa è il principale in Italia), dove i migranti vengono fotosegnalati, sottoposti a controlli sanitari e smistati verso le strutture di accoglienza sul territorio nazionale.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>L'hotspot di Lampedusa ha superato quota 370 ospiti dopo i nuovi sbarchi del weekend del 23-24 agosto 2026.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="cpr (centro di permanenza per il rimpatrio)" data-def="le strutture italiane dove vengono trattenuti, in attesa di espulsione, i migranti irregolari privi di titolo di soggiorno: la permanenza può durare fino a un massimo stabilito per legge, oggi esteso a diversi mesi.">
+          <h3 class="term-name">CPR (Centro di Permanenza per il Rimpatrio)</h3>
+          <p class="term-def">Le strutture italiane dove vengono trattenuti, in attesa di espulsione, i migranti irregolari privi di titolo di soggiorno: la permanenza può durare fino a un massimo stabilito per legge, oggi esteso a diversi mesi.</p>
+        </div>
+        <div class="term-card" data-term="protezione internazionale" data-def="lo status riconosciuto a chi fugge da persecuzioni, guerra o violenza generalizzata nel proprio paese: comprende lo status di rifugiato (convenzione di ginevra) e la protezione sussidiaria, entrambi con diritti di soggiorno di lungo periodo.">
+          <h3 class="term-name">Protezione internazionale</h3>
+          <p class="term-def">Lo status riconosciuto a chi fugge da persecuzioni, guerra o violenza generalizzata nel proprio Paese: comprende lo status di rifugiato (Convenzione di Ginevra) e la protezione sussidiaria, entrambi con diritti di soggiorno di lungo periodo.</p>
+        </div>
+        <div class="term-card" data-term="protezione speciale" data-def="una forma di tutela prevista dal diritto italiano per chi, pur non avendo i requisiti per la protezione internazionale, rischia di subire violazioni dei diritti umani fondamentali se rimpatriato: più volte modificata da leggi e decreti negli ultimi anni.">
+          <h3 class="term-name">Protezione speciale</h3>
+          <p class="term-def">Una forma di tutela prevista dal diritto italiano per chi, pur non avendo i requisiti per la protezione internazionale, rischia di subire violazioni dei diritti umani fondamentali se rimpatriato: più volte modificata da leggi e decreti negli ultimi anni.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>Il bracciante ucciso a Foggia ad agosto 2026 aveva proprio un permesso per protezione speciale.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="rimpatrio forzato vs rimpatrio volontario assistito" data-def="il rimpatrio forzato è l'espulsione coattiva, spesso con scorta, di chi non ha titolo per restare; il rimpatrio volontario assistito prevede invece che la persona accetti di tornare nel proprio paese ricevendo in cambio un sostegno economico e logistico per il reinserimento.">
+          <h3 class="term-name">Rimpatrio forzato vs rimpatrio volontario assistito</h3>
+          <p class="term-def">Il rimpatrio forzato è l'espulsione coattiva, spesso con scorta, di chi non ha titolo per restare; il rimpatrio volontario assistito prevede invece che la persona accetti di tornare nel proprio Paese ricevendo in cambio un sostegno economico e logistico per il reinserimento.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>Nel 2026 l'Italia conta 4.513 rimpatri forzati e 734 volontari assistiti da inizio anno.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="msna (minore straniero non accompagnato)" data-def="un minorenne straniero privo di genitori o tutori legali presenti sul territorio italiano: la legge prevede per questa categoria tutele rafforzate, tra cui il divieto di espulsione e l'affidamento a strutture o famiglie dedicate.">
+          <h3 class="term-name">MSNA (Minore Straniero Non Accompagnato)</h3>
+          <p class="term-def">Un minorenne straniero privo di genitori o tutori legali presenti sul territorio italiano: la legge prevede per questa categoria tutele rafforzate, tra cui il divieto di espulsione e l'affidamento a strutture o famiglie dedicate.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>Nel 2026 i MSNA sbarcati in Italia rappresentano circa il 19% del totale degli arrivi via mare.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="eurodac" data-def="la banca dati europea delle impronte digitali dei richiedenti asilo e dei migranti irregolari rintracciati alle frontiere esterne dell'ue: è lo strumento tecnico che permette di stabilire, in base al regolamento di dublino, quale sia stato il primo paese ue d'ingresso di una persona.">
+          <h3 class="term-name">Eurodac</h3>
+          <p class="term-def">La banca dati europea delle impronte digitali dei richiedenti asilo e dei migranti irregolari rintracciati alle frontiere esterne dell'Ue: è lo strumento tecnico che permette di stabilire, in base al regolamento di Dublino, quale sia stato il primo Paese Ue d'ingresso di una persona.</p>
+        </div>
+        <div class="term-card" data-term="rotte migratorie (frontex)" data-def="frontex, l'agenzia europea della guardia di frontiera e costiera, monitora gli attraversamenti irregolari suddividendoli per rotta geografica: mediterranea centrale (verso l'italia), orientale (grecia), occidentale (spagna), atlantica (canarie) e balcanica, oltre alla rotta della manica verso il regno unito.">
+          <h3 class="term-name">Rotte migratorie (Frontex)</h3>
+          <p class="term-def">Frontex, l'agenzia europea della guardia di frontiera e costiera, monitora gli attraversamenti irregolari suddividendoli per rotta geografica: mediterranea centrale (verso l'Italia), orientale (Grecia), occidentale (Spagna), atlantica (Canarie) e balcanica, oltre alla rotta della Manica verso il Regno Unito.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="glossario-section" id="europa">
+    <div class="cat-head" style="background:linear-gradient(160deg,#3c6e5a,#264734)">
+      <h2>Europa &amp; Mondo</h2>
+      <span class="cat-count">7 termini</span>
+    </div>
+    <div class="term-grid">
+        <div class="term-card" data-term="board of peace" data-def="l'organismo internazionale, con un ruolo di mediazione e monitoraggio, che ha presentato nell'agosto 2026 una roadmap in 15 punti per il disarmo di hamas e il ritiro graduale delle forze israeliane da gaza. il nome inglese, letteralmente "comitato per la pace", è quello con cui viene indicato anche nella stampa italiana.">
+          <h3 class="term-name">Board of Peace</h3>
+          <p class="term-def">L'organismo internazionale, con un ruolo di mediazione e monitoraggio, che ha presentato nell'agosto 2026 una roadmap in 15 punti per il disarmo di Hamas e il ritiro graduale delle forze israeliane da Gaza. Il nome inglese, letteralmente "comitato per la pace", è quello con cui viene indicato anche nella stampa italiana.</p>
+        </div>
+        <div class="term-card" data-term="cessate il fuoco vs tregua" data-def="nel linguaggio giornalistico i due termini vengono spesso usati come sinonimi, ma indicano gradi diversi di formalità: un cessate il fuoco è di norma un accordo esplicito e verificabile tra le parti, mentre una tregua può essere anche una sospensione più informale e fragile delle ostilità, come nel caso di gaza dall'11 ottobre 2025.">
+          <h3 class="term-name">Cessate il fuoco vs tregua</h3>
+          <p class="term-def">Nel linguaggio giornalistico i due termini vengono spesso usati come sinonimi, ma indicano gradi diversi di formalità: un cessate il fuoco è di norma un accordo esplicito e verificabile tra le parti, mentre una tregua può essere anche una sospensione più informale e fragile delle ostilità, come nel caso di Gaza dall'11 ottobre 2025.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>Dal cessate il fuoco dell'11 ottobre 2025 a Gaza si contano comunque oltre 1.200 morti.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="schengen (sospensione)" data-def="l'area schengen è lo spazio europeo di libera circolazione senza controlli sistematici alle frontiere interne. uno stato membro può sospenderla temporaneamente e reintrodurre controlli, come ha fatto l'italia con la spagna dal 1° agosto 2026 dopo la crisi migratoria di ceuta.">
+          <h3 class="term-name">Schengen (sospensione)</h3>
+          <p class="term-def">L'area Schengen è lo spazio europeo di libera circolazione senza controlli sistematici alle frontiere interne. Uno Stato membro può sospenderla temporaneamente e reintrodurre controlli, come ha fatto l'Italia con la Spagna dal 1° agosto 2026 dopo la crisi migratoria di Ceuta.</p>
+        </div>
+        <div class="term-card" data-term="ai act" data-def="il regolamento europeo sull'intelligenza artificiale, entrato in vigore progressivamente dal 2024: l'articolo 50, applicabile dall'agosto 2026, obbliga i fornitori di sistemi di ia generativa a etichettare o "firmare digitalmente" i contenuti sintetici prodotti (testi, immagini, audio, video).">
+          <h3 class="term-name">AI Act</h3>
+          <p class="term-def">Il regolamento europeo sull'intelligenza artificiale, entrato in vigore progressivamente dal 2024: l'articolo 50, applicabile dall'agosto 2026, obbliga i fornitori di sistemi di IA generativa a etichettare o "firmare digitalmente" i contenuti sintetici prodotti (testi, immagini, audio, video).</p>
+        </div>
+        <div class="term-card" data-term="patto di stabilità e crescita" data-def="le regole di bilancio dell'unione europea che fissano i tetti di riferimento per deficit pubblico (3% del pil) e debito pubblico (60% del pil) dei paesi membri, con procedure d'infrazione per chi le supera senza un piano di rientro concordato con bruxelles.">
+          <h3 class="term-name">Patto di stabilità e crescita</h3>
+          <p class="term-def">Le regole di bilancio dell'Unione europea che fissano i tetti di riferimento per deficit pubblico (3% del Pil) e debito pubblico (60% del Pil) dei Paesi membri, con procedure d'infrazione per chi le supera senza un piano di rientro concordato con Bruxelles.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>La Francia viaggia nel 2026 verso un deficit del 5% del Pil, ben oltre il limite del 3%.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="stretto di hormuz" data-def="il collo di bottiglia marittimo tra il golfo persico e l'oceano indiano, largo appena 33 km nel punto più stretto, da cui transita circa un quinto del petrolio mondiale. il conflitto usa-israele-iran, riacceso a fine febbraio 2026, ne ha reso il passaggio soggetto a forti limitazioni.">
+          <h3 class="term-name">Stretto di Hormuz</h3>
+          <p class="term-def">Il collo di bottiglia marittimo tra il Golfo Persico e l'Oceano Indiano, largo appena 33 km nel punto più stretto, da cui transita circa un quinto del petrolio mondiale. Il conflitto Usa-Israele-Iran, riacceso a fine febbraio 2026, ne ha reso il passaggio soggetto a forti limitazioni.</p>
+        </div>
+        <div class="term-card" data-term="extraprofitti (tassa sugli)" data-def="un prelievo fiscale straordinario sui profitti ritenuti eccezionali di un settore, tipicamente energetico, realizzati in un contesto di prezzi al consumo elevati piuttosto che grazie a maggiore efficienza aziendale: nell'agosto 2026 sei paesi ue, tra cui italia e germania, ne propongono una versione comunitaria sulle compagnie petrolifere.">
+          <h3 class="term-name">Extraprofitti (tassa sugli)</h3>
+          <p class="term-def">Un prelievo fiscale straordinario sui profitti ritenuti eccezionali di un settore, tipicamente energetico, realizzati in un contesto di prezzi al consumo elevati piuttosto che grazie a maggiore efficienza aziendale: nell'agosto 2026 sei Paesi Ue, tra cui Italia e Germania, ne propongono una versione comunitaria sulle compagnie petrolifere.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="glossario-section" id="finanza">
+    <div class="cat-head" style="background:linear-gradient(160deg,#9c6a2c,#5c3d14)">
+      <h2>Finanza &amp; Economia</h2>
+      <span class="cat-count">7 termini</span>
+    </div>
+    <div class="term-grid">
+        <div class="term-card" data-term="accise mobili" data-def="un meccanismo che riduce automaticamente le accise sui carburanti quando il maggior gettito iva generato dal rialzo dei prezzi internazionali del petrolio supera una certa soglia, restituendo parte di quel gettito extra ai consumatori sotto forma di sconto sul prezzo alla pompa.">
+          <h3 class="term-name">Accise mobili</h3>
+          <p class="term-def">Un meccanismo che riduce automaticamente le accise sui carburanti quando il maggior gettito Iva generato dal rialzo dei prezzi internazionali del petrolio supera una certa soglia, restituendo parte di quel gettito extra ai consumatori sotto forma di sconto sul prezzo alla pompa.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>È entrato in vigore in Italia il 25 agosto 2026, il giorno dopo la scadenza dello sconto fisso di 17 centesimi sul gasolio.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="opa / ops (offerta pubblica di acquisto / scambio)" data-def="un'offerta pubblica di acquisto (opa) è la proposta di comprare le azioni di una società quotata pagandole in denaro; un'offerta pubblica di scambio (ops) propone invece di pagarle con azioni della società offerente. le due possono anche combinarsi (opas).">
+          <h3 class="term-name">OPA / OPS (offerta pubblica di acquisto / scambio)</h3>
+          <p class="term-def">Un'offerta pubblica di acquisto (OPA) è la proposta di comprare le azioni di una società quotata pagandole in denaro; un'offerta pubblica di scambio (OPS) propone invece di pagarle con azioni della società offerente. Le due possono anche combinarsi (OPAS).</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>MPS ha lanciato due OPS, totalmente in azioni, su Banco BPM e Banca Generali per un valore complessivo di 34 miliardi di euro.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="spread" data-def="la differenza di rendimento tra un titolo di stato di un paese e un titolo di riferimento considerato più sicuro (in europa, tipicamente il bund tedesco a 10 anni): uno spread più alto significa che i mercati chiedono un rendimento maggiore per prestare denaro a quel paese, percepito come più rischioso.">
+          <h3 class="term-name">Spread</h3>
+          <p class="term-def">La differenza di rendimento tra un titolo di Stato di un Paese e un titolo di riferimento considerato più sicuro (in Europa, tipicamente il Bund tedesco a 10 anni): uno spread più alto significa che i mercati chiedono un rendimento maggiore per prestare denaro a quel Paese, percepito come più rischioso.</p>
+        </div>
+        <div class="term-card" data-term="manovra di bilancio" data-def="il provvedimento legislativo con cui ogni anno il governo italiano fissa entrate e spese pubbliche per l'anno successivo: viene presentata in autunno e deve essere approvata dal parlamento entro il 31 dicembre.">
+          <h3 class="term-name">Manovra di bilancio</h3>
+          <p class="term-def">Il provvedimento legislativo con cui ogni anno il governo italiano fissa entrate e spese pubbliche per l'anno successivo: viene presentata in autunno e deve essere approvata dal Parlamento entro il 31 dicembre.</p>
+        </div>
+        <div class="term-card" data-term="deficit e debito pubblico" data-def="il deficit (o disavanzo) è la differenza tra le spese e le entrate dello stato in un singolo anno; il debito pubblico è invece la somma di tutti i deficit accumulati nel tempo, al netto dei rimborsi. un deficit annuale, in altre parole, aumenta il debito totale.">
+          <h3 class="term-name">Deficit e debito pubblico</h3>
+          <p class="term-def">Il deficit (o disavanzo) è la differenza tra le spese e le entrate dello Stato in un singolo anno; il debito pubblico è invece la somma di tutti i deficit accumulati nel tempo, al netto dei rimborsi. Un deficit annuale, in altre parole, aumenta il debito totale.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>Il debito pubblico francese ha raggiunto 3.536 miliardi di euro, pari al 117,5% del Pil.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="jackson hole" data-def="il simposio economico che la federal reserve statunitense organizza ogni anno a fine agosto nell'omonima località del wyoming: il discorso del presidente della fed è tradizionalmente osservato con grande attenzione dai mercati per anticipare le prossime mosse sui tassi d'interesse.">
+          <h3 class="term-name">Jackson Hole</h3>
+          <p class="term-def">Il simposio economico che la Federal Reserve statunitense organizza ogni anno a fine agosto nell'omonima località del Wyoming: il discorso del presidente della Fed è tradizionalmente osservato con grande attenzione dai mercati per anticipare le prossime mosse sui tassi d'interesse.</p>
+        </div>
+        <div class="term-card" data-term="pce (personal consumption expenditures)" data-def="l'indice dei prezzi della spesa per consumi personali: è la misura dell'inflazione preferita dalla federal reserve per le proprie decisioni di politica monetaria, considerata più completa rispetto al più noto indice dei prezzi al consumo (cpi).">
+          <h3 class="term-name">PCE (Personal Consumption Expenditures)</h3>
+          <p class="term-def">L'indice dei prezzi della spesa per consumi personali: è la misura dell'inflazione preferita dalla Federal Reserve per le proprie decisioni di politica monetaria, considerata più completa rispetto al più noto indice dei prezzi al consumo (CPI).</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="glossario-section" id="italia">
+    <div class="cat-head" style="background:linear-gradient(160deg,#2c5c8a,#122438)">
+      <h2>Italia &amp; Giustizia</h2>
+      <span class="cat-count">5 termini</span>
+    </div>
+    <div class="term-grid">
+        <div class="term-card" data-term="riesame" data-def="il tribunale, collegiale, a cui una persona sottoposta a una misura restrittiva della libertà (come un fermo o un arresto) può chiedere di verificare se quella misura è stata applicata correttamente, entro tempi stretti fissati dalla legge.">
+          <h3 class="term-name">Riesame</h3>
+          <p class="term-def">Il tribunale, collegiale, a cui una persona sottoposta a una misura restrittiva della libertà (come un fermo o un arresto) può chiedere di verificare se quella misura è stata applicata correttamente, entro tempi stretti fissati dalla legge.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>Valter Lavitola è comparso davanti ai giudici del Riesame per fornire "puntualizzazioni" sulla propria confessione.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="fermo, arresto, custodia cautelare" data-def="il fermo è una misura d'urgenza applicata dalla polizia giudiziaria prima ancora di un provvedimento del giudice; l'arresto può essere in flagranza di reato o su ordine del giudice; la custodia cautelare è la misura, disposta da un giudice, che tiene una persona in carcere durante le indagini o il processo, prima di una condanna definitiva.">
+          <h3 class="term-name">Fermo, arresto, custodia cautelare</h3>
+          <p class="term-def">Il fermo è una misura d'urgenza applicata dalla polizia giudiziaria prima ancora di un provvedimento del giudice; l'arresto può essere in flagranza di reato o su ordine del giudice; la custodia cautelare è la misura, disposta da un giudice, che tiene una persona in carcere durante le indagini o il processo, prima di una condanna definitiva.</p>
+        </div>
+        <div class="term-card" data-term="querela vs denuncia" data-def="la denuncia riguarda reati perseguibili d'ufficio, cioè lo stato procede comunque anche senza l'iniziativa della persona offesa; la querela è invece necessaria per i reati perseguibili solo su richiesta della parte lesa (come la diffamazione), e può anche essere ritirata.">
+          <h3 class="term-name">Querela vs denuncia</h3>
+          <p class="term-def">La denuncia riguarda reati perseguibili d'ufficio, cioè lo Stato procede comunque anche senza l'iniziativa della persona offesa; la querela è invece necessaria per i reati perseguibili solo su richiesta della parte lesa (come la diffamazione), e può anche essere ritirata.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>Sigfrido Ranucci aveva annunciato una querela contro la giudice Clementina Forleo, poi ritirata.</p>
+          </div>
+        </div>
+        <div class="term-card" data-term="ammonimento" data-def="una misura di prevenzione, disposta dal questore su richiesta della vittima, che diffida formalmente una persona dal tenere comportamenti di stalking o violenza domestica: precede e può accompagnarsi a misure penali più severe se il comportamento persiste.">
+          <h3 class="term-name">Ammonimento</h3>
+          <p class="term-def">Una misura di prevenzione, disposta dal questore su richiesta della vittima, che diffida formalmente una persona dal tenere comportamenti di stalking o violenza domestica: precede e può accompagnarsi a misure penali più severe se il comportamento persiste.</p>
+        </div>
+        <div class="term-card" data-term="braccialetto elettronico" data-def="un dispositivo di sorveglianza che segnala alle forze dell'ordine se la persona sottoposta a una misura cautelare (ad esempio il divieto di avvicinamento) si avvicina alla vittima oltre una distanza stabilita dal giudice: la sua assenza, quando pure richiesta, è spesso al centro delle polemiche sui casi di femminicidio con denunce pregresse.">
+          <h3 class="term-name">Braccialetto elettronico</h3>
+          <p class="term-def">Un dispositivo di sorveglianza che segnala alle forze dell'ordine se la persona sottoposta a una misura cautelare (ad esempio il divieto di avvicinamento) si avvicina alla vittima oltre una distanza stabilita dal giudice: la sua assenza, quando pure richiesta, è spesso al centro delle polemiche sui casi di femminicidio con denunce pregresse.</p>
+          <div class="term-example">
+            <span class="term-example-label">L'hai visto quando</span>
+            <p>Tania Terrin, uccisa dall'ex compagno dopo sette denunce, non aveva ricevuto un braccialetto elettronico per il controllo dell'aggressore.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <span>Cosa significa — approfondimento a cura de Il Contribuente</span>
+  <span>Aggiornato: 24 Agosto 2026</span>
+</div>
+<div class="footer-note">Le definizioni sono scritte in modo divulgativo e neutro, per orientare la lettura della rassegna: per un uso legale o tecnico rigoroso fai sempre riferimento alle fonti normative ufficiali. Il glossario viene aggiornato ogni volta che un termine nuovo, meritevole di spiegazione, compare nella rassegna quotidiana.</div>
+
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const termCards = document.querySelectorAll('.term-card');
+  const sections = document.querySelectorAll('.glossario-section');
+  const noResults = document.getElementById('noResults');
+
+  searchInput.addEventListener('input', function(){
+    const q = searchInput.value.trim().toLowerCase();
+    let anyVisible = false;
+    sections.forEach(function(sec){
+      let sectionHasMatch = false;
+      sec.querySelectorAll('.term-card').forEach(function(card){
+        const match = !q || card.dataset.term.includes(q) || card.dataset.def.includes(q);
+        card.style.display = match ? '' : 'none';
+        if (match) { sectionHasMatch = true; anyVisible = true; }
+      });
+      sec.style.display = sectionHasMatch ? '' : 'none';
+    });
+    noResults.classList.toggle('show', !anyVisible);
+  });
+</script>
+</body>
+</html>

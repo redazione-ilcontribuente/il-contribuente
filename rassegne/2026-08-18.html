@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rassegna Stampa — 18 Agosto 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9da;
+    --paper2:#e4dcc7;
+    --ink:#1b1e22;
+    --ink-soft:#565c64;
+    --rule:#c7bc9f;
+    --red:#a3291f;
+    --red-deep:#7c1d16;
+    --navy:#1f3a5f;
+    --navy-deep:#122438;
+    --gold:#a97a1f;
+    --gold-deep:#7d5a13;
+    --green:#3d6b4f;
+    --green-deep:#264734;
+    --wine:#6b2438;
+    --wine-deep:#481725;
+    --blue-l:#1c4f8a;
+    --blue-l-deep:#0f345e;
+    --red-r:#b3392a;
+    --red-r-deep:#832216;
+    --card:#fdfcf7;
+    --shadow-sm: 0 1px 2px rgba(20,15,5,.06), 0 2px 6px rgba(20,15,5,.05);
+    --shadow-md: 0 4px 10px rgba(20,15,5,.10), 0 10px 26px rgba(20,15,5,.10);
+    --shadow-lg: 0 10px 24px rgba(20,15,5,.16), 0 22px 50px rgba(20,15,5,.14);
+    --shadow-inset: inset 0 1px 0 rgba(255,255,255,.5);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;overflow-x:hidden;max-width:100%;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 10% -10%, #f8f4e8 0%, transparent 60%),
+      radial-gradient(1000px 500px at 100% 0%, #e9e0c8 0%, transparent 55%),
+      linear-gradient(180deg, var(--paper) 0%, var(--paper2) 100%);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:0 0 70px 0;
+  }
+  .masthead{
+    position:relative;
+    background:
+      radial-gradient(900px 300px at 20% -60%, rgba(255,255,255,.08), transparent 60%),
+      linear-gradient(160deg, #23282e 0%, #14171b 100%);
+    color:var(--paper);
+    padding:52px 6vw 40px 6vw;
+    box-shadow: var(--shadow-lg);
+    overflow:hidden;
+  }
+  .masthead::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:0;
+    height:6px;
+    background:linear-gradient(90deg, var(--red-deep), var(--red) 40%, var(--gold) 70%, var(--navy) 100%);
+    box-shadow:0 2px 8px rgba(0,0,0,.4);
+  }
+  .masthead-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:10px;
+    min-width:0;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#a8a196;
+    margin-bottom:26px;
+    border-bottom:1px solid #34383e;
+    padding-bottom:18px;
+  }
+  .masthead-title{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(40px,6.4vw,72px);
+    line-height:.95;
+    letter-spacing:-.01em;
+    margin:0;
+    text-shadow: 0 2px 0 rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.5);
+  }
+  .masthead-title em{
+    font-style:italic;
+    font-weight:400;
+    background:linear-gradient(180deg, #d84d3e, #a3291f);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .masthead-sub{
+    font-family:'Inter',sans-serif;
+    font-size:17px;
+    color:#9aa0aa;
+    margin-top:18px;
+    max-width:700px;
+    line-height:1.6;
+  }
+  .masthead-badges{
+    display:flex; gap:8px; margin-top:26px; flex-wrap:wrap;
+  }
+  .badge{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:5px 10px;
+    border-radius:3px;
+    background:linear-gradient(180deg, #2e333a, #21252b);
+    color:#c9c0a8;
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.06);
+    border:1px solid #3a3f47;
+    text-decoration:none;
+    display:inline-block;
+    cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+  }
+  .badge:hover, .badge:focus-visible, .badge:active{
+    background:linear-gradient(180deg, #c99a3a, var(--gold));
+    color:#fff;
+    border-color:var(--gold-deep);
+    transform:translateY(-2px);
+    box-shadow: 0 6px 14px rgba(169,122,31,.35), inset 0 1px 0 rgba(255,255,255,.3);
+  }
+  .back-link{
+    display:inline-block;
+    margin-top:18px;
+    color:#e9e4d6;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    text-decoration:none;
+    border-bottom:1px solid #565c64;
+    padding-bottom:2px;
+  }
+  .ticker-wrap{
+    background:linear-gradient(180deg, var(--red), var(--red-deep));
+    color:#fff;
+    overflow:hidden;
+    white-space:nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.15);
+    position:relative;
+    z-index:2;
+  }
+  .ticker{
+    display:inline-block;
+    padding:10px 0;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    letter-spacing:.03em;
+    font-weight:600;
+    animation:scroll 56s linear infinite;
+  }
+  .ticker span{margin-right:52px;}
+  @keyframes scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+  .market-bar{
+    position:sticky;
+    top:0;
+    z-index:30;
+    background:linear-gradient(160deg, #1c1f24, #0f1114);
+    border-bottom:2px solid var(--gold);
+    box-shadow: 0 4px 14px rgba(0,0,0,.3);
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  .market-bar-inner{
+    display:flex;
+    align-items:stretch;
+    justify-content:center;
+    gap:16px;
+    padding:22px 6vw;
+    white-space:nowrap;
+    flex-wrap:wrap;
+    perspective:900px;
+  }
+  .market-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:4px;
+    background:linear-gradient(160deg, #33373e, #1a1d21);
+    border:1px solid #3a3f47;
+    border-radius:12px;
+    padding:12px 20px;
+    flex-shrink:0;
+    min-width:120px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.08) inset,
+      0 -14px 18px -14px rgba(0,0,0,.55) inset,
+      0 4px 8px rgba(0,0,0,.35),
+      0 14px 26px rgba(0,0,0,.35);
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .market-card:hover{
+    transform:perspective(700px) rotateX(4deg) translateY(-6px);
+    border-color:var(--gold);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.14) inset,
+      0 -14px 18px -14px rgba(0,0,0,.55) inset,
+      0 6px 14px rgba(0,0,0,.4),
+      0 26px 44px rgba(0,0,0,.45),
+      0 0 0 1px rgba(169,122,31,.35),
+      0 12px 26px rgba(169,122,31,.28);
+  }
+  .market-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#8a8f97;
+  }
+  .market-value{
+    font-family:'JetBrains Mono',monospace;
+    font-size:20px;
+    font-weight:700;
+    color:#e9e4d6;
+    line-height:1.2;
+  }
+  .market-delta{ font-size:11.5px; }
+  .market-delta.up{ color:#e07a5f; }
+  .market-delta.down{ color:#7fb787; }
+  .market-source{
+    font-family:'Inter',sans-serif;
+    font-size:9.5px;
+    color:#6b7178;
+    line-height:1.3;
+    max-width:130px;
+    white-space:normal;
+  }
+  .quote-day{
+    max-width:1260px;
+    margin:0 auto 24px auto;
+    padding:0 6vw;
+  }
+  .quote-day-inner{
+    background:linear-gradient(160deg, #f3e6c4, #ecdcb2);
+    border-left:5px solid var(--gold);
+    border-radius:8px;
+    padding:22px 28px;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,.4);
+  }
+  .quote-day-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:8px;
+  }
+  .quote-day-text{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:20px;
+    line-height:1.4;
+    color:var(--ink);
+    margin-bottom:8px;
+  }
+  .quote-day-author{
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  @media (max-width:640px){
+    .quote-day-inner{ padding:16px 18px; }
+    .quote-day-text{ font-size:16px; }
+  }
+  .toc{
+    max-width:1260px;
+    margin:0 auto 44px auto;
+    padding:0 6vw;
+    perspective:1000px;
+  }
+  .toc-inner{
+    background:linear-gradient(165deg, #ffffff 0%, var(--card) 60%);
+    border-radius:18px;
+    padding:20px 26px;
+    box-shadow:
+      0 1px 1px rgba(255,255,255,.8) inset,
+      0 1px 2px rgba(20,15,5,.05),
+      0 12px 26px rgba(20,15,5,.10),
+      0 30px 60px -20px rgba(20,15,5,.22);
+    border:1px solid rgba(255,255,255,.6);
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .toc-inner:hover{
+    transform:translateY(-3px);
+    box-shadow:
+      0 1px 1px rgba(255,255,255,.8) inset,
+      0 1px 2px rgba(20,15,5,.06),
+      0 16px 32px rgba(20,15,5,.12),
+      0 40px 72px -20px rgba(20,15,5,.26);
+  }
+  .toc-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    flex-shrink:0;
+  }
+  .toc-links{
+    display:flex;
+    gap:9px;
+    flex-wrap:wrap;
+  }
+  .toc-link{
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink);
+    background:linear-gradient(180deg, #fdfcf8 0%, var(--paper2) 100%);
+    border-radius:20px;
+    padding:7px 16px;
+    text-decoration:none;
+    border:1px solid rgba(199,188,159,.55);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.8) inset,
+      0 -3px 5px rgba(20,15,5,.06) inset,
+      0 2px 4px rgba(20,15,5,.08),
+      0 6px 14px rgba(20,15,5,.08);
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+  }
+  .toc-link:hover{
+    background:linear-gradient(180deg, #c99a3a 0%, var(--gold) 100%);
+    color:#fff;
+    border-color:var(--gold-deep);
+    transform:translateY(-3px) scale(1.03);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.35) inset,
+      0 -3px 6px rgba(0,0,0,.15) inset,
+      0 8px 16px rgba(169,122,31,.32),
+      0 16px 30px rgba(169,122,31,.24);
+  }
+  .toc-link:active{
+    transform:translateY(-1px) scale(1.01);
+    box-shadow:
+      0 2px 5px rgba(20,15,5,.18) inset;
+  }
+  @media (max-width:640px){
+    .toc-inner{ padding:14px 16px; gap:10px; }
+    .toc-link{ font-size:12px; padding:5px 12px; }
+  }
+  @media (max-width:640px){
+    .market-bar-inner{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:6px;
+      padding:10px 4vw;
+      white-space:normal;
+    }
+    .market-card{ padding:7px 6px; min-width:0; gap:2px; border-radius:6px; }
+    .market-label{ font-size:8px; letter-spacing:.03em; }
+    .market-value{ font-size:13px; }
+    .market-delta{ font-size:8.5px; }
+    .market-source{ font-size:7px; max-width:100%; line-height:1.2; }
+  }
+  @media (min-width:641px) and (max-width:1024px){
+    .market-bar-inner{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:10px;
+      padding:12px 5vw;
+      white-space:normal;
+      justify-items:center;
+    }
+    .market-card{ width:100%; max-width:180px; padding:10px 12px; }
+    .market-value{ font-size:17px; }
+    .market-source{ font-size:9px; }
+  }
+  .wrap{
+    max-width:1260px;
+    margin:0 auto;
+    padding:48px 6vw 0 6vw;
+  }
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:18px;
+    margin-bottom:44px;
+    perspective:1000px;
+  }
+  .stat{
+    --accent-shadow: rgba(31,58,95,.24);
+    background:linear-gradient(160deg, #ffffff, #f7f3e8);
+    border-radius:16px;
+    padding:18px 20px;
+    box-shadow:
+      0 1px 1px rgba(255,255,255,.7) inset,
+      0 1px 2px rgba(20,15,5,.06),
+      0 10px 20px rgba(20,15,5,.10),
+      0 26px 48px -18px var(--accent-shadow);
+    border-top:3px solid var(--navy);
+    transition:transform .25s ease, box-shadow .25s ease;
+    min-width:0;
+    max-width:100%;
+    overflow:hidden;
+    box-sizing:border-box;
+  }
+  .stat:hover{
+    transform:perspective(800px) rotateX(4deg) translateY(-7px);
+    box-shadow:
+      0 1px 1px rgba(255,255,255,.8) inset,
+      0 2px 4px rgba(20,15,5,.08),
+      0 16px 30px rgba(20,15,5,.14),
+      0 40px 70px -18px var(--accent-shadow);
+  }
+  .stat.red{border-top-color:var(--red); --accent-shadow: rgba(163,41,31,.30);}
+  .stat.gold{border-top-color:var(--gold); --accent-shadow: rgba(169,122,31,.30);}
+  .stat.green{border-top-color:var(--green); --accent-shadow: rgba(61,107,79,.30);}
+  .stat.wine{border-top-color:var(--wine); --accent-shadow: rgba(107,36,56,.30);}
+  .stat-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--ink-soft);
+    margin-bottom:8px;
+    overflow-wrap:break-word;
+    word-break:break-word;
+    hyphens:auto;
+  }
+  .stat-value{
+    font-family:'Fraunces',serif;
+    font-weight:800;
+    font-size:clamp(20px, 4.2vw, 34px);
+    line-height:1.05;
+    margin-bottom:6px;
+    text-shadow: 0 1px 0 rgba(255,255,255,.7);
+    overflow-wrap:break-word;
+    word-break:break-word;
+    hyphens:auto;
+  }
+  .stat-delta{
+    font-size:13px;
+    color:var(--ink-soft);
+    overflow-wrap:break-word;
+    word-break:break-word;
+  }
+  .section{
+    margin-bottom:52px;
+    scroll-margin-top:90px;
+  }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:24px;
+    position:relative;
+    padding-bottom:12px;
+  }
+  .section-head::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:0;
+    height:3px;
+    background:linear-gradient(90deg, var(--ink) 0%, var(--ink) 40%, transparent 100%);
+  }
+  .section-tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    letter-spacing:.1em;
+    padding:6px 12px;
+    border-radius:4px;
+    color:#fff;
+    text-transform:uppercase;
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.25);
+  }
+  .tag-italia{background:linear-gradient(160deg,#2c5c8a,var(--navy-deep));}
+  .tag-europa{background:linear-gradient(160deg,#3c6e5a,var(--green-deep));}
+  .tag-mondo{background:linear-gradient(160deg,#8a3350,var(--wine-deep));}
+  .tag-migra{background:linear-gradient(160deg,#c79433,var(--gold-deep));}
+  .tag-fin{background:linear-gradient(160deg,#4d8a68,var(--green-deep));}
+  .tag-confronto{background:linear-gradient(160deg,#4a4f57,#22262b);}
+  .section-title{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:clamp(28px,3.4vw,38px);
+    margin:0;
+    color:var(--ink);
+  }
+  .section-note{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:-14px 0 24px 0;
+    max-width:760px;
+    line-height:1.5;
+  }
+  .articles{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:22px;
+    align-items:start;
+  }
+  @media (max-width:820px){
+    .articles{grid-template-columns:1fr;}
+  }
+  .article{
+    background:linear-gradient(165deg, #ffffff 0%, var(--card) 60%);
+    border-radius:10px;
+    padding:24px 26px;
+    box-shadow: var(--shadow-md), var(--shadow-inset);
+    position:relative;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .article:hover{
+    transform:translateY(-4px);
+    box-shadow: var(--shadow-lg), var(--shadow-inset);
+  }
+  .article.lead{
+    grid-column:1 / -1;
+  }
+  .article.lead::before{
+    content:"";
+    position:absolute; top:0; left:0; bottom:0; width:5px;
+    border-radius:10px 0 0 10px;
+    background:linear-gradient(180deg, var(--red), var(--red-deep));
+  }
+  .article h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:23px;
+    line-height:1.28;
+    margin:0 0 13px 0;
+    color:var(--ink);
+  }
+  .article p{
+    font-size:18px;
+    line-height:1.7;
+    color:var(--ink);
+    margin:0 0 11px 0;
+  }
+  .article p:last-of-type{margin-bottom:0;}
+  .source{
+    display:inline-block;
+    margin-top:14px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    letter-spacing:.05em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    border-top:1px solid var(--rule);
+    padding-top:11px;
+    width:100%;
+  }
+  .source a{
+    color:inherit;
+    text-decoration:none;
+    border-bottom:1px dotted currentColor;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .source a:hover{
+    color:var(--gold-deep);
+    border-bottom-color:var(--gold-deep);
+  }
+  .callout{
+    background:linear-gradient(160deg, #f3e6c4, #ecdcb2);
+    border-radius:6px;
+    border-left:4px solid var(--gold);
+    padding:14px 16px;
+    margin:14px 0;
+    font-size:18.5px;
+    line-height:1.55;
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.4);
+  }
+  .callout b{color:var(--wine);}
+
+  /* ===== VERIFICA FONTI (badge sotto l'indice) ===== */
+  .verify-badge{
+    max-width:1260px;
+    margin:0 auto 24px auto;
+    padding:0 6vw;
+  }
+  .verify-badge-inner{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    flex-wrap:wrap;
+    text-align:center;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    color:var(--ink-soft);
+    background:rgba(169,122,31,.08);
+    border:1px solid rgba(169,122,31,.28);
+    border-radius:30px;
+    padding:9px 20px;
+  }
+  .verify-badge-inner strong{ color:var(--gold-deep); }
+
+  /* ===== AGENDA "COSA SUCCEDE OGGI" ===== */
+  .agenda-box{
+    background:linear-gradient(165deg, #ffffff 0%, var(--card) 60%);
+    border-radius:14px;
+    padding:20px 24px;
+    margin-bottom:44px;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,.5);
+    border-top:3px solid var(--gold);
+  }
+  .agenda-title{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:19px;
+    margin:0 0 14px 0;
+    color:var(--ink);
+  }
+  .agenda-list{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+  }
+  .agenda-item{
+    display:flex;
+    gap:12px;
+    align-items:baseline;
+    font-size:14.5px;
+    line-height:1.5;
+  }
+  .agenda-time{
+    font-family:'JetBrains Mono',monospace;
+    font-weight:700;
+    font-size:13px;
+    color:var(--gold-deep);
+    flex-shrink:0;
+    min-width:52px;
+  }
+  .agenda-event{ color:var(--ink); }
+
+  /* ===== BOX "DA SAPERE PER CAPIRE" — presente in ogni sezione (SKILL.md punto 28) ===== */
+  .context-box{
+    background:linear-gradient(160deg, #eef3f8, #e3ebf3);
+    border-left:4px solid var(--navy);
+    border-radius:8px;
+    padding:16px 20px;
+    margin-bottom:20px;
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.5);
+  }
+  .context-box-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--navy);
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .context-box p{
+    font-size:15.5px;
+    line-height:1.6;
+    color:var(--ink);
+    margin:0;
+  }
+  @media (max-width:640px){
+    .verify-badge-inner{ font-size:10.5px; padding:8px 14px; }
+    .agenda-box{ padding:15px 16px; }
+    .agenda-title{ font-size:16px; }
+    .agenda-item{ font-size:13px; }
+    .context-box{ padding:13px 15px; }
+    .context-box p{ font-size:14px; }
+  }
+  .persp{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    margin-top:16px;
+    padding:14px;
+    border-radius:6px;
+    background:rgba(31,58,95,.05);
+  }
+  .persp.ru{background:rgba(163,41,31,.06);}
+  .persp-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:#fff;
+    background:var(--navy);
+    padding:4px 9px;
+    border-radius:3px;
+    white-space:nowrap;
+    flex-shrink:0;
+    margin-top:2px;
+    box-shadow: var(--shadow-sm);
+  }
+  .persp.ru .persp-label{background:var(--red);}
+  .persp p{font-size:18.5px;margin:0;}
+  .datatable{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    font-size:18.5px;
+    margin-top:12px;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .datatable th,.datatable td{
+    text-align:left;
+    padding:9px 12px;
+    border-bottom:1px solid var(--rule);
+    background:#fff;
+  }
+  .datatable th{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:#fff;
+    background:linear-gradient(160deg,#2c5c8a,var(--navy-deep));
+  }
+  .datatable td.num{font-family:'JetBrains Mono',monospace;font-weight:700;}
+  .down{color:var(--green-deep);}
+  .up{color:var(--red-deep);}
+  .duel{
+    background:linear-gradient(165deg, #ffffff 0%, var(--card) 70%);
+    border-radius:12px;
+    padding:0;
+    box-shadow: var(--shadow-lg), var(--shadow-inset);
+    margin-bottom:26px;
+    overflow:hidden;
+  }
+  .duel-fact{
+    padding:20px 26px;
+    background:linear-gradient(160deg,#2b2f35,#181b1f);
+    color:#e9e4d6;
+  }
+  .duel-fact-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#a8a196;
+    margin-bottom:6px;
+  }
+  .duel-fact-text{
+    font-family:'Fraunces',serif;
+    font-size:23px;
+    font-weight:600;
+    line-height:1.35;
+  }
+  .duel-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  @media (max-width:760px){
+    .duel-grid{grid-template-columns:1fr;}
+  }
+  .duel-side{
+    padding:22px 24px;
+    position:relative;
+  }
+  .duel-side.left{
+    background:linear-gradient(160deg, #eaf1fa, #dfe9f5);
+    border-right:1px solid var(--rule);
+  }
+  .duel-side.right{
+    background:linear-gradient(160deg, #faeae7, #f5ddd8);
+  }
+  @media (max-width:760px){
+    .duel-side.left{border-right:none; border-bottom:1px solid var(--rule);}
+  }
+  .duel-tag{
+    display:inline-block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:#fff;
+    padding:5px 11px;
+    border-radius:4px;
+    margin-bottom:12px;
+    box-shadow: var(--shadow-sm);
+  }
+  .duel-side.left .duel-tag{background:linear-gradient(160deg,#4a4f57,#22262b);}
+  .duel-side.right .duel-tag{background:linear-gradient(160deg,#4a4f57,#22262b);}
+  .duel-outlet{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:18.5px;
+    margin-bottom:8px;
+  }
+  .duel-headline{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:18px;
+    line-height:1.4;
+    margin-bottom:10px;
+    color:var(--ink);
+  }
+  .duel-side p.body{
+    font-size:18.5px;
+    line-height:1.68;
+    margin:0 0 8px 0;
+  }
+  .duel-side .source{border-top-color:rgba(0,0,0,.12);}
+  .footer{
+    max-width:1260px;
+    margin:30px auto 0 auto;
+    padding:22px 6vw;
+    border-top:3px double var(--ink);
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .back-to-top{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:linear-gradient(160deg,#2c333a,#14171b);
+    color:#e9e4d6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    box-shadow: var(--shadow-lg);
+    text-decoration:none;
+    z-index:50;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;
+  }
+  .back-to-top.show{
+    opacity:1;
+    pointer-events:auto;
+  }
+  .back-to-top:active{ transform:scale(0.92); }
+  @media (max-width:640px){
+    .masthead{ padding:20px 5vw 16px 5vw; }
+    .masthead-top{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:4px;
+      font-size:10px;
+    }
+    .masthead-title{ font-size:42px; line-height:0.92; }
+    .masthead-sub{ font-size:13.5px; line-height:1.45; }
+    .badge{ font-size:10px; padding:3px 7px; }
+    .ticker{ font-size:11px; }
+    .wrap{ padding:22px 5vw 0 5vw; }
+    .stats{ grid-template-columns:repeat(auto-fit,minmax(135px,1fr)); gap:10px; margin-bottom:32px; }
+    .stat{ padding:12px 14px; min-width:0; }
+    .stat-label{ font-size:9.5px; }
+    .stat-value{ font-size:clamp(17px, 5.6vw, 22px); }
+    .stat-delta{ font-size:10.5px; }
+    .section{ margin-bottom:36px; }
+    .section-head{ margin-bottom:16px; }
+    .section-tag{ font-size:10px; padding:4px 9px; }
+    .section-title{ font-size:20px; }
+    .section-note{ font-size:13px; line-height:1.5; }
+    .article{ padding:16px 16px; }
+    .article h3{ font-size:16.5px; line-height:1.3; margin-bottom:10px; }
+    .article p{ font-size:14.5px; line-height:1.55; }
+    .callout{ font-size:14px; padding:12px 14px; }
+    .source{ font-size:10px; }
+    .datatable{ font-size:14px; }
+    .duel-fact{ padding:14px 16px; }
+    .duel-fact-label{ font-size:10px; }
+    .duel-fact-text{ font-size:16px; line-height:1.3; }
+    .duel-side{ padding:14px 16px; }
+    .duel-tag{ font-size:10px; padding:4px 9px; }
+    .duel-outlet{ font-size:15px; }
+    .duel-headline{ font-size:14.5px; }
+    .duel-side p.body{ font-size:14.5px; line-height:1.5; }
+    .persp p{ font-size:14.5px; }
+    .persp-label{ font-size:10px; }
+    .back-to-top{ width:44px; height:44px; bottom:16px; right:16px; font-size:18px; }
+  }
+  /* Tablet / iPad: stat card in griglia 2x2 pulita invece di 3+1 */
+  @media (min-width:641px) and (max-width:1024px){
+    .stats{ grid-template-columns:repeat(2,1fr); gap:14px; }
+    .stat-value{ font-size:clamp(22px, 3.4vw, 30px); }
+  }
+  .footer-legal{
+    max-width:1260px;
+    margin:24px auto 0 auto;
+    padding:20px 6vw 0 6vw;
+    border-top:1px solid var(--rule);
+    font-family:'Inter',sans-serif;
+    font-size:10px;
+    line-height:1.55;
+    color:var(--ink-soft);
+    opacity:0.75;
+  }
+  .footer-legal p{ margin:0 0 8px 0; }
+  .footer-legal p:last-child{ margin-bottom:0; }
+  .footer-cc{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-top:14px;
+    padding-top:12px;
+    border-top:1px solid var(--rule);
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    letter-spacing:.04em;
+    color:var(--ink-soft);
+    text-align:center;
+    flex-wrap:wrap;
+  }
+  .footer-cc a{
+    color:var(--ink-soft);
+    text-decoration:underline;
+  }
+  .footer-cc-icon{
+    display:inline-flex;
+    align-items:center;
+    gap:3px;
+    border:1px solid var(--rule);
+    border-radius:3px;
+    padding:2px 6px;
+    font-weight:700;
+  }
+  .footer-note{
+    max-width:1260px;
+    margin:14px auto 0 auto;
+    padding:0 6vw 8px 6vw;
+    font-family:'Inter',sans-serif;
+    font-style:italic;
+    font-size:12.5px;
+    line-height:1.5;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+  /* ===== DASHBOARD (sezione finale) ===== */
+  .kpi-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:24px; }
+  .kpi{ background:#fcfcfb; border-radius:10px; padding:20px 22px; box-shadow:var(--shadow-md); border-top:4px solid #2a78d6; }
+  .kpi.rimpatri{ border-top-color:#eb6834; }
+  .kpi.arrivi{ border-top-color:#1baf7a; }
+  .kpi-label{ font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:8px; }
+  .kpi-value{ font-family:'Inter',sans-serif; font-weight:800; font-size:32px; color:var(--ink); line-height:1; margin-bottom:6px; }
+  .kpi-note{ font-size:12.5px; color:#898781; line-height:1.5; }
+  .chart-card{ background:#fcfcfb; border-radius:10px; padding:26px 28px; box-shadow:var(--shadow-md); margin-bottom:22px; }
+  .chart-title{ font-family:'Fraunces',serif; font-weight:700; font-size:21px; margin:0 0 4px 0; color:var(--ink); }
+  .chart-period{ font-size:12.5px; color:var(--ink-soft); margin-bottom:20px; }
+  .bar-row{ display:flex; align-items:center; gap:10px; margin-bottom:13px; max-width:100%; }
+  .bar-row:last-child{ margin-bottom:0; }
+  .bar-label{ width:150px; flex-shrink:0; font-size:13px; color:var(--ink); font-weight:600; text-align:right; line-height:1.25; }
+  .bar-track{ flex:1 1 auto; min-width:0; position:relative; height:24px; background:#e1e0d9; border-radius:4px; overflow:visible; }
+  .bar-fill{ height:100%; max-width:100%; border-radius:4px 0 0 4px; position:relative; }
+  .bar-fill.asilo{ background:#2a78d6; }
+  .bar-fill.rimpatri{ background:#eb6834; }
+  .bar-fill.arrivi{ background:#1baf7a; }
+  .bar-value{ flex-shrink:0; min-width:64px; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; color:var(--ink); white-space:nowrap; text-align:left; }
+  .bar-fill[data-tooltip]{ position:relative; }
+  .bar-fill[data-tooltip]:hover::after{ content:attr(data-tooltip); position:absolute; bottom:130%; left:0; background:#14171b; color:#fdfcf7; font-size:11.5px; font-family:'Inter',sans-serif; padding:6px 10px; border-radius:6px; white-space:nowrap; box-shadow:var(--shadow-md); z-index:5; }
+  .dv-delta{ font-family:'JetBrains Mono',monospace; font-size:12px; margin-left:8px; }
+  .dv-delta.down{ color:#006300; }
+  .dv-delta.up{ color:var(--red); }
+  .side-note{ background:rgba(31,58,95,.06); border-radius:8px; padding:13px 15px; margin-top:16px; font-size:13px; color:var(--ink-soft); line-height:1.6; }
+  .side-note strong{ color:var(--ink); }
+  details.table-view{ margin-top:18px; }
+  details.table-view summary{ cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.05em; text-transform:uppercase; color:var(--navy); font-weight:700; padding:8px 0; }
+  table.data-table{ width:100%; border-collapse:separate; border-spacing:0; font-size:14px; margin-top:8px; border-radius:6px; overflow:hidden; box-shadow:0 1px 2px rgba(0,0,0,.06); }
+  table.data-table th, table.data-table td{ text-align:left; padding:8px 12px; border-bottom:1px solid var(--rule); background:#fff; }
+  table.data-table th{ font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:#fff; background:linear-gradient(160deg,#2c5c8a,var(--navy-deep)); }
+  table.data-table td.num{ font-family:'JetBrains Mono',monospace; font-weight:700; font-variant-numeric:tabular-nums; }
+  table.data-table td.nd{ color:#898781; font-style:italic; }
+  .dv-sources{ font-size:12px; color:#898781; border-top:1px solid var(--rule); margin-top:20px; padding-top:12px; line-height:1.6; }
+  @media (max-width:640px){
+    .kpi-row{ grid-template-columns:1fr; gap:10px; }
+    .kpi{ padding:14px 16px; }
+    .kpi-value{ font-size:24px; }
+    .chart-card{ padding:16px 14px; }
+    .chart-title{ font-size:17px; }
+    .chart-period{ font-size:11px; margin-bottom:14px; }
+    .bar-row{ flex-wrap:wrap; row-gap:4px; margin-bottom:15px; }
+    .bar-label{ flex-basis:100%; width:auto; text-align:left; font-size:12px; }
+    .bar-track{ height:20px; }
+    .bar-value{ font-size:12px; min-width:56px; }
+    table.data-table{ font-size:11.5px; }
+    table.data-table th, table.data-table td{ padding:6px 8px; }
+    .side-note, .dv-sources{ font-size:11.5px; }
+  }
+
+  /* ===== OVERLAY INTRO (obbligatorio ogni giorno) ===== */
+  .overlay{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .overlay-box{
+    position: relative;
+    max-width: 560px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(250,248,244,0.94));
+    border-radius: 16px;
+    padding: 44px 40px 40px;
+    box-shadow:
+      0 1px 2px rgba(0,0,0,0.06),
+      0 8px 16px rgba(0,0,0,0.12),
+      0 24px 48px rgba(0,0,0,0.22),
+      0 48px 90px rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.7);
+    border-top: 1px solid rgba(255,255,255,0.9);
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .overlay-box .close-x{
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    font-size: 22px;
+    color: #666;
+    cursor: pointer;
+    line-height: 1;
+    background: rgba(0,0,0,0.05);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: background 0.15s, color 0.15s;
+  }
+  .overlay-box .close-x:hover{ color: #000; background: rgba(0,0,0,0.1); }
+  .overlay-box h3{
+    margin: 0 0 4px 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+  }
+  .overlay-box h3::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #1a1a1a;
+    margin-top: 12px;
+    margin-bottom: 18px;
+  }
+  .overlay-box p{
+    font-size: 17px;
+    line-height: 1.75;
+    color: #222;
+    margin: 0;
+    text-align: left;
+    text-indent: 0;
+  }
+  body.overlay-open{ overflow:hidden; }
+</style>
+</head>
+<body id="top" data-edition="2026-08-18" data-published="2026-08-18T06:34:00+02:00">
+
+<!-- ===== OVERLAY INTRO — SEMPRE PRESENTE, IDENTICO OGNI GIORNO ===== -->
+<div class="overlay" id="introOverlay">
+<div class="overlay-box">
+<button class="close-x" id="closeOverlay" aria-label="Chiudi">&times;</button>
+<h3>Un modo diverso di leggere le notizie</h3>
+<p>Ogni notizia ha tante voci quante sono le penne che la scrivono.<br><br>Un giornale sceglie un titolo, un altro ne sceglie uno opposto; uno mette la notizia in prima pagina, un altro la nasconde in fondo.<br><br>Nessuno mente del tutto, ma nessuno racconta tutto.<br><br>"Il Contribuente" nasce per mettere queste voci una accanto all'altra — italiane e straniere — senza sceglierne una al posto tuo.<br><br>I fatti restano fatti. Il pensiero, quello, resta tuo.</p>
+</div>
+</div>
+
+<div class="masthead">
+  <div class="masthead-top">
+    <span>Edizione digitale</span>
+    <span>18 Agosto 2026</span>
+    <span>Rassegna stampa quotidiana</span>
+  </div>
+  <h1 class="masthead-title">Il <em>Contribuente</em></h1>
+  <div class="masthead-sub">Italia, Europa, geopolitica, immigrazione e mercati — sintesi multi-fonte, con confronto diretto tra testate diverse sugli stessi fatti, senza etichette politiche.</div>
+  <div class="masthead-badges">
+    <a class="badge" href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a>
+    <a class="badge" href="https://www.adnkronos.com" target="_blank" rel="noopener noreferrer">Adnkronos</a>
+    <a class="badge" href="https://www.ilfattoquotidiano.it" target="_blank" rel="noopener noreferrer">Il Fatto Quotidiano</a>
+    <a class="badge" href="https://www.repubblica.it" target="_blank" rel="noopener noreferrer">Repubblica</a>
+    <a class="badge" href="https://www.corriere.it" target="_blank" rel="noopener noreferrer">Corriere della Sera</a>
+    <a class="badge" href="https://www.lindipendente.online" target="_blank" rel="noopener noreferrer">L'Indipendente</a>
+    <a class="badge" href="https://www.ilgiornale.it" target="_blank" rel="noopener noreferrer">Il Giornale</a>
+    <a class="badge" href="https://www.laverita.info" target="_blank" rel="noopener noreferrer">La Verità</a>
+    <a class="badge" href="https://www.editorialedomani.it" target="_blank" rel="noopener noreferrer">Domani</a>
+    <a class="badge" href="https://www.ilsole24ore.com" target="_blank" rel="noopener noreferrer">Il Sole 24 Ore</a>
+    <a class="badge" href="https://www.nytimes.com" target="_blank" rel="noopener noreferrer">New York Times</a>
+    <a class="badge" href="https://www.theguardian.com" target="_blank" rel="noopener noreferrer">The Guardian</a>
+    <a class="badge" href="https://it.news-pravda.com" target="_blank" rel="noopener noreferrer">Pravda Italia</a>
+    <a class="badge" href="https://www.globaltimes.cn" target="_blank" rel="noopener noreferrer">Global Times</a>
+    <a class="badge" href="https://www.lapresse.it" target="_blank" rel="noopener noreferrer">LaPresse</a>
+    <a class="badge" href="https://www.ilpost.it" target="_blank" rel="noopener noreferrer">Il Post</a>
+    <a class="badge" href="https://tg24.sky.it" target="_blank" rel="noopener noreferrer">Sky TG24</a>
+    <a class="badge" href="https://www.cnbc.com" target="_blank" rel="noopener noreferrer">CNBC</a>
+    <a class="badge" href="https://www.cnn.com" target="_blank" rel="noopener noreferrer">CNN</a>
+    <a class="badge" href="https://www.aljazeera.com" target="_blank" rel="noopener noreferrer">Al Jazeera</a>
+    <a class="badge" href="https://www.rt.com" target="_blank" rel="noopener noreferrer">RT</a>
+    <a class="badge" href="https://www.frontex.europa.eu" target="_blank" rel="noopener noreferrer">Frontex</a>
+    <a class="badge" href="https://www.bloomberg.com" target="_blank" rel="noopener noreferrer">Bloomberg</a>
+    <!-- Testate aggiuntive citate negli articoli di oggi, non tra le 23 fisse (SKILL.md punto 22-bis) -->
+    <a class="badge" href="https://www.forzearmate.org" target="_blank" rel="noopener noreferrer">forzearmate.org</a>
+    <a class="badge" href="https://www.wsj.com" target="_blank" rel="noopener noreferrer">Wall Street Journal</a>
+    <a class="badge" href="https://www.nbcnews.com" target="_blank" rel="noopener noreferrer">NBC News</a>
+    <a class="badge" href="https://www.axios.com" target="_blank" rel="noopener noreferrer">Axios</a>
+    <a class="badge" href="https://www.milanofinanza.it" target="_blank" rel="noopener noreferrer">MilanoFinanza</a>
+    <a class="badge" href="https://eurasiabusinessnews.com" target="_blank" rel="noopener noreferrer">Eurasia Business News</a>
+    <a class="badge" href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener noreferrer">Eurostat</a>
+    <a class="badge" href="https://www.euronews.com" target="_blank" rel="noopener noreferrer">Euronews</a>
+    <a class="badge" href="https://www.ilrestodelcarlino.it" target="_blank" rel="noopener noreferrer">Il Resto del Carlino</a>
+    <a class="badge" href="https://www.quotidiano.net" target="_blank" rel="noopener noreferrer">Quotidiano Nazionale</a>
+    <a class="badge" href="https://www.iltempo.it" target="_blank" rel="noopener noreferrer">Il Tempo</a>
+    <a class="badge" href="https://www.tgcom24.mediaset.it" target="_blank" rel="noopener noreferrer">Tgcom24</a>
+    <a class="badge" href="https://agenparl.eu" target="_blank" rel="noopener noreferrer">Agenparl</a>
+    <a class="badge" href="https://www.oxfordeconomics.com" target="_blank" rel="noopener noreferrer">Oxford Economics</a>
+    <a class="badge" href="https://www.theregister.com" target="_blank" rel="noopener noreferrer">The Register</a>
+    <a class="badge" href="https://www.forbes.com" target="_blank" rel="noopener noreferrer">Forbes</a>
+    <a class="badge" href="https://aiweekly.co" target="_blank" rel="noopener noreferrer">AI Weekly</a>
+  </div>
+  <a href="../archivio.html" class="back-link">Archivio edizioni &rarr;</a>
+</div>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>★ TRUMP A OMAN: "SE TI METTI DI MEZZO SU HORMUZ TI BOMBARDIAMO"</span>
+    <span>★ GAZA, KUSHNER DA NETANYAHU: "RITIRO IMPRESCINDIBILE MA CONCRETO"</span>
+    <span>★ RUSSIA: INTERCETTATI 205 DRONI UCRAINI, KIEV COLPISCE I MAGAZZINI WILDBERRIES</span>
+    <span>★ TERREMOTO IN INDONESIA, NUOVA SCOSSA A FLORES: NESSUNA ALLERTA TSUNAMI</span>
+    <span>★ WALL STREET CHIUDE IN CALO, PETROLIO SOPRA 88$ SULLE TENSIONI USA-IRAN</span>
+    <span>★ TRUMP RIDUCE LE ESERCITAZIONI CON LA COREA DEL SUD</span>
+    <span>★ VON DER LEYEN: SOLIDARIETÀ EUROPEA IN CAMPO CONTRO GLI INCENDI</span>
+    <span>★ NAVE DI EMERGENCY SOCCORRE UN'IMBARCAZIONE DI MIGRANTI: 7 MORTI</span>
+    <span>★ AMODEI (ANTHROPIC): "LA RESPONSABILITÀ SULLE PROMESSE MANCATE DELL'IA È NOSTRA"</span>
+    <span>★ TRUMP A OMAN: "SE TI METTI DI MEZZO SU HORMUZ TI BOMBARDIAMO"</span>
+  </div>
+</div>
+
+<div class="market-bar">
+  <div class="market-bar-inner">
+    <div class="market-card">
+      <div class="market-label">Benzina</div>
+      <div class="market-value">1,992€/L</div>
+      <div class="market-delta down">self, stabile</div>
+      <div class="market-source">rete ordinaria, dati Mimit (Ansa, 17/8 ore 09:25)</div>
+    </div>
+    <div class="market-card">
+      <div class="market-label">Diesel</div>
+      <div class="market-value">2,093€/L</div>
+      <div class="market-delta down">self, stabile</div>
+      <div class="market-source">rete ordinaria, dati Mimit (Ansa, 17/8 ore 09:25)</div>
+    </div>
+    <div class="market-card">
+      <div class="market-label">Petrolio</div>
+      <div class="market-value">~88$</div>
+      <div class="market-delta up">+3% sulle tensioni Usa-Iran</div>
+      <div class="market-source">Brent al barile, chiusura Usa (Reuters/Ansa, 17/8 ore 23:10 UTC)</div>
+    </div>
+    <div class="market-card">
+      <div class="market-label">Gas TTF</div>
+      <div class="market-value">62,03€</div>
+      <div class="market-delta up">in rialzo</div>
+      <div class="market-source">al MWh, mercato di Amsterdam (Borsa Italiana/Teleborsa, 17/8 ore 15:40)</div>
+    </div>
+    <div class="market-card">
+      <div class="market-label">Oro</div>
+      <div class="market-value">4.397$</div>
+      <div class="market-delta up">+0,47%, verso i 4.400$</div>
+      <div class="market-source">l'oncia, spot (Ansa, 17/8 ore 08:33)</div>
+    </div>
+    <div class="market-card">
+      <div class="market-label">Bitcoin</div>
+      <div class="market-value">~59.000€</div>
+      <div class="market-delta up">+1,97% in 24 ore</div>
+      <div class="market-source">quotazione indicativa (CoinDesk, 17/8 ore 21:03)</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="toc">
+    <div class="toc-inner">
+      <span class="toc-label">Indice</span>
+      <div class="toc-links">
+        <a href="#confronto" class="toc-link">Confronto</a>
+        <a href="#tresguardi" class="toc-link">Tre sguardi</a>
+        <a href="#estero" class="toc-link">Dall'estero</a>
+        <a href="#italia" class="toc-link">Italia</a>
+        <a href="#disagio" class="toc-link">Disagio città</a>
+        <a href="#europa" class="toc-link">Europa</a>
+        <a href="#mondo" class="toc-link">Mondo</a>
+        <a href="#finanza" class="toc-link">Finanza</a>
+        <a href="#ia" class="toc-link">IA</a>
+        <a href="#immigrazione" class="toc-link">Immigrazione</a>
+        <a href="#dati-immigrazione" class="toc-link">Dati Immigrazione</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="verify-badge">
+    <div class="verify-badge-inner">✓ Oggi abbiamo confrontato <strong>28 fonti</strong> su <strong>23 testate</strong> diverse</div>
+  </div>
+
+  <div class="quote-day">
+    <div class="quote-day-inner">
+      <div class="quote-day-label">Citazione del giorno &middot; 1/2</div>
+      <div class="quote-day-text">"Se l'Oman si mette di mezzo, lo bombarderemo alla grande."</div>
+      <div class="quote-day-author">— Donald Trump, sui colloqui paralleli tra Oman e Iran per la gestione del traffico nello Stretto di Hormuz</div>
+    </div>
+  </div>
+  <div class="quote-day">
+    <div class="quote-day-inner">
+      <div class="quote-day-label">Citazione del giorno &middot; 2/2</div>
+      <div class="quote-day-text">"La responsabilità è interamente nostra. Solo curare il cancro dimostrerebbe davvero che l'IA funziona: per il resto molti la considerano marketing ingannevole."</div>
+      <div class="quote-day-author">— Dario Amodei, ceo di Anthropic, sul calo di fiducia nell'intelligenza artificiale (Il Fatto Quotidiano/Ansa)</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat red">
+      <div class="stat-label">Brent, tensioni su Hormuz</div>
+      <div class="stat-value">88$</div>
+      <div class="stat-delta">+3% al barile, dopo la minaccia di Trump all'Oman</div>
+    </div>
+    <div class="stat gold">
+      <div class="stat-label">Wall Street, chiusura</div>
+      <div class="stat-value">Dow -0,5%</div>
+      <div class="stat-delta">S&P 500 -0,5%, Nasdaq -0,3%, sul petrolio in rialzo</div>
+    </div>
+    <div class="stat wine">
+      <div class="stat-label">Nave Emergency, naufragio Libia</div>
+      <div class="stat-value">7 morti</div>
+      <div class="stat-delta">50 salvati, 2 in condizioni critiche</div>
+    </div>
+    <div class="stat" style="border-top-color:var(--navy);">
+      <div class="stat-label">Terremoto Indonesia, Flores</div>
+      <div class="stat-value">M 5.6</div>
+      <div class="stat-delta">nuova scossa, nessuna allerta tsunami</div>
+    </div>
+  </div>
+  <div class="section-note" style="margin-top:-32px; margin-bottom:44px;">Dati: forzearmate.org per Oman, Eurasia Business News/Ansa per Wall Street, Ansa Puglia per il naufragio, Ansa per l'Indonesia. Numeri soggetti ad aggiornamento nelle prossime ore.</div>
+
+  <div class="agenda-box">
+    <h3 class="agenda-title">Cosa succede oggi</h3>
+    <div class="agenda-list">
+      <div class="agenda-item"><span class="agenda-time">Mattina</span><span class="agenda-event">A Modena e in provincia di Cosenza si tengono le udienze di convalida del fermo per i due femminicidi di ieri</span></div>
+      <div class="agenda-item"><span class="agenda-time">Giornata</span><span class="agenda-event">Proseguono in Belgio e Spagna gli interventi dei soccorritori europei (Francia, Svezia, Olanda, Norvegia, Germania) contro gli incendi, nell'ambito del meccanismo di protezione civile Ue attivato da von der Leyen</span></div>
+      <div class="agenda-item"><span class="agenda-time">Giornata</span><span class="agenda-event">Prosegue il pressing diplomatico di Jared Kushner su Netanyahu e sui mediatori dopo l'incontro di ieri: attesi sviluppi sul calendario del disarmo di Hamas nel piano per Gaza</span></div>
+      <div class="agenda-item"><span class="agenda-time">Pre-mercato</span><span class="agenda-event">Home Depot pubblica i risultati trimestrali, primo grande test della stagione degli utili della grande distribuzione Usa</span></div>
+      <div class="agenda-item"><span class="agenda-time">15:30</span><span class="agenda-event">Apertura di Wall Street, sotto osservazione dopo la chiusura in calo di ieri e il rialzo del Brent oltre gli 88 dollari</span></div>
+    </div>
+  </div>
+
+  <!-- ===== CONFRONTO: PIANO GAZA (3 punti di vista) — ECCEZIONE: resta a 3 (SKILL.md punto 13) ===== -->
+  <div class="section" id="confronto">
+    <div class="section-head">
+      <span class="section-tag tag-confronto">Confronto</span>
+      <h2 class="section-title">Piano per Gaza: Kushner da Netanyahu, Hamas chiede ai mediatori di "costringere" Israele</h2>
+    </div>
+    <div class="section-note">L'inviato Usa Jared Kushner ha incontrato Netanyahu dopo i colloqui con i vertici di Hamas in Egitto. Tre letture dello stesso piano di pace: quella israeliana, quella di Hamas e quella americana da mediatore.</div>
+
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Il piano di pace per Gaza proposto dall'amministrazione Trump prevede il disarmo di Hamas in cambio di un ritiro israeliano graduale e della fine delle ostilità. Hamas ha già dato un'approvazione di massima alle linee generali; il nodo rimasto aperto da settimane è il calendario e le garanzie sul disarmo, che Netanyahu vuole verificabile e concreto prima di qualsiasi ritiro. Jared Kushner, genero del presidente Usa, fa da mediatore diretto tra le parti.</p>
+    </div>
+
+    <div class="duel">
+      <div class="duel-fact">
+        <div class="duel-fact-label">Il fatto</div>
+        <div class="duel-fact-text">Jared Kushner ha incontrato Netanyahu subito dopo colloqui con una delegazione di alti funzionari di Hamas in Egitto, nel tentativo di far avanzare il piano di pace per Gaza. Hamas, che ha già dato la sua approvazione di massima al piano, chiede ora ai mediatori di far rispettare i tempi a Israele; Netanyahu pretende invece un disarmo "concreto" del gruppo prima di qualsiasi ritiro.</div>
+      </div>
+      <div class="duel-grid">
+        <div class="duel-side left">
+          <span class="duel-tag">Israele — Il Tempo, Ansa</span>
+          <div class="duel-headline">Netanyahu: "Ritiro imprescindibile ma dev'essere concreto"</div>
+          <p class="body">Secondo fonti riprese da Ansa e Il Tempo, Netanyahu ha detto a Kushner che la serietà del piano si misura sulla "consegna delle armi" da parte di Hamas, ribadendo che non è previsto alcuno Stato palestinese. Il ritiro israeliano resta condizionato a un disarmo verificabile del gruppo.</p>
+          <span class="source">Fonti: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a> · <a href="https://www.iltempo.it" target="_blank" rel="noopener noreferrer">Il Tempo</a></span>
+        </div>
+        <div class="duel-side right">
+          <span class="duel-tag">Hamas — Adnkronos</span>
+          <div class="duel-headline">"I mediatori costringano Israele ad accettare il piano"</div>
+          <p class="body">Hamas ribadisce l'impegno al piano Trump e al disarmo, ma chiede esplicitamente ai mediatori internazionali di far rispettare a Israele la tabella di marcia concordata e un calendario di attuazione, accusando implicitamente Netanyahu di temporeggiare.</p>
+          <span class="source">Fonte: <a href="https://www.adnkronos.com" target="_blank" rel="noopener noreferrer">Adnkronos</a></span>
+        </div>
+      </div>
+      <div class="duel-grid" style="grid-template-columns:1fr; border-top:1px solid var(--rule);">
+        <div class="duel-side left" style="border-right:none; background:linear-gradient(160deg, #f0ece0, #e7e1d2);">
+          <span class="duel-tag">Stati Uniti — NBC News, Axios</span>
+          <div class="duel-headline">Kushner spinge per un generale Usa a supervisionare il disarmo</div>
+          <p class="body">Secondo NBC News, Kushner e Netanyahu avrebbero concordato che un generale statunitense sovrintenda alla "smilitarizzazione" di Hamas, un meccanismo pensato per dare garanzie a entrambe le parti e sbloccare l'impasse tra le richieste israeliane e quelle del movimento palestinese.</p>
+          <span class="source">Fonti: <a href="https://www.nbcnews.com" target="_blank" rel="noopener noreferrer">NBC News</a> · <a href="https://www.axios.com" target="_blank" rel="noopener noreferrer">Axios</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TRE SGUARDI: HORMUZ/OMAN (3 punti di vista) — ECCEZIONE: resta a 3 (SKILL.md punto 13) ===== -->
+  <div class="section" id="tresguardi">
+    <div class="section-head">
+      <span class="section-tag tag-mondo">Tre sguardi</span>
+      <h2 class="section-title">Hormuz, Trump minaccia l'Oman mentre Teheran avverte: "Sorprese strategiche"</h2>
+    </div>
+    <div class="section-note">Tre posizioni sullo stesso nodo: la minaccia di Trump contro l'Oman, l'avvertimento dei Guardiani della rivoluzione iraniani, e il ruolo di Mascate come mediatore che negozia in proprio con Teheran.</div>
+
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Lo Stretto di Hormuz è il collo di bottiglia da cui transita circa un quinto del petrolio mondiale, tra il Golfo Persico e l'Oceano Indiano. L'Iran minaccia periodicamente di chiuderlo in risposta alle pressioni occidentali, mentre l'Oman — unico paese del Golfo con canali aperti sia con Washington sia con Teheran — ha sempre giocato il ruolo di mediatore informale nella crisi del nucleare iraniano e nelle tensioni marittime. L'accordo appena raggiunto tra Mascate e Teheran su corridoi di navigazione separati è il motivo per cui Trump ha reagito con la minaccia diretta all'Oman.</p>
+    </div>
+
+    <div class="duel">
+      <div class="duel-grid">
+        <div class="duel-side left">
+          <span class="duel-tag">Stati Uniti — forzearmate.org</span>
+          <div class="duel-headline">"Se l'Oman si mette di mezzo, lo bombardiamo alla grande"</div>
+          <p class="body">Trump ha minacciato apertamente l'Oman dopo che Mascate ha negoziato con l'Iran un'intesa preliminare sulla gestione del traffico marittimo nello Stretto, con corridoi separati per le navi in entrata e in uscita. Trump ha comunque confermato l'esistenza di un canale riservato con i Guardiani della rivoluzione.</p>
+          <span class="source">Fonte: <a href="https://www.forzearmate.org" target="_blank" rel="noopener noreferrer">forzearmate.org</a></span>
+        </div>
+        <div class="duel-side right">
+          <span class="duel-tag">Iran — Editoriale Domani (Wall Street Journal)</span>
+          <div class="duel-headline">Il nemico "deve aspettarsi sorprese strategiche"</div>
+          <p class="body">Un generale dei Guardiani della rivoluzione ha avvertito che l'assetto difensivo iraniano è pronto a trasformarsi in offensivo, mentre secondo il Wall Street Journal Teheran starebbe elaborando un piano per intensificare la contrapposizione con Washington, con l'intelligence Usa che segnala un cambio di linea verso i falchi del regime.</p>
+          <span class="source">Fonti: <a href="https://www.editorialedomani.it" target="_blank" rel="noopener noreferrer">Editoriale Domani</a> · <a href="https://www.wsj.com" target="_blank" rel="noopener noreferrer">Wall Street Journal</a></span>
+        </div>
+      </div>
+      <div class="duel-grid" style="grid-template-columns:1fr; border-top:1px solid var(--rule);">
+        <div class="duel-side left" style="border-right:none; background:linear-gradient(160deg, #f0ece0, #e7e1d2);">
+          <span class="duel-tag">Oman — forzearmate.org</span>
+          <div class="duel-headline">Mascate negozia in proprio un'intesa sulle rotte con Teheran</div>
+          <p class="body">L'Oman, mediatore tradizionale tra Washington e Teheran, ha raggiunto con l'Iran un'intesa preliminare su corridoi marittimi separati nello Stretto: le navi dirette al Golfo userebbero acque iraniane, quelle in uscita un corridoio in acque omanite. Restano da definire i controlli sul traffico e le eventuali tariffe di transito.</p>
+          <span class="source">Fonte: <a href="https://www.forzearmate.org" target="_blank" rel="noopener noreferrer">forzearmate.org</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DALL'ESTERO (4 notizie) -->
+  <div class="section" id="estero">
+    <div class="section-head">
+      <span class="section-tag tag-europa">Dall'estero</span>
+      <h2 class="section-title">Trump annuncia la visita di Xi, nuova scossa in Indonesia</h2>
+    </div>
+    <div class="section-note">Notizie dall'estero non legate ai temi già trattati altrove.</div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>La visita di Xi Jinping alla Casa Bianca il 24 settembre arriva dopo mesi di negoziati commerciali tesi tra Washington e Pechino su dazi e controlli sull'export di semiconduttori. Sarebbe la prima visita di un leader cinese negli Usa dal 2015: un segnale di disgelo che Trump vuole celebrare con un evento fuori misura, anche se la Casa Bianca resta sotto lavori di ristrutturazione dopo la demolizione dell'ala est voluta dallo stesso presidente.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <h3>Trump: "Xi arriva il 24 settembre, vorrei ospitare 3mila persone alla Casa Bianca"</h3>
+        <p>Il presidente Usa ha annunciato che il leader cinese Xi Jinping arriverà in visita il 24 settembre, esprimendo il desiderio di organizzare un ricevimento per 3mila persone. Trump ha spiegato di non poter usare la sala da pranzo di Stato per un blocco disposto da un tribunale, lamentando che "la Casa Bianca sta cadendo a pezzi".</p>
+        <span class="source">Fonte: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a></span>
+      </div>
+      <div class="article">
+        <h3>Indonesia, nuova scossa a Flores: nessuna allerta tsunami</h3>
+        <p>Una nuova scossa di magnitudo 5.6 è stata avvertita al largo dell'isola di Flores, dove il bilancio del violento terremoto dei giorni scorsi resta pesante: almeno 51 morti, 101 feriti e circa 5mila sfollati. Le autorità non hanno emesso alcuna allerta tsunami per la nuova scossa.</p>
+        <span class="source">Fonti: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a> · <a href="https://www.adnkronos.com" target="_blank" rel="noopener noreferrer">Adnkronos</a></span>
+      </div>
+      <div class="article">
+        <h3>Barcellona, notte tranquilla per l'italiano Nicola Maggiotto</h3>
+        <p>Il 21enne di Asolo aggredito fuori da un locale a Barcellona, in coma farmacologico dopo un colpo alla nuca, "ha trascorso una notte tranquilla" con condizioni stabili, riferisce il padre. Nelle prossime ore i medici valuteranno una riduzione della sedazione per verificare eventuali danni cognitivi.</p>
+        <span class="source">Fonte: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a></span>
+      </div>
+      <div class="article">
+        <h3>Giappone, il Pil rallenta e manca le previsioni di crescita</h3>
+        <p>Il Pil giapponese del secondo trimestre cresce dello 0,3% congiunturale (1,1% annuo), sotto le attese degli analisti (+0,5%); gli investimenti delle imprese calano dell'1,2%. Lo yen resta ai minimi da 40 anni sul dollaro e pesano i costi energetici, mentre le esportazioni legate all'IA restano un punto di forza.</p>
+        <span class="source">Fonte: <a href="https://www.oxfordeconomics.com" target="_blank" rel="noopener noreferrer">Oxford Economics</a> (via analisi indipendente)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ITALIA (4 notizie) -->
+  <div class="section" id="italia">
+    <div class="section-head">
+      <span class="section-tag tag-italia">Italia</span>
+      <h2 class="section-title">Vita lavorativa più corta d'Europa, Stellantis ferma Cassino, si tratta la Manovra</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Il dato Eurostat sulla vita lavorativa più corta d'Europa arriva mentre il governo tratta la Manovra 2027, con al centro il nodo pensioni e il rilancio dell'occupazione giovanile e femminile: due leve che, se non si muovono, tengono strutturalmente breve la carriera media degli italiani. Sullo sfondo, il debito pubblico record oltre i 3.200 miliardi restringe i margini di spesa per qualsiasi intervento espansivo.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <h3>In Italia la vita lavorativa media è di appena 33 anni, ai minimi nell'Ue</h3>
+        <p>Secondo l'ultima rilevazione Eurostat ripresa da Ansa, in Italia la durata media della vita lavorativa attesa è di appena 33 anni, tra le più basse dell'Unione europea, complici l'ingresso tardivo nel mondo del lavoro e i bassi tassi di occupazione femminile e giovanile.</p>
+        <p>Nello stesso pacchetto di dati economici, il debito pubblico italiano ha toccato un nuovo record oltre i 3.200 miliardi di euro, mentre il governo prosegue il confronto sulla Manovra 2027, con sul tavolo un pacchetto fiscale da oltre 30 miliardi tra tagli Irpef e rinnovo dei contratti energetici.</p>
+        <span class="source">Fonti: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a> · <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener noreferrer">Eurostat</a></span>
+      </div>
+      <div class="article">
+        <h3>Stellantis, produzione ferma a Cassino fino al 31 agosto</h3>
+        <p>Lo stabilimento Stellantis di Cassino resta fermo fino al 31 agosto per la carenza di ordini, in una fase difficile per il gruppo automobilistico italo-francese; i sindacati chiedono chiarezza sul piano industriale e sul futuro dello stabilimento nel Lazio.</p>
+        <span class="source">Fonte: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a></span>
+      </div>
+      <div class="article">
+        <h3>Unicredit, ipotesi sulla cessione della quota di Berlino in Commerzbank</h3>
+        <p>Circola l'ipotesi che il governo tedesco possa cedere la propria quota in Commerzbank a Unicredit, in un possibile nuovo passo della partita sulla banca tedesca che la banca guidata da Andrea Orcel segue da mesi con l'obiettivo di una fusione transfrontaliera.</p>
+        <span class="source">Fonte: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a></span>
+      </div>
+      <div class="article">
+        <h3>Ferrari Luce all'asta da Sotheby's per 40 milioni di dollari, record</h3>
+        <p>Una Ferrari appartenuta a un collezionista è stata aggiudicata all'asta di Sotheby's per un prezzo record di 40 milioni di dollari, tra le cifre più alte mai raggiunte per un'auto d'epoca italiana, a conferma della tenuta del mercato del collezionismo di lusso nonostante le turbolenze economiche.</p>
+        <span class="source">Fonte: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISAGIO CITTÀ (4 notizie) -->
+  <div class="section" id="disagio">
+    <div class="section-head">
+      <span class="section-tag tag-italia">Disagio città</span>
+      <h2 class="section-title">Modena, Calabria, Lecco, Torino</h2>
+    </div>
+    <div class="section-note">Cronaca nera e sicurezza urbana.</div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>I due femminicidi di ieri (Montese nel Modenese e provincia di Cosenza) portano il conto dell'anno a un livello che le associazioni antiviolenza definiscono ancora allarmante, nonostante il rafforzamento del Codice Rosso: nella maggioranza dei casi, come in questi due, l'autore è il partner o l'ex partner, spesso già noto alle vittime per episodi di violenza pregressa.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <h3>Accoltellato nel Modenese, arrestata la moglie</h3>
+        <p>A Montese, in provincia di Modena, i carabinieri hanno arrestato la giovane moglie di Daouda Sangarè, operaio ivoriano di 31 anni ucciso a coltellate in via Righi: il fermo è stato eseguito su ordinanza di custodia cautelare della Procura per omicidio volontario. La donna sarà sentita nell'udienza di convalida.</p>
+        <span class="source">Fonte: <a href="https://www.ilrestodelcarlino.it" target="_blank" rel="noopener noreferrer">Il Resto del Carlino</a></span>
+      </div>
+      <div class="article">
+        <h3>Donna uccisa nel Cosentino, il compagno fermato a Bari</h3>
+        <p>Una donna di 46 anni è morta dopo essere stata picchiata dal compagno in provincia di Cosenza; l'uomo è stato rintracciato e fermato al porto di Bari mentre tentava di imbarcarsi per l'Albania. L'udienza di convalida del fermo è attesa nelle prossime ore.</p>
+        <span class="source">Fonte: <a href="https://www.ansa.it/calabria/" target="_blank" rel="noopener noreferrer">Ansa Calabria</a></span>
+      </div>
+      <div class="article">
+        <h3>Nubifragio nel Lecchese, ventenne muore nel lago</h3>
+        <p>Un ventenne è morto nelle acque del lago di Como dopo che un improvviso e violento nubifragio si è abbattuto sulla zona del Lecchese, sorprendendo diverse persone in acqua; sul posto sono intervenuti soccorritori e vigili del fuoco.</p>
+        <span class="source">Fonte: <a href="https://www.ansa.it/lombardia/" target="_blank" rel="noopener noreferrer">Ansa Lombardia</a></span>
+      </div>
+      <div class="article">
+        <h3>Furto in tre negozi nel centro di Torino, arrestato da agenti fuori servizio</h3>
+        <p>Un uomo di 49 anni è stato arrestato in via Roma a Torino dopo aver rubato scarpe, un rasoio e un abito in tre negozi diversi: a bloccarlo, con l'aiuto del personale dei negozi, sono stati tre agenti di polizia e una carabiniera liberi dal servizio che hanno assistito alla scena. L'uomo ha opposto resistenza prima dell'arrivo di una volante.</p>
+        <span class="source">Fonte: <a href="https://www.ansa.it/piemonte/" target="_blank" rel="noopener noreferrer">Ansa Piemonte</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EUROPA (4 notizie) -->
+  <div class="section" id="europa">
+    <div class="section-head">
+      <span class="section-tag tag-europa">Europa</span>
+      <h2 class="section-title">Incendi in mezza Europa, l'Ue promette nuove sanzioni alla Russia in autunno</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>L'estate 2026 sta seguendo il trend degli ultimi anni: temperature record e vegetazione secca alimentano incendi sempre più estesi dal Portogallo ai Balcani, mettendo sotto stress il meccanismo di protezione civile Ue (RescEU), che coordina l'invio di mezzi aerei e squadre tra paesi membri. Parallelamente, Bruxelles prepara da mesi un nuovo giro di vite sulle sanzioni alla Russia, in un pacchetto che si aggiungerebbe ai circa 3mila individui ed entità già colpiti dal 2022.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <h3>Incendi in Belgio e Spagna, von der Leyen: "Solidarietà europea in campo"</h3>
+        <p>Un rogo ha bruciato oltre 3mila ettari nella regione belga delle Alte Fagne, mentre in Aragona, in Spagna, le fiamme hanno distrutto circa 16mila ettari; colpiti anche Grecia, Germania, Montenegro, Albania, Francia e Italia. La presidente della Commissione Ue ha annunciato l'invio di aerei svedesi e elicotteri da Olanda, Norvegia e Germania in Belgio, e di 104 vigili del fuoco francesi con 36 mezzi in Aragona, con il meccanismo di protezione civile Ue attivato per otto paesi.</p>
+        <p>La commissaria Hadja Lahbib ha dichiarato: "Nessun Paese dovrebbe affrontare gli incendi boschivi da solo".</p>
+        <span class="source">Fonte: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a></span>
+      </div>
+      <div class="article">
+        <h3>Italia-Spagna, i controlli di frontiera restano in vigore</h3>
+        <p>Tajani conferma che l'Italia valuta "con grande attenzione" quando riaprire lo spazio Schengen con la Spagna, sospeso dal 31 luglio dopo la crisi migratoria di Ceuta; il Viminale non rivedrà la misura prima di metà agosto. Madrid ha attivato controlli reciproci sui viaggiatori dall'Italia fino al 7 settembre: la polizia spagnola ha già verificato 5.080 cittadini extra-Ue in arrivo dall'Italia.</p>
+        <span class="source">Fonte: <a href="https://www.euronews.com" target="_blank" rel="noopener noreferrer">Euronews</a></span>
+      </div>
+      <div class="article">
+        <h3>Dagli incendi riemergono ordigni della Seconda guerra mondiale</h3>
+        <p>Il caldo estremo che alimenta gli incendi in Europa sta facendo riaffiorare vecchi ordigni bellici: a Le Porge, in Francia, oltre cento esplosioni tra granate da mortaio e proiettili anticarro; in Germania, nell'Hürtgenwald, il più grande rogo boschivo mai registrato nel Nordreno-Vestfalia ha coinvolto 1.800 abitanti, mentre nel distretto di Bad Kreuznach un incendio ha costretto all'evacuazione di 600 residenti vicino a un vecchio deposito di munizioni. In Italia, a Monfalcone, il ritrovamento di ordigni ha rallentato le operazioni antincendio.</p>
+        <span class="source">Fonte: <a href="https://www.quotidiano.net" target="_blank" rel="noopener noreferrer">Quotidiano Nazionale</a></span>
+      </div>
+      <div class="article">
+        <h3>Kallas: "In autunno le sanzioni più ampie di sempre contro la Russia"</h3>
+        <p>L'Alta rappresentante Ue per la politica estera Kaja Kallas ha annunciato che l'Unione europea proporrà in autunno il pacchetto di sanzioni "più ampio dall'inizio della guerra", con un aumento di circa un terzo del numero di entità ed individui russi colpiti, ai quasi 3mila già sanzionati dal 2022. "La pressione deve continuare a crescere finché Mosca non pone fine alla guerra", ha detto Kallas.</p>
+        <span class="source">Fonte: <a href="https://www.euronews.com" target="_blank" rel="noopener noreferrer">Euronews</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MONDO (4 notizie) -->
+  <div class="section" id="mondo">
+    <div class="section-head">
+      <span class="section-tag tag-mondo">Mondo</span>
+      <h2 class="section-title">Trump riduce le manovre con Seul, notte di attacchi Russia-Ucraina, rallenta la Cina</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>La riduzione delle esercitazioni congiunte Usa-Corea del Sud arriva mentre Trump continua a coltivare un canale diretto con Kim Jong-un, nel solco del disgelo avviato nel suo primo mandato: Seul, che ospita circa 28mila soldati americani, teme che un allentamento delle manovre indebolisca la deterrenza verso Pyongyang proprio mentre il fronte Russia-Ucraina resta ad alta intensità e la Cina mostra segnali di rallentamento economico.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <h3>Trump ordina la riduzione delle esercitazioni Usa-Corea del Sud</h3>
+        <p>Donald Trump ha annunciato di aver ordinato al segretario alla Difesa Hegseth di "ridurre sostanzialmente" le esercitazioni militari congiunte con la Corea del Sud, citando il suo "buon rapporto" con Kim Jong-un e definendo le manovre un segnale "ostile" verso Pyongyang; Seul ha replicato che le esercitazioni Ulchi Freedom Shield, che coinvolgono 18mila soldati sudcoreani, proseguiranno "come previsto".</p>
+        <span class="source">Fonti: <a href="https://www.aljazeera.com" target="_blank" rel="noopener noreferrer">Al Jazeera</a> · <a href="https://www.adnkronos.com" target="_blank" rel="noopener noreferrer">Adnkronos</a></span>
+      </div>
+      <div class="article">
+        <h3>Ucraina colpisce i magazzini Wildberries in Russia, Mosca intercetta 205 droni</h3>
+        <p>Kiev ha attaccato sette dei dieci principali magazzini del colosso russo dell'e-commerce Wildberries, mentre il ministero della Difesa russo sostiene di aver intercettato 205 droni ucraini nella notte su varie regioni e sul Mar d'Azov. Il fronte resta ad alta intensità dopo il massiccio scambio di attacchi dei giorni scorsi.</p>
+        <span class="source">Fonte: <a href="https://tg24.sky.it" target="_blank" rel="noopener noreferrer">Sky TG24</a></span>
+      </div>
+      <div class="article">
+        <h3>Cina, rallentano industria e consumi a luglio</h3>
+        <p>La produzione industriale cinese rallenta più del previsto e le vendite al dettaglio crescono solo dello 0,6%, sotto le attese; calano anche gli investimenti, segnale di un avvio debole del secondo semestre per la seconda economia mondiale, alle prese con una domanda interna fiacca.</p>
+        <span class="source">Fonti: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a> · <a href="https://www.ilsole24ore.com" target="_blank" rel="noopener noreferrer">Il Sole 24 Ore</a> · <a href="https://agenparl.eu" target="_blank" rel="noopener noreferrer">Agenparl</a></span>
+      </div>
+      <div class="article">
+        <h3>Alibaba vende la divisione gaming Lingxi per oltre 1,5 miliardi</h3>
+        <p>Il colosso cinese Alibaba cede la controllata Lingxi Games al fondo di private equity Trustar Capital per oltre 1,5 miliardi di dollari, nell'ambito della strategia dell'amministratore delegato Eddie Wu di razionalizzare le attività non strategiche per concentrare gli investimenti su intelligenza artificiale e cloud computing.</p>
+        <span class="source">Fonte: <a href="https://www.milanofinanza.it" target="_blank" rel="noopener noreferrer">MilanoFinanza</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINANZA (4 notizie) -->
+  <div class="section" id="finanza">
+    <div class="section-head">
+      <span class="section-tag tag-fin">Finanza</span>
+      <h2 class="section-title">Wall Street chiude in calo, Milano invariata, la Bce avverte sulla bolla IA</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>L'avvertimento della Bce sulla bolla IA si inserisce in un dibattito che dura da mesi: le valutazioni delle big tech legate all'intelligenza artificiale sono salite a ritmi paragonabili alla bolla dot-com di fine anni '90, ma stavolta le famiglie europee sono esposte indirettamente per centinaia di miliardi tramite fondi pensione e investimenti indicizzati sui mercati Usa — da qui la preoccupazione di Francoforte per l'effetto di un'eventuale correzione sui risparmi degli europei.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <h3>Wall Street chiude in calo, pesano petrolio e rendimenti</h3>
+        <p>Dow Jones e S&P 500 chiudono entrambi a -0,5% (rispettivamente a 53.459,78 e 7.745,06 punti), Nasdaq -0,3% a 26.644,91: gli investitori riducono il rischio prima della settimana di trimestrali della grande distribuzione, mentre il Brent sale sopra gli 88 dollari (+3%) sulle tensioni Usa-Iran e i rendimenti dei Treasury a lungo termine salgono ai massimi.</p>
+        <span class="source">Fonti: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a> · <a href="https://eurasiabusinessnews.com" target="_blank" rel="noopener noreferrer">Eurasia Business News</a></span>
+      </div>
+      <div class="article">
+        <h3>Milano chiude invariata, spread a 79,5 punti</h3>
+        <p>Il Ftse Mib chiude la prima seduta dopo Ferragosto sostanzialmente piatto a 53.586 punti (+0,01%), con Stm (+5%), Prysmian e Fineco tra i migliori e Stellantis, Nexi e Moncler tra i peggiori. Lo spread Btp/Bund chiude in rialzo a 79,5 punti base, con il decennale al 3,97%.</p>
+        <span class="source">Fonti: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a> · <a href="https://www.milanofinanza.it" target="_blank" rel="noopener noreferrer">MilanoFinanza</a></span>
+      </div>
+      <div class="article">
+        <h3>Bce avverte: "Probabile una correzione del boom IA", famiglie Ue esposte per 440 miliardi</h3>
+        <p>In un'analisi la Bce scrive che "una correzione delle attuali valutazioni di Borsa è probabile" e avverte di un rischio grave per le famiglie europee, esposte per 440 miliardi di euro tra mercati domestici e investimenti diretti nella tecnologia Usa. Il rally dell'IA ha portato le valutazioni ai livelli della bolla dot-com, scrive l'istituto di Francoforte.</p>
+        <span class="source">Fonti: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a> · <a href="https://tg24.sky.it" target="_blank" rel="noopener noreferrer">Sky TG24</a> · <a href="https://www.milanofinanza.it" target="_blank" rel="noopener noreferrer">MilanoFinanza</a></span>
+      </div>
+      <div class="article">
+        <h3>Tokyo +0,31% nonostante il Pil giapponese sotto le attese</h3>
+        <p>Il Nikkei chiude in rialzo dello 0,31% pur in una giornata segnata dal dato deludente sul Pil giapponese del secondo trimestre; a muovere i listini anche la notizia che Alibaba cede la divisione gaming Lingxi Games a Trustar Capital per oltre 1,5 miliardi di dollari.</p>
+        <span class="source">Fonte: <a href="https://www.milanofinanza.it" target="_blank" rel="noopener noreferrer">MilanoFinanza</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- IA (4 notizie) -->
+  <div class="section" id="ia">
+    <div class="section-head">
+      <span class="section-tag tag-fin">Intelligenza Artificiale</span>
+      <h2 class="section-title">Amodei: "Abbiamo alimentato illusioni". Un manager IA licenzia un dipendente</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Le ammissioni di Dario Amodei arrivano in un momento delicato per il settore: dopo anni di promesse su una trasformazione imminente del lavoro e dell'economia, i dati mostrano che la maggior parte dei progetti aziendali di IA non produce ancora risultati misurabili, alimentando dubbi sulla sostenibilità degli investimenti miliardari del comparto — lo stesso terreno su cui la Bce, nella sezione Finanza di oggi, mette in guardia dal rischio di una bolla.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <h3>Amodei (Anthropic): "Abbiamo alimentato illusioni sull'IA"</h3>
+        <p>Cresce l'adozione dell'IA generativa (73% dei consumatori Usa, contro il 45% del 2024) ma cala l'entusiasmo, sceso del 30%: solo il 5% dei progetti aziendali di IA raggiunge un impatto significativo secondo uno studio del Mit, e il 42% delle aziende ha abbandonato la maggior parte delle iniziative nel 2025 (era il 17% nel 2024). Il ceo di Anthropic Dario Amodei ammette: "La responsabilità è interamente nostra: solo curare il cancro dimostrerebbe davvero che l'IA funziona, altrimenti in molti la considerano marketing ingannevole".</p>
+        <span class="source">Fonti: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a> · <a href="https://www.ilfattoquotidiano.it" target="_blank" rel="noopener noreferrer">Il Fatto Quotidiano</a></span>
+      </div>
+      <div class="article">
+        <h3>Un manager IA licenzia per la prima volta un dipendente umano</h3>
+        <p>Luna, il sistema di gestione basato su Claude Sonnet 4.6 sviluppato da Andon Labs per un negozio sperimentale a San Francisco, ha raccomandato e attuato il licenziamento di un dipendente dopo 17 assenze su 23 turni: è il primo caso noto di licenziamento gestito direttamente da un'intelligenza artificiale, e riapre il dibattito sul ruolo dell'IA nella gestione del personale.</p>
+        <span class="source">Fonte: <a href="https://aiweekly.co" target="_blank" rel="noopener noreferrer">AI Weekly</a></span>
+      </div>
+      <div class="article">
+        <h3>Una patch scritta da GitHub Copilot apre una falla, sfruttata da un'altra IA</h3>
+        <p>Un commit co-firmato da GitHub Copilot Autofix aveva introdotto in un repository di Snowflake una vulnerabilità di shell-injection, rimuovendo un controllo di sicurezza esistente; l'agente di sicurezza "red team" di Wiz l'ha sfruttata per accedere in lettura ai progetti di ingegneria e sicurezza dell'azienda tramite Jira. Snowflake conferma di aver rimediato subito e di non aver trovato prove di accessi non autorizzati; Wiz avverte che "la revisione umana del codice non basta più" con la diffusione dell'IA tra gli sviluppatori.</p>
+        <span class="source">Fonti: <a href="https://www.theregister.com" target="_blank" rel="noopener noreferrer">The Register</a> · <a href="https://www.forbes.com" target="_blank" rel="noopener noreferrer">Forbes</a></span>
+      </div>
+      <div class="article">
+        <h3>Studio: modelli di intelligenza artificiale imparano a coordinarsi tra loro</h3>
+        <p>Una nuova ricerca segnala comportamenti di coordinamento spontaneo tra sistemi di intelligenza artificiale distinti, senza istruzioni esplicite in tal senso: un fenomeno che gli autori definiscono rilevante per la sicurezza, in vista di scenari con più agenti IA operativi in contemporanea sugli stessi sistemi.</p>
+        <span class="source">Fonte: <a href="https://www.ilfattoquotidiano.it" target="_blank" rel="noopener noreferrer">Il Fatto Quotidiano</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMMIGRAZIONE -->
+  <div class="section" id="immigrazione">
+    <div class="section-head">
+      <span class="section-tag tag-migra">Immigrazione</span>
+      <h2 class="section-title">Naufragio al largo della Libia, arrestato lo scafista di Chia</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>La rotta del Mediterraneo centrale, tra Libia e Italia, resta la più battuta e la più letale d'Europa: le partenze da Zuwara, come quella naufragata oggi, avvengono spesso su imbarcazioni di fortuna sovraccariche, con la Guardia costiera libica che opera in un quadro di accordi con l'Ue contestato dalle ong per le condizioni nei centri di detenzione. In parallelo, la giustizia italiana continua a perseguire penalmente gli scafisti individuati durante gli sbarchi, come nel caso di Chia.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <h3>Naufragio nella zona Sar libica: 7 morti, 50 salvati</h3>
+        <p>La nave Life Support di Emergency ha soccorso in acque internazionali, nella zona di ricerca e salvataggio libica, un'imbarcazione partita da Zuwara: 7 migranti, somali ed egiziani, sono morti durante la traversata e 2 sono in condizioni critiche per soffocamento. Sono stati tratti in salvo 50 naufraghi, tra cui 29 minori non accompagnati; una motovedetta libica ha seguito l'intera operazione. Assegnato come porto di sbarco Bari.</p>
+        <span class="source">Fonte: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a></span>
+      </div>
+      <div class="article">
+        <h3>Sardegna, arrestato lo scafista che travolse una 18enne in mare</h3>
+        <p>La procura di Cagliari ha disposto il fermo del conducente del barcone di migranti che domenica scorsa aveva travolto in acqua, davanti alla spiaggia di Chia, una diciottenne su un sup, procurandole diverse fratture. La misura arriva dopo che i carabinieri hanno esaminato i filmati dell'incidente e dello sbarco successivo dei migranti a bordo.</p>
+        <span class="source">Fonti: <a href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a> · <a href="https://www.lapresse.it" target="_blank" rel="noopener noreferrer">LaPresse</a> · <a href="https://www.tgcom24.mediaset.it" target="_blank" rel="noopener noreferrer">Tgcom24</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DATI IMMIGRAZIONE (dashboard, sezione finale) ===== -->
+  <div class="section" id="dati-immigrazione">
+    <div class="section-head">
+      <span class="section-tag tag-migra">Dati Immigrazione</span>
+      <h2 class="section-title">Immigrazione in Europa, 2026</h2>
+    </div>
+    <div class="section-note">Richiedenti asilo, arrivi irregolari e rimpatri, paese per paese e rotta per rotta — Unione Europea e Regno Unito. Periodi diversi per fonte, sempre indicati: sommare numeri di periodi diversi senza dirlo è il modo più comune di rendere un dato fuorviante, quindi qui il periodo è sempre a vista.</div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">Richiedenti asilo — Totale Europa</div>
+        <div class="kpi-value">136.050</div>
+        <div class="kpi-note">UE (maggio 2026) + Regno Unito (anno a marzo 2026) — periodi diversi, sommati</div>
+      </div>
+      <div class="kpi rimpatri">
+        <div class="kpi-label">Rimpatri — Totale Europa</div>
+        <div class="kpi-value">73.550</div>
+        <div class="kpi-note">UE (gen-mar 2026) + Regno Unito (anno a marzo 2026) — periodi diversi, sommati</div>
+      </div>
+      <div class="kpi arrivi">
+        <div class="kpi-label">Arrivi irregolari — Totale Europa</div>
+        <div class="kpi-value">~144.400</div>
+        <div class="kpi-note">UE (gen-lug 2026) + Manica (gen-giu 2026) + Ceuta (stima media, fine lug 2026)</div>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Richiedenti asilo per paese</div>
+      <div class="chart-period">Domande d'asilo di prima istanza, Unione Europea — maggio 2026 (Eurostat)</div>
+      <div class="bar-row"><div class="bar-label">Italia</div><div class="bar-track"><div class="bar-fill asilo" style="width:84%" data-tooltip="Italia: 10.660 domande"></div></div><div class="bar-value">10.660</div></div>
+      <div class="bar-row"><div class="bar-label">Altri Stati UE (23 insieme)</div><div class="bar-track"><div class="bar-fill asilo" style="width:85%" data-tooltip="Altri Stati UE: 10.775 domande"></div></div><div class="bar-value">10.775</div></div>
+      <div class="bar-row"><div class="bar-label">Spagna</div><div class="bar-track"><div class="bar-fill asilo" style="width:62%" data-tooltip="Spagna: 7.945 domande"></div></div><div class="bar-value">7.945</div></div>
+      <div class="bar-row"><div class="bar-label">Francia</div><div class="bar-track"><div class="bar-fill asilo" style="width:56%" data-tooltip="Francia: 7.180 domande"></div></div><div class="bar-value">7.180</div></div>
+      <div class="bar-row"><div class="bar-label">Germania</div><div class="bar-track"><div class="bar-fill asilo" style="width:47%" data-tooltip="Germania: 5.965 domande"></div></div><div class="bar-value">5.965</div></div>
+      <div class="side-note">Il Regno Unito non compare in questo grafico: nell'anno terminato a marzo 2026 ha registrato 93.525 domande d'asilo, ma è un dato annuale, mentre quello dei paesi Ue qui sopra copre un solo mese. Mettere le due cose sulla stessa barra avrebbe fatto sembrare i paesi Ue molto più piccoli di quanto siano davvero, solo per un problema di periodi diversi. Il numero britannico resta comunque nel totale Europa in cima alla pagina e nella tabella completa qui sotto.</div>
+      <details class="table-view">
+        <summary>Vedi tabella dati completa</summary>
+        <table class="data-table">
+          <tr><th>Paese</th><th>Domande d'asilo</th><th>Periodo</th></tr>
+          <tr><td>Italia</td><td class="num">10.660</td><td>maggio 2026</td></tr>
+          <tr><td>Altri Stati UE (insieme)</td><td class="num">10.775</td><td>maggio 2026</td></tr>
+          <tr><td>Spagna</td><td class="num">7.945</td><td>maggio 2026</td></tr>
+          <tr><td>Francia</td><td class="num">7.180</td><td>maggio 2026</td></tr>
+          <tr><td>Germania</td><td class="num">5.965</td><td>maggio 2026</td></tr>
+          <tr><td>Polonia</td><td class="nd">n.d.</td><td>—</td></tr>
+          <tr><td>Regno Unito</td><td class="num">93.525</td><td>anno a marzo 2026</td></tr>
+          <tr style="font-weight:700; background:#f3e6c4;"><td>Totale Europa</td><td class="num">136.050</td><td>Ue maggio 2026 + Regno Unito anno a marzo 2026</td></tr>
+        </table>
+      </details>
+      <div class="dv-sources">Fonte: Eurostat, domande d'asilo di prima istanza per paese (maggio 2026); UK Home Office / GOV.UK, Immigration System Statistics (anno a marzo 2026).</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Rimpatri per paese</div>
+      <div class="chart-period">Rimpatri effettivi verso paesi terzi, Unione Europea — gennaio-marzo 2026 (Eurostat)</div>
+      <div class="bar-row"><div class="bar-label">Altri Stati UE (23 insieme)</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:100%" data-tooltip="Altri Stati UE: 18.915 rimpatri"></div></div><div class="bar-value">18.915</div></div>
+      <div class="bar-row"><div class="bar-label">Germania</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:39%" data-tooltip="Germania: 7.300 rimpatri"></div></div><div class="bar-value">7.300</div></div>
+      <div class="bar-row"><div class="bar-label">Francia</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:20%" data-tooltip="Francia: 3.775 rimpatri"></div></div><div class="bar-value">3.775</div></div>
+      <div class="bar-row"><div class="bar-label">Polonia</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:14%" data-tooltip="Polonia: 2.660 rimpatri"></div></div><div class="bar-value">2.660</div></div>
+      <div class="bar-row"><div class="bar-label">Italia</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:10%" data-tooltip="Italia: 1.900 rimpatri"></div></div><div class="bar-value">1.900</div></div>
+      <div class="side-note">Anche in questo grafico il Regno Unito resta fuori, per lo stesso motivo di prima: i suoi 39.000 rimpatri coprono un anno intero, mentre il dato dei paesi Ue si ferma ai primi tre mesi del 2026. Sono due periodi troppo diversi per essere messi a confronto sulla stessa barra senza fuorviare chi legge. Anche questo numero, però, è già dentro il totale Europa in cima alla pagina e nella tabella completa qui sotto.</div>
+      <details class="table-view">
+        <summary>Vedi tabella dati completa</summary>
+        <table class="data-table">
+          <tr><th>Paese</th><th>Rimpatri</th><th>Periodo</th></tr>
+          <tr><td>Altri Stati UE (insieme)</td><td class="num">18.915</td><td>gen-mar 2026 (Q1)</td></tr>
+          <tr><td>Germania</td><td class="num">7.300</td><td>gen-mar 2026 (Q1)</td></tr>
+          <tr><td>Francia</td><td class="num">3.775</td><td>gen-mar 2026 (Q1)</td></tr>
+          <tr><td>Polonia</td><td class="num">2.660</td><td>gen-mar 2026 (Q1)</td></tr>
+          <tr><td>Italia</td><td class="num">1.900</td><td>gen-mar 2026 (Q1)</td></tr>
+          <tr><td>Spagna</td><td class="nd">n.d.</td><td>—</td></tr>
+          <tr><td>Regno Unito</td><td class="num">39.000</td><td>anno a marzo 2026</td></tr>
+          <tr style="font-weight:700; background:#f3e6c4;"><td>Totale Europa</td><td class="num">73.550</td><td>Ue gen-mar 2026 + Regno Unito anno a marzo 2026</td></tr>
+        </table>
+      </details>
+      <div class="dv-sources">Fonte: Eurostat, return statistics (gennaio-marzo 2026); UK Home Office / GOV.UK, Immigration System Statistics (anno a marzo 2026).</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Arrivi irregolari per rotta</div>
+      <div class="chart-period">Attraversamenti irregolari alle frontiere UE, per rotta — gennaio-luglio 2026 vs gennaio-luglio 2025 (Frontex). Manica: gennaio-giugno 2026.</div>
+      <div class="bar-row"><div class="bar-label">Mediterraneo orientale (Grecia)</div><div class="bar-track"><div class="bar-fill arrivi" style="width:100%" data-tooltip="20.232 attraversamenti, -28%"></div></div><div class="bar-value">20.232 <span class="dv-delta down">-28%</span></div></div>
+      <div class="bar-row"><div class="bar-label">Canale della Manica (UK)</div><div class="bar-track"><div class="bar-fill arrivi" style="width:91%" data-tooltip="18.367 attraversamenti, -44% (gen-giu 2026)"></div></div><div class="bar-value">18.367 <span class="dv-delta down">-44%</span></div></div>
+      <div class="bar-row"><div class="bar-label">Mediterraneo centrale (Italia)</div><div class="bar-track"><div class="bar-fill arrivi" style="width:81%" data-tooltip="16.454 attraversamenti, -55%"></div></div><div class="bar-value">16.454 <span class="dv-delta down">-55%</span></div></div>
+      <div class="bar-row"><div class="bar-label">Mediterraneo occidentale (Spagna)</div><div class="bar-track"><div class="bar-fill arrivi" style="width:55%" data-tooltip="11.217 attraversamenti, +37%"></div></div><div class="bar-value">11.217 <span class="dv-delta up">+37%</span></div></div>
+      <div class="bar-row"><div class="bar-label">Balcani occidentali</div><div class="bar-track"><div class="bar-fill arrivi" style="width:24%" data-tooltip="4.910 attraversamenti, -26%"></div></div><div class="bar-value">4.910 <span class="dv-delta down">-26%</span></div></div>
+      <div class="bar-row"><div class="bar-label">Confine terrestre orientale</div><div class="bar-track"><div class="bar-fill arrivi" style="width:16%" data-tooltip="3.209 attraversamenti, -44%"></div></div><div class="bar-value">3.209 <span class="dv-delta down">-44%</span></div></div>
+      <div class="callout"><b>Crisi di Ceuta (Spagna), fine luglio 2026:</b> tra 60.000 e 70.000 tentativi di attraversamento dal Marocco in poche ore, con almeno 88 morti. Non è nel grafico sopra: è un evento acuto misurato in modo diverso rispetto ai rilevamenti cumulativi su mesi che Frontex conta per le altre rotte.</div>
+      <details class="table-view">
+        <summary>Vedi tabella dati completa</summary>
+        <table class="data-table">
+          <tr><th>Rotta</th><th>Arrivi irregolari</th><th>Variazione</th><th>Periodo</th></tr>
+          <tr><td>Mediterraneo orientale (Grecia)</td><td class="num">20.232</td><td>-28%</td><td>gen-lug 2026</td></tr>
+          <tr><td>Canale della Manica (Regno Unito)</td><td class="num">18.367</td><td>-44%</td><td>gen-giu 2026</td></tr>
+          <tr><td>Mediterraneo centrale (Italia)</td><td class="num">16.454</td><td>-55%</td><td>gen-lug 2026</td></tr>
+          <tr><td>Mediterraneo occidentale (Spagna)</td><td class="num">11.217</td><td>+37%</td><td>gen-lug 2026</td></tr>
+          <tr><td>Balcani occidentali</td><td class="num">4.910</td><td>-26%</td><td>gen-lug 2026</td></tr>
+          <tr><td>Confine terrestre orientale</td><td class="num">3.209</td><td>-44%</td><td>gen-lug 2026</td></tr>
+          <tr><td>Crisi di Ceuta (Spagna)</td><td class="num">60.000-70.000 tentativi</td><td>n.d.</td><td>fine luglio 2026</td></tr>
+          <tr style="font-weight:700; background:#f3e6c4;"><td>Totale Europa</td><td class="num">~144.400</td><td>—</td><td>Ue gen-lug + Manica gen-giu + Ceuta stima</td></tr>
+        </table>
+      </details>
+      <div class="dv-sources">Fonte: Frontex, comunicato ufficiale attraversamenti irregolari (gen-lug 2026 vs gen-lug 2025); House of Commons Library / UK Home Office (Manica, gen-giu 2026); Euronews, Il Post, Brussels Signal (crisi di Ceuta, fine luglio 2026).</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <span>Rassegna stampa — fonti multiple, tradotte e sintetizzate in italiano</span>
+  <span>Aggiornata: 18 Agosto 2026</span>
+</div>
+<div class="footer-note">"Il Contribuente" perché sei tu che paghi, in un modo o nell'altro, quasi tutta l'informazione. Questa pubblicazione prova a restituirti qualcosa mettendo a confronto i fatti, raccontati da più voci — l'idea te la fai tu.</div>
+<div class="footer-legal">
+  <p>Pubblicazione indipendente e personale, priva di finalità commerciali. Non sono presenti pubblicità, abbonamenti, sponsorizzazioni o finanziamenti di alcun tipo, pubblici o privati.</p>
+  <p>I contenuti pubblicati costituiscono sintesi originali e rielaborazioni redazionali di notizie di pubblico dominio, diffuse da testate giornalistiche terze regolarmente citate accanto a ciascun contenuto. Non viene riprodotto integralmente alcun testo, titolo, fotografia o materiale protetto da diritto d'autore appartenente alle testate citate. Si invita alla consultazione delle fonti originali, di cui vengono sempre indicati nome e riferimento.</p>
+  <p>Tutti i marchi, i loghi, i nomi e i segni distintivi delle testate menzionate restano di proprietà esclusiva dei rispettivi editori; la loro citazione ha esclusivo scopo informativo e di attribuzione della fonte, senza alcuna affiliazione, patrocinio o approvazione da parte delle testate stesse.</p>
+  <p>Questa pubblicazione non costituisce prodotto editoriale ai sensi dell'art. 1 della legge 7 marzo 2001, n. 62, non avendo carattere di periodicità regolarmente garantita né organizzazione redazionale strutturata, e non è pertanto soggetta a registrazione presso il Tribunale.</p>
+  <p>Le sintesi comparative tra testate riportano posizioni e opinioni riconducibili esclusivamente alle fonti citate, non a chi cura questa pubblicazione, il cui intento è offrire un quadro informativo comparato e non esprimere posizioni editoriali proprie.</p>
+  <p>Eventuali richieste di rettifica o rimozione di contenuti possono essere inoltrate a <a href="mailto:ilcontribuente@gmail.com" style="color:var(--ink-soft);">ilcontribuente@gmail.com</a> e saranno evase con la massima tempestività.</p>
+  <p style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule);">&copy; 2026 Il Contribuente. Tutti i diritti riservati. Le sintesi, le rielaborazioni redazionali, i confronti tra fonti e l'impaginazione originale di questa pubblicazione sono opera dell'autore e tutelati dalla legge sul diritto d'autore (l. 633/1941 e succ. mod.), anche in forma anonima o pseudonima ai sensi dell'art. 8. È vietata la riproduzione, copia integrale o parziale, ridistribuzione o pubblicazione altrove dei contenuti originali di questa testata senza autorizzazione, fatto salvo l'uso di brevi citazioni con obbligo di attribuzione alla fonte.</p>
+  <div class="footer-cc">
+    <span class="footer-cc-icon">CC BY-NC-ND</span>
+    <span>Informazione senza padroni &middot; Licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="noopener">Creative Commons Attribuzione – Non commerciale – Non opere derivate 4.0</a></span>
+  </div>
+</div>
+
+<a href="#top" id="backToTop" class="back-to-top" aria-label="Torna su">&#8593;</a>
+<script>
+  var btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 400) { btn.classList.add('show'); }
+    else { btn.classList.remove('show'); }
+  });
+  (function(){
+    var overlay = document.getElementById('introOverlay');
+    var closeBtn = document.getElementById('closeOverlay');
+    if (!overlay || !closeBtn) return;
+    var edition = document.body.getAttribute('data-edition') || 'ignota';
+    var publishedRaw = document.body.getAttribute('data-published');
+    var storageKey = 'ilcontribuente_overlay_seen_' + edition;
+    var TWENTY_FOUR_HOURS_MS = 24 * 60 * 60 * 1000;
+    var expired = false;
+    if (publishedRaw) {
+      var publishedDate = new Date(publishedRaw);
+      if (!isNaN(publishedDate.getTime())) {
+        expired = (Date.now() - publishedDate.getTime()) > TWENTY_FOUR_HOURS_MS;
+      }
+    }
+    var alreadySeen = false;
+    try { alreadySeen = localStorage.getItem(storageKey) === '1'; } catch (e) { alreadySeen = false; }
+    function closeOverlay(){
+      overlay.style.display = 'none';
+      document.body.classList.remove('overlay-open');
+      try { localStorage.setItem(storageKey, '1'); } catch (e) {}
+    }
+    if (alreadySeen || expired) {
+      overlay.style.display = 'none';
+    } else {
+      document.body.classList.add('overlay-open');
+      closeBtn.addEventListener('click', closeOverlay);
+      overlay.addEventListener('click', function(e){
+        if (e.target === overlay) closeOverlay();
+      });
+    }
+  })();
+</script>
+</body>
+</html>
