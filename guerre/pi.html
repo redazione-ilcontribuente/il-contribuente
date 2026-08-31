@@ -1,402 +1,2133 @@
 <!doctype html>
+
 <html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guerre — Palestina e Israele, dalle origini a oggi | Il Contribuente</title>
-<meta name="description" content="Una timeline verificata, numeri alla mano, del conflitto tra Palestina e Israele: dalla Nakba del 1948 alla guerra in corso a Gaza.">
+
+<title>Palestina e Israele: dalle origini a oggi | Il Contribuente</title>
+
+<meta name="description" content="Dossier storico e comparativo sul conflitto tra Israele e Palestina, dalla nascita di Israele alla guerra di Gaza e alle conclusioni ONU sul genocidio.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --paper:#efe9da;
-    --paper2:#e4dcc7;
-    --ink:#1b1e22;
-    --ink-soft:#565c64;
-    --rule:#c7bc9f;
-    --red:#a3291f;
-    --red-deep:#7c1d16;
-    --navy:#1f3a5f;
-    --navy-deep:#122438;
-    --gold:#a97a1f;
-    --gold-deep:#7d5a13;
-    --green:#3d6b4f;
-    --green-deep:#264734;
-    --wine:#6b2438;
-    --wine-deep:#481725;
-    --card:#fdfcf7;
-    --shadow-sm:0 1px 3px rgba(27,30,34,.12);
-    --shadow-md:0 4px 16px rgba(27,30,34,.14);
+
+:root{
+  --paper:#efe9da;
+  --paper2:#e4dcc7;
+  --ink:#1b1e22;
+  --ink-soft:#565c64;
+  --rule:#c7bc9f;
+
+  --red:#a3291f;
+  --red-deep:#721b15;
+
+  --navy:#1f3a5f;
+  --navy-deep:#122438;
+
+  --gold:#a97a1f;
+  --gold-deep:#7d5a13;
+
+  --green:#3d6b4f;
+  --green-deep:#264734;
+
+  --wine:#6b2438;
+  --wine-deep:#481725;
+
+  --danger:#8d1818;
+  --danger-dark:#4c0d0d;
+
+  --card:#fdfcf7;
+
+  --shadow-sm:0 1px 3px rgba(27,30,34,.12);
+  --shadow-md:0 4px 16px rgba(27,30,34,.14);
+  --shadow-lg:0 8px 28px rgba(27,30,34,.18);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{
+  max-width:980px;
+  margin:0 auto;
+  padding:0 6vw 80px;
+}
+
+.topnav{
+  max-width:980px;
+  margin:0 auto;
+  padding:22px 6vw 0;
+}
+
+.topnav a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12.5px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:2px;
+}
+
+.topnav a:hover{
+  color:var(--ink);
+  border-bottom-color:var(--ink);
+}
+
+/* HEADER */
+
+.masthead{
+  padding:30px 6vw 34px;
+  border-bottom:3px solid var(--ink);
+  max-width:980px;
+  margin:0 auto;
+}
+
+.dossier-kicker{
+  display:inline-block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#fff;
+  background:linear-gradient(160deg,#8b211b,#58110e);
+  padding:6px 13px;
+  border-radius:4px;
+  margin-bottom:16px;
+}
+
+h1.title{
+  font-family:'Fraunces',serif;
+  font-weight:900;
+  font-size:clamp(34px,5vw,54px);
+  line-height:1.05;
+  margin:0 0 14px;
+  color:var(--ink);
+}
+
+.subtitle{
+  font-size:18px;
+  color:var(--ink-soft);
+  max-width:760px;
+  margin:0;
+}
+
+.brand-line{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11.5px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  margin-top:20px;
+}
+
+.brand-line em{
+  font-style:normal;
+  color:var(--ink);
+  font-weight:700;
+}
+
+.intro{
+  margin:36px 0 8px;
+  font-size:18px;
+}
+
+.intro strong{
+  color:var(--red-deep);
+}
+
+.updated-note{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  color:var(--ink-soft);
+  margin:6px 0 40px;
+}
+
+/* NAVIGATION INTERNA */
+
+.quick-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:30px 0 44px;
+}
+
+.quick-nav a{
+  text-decoration:none;
+  color:var(--ink);
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:5px;
+  padding:7px 11px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+
+.quick-nav a:hover{
+  background:#fff;
+}
+
+/* BOX GENOCIDIO */
+
+.genocide-alert{
+  margin:44px 0;
+  background:
+    linear-gradient(145deg,#681212,#3f0808);
+  color:#fff;
+  border-radius:12px;
+  padding:30px 32px;
+  box-shadow:var(--shadow-lg);
+  border-left:7px solid #b52b20;
+}
+
+.genocide-alert .eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:#f2b0aa;
+  margin-bottom:9px;
+}
+
+.genocide-alert h2{
+  font-family:'Fraunces',serif;
+  font-size:31px;
+  line-height:1.1;
+  margin:0 0 14px;
+}
+
+.genocide-alert p{
+  margin:0 0 12px;
+  font-size:16px;
+}
+
+.genocide-alert p:last-child{
+  margin-bottom:0;
+}
+
+.genocide-alert strong{
+  color:#fff;
+}
+
+.genocide-status{
+  display:inline-block;
+  margin-top:14px;
+  padding:7px 10px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:4px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+
+/* SEZIONI */
+
+.section-title{
+  font-family:'Fraunces',serif;
+  font-size:32px;
+  line-height:1.15;
+  margin:58px 0 12px;
+}
+
+.section-lead{
+  color:var(--ink-soft);
+  max-width:760px;
+  margin:0 0 25px;
+}
+
+/* TIMELINE */
+
+.timeline{
+  position:relative;
+  margin:44px 0;
+  padding-left:32px;
+  border-left:3px solid var(--gold);
+}
+
+.era{
+  position:relative;
+  margin-bottom:48px;
+}
+
+.era::before{
+  content:'';
+  position:absolute;
+  left:-39px;
+  top:5px;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:var(--gold);
+  border:3px solid var(--paper);
+  box-shadow:0 0 0 2px var(--gold);
+}
+
+.era.current::before{
+  background:var(--red-deep);
+  box-shadow:0 0 0 2px var(--red-deep);
+}
+
+.era.genocide::before{
+  background:#6b1010;
+  box-shadow:0 0 0 3px #6b1010;
+}
+
+.era-years{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12.5px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.era.current .era-years,
+.era.genocide .era-years{
+  color:var(--red-deep);
+}
+
+.era-title{
+  font-family:'Fraunces',serif;
+  font-weight:800;
+  font-size:25px;
+  margin:0 0 10px;
+}
+
+.era-body{
+  font-size:16px;
+}
+
+.era-body p{
+  margin:0 0 12px;
+}
+
+.era-numbers{
+  background:var(--card);
+  border-left:4px solid var(--gold);
+  border-radius:6px;
+  padding:15px 18px;
+  margin:15px 0;
+  box-shadow:var(--shadow-sm);
+}
+
+.era.current .era-numbers{
+  border-left-color:var(--red-deep);
+}
+
+.era.genocide .era-numbers{
+  border-left-color:#751212;
+}
+
+.era-numbers-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  margin-bottom:6px;
+}
+
+.era-numbers p{
+  margin:0;
+  font-size:15px;
+}
+
+.era-source{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  color:var(--ink-soft);
+  margin-top:8px;
+}
+
+/* BOX DATI */
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin:30px 0 44px;
+}
+
+.stat{
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:8px;
+  padding:20px;
+  box-shadow:var(--shadow-sm);
+}
+
+.stat .number{
+  font-family:'Fraunces',serif;
+  font-size:34px;
+  font-weight:900;
+  line-height:1;
+  margin-bottom:8px;
+}
+
+.stat .label{
+  font-size:13px;
+  color:var(--ink-soft);
+  line-height:1.45;
+}
+
+/* CONFRONTO */
+
+.comparison{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  margin:40px 0;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+}
+
+.compare{
+  padding:27px;
+}
+
+.compare.palestine{
+  background:linear-gradient(160deg,#eee4d0,#e2d3b3);
+  border-right:1px solid var(--rule);
+}
+
+.compare.israel{
+  background:linear-gradient(160deg,#e5edf3,#d3e0eb);
+}
+
+.compare-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:700;
+  color:var(--ink-soft);
+  margin-bottom:10px;
+}
+
+.compare h3{
+  font-family:'Fraunces',serif;
+  font-size:24px;
+  margin:0 0 12px;
+}
+
+.compare ul{
+  margin:0;
+  padding-left:20px;
+}
+
+.compare li{
+  margin-bottom:9px;
+  font-size:15px;
+}
+
+/* TABELLA */
+
+.table-wrap{
+  overflow-x:auto;
+  margin:30px 0 44px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--card);
+  box-shadow:var(--shadow-sm);
+}
+
+th,
+td{
+  padding:13px 15px;
+  border-bottom:1px solid var(--rule);
+  text-align:left;
+  vertical-align:top;
+  font-size:14px;
+}
+
+th{
+  background:#ded5c0;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+
+tr:last-child td{
+  border-bottom:none;
+}
+
+/* GENOCIDIO ANALISI */
+
+.genocide-section{
+  margin:55px 0;
+  padding:32px;
+  border-radius:12px;
+  background:linear-gradient(150deg,#f4e1df,#ead0ce);
+  border:1px solid #cda6a1;
+}
+
+.genocide-section .label{
+  font-family:'JetBrains Mono',monospace;
+  color:var(--danger);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-weight:700;
+}
+
+.genocide-section h2{
+  font-family:'Fraunces',serif;
+  font-size:34px;
+  line-height:1.1;
+  margin:8px 0 15px;
+}
+
+.genocide-section h3{
+  font-family:'Fraunces',serif;
+  font-size:23px;
+  margin:28px 0 8px;
+}
+
+.genocide-section p{
+  margin:0 0 13px;
+}
+
+.genocide-section ul{
+  padding-left:22px;
+}
+
+.genocide-section li{
+  margin-bottom:9px;
+}
+
+/* QUADRO GIURIDICO */
+
+.legal-box{
+  background:#182a3d;
+  color:#fff;
+  padding:28px 30px;
+  border-radius:10px;
+  margin:42px 0;
+}
+
+.legal-box .label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  color:#a9bfd2;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+
+.legal-box h2{
+  font-family:'Fraunces',serif;
+  font-size:30px;
+  margin:8px 0 13px;
+}
+
+.legal-box p{
+  margin:0 0 12px;
+  color:#edf2f6;
+}
+
+.legal-box p:last-child{
+  margin-bottom:0;
+}
+
+/* BOX UMANITARIO */
+
+.humanitarian{
+  margin:45px 0;
+  background:#f8f2e7;
+  border:1px solid var(--rule);
+  border-radius:10px;
+  padding:26px;
+}
+
+.humanitarian h2{
+  font-family:'Fraunces',serif;
+  font-size:29px;
+  margin:0 0 12px;
+}
+
+.humanitarian-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-top:20px;
+}
+
+.humanitarian-card{
+  background:#fffdf8;
+  border:1px solid #d7cdb6;
+  border-radius:7px;
+  padding:17px;
+}
+
+.humanitarian-card strong{
+  display:block;
+  font-family:'Fraunces',serif;
+  font-size:28px;
+  margin-bottom:4px;
+}
+
+/* PROSPETTIVE */
+
+.two-views{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  margin:44px 0;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+}
+
+.view{
+  padding:26px;
+}
+
+.view.left{
+  background:linear-gradient(160deg,#eee4d0,#e4d6b8);
+  border-right:1px solid var(--rule);
+}
+
+.view.right{
+  background:linear-gradient(160deg,#e4edf4,#d5e2ec);
+}
+
+.view-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:700;
+  color:var(--ink-soft);
+  margin-bottom:10px;
+}
+
+.view h3{
+  font-family:'Fraunces',serif;
+  font-size:23px;
+  margin:0 0 10px;
+}
+
+.view p{
+  font-size:15px;
+  margin:0;
+}
+
+/* QUADRO FINALE */
+
+.cumulative-box{
+  background:linear-gradient(160deg,#2f5c5c,#1d3a3a);
+  color:#fff;
+  border-radius:10px;
+  padding:28px 30px;
+  margin:50px 0;
+  box-shadow:var(--shadow-md);
+}
+
+.cumulative-box .k{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11.5px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#a8c9c9;
+  margin-bottom:10px;
+}
+
+.cumulative-box p{
+  margin:0 0 11px;
+  font-size:16px;
+}
+
+.cumulative-box p:last-child{
+  margin-bottom:0;
+}
+
+/* FONTI */
+
+.sources-box{
+  margin:50px 0 0;
+  padding-top:25px;
+  border-top:1px solid var(--rule);
+}
+
+.sources-box h3{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  margin:0 0 12px;
+}
+
+.sources-box ul{
+  margin:0;
+  padding-left:20px;
+  font-size:13.5px;
+  color:var(--ink-soft);
+}
+
+.sources-box li{
+  margin-bottom:7px;
+}
+
+.sources-box a{
+  color:var(--ink-soft);
+}
+
+/* FOOTER */
+
+footer{
+  max-width:980px;
+  margin:60px auto 0;
+  padding:28px 6vw 40px;
+  border-top:3px solid var(--ink);
+}
+
+.footer-back{
+  display:inline-block;
+  margin-bottom:22px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12.5px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--ink-soft);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:2px;
+}
+
+.footer-legal p{
+  font-size:12px;
+  color:var(--ink-soft);
+  line-height:1.6;
+  margin:0 0 8px;
+}
+
+.footer-legal p:last-child{
+  margin-bottom:0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:760px){
+
+  .stats-grid{
+    grid-template-columns:1fr;
   }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Inter',sans-serif;
-    font-size:16px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{ max-width:900px; margin:0 auto; padding:0 6vw 80px 6vw; }
-  .topnav{
-    max-width:900px;
-    margin:0 auto;
-    padding:22px 6vw 0 6vw;
-  }
-  .topnav a{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12.5px;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    text-decoration:none;
-    border-bottom:1px solid var(--rule);
-    padding-bottom:2px;
-  }
-  .topnav a:hover{ color:var(--ink); border-bottom-color:var(--ink); }
-  .masthead{ padding:30px 6vw 34px 6vw; border-bottom:3px solid var(--ink); max-width:900px; margin:0 auto; }
-  .dossier-kicker{
-    display:inline-block;
-    font-family:'JetBrains Mono',monospace;
-    font-size:12px;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:#fff;
-    background:linear-gradient(160deg,#2f5c5c,#1d3a3a);
-    padding:5px 12px;
-    border-radius:4px;
-    margin-bottom:16px;
-  }
-  h1.title{
-    font-family:'Fraunces',serif;
-    font-weight:900;
-    font-size:clamp(32px,5vw,50px);
-    line-height:1.08;
-    margin:0 0 14px 0;
-    color:var(--ink);
-  }
-  .subtitle{
-    font-family:'Inter',sans-serif;
-    font-size:17px;
-    color:var(--ink-soft);
-    max-width:640px;
-    margin:0;
-  }
-  .brand-line{
-    font-family:'JetBrains Mono',monospace;
-    font-size:11.5px;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    margin-top:20px;
-  }
-  .brand-line em{ font-style:normal; color:var(--ink); font-weight:700; }
-  .intro{
-    margin:36px 0 8px 0;
-    font-size:17.5px;
-    color:var(--ink);
-  }
-  .intro strong{ color:var(--red-deep); }
-  .updated-note{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-    margin:6px 0 40px 0;
-  }
-  .timeline{
-    position:relative;
-    margin:44px 0;
-    padding-left:28px;
-    border-left:3px solid var(--gold);
-  }
-  .era{
-    position:relative;
-    margin-bottom:40px;
-  }
-  .era::before{
-    content:'';
-    position:absolute;
-    left:-35px;
-    top:4px;
-    width:14px;
-    height:14px;
-    border-radius:50%;
-    background:var(--gold);
-    border:3px solid var(--paper);
-    box-shadow:0 0 0 2px var(--gold);
-  }
-  .era.current::before{ background:var(--red-deep); box-shadow:0 0 0 2px var(--red-deep); }
-  .era-years{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12.5px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    font-weight:700;
-    margin-bottom:6px;
-  }
-  .era.current .era-years{ color:var(--red-deep); }
-  .era-title{
-    font-family:'Fraunces',serif;
-    font-weight:800;
-    font-size:24px;
-    margin:0 0 10px 0;
-    color:var(--ink);
-  }
-  .era-body{ font-size:16px; color:var(--ink); }
-  .era-body p{ margin:0 0 12px 0; }
-  .era-numbers{
-    background:var(--card);
-    border-left:4px solid var(--gold);
-    border-radius:6px;
-    padding:14px 18px;
-    margin:14px 0;
-    box-shadow:var(--shadow-sm);
-  }
-  .era.current .era-numbers{ border-left-color:var(--red-deep); }
-  .era-numbers-label{
-    font-family:'JetBrains Mono',monospace;
-    font-size:10.5px;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    margin-bottom:6px;
-  }
-  .era-numbers p{ margin:0; font-size:15px; }
-  .era-numbers strong{ color:var(--ink); }
-  .era-source{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-    margin-top:8px;
-  }
-  .cumulative-box{
-    background:linear-gradient(160deg,#2f5c5c,#1d3a3a);
-    color:#fff;
-    border-radius:10px;
-    padding:26px 30px;
-    margin:44px 0;
-    box-shadow:var(--shadow-md);
-  }
-  .cumulative-box .k{
-    font-family:'JetBrains Mono',monospace;
-    font-size:11.5px;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:#a8c9c9;
-    margin-bottom:10px;
-  }
-  .cumulative-box p{ margin:0 0 10px 0; font-size:16px; }
-  .cumulative-box p:last-child{ margin-bottom:0; }
-  .cumulative-box strong{ color:#fff; }
+
+  .comparison,
   .two-views{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0;
-    margin:44px 0;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:var(--shadow-md);
+    grid-template-columns:1fr;
   }
-  .view{
-    padding:24px 26px;
-  }
-  .view.left{ background:linear-gradient(160deg,#eee4d0,#e4d6b8); border-right:1px solid var(--rule); }
-  .view.right{ background:linear-gradient(160deg,#f0e3e6,#e6d0d6); }
-  .view-tag{
-    font-family:'JetBrains Mono',monospace;
-    font-size:11px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    font-weight:700;
-    color:var(--ink-soft);
-    margin-bottom:10px;
-  }
-  .view p{ font-size:15px; margin:0; }
-  .sources-box{
-    margin:44px 0 0 0;
-    padding-top:24px;
-    border-top:1px solid var(--rule);
-  }
-  .sources-box h3{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12px;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    margin:0 0 12px 0;
-  }
-  .sources-box ul{ margin:0; padding-left:18px; font-size:13.5px; color:var(--ink-soft); }
-  .sources-box li{ margin-bottom:5px; }
-  footer{
-    max-width:900px;
-    margin:60px auto 0 auto;
-    padding:28px 6vw 40px 6vw;
-    border-top:3px solid var(--ink);
-  }
-  .footer-back{
-    display:inline-block;
-    margin-bottom:22px;
-    font-family:'JetBrains Mono',monospace;
-    font-size:12.5px;
-    text-transform:uppercase;
-    letter-spacing:.06em;
-    color:var(--ink-soft);
-    text-decoration:none;
+
+  .compare.palestine,
+  .view.left{
+    border-right:none;
     border-bottom:1px solid var(--rule);
-    padding-bottom:2px;
   }
-  .footer-legal p{
-    font-size:12px;
-    color:var(--ink-soft);
-    line-height:1.6;
-    margin:0 0 8px 0;
+
+  .humanitarian-grid{
+    grid-template-columns:1fr;
   }
-  .footer-legal p:last-child{ margin-bottom:0; }
-  @media (max-width:640px){
-    .two-views{ grid-template-columns:1fr; }
-    .view.left{ border-right:none; border-bottom:1px solid var(--rule); }
-    .timeline{ padding-left:20px; }
-    .era::before{ left:-27px; width:11px; height:11px; }
+
+}
+
+@media(max-width:640px){
+
+  .timeline{
+    padding-left:22px;
   }
+
+  .era::before{
+    left:-29px;
+    width:11px;
+    height:11px;
+  }
+
+  .genocide-alert,
+  .genocide-section,
+  .legal-box{
+    padding:23px;
+  }
+
+}
+
 </style>
+
 </head>
+
 <body>
 
 <div class="topnav">
-  <a href="../index.html">&larr; Il Contribuente</a>
-  <a href="index.html" style="margin-left:18px;">&larr; Tutti i dossier "Guerre"</a>
+
+  <a href="../index.html">
+    &larr; Il Contribuente
+  </a>
+
+  <a href="index.html" style="margin-left:18px;">
+    &larr; Tutti i dossier "Guerre"
+  </a>
+
 </div>
 
 <div class="masthead">
-  <span class="dossier-kicker">Approfondimenti fissi &middot; Guerre</span>
-  <h1 class="title">Palestina e Israele: dalle origini a oggi</h1>
-  <p class="subtitle">Una timeline verificata, numeri alla mano, dalla Nakba del 1948 alla guerra in corso a Gaza — perché quello che leggi ogni giorno nella rassegna non comincia il 7 ottobre 2023.</p>
-  <div class="brand-line">Dossier di <em>Il Contribuente</em> &middot; primo di una serie di approfondimenti fissi sui conflitti in corso</div>
+
+  <span class="dossier-kicker">
+    Approfondimento fisso · Guerre
+  </span>
+
+  <h1 class="title">
+    Palestina e Israele:<br>
+    dalle origini a oggi
+  </h1>
+
+  <p class="subtitle">
+    Quasi ottant'anni di guerre, occupazione, attentati, espulsioni,
+    insediamenti, blocchi, negoziati falliti e violenza. Un dossier
+    per leggere la guerra di Gaza dentro la storia che l'ha preceduta.
+  </p>
+
+  <div class="brand-line">
+    Dossier di <em>Il Contribuente</em> · storia · numeri · diritto internazionale · confronto
+  </div>
+
 </div>
 
 <div class="wrap">
 
-  <p class="intro">Ogni round di questo conflitto viene raccontato dalle testate come se iniziasse dall'ultimo attacco. Ma i numeri — quelli verificati, con le fonti sempre indicate — raccontano una storia lunga <strong>quasi ottant'anni</strong>, fatta di fasi acute e fasi più silenziose, mai davvero interrotta. Questa pagina prova a mettere in fila i fatti principali, con le cifre di ciascuna fase, senza sostituirsi al giudizio di chi legge.</p>
-  <div class="updated-note">Ultimo aggiornamento numeri: 21 agosto 2026 &middot; le cifre della guerra in corso vengono aggiornate anche nella rassegna quotidiana</div>
+<p class="intro">
 
-  <div class="timeline">
+Il conflitto israelo-palestinese non nasce il 7 ottobre 2023.
+La guerra attuale è l'ultima e più devastante fase di una storia
+iniziata decenni prima. Questo dossier mette a confronto <strong>la storia palestinese e quella israeliana</strong>, separando
+i fatti documentati dalle interpretazioni politiche e distinguendo
+le responsabilità dei diversi attori.
 
-    <div class="era">
-      <div class="era-years">1947 – 1948</div>
-      <h2 class="era-title">La Nakba: la "catastrofe"</h2>
-      <div class="era-body">
-        <p>Dopo il piano di spartizione dell'Onu del 1947 e la proclamazione dello Stato di Israele nel maggio 1948, la guerra arabo-israeliana che segue provoca l'esodo di massa della popolazione palestinese. Centinaia di villaggi arabi vengono svuotati o distrutti, incluse aree urbane come Giaffa e gran parte di Haifa. Milioni di discendenti dei profughi di allora restano oggi registrati come rifugiati dalle Nazioni Unite.</p>
-      </div>
-      <div class="era-numbers">
-        <div class="era-numbers-label">I numeri</div>
-        <p><strong>~700.000 palestinesi</strong> costretti a lasciare le proprie case; centinaia di villaggi arabi distrutti o svuotati.</p>
-        <div class="era-source">Fonte: Sky TG24</div>
-      </div>
-    </div>
+</p>
 
-    <div class="era">
-      <div class="era-years">1948 – 1987</div>
-      <h2 class="era-title">Le guerre arabo-israeliane e l'occupazione</h2>
-      <div class="era-body">
-        <p>Nei decenni successivi si susseguono guerre tra Israele e i Paesi arabi vicini (1948-49, 1956, 1967, 1973), che ridisegnano più volte i confini della regione. Con la guerra dei Sei Giorni del 1967 Israele occupa Cisgiordania, Gaza, Gerusalemme Est e le alture del Golan — un'occupazione militare che, per Cisgiordania e Gaza, prosegue in forme diverse ancora oggi. È il periodo in cui si consolidano gli insediamenti israeliani nei territori occupati, tuttora al centro del contenzioso internazionale sulla loro legalità secondo il diritto internazionale.</p>
-      </div>
-    </div>
+<div class="updated-note">
 
-    <div class="era">
-      <div class="era-years">1987 – 1993</div>
-      <h2 class="era-title">La prima Intifada</h2>
-      <div class="era-body">
-        <p>La prima sollevazione popolare palestinese contro l'occupazione scoppia a Gaza nel dicembre 1987 e si diffonde rapidamente ai territori occupati: scioperi, boicottaggi, lancio di pietre contro l'esercito israeliano. Si conclude convenzionalmente con gli accordi di Oslo del 1993, che istituiscono l'Autorità Palestinese e aprono — senza mai completarlo — un processo di pace.</p>
-      </div>
-      <div class="era-numbers">
-        <div class="era-numbers-label">I numeri</div>
-        <p>Almeno <strong>2.162 palestinesi uccisi</strong> (1.087 da soldati israeliani, 75 da civili israeliani, 1.000 da altri palestinesi accusati di collaborazionismo); al momento degli accordi di Oslo, 1.162 palestinesi — tra cui 241 bambini — risultavano uccisi da forze israeliane.</p>
-        <div class="era-source">Fonte: B'Tselem</div>
-      </div>
-    </div>
+Ultimo aggiornamento editoriale: 31 agosto 2026 ·
+per i dati della guerra in corso verificare sempre gli ultimi report ONU/OCHA
 
-    <div class="era">
-      <div class="era-years">2000 – 2005</div>
-      <h2 class="era-title">La seconda Intifada</h2>
-      <div class="era-body">
-        <p>Il fallimento del processo di pace e la visita di Ariel Sharon alla Spianata delle Moschee nel settembre 2000 innescano una nuova, più violenta sollevazione, segnata dal moltiplicarsi di attentati suicidi contro civili israeliani e da una durissima risposta militare israeliana nei territori occupati.</p>
-      </div>
-      <div class="era-numbers">
-        <div class="era-numbers-label">I numeri</div>
-        <p>Circa <strong>3.179 palestinesi uccisi</strong> e circa <strong>1.010 israeliani uccisi</strong> tra il 29 settembre 2000 e il 1° gennaio 2005 (di cui 644-773 civili israeliani).</p>
-        <div class="era-source">Fonte: B'Tselem</div>
-      </div>
-    </div>
+</div>
 
-    <div class="era">
-      <div class="era-years">2008 – 2023</div>
-      <h2 class="era-title">I round di Gaza, prima della guerra attuale</h2>
-      <div class="era-body">
-        <p>Dopo la presa di Gaza da parte di Hamas nel 2007 e il blocco israeloegiziano della Striscia, si susseguono quattro grandi operazioni militari israeliane su Gaza — 2008-09 ("Piombo Fuso"), 2012 ("Pilastro di Difesa"), 2014 ("Margine Protettivo") e 2021 — intervallate da anni di violenza a intensità più bassa ma mai del tutto assente. Il 2014 resta, fino al 2023, l'escalation più sanguinosa di questo periodo.</p>
-      </div>
-      <div class="era-numbers">
-        <div class="era-numbers-label">I numeri</div>
-        <p>Tra il 2008 e il 2023, prima dell'inizio della guerra attuale: <strong>12.949 palestinesi uccisi</strong> e <strong>1.706 israeliani uccisi</strong> nel complesso delle operazioni militari; solo nel 2014, <strong>2.329 palestinesi</strong> e <strong>88 israeliani</strong> — allora il bilancio più alto mai registrato in una singola escalation.</p>
-        <div class="era-source">Fonte: Ocha (Onu) via Truenumbers.it</div>
-      </div>
-    </div>
+<div class="quick-nav">
 
-    <div class="era current">
-      <div class="era-years">Dal 7 ottobre 2023</div>
-      <h2 class="era-title">La guerra in corso</h2>
-      <div class="era-body">
-        <p>Il 7 ottobre 2023 Hamas attacca Israele uccidendo circa 1.400 persone in poche ore e prendendo ostaggi. Israele risponde con un'offensiva militare su Gaza che, per intensità e durata, supera di gran lunga ogni precedente escalation — al punto che il solo bilancio delle vittime palestinesi di questa guerra è più alto della somma di tutte le fasi precedenti messe insieme dal 2008 in poi. È in questo contesto che la Corte internazionale di giustizia, una commissione Onu, la relatrice speciale Francesca Albanese, Amnesty International e Human Rights Watch hanno parlato di azioni "plausibilmente genocidarie" o di genocidio; Israele respinge le accuse e rivendica operazioni militari legittime contro Hamas.</p>
-      </div>
-      <div class="era-numbers">
-        <div class="era-numbers-label">I numeri (aggiornati con la rassegna quotidiana)</div>
-        <p><strong>~1.400 israeliani uccisi</strong> il 7 ottobre 2023; <strong>oltre 73.400 palestinesi uccisi e oltre 174.000 feriti</strong> dal ministero della Salute di Gaza (dato più recente nella rassegna del giorno); circa 74.200 bambini sotto i cinque anni a rischio malnutrizione acuta entro aprile 2027 secondo l'Ipc.</p>
-        <div class="era-source">Fonti: Truenumbers.it/Ocha, ministero della Salute di Gaza, Ipc/Onu — vedi la rassegna di oggi per il dato aggiornato</div>
-      </div>
-    </div>
+<a href="#timeline">Timeline</a> <a href="#confronto">Confronto</a> <a href="#genocidio">Genocidio</a> <a href="#diritto">Diritto internazionale</a> <a href="#gaza">Gaza oggi</a> <a href="#fonti">Fonti</a>
 
+</div>
+
+<!-- GENOCIDIO -->
+
+<div class="genocide-alert">
+
+  <div class="eyebrow">
+    Il nodo centrale della guerra di Gaza
   </div>
 
-  <div class="cumulative-box">
-    <div class="k">Il quadro d'insieme</div>
-    <p>Sommare cifre di fasi diverse, raccolte con metodologie diverse, è il modo più comune di rendere un dato fuorviante — per questo qui ogni numero resta agganciato alla propria fase ed è sempre citata la fonte. Ma anche letti separatamente, i numeri raccontano una tendenza chiara: <strong>ogni fase acuta di questo conflitto, dal 2000 in poi, ha superato la precedente per numero di vittime</strong> — e la guerra iniziata il 7 ottobre 2023, da sola, ha già superato per bilancio delle vittime palestinesi tutte le fasi precedenti messe insieme dal 2008 a oggi.</p>
+  <h2>
+    Genocidio: cosa sostengono le Nazioni Unite
+  </h2>
+
+  <p>
+
+```
+La questione del genocidio è diventata uno dei principali nodi
+giuridici e politici della guerra. La Commissione d'inchiesta
+internazionale indipendente delle Nazioni Unite ha concluso,
+nel settembre 2025, che <strong>Israele ha commesso genocidio
+contro i palestinesi nella Striscia di Gaza</strong>, individuando
+quattro atti previsti dalla Convenzione sul genocidio.
+```
+
+  </p>
+
+  <p>
+
+```
+Nel 2026 la Commissione ha ribadito le proprie conclusioni,
+parlando di prosecuzione del genocidio e di altri crimini
+internazionali. Si tratta di una conclusione di un organismo
+ONU indipendente, distinta dalla sentenza definitiva della
+Corte internazionale di giustizia.
+```
+
+  </p>
+
+  <span class="genocide-status">
+    Conclusione della Commissione d'inchiesta ONU · non ancora sentenza definitiva CIJ
+  </span>
+
+</div>
+
+<!-- TIMELINE -->
+
+<h2 class="section-title" id="timeline">
+  Una storia in otto fasi
+</h2>
+
+<p class="section-lead">
+
+Per capire il presente bisogna distinguere la nascita dello Stato
+di Israele, la questione dei profughi palestinesi, l'occupazione
+dei territori del 1967, la nascita di Hamas, il blocco di Gaza,
+le guerre precedenti e infine il 7 ottobre 2023.
+
+</p>
+
+<div class="timeline">
+
+<div class="era">
+
+  <div class="era-years">
+    1917 – 1947
   </div>
 
-  <div class="two-views">
-    <div class="view left">
-      <div class="view-tag">Prospettiva palestinese / organismi internazionali</div>
-      <p>Quella di oggi non è un'escalation isolata ma l'ultima e più grave fase di una storia di espropriazione, occupazione e violenza sistematica che dura da prima della fondazione di Israele, culminata secondo Corte internazionale di giustizia, Onu, Amnesty International e Human Rights Watch in azioni "plausibilmente genocidarie" a Gaza.</p>
-    </div>
-    <div class="view right">
-      <div class="view-tag">Prospettiva israeliana</div>
-      <p>Israele si è trovato più volte a dover rispondere militarmente ad attacchi e attentati contro la propria popolazione civile — dagli attentati suicidi della seconda Intifada al massacro del 7 ottobre 2023 — e rivendica il diritto a difendersi e a condurre operazioni legittime contro organizzazioni che dichiaratamente ne cercano la distruzione, respingendo le accuse di genocidio come politicamente motivate.</p>
-    </div>
-  </div>
+  <h2 class="era-title">
+    Il mandato britannico e le origini del conflitto
+  </h2>
 
-  <div class="sources-box">
-    <h3>Fonti citate in questa pagina</h3>
-    <ul>
-      <li>Sky TG24 — Nakba 1948</li>
-      <li>B'Tselem — bilancio vittime prima e seconda Intifada</li>
-      <li>Ocha (Onu) via Truenumbers.it — bilancio vittime 2008-2023 e 7 ottobre 2023</li>
-      <li>Ministero della Salute di Gaza — bilancio vittime guerra in corso</li>
-      <li>Ipc (sistema di classificazione della sicurezza alimentare, Onu) — stime malnutrizione infantile</li>
-      <li>Corte internazionale di giustizia, Onu, Amnesty International, Human Rights Watch — qualificazione giuridica delle azioni a Gaza</li>
-    </ul>
+  <div class="era-body">
+
+```
+<p>
+  Dopo la Prima guerra mondiale la Palestina passa sotto mandato
+  britannico. Nel frattempo cresce il movimento sionista,
+  che sostiene la creazione di una patria nazionale ebraica,
+  mentre la popolazione araba palestinese rivendica
+  autodeterminazione e continuità territoriale.
+</p>
+
+<p>
+  L'immigrazione ebraica aumenta soprattutto negli anni Trenta
+  e Quaranta, anche in conseguenza delle persecuzioni europee
+  e dell'Olocausto. Crescono contemporaneamente le tensioni
+  tra comunità ebraica e araba.
+</p>
+```
+
   </div>
 
 </div>
 
-<footer>
-  <a href="index.html" class="footer-back" style="margin-right:20px;">&larr; Tutti i dossier "Guerre"</a>
-  <a href="../index.html" class="footer-back">&larr; Torna a Il Contribuente</a>
-  <div class="footer-legal">
-    <p>Pubblicazione indipendente e personale, priva di finalità commerciali. Non sono presenti pubblicità, abbonamenti, sponsorizzazioni o finanziamenti di alcun tipo, pubblici o privati.</p>
-    <p>I contenuti pubblicati costituiscono sintesi originali e rielaborazioni redazionali di notizie di pubblico dominio, diffuse da fonti terze regolarmente citate accanto a ciascun contenuto. Non viene riprodotto integralmente alcun testo, titolo, fotografia o materiale protetto da diritto d'autore appartenente alle fonti citate. Si invita alla consultazione delle fonti originali.</p>
-    <p>Le sintesi riportano posizioni e opinioni riconducibili esclusivamente alle fonti citate, non a chi cura questa pubblicazione, il cui intento è offrire un quadro informativo comparato e non esprimere posizioni editoriali proprie.</p>
-    <p>Eventuali richieste di rettifica o rimozione di contenuti possono essere inoltrate a <a href="mailto:ilcontribuente@gmail.com" style="color:var(--ink-soft);">ilcontribuente@gmail.com</a>.</p>
+<div class="era">
+
+  <div class="era-years">
+    1947 – 1949
   </div>
+
+  <h2 class="era-title">
+    Partizione, nascita di Israele e Nakba
+  </h2>
+
+  <div class="era-body">
+
+```
+<p>
+  Nel 1947 l'Assemblea generale dell'ONU approva il piano
+  di partizione della Palestina mandataria in uno Stato
+  ebraico e uno arabo, con un regime internazionale per
+  Gerusalemme.
+</p>
+
+<p>
+  La leadership sionista accetta il piano come base per la
+  nascita dello Stato; la leadership araba palestinese e
+  gli Stati arabi lo respingono.
+</p>
+
+<p>
+  Nel maggio 1948 viene proclamato lo Stato di Israele.
+  La guerra provoca la fuga e l'espulsione di una parte
+  enorme della popolazione palestinese.
+</p>
+```
+
+  </div>
+
+  <div class="era-numbers">
+
+```
+<div class="era-numbers-label">
+  La Nakba
+</div>
+
+<p>
+  Circa <strong>700.000 palestinesi</strong> furono costretti
+  a lasciare le proprie case o divennero profughi durante
+  la guerra del 1948.
+</p>
+```
+
+  </div>
+
+</div>
+
+<div class="era">
+
+  <div class="era-years">
+    1949 – 1967
+  </div>
+
+  <h2 class="era-title">
+    Israele, i profughi palestinesi e l'assenza di uno Stato arabo palestinese
+  </h2>
+
+  <div class="era-body">
+
+```
+<p>
+  Dopo la guerra Israele controlla un territorio maggiore
+  rispetto a quello previsto dal piano ONU del 1947.
+  La Cisgiordania passa sotto controllo giordano e Gaza
+  sotto amministrazione egiziana.
+</p>
+
+<p>
+  I palestinesi rimasti senza casa diventano una popolazione
+  di rifugiati distribuita tra Gaza, Cisgiordania, Giordania,
+  Libano, Siria e altri Paesi.
+</p>
+
+<p>
+  La questione dei profughi e il mancato riconoscimento di
+  uno Stato palestinese diventano due dei problemi centrali
+  del conflitto.
+</p>
+```
+
+  </div>
+
+</div>
+
+<div class="era">
+
+  <div class="era-years">
+    1967
+  </div>
+
+  <h2 class="era-title">
+    La guerra dei Sei Giorni e l'occupazione
+  </h2>
+
+  <div class="era-body">
+
+```
+<p>
+  Nel giugno 1967 Israele sconfigge Egitto, Giordania e Siria
+  e conquista la Cisgiordania, Gerusalemme Est, la Striscia
+  di Gaza, il Sinai e le alture del Golan.
+</p>
+
+<p>
+  Il Sinai viene successivamente restituito all'Egitto.
+  Gaza e la Cisgiordania diventano invece il centro della
+  questione dell'occupazione palestinese.
+</p>
+
+<p>
+  Nei decenni successivi si sviluppa anche il sistema degli
+  insediamenti israeliani nei territori occupati, considerati
+  illegali dal diritto internazionale dalla maggior parte
+  degli organismi internazionali.
+</p>
+```
+
+  </div>
+
+</div>
+
+<div class="era">
+
+  <div class="era-years">
+    1987 – 1993
+  </div>
+
+  <h2 class="era-title">
+    Prima Intifada e nascita di Hamas
+  </h2>
+
+  <div class="era-body">
+
+```
+<p>
+  Nel 1987 esplode la prima Intifada palestinese contro
+  l'occupazione israeliana. La protesta comprende scioperi,
+  manifestazioni, boicottaggi e violenze.
+</p>
+
+<p>
+  Nello stesso periodo nasce Hamas, organizzazione islamista
+  palestinese che combina attività politica, sociale e
+  armata e che nel corso degli anni diventerà uno dei
+  principali attori del conflitto.
+</p>
+```
+
+  </div>
+
+</div>
+
+<div class="era">
+
+  <div class="era-years">
+    1993 – 2000
+  </div>
+
+  <h2 class="era-title">
+    Oslo: la grande occasione mancata
+  </h2>
+
+  <div class="era-body">
+
+```
+<p>
+  Gli accordi di Oslo del 1993 portano al reciproco
+  riconoscimento tra Israele e Organizzazione per la
+  Liberazione della Palestina e alla nascita dell'Autorità
+  Palestinese.
+</p>
+
+<p>
+  Il processo avrebbe dovuto portare a una soluzione
+  definitiva, ma le questioni fondamentali — Gerusalemme,
+  confini, insediamenti, rifugiati e sicurezza — rimangono
+  irrisolte.
+</p>
+
+<p>
+  L'assassinio del premier israeliano Yitzhak Rabin nel 1995
+  e l'aumento delle violenze indeboliscono ulteriormente
+  il processo.
+</p>
+```
+
+  </div>
+
+</div>
+
+<div class="era">
+
+  <div class="era-years">
+    2000 – 2005
+  </div>
+
+  <h2 class="era-title">
+    Seconda Intifada
+  </h2>
+
+  <div class="era-body">
+
+```
+<p>
+  Il fallimento dei negoziati e la visita di Ariel Sharon
+  alla Spianata delle Moschee nel 2000 contribuiscono
+  all'esplosione della seconda Intifada.
+</p>
+
+<p>
+  La fase è caratterizzata da attentati suicidi palestinesi
+  contro civili israeliani, operazioni militari israeliane,
+  incursioni nei territori palestinesi e un numero elevatissimo
+  di vittime da entrambe le parti.
+</p>
+```
+
+  </div>
+
+  <div class="era-numbers">
+
+```
+<div class="era-numbers-label">
+  Bilancio
+</div>
+
+<p>
+  Secondo B'Tselem, tra il 29 settembre 2000 e il 1° gennaio
+  2005 furono uccisi circa <strong>3.179 palestinesi</strong>
+  e circa <strong>1.010 israeliani</strong>.
+</p>
+```
+
+  </div>
+
+</div>
+
+<div class="era">
+
+  <div class="era-years">
+    2005 – 2022
+  </div>
+
+  <h2 class="era-title">
+    Gaza, Hamas, blocco e guerre ricorrenti
+  </h2>
+
+  <div class="era-body">
+
+```
+<p>
+  Nel 2005 Israele ritira permanentemente le proprie forze
+  e gli insediamenti dalla Striscia di Gaza.
+</p>
+
+<p>
+  Nel 2006 Hamas vince le elezioni legislative palestinesi.
+  Nel 2007 Hamas prende il controllo militare e politico
+  della Striscia dopo lo scontro con Fatah.
+</p>
+
+<p>
+  Israele ed Egitto impongono successivamente un sistema
+  di restrizioni e blocco sull'accesso a Gaza.
+</p>
+
+<p>
+  Seguono grandi escalation militari nel 2008-09, 2012,
+  2014 e 2021.
+</p>
+```
+
+  </div>
+
+</div>
+
+<div class="era current">
+
+  <div class="era-years">
+    7 ottobre 2023
+  </div>
+
+  <h2 class="era-title">
+    L'attacco di Hamas
+  </h2>
+
+  <div class="era-body">
+
+```
+<p>
+  Il 7 ottobre 2023 Hamas e altri gruppi armati palestinesi
+  attaccano il territorio israeliano. Vengono uccise circa
+  1.200 persone, in larga maggioranza civili, e centinaia
+  di persone vengono prese in ostaggio.
+</p>
+
+<p>
+  L'attacco rappresenta la più grave strage di cittadini
+  israeliani in un singolo giorno nella storia recente
+  dello Stato di Israele.
+</p>
+
+<p>
+  Israele dichiara guerra ad Hamas e avvia una vasta
+  operazione militare nella Striscia di Gaza.
+</p>
+```
+
+  </div>
+
+</div>
+
+<div class="era genocide">
+
+  <div class="era-years">
+    2023 – 2026
+  </div>
+
+  <h2 class="era-title">
+    Gaza: distruzione, sfollamento e accuse di genocidio
+  </h2>
+
+  <div class="era-body">
+
+```
+<p>
+  L'offensiva israeliana produce una distruzione senza
+  precedenti nella Striscia di Gaza, con enormi perdite
+  tra la popolazione civile, distruzione di abitazioni,
+  ospedali, scuole, infrastrutture idriche e reti elettriche.
+</p>
+
+<p>
+  Le autorità israeliane sostengono che l'obiettivo delle
+  operazioni sia Hamas e che la guerra sia una risposta
+  necessaria all'attacco del 7 ottobre e alla minaccia
+  rappresentata dall'organizzazione armata.
+</p>
+
+<p>
+  Organismi ONU, organizzazioni per i diritti umani e
+  numerosi esperti internazionali hanno invece documentato
+  condizioni che comprendono uccisioni di civili,
+  distruzione su vasta scala, sfollamento e gravi restrizioni
+  all'accesso a cibo, acqua, cure e beni essenziali.
+</p>
+```
+
+  </div>
+
+</div>
+
+</div>
+
+<!-- CONFRONTO -->
+
+<h2 class="section-title" id="confronto">
+  Israele e Palestina: il confronto
+</h2>
+
+<p class="section-lead">
+
+Il confronto non significa mettere sullo stesso piano ogni evento.
+Significa capire quali sono le esperienze, le paure, le responsabilità
+e gli obiettivi dei due principali schieramenti.
+
+</p>
+
+<div class="comparison">
+
+<div class="compare palestine">
+
+  <div class="compare-tag">
+    Prospettiva palestinese
+  </div>
+
+  <h3>
+    Terra, occupazione e autodeterminazione
+  </h3>
+
+  <ul>
+
+```
+<li>
+  La perdita delle case e della terra nel 1948 rappresenta
+  il nucleo della memoria nazionale palestinese.
+</li>
+
+<li>
+  La mancata nascita di uno Stato palestinese indipendente
+  rimane una questione centrale.
+</li>
+
+<li>
+  La Cisgiordania è sottoposta a occupazione militare
+  israeliana dal 1967.
+</li>
+
+<li>
+  Gli insediamenti israeliani sono considerati illegali
+  dal diritto internazionale.
+</li>
+
+<li>
+  Gaza è stata sottoposta per anni a pesanti restrizioni
+  sull'ingresso e l'uscita di persone e merci.
+</li>
+
+<li>
+  La popolazione palestinese rivendica autodeterminazione,
+  sovranità e un proprio Stato.
+</li>
+```
+
+  </ul>
+
+</div>
+
+<div class="compare israel">
+
+  <div class="compare-tag">
+    Prospettiva israeliana
+  </div>
+
+  <h3>
+    Sicurezza, sopravvivenza e autodifesa
+  </h3>
+
+  <ul>
+
+```
+<li>
+  La storia ebraica è segnata da secoli di persecuzioni,
+  culminate nell'Olocausto.
+</li>
+
+<li>
+  La nascita di Israele viene vista come la creazione di
+  uno Stato-rifugio per il popolo ebraico.
+</li>
+
+<li>
+  Israele considera Hamas e altri gruppi armati una minaccia
+  diretta alla propria popolazione.
+</li>
+
+<li>
+  Il 7 ottobre 2023 viene considerato una prova della
+  necessità di garantire la sicurezza attraverso la forza.
+</li>
+
+<li>
+  Israele sostiene che le operazioni militari siano dirette
+  contro Hamas e non contro la popolazione palestinese.
+</li>
+
+<li>
+  Il governo israeliano respinge l'accusa di genocidio.
+</li>
+```
+
+  </ul>
+
+</div>
+
+</div>
+
+<!-- TABELLA -->
+
+<h2 class="section-title">
+  Le principali differenze
+</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+  <th>Tema</th>
+  <th>Prospettiva palestinese</th>
+  <th>Prospettiva israeliana</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td><strong>1948</strong></td>
+
+<td>
+Nakba, espulsione/fuga e perdita della terra.
+</td>
+
+<td>
+Guerra d'indipendenza e nascita dello Stato di Israele.
+</td>
+
+</tr>
+
+<tr>
+
+<td><strong>1967</strong></td>
+
+<td>
+Inizio dell'occupazione israeliana dei territori palestinesi.
+</td>
+
+<td>
+Guerra preventiva e conquista territoriale in risposta
+a una minaccia regionale.
+</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Insediamenti</strong></td>
+
+<td>
+Espansione territoriale e ostacolo alla nascita di uno Stato palestinese.
+</td>
+
+<td>
+Questione di sicurezza, storia e ideologia per parte della società israeliana.
+</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Hamas</strong></td>
+
+<td>
+Movimento nato nel contesto dell'occupazione e della resistenza,
+ma responsabile anche di attacchi contro civili.
+</td>
+
+<td>
+Organizzazione terroristica e minaccia alla sicurezza nazionale.
+</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Gaza</strong></td>
+
+<td>
+Blocco, isolamento e crisi umanitaria.
+</td>
+
+<td>
+Misure di sicurezza necessarie per impedire il riarmo di Hamas.
+</td>
+
+</tr>
+
+<tr>
+
+<td><strong>7 ottobre</strong></td>
+
+<td>
+Evento che apre una nuova fase di guerra devastante.
+</td>
+
+<td>
+Massacro e trauma nazionale che giustificano una risposta militare contro Hamas.
+</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Guerra di Gaza</strong></td>
+
+<td>
+Distruzione della società palestinese e possibile genocidio.
+</td>
+
+<td>
+Campagna militare contro Hamas e diritto all'autodifesa.
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- GENOCIDIO -->
+
+<div class="genocide-section" id="genocidio">
+
+  <div class="label">
+    Approfondimento · genocidio
+  </div>
+
+  <h2>
+    Perché oggi si parla di genocidio a Gaza?
+  </h2>
+
+  <p>
+
+```
+La Convenzione ONU del 1948 definisce genocidio determinati
+atti commessi con l'intento di distruggere, in tutto o in parte,
+un gruppo nazionale, etnico, razziale o religioso.
+```
+
+  </p>
+
+  <h3>
+    La posizione della Commissione d'inchiesta ONU
+  </h3>
+
+  <p>
+
+```
+La Commissione d'inchiesta internazionale indipendente delle
+Nazioni Unite ha concluso nel 2025 che Israele ha commesso
+genocidio nella Striscia di Gaza.
+```
+
+  </p>
+
+  <p>
+
+```
+La Commissione ha individuato quattro categorie di atti
+previste dalla Convenzione sul genocidio:
+```
+
+  </p>
+
+  <ul>
+
+```
+<li>
+  uccisione di membri del gruppo;
+</li>
+
+<li>
+  causazione di gravi danni fisici o mentali;
+</li>
+
+<li>
+  imposizione deliberata di condizioni di vita calcolate
+  per provocare la distruzione fisica del gruppo;
+</li>
+
+<li>
+  imposizione di misure intese a impedire le nascite.
+</li>
+```
+
+  </ul>
+
+  <h3>
+    Perché è importante distinguere ONU e Corte internazionale di giustizia?
+  </h3>
+
+  <p>
+
+```
+La Commissione d'inchiesta ONU e la Corte internazionale
+di giustizia sono organismi differenti.
+```
+
+  </p>
+
+  <p>
+
+```
+Nel procedimento promosso dal Sudafrica contro Israele,
+la Corte internazionale di giustizia ha adottato misure
+provvisorie a partire dal gennaio 2024, chiedendo a Israele
+di adottare misure per prevenire atti rientranti nella
+Convenzione sul genocidio e proteggere i palestinesi di Gaza.
+```
+
+  </p>
+
+  <p>
+
+```
+<strong>
+  Questo non equivale a una sentenza definitiva che abbia
+  già stabilito la responsabilità di Israele per genocidio.
+</strong>
+
+Il procedimento davanti alla Corte riguarda proprio
+l'accertamento giuridico delle violazioni della Convenzione.
+```
+
+  </p>
+
+  <h3>
+    La posizione di Israele
+  </h3>
+
+  <p>
+
+```
+Israele respinge l'accusa di genocidio e sostiene che le
+proprie operazioni siano dirette contro Hamas e altri gruppi
+armati, non contro la popolazione palestinese in quanto tale.
+Il governo israeliano contesta inoltre le ricostruzioni che
+attribuiscono alle operazioni un intento genocidario.
+```
+
+  </p>
+
+</div>
+
+<!-- DIRITTO -->
+
+<div class="legal-box" id="diritto">
+
+  <div class="label">
+    Diritto internazionale
+  </div>
+
+  <h2>
+    Quattro questioni da non confondere
+  </h2>
+
+  <p>
+    <strong>Genocidio:</strong>
+    richiede la prova dell'intento di distruggere, in tutto o
+    in parte, un gruppo protetto.
+  </p>
+
+  <p>
+    <strong>Crimini contro l'umanità:</strong>
+    comprendono determinati atti commessi come parte di un attacco
+    generalizzato o sistematico contro una popolazione civile.
+  </p>
+
+  <p>
+    <strong>Crimini di guerra:</strong>
+    riguardano gravi violazioni delle norme applicabili durante
+    un conflitto armato.
+  </p>
+
+  <p>
+    <strong>Diritto all'autodifesa:</strong>
+    l'esistenza di un diritto di autodifesa non elimina gli obblighi
+    derivanti dal diritto internazionale umanitario.
+  </p>
+
+</div>
+
+<!-- GAZA OGGI -->
+
+<div class="humanitarian" id="gaza">
+
+  <h2>
+    Gaza: la situazione umanitaria
+  </h2>
+
+  <p>
+
+```
+Secondo l'ultimo rapporto OCHA disponibile al 28 agosto 2026,
+la situazione umanitaria nella Striscia rimane critica.
+La popolazione continua a vivere tra distruzione, sfollamento,
+carenza di servizi essenziali e restrizioni all'accesso.
+```
+
+  </p>
+
+  <div class="humanitarian-grid">
+
+```
+<div class="humanitarian-card">
+
+  <strong>94%</strong>
+
+  della popolazione di Gaza necessita di assistenza
+  abitativa e beni non alimentari secondo la valutazione
+  dello Shelter Cluster citata da OCHA.
+
+</div>
+
+
+<div class="humanitarian-card">
+
+  <strong>58%</strong>
+
+  della popolazione affronta condizioni abitative o accesso
+  ai servizi essenziali classificati come critici o catastrofici.
+
+</div>
+
+
+<div class="humanitarian-card">
+
+  <strong>1.303</strong>
+
+  palestinesi risultavano uccisi secondo il Ministero della
+  Salute di Gaza nel periodo successivo all'annuncio del
+  cessate il fuoco del 10 ottobre 2025, nel dato riportato
+  da OCHA al 28 agosto 2026.
+
+</div>
+
+
+<div class="humanitarian-card">
+
+  <strong>1,98 milioni</strong>
+
+  persone stimate bisognose di assistenza abitativa e beni
+  non alimentari.
+
+</div>
+```
+
+  </div>
+
+</div>
+
+<!-- CISGIORDANIA -->
+
+<h2 class="section-title">
+  La Cisgiordania: il conflitto che continua fuori da Gaza
+</h2>
+
+<p class="section-lead">
+
+La guerra di Gaza non esaurisce il conflitto israelo-palestinese.
+In Cisgiordania continuano insediamenti, operazioni militari,
+restrizioni alla mobilità, demolizioni e violenza dei coloni.
+
+</p>
+
+<div class="stats-grid">
+
+  <div class="stat">
+
+```
+<div class="number">
+  79
+</div>
+
+<div class="label">
+  Palestinesi uccisi da forze israeliane o coloni in
+  Cisgiordania dall'inizio del 2026, secondo OCHA
+  al 28 agosto 2026.
+</div>
+```
+
+  </div>
+
+  <div class="stat">
+
+```
+<div class="number">
+  ~1.870
+</div>
+
+<div class="label">
+  Palestinesi feriti in Cisgiordania nello stesso periodo,
+  secondo OCHA.
+</div>
+```
+
+  </div>
+
+  <div class="stat">
+
+```
+<div class="number">
+  24
+</div>
+
+<div class="label">
+  Famiglie palestinesi costrette a lasciare le proprie case
+  dall'inizio del 2026 in seguito a procedimenti di sfratto
+  a Gerusalemme Est, secondo OCHA.
+</div>
+```
+
+  </div>
+
+</div>
+
+<!-- DUE RESPONSABILITA -->
+
+<h2 class="section-title">
+  Le responsabilità non sono un gioco a somma zero
+</h2>
+
+<div class="two-views">
+
+  <div class="view left">
+
+```
+<div class="view-tag">
+  Violazioni attribuite a Israele
+</div>
+
+<h3>
+  Occupazione, insediamenti e guerra
+</h3>
+
+<p>
+
+  Organismi internazionali hanno documentato occupazione,
+  espansione degli insediamenti, demolizioni, restrizioni
+  alla mobilità, sfollamenti e una devastante campagna militare
+  a Gaza.
+
+</p>
+
+<p>
+
+  Le accuse più gravi riguardano crimini di guerra,
+  crimini contro l'umanità e genocidio.
+
+</p>
+```
+
+  </div>
+
+  <div class="view right">
+
+```
+<div class="view-tag">
+  Violazioni attribuite a Hamas e altri gruppi armati
+</div>
+
+<h3>
+  Attacchi contro civili e ostaggi
+</h3>
+
+<p>
+
+  Hamas e altri gruppi armati palestinesi sono responsabili
+  di uccisioni deliberate di civili, presa di ostaggi,
+  attacchi indiscriminati e altre gravi violazioni del
+  diritto internazionale.
+
+</p>
+
+<p>
+
+  La condanna di questi crimini non cancella le responsabilità
+  derivanti dalle azioni dello Stato israeliano.
+
+</p>
+```
+
+  </div>
+
+</div>
+
+<!-- QUADRO -->
+
+<div class="cumulative-box">
+
+  <div class="k">
+    Il punto centrale
+  </div>
+
+  <p>
+
+```
+<strong>
+  Il 7 ottobre 2023 non può essere cancellato dalla storia,
+  ma nemmeno può essere utilizzato per cancellare la storia
+  precedente.
+</strong>
+```
+
+  </p>
+
+  <p>
+
+```
+L'attacco di Hamas contro civili israeliani e la presa degli
+ostaggi costituiscono crimini gravissimi. Allo stesso tempo,
+le responsabilità di Israele come Stato, potenza occupante
+e forza militare devono essere valutate secondo le regole
+del diritto internazionale.
+```
+
+  </p>
+
+  <p>
+
+```
+Il risultato è un conflitto nel quale esistono vittime,
+responsabilità e traumi su entrambi i lati, ma nel quale
+il rapporto di forza militare e il livello di distruzione
+prodotto a Gaza rendono impossibile un'analisi seria basata
+soltanto sulla formula "due parti ugualmente responsabili".
+```
+
+  </p>
+
+</div>
+
+<!-- CONCLUSIONI -->
+
+<h2 class="section-title">
+  Cosa resta da risolvere
+</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+  <th>Questione</th>
+  <th>Problema</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+  <td><strong>Confini</strong></td>
+  <td>
+    Quali saranno i confini di Israele e di un eventuale Stato palestinese?
+  </td>
+</tr>
+
+<tr>
+  <td><strong>Gerusalemme</strong></td>
+  <td>
+    Quale sarà lo status della città e dei suoi luoghi religiosi?
+  </td>
+</tr>
+
+<tr>
+  <td><strong>Insediamenti</strong></td>
+  <td>
+    Cosa accadrà agli insediamenti israeliani in Cisgiordania?
+  </td>
+</tr>
+
+<tr>
+  <td><strong>Profughi</strong></td>
+  <td>
+    Come affrontare il diritto al ritorno, il risarcimento e lo status
+    dei milioni di rifugiati palestinesi?
+  </td>
+</tr>
+
+<tr>
+  <td><strong>Sicurezza</strong></td>
+  <td>
+    Come garantire che Israele non subisca nuovi attacchi contro civili?
+  </td>
+</tr>
+
+<tr>
+  <td><strong>Gaza</strong></td>
+  <td>
+    Chi governerà la Striscia e come verrà ricostruita?
+  </td>
+</tr>
+
+<tr>
+  <td><strong>Stato palestinese</strong></td>
+  <td>
+    Se e come nascerà uno Stato palestinese territorialmente continuo
+    e politicamente indipendente.
+  </td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- FONTI -->
+
+<div class="sources-box" id="fonti">
+
+  <h3>
+    Fonti principali
+  </h3>
+
+  <ul>
+
+```
+<li>
+  Corte internazionale di giustizia (ICJ) —
+  procedimento <em>South Africa v. Israel</em> sulla Convenzione
+  sul genocidio.
+</li>
+
+<li>
+  Nazioni Unite — Commissione d'inchiesta internazionale
+  indipendente sul Territorio palestinese occupato e Israele.
+</li>
+
+<li>
+  OCHA — United Nations Office for the Coordination of
+  Humanitarian Affairs, Occupied Palestinian Territory.
+</li>
+
+<li>
+  B'Tselem — dati storici sulle vittime della prima e seconda Intifada.
+</li>
+
+<li>
+  UNRWA — dati e documentazione sulla popolazione palestinese rifugiata.
+</li>
+
+<li>
+  ONU — risoluzioni e documentazione sul conflitto
+  israelo-palestinese.
+</li>
+```
+
+  </ul>
+
+</div>
+
+</div>
+
+<footer>
+
+<a href="index.html"
+  class="footer-back"
+  style="margin-right:20px;">
+← Tutti i dossier "Guerre" </a>
+
+<a href="../index.html"
+  class="footer-back">
+← Torna a Il Contribuente </a>
+
+  <div class="footer-legal">
+
+```
+<p>
+  Pubblicazione indipendente e personale, priva di finalità commerciali.
+  Non sono presenti pubblicità, abbonamenti, sponsorizzazioni o
+  finanziamenti di alcun tipo, pubblici o privati.
+</p>
+
+<p>
+  I contenuti pubblicati costituiscono sintesi originali e
+  rielaborazioni redazionali di informazioni provenienti da fonti
+  terze regolarmente indicate. Le informazioni relative alla guerra
+  in corso possono cambiare rapidamente e devono essere verificate
+  attraverso gli ultimi aggiornamenti delle fonti originali.
+</p>
+
+<p>
+  Le qualificazioni giuridiche riportate nel dossier sono attribuite
+  agli organismi che le hanno formulate. In particolare, la
+  conclusione della Commissione d'inchiesta ONU sul genocidio non
+  deve essere confusa con una sentenza definitiva della Corte
+  internazionale di giustizia.
+</p>
+
+<p>
+  La pubblicazione intende offrire un quadro informativo comparato,
+  documentato e verificabile, senza sostituire le fonti originali.
+</p>
+
+<p>
+  Eventuali richieste di rettifica o rimozione di contenuti possono
+  essere inoltrate a
+  <a href="mailto:ilcontribuente@gmail.com"
+     style="color:var(--ink-soft);">
+    redazione.ilcontribuente@protonmail.com
+  </a>.
+</p>
+```
+
+  </div>
+
 </footer>
 
 </body>
