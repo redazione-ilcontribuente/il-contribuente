@@ -1,0 +1,2633 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Le tre superpotenze: guerre, alleanze e potere nel mondo | Il Contribuente</title>
+
+<meta name="description" content="Stati Uniti, Russia e Cina: dove combattono, dove intervengono, quali conflitti sostengono, quali alleanze hanno e quali interessi strategici perseguono nel mondo.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --paper:#efe9da;
+  --paper2:#e4dcc7;
+  --ink:#1b1e22;
+  --ink-soft:#565c64;
+  --rule:#c7bc9f;
+  --card:#fdfcf7;
+
+  --usa:#294f73;
+  --usa-deep:#17344f;
+
+  --rus:#7c2925;
+  --rus-deep:#541b18;
+
+  --china:#a32824;
+  --china-deep:#721914;
+
+  --gold:#a97a1f;
+  --gold-deep:#7d5a13;
+
+  --green:#35654b;
+  --green-deep:#234533;
+
+  --shadow-sm:0 1px 3px rgba(27,30,34,.12);
+  --shadow-md:0 5px 18px rgba(27,30,34,.15);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  font-size:16px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+}
+
+.wrap{
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 6vw 90px;
+}
+
+.topnav{
+  max-width:1000px;
+  margin:0 auto;
+  padding:22px 6vw 0;
+}
+
+.topnav a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:2px;
+}
+
+.topnav a:hover{
+  color:var(--ink);
+  border-bottom-color:var(--ink);
+}
+
+.masthead{
+  max-width:1000px;
+  margin:0 auto;
+  padding:32px 6vw 38px;
+  border-bottom:3px solid var(--ink);
+}
+
+.kicker{
+  display:inline-block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:#fff;
+  background:linear-gradient(160deg,#315c5c,#1d3939);
+  padding:6px 12px;
+  border-radius:4px;
+  margin-bottom:16px;
+}
+
+h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.05;
+  margin:0 0 16px;
+  font-weight:900;
+}
+
+.subtitle{
+  max-width:760px;
+  margin:0;
+  color:var(--ink-soft);
+  font-size:18px;
+}
+
+.brand{
+  margin-top:20px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+
+.brand strong{
+  color:var(--ink);
+}
+
+.intro{
+  margin:38px 0 10px;
+  font-size:17px;
+}
+
+.updated{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  color:var(--ink-soft);
+  margin-bottom:40px;
+}
+
+.toc{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0 0 42px;
+}
+
+.toc a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-decoration:none;
+  color:var(--ink-soft);
+  border:1px solid var(--rule);
+  background:rgba(253,252,247,.65);
+  padding:7px 10px;
+  border-radius:4px;
+}
+
+.toc a:hover{
+  color:var(--ink);
+  border-color:var(--ink);
+}
+
+/* OVERVIEW */
+
+.overview{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin:40px 0 55px;
+}
+
+.power-card{
+  border-radius:10px;
+  padding:22px;
+  color:#fff;
+  box-shadow:var(--shadow-md);
+}
+
+.power-card.usa{
+  background:linear-gradient(155deg,var(--usa),var(--usa-deep));
+}
+
+.power-card.russia{
+  background:linear-gradient(155deg,var(--rus),var(--rus-deep));
+}
+
+.power-card.china{
+  background:linear-gradient(155deg,var(--china),var(--china-deep));
+}
+
+.power-name{
+  font-family:'Fraunces',serif;
+  font-size:27px;
+  font-weight:800;
+  margin-bottom:6px;
+}
+
+.power-sub{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:.75;
+  margin-bottom:18px;
+}
+
+.power-number{
+  font-size:30px;
+  font-weight:800;
+  line-height:1.1;
+}
+
+.power-number small{
+  display:block;
+  font-size:12px;
+  font-weight:500;
+  margin-top:6px;
+  opacity:.8;
+}
+
+.power-card p{
+  font-size:14px;
+  margin:18px 0 0;
+  opacity:.92;
+}
+
+/* SECTIONS */
+
+.section{
+  margin:65px 0;
+}
+
+.section-kicker{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-bottom:8px;
+}
+
+h2{
+  font-family:'Fraunces',serif;
+  font-size:34px;
+  line-height:1.15;
+  margin:0 0 16px;
+  font-weight:900;
+}
+
+h3{
+  font-family:'Fraunces',serif;
+  font-size:24px;
+  line-height:1.2;
+  margin:28px 0 10px;
+}
+
+.lead{
+  font-size:17px;
+  color:var(--ink);
+}
+
+.note{
+  background:var(--card);
+  border-left:4px solid var(--gold);
+  padding:17px 20px;
+  margin:24px 0;
+  box-shadow:var(--shadow-sm);
+  border-radius:5px;
+}
+
+.note strong{
+  color:var(--ink);
+}
+
+/* TABLE */
+
+.table-wrap{
+  overflow-x:auto;
+  margin:30px 0;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--card);
+  box-shadow:var(--shadow-sm);
+  border-radius:8px;
+  overflow:hidden;
+}
+
+th{
+  text-align:left;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  background:#ded5c0;
+  padding:13px 14px;
+  border-bottom:2px solid var(--rule);
+}
+
+td{
+  padding:14px;
+  vertical-align:top;
+  border-bottom:1px solid #ddd4c1;
+  font-size:14px;
+}
+
+tr:last-child td{
+  border-bottom:none;
+}
+
+/* POWER SECTIONS */
+
+.power-section{
+  margin:80px 0;
+  padding:32px;
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:var(--shadow-md);
+}
+
+.power-section.usa{
+  border-top:7px solid var(--usa);
+}
+
+.power-section.russia{
+  border-top:7px solid var(--rus);
+}
+
+.power-section.china{
+  border-top:7px solid var(--china);
+}
+
+.power-header{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:25px;
+}
+
+.power-header h2{
+  margin-bottom:5px;
+}
+
+.power-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+
+.status{
+  flex-shrink:0;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  padding:8px 11px;
+  border-radius:4px;
+  background:#ebe5d7;
+  color:var(--ink-soft);
+}
+
+/* CONFLICT CARDS */
+
+.conflicts{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin:25px 0;
+}
+
+.conflict{
+  background:#f5f1e7;
+  border:1px solid #ddd3bc;
+  border-radius:7px;
+  padding:19px;
+}
+
+.conflict-type{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9.5px;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  margin-bottom:6px;
+}
+
+.conflict h4{
+  font-family:'Fraunces',serif;
+  font-size:21px;
+  margin:0 0 8px;
+}
+
+.conflict p{
+  font-size:14px;
+  margin:0;
+}
+
+.badge{
+  display:inline-block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  padding:4px 6px;
+  border-radius:3px;
+  margin-bottom:10px;
+}
+
+.badge.direct{
+  color:#fff;
+  background:#8a2b24;
+}
+
+.badge.operation{
+  color:#fff;
+  background:#77531a;
+}
+
+.badge.support{
+  color:#fff;
+  background:#365f48;
+}
+
+.badge.pressure{
+  color:#fff;
+  background:#5b526d;
+}
+
+/* METRICS */
+
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin:25px 0;
+}
+
+.metric{
+  background:#eee8d9;
+  padding:16px;
+  border-radius:6px;
+}
+
+.metric .value{
+  font-family:'JetBrains Mono',monospace;
+  font-size:22px;
+  font-weight:700;
+}
+
+.metric .label{
+  font-size:11px;
+  color:var(--ink-soft);
+  margin-top:4px;
+}
+
+/* TWO COLUMNS */
+
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  margin:30px 0;
+}
+
+.box{
+  background:#eee8d9;
+  border-radius:8px;
+  padding:22px;
+}
+
+.box h3{
+  margin-top:0;
+  font-size:22px;
+}
+
+.box ul{
+  padding-left:20px;
+  margin-bottom:0;
+}
+
+.box li{
+  margin-bottom:7px;
+  font-size:14px;
+}
+
+/* WORLD MAP STYLE LIST */
+
+.region-list{
+  margin:25px 0;
+}
+
+.region{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:20px;
+  padding:17px 0;
+  border-bottom:1px solid var(--rule);
+}
+
+.region:last-child{
+  border-bottom:none;
+}
+
+.region-name{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+
+.region p{
+  margin:0;
+  font-size:14px;
+}
+
+/* BIG COMPARISON */
+
+.comparison{
+  margin:55px 0;
+}
+
+.comparison-box{
+  background:linear-gradient(160deg,#2e5555,#1c3737);
+  color:#fff;
+  border-radius:10px;
+  padding:28px;
+  box-shadow:var(--shadow-md);
+}
+
+.comparison-box .label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#a9caca;
+  margin-bottom:10px;
+}
+
+.comparison-box h2{
+  color:#fff;
+}
+
+.comparison-box p{
+  margin-bottom:10px;
+}
+
+.comparison-box strong{
+  color:#fff;
+}
+
+/* IMPORTANT DISTINCTION */
+
+.distinction{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+  margin:30px 0;
+}
+
+.distinction-item{
+  padding:14px 11px;
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:6px;
+}
+
+.distinction-item strong{
+  display:block;
+  font-size:12px;
+  margin-bottom:5px;
+}
+
+.distinction-item span{
+  font-size:11px;
+  color:var(--ink-soft);
+}
+
+/* SOURCES */
+
+.sources{
+  border-top:1px solid var(--rule);
+  padding-top:25px;
+  margin-top:60px;
+}
+
+.sources h2{
+  font-size:27px;
+}
+
+.sources ul{
+  padding-left:20px;
+}
+
+.sources li{
+  margin-bottom:7px;
+  font-size:13px;
+  color:var(--ink-soft);
+}
+
+.sources a{
+  color:var(--ink-soft);
+}
+
+.sources a:hover{
+  color:var(--ink);
+}
+
+/* FOOTER */
+
+footer{
+  max-width:1000px;
+  margin:60px auto 0;
+  padding:30px 6vw 45px;
+  border-top:3px solid var(--ink);
+}
+
+.footer-back{
+  display:inline-block;
+  margin-bottom:22px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--ink-soft);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule);
+}
+
+.footer-legal p{
+  font-size:12px;
+  color:var(--ink-soft);
+  line-height:1.6;
+  margin:0 0 8px;
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+  .overview{
+    grid-template-columns:1fr;
+  }
+
+  .conflicts{
+    grid-template-columns:1fr;
+  }
+
+  .metrics{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .two-col{
+    grid-template-columns:1fr;
+  }
+
+  .distinction{
+    grid-template-columns:1fr;
+  }
+
+  .power-header{
+    flex-direction:column;
+  }
+
+  .power-section{
+    padding:22px;
+  }
+
+  .region{
+    grid-template-columns:1fr;
+    gap:5px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topnav">
+
+  <a href="../index.html">&larr; Il Contribuente</a>
+
+</div>
+
+
+<header class="masthead">
+
+  <span class="kicker">
+    Approfondimento fisso · Geopolitica
+  </span>
+
+  <h1>
+    Le tre superpotenze:
+    guerre, alleanze e potere nel mondo
+  </h1>
+
+  <p class="subtitle">
+    Stati Uniti, Russia e Cina: dove combattono, dove intervengono,
+    quali conflitti sostengono, quali alleanze costruiscono e quali
+    interessi strategici perseguono.
+  </p>
+
+  <div class="brand">
+    Dossier di <strong>Il Contribuente</strong>
+    · geopolitica · conflitti · alleanze · potere militare
+  </div>
+
+</header>
+
+
+<main class="wrap">
+
+
+<p class="intro">
+
+Nel mondo contemporaneo tre potenze hanno una capacità militare,
+economica e diplomatica nettamente superiore alla maggior parte degli
+altri Stati: <strong>Stati Uniti, Russia e Cina</strong>.
+
+Questo non significa che siano le uniche potenze coinvolte nelle guerre.
+Significa che le loro decisioni possono modificare direttamente o
+indirettamente gli equilibri di intere regioni.
+
+</p>
+
+
+<div class="updated">
+
+Ultimo aggiornamento editoriale: 31 agosto 2026 ·
+la situazione dei conflitti è soggetta a cambiamenti continui
+
+</div>
+
+
+<nav class="toc">
+
+<a href="#metodo">Come contiamo le guerre</a>
+
+<a href="#quadro">Il quadro generale</a>
+
+<a href="#usa">Stati Uniti</a>
+
+<a href="#russia">Russia</a>
+
+<a href="#cina">Cina</a>
+
+<a href="#confronto">Confronto</a>
+
+<a href="#interessi">Interessi strategici</a>
+
+<a href="#fonti">Fonti</a>
+
+</nav>
+
+
+<section class="section" id="metodo">
+
+<div class="section-kicker">
+Metodo
+</div>
+
+<h2>
+Una distinzione fondamentale
+</h2>
+
+<p class="lead">
+
+Non tutte le forme di coinvolgimento militare sono una guerra.
+
+Un esercito può combattere direttamente, può bombardare un territorio,
+può condurre operazioni contro gruppi armati, può fornire armi a un
+alleato oppure può mantenere basi e truppe in una regione senza essere
+direttamente impegnato nei combattimenti.
+
+Per questo questo dossier non attribuisce arbitrariamente un numero
+di "guerre" a ciascuna potenza.
+
+</p>
+
+
+<div class="distinction">
+
+<div class="distinction-item">
+<strong>GUERRA DIRETTA</strong>
+<span>
+Le forze armate della potenza combattono direttamente contro un altro
+Stato o contro un'organizzazione armata.
+</span>
+</div>
+
+<div class="distinction-item">
+<strong>OPERAZIONE</strong>
+<span>
+Attività militare limitata o specifica che non equivale necessariamente
+a una guerra generale.
+</span>
+</div>
+
+<div class="distinction-item">
+<strong>SUPPORTO</strong>
+<span>
+Armi, intelligence, addestramento, finanziamenti o assistenza militare.
+</span>
+</div>
+
+<div class="distinction-item">
+<strong>PRESENZA</strong>
+<span>
+Basi, truppe, navi o aerei presenti in una determinata regione.
+</span>
+</div>
+
+<div class="distinction-item">
+<strong>PRESSIONE</strong>
+<span>
+Esercitazioni, intimidazione, coercizione economica o militare e
+competizione strategica.
+</span>
+</div>
+
+</div>
+
+
+<div class="note">
+
+<strong>Perché questa distinzione è importante?</strong>
+
+Dire che gli Stati Uniti "combattono 20 guerre", per esempio,
+mescolando guerre vere, basi militari, missioni, aiuti militari e
+alleanze, produce un numero apparentemente impressionante ma
+giornalisticamente poco serio.
+
+Lo stesso vale per Russia e Cina.
+
+</div>
+
+</section>
+
+
+
+<section class="section" id="quadro">
+
+<div class="section-kicker">
+Il quadro al 31 agosto 2026
+</div>
+
+<h2>
+Dove sono le tre potenze?
+</h2>
+
+
+<div class="overview">
+
+
+<div class="power-card usa">
+
+<div class="power-name">
+🇺🇸 Stati Uniti
+</div>
+
+<div class="power-sub">
+Coinvolgimento militare diretto
+</div>
+
+<div class="power-number">
+1+
+<small>
+conflitto principale direttamente combattuto nel 2026
+</small>
+</div>
+
+<p>
+Il principale fronte diretto è il conflitto con l'Iran.
+Gli USA mantengono inoltre una vasta rete di alleanze,
+basi e operazioni militari.
+</p>
+
+</div>
+
+
+<div class="power-card russia">
+
+<div class="power-name">
+🇷🇺 Russia
+</div>
+
+<div class="power-sub">
+Guerra diretta
+</div>
+
+<div class="power-number">
+1
+<small>
+guerra interstatale principale
+</small>
+</div>
+
+<p>
+La guerra contro l'Ucraina rimane il principale conflitto
+militare russo. Mosca mantiene inoltre presenza e influenza
+militare in diverse aree dell'Africa e del Medio Oriente.
+</p>
+
+</div>
+
+
+<div class="power-card china">
+
+<div class="power-name">
+🇨🇳 Cina
+</div>
+
+<div class="power-sub">
+Guerra diretta
+</div>
+
+<div class="power-number">
+0
+<small>
+guerre interstatali aperte comparabili a Ucraina/Iran
+</small>
+</div>
+
+<p>
+La Cina non combatte attualmente una guerra aperta di scala
+comparabile, ma esercita una crescente pressione militare
+su Taiwan e nei mari contesi dell'Asia.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="note">
+
+<strong>Attenzione al dato "0" della Cina.</strong>
+
+Zero guerre dirette non significa zero attività militare.
+Pechino conduce esercitazioni, pattugliamenti, operazioni della
+guardia costiera e attività di pressione soprattutto attorno a
+Taiwan e nel Mar Cinese Meridionale.
+
+Nel 2026 Taiwan ha segnalato una crescente presenza cinese aerea
+e navale attorno all'isola, comprese attività associate a scenari
+di blocco e controllo delle linee marittime.
+
+</div>
+
+</section>
+
+
+
+<!-- USA -->
+
+<section class="power-section usa" id="usa">
+
+<div class="power-header">
+
+<div>
+
+<div class="power-label">
+Superpotenza 01
+</div>
+
+<h2>
+🇺🇸 Stati Uniti
+</h2>
+
+<p>
+La principale rete militare globale.
+</p>
+
+</div>
+
+<div class="status">
+GUERRA DIRETTA: IRAN · 2026
+</div>
+
+</div>
+
+
+<p class="lead">
+
+Gli Stati Uniti possiedono una rete globale di alleanze,
+basi, flotte, aviazione, intelligence e accordi di sicurezza.
+Il loro coinvolgimento nei conflitti mondiali avviene quindi
+attraverso strumenti molto diversi.
+
+</p>
+
+
+<div class="conflicts">
+
+
+<div class="conflict">
+
+<span class="badge direct">
+Guerra diretta
+</span>
+
+<h4>
+Iran
+</h4>
+
+<p>
+
+Nel 2026 gli Stati Uniti sono direttamente coinvolti
+nel conflitto con l'Iran insieme a Israele.
+
+Gli attacchi statunitensi contro obiettivi iraniani e la
+successiva risposta iraniana contro obiettivi e basi
+statunitensi hanno trasformato il confronto in un conflitto
+militare aperto.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge operation">
+Operazioni militari
+</span>
+
+<h4>
+Iraq e Siria
+</h4>
+
+<p>
+
+Gli Stati Uniti hanno mantenuto per anni operazioni militari
+contro lo Stato Islamico e continuano a mantenere una presenza
+militare nella regione.
+
+Il livello e la natura delle operazioni cambiano nel tempo
+e non devono essere automaticamente classificati come
+una nuova guerra interstatale.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge support">
+Supporto militare
+</span>
+
+<h4>
+Ucraina
+</h4>
+
+<p>
+
+Washington sostiene l'Ucraina attraverso armi, intelligence,
+addestramento, assistenza economica e supporto politico.
+
+Gli Stati Uniti non combattono direttamente contro le forze
+russe sul territorio ucraino.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge support">
+Alleanza militare
+</span>
+
+<h4>
+Israele
+</h4>
+
+<p>
+
+Gli Stati Uniti sono il principale alleato strategico di
+Israele e forniscono assistenza militare, sistemi d'arma,
+munizioni, tecnologia e sostegno diplomatico.
+
+Il rapporto USA-Israele rappresenta uno degli elementi
+centrali della geopolitica del Medio Oriente.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge operation">
+Presenza militare
+</span>
+
+<h4>
+Medio Oriente e Golfo
+</h4>
+
+<p>
+
+Gli Stati Uniti mantengono basi e installazioni militari
+in diversi Paesi del Golfo e della regione, oltre a forze
+navali e aeree.
+
+Questa rete permette a Washington di intervenire rapidamente
+in caso di crisi.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge pressure">
+Deterrenza
+</span>
+
+<h4>
+Cina e Taiwan
+</h4>
+
+<p>
+
+Washington mantiene una politica di sostegno a Taiwan,
+fornisce armi all'isola e mantiene una strategia di
+"ambiguità strategica" sulla possibilità di un intervento
+diretto in caso di guerra.
+
+La rivalità con Pechino rappresenta uno dei principali
+fronti strategici statunitensi.
+
+</p>
+
+</div>
+
+</div>
+
+
+<h3>
+Dove sono presenti gli Stati Uniti?
+</h3>
+
+
+<div class="region-list">
+
+<div class="region">
+
+<div class="region-name">
+Europa
+</div>
+
+<p>
+
+NATO, deterrenza verso la Russia, presenza militare in
+diversi Paesi europei e sostegno all'Ucraina.
+
+</p>
+
+</div>
+
+
+<div class="region">
+
+<div class="region-name">
+Medio Oriente
+</div>
+
+<p>
+
+Israele, Iran, Golfo Persico, Iraq, Siria, Mar Rosso e
+rotte energetiche rappresentano aree centrali della
+strategia americana.
+
+</p>
+
+</div>
+
+
+<div class="region">
+
+<div class="region-name">
+Indo-Pacifico
+</div>
+
+<p>
+
+Giappone, Corea del Sud, Filippine, Australia e Taiwan
+sono elementi fondamentali della strategia di contenimento
+e deterrenza nei confronti della Cina.
+
+</p>
+
+</div>
+
+
+<div class="region">
+
+<div class="region-name">
+Africa
+</div>
+
+<p>
+
+Gli Stati Uniti mantengono attività di sicurezza,
+intelligence, cooperazione militare e operazioni
+antiterrorismo in diversi Paesi africani, con una presenza
+che varia nel tempo.
+
+</p>
+
+</div>
+
+</div>
+
+
+<h3>
+Perché Washington interviene?
+</h3>
+
+
+<div class="two-col">
+
+<div class="box">
+
+<h3>Interessi dichiarati</h3>
+
+<ul>
+
+<li>Difesa degli alleati.</li>
+
+<li>Contrasto al terrorismo.</li>
+
+<li>Protezione delle rotte commerciali.</li>
+
+<li>Deterrenza nei confronti di potenze rivali.</li>
+
+<li>Protezione della sicurezza nazionale.</li>
+
+<li>Prevenzione della proliferazione nucleare.</li>
+
+</ul>
+
+</div>
+
+
+<div class="box">
+
+<h3>Interessi strategici</h3>
+
+<ul>
+
+<li>Mantenere la propria posizione dominante nel sistema internazionale.</li>
+
+<li>Proteggere le principali rotte commerciali ed energetiche.</li>
+
+<li>Impedire che una singola potenza domini Europa o Asia.</li>
+
+<li>Proteggere la rete globale di alleanze.</li>
+
+<li>Limitare l'espansione dell'influenza russa e cinese.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- RUSSIA -->
+
+<section class="power-section russia" id="russia">
+
+<div class="power-header">
+
+<div>
+
+<div class="power-label">
+Superpotenza 02
+</div>
+
+<h2>
+🇷🇺 Russia
+</h2>
+
+<p>
+La guerra in Ucraina e la proiezione militare oltre i confini.
+</p>
+
+</div>
+
+<div class="status">
+GUERRA DIRETTA: UCRAINA
+</div>
+
+</div>
+
+
+<p class="lead">
+
+Per la Russia la guerra contro l'Ucraina rappresenta di gran
+lunga il principale impegno militare.
+
+Parallelamente, Mosca ha cercato di mantenere o espandere
+la propria influenza attraverso Africa, Medio Oriente,
+mercenari, fornitura di armi, accordi militari e cooperazione
+con governi locali.
+
+</p>
+
+
+<div class="conflicts">
+
+
+<div class="conflict">
+
+<span class="badge direct">
+Guerra diretta
+</span>
+
+<h4>
+Ucraina
+</h4>
+
+<p>
+
+La guerra russo-ucraina nasce nel 2014 con l'annessione
+russa della Crimea e il conflitto nel Donbass.
+
+Il 24 febbraio 2022 la Russia avvia l'invasione su vasta
+scala dell'Ucraina.
+
+Nel 2026 il conflitto rimane il principale teatro di
+combattimento delle forze armate russe.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge support">
+Influenza militare
+</span>
+
+<h4>
+Africa
+</h4>
+
+<p>
+
+La Russia ha costruito negli anni una presenza militare e
+politica in diversi Paesi africani.
+
+Il sistema che ruotava attorno al gruppo Wagner è stato
+progressivamente riorganizzato sotto strutture legate
+direttamente allo Stato russo.
+
+Sudan, Libia, Repubblica Centrafricana, Mali e altre aree
+sono importanti per comprendere la proiezione russa.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge support">
+Partnership strategica
+</span>
+
+<h4>
+Iran
+</h4>
+
+<p>
+
+Russia e Iran hanno sviluppato una cooperazione politica,
+economica e militare.
+
+La relazione è diventata particolarmente importante
+all'interno della contrapposizione con gli Stati Uniti
+e con l'ordine regionale sostenuto da Washington.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge pressure">
+Confronto strategico
+</span>
+
+<h4>
+NATO ed Europa
+</h4>
+
+<p>
+
+La Russia considera l'espansione della NATO verso est
+uno degli elementi fondamentali della propria percezione
+di minaccia.
+
+La guerra in Ucraina ha trasformato questo confronto
+in una contrapposizione militare permanente tra Mosca
+e il blocco euro-atlantico.
+
+</p>
+
+</div>
+
+</div>
+
+
+<h3>
+La Russia oltre l'Ucraina
+</h3>
+
+
+<div class="region-list">
+
+<div class="region">
+
+<div class="region-name">
+Europa orientale
+</div>
+
+<p>
+
+Ucraina, Bielorussia, Moldavia e area del Mar Nero
+costituiscono uno spazio strategico fondamentale
+per Mosca.
+
+</p>
+
+</div>
+
+
+<div class="region">
+
+<div class="region-name">
+Medio Oriente
+</div>
+
+<p>
+
+La Russia ha mantenuto per anni una presenza militare
+in Siria e rapporti strategici con Iran e altri attori
+regionali. Il suo ruolo regionale è cambiato con
+l'evoluzione della guerra in Ucraina.
+
+</p>
+
+</div>
+
+
+<div class="region">
+
+<div class="region-name">
+Africa
+</div>
+
+<p>
+
+Mosca cerca accesso politico, militare ed economico
+attraverso rapporti con governi africani e strutture
+militari russe.
+
+</p>
+
+</div>
+
+
+<div class="region">
+
+<div class="region-name">
+Artico
+</div>
+
+<p>
+
+L'Artico è diventato sempre più importante per la Russia
+per ragioni militari, energetiche, commerciali e territoriali.
+
+</p>
+
+</div>
+
+</div>
+
+
+<h3>
+Perché Mosca combatte?
+</h3>
+
+
+<div class="two-col">
+
+<div class="box">
+
+<h3>Obiettivi dichiarati</h3>
+
+<ul>
+
+<li>Sicurezza nazionale.</li>
+
+<li>Difesa degli interessi russi.</li>
+
+<li>Protezione delle popolazioni russofone secondo la narrativa del Cremlino.</li>
+
+<li>Opposizione all'espansione della NATO.</li>
+
+<li>Difesa della posizione russa come grande potenza.</li>
+
+</ul>
+
+</div>
+
+
+<div class="box">
+
+<h3>Obiettivi strategici</h3>
+
+<ul>
+
+<li>Mantenere una zona d'influenza nello spazio post-sovietico.</li>
+
+<li>Impedire un completo allineamento dell'Ucraina con l'Occidente.</li>
+
+<li>Mantenere accesso a infrastrutture militari e rotte strategiche.</li>
+
+<li>Rafforzare i rapporti con Stati non occidentali.</li>
+
+<li>Ridurre il peso geopolitico degli Stati Uniti.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CHINA -->
+
+<section class="power-section china" id="cina">
+
+<div class="power-header">
+
+<div>
+
+<div class="power-label">
+Superpotenza 03
+</div>
+
+<h2>
+🇨🇳 Cina
+</h2>
+
+<p>
+La potenza che punta maggiormente sulla pressione strategica.
+</p>
+
+</div>
+
+<div class="status">
+GUERRA DIRETTA: 0
+</div>
+
+</div>
+
+
+<p class="lead">
+
+La Cina rappresenta un caso diverso da Stati Uniti e Russia.
+
+Pechino non è attualmente impegnata in una guerra aperta
+paragonabile alla guerra Russia-Ucraina o al conflitto
+USA-Iran del 2026.
+
+La sua proiezione militare è però in forte crescita.
+
+</p>
+
+
+<div class="conflicts">
+
+
+<div class="conflict">
+
+<span class="badge pressure">
+Pressione militare
+</span>
+
+<h4>
+Taiwan
+</h4>
+
+<p>
+
+Taiwan è il principale punto di possibile conflitto
+tra Cina e Stati Uniti.
+
+Pechino considera Taiwan parte del territorio cinese
+e non rinuncia all'uso della forza.
+
+Le forze armate cinesi conducono regolarmente esercitazioni
+aeree e navali attorno all'isola.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge pressure">
+Contesa territoriale
+</span>
+
+<h4>
+Mar Cinese Meridionale
+</h4>
+
+<p>
+
+La Cina rivendica vaste aree del Mar Cinese Meridionale.
+
+Le controversie coinvolgono soprattutto Filippine,
+Vietnam, Malaysia, Brunei e Taiwan.
+
+Nel 2026 sono aumentati gli incidenti e i confronti
+tra Cina e Filippine in alcune aree contese.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge pressure">
+Competizione strategica
+</span>
+
+<h4>
+Stati Uniti
+</h4>
+
+<p>
+
+La rivalità USA-Cina è oggi una delle principali
+competizioni geopolitiche del mondo.
+
+Il confronto riguarda tecnologia, semiconduttori,
+commercio, intelligenza artificiale, marina militare,
+Taiwan, spazio e controllo delle catene industriali.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge support">
+Partnership
+</span>
+
+<h4>
+Russia
+</h4>
+
+<p>
+
+Pechino e Mosca hanno rafforzato la cooperazione
+economica e diplomatica.
+
+La Cina non è però formalmente un alleato militare
+della Russia nella guerra contro l'Ucraina.
+
+Il rapporto serve soprattutto a rafforzare un ordine
+internazionale meno dipendente dagli Stati Uniti.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge support">
+Presenza internazionale
+</span>
+
+<h4>
+Africa
+</h4>
+
+<p>
+
+La Cina ha una presenza economica molto forte in Africa,
+con infrastrutture, investimenti, prestiti e commercio.
+
+Pechino dispone inoltre di una base militare a Gibuti,
+la sua prima base militare all'estero.
+
+</p>
+
+</div>
+
+
+<div class="conflict">
+
+<span class="badge pressure">
+Competizione marittima
+</span>
+
+<h4>
+Oceano Indiano
+</h4>
+
+<p>
+
+La Cina sta sviluppando capacità navali sempre più
+globali e cerca di proteggere le proprie rotte commerciali
+ed energetiche.
+
+L'espansione navale si collega alla strategia delle
+"Sea Lines of Communication", cioè alla protezione delle
+principali rotte marittime.
+
+</p>
+
+</div>
+
+</div>
+
+
+<h3>
+Dove si concentra la Cina?
+</h3>
+
+
+<div class="region-list">
+
+<div class="region">
+
+<div class="region-name">
+Taiwan
+</div>
+
+<p>
+
+È il principale punto di rischio militare.
+
+Pechino vuole impedire l'indipendenza formale dell'isola
+e mantiene aperta la possibilità dell'uso della forza.
+
+</p>
+
+</div>
+
+
+<div class="region">
+
+<div class="region-name">
+Mar Cinese Meridionale
+</div>
+
+<p>
+
+La Cina ha costruito e militarizzato diverse installazioni
+nelle aree che considera sotto la propria sovranità.
+
+</p>
+
+</div>
+
+
+<div class="region">
+
+<div class="region-name">
+Giappone e Corea
+</div>
+
+<p>
+
+La Cina considera l'area dell'Asia orientale fondamentale
+per la propria sicurezza e deve confrontarsi con la presenza
+militare statunitense e con gli alleati di Washington.
+
+</p>
+
+</div>
+
+
+<div class="region">
+
+<div class="region-name">
+Africa
+</div>
+
+<p>
+
+La strategia cinese privilegia investimenti, infrastrutture,
+commercio, prestiti e presenza diplomatica, accompagnati
+da una crescente capacità militare.
+
+</p>
+
+</div>
+
+</div>
+
+
+<h3>
+Perché Pechino evita, per ora, una guerra aperta?
+</h3>
+
+
+<div class="two-col">
+
+<div class="box">
+
+<h3>Costi</h3>
+
+<ul>
+
+<li>Una guerra con Taiwan potrebbe coinvolgere gli Stati Uniti.</li>
+
+<li>Il commercio cinese dipende fortemente dalle rotte marittime.</li>
+
+<li>Una guerra potrebbe provocare enormi perdite economiche.</li>
+
+<li>Le sanzioni internazionali potrebbero danneggiare l'economia cinese.</li>
+
+</ul>
+
+</div>
+
+
+<div class="box">
+
+<h3>Strategia</h3>
+
+<ul>
+
+<li>Pressione militare senza guerra totale.</li>
+
+<li>Costruzione progressiva della marina.</li>
+
+<li>Controllo delle infrastrutture strategiche.</li>
+
+<li>Espansione economica internazionale.</li>
+
+<li>Riduzione della dipendenza dalla tecnologia occidentale.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- COMPARISON -->
+
+<section class="comparison" id="confronto">
+
+<div class="comparison-box">
+
+<div class="label">
+Confronto
+</div>
+
+<h2>
+Tre potenze, tre modelli diversi
+</h2>
+
+<p>
+
+<strong>Gli Stati Uniti</strong> dispongono della rete militare
+globale più estesa e di una vasta rete di alleanze.
+
+</p>
+
+<p>
+
+<strong>La Russia</strong> concentra una parte enorme della propria
+potenza militare sulla guerra in Ucraina e utilizza parallelamente
+strumenti militari e politici per mantenere influenza in altre regioni.
+
+</p>
+
+<p>
+
+<strong>La Cina</strong> sta costruendo rapidamente capacità militari
+globali ma, per ora, utilizza soprattutto pressione, deterrenza,
+commercio, investimenti e competizione tecnologica invece di entrare
+in una guerra aperta.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="section-kicker">
+Confronto quantitativo
+</div>
+
+<h2>
+Chi è direttamente in guerra?
+</h2>
+
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Potenza</th>
+
+<th>Guerra diretta principale</th>
+
+<th>Altri coinvolgimenti</th>
+
+<th>Principale avversario strategico</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td><strong>🇺🇸 Stati Uniti</strong></td>
+
+<td>
+Iran · 2026
+</td>
+
+<td>
+Medio Oriente, Iraq/Siria, sostegno a Israele,
+sostegno all'Ucraina, presenza NATO e Indo-Pacifico.
+</td>
+
+<td>
+Cina / Russia / Iran
+</td>
+
+</tr>
+
+
+<tr>
+
+<td><strong>🇷🇺 Russia</strong></td>
+
+<td>
+Ucraina
+</td>
+
+<td>
+Africa, Medio Oriente, Bielorussia, Caucaso e
+confronto strategico con NATO.
+</td>
+
+<td>
+Stati Uniti / NATO / Ucraina
+</td>
+
+</tr>
+
+
+<tr>
+
+<td><strong>🇨🇳 Cina</strong></td>
+
+<td>
+Nessuna guerra interstatale aperta di pari scala
+</td>
+
+<td>
+Taiwan, Mar Cinese Meridionale, presenza navale,
+pressione economica e competizione tecnologica.
+</td>
+
+<td>
+Stati Uniti
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+
+<!-- INTERESTS -->
+
+<section class="section" id="interessi">
+
+<div class="section-kicker">
+La domanda più importante
+</div>
+
+<h2>
+Perché queste potenze sono coinvolte nei conflitti?
+</h2>
+
+
+<div class="two-col">
+
+
+<div class="box">
+
+<h3>Territorio</h3>
+
+<p>
+
+Il controllo del territorio continua a essere fondamentale:
+confini, basi militari, porti, corridoi terrestri,
+risorse e profondità strategica.
+
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h3>Risorse</h3>
+
+<p>
+
+Petrolio, gas, minerali strategici, acqua e infrastrutture
+energetiche influenzano molte delle decisioni geopolitiche.
+
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h3>Rotte commerciali</h3>
+
+<p>
+
+Chi controlla o protegge le principali rotte marittime
+possiede un enorme vantaggio economico e strategico.
+
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h3>Alleanze</h3>
+
+<p>
+
+Una potenza globale non combatte necessariamente da sola:
+gli alleati permettono di condividere basi, intelligence,
+armi, denaro e capacità militari.
+
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h3>Tecnologia</h3>
+
+<p>
+
+Semiconduttori, intelligenza artificiale, satelliti,
+droni, spazio e sistemi di comunicazione sono diventati
+elementi centrali della competizione militare.
+
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h3>Influenza</h3>
+
+<p>
+
+Una grande potenza cerca di impedire che i propri rivali
+controllino regioni considerate strategiche.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="section-kicker">
+La nuova guerra globale
+</div>
+
+<h2>
+Non esiste una sola guerra mondiale: esiste una competizione mondiale
+</h2>
+
+
+<p class="lead">
+
+Il mondo del 2026 non è diviso semplicemente in due blocchi come
+durante la Guerra fredda.
+
+Le tre superpotenze interagiscono contemporaneamente attraverso
+guerre, alleanze, commercio, sanzioni, tecnologia, intelligence,
+cyberwarfare e pressione militare.
+
+</p>
+
+
+<div class="note">
+
+<strong>Ucraina:</strong>
+
+Russia contro Ucraina, con un forte sostegno occidentale a Kyiv.
+
+
+</div>
+
+
+<div class="note">
+
+<strong>Medio Oriente:</strong>
+
+il confronto USA-Israele-Iran ha assunto una dimensione regionale
+e coinvolge direttamente o indirettamente numerosi altri attori.
+
+
+</div>
+
+
+<div class="note">
+
+<strong>Indo-Pacifico:</strong>
+
+USA e Cina competono per il controllo strategico dell'area,
+con Taiwan come principale punto di possibile escalation.
+
+
+</div>
+
+
+<div class="note">
+
+<strong>Africa:</strong>
+
+Russia, Cina, Stati Uniti, Europa, Turchia e potenze regionali
+competono per influenza politica, risorse, infrastrutture e
+accesso strategico.
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="section-kicker">
+Come leggere i numeri
+</div>
+
+<h2>
+Quante guerre fanno davvero?
+</h2>
+
+
+<p>
+
+Non esiste un numero unico e universalmente riconosciuto.
+
+Dipende da cosa si considera "guerra".
+
+</p>
+
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Categoria</th>
+
+<th>USA</th>
+
+<th>Russia</th>
+
+<th>Cina</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+<strong>Guerra diretta</strong>
+</td>
+
+<td>
+Iran · 2026
+</td>
+
+<td>
+Ucraina
+</td>
+
+<td>
+0
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Operazioni militari</strong>
+</td>
+
+<td>
+Numerose
+</td>
+
+<td>
+Numerose
+</td>
+
+<td>
+Numerose attività di pressione
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Supporto ad altri attori</strong>
+</td>
+
+<td>
+Molto elevato
+</td>
+
+<td>
+Elevato
+</td>
+
+<td>
+Elevato sul piano economico e diplomatico
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Presenza militare estera</strong>
+</td>
+
+<td>
+Globale
+</td>
+
+<td>
+Regionale
+</td>
+
+<td>
+In espansione
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Principale rischio futuro</strong>
+</td>
+
+<td>
+Escalation con Iran / Cina
+</td>
+
+<td>
+Escalation con NATO
+</td>
+
+<td>
+Taiwan / USA
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<div class="note">
+
+<strong>Conclusione metodologica:</strong>
+
+non è corretto sommare queste categorie per ottenere un numero
+artificiale di "guerre".
+
+Una potenza può essere coinvolta in dieci crisi senza combattere
+direttamente dieci guerre.
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="section-kicker">
+Conclusione
+</div>
+
+<h2>
+Il vero campo di battaglia è l'ordine mondiale
+</h2>
+
+
+<p>
+
+La competizione tra Stati Uniti, Russia e Cina non riguarda
+soltanto il campo di battaglia.
+
+Riguarda chi stabilisce le regole del sistema internazionale,
+chi controlla le principali rotte commerciali, chi dispone
+della tecnologia più avanzata, chi può imporre sanzioni,
+chi controlla le infrastrutture strategiche e chi riesce
+a costruire la rete di alleanze più forte.
+
+</p>
+
+
+<p>
+
+Le guerre regionali sono quindi spesso anche il luogo nel quale
+si confrontano interessi delle grandi potenze.
+
+Questo non significa che ogni guerra sia "causata" da una
+superpotenza.
+
+Significa che, quando una grande potenza entra in un conflitto,
+il conflitto stesso può assumere una dimensione internazionale
+molto più ampia.
+
+</p>
+
+
+<div class="comparison-box">
+
+<div class="label">
+Il punto centrale
+</div>
+
+<p>
+
+<strong>
+Per capire una guerra non basta chiedersi chi sta sparando.
+Bisogna anche chiedersi chi fornisce le armi, chi finanzia,
+chi offre intelligence, chi garantisce protezione diplomatica,
+chi controlla le rotte e quali interessi strategici sono in gioco.
+</strong>
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- FONTI -->
+
+<section class="sources" id="fonti">
+
+<h2>
+Fonti principali
+</h2>
+
+
+<p>
+
+Il dossier distingue deliberatamente tra fonti istituzionali,
+organizzazioni internazionali, centri di ricerca e fonti
+giornalistiche.
+
+</p>
+
+
+<ul>
+
+<li>
+<a href="https://www.cfr.org/global-conflict-tracker"
+target="_blank"
+rel="noopener">
+Council on Foreign Relations — Global Conflict Tracker
+</a>
+</li>
+
+<li>
+<a href="https://www.crisisgroup.org/"
+target="_blank"
+rel="noopener">
+International Crisis Group — conflitti e crisi internazionali
+</a>
+</li>
+
+<li>
+<a href="https://www.consilium.europa.eu/"
+target="_blank"
+rel="noopener">
+Consiglio dell'Unione europea — documentazione sulla guerra Russia-Ucraina
+</a>
+</li>
+
+<li>
+<a href="https://understandingwar.org/"
+target="_blank"
+rel="noopener">
+Institute for the Study of War — analisi militari
+</a>
+</li>
+
+<li>
+<a href="https://www.csis.org/"
+target="_blank"
+rel="noopener">
+Center for Strategic and International Studies — sicurezza internazionale
+</a>
+</li>
+
+<li>
+<a href="https://www.acleddata.com/"
+target="_blank"
+rel="noopener">
+ACLED — dati sui conflitti e sulla violenza politica
+</a>
+</li>
+
+<li>
+<a href="https://www.reuters.com/"
+target="_blank"
+rel="noopener">
+Reuters — aggiornamenti sugli eventi internazionali
+</a>
+</li>
+
+<li>
+<a href="https://www.aljazeera.com/"
+target="_blank"
+rel="noopener">
+Al Jazeera — Medio Oriente e geopolitica internazionale
+</a>
+</li>
+
+<li>
+<a href="https://www.state.gov/"
+target="_blank"
+rel="noopener">
+U.S. Department of State — politica estera degli Stati Uniti
+</a>
+</li>
+
+<li>
+<a href="https://www.defense.gov/"
+target="_blank"
+rel="noopener">
+U.S. Department of Defense — operazioni e presenza militare USA
+</a>
+</li>
+
+</ul>
+
+
+<div class="note">
+
+<strong>Nota editoriale:</strong>
+
+le classificazioni presenti in questa pagina sono una sintesi
+redazionale. "Coinvolgimento" non equivale automaticamente a
+"responsabilità" e "presenza militare" non equivale automaticamente
+a "guerra".
+
+I dati relativi ai conflitti in corso possono cambiare rapidamente.
+Le informazioni operative devono quindi essere confrontate con
+gli ultimi aggiornamenti delle fonti originali.
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<footer>
+
+
+<a href="../index.html"
+class="footer-back"
+style="margin-left:18px;">
+&larr; Torna a Il Contribuente
+</a>
+
+
+<div class="footer-legal">
+
+<p>
+Pubblicazione indipendente e personale, priva di finalità commerciali.
+Non sono presenti pubblicità, abbonamenti, sponsorizzazioni o
+finanziamenti di alcun tipo, pubblici o privati.
+</p>
+
+<p>
+I contenuti pubblicati costituiscono sintesi originali e rielaborazioni
+redazionali di informazioni provenienti da fonti terze regolarmente
+indicate. Le informazioni relative ai conflitti in corso possono
+cambiare rapidamente.
+</p>
+
+<p>
+La classificazione delle guerre e dei livelli di coinvolgimento
+militare distingue tra combattimento diretto, operazioni, supporto,
+presenza e pressione strategica. Le categorie non devono essere
+interpretate come equivalenti.
+</p>
+
+<p>
+L'obiettivo del dossier è fornire un quadro comparato e verificabile
+della proiezione militare e geopolitica delle principali potenze
+mondiali, senza attribuire automaticamente a una potenza la
+responsabilità di ogni conflitto nel quale essa è coinvolta.
+</p>
+
+<p>
+Eventuali richieste di rettifica o rimozione di contenuti possono
+essere inoltrate a
+<a href="mailto:redazione.ilcontribuente@protonmail.com"
+style="color:var(--ink-soft);">
+redazione.ilcontribuente@protonmail.com
+</a>.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>

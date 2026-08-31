@@ -1,0 +1,2171 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Palestina: storia, popolo e memoria | Il Contribuente</title>
+
+<meta name="description" content="Dossier sulla Palestina e sul popolo palestinese: storia, identità, Nakba, rifugiati, occupazione, Intifada, Oslo, Gaza, Cisgiordania e situazione umanitaria fino al 2026.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --paper:#efe9da;
+  --paper2:#e4dcc7;
+  --ink:#1b1e22;
+  --soft:#5d6268;
+  --rule:#c8bea5;
+
+  --green:#285844;
+  --green-dark:#183d2e;
+  --green-light:#dce8df;
+
+  --red:#8d2820;
+  --red-dark:#641a15;
+  --red-light:#f0dcd9;
+
+  --gold:#a87920;
+  --gold-light:#eee2c2;
+
+  --blue:#27496c;
+  --card:#fffdf7;
+
+  --shadow:0 5px 20px rgba(27,30,34,.13);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  font-size:16px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+}
+
+.topnav{
+  max-width:980px;
+  margin:0 auto;
+  padding:22px 6vw 0;
+}
+
+.topnav a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--soft);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:3px;
+}
+
+.topnav a + a{
+  margin-left:20px;
+}
+
+.masthead{
+  max-width:980px;
+  margin:0 auto;
+  padding:32px 6vw 38px;
+  border-bottom:3px solid var(--ink);
+}
+
+.kicker{
+  display:inline-block;
+  background:var(--green-dark);
+  color:#fff;
+  padding:6px 13px;
+  border-radius:4px;
+
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+
+  margin-bottom:17px;
+}
+
+h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(38px,6vw,62px);
+  line-height:1.04;
+  margin:0 0 17px;
+  font-weight:900;
+}
+
+.subtitle{
+  max-width:760px;
+  font-size:19px;
+  color:var(--soft);
+  margin:0;
+}
+
+.brand{
+  margin-top:22px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--soft);
+}
+
+.brand strong{
+  color:var(--ink);
+}
+
+.wrap{
+  max-width:980px;
+  margin:0 auto;
+  padding:0 6vw 90px;
+}
+
+.intro{
+  margin:38px 0 12px;
+  font-size:18px;
+}
+
+.intro strong{
+  color:var(--green-dark);
+}
+
+.update{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11.5px;
+  color:var(--soft);
+  margin-bottom:38px;
+}
+
+/* NAVIGAZIONE */
+
+.contents{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:30px 0 45px;
+}
+
+.contents a{
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:5px;
+  padding:8px 12px;
+
+  text-decoration:none;
+
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+
+.contents a:hover{
+  background:var(--green-light);
+}
+
+/* SEZIONI */
+
+.section{
+  margin:65px 0;
+  scroll-margin-top:30px;
+}
+
+.section-number{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--green);
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+h2{
+  font-family:'Fraunces',serif;
+  font-size:34px;
+  line-height:1.12;
+  margin:0 0 18px;
+}
+
+h3{
+  font-family:'Fraunces',serif;
+  font-size:24px;
+  margin:35px 0 10px;
+}
+
+p{
+  margin:0 0 17px;
+}
+
+.lead{
+  font-size:18px;
+}
+
+.highlight{
+  background:var(--green-light);
+  border-left:5px solid var(--green);
+  padding:22px 25px;
+  border-radius:6px;
+  margin:28px 0;
+  box-shadow:var(--shadow);
+}
+
+.highlight.red{
+  background:var(--red-light);
+  border-left-color:var(--red);
+}
+
+.highlight.gold{
+  background:var(--gold-light);
+  border-left-color:var(--gold);
+}
+
+.highlight strong{
+  color:var(--green-dark);
+}
+
+.red strong{
+  color:var(--red-dark);
+}
+
+/* TIMELINE */
+
+.timeline{
+  border-left:3px solid var(--gold);
+  margin:40px 0;
+  padding-left:30px;
+}
+
+.event{
+  position:relative;
+  margin-bottom:45px;
+}
+
+.event::before{
+  content:"";
+  position:absolute;
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:var(--gold);
+  border:3px solid var(--paper);
+  box-shadow:0 0 0 2px var(--gold);
+
+  left:-38px;
+  top:5px;
+}
+
+.date{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+  color:var(--gold);
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+
+.event h3{
+  margin-top:0;
+}
+
+/* NUMERI */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin:30px 0;
+}
+
+.stat{
+  background:var(--card);
+  border-radius:8px;
+  padding:21px;
+  box-shadow:var(--shadow);
+  border-top:4px solid var(--green);
+}
+
+.stat-number{
+  font-family:'Fraunces',serif;
+  font-size:31px;
+  font-weight:900;
+  line-height:1;
+  margin-bottom:9px;
+}
+
+.stat-label{
+  font-size:13px;
+  color:var(--soft);
+}
+
+/* CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin:28px 0;
+}
+
+.card{
+  background:var(--card);
+  border-radius:9px;
+  padding:25px;
+  box-shadow:var(--shadow);
+}
+
+.card h3{
+  margin-top:0;
+}
+
+.card-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--green);
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+/* LISTE */
+
+ul{
+  padding-left:23px;
+}
+
+li{
+  margin-bottom:9px;
+}
+
+/* TABELLE */
+
+.table-wrap{
+  overflow-x:auto;
+  margin:28px 0;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--card);
+  box-shadow:var(--shadow);
+}
+
+th,
+td{
+  padding:13px 15px;
+  border-bottom:1px solid var(--rule);
+  text-align:left;
+  vertical-align:top;
+}
+
+th{
+  background:var(--green-dark);
+  color:white;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+
+td{
+  font-size:14px;
+}
+
+/* BOX PRINCIPALE */
+
+.big-box{
+  background:linear-gradient(145deg,#234d3b,#142f24);
+  color:white;
+  padding:31px;
+  border-radius:11px;
+  margin:45px 0;
+  box-shadow:var(--shadow);
+}
+
+.big-box .label{
+  color:#b9d6c5;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.big-box h2{
+  color:white;
+}
+
+.big-box p{
+  color:#eef5f0;
+}
+
+/* DONNE / BAMBINI */
+
+.human-cost{
+  background:#f4e3e0;
+  border-left:5px solid var(--red);
+  padding:25px;
+  border-radius:7px;
+  margin:30px 0;
+}
+
+.human-cost h3{
+  color:var(--red-dark);
+  margin-top:0;
+}
+
+/* FONTI */
+
+.sources{
+  border-top:2px solid var(--ink);
+  padding-top:25px;
+  margin-top:60px;
+}
+
+.sources h2{
+  font-size:27px;
+}
+
+.sources li{
+  color:var(--soft);
+  font-size:13.5px;
+}
+
+/* FOOTER */
+
+footer{
+  max-width:980px;
+  margin:0 auto;
+  padding:30px 6vw 45px;
+  border-top:3px solid var(--ink);
+}
+
+.back{
+  display:inline-block;
+  margin-bottom:25px;
+
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+
+  color:var(--soft);
+  text-decoration:none;
+
+  border-bottom:1px solid var(--rule);
+}
+
+.legal{
+  color:var(--soft);
+  font-size:12px;
+  line-height:1.6;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .timeline{
+    padding-left:22px;
+  }
+
+  .event::before{
+    left:-30px;
+    width:11px;
+    height:11px;
+  }
+
+  h2{
+    font-size:29px;
+  }
+
+  .subtitle{
+    font-size:17px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topnav">
+
+  <a href="../index.html">
+    ← Il Contribuente
+  </a>
+
+  <a href="index.html">
+    ← Tutti i dossier "Guerre"
+  </a>
+
+</div>
+
+
+<header class="masthead">
+
+  <span class="kicker">
+    Approfondimento fisso · Popoli e conflitti
+  </span>
+
+  <h1>
+    Palestina: storia di un popolo
+  </h1>
+
+  <p class="subtitle">
+    Chi sono i palestinesi, da dove vengono, come si è formata la loro identità nazionale e cosa è accaduto alla loro terra e alla loro popolazione dalla fine dell'Impero ottomano fino alla guerra e alla crisi umanitaria del 2026.
+  </p>
+
+  <div class="brand">
+    Dossier di <strong>Il Contribuente</strong> · storia · identità · Nakba · occupazione · rifugiati · Gaza · Cisgiordania
+  </div>
+
+</header>
+
+
+<main class="wrap">
+
+
+<p class="intro">
+
+La Palestina non è soltanto il luogo nel quale oggi si combatte una guerra.
+È anche la storia di un popolo, di una società, di famiglie e comunità che per generazioni hanno vissuto nella stessa regione, hanno sviluppato una propria identità nazionale e hanno attraversato guerre, espulsioni, occupazione, diaspora e perdita della propria terra.
+
+</p>
+
+<p class="intro">
+
+Raccontare la Palestina significa quindi raccontare <strong>le persone prima ancora delle organizzazioni politiche e militari</strong>: contadini, lavoratori, studenti, famiglie, rifugiati, cittadini di Gaza, abitanti della Cisgiordania, palestinesi di Gerusalemme e milioni di persone della diaspora.
+
+</p>
+
+<div class="update">
+
+Ultimo aggiornamento editoriale: 31 agosto 2026 · per i dati della guerra e della situazione umanitaria verificare sempre gli ultimi rapporti ONU/OCHA.
+
+</div>
+
+
+<nav class="contents">
+
+<a href="#chi">
+Chi sono
+</a>
+
+<a href="#origini">
+Origini
+</a>
+
+<a href="#mandato">
+Mandato britannico
+</a>
+
+<a href="#nakba">
+Nakba
+</a>
+
+<a href="#rifugiati">
+Rifugiati
+</a>
+
+<a href="#1967">
+1967
+</a>
+
+<a href="#intifada">
+Intifada
+</a>
+
+<a href="#oslo">
+Oslo
+</a>
+
+<a href="#gaza">
+Gaza
+</a>
+
+<a href="#cisgiordania">
+Cisgiordania
+</a>
+
+<a href="#hamas">
+Hamas
+</a>
+
+<a href="#2023">
+2023-2026
+</a>
+
+<a href="#diaspora">
+Diaspora
+</a>
+
+<a href="#oggi">
+Palestina oggi
+</a>
+
+<a href="#fonti">
+Fonti
+</a>
+
+</nav>
+
+
+<!-- 1 -->
+
+<section class="section" id="chi">
+
+<div class="section-number">
+01 · Identità
+</div>
+
+<h2>
+Chi sono i palestinesi?
+</h2>
+
+<p class="lead">
+
+I palestinesi sono un popolo arabo originario della Palestina storica. La loro identità nazionale moderna si sviluppa soprattutto tra la fine dell'Ottocento e il Novecento, parallelamente alla nascita di altri nazionalismi nella regione.
+
+</p>
+
+<p>
+
+Essere palestinese non significa appartenere a una sola religione. La maggioranza della popolazione palestinese è musulmana sunnita, ma esiste anche una storica comunità cristiana palestinese e una piccola comunità samaritana. La società palestinese comprende inoltre persone religiose e non religiose, comunità urbane e rurali e popolazioni residenti in territori differenti.
+
+</p>
+
+<p>
+
+I palestinesi vivono principalmente nella <strong>Striscia di Gaza, in Cisgiordania e a Gerusalemme Est</strong>, ma milioni di loro vivono anche in Giordania, Libano, Siria e in altri Paesi del mondo.
+
+</p>
+
+<p>
+
+La loro identità non nasce con Hamas, con Fatah o con l'Autorità Palestinese. Queste sono organizzazioni e strutture politiche relativamente recenti rispetto alla storia della popolazione palestinese.
+
+</p>
+
+<div class="highlight">
+
+<strong>Un punto fondamentale:</strong>
+
+il popolo palestinese e le organizzazioni politiche palestinesi non sono la stessa cosa.
+
+Un civile palestinese di Gaza, un abitante di Ramallah, un rifugiato in Giordania e un palestinese della diaspora possono avere idee politiche completamente diverse e condividere comunque un'identità nazionale palestinese.
+
+</div>
+
+</section>
+
+
+<!-- 2 -->
+
+<section class="section" id="origini">
+
+<div class="section-number">
+02 · Prima del conflitto moderno
+</div>
+
+<h2>
+La Palestina prima di Israele
+</h2>
+
+<p>
+
+Per secoli la Palestina fece parte dell'Impero ottomano. La popolazione era composta prevalentemente da arabi palestinesi musulmani e cristiani, insieme a comunità ebraiche storiche presenti in città come Gerusalemme, Safed, Tiberiade ed Hebron.
+
+</p>
+
+<p>
+
+La società era prevalentemente agricola, ma esistevano importanti centri urbani e commerciali. Gerusalemme, Giaffa, Haifa, Nablus, Gaza, Acri e altre città costituivano nodi economici e culturali della regione.
+
+</p>
+
+<p>
+
+Alla fine dell'Ottocento cominciarono a svilupparsi contemporaneamente due fenomeni destinati a modificare radicalmente la regione:
+
+</p>
+
+<ul>
+
+<li>
+la nascita e la crescita del nazionalismo arabo;
+</li>
+
+<li>
+la nascita del movimento sionista europeo, che sosteneva la creazione di una patria nazionale ebraica in Palestina.
+</li>
+
+</ul>
+
+<p>
+
+Il sionismo nasce anche come risposta alle persecuzioni e all'antisemitismo europeo. La sua crescita produce però una conseguenza fondamentale per la popolazione araba già residente nella Palestina: la crescente competizione per terra, immigrazione, rappresentanza politica e futuro del territorio.
+
+</p>
+
+</section>
+
+
+<!-- 3 -->
+
+<section class="section" id="mandato">
+
+<div class="section-number">
+03 · 1917 – 1947
+</div>
+
+<h2>
+Il Mandato britannico
+</h2>
+
+<p>
+
+Durante la Prima guerra mondiale l'Impero ottomano viene sconfitto. La Palestina passa sotto controllo britannico e successivamente viene istituito il Mandato britannico della Palestina.
+
+</p>
+
+<p>
+
+Nel 1917 il governo britannico pubblica la <strong>Dichiarazione Balfour</strong>, sostenendo la creazione in Palestina di un "focolare nazionale" per il popolo ebraico, precisando al tempo stesso che non dovessero essere danneggiati i diritti civili e religiosi delle comunità non ebraiche.
+
+</p>
+
+<p>
+
+Per la popolazione araba palestinese si apre una contraddizione fondamentale: la popolazione locale chiede autodeterminazione e indipendenza, mentre una parte crescente del progetto internazionale riguarda la costruzione di una patria nazionale ebraica.
+
+</p>
+
+<p>
+
+Durante il Mandato aumenta l'immigrazione ebraica, soprattutto negli anni Trenta e Quaranta, anche a causa delle persecuzioni naziste e dell'Olocausto.
+
+</p>
+
+<p>
+
+Parallelamente cresce l'opposizione araba palestinese all'immigrazione e alla prospettiva di una trasformazione politica permanente del territorio.
+
+</p>
+
+<div class="highlight gold">
+
+<strong>Il punto di rottura:</strong>
+
+alla vigilia della fine del Mandato britannico, nella stessa terra convivono due movimenti nazionali con aspirazioni incompatibili: il movimento sionista punta alla costruzione di uno Stato ebraico; il movimento nazionale palestinese rivendica l'autodeterminazione della popolazione araba del territorio.
+
+</div>
+
+</section>
+
+
+<!-- 4 -->
+
+<section class="section">
+
+<div class="section-number">
+04 · 1936 – 1939
+</div>
+
+<h2>
+La rivolta palestinese
+</h2>
+
+<p>
+
+Tra il 1936 e il 1939 esplode una grande rivolta araba palestinese contro il Mandato britannico.
+
+</p>
+
+<p>
+
+Le richieste comprendevano la fine dell'immigrazione ebraica, la limitazione delle vendite di terre e l'indipendenza politica.
+
+</p>
+
+<p>
+
+La rivolta viene repressa dalle autorità britanniche con l'impiego massiccio delle proprie forze militari e di sicurezza, mentre vengono adottate misure contro le organizzazioni palestinesi.
+
+</p>
+
+<p>
+
+Il movimento nazionale palestinese esce dalla repressione profondamente indebolito proprio nel momento in cui il conflitto tra il progetto sionista e quello palestinese sta diventando decisivo.
+
+</p>
+
+</section>
+
+
+<!-- 5 -->
+
+<section class="section" id="nakba">
+
+<div class="section-number">
+05 · 1947 – 1949
+</div>
+
+<h2>
+La Nakba: la catastrofe palestinese
+</h2>
+
+<p class="lead">
+
+Per i palestinesi il 1948 rappresenta la <strong>Nakba</strong>, cioè "catastrofe": la distruzione di una parte enorme della società palestinese e la trasformazione di centinaia di migliaia di persone in profughi.
+
+</p>
+
+<p>
+
+Nel novembre 1947 l'Assemblea generale delle Nazioni Unite approva la Risoluzione 181, che propone la divisione della Palestina mandataria in uno Stato ebraico e uno Stato arabo, con Gerusalemme sottoposta a un regime internazionale.
+
+</p>
+
+<p>
+
+La leadership sionista accetta il piano come base per la creazione dello Stato ebraico. La leadership araba palestinese e gli Stati arabi respingono il progetto.
+
+</p>
+
+<p>
+
+Nel maggio 1948 viene proclamato lo Stato di Israele. Segue una guerra nella quale vengono coinvolti anche gli eserciti di diversi Stati arabi.
+
+</p>
+
+<p>
+
+Nel corso della guerra una parte enorme della popolazione palestinese lascia le proprie case. In numerosi casi le persone fuggono dai combattimenti; in altri casi vengono espulse o non viene loro consentito di tornare.
+
+</p>
+
+<div class="stats">
+
+<div class="stat">
+
+<div class="stat-number">
+~700.000
+</div>
+
+<div class="stat-label">
+Palestinesi trasformati in profughi durante la guerra del 1948 secondo la documentazione ONU.
+</div>
+
+</div>
+
+<div class="stat">
+
+<div class="stat-number">
+centinaia
+</div>
+
+<div class="stat-label">
+di villaggi palestinesi svuotati, distrutti o incorporati nel nuovo Stato israeliano.
+</div>
+
+</div>
+
+<div class="stat">
+
+<div class="stat-number">
+1948
+</div>
+
+<div class="stat-label">
+L'anno che diventa il simbolo della Nakba nella memoria palestinese.
+</div>
+
+</div>
+
+</div>
+
+<p>
+
+La questione non riguarda soltanto le persone che fuggirono nel 1948. Riguarda anche la possibilità di tornare nelle proprie case, recuperare le proprietà e mantenere il legame con i luoghi di origine.
+
+</p>
+
+<div class="human-cost">
+
+<h3>
+La Nakba non è soltanto una data
+</h3>
+
+<p>
+
+Per una famiglia palestinese la Nakba può significare la perdita della casa, della terra agricola, del villaggio, dei documenti, del patrimonio familiare e della possibilità di tornare.
+
+</p>
+
+<p>
+
+Per questo la memoria del 1948 rimane centrale nell'identità palestinese ancora oggi.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- 6 -->
+
+<section class="section" id="rifugiati">
+
+<div class="section-number">
+06 · I rifugiati
+</div>
+
+<h2>
+Una popolazione dispersa
+</h2>
+
+<p>
+
+Dopo il 1948 i rifugiati palestinesi si distribuiscono soprattutto nella Striscia di Gaza, in Cisgiordania, Giordania, Libano e Siria.
+
+</p>
+
+<p>
+
+Nel 1949 nasce l'UNRWA, l'agenzia delle Nazioni Unite creata per assistere i rifugiati palestinesi.
+
+</p>
+
+<p>
+
+Nel corso delle generazioni la popolazione rifugiata cresce e molti discendenti continuano a essere registrati come rifugiati.
+
+</p>
+
+<p>
+
+Nascono grandi campi profughi che nel tempo diventano vere e proprie città.
+
+</p>
+
+<p>
+
+Per molti palestinesi il campo profughi non rappresenta soltanto povertà: rappresenta anche la memoria della casa e del villaggio lasciati dalla famiglia.
+
+</p>
+
+<div class="highlight">
+
+<strong>La questione dei rifugiati resta irrisolta.</strong>
+
+Il conflitto non ha mai prodotto un accordo definitivo sul ritorno, sul risarcimento o sul futuro delle proprietà palestinesi perdute nel 1948 e negli anni successivi.
+
+</div>
+
+</section>
+
+
+<!-- 7 -->
+
+<section class="section" id="1967">
+
+<div class="section-number">
+07 · 1967
+</div>
+
+<h2>
+La guerra dei Sei Giorni e l'occupazione
+</h2>
+
+<p>
+
+Nel giugno 1967 Israele combatte contro Egitto, Giordania e Siria e conquista la Cisgiordania, Gerusalemme Est, Gaza, il Sinai e le alture del Golan.
+
+</p>
+
+<p>
+
+Il Sinai viene successivamente restituito all'Egitto nell'ambito del trattato di pace israelo-egiziano.
+
+</p>
+
+<p>
+
+La situazione palestinese è diversa.
+
+</p>
+
+<p>
+
+La Cisgiordania e Gerusalemme Est vengono sottoposte al controllo israeliano. Anche Gaza viene occupata militarmente.
+
+</p>
+
+<p>
+
+Da quel momento la questione dell'occupazione diventa uno dei problemi centrali del conflitto.
+
+</p>
+
+<p>
+
+Nel corso dei decenni successivi vengono costruiti insediamenti israeliani nei territori occupati.
+
+</p>
+
+<div class="highlight red">
+
+<strong>Il diritto internazionale:</strong>
+
+nel parere consultivo del 19 luglio 2024, la Corte internazionale di giustizia ha affermato che la presenza continuata di Israele nel Territorio palestinese occupato è illegale e ha chiesto la fine della presenza israeliana e la cessazione delle nuove attività di insediamento.
+
+</div>
+
+</section>
+
+
+<!-- 8 -->
+
+<section class="section">
+
+<div class="section-number">
+08 · La vita sotto occupazione
+</div>
+
+<h2>
+Cosa significa occupazione nella vita quotidiana?
+</h2>
+
+<p>
+
+L'occupazione non è soltanto una questione militare.
+
+</p>
+
+<p>
+
+Per molti palestinesi significa vivere in un territorio nel quale l'esercito israeliano mantiene un ruolo determinante nella sicurezza, nei movimenti e nel controllo territoriale.
+
+</p>
+
+<p>
+
+In Cisgiordania esistono checkpoint, strade con regimi di accesso differenti, restrizioni alla mobilità, demolizioni, confische e procedimenti legati alla costruzione e all'espansione degli insediamenti.
+
+</p>
+
+<p>
+
+Esiste inoltre una forte differenza tra le diverse aree della Cisgiordania, che non possono essere trattate come se fossero tutte sottoposte allo stesso identico regime.
+
+</p>
+
+<p>
+
+La Corte internazionale di giustizia ha considerato gli insediamenti israeliani nei territori occupati contrari al diritto internazionale.
+
+</p>
+
+</section>
+
+
+<!-- 9 -->
+
+<section class="section">
+
+<div class="section-number">
+09 · 1987 – 1993
+</div>
+
+<h2>
+La Prima Intifada
+</h2>
+
+<p>
+
+Nel dicembre 1987 scoppia la Prima Intifada.
+
+</p>
+
+<p>
+
+È una sollevazione popolare palestinese contro l'occupazione israeliana.
+
+</p>
+
+<p>
+
+Comprende scioperi, proteste, boicottaggi, manifestazioni, disobbedienza civile e anche violenze.
+
+</p>
+
+<p>
+
+La rivolta modifica profondamente la percezione internazionale della questione palestinese e contribuisce alla nascita di nuove organizzazioni politiche.
+
+</p>
+
+<p>
+
+Nel 1987 nasce anche Hamas, organizzazione islamista palestinese collegata ai Fratelli Musulmani.
+
+</p>
+
+<div class="highlight">
+
+<strong>Una distinzione fondamentale:</strong>
+
+Hamas nasce nel contesto della Prima Intifada e dell'occupazione israeliana, ma questo non significa che tutti i palestinesi sostengano Hamas.
+
+Allo stesso modo, spiegare le condizioni storiche che favoriscono la nascita di un movimento armato non equivale a giustificare le sue azioni contro i civili.
+
+</div>
+
+</section>
+
+
+<!-- 10 -->
+
+<section class="section" id="intifada">
+
+<div class="section-number">
+10 · 2000 – 2005
+</div>
+
+<h2>
+La Seconda Intifada
+</h2>
+
+<p>
+
+Nel 2000 il processo di pace entra in crisi e scoppia la Seconda Intifada.
+
+</p>
+
+<p>
+
+Questa fase è molto più militarizzata della prima.
+
+</p>
+
+<p>
+
+Gruppi armati palestinesi compiono attentati suicidi e attacchi contro civili israeliani.
+
+</p>
+
+<p>
+
+Israele risponde con operazioni militari su larga scala, incursioni nei territori palestinesi, arresti e demolizioni.
+
+</p>
+
+<p>
+
+Il risultato è un enorme numero di vittime palestinesi e israeliane e una nuova distruzione del tessuto economico e sociale palestinese.
+
+</p>
+
+</section>
+
+
+<!-- 11 -->
+
+<section class="section" id="oslo">
+
+<div class="section-number">
+11 · Oslo
+</div>
+
+<h2>
+Gli accordi che avrebbero dovuto creare uno Stato palestinese
+</h2>
+
+<p>
+
+Nel 1993 Israele e Organizzazione per la Liberazione della Palestina si riconoscono reciprocamente.
+
+</p>
+
+<p>
+
+Nasce l'Autorità Palestinese.
+
+</p>
+
+<p>
+
+L'obiettivo dichiarato è arrivare a una soluzione definitiva del conflitto.
+
+</p>
+
+<p>
+
+Ma le questioni fondamentali restano irrisolte:
+
+</p>
+
+<ul>
+
+<li>confini;</li>
+
+<li>Gerusalemme;</li>
+
+<li>insediamenti israeliani;</li>
+
+<li>rifugiati;</li>
+
+<li>sicurezza;</li>
+
+<li>status definitivo dei territori palestinesi.</li>
+
+</ul>
+
+<p>
+
+L'assassinio del premier israeliano Yitzhak Rabin nel 1995, l'aumento delle violenze e la crescente sfiducia tra le parti indeboliscono ulteriormente il processo.
+
+</p>
+
+<p>
+
+Lo Stato palestinese indipendente previsto come risultato finale del processo non viene creato.
+
+</p>
+
+</section>
+
+
+<!-- 12 -->
+
+<section class="section">
+
+<div class="section-number">
+12 · 2005 – 2007
+</div>
+
+<h2>
+Il ritiro da Gaza e la nascita della divisione palestinese
+</h2>
+
+<p>
+
+Nel 2005 Israele ritira soldati e coloni dalla Striscia di Gaza.
+
+</p>
+
+<p>
+
+Nel 2006 Hamas vince le elezioni legislative palestinesi.
+
+</p>
+
+<p>
+
+Nel 2007 Hamas prende il controllo della Striscia dopo lo scontro armato con Fatah.
+
+</p>
+
+<p>
+
+Da quel momento il sistema politico palestinese si divide:
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-tag">
+Cisgiordania
+</div>
+
+<h3>
+Autorità Palestinese / Fatah
+</h3>
+
+<p>
+L'Autorità Palestinese mantiene il controllo amministrativo di parti della Cisgiordania e collabora con Israele su alcuni aspetti della sicurezza.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-tag">
+Gaza
+</div>
+
+<h3>
+Hamas
+</h3>
+
+<p>
+Hamas mantiene il controllo politico e militare della Striscia fino alla guerra iniziata nel 2023.
+</p>
+
+</div>
+
+</div>
+
+<p>
+
+La divisione politica palestinese rende ancora più difficile la nascita di una strategia nazionale comune.
+
+</p>
+
+</section>
+
+
+<!-- 13 -->
+
+<section class="section" id="gaza">
+
+<div class="section-number">
+13 · Gaza
+</div>
+
+<h2>
+La Striscia di Gaza
+</h2>
+
+<p>
+
+Gaza è una piccola fascia costiera densamente popolata.
+
+</p>
+
+<p>
+
+La sua popolazione comprende una percentuale enorme di discendenti dei rifugiati palestinesi del 1948.
+
+</p>
+
+<p>
+
+Dopo la presa del potere da parte di Hamas nel 2007, Israele e Egitto impongono severe restrizioni al movimento di persone e merci.
+
+</p>
+
+<p>
+
+Israele afferma che tali misure siano necessarie per impedire il trasferimento di armi e il rafforzamento di Hamas.
+
+</p>
+
+<p>
+
+Per la popolazione palestinese il risultato è stato un forte isolamento economico e territoriale, con conseguenze sulla mobilità, sull'economia, sulla sanità, sull'elettricità, sull'acqua e sulle infrastrutture.
+
+</p>
+
+<p>
+
+Prima della guerra del 2023 Gaza aveva già attraversato numerose operazioni militari e crisi umanitarie.
+
+</p>
+
+</section>
+
+
+<!-- 14 -->
+
+<section class="section">
+
+<div class="section-number">
+14 · Le guerre di Gaza prima del 2023
+</div>
+
+<h2>
+Una popolazione che vive tra guerre successive
+</h2>
+
+<p>
+
+Prima del 7 ottobre 2023 Gaza aveva già conosciuto grandi operazioni militari nel 2008-2009, nel 2012, nel 2014 e nel 2021, oltre a numerosi episodi di violenza di minore durata.
+
+</p>
+
+<p>
+
+Queste guerre hanno prodotto migliaia di morti palestinesi, centinaia di morti israeliani, distruzione di abitazioni e infrastrutture e cicli continui di ricostruzione e nuova distruzione.
+
+</p>
+
+<div class="highlight red">
+
+La popolazione civile palestinese non coincide con Hamas.
+
+Le vittime civili di Gaza comprendono bambini, donne, anziani, medici, giornalisti, insegnanti, operatori umanitari e persone che non partecipano alle ostilità.
+
+</div>
+
+</section>
+
+
+<!-- 15 -->
+
+<section class="section" id="2023">
+
+<div class="section-number">
+15 · Dal 7 ottobre 2023
+</div>
+
+<h2>
+La guerra più devastante
+</h2>
+
+<p>
+
+Il 7 ottobre 2023 Hamas e altri gruppi armati palestinesi attaccano Israele, uccidendo circa 1.200 persone e prendendo ostaggi.
+
+</p>
+
+<p>
+
+L'attacco provoca una risposta militare israeliana su scala senza precedenti nella Striscia.
+
+</p>
+
+<p>
+
+La guerra produce una distruzione enorme.
+
+</p>
+
+<p>
+
+Quartieri residenziali vengono distrutti o gravemente danneggiati. Ospedali, scuole, infrastrutture idriche, reti elettriche, strade e attività economiche vengono colpiti o resi inutilizzabili.
+
+</p>
+
+<p>
+
+Milioni di persone vengono costrette a spostarsi almeno una volta e molte più volte.
+
+</p>
+
+<div class="human-cost">
+
+<h3>
+Donne e bambini
+</h3>
+
+<p>
+
+La guerra ha colpito una popolazione nella quale i bambini rappresentano una quota enorme degli abitanti.
+
+</p>
+
+<p>
+
+Le autorità sanitarie di Gaza hanno riportato decine di migliaia di morti palestinesi dall'inizio della guerra, con donne e bambini tra le vittime.
+
+</p>
+
+<p>
+
+Le cifre precise cambiano nel tempo e devono essere lette insieme alle metodologie utilizzate dalle fonti.
+
+</p>
+
+</div>
+
+<p>
+
+Nel 2026 la situazione umanitaria continua a essere gravissima. OCHA ha documentato una popolazione ancora colpita da distruzione, sfollamento, scarsità di servizi essenziali e forti difficoltà di accesso all'acqua e agli aiuti.
+
+</p>
+
+</section>
+
+
+<!-- 16 -->
+
+<section class="section">
+
+<div class="section-number">
+16 · Fame e condizioni di vita
+</div>
+
+<h2>
+Quando la guerra distrugge anche la possibilità di vivere
+</h2>
+
+<p>
+
+La guerra non produce soltanto morti immediate.
+
+</p>
+
+<p>
+
+Produce anche fame, malnutrizione, malattie, perdita dell'abitazione, perdita del lavoro, interruzione della scuola e distruzione dei sistemi sanitari.
+
+</p>
+
+<p>
+
+OCHA ha continuato a documentare nel 2026 condizioni umanitarie estremamente difficili nella Striscia.
+
+</p>
+
+<p>
+
+Anche l'agricoltura è stata duramente colpita: terreni, serre, pozzi e infrastrutture agricole sono stati distrutti o sono diventati difficili da raggiungere.
+
+</p>
+
+<div class="highlight red">
+
+<strong>La fame non è un concetto astratto.</strong>
+
+Per una famiglia significa non avere abbastanza cibo per i bambini, non avere acqua sicura, non poter acquistare medicine e non sapere dove dormire la notte successiva.
+
+</div>
+
+</section>
+
+
+<!-- 17 -->
+
+<section class="section" id="cisgiordania">
+
+<div class="section-number">
+17 · Cisgiordania
+</div>
+
+<h2>
+La Palestina oltre Gaza
+</h2>
+
+<p>
+
+La questione palestinese non riguarda soltanto Gaza.
+
+</p>
+
+<p>
+
+In Cisgiordania continuano l'espansione degli insediamenti, le operazioni militari, le restrizioni alla mobilità, le demolizioni e gli attacchi dei coloni.
+
+</p>
+
+<p>
+
+OCHA ha documentato nel 2026 nuovi casi di violenza dei coloni, sfollamento e distruzione di proprietà palestinesi.
+
+</p>
+
+<p>
+
+Secondo OCHA, dall'inizio del 2026 oltre mille palestinesi sono rimasti feriti in attacchi di coloni nella Cisgiordania occupata.
+
+</p>
+
+<p>
+
+Human Rights Watch ha inoltre documentato come la violenza dei coloni contribuisca allo sfollamento forzato di comunità palestinesi.
+
+</p>
+
+</section>
+
+
+<!-- 18 -->
+
+<section class="section">
+
+<div class="section-number">
+18 · Terra e insediamenti
+</div>
+
+<h2>
+La perdita progressiva del territorio
+</h2>
+
+<p>
+
+Per molti palestinesi il problema centrale non è soltanto la guerra, ma la trasformazione geografica del territorio.
+
+</p>
+
+<p>
+
+La costruzione e l'espansione degli insediamenti israeliani in Cisgiordania hanno modificato la distribuzione della popolazione e la continuità territoriale palestinese.
+
+</p>
+
+<p>
+
+Strade, aree militari, insediamenti e sistemi di controllo dividono fisicamente il territorio.
+
+</p>
+
+<p>
+
+Questo è uno dei motivi per cui la questione degli insediamenti è centrale nel dibattito sulla possibilità di creare uno Stato palestinese territorialmente continuo.
+
+</p>
+
+<div class="highlight">
+
+Nel 2024 la Corte internazionale di giustizia ha concluso che la presenza continuata di Israele nel Territorio palestinese occupato è illegale e ha collegato la politica degli insediamenti e l'annessione di territorio alla violazione del diritto del popolo palestinese all'autodeterminazione.
+
+</div>
+
+</section>
+
+
+<!-- 19 -->
+
+<section class="section" id="hamas">
+
+<div class="section-number">
+19 · Hamas e il popolo palestinese
+</div>
+
+<h2>
+Hamas non è la Palestina
+</h2>
+
+<p>
+
+Hamas nasce nel 1987 durante la Prima Intifada come movimento islamista palestinese.
+
+</p>
+
+<p>
+
+Nel corso degli anni sviluppa una struttura politica, sociale e militare.
+
+</p>
+
+<p>
+
+Hamas considera la resistenza armata una componente fondamentale della propria strategia.
+
+</p>
+
+<p>
+
+L'organizzazione ha compiuto attacchi contro civili israeliani, attentati e presa di ostaggi, azioni che costituiscono gravi violazioni del diritto internazionale.
+
+</p>
+
+<p>
+
+Ma attribuire le azioni di Hamas all'intera popolazione palestinese è un errore.
+
+</p>
+
+<p>
+
+Milioni di palestinesi non appartengono a Hamas e non hanno alcun controllo sulle sue decisioni.
+
+</p>
+
+<div class="highlight">
+
+<strong>Il punto essenziale:</strong>
+
+si può spiegare il contesto storico che ha favorito la nascita e la crescita di Hamas senza trasformare quella spiegazione in una giustificazione degli attacchi contro i civili.
+
+</div>
+
+</section>
+
+
+<!-- 20 -->
+
+<section class="section">
+
+<div class="section-number">
+20 · La diaspora
+</div>
+
+<h2>
+Milioni di palestinesi fuori dalla Palestina
+</h2>
+
+<p>
+
+La storia palestinese è anche una storia di diaspora.
+
+</p>
+
+<p>
+
+Una parte enorme della popolazione palestinese vive fuori dalla Palestina storica.
+
+</p>
+
+<p>
+
+Le comunità più numerose si trovano in Giordania, Libano e Siria, oltre che nei Paesi del Golfo, in Europa, nelle Americhe e in altri Paesi.
+
+</p>
+
+<p>
+
+Per molti palestinesi della diaspora il legame con la Palestina viene mantenuto attraverso la famiglia, la lingua, la cucina, la musica, la religione, la memoria dei villaggi d'origine e la conservazione dei nomi dei luoghi.
+
+</p>
+
+<p>
+
+La diaspora è quindi parte integrante della storia palestinese contemporanea.
+
+</p>
+
+</section>
+
+
+<!-- 21 -->
+
+<section class="section">
+
+<div class="section-number">
+21 · Cultura e identità
+</div>
+
+<h2>
+Un popolo non è soltanto una guerra
+</h2>
+
+<p>
+
+La Palestina possiede una tradizione culturale molto più ampia del conflitto.
+
+</p>
+
+<p>
+
+Letteratura, poesia, musica, cucina, artigianato, ricamo tradizionale, agricoltura, architettura e memoria familiare costituiscono elementi fondamentali dell'identità palestinese.
+
+</p>
+
+<p>
+
+Il ricamo tradizionale palestinese, la <em>tatreez</em>, è uno degli elementi culturali più riconoscibili.
+
+</p>
+
+<p>
+
+Anche la poesia ha avuto un ruolo enorme nella costruzione dell'identità nazionale palestinese.
+
+</p>
+
+<p>
+
+Tra gli autori più conosciuti figura Mahmoud Darwish, la cui opera è strettamente legata ai temi dell'esilio, della terra, dell'identità e della perdita.
+
+</p>
+
+<div class="highlight gold">
+
+La Palestina non può essere raccontata soltanto attraverso il numero dei morti.
+
+Esiste una società che, nonostante guerre e diaspora, ha conservato una lingua, una cultura, una memoria familiare e un'identità nazionale.
+
+</div>
+
+</section>
+
+
+<!-- 22 -->
+
+<section class="section">
+
+<div class="section-number">
+22 · Le responsabilità
+</div>
+
+<h2>
+Cosa ha subito la popolazione palestinese?
+</h2>
+
+<p>
+
+Nel corso di oltre un secolo, le popolazioni palestinesi hanno attraversato esperienze molto differenti.
+
+</p>
+
+<ul>
+
+<li>perdita di terre e proprietà;</li>
+
+<li>espulsioni e fuga durante la guerra del 1948;</li>
+
+<li>vita da rifugiati per generazioni;</li>
+
+<li>occupazione militare dopo il 1967;</li>
+
+<li>confische e demolizioni;</li>
+
+<li>espansione degli insediamenti;</li>
+
+<li>restrizioni alla mobilità;</li>
+
+<li>arresti e detenzioni;</li>
+
+<li>violenza dei coloni;</li>
+
+<li>operazioni militari;</li>
+
+<li>attentati e violenze commessi da gruppi palestinesi;</li>
+
+<li>divisione politica interna;</li>
+
+<li>blocco e isolamento di Gaza;</li>
+
+<li>guerre ricorrenti;</li>
+
+<li>sfollamento;</li>
+
+<li>distruzione delle infrastrutture;</li>
+
+<li>mancanza di uno Stato palestinese sovrano.</li>
+
+</ul>
+
+<p>
+
+Non tutte queste esperienze riguardano tutte le persone palestinesi nello stesso modo. Gaza, Cisgiordania, Gerusalemme Est, Israele, Giordania, Libano e diaspora hanno storie differenti.
+
+</p>
+
+</section>
+
+
+<!-- 23 -->
+
+<section class="section" id="oggi">
+
+<div class="section-number">
+23 · Palestina nel 2026
+</div>
+
+<h2>
+Dove si trova oggi il popolo palestinese?
+</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Area</th>
+<th>Situazione</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+<strong>Gaza</strong>
+</td>
+
+<td>
+Popolazione devastata dalla guerra, distruzione enorme delle infrastrutture, sfollamento e gravissima crisi umanitaria.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<strong>Cisgiordania</strong>
+</td>
+
+<td>
+Territorio occupato, caratterizzato da insediamenti israeliani, controllo militare, restrizioni alla mobilità e violenza dei coloni.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<strong>Gerusalemme Est</strong>
+</td>
+
+<td>
+Territorio occupato da Israele dal 1967 e oggetto di una disputa fondamentale sul futuro della città.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<strong>Israele</strong>
+</td>
+
+<td>
+Comunità arabe palestinesi con cittadinanza israeliana, discendenti anche della popolazione rimasta nel territorio dopo il 1948.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<strong>Giordania, Libano, Siria</strong>
+</td>
+
+<td>
+Grandi comunità di rifugiati palestinesi e loro discendenti.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<strong>Diaspora mondiale</strong>
+</td>
+
+<td>
+Milioni di palestinesi residenti fuori dal Medio Oriente.
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<div class="big-box">
+
+<div class="label">
+Il nodo centrale
+</div>
+
+<h2>
+La questione palestinese non è ancora risolta
+</h2>
+
+<p>
+
+Dopo quasi ottant'anni dalla Nakba, il popolo palestinese non dispone ancora di uno Stato indipendente e pienamente sovrano riconosciuto e funzionante su un territorio palestinese continuo.
+
+</p>
+
+<p>
+
+Restano aperte le questioni dei confini, di Gerusalemme, degli insediamenti, dei rifugiati, della sicurezza, del controllo territoriale, di Gaza e del futuro politico palestinese.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- 24 -->
+
+<section class="section">
+
+<div class="section-number">
+24 · Una storia che continua
+</div>
+
+<h2>
+Perché questa storia non può essere ridotta al 7 ottobre
+</h2>
+
+<p>
+
+Il 7 ottobre 2023 è un evento decisivo e terribile nella storia recente del conflitto.
+
+</p>
+
+<p>
+
+Le uccisioni di civili israeliani e la presa degli ostaggi devono essere documentate e condannate.
+
+</p>
+
+<p>
+
+Ma la storia del popolo palestinese non comincia quel giorno.
+
+</p>
+
+<p>
+
+Per comprendere la società palestinese contemporanea bisogna conoscere almeno il Mandato britannico, la Nakba del 1948, la nascita della popolazione rifugiata, la guerra del 1967, l'occupazione, gli insediamenti, le Intifada, Oslo, la divisione tra Fatah e Hamas, il blocco di Gaza e le guerre successive.
+
+</p>
+
+<p>
+
+Senza questa storia è impossibile comprendere perché la questione palestinese continui a essere uno dei conflitti più irrisolti della politica internazionale.
+
+</p>
+
+
+<div class="highlight">
+
+<strong>La Palestina non è soltanto Gaza.</strong>
+
+Non è soltanto Hamas.
+
+Non è soltanto l'Autorità Palestinese.
+
+Non è soltanto la Cisgiordania.
+
+E soprattutto non è soltanto una cronaca di guerra.
+
+È un popolo disperso tra territori, campi profughi e diaspora, con una storia nazionale costruita attraverso perdita, resistenza, esilio, cultura e continua richiesta di autodeterminazione.
+
+</div>
+
+</section>
+
+
+<!-- FONTI -->
+
+<section class="sources" id="fonti">
+
+<h2>
+Fonti principali
+</h2>
+
+<p>
+
+Il dossier distingue i fatti storici dalle interpretazioni politiche e utilizza principalmente fonti istituzionali e documentazione internazionale.
+
+</p>
+
+<ul>
+
+<li>
+<strong>Nazioni Unite – Question of Palestine:</strong>
+cronologia storica, Mandato britannico, partizione, 1948, 1967 e sviluppo della questione palestinese.
+</li>
+
+<li>
+<strong>Nazioni Unite – Nakba:</strong>
+documentazione sulla deportazione, fuga e perdita delle proprietà palestinesi durante la guerra del 1948.
+</li>
+
+<li>
+<strong>UNRWA:</strong>
+documentazione sui rifugiati palestinesi e sulle condizioni delle comunità palestinesi assistite dall'agenzia.
+</li>
+
+<li>
+<strong>OCHA – Occupied Palestinian Territory:</strong>
+dati aggiornati su Gaza, Cisgiordania, vittime, sfollamenti, demolizioni, insediamenti e situazione umanitaria.
+</li>
+
+<li>
+<strong>Corte internazionale di giustizia – ICJ:</strong>
+parere consultivo del 19 luglio 2024 sulle conseguenze giuridiche delle politiche e delle pratiche israeliane nei territori palestinesi occupati.
+</li>
+
+<li>
+<strong>Organizzazione Mondiale della Sanità – WHO:</strong>
+documentazione sulla situazione sanitaria e sulle strutture mediche nei territori palestinesi.
+</li>
+
+<li>
+<strong>UNICEF:</strong>
+documentazione sulla situazione dei bambini palestinesi.
+</li>
+
+<li>
+<strong>UNESCO:</strong>
+documentazione sul patrimonio culturale palestinese.
+</li>
+
+</ul>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<a class="back" href="index.html">
+← Tutti i dossier "Guerre"
+</a>
+
+<br>
+
+<a class="back" href="../index.html">
+← Torna a Il Contribuente
+</a>
+
+<div class="legal">
+
+<p>
+Pubblicazione indipendente e personale, priva di finalità commerciali.
+</p>
+
+<p>
+Il presente dossier è una sintesi redazionale basata su fonti storiche, istituzionali e internazionali. Le cifre relative alla guerra e alla situazione umanitaria possono cambiare rapidamente e devono essere verificate attraverso gli ultimi rapporti delle fonti originali.
+</p>
+
+<p>
+Le qualificazioni giuridiche riportate nel testo sono attribuite agli organismi che le hanno formulate. La descrizione della storia palestinese non implica l'attribuzione automatica delle responsabilità di singoli gruppi armati all'intera popolazione palestinese.
+</p>
+
+<p>
+Il dossier non intende presentare il popolo palestinese come sinonimo di Hamas né il popolo israeliano come sinonimo del governo israeliano o delle forze armate israeliane.
+</p>
+
+<p>
+Eventuali richieste di rettifica o rimozione di contenuti possono essere inoltrate alla redazione.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>

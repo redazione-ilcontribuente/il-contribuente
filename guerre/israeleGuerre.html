@@ -1,0 +1,1971 @@
+```html
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Israele: guerre, alleanze, finanziamenti e progetto regionale | Il Contribuente</title>
+
+<meta name="description" content="Dossier sulle guerre combattute da Israele, sulle sue alleanze, sul sostegno militare statunitense, sui rapporti regionali, sul sionismo e sul progetto della Grande Israele.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --paper:#efe9da;
+  --paper2:#e4dcc7;
+  --ink:#1b1e22;
+  --ink-soft:#565c64;
+  --rule:#c7bc9f;
+
+  --red:#a3291f;
+  --red-deep:#7c1d16;
+
+  --navy:#1f3a5f;
+  --navy-deep:#122438;
+
+  --gold:#a97a1f;
+  --gold-deep:#7d5a13;
+
+  --green:#3d6b4f;
+  --green-deep:#264734;
+
+  --wine:#6b2438;
+  --wine-deep:#481725;
+
+  --card:#fdfcf7;
+
+  --shadow-sm:0 1px 3px rgba(27,30,34,.12);
+  --shadow-md:0 4px 16px rgba(27,30,34,.14);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+}
+
+.wrap{
+  max-width:900px;
+  margin:0 auto;
+  padding:0 6vw 80px 6vw;
+}
+
+.topnav{
+  max-width:900px;
+  margin:0 auto;
+  padding:22px 6vw 0 6vw;
+}
+
+.topnav a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12.5px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:2px;
+}
+
+.topnav a:hover{
+  color:var(--ink);
+  border-bottom-color:var(--ink);
+}
+
+.masthead{
+  padding:30px 6vw 34px 6vw;
+  border-bottom:3px solid var(--ink);
+  max-width:900px;
+  margin:0 auto;
+}
+
+.dossier-kicker{
+  display:inline-block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#fff;
+  background:linear-gradient(160deg,#7c1d16,#48100d);
+  padding:5px 12px;
+  border-radius:4px;
+  margin-bottom:16px;
+}
+
+h1.title{
+  font-family:'Fraunces',serif;
+  font-weight:900;
+  font-size:clamp(32px,5vw,50px);
+  line-height:1.08;
+  margin:0 0 14px 0;
+}
+
+.subtitle{
+  font-size:17px;
+  color:var(--ink-soft);
+  max-width:700px;
+  margin:0;
+}
+
+.brand-line{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11.5px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  margin-top:20px;
+}
+
+.brand-line em{
+  font-style:normal;
+  color:var(--ink);
+  font-weight:700;
+}
+
+.intro{
+  margin:36px 0 8px 0;
+  font-size:17.5px;
+}
+
+.updated-note{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  color:var(--ink-soft);
+  margin:6px 0 40px 0;
+}
+
+
+/* NAVIGAZIONE INTERNA */
+
+.section-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:25px 0 45px 0;
+}
+
+.section-nav a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  text-decoration:none;
+  padding:8px 11px;
+  border:1px solid var(--rule);
+  border-radius:4px;
+  background:rgba(255,255,255,.4);
+}
+
+.section-nav a:hover{
+  background:var(--ink);
+  color:white;
+}
+
+
+/* SEZIONI */
+
+.section{
+  margin:65px 0;
+}
+
+.section-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--red-deep);
+  font-weight:700;
+  margin-bottom:7px;
+}
+
+.section h2{
+  font-family:'Fraunces',serif;
+  font-size:34px;
+  line-height:1.15;
+  margin:0 0 18px 0;
+}
+
+.section h3{
+  font-family:'Fraunces',serif;
+  font-size:23px;
+  margin:30px 0 10px 0;
+}
+
+.section p{
+  margin:0 0 15px 0;
+}
+
+
+/* BOX */
+
+.box{
+  background:var(--card);
+  border-radius:9px;
+  padding:22px 25px;
+  margin:25px 0;
+  box-shadow:var(--shadow-sm);
+}
+
+.box.red{
+  border-left:5px solid var(--red-deep);
+}
+
+.box.gold{
+  border-left:5px solid var(--gold);
+}
+
+.box.navy{
+  border-left:5px solid var(--navy);
+}
+
+.box.green{
+  border-left:5px solid var(--green);
+}
+
+.box.wine{
+  border-left:5px solid var(--wine);
+}
+
+.box-title{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--ink-soft);
+  margin-bottom:8px;
+  font-weight:700;
+}
+
+
+/* TIMELINE */
+
+.timeline{
+  position:relative;
+  margin:40px 0;
+  padding-left:28px;
+  border-left:3px solid var(--red-deep);
+}
+
+.event{
+  position:relative;
+  margin-bottom:42px;
+}
+
+.event::before{
+  content:'';
+  position:absolute;
+  left:-36px;
+  top:4px;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:var(--red-deep);
+  border:3px solid var(--paper);
+  box-shadow:0 0 0 2px var(--red-deep);
+}
+
+.event-year{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--red-deep);
+  font-weight:700;
+}
+
+.event h3{
+  margin:5px 0 8px 0;
+  font-family:'Fraunces',serif;
+  font-size:25px;
+}
+
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin:25px 0;
+}
+
+.card{
+  background:var(--card);
+  border-radius:9px;
+  padding:21px;
+  box-shadow:var(--shadow-sm);
+}
+
+.card h3{
+  font-family:'Fraunces',serif;
+  font-size:22px;
+  margin:0 0 8px 0;
+}
+
+.card p{
+  margin:0;
+  font-size:15px;
+}
+
+.card small{
+  display:block;
+  margin-top:12px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;
+  color:var(--ink-soft);
+}
+
+
+/* MAPPA TESTUALE */
+
+.axis{
+  background:linear-gradient(160deg,#2f3e52,#162638);
+  color:#fff;
+  border-radius:10px;
+  padding:27px;
+  margin:35px 0;
+  box-shadow:var(--shadow-md);
+}
+
+.axis h3{
+  color:#fff;
+  margin-top:0;
+}
+
+.axis-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:12px 0;
+}
+
+.node{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);
+  padding:8px 12px;
+  border-radius:5px;
+  font-size:13px;
+}
+
+.arrow{
+  opacity:.6;
+}
+
+
+/* FINANZIAMENTI */
+
+.money{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin:25px 0;
+}
+
+.money-card{
+  background:var(--card);
+  padding:20px;
+  border-radius:8px;
+  box-shadow:var(--shadow-sm);
+}
+
+.money-card .country{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--ink-soft);
+}
+
+.money-card h3{
+  margin:5px 0 8px 0;
+  font-family:'Fraunces',serif;
+  font-size:22px;
+}
+
+.money-card p{
+  font-size:14.5px;
+  margin:0;
+}
+
+
+/* TABELLE */
+
+.table-wrap{
+  overflow-x:auto;
+  margin:25px 0;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--card);
+  box-shadow:var(--shadow-sm);
+}
+
+th{
+  background:var(--navy-deep);
+  color:#fff;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  text-align:left;
+  padding:12px;
+}
+
+td{
+  padding:13px 12px;
+  border-bottom:1px solid var(--rule);
+  font-size:14px;
+  vertical-align:top;
+}
+
+tr:last-child td{
+  border-bottom:none;
+}
+
+
+/* ALERT */
+
+.warning{
+  background:#f1dfdf;
+  border:1px solid #d4aaaa;
+  border-radius:8px;
+  padding:19px 21px;
+  margin:25px 0;
+}
+
+.warning strong{
+  color:var(--red-deep);
+}
+
+
+/* CONCLUSION */
+
+.conclusion{
+  background:linear-gradient(160deg,#7c1d16,#42120f);
+  color:#fff;
+  border-radius:11px;
+  padding:30px;
+  margin:60px 0;
+  box-shadow:var(--shadow-md);
+}
+
+.conclusion .label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  opacity:.7;
+  margin-bottom:10px;
+}
+
+.conclusion h2{
+  font-family:'Fraunces',serif;
+  font-size:31px;
+  margin:0 0 15px 0;
+}
+
+.conclusion p{
+  margin:0 0 12px 0;
+}
+
+.conclusion p:last-child{
+  margin-bottom:0;
+}
+
+
+/* FONTI */
+
+.sources{
+  border-top:1px solid var(--rule);
+  padding-top:25px;
+}
+
+.sources h3{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+
+.sources ul{
+  padding-left:20px;
+  color:var(--ink-soft);
+  font-size:13px;
+}
+
+.sources li{
+  margin-bottom:8px;
+}
+
+
+/* FOOTER */
+
+footer{
+  max-width:900px;
+  margin:60px auto 0 auto;
+  padding:28px 6vw 40px 6vw;
+  border-top:3px solid var(--ink);
+}
+
+.footer-back{
+  display:inline-block;
+  margin-bottom:22px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12.5px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--ink-soft);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:2px;
+}
+
+.footer-legal p{
+  font-size:12px;
+  color:var(--ink-soft);
+  line-height:1.6;
+  margin:0 0 8px 0;
+}
+
+
+/* MOBILE */
+
+@media(max-width:640px){
+
+  .grid,
+  .money{
+    grid-template-columns:1fr;
+  }
+
+  .section h2{
+    font-size:29px;
+  }
+
+  .timeline{
+    padding-left:20px;
+  }
+
+  .event::before{
+    left:-27px;
+    width:11px;
+    height:11px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="topnav">
+
+  <a href="../index.html">&larr; Il Contribuente</a>
+
+  <a href="index.html" style="margin-left:18px;">
+    &larr; Tutti i dossier "Guerre"
+  </a>
+
+</div>
+
+
+<div class="masthead">
+
+  <span class="dossier-kicker">
+    Approfondimento fisso · Guerre
+  </span>
+
+  <h1 class="title">
+    Israele: guerre, alleanze, finanziamenti e progetto regionale
+  </h1>
+
+  <p class="subtitle">
+    Dalla nascita dello Stato di Israele alle guerre regionali contemporanee:
+    territori, alleanze militari, sostegno internazionale, industria della difesa,
+    sionismo e correnti che sostengono il progetto della "Grande Israele".
+  </p>
+
+  <div class="brand-line">
+    Dossier di <em>Il Contribuente</em> · geopolitica · guerre · alleanze · finanziamenti · ideologie
+  </div>
+
+</div>
+
+
+<div class="wrap">
+
+
+<p class="intro">
+
+Questo dossier nasce da una domanda diversa da quella affrontata nella pagina
+sulla storia israelo-palestinese:
+
+<strong>come è diventato Israele una potenza militare regionale e perché
+il conflitto palestinese è oggi collegato a Libano, Siria, Iran, Iraq e Yemen?</strong>
+
+La risposta non è una sola.
+
+Nel corso della sua storia Israele ha combattuto guerre convenzionali con Stati
+arabi, operazioni contro organizzazioni armate non statali e, più recentemente,
+confronti diretti con l'Iran.
+
+Contemporaneamente ha costruito una rete di alleanze, soprattutto con gli Stati
+Uniti, e una delle industrie militari più avanzate del mondo.
+
+Il risultato è un conflitto che oggi supera largamente i confini di Israele e
+Palestina.
+
+</p>
+
+
+<div class="updated-note">
+Ultimo aggiornamento editoriale: 31 agosto 2026 ·
+le informazioni sulla guerra regionale devono essere confrontate con gli ultimi
+rapporti disponibili.
+</div>
+
+
+<nav class="section-nav">
+
+<a href="#guerre">Guerre</a>
+<a href="#territori">Territori</a>
+<a href="#usa">Stati Uniti</a>
+<a href="#alleanze">Alleanze</a>
+<a href="#finanziamenti">Finanziamenti</a>
+<a href="#industria">Industria militare</a>
+<a href="#iran">Iran</a>
+<a href="#sionismo">Sionismo</a>
+<a href="#grande-israele">Grande Israele</a>
+<a href="#progetto">Il progetto</a>
+<a href="#fonti">Fonti</a>
+
+</nav>
+
+
+
+<!-- ===================================================== -->
+<!-- GUERRE -->
+<!-- ===================================================== -->
+
+<section class="section" id="guerre">
+
+<div class="section-label">01 · Storia militare</div>
+
+<h2>Le guerre di Israele: 1948 → 2026</h2>
+
+<p>
+La storia militare di Israele non è costituita da un'unica guerra.
+È una successione di guerre interstatali, invasioni, occupazioni,
+operazioni militari, conflitti con organizzazioni armate e confronti
+indiretti con potenze regionali.
+</p>
+
+
+<div class="timeline">
+
+
+<div class="event">
+
+<div class="event-year">1948 – 1949</div>
+
+<h3>La prima guerra arabo-israeliana</h3>
+
+<p>
+Dopo la proclamazione dello Stato di Israele nel maggio 1948,
+gli eserciti di Egitto, Transgiordania, Siria, Libano e Iraq entrano
+nel conflitto insieme alle forze israeliane.
+</p>
+
+<p>
+La guerra termina con gli armistizi del 1949.
+Israele controlla un territorio più ampio rispetto a quello assegnato
+dal piano di partizione ONU del 1947.
+</p>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-year">1956</div>
+
+<h3>Crisi di Suez</h3>
+
+<p>
+Israele attacca l'Egitto nel Sinai contemporaneamente all'intervento
+militare di Francia e Regno Unito.
+</p>
+
+<p>
+La crisi viene fermata sotto la pressione internazionale.
+Israele si ritira successivamente dal Sinai.
+</p>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-year">1967</div>
+
+<h3>La guerra dei Sei Giorni</h3>
+
+<p>
+Israele combatte contro Egitto, Giordania e Siria e conquista
+la penisola del Sinai, Gaza, la Cisgiordania, Gerusalemme Est
+e le alture del Golan.
+</p>
+
+<div class="box red">
+
+<div class="box-title">Il punto di svolta</div>
+
+<p>
+Il 1967 è decisivo perché porta sotto controllo israeliano i territori
+palestinesi di Gaza, Cisgiordania e Gerusalemme Est.
+Da questo momento l'occupazione diventa uno degli elementi strutturali
+del conflitto.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-year">1973</div>
+
+<h3>La guerra dello Yom Kippur</h3>
+
+<p>
+Egitto e Siria attaccano Israele nel tentativo di recuperare i territori
+persi nel 1967.
+La guerra porta successivamente a nuovi negoziati diplomatici.
+</p>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-year">1978</div>
+
+<h3>Intervento israeliano in Libano</h3>
+
+<p>
+Israele invade il Libano meridionale dopo una fase di attacchi
+transfrontalieri legati all'Organizzazione per la Liberazione della Palestina.
+</p>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-year">1982</div>
+
+<h3>Invasione del Libano</h3>
+
+<p>
+Israele lancia una vasta operazione militare in Libano.
+Le forze israeliane arrivano fino a Beirut e l'OLP viene costretta
+a lasciare il Paese.
+</p>
+
+<p>
+La guerra contribuisce anche alla nascita e al rafforzamento di Hezbollah,
+che negli anni successivi diventerà il principale avversario militare
+di Israele sul fronte libanese.
+</p>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-year">2006</div>
+
+<h3>Seconda guerra del Libano</h3>
+
+<p>
+Dopo il rapimento di due soldati israeliani da parte di Hezbollah,
+Israele lancia una vasta campagna militare contro il gruppo.
+Il conflitto dura 34 giorni.
+</p>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-year">2008 – 2021</div>
+
+<h3>Le guerre ricorrenti a Gaza</h3>
+
+<p>
+Israele combatte diverse campagne militari contro Hamas e altri gruppi
+armati palestinesi nella Striscia.
+Le principali escalation si verificano nel 2008-09, 2012, 2014 e 2021.
+</p>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-year">2023 – 2026</div>
+
+<h3>La guerra diventa regionale</h3>
+
+<p>
+Dopo il 7 ottobre 2023 il conflitto si estende progressivamente oltre Gaza.
+Hezbollah apre un fronte dal Libano, gli Houthi attaccano obiettivi israeliani
+e navi nel Mar Rosso e gruppi armati sostenuti dall'Iran operano in Iraq e Siria.
+</p>
+
+<p>
+Nel 2024 Israele e Iran entrano inoltre in uno scontro diretto con attacchi
+missilistici e aerei reciproci.
+Nel 2026 il confronto regionale si amplia ulteriormente.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- TERRITORI -->
+<!-- ===================================================== -->
+
+<section class="section" id="territori">
+
+<div class="section-label">02 · Territorio</div>
+
+<h2>La questione dei territori</h2>
+
+<p>
+Uno degli elementi fondamentali per comprendere la politica israeliana
+è la relazione tra sicurezza e territorio.
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Territorio</th>
+<th>Situazione</th>
+<th>Perché è importante</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td><strong>Cisgiordania</strong></td>
+
+<td>
+Territorio palestinese occupato da Israele dal 1967.
+</td>
+
+<td>
+Insediamenti, sicurezza, continuità territoriale di un eventuale Stato palestinese.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td><strong>Gerusalemme Est</strong></td>
+
+<td>
+Conquistata da Israele nel 1967 e successivamente annessa da Israele.
+L'annessione non è riconosciuta dalla maggior parte della comunità internazionale.
+</td>
+
+<td>
+Luogo centrale per ebrei, musulmani e cristiani.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td><strong>Gaza</strong></td>
+
+<td>
+Israele ha ritirato esercito e insediamenti nel 2005, mantenendo tuttavia
+un controllo significativo su molti aspetti dell'accesso, dei confini e
+dello spazio circostante.
+</td>
+
+<td>
+Centro della guerra contro Hamas dal 2008 e soprattutto dal 2023.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td><strong>Golan</strong></td>
+
+<td>
+Conquistato alla Siria nel 1967 e annesso da Israele nel 1981.
+La maggior parte della comunità internazionale non riconosce l'annessione.
+</td>
+
+<td>
+Posizione strategica dominante sulla Siria settentrionale.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td><strong>Sinai</strong></td>
+
+<td>
+Conquistato nel 1967 e restituito all'Egitto nell'ambito del trattato di pace
+israelo-egiziano.
+</td>
+
+<td>
+Dimostra che alcuni territori conquistati militarmente sono stati
+successivamente restituiti attraverso accordi diplomatici.
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- USA -->
+<!-- ===================================================== -->
+
+<section class="section" id="usa">
+
+<div class="section-label">03 · Alleanze</div>
+
+<h2>Gli Stati Uniti: il principale sostegno internazionale</h2>
+
+<p>
+Il rapporto con Washington rappresenta uno dei pilastri della potenza
+militare israeliana.
+</p>
+
+<div class="box navy">
+
+<div class="box-title">Il rapporto strategico</div>
+
+<p>
+Gli Stati Uniti forniscono a Israele sostegno militare, cooperazione
+d'intelligence, sistemi d'arma, tecnologia e sostegno diplomatico.
+</p>
+
+<p>
+Il rapporto non significa però che Washington e Gerusalemme abbiano sempre
+identiche posizioni politiche.
+Nel corso dei decenni gli Stati Uniti hanno esercitato anche pressioni
+su Israele in materia di insediamenti, negoziati e guerra.
+</p>
+
+</div>
+
+
+<h3>Perché gli Stati Uniti sostengono Israele?</h3>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Strategia</h3>
+
+<p>
+Israele rappresenta per Washington uno dei principali partner militari
+e d'intelligence in Medio Oriente.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Geopolitica</h3>
+
+<p>
+Il rapporto consente agli Stati Uniti di mantenere una forte presenza
+strategica in una regione fondamentale per energia, commercio e sicurezza.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Politica interna</h3>
+
+<p>
+Il sostegno a Israele ha anche una dimensione politica interna negli Stati Uniti,
+dove il rapporto con Israele è sostenuto da importanti segmenti dell'elettorato,
+del Congresso e della società civile.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Industria militare</h3>
+
+<p>
+La cooperazione militare produce inoltre rapporti industriali, tecnologici
+e commerciali tra aziende della difesa dei due Paesi.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- ALLEANZE -->
+<!-- ===================================================== -->
+
+<section class="section" id="alleanze">
+
+<div class="section-label">04 · Regione</div>
+
+<h2>Israele contro una rete regionale</h2>
+
+<p>
+Dal punto di vista israeliano, la minaccia non proviene soltanto
+dai palestinesi.
+La strategia di sicurezza considera Iran, Hezbollah, Hamas, milizie irachene
+e Houthi come elementi collegati di una più ampia rete ostile.
+</p>
+
+
+<div class="axis">
+
+<h3>La struttura dello scontro regionale</h3>
+
+<div class="axis-row">
+
+<div class="node">ISRAELE</div>
+
+<div class="arrow">←→</div>
+
+<div class="node">IRAN</div>
+
+</div>
+
+<div class="axis-row">
+
+<div class="node">Hamas</div>
+<div class="node">Hezbollah</div>
+<div class="node">Houthi</div>
+<div class="node">Milizie irachene</div>
+
+</div>
+
+<p style="opacity:.75;font-size:13px;margin-top:20px;">
+Le relazioni non sono identiche: il termine "proxy" viene utilizzato
+frequentemente, ma alcuni gruppi possiedono autonomia politica e militare
+e non sono semplicemente esecutori di ordini iraniani.
+</p>
+
+</div>
+
+
+<h3>Iran</h3>
+
+<p>
+L'Iran è il principale avversario regionale di Israele.
+Teheran sostiene una rete di organizzazioni armate e politiche che
+si oppongono a Israele.
+</p>
+
+<h3>Hezbollah</h3>
+
+<p>
+Hezbollah è un movimento politico e militare libanese fortemente sostenuto
+dall'Iran. È diventato il principale avversario militare di Israele
+sul fronte settentrionale.
+</p>
+
+<h3>Houthi</h3>
+
+<p>
+Gli Houthi controllano una parte significativa dello Yemen.
+L'Iran fornisce loro armi, addestramento e assistenza tecnica.
+Dal 2023 hanno attaccato navi nel Mar Rosso e lanciato missili verso Israele.
+</p>
+
+<p>
+Il coinvolgimento degli Houthi ha trasformato la guerra di Gaza in una
+questione che riguarda anche il commercio internazionale attraverso
+Bab el-Mandeb e il Mar Rosso.
+</p>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- FINANZIAMENTI -->
+<!-- ===================================================== -->
+
+<section class="section" id="finanziamenti">
+
+<div class="section-label">05 · Denaro e potere</div>
+
+<h2>Chi finanzia Israele?</h2>
+
+<p>
+La potenza militare israeliana non dipende soltanto dal bilancio dello Stato.
+Il sistema comprende produzione nazionale, esportazioni militari,
+investimenti tecnologici e soprattutto una relazione finanziaria e militare
+privilegiata con gli Stati Uniti.
+</p>
+
+
+<div class="money">
+
+<div class="money-card">
+
+<div class="country">Stati Uniti</div>
+
+<h3>Il principale partner militare</h3>
+
+<p>
+Gli Stati Uniti hanno fornito per decenni assistenza militare a Israele
+e garantiscono un rapporto privilegiato nell'accesso a sistemi d'arma,
+tecnologie e cooperazione strategica.
+</p>
+
+</div>
+
+
+<div class="money-card">
+
+<div class="country">Europa</div>
+
+<h3>Commercio e tecnologia</h3>
+
+<p>
+I rapporti europei comprendono commercio, ricerca, tecnologia,
+investimenti e cooperazione industriale.
+La posizione politica dei singoli Stati europei non è però uniforme.
+</p>
+
+</div>
+
+
+<div class="money-card">
+
+<div class="country">Industria israeliana</div>
+
+<h3>Produzione nazionale</h3>
+
+<p>
+Aziende israeliane producono sistemi radar, missili, droni,
+difesa aerea, elettronica, cyber e tecnologie militari.
+</p>
+
+</div>
+
+
+<div class="money-card">
+
+<div class="country">Esportazioni</div>
+
+<h3>Un'industria globale</h3>
+
+<p>
+Israele è anche un importante esportatore di tecnologia militare.
+Le sue aziende vendono sistemi e servizi di difesa a numerosi Paesi.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="box gold">
+
+<div class="box-title">Una distinzione fondamentale</div>
+
+<p>
+<strong>Finanziare Israele</strong>, acquistare prodotti israeliani,
+fornire armi, condividere intelligence e sostenere diplomaticamente Israele
+sono forme differenti di sostegno.
+</p>
+
+<p>
+Nel dossier vengono quindi mantenute separate per evitare di trasformare
+rapporti diversi in un'unica categoria.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- INDUSTRIA -->
+<!-- ===================================================== -->
+
+<section class="section" id="industria">
+
+<div class="section-label">06 · Industria militare</div>
+
+<h2>Israele come potenza tecnologica e militare</h2>
+
+<p>
+La forza israeliana non deriva soltanto dalle dimensioni dell'esercito.
+Israele ha sviluppato un complesso militare-industriale molto avanzato.
+</p>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Difesa aerea</h3>
+
+<p>
+Iron Dome, David's Sling e Arrow costituiscono diversi livelli
+della rete israeliana di difesa contro razzi e missili.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Droni</h3>
+
+<p>
+Israele è uno dei principali sviluppatori ed esportatori mondiali
+di sistemi senza pilota.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Cyber</h3>
+
+<p>
+Il settore israeliano della sicurezza informatica è strettamente collegato
+alla ricerca militare e all'intelligence.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Intelligence</h3>
+
+<p>
+Le capacità tecnologiche e d'intelligence permettono a Israele
+di individuare e colpire obiettivi molto lontani dal proprio territorio.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- IRAN -->
+<!-- ===================================================== -->
+
+<section class="section" id="iran">
+
+<div class="section-label">07 · Iran</div>
+
+<h2>La guerra indiretta con l'Iran</h2>
+
+<p>
+Per decenni Israele e Iran hanno evitato una guerra totale diretta,
+combattendo soprattutto attraverso alleati e operazioni clandestine.
+</p>
+
+<p>
+La strategia iraniana ha costruito una rete regionale che viene
+frequentemente definita "Asse della Resistenza".
+</p>
+
+
+<div class="box wine">
+
+<div class="box-title">La rete iraniana</div>
+
+<p>
+<strong>Iran → Hezbollah → Libano</strong>
+</p>
+
+<p>
+<strong>Iran → Houthi → Yemen / Mar Rosso</strong>
+</p>
+
+<p>
+<strong>Iran → milizie → Iraq e Siria</strong>
+</p>
+
+<p>
+<strong>Iran → sostegno a Hamas e Jihad islamica palestinese</strong>
+</p>
+
+</div>
+
+
+<p>
+Secondo il Council on Foreign Relations, l'Iran ha fornito per anni
+armi, addestramento e finanziamenti a diversi gruppi della regione.
+Gli Houthi, tuttavia, conservano una propria autonomia e non possono
+essere descritti semplicemente come un esercito iraniano.
+</p>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- SIONISMO -->
+<!-- ===================================================== -->
+
+<section class="section" id="sionismo">
+
+<div class="section-label">08 · Ideologia</div>
+
+<h2>Il sionismo</h2>
+
+<p>
+Il sionismo nasce alla fine del XIX secolo come movimento politico
+nazionale ebraico.
+Una delle sue figure fondamentali è Theodor Herzl.
+</p>
+
+<p>
+Il movimento nasce in un'Europa caratterizzata da antisemitismo,
+persecuzioni e violenza contro le comunità ebraiche.
+Per molti sionisti la creazione di uno Stato ebraico rappresentava
+una soluzione politica alla vulnerabilità degli ebrei europei.
+</p>
+
+
+<h3>Ma il sionismo non è una dottrina unica</h3>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Sionismo politico</h3>
+
+<p>
+Creazione e mantenimento di uno Stato nazionale ebraico.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Sionismo socialista</h3>
+
+<p>
+Storicamente legato ai kibbutz e alla costruzione collettiva
+della società israeliana.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Sionismo revisionista</h3>
+
+<p>
+Corrente associata a una concezione più ampia e assertiva
+del territorio e della sicurezza nazionale.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Sionismo religioso</h3>
+
+<p>
+Collega il progetto nazionale ebraico alla dimensione religiosa
+e alla relazione con la Terra d'Israele.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="box red">
+
+<div class="box-title">Il punto controverso</div>
+
+<p>
+Il dibattito sul sionismo diventa particolarmente controverso quando
+la rivendicazione di uno Stato ebraico viene collegata al controllo
+territoriale della Palestina storica.
+</p>
+
+<p>
+Per i sostenitori del sionismo, la sicurezza e l'autodeterminazione
+ebraica richiedono uno Stato forte.
+Per i suoi critici, il progetto storico sionista ha prodotto
+espropriazione, espulsione e subordinazione della popolazione palestinese.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- GRANDE ISRAELE -->
+<!-- ===================================================== -->
+
+<section class="section" id="grande-israele">
+
+<div class="section-label">09 · Territorio e ideologia</div>
+
+<h2>La "Grande Israele"</h2>
+
+<p>
+L'espressione "Grande Israele" viene utilizzata per descrivere diverse
+concezioni territoriali che vanno oltre gli attuali confini internazionalmente
+riconosciuti di Israele.
+</p>
+
+<p>
+Non esiste però un unico documento che rappresenti automaticamente
+la politica ufficiale di tutti i governi israeliani.
+Il termine viene utilizzato soprattutto nel dibattito politico e ideologico.
+</p>
+
+
+<h3>Da dove nasce?</h3>
+
+<p>
+Le concezioni più estese della Terra d'Israele sono legate soprattutto
+a correnti del sionismo revisionista e, successivamente, al sionismo
+religioso e al movimento degli insediamenti.
+</p>
+
+
+<h3>Perché è importante oggi?</h3>
+
+<p>
+Perché una parte della destra israeliana sostiene l'espansione degli
+insediamenti in Cisgiordania e alcuni esponenti politici hanno sostenuto
+forme di annessione o di controllo permanente del territorio.
+</p>
+
+<p>
+Nel 2026 la questione degli insediamenti continua a essere uno dei principali
+punti di frizione tra Israele, palestinesi e comunità internazionale.
+</p>
+
+
+<div class="warning">
+
+<strong>Attenzione alla distinzione:</strong>
+
+<p>
+Non è corretto trasformare la teoria della "Grande Israele" in una prova
+automatica dell'esistenza di un piano ufficiale per conquistare tutti
+i territori circostanti.
+
+È invece documentabile l'esistenza di correnti politiche e religiose
+israeliane favorevoli a una maggiore espansione territoriale e all'annessione
+di parti della Cisgiordania.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- IL PROGETTO -->
+<!-- ===================================================== -->
+
+<section class="section" id="progetto">
+
+<div class="section-label">10 · Interpretazione geopolitica</div>
+
+<h2>Qual è il progetto strategico?</h2>
+
+<p>
+Non esiste un singolo "progetto israeliano" condiviso da tutti gli israeliani,
+da tutti i governi o da tutti i partiti.
+Esistono però alcuni obiettivi strategici ricorrenti.
+</p>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>1. Sicurezza</h3>
+
+<p>
+Impedire che organizzazioni armate o Stati ostili possano costruire
+una capacità militare capace di minacciare il territorio israeliano.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>2. Superiorità militare</h3>
+
+<p>
+Mantenere una superiorità tecnologica e militare rispetto agli avversari
+regionali.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>3. Controllo territoriale</h3>
+
+<p>
+Garantire il controllo di aree considerate strategicamente o storicamente
+importanti da Israele, soprattutto Gerusalemme e, per alcune correnti,
+parti della Cisgiordania.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>4. Contenimento dell'Iran</h3>
+
+<p>
+Impedire all'Iran di costruire una rete militare stabile attorno a Israele
+e di sviluppare capacità nucleari e missilistiche considerate una minaccia.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>5. Alleanza con Washington</h3>
+
+<p>
+Mantenere il rapporto strategico con gli Stati Uniti come principale
+garanzia internazionale di sicurezza.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>6. Normalizzazione regionale</h3>
+
+<p>
+Ampliare i rapporti diplomatici ed economici con gli Stati arabi,
+riducendo l'isolamento regionale di Israele.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="conclusion">
+
+<div class="label">Il nodo geopolitico</div>
+
+<h2>Da conflitto locale a sistema regionale</h2>
+
+<p>
+La questione palestinese è diventata il centro di un sistema molto più ampio.
+</p>
+
+<p>
+Israele considera la propria sicurezza inseparabile dal contenimento
+di Iran, Hezbollah, Hamas e delle altre organizzazioni armate della regione.
+</p>
+
+<p>
+I suoi avversari considerano invece la presenza militare israeliana,
+l'occupazione dei territori palestinesi e il sostegno occidentale a Israele
+come parte di un sistema di potere che impedisce la nascita di uno Stato
+palestinese pienamente sovrano.
+</p>
+
+<p>
+<strong>
+Il conflitto contemporaneo non può quindi essere letto soltanto attraverso
+Gaza: bisogna guardare contemporaneamente a Palestina, Israele, Libano,
+Siria, Iran, Iraq, Yemen, Stati Uniti e alle dinamiche energetiche e
+commerciali della regione.
+</strong>
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- CHI FINANZIA CHI -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+<div class="section-label">11 · La rete finanziaria</div>
+
+<h2>Chi finanzia chi?</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Attore</th>
+<th>Chi sostiene</th>
+<th>Forma di sostegno</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td><strong>Stati Uniti</strong></td>
+
+<td>Israele</td>
+
+<td>
+Assistenza militare, armi, tecnologia, cooperazione strategica
+e sostegno diplomatico.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td><strong>Iran</strong></td>
+
+<td>
+Hezbollah, Hamas, Jihad islamica, Houthi e milizie regionali
+</td>
+
+<td>
+Finanziamenti, armi, addestramento, intelligence e tecnologia,
+con livelli differenti a seconda del gruppo.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td><strong>Qatar</strong></td>
+
+<td>Gaza / Hamas</td>
+
+<td>
+Assistenza finanziaria e umanitaria e ruolo diplomatico.
+Il Qatar ha inoltre ospitato l'ufficio politico di Hamas.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td><strong>Turchia</strong></td>
+
+<td>Hamas</td>
+
+<td>
+Sostegno politico e relazioni con la leadership del movimento.
+Le accuse relative al finanziamento di attività terroristiche
+sono contestate da Ankara.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td><strong>Paesi arabi</strong></td>
+
+<td>Palestinesi</td>
+
+<td>
+Aiuti umanitari, ricostruzione e sostegno diplomatico.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td><strong>Israele</strong></td>
+
+<td>Autorità Palestinese</td>
+
+<td>
+Non si tratta di un semplice finanziamento.
+Israele raccoglie per conto dell'Autorità Palestinese parte delle
+entrate doganali e fiscali palestinesi e successivamente le trasferisce,
+con periodiche sospensioni o trattenute.
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<div class="box gold">
+
+<div class="box-title">Una distinzione necessaria</div>
+
+<p>
+Il sistema regionale non è composto da due blocchi perfettamente simmetrici.
+Gli Stati Uniti sono un alleato statale di Israele; l'Iran sostiene invece
+una rete di organizzazioni armate e partner regionali con gradi diversi
+di autonomia.
+</p>
+
+<p>
+Allo stesso modo, gli aiuti umanitari destinati alla popolazione palestinese
+non devono essere automaticamente classificati come finanziamento di Hamas.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- CONCLUSION -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+<div class="section-label">12 · Conclusione</div>
+
+<h2>La domanda che resta</h2>
+
+<p>
+La domanda non è soltanto perché Israele combatte.
+È capire quale combinazione di sicurezza, territorio, ideologia,
+alleanze internazionali e interessi geopolitici abbia prodotto
+l'attuale sistema regionale.
+</p>
+
+<p>
+Israele combatte contro Hamas a Gaza, contro Hezbollah in Libano,
+contro gruppi sostenuti dall'Iran in diversi Paesi e contro l'Iran stesso.
+Contemporaneamente mantiene una relazione strategica privilegiata
+con gli Stati Uniti e rapporti economici e diplomatici con numerosi
+Paesi occidentali e arabi.
+</p>
+
+<p>
+Per una parte della società israeliana questo sistema è necessario
+per garantire la sopravvivenza dello Stato.
+Per i suoi critici rappresenta invece un modello di potere regionale
+basato sulla superiorità militare, sull'occupazione e sul controllo
+territoriale.
+</p>
+
+<p>
+<strong>
+Capire la differenza tra queste due interpretazioni — e verificare
+quali elementi siano fatti documentati e quali siano interpretazioni
+politiche — è il punto centrale di questo dossier.
+</strong>
+</p>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- FONTI -->
+<!-- ===================================================== -->
+
+<section class="sources" id="fonti">
+
+<h3>Fonti principali e documentazione</h3>
+
+<ul>
+
+<li>
+Council on Foreign Relations — documentazione su Iran, Hezbollah,
+Hamas, Houthi e conflitti regionali.
+</li>
+
+<li>
+Nazioni Unite — documentazione storica sui territori palestinesi
+occupati e sul conflitto israelo-palestinese.
+</li>
+
+<li>
+Reuters — cronaca e verifica degli sviluppi militari, diplomatici
+e politici contemporanei.
+</li>
+
+<li>
+Governo israeliano / Ministero degli Esteri israeliano —
+posizioni ufficiali di Israele su sicurezza, Gaza e rapporti regionali.
+</li>
+
+<li>
+Congressional Research Service / Congresso degli Stati Uniti —
+documentazione sull'assistenza statunitense a Israele.
+</li>
+
+<li>
+OCHA — United Nations Office for the Coordination of Humanitarian Affairs,
+Occupied Palestinian Territory.
+</li>
+
+<li>
+ICJ — International Court of Justice — documentazione sui procedimenti
+relativi a Israele e alla Convenzione sul genocidio.
+</li>
+
+</ul>
+
+</section>
+
+
+</div>
+
+
+
+<footer>
+
+<a href="index.html" class="footer-back" style="margin-right:20px;">
+&larr; Tutti i dossier "Guerre"
+</a>
+
+<a href="../index.html" class="footer-back">
+&larr; Torna a Il Contribuente
+</a>
+
+<div class="footer-legal">
+
+<p>
+Pubblicazione indipendente e personale, priva di finalità commerciali.
+Non sono presenti pubblicità, abbonamenti, sponsorizzazioni o finanziamenti
+di alcun tipo, pubblici o privati.
+</p>
+
+<p>
+Il dossier distingue tra fatti documentati, dichiarazioni ufficiali,
+ricostruzioni storiche e interpretazioni politiche.
+</p>
+
+<p>
+Le informazioni relative ai conflitti in corso possono cambiare rapidamente.
+Le cifre e gli sviluppi militari devono essere verificati attraverso
+gli ultimi aggiornamenti delle fonti originali.
+</p>
+
+<p>
+Eventuali richieste di rettifica o rimozione di contenuti possono essere
+inoltrate a
+<a href="mailto:redazione.ilcontribuente@protonmail.com">
+redazione.ilcontribuente@protonmail.com
+</a>.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
+```
