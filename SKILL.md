@@ -993,18 +993,11 @@ Non mescolare quotazioni riferite a momenti diversi senza indicarlo.
 
 # 35. AGENDA — COSA SUCCEDE OGGI
 
-Aggiornare quotidianamente con:
+Regola permanente (Mario, 3/9/2026): questa sezione contiene SOLO ED ESCLUSIVAMENTE notizie/eventi della data di pubblicazione della rassegna stessa, a livello mondiale — non scadenze, appuntamenti o decisioni previste per giorni successivi, e non eventi già passati.
 
-- eventi politici;
-- scadenze;
-- decisioni attese;
-- dati economici;
-- appuntamenti internazionali;
-- eventi tecnologici rilevanti;
-- scadenze normative;
-- altri appuntamenti realmente previsti.
+Selezionare esattamente 5 voci: le 5 cose più importanti che accadono nel mondo in quella giornata specifica (possono includere, quando pertinenti quel giorno: eventi politici, decisioni prese o annunciate, dati economici pubblicati, appuntamenti internazionali, eventi tecnologici, scadenze normative che scadono proprio oggi). Non è un calendario di cose future: se un fatto non sta accadendo OGGI, non va in agenda, anche se è rilevante e imminente (va eventualmente nel corpo dell'articolo della sezione pertinente, non qui).
 
-Non inserire eventi già passati come se fossero futuri.
+Non forzare a 5 se davvero non ci sono 5 fatti mondiali abbastanza rilevanti nella giornata: meglio 3-4 voci solide che riempire con notizie minori (stessa logica anti-filler della sezione 10).
 
 ---
 
@@ -1078,6 +1071,14 @@ Prima della pubblicazione verificare:
 - traduzioni corrette;
 - nomi propri e numeri verificati.
 
+### Archivio
+- archivio.html aggiornato con l'edizione del giorno precedente (mai con quella di oggi, che vive su index.html finché non viene sostituita domani);
+- nessuna voce duplicata in archivio.html.
+
+### Agenda
+- "Cosa succede oggi" contiene solo fatti della data di pubblicazione odierna, a livello mondiale, non scadenze future né eventi passati;
+- al massimo 5 voci, senza filler per raggiungere quel numero.
+
 ---
 
 # 39. OBIETTIVO FINALE
@@ -1150,3 +1151,4 @@ Le 4-5 frasi iniziali devono essere sufficienti per capire subito cosa è succes
 I pulsanti devono funzionare tramite JavaScript senza cambiare pagina. Quando l'articolo è aperto, **Continua a leggere** non deve più essere visibile e deve comparire **Mostra meno**. Quando viene richiuso, avviene il contrario.
 
 La struttura HTML/CSS/JS deve essere uniforme in tutte le sezioni, così l'utente impara una sola interazione e la ritrova in tutto il giornale.
+
