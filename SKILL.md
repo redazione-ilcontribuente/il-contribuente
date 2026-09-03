@@ -1,10 +1,7 @@
 ---
 name: rassegna-stampa-quotidiana
-
-Rassegna stampa quotidiana — 5:00
-
+title: "Rassegna stampa quotidiana — 5:00"
 description: "Rassegna stampa giornaliera che confronta fonti giornalistiche italiane e internazionali, traduce e sintetizza le notizie in italiano e mette in evidenza differenze, convergenze e prospettive delle diverse testate. La linea editoriale di Il Contribuente è il confronto tra fonti, non l'espressione di una posizione politica propria."
-
 ---
 
 # Rassegna stampa quotidiana — Il Contribuente
