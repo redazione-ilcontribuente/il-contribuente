@@ -259,12 +259,22 @@ Se Mario fornisce una fotografia per un articolo:
 - non applicare scrim o gradiente;
 - non modificarne arbitrariamente l'aspetto.
 
-Se Mario non fornisce una fotografia:
+Regola vincolante (Mario, 4/9/2026): OGNI articolo di OGNI sezione a formato articoli (incluse le voci del Confronto) deve avere una propria immagine. Non è ammesso lasciare un articolo senza immagine, salvo il caso limite in cui l'intera cartella tematica del giorno sia realmente vuota o priva di scatti anche solo accettabili (mai per pigrizia o per "risparmiare" ricerca).
 
-- lasciare l'articolo senza immagine;
+Come procedere quando la cartella tematica ha meno foto delle notizie della sezione (es. 2 foto per 4 articoli):
+
+- usare prima tutte le foto non ancora usate nell'edizione del giorno in quella cartella;
+- se la cartella tematica non basta, guardare in cartelle affini per argomento già presenti nel repository (es. `salute/` in aggiunta a `benessere/`, `guerra/` e `confronto/` per la sezione Confronto) prima di riutilizzare uno scatto già assegnato oggi;
+- solo come ultima risorsa, riutilizzare nella stessa edizione una foto già assegnata a un altro articolo della STESSA sezione (mai prendere in prestito da una sezione tematicamente slegata solo per riempire): è preferibile a lasciare la card senza immagine.
+
+Variazione nel tempo (Mario, 4/9/2026): la selezione delle foto all'interno di una cartella non deve ripetere sempre le stesse preferite edizione dopo edizione. A parità di idoneità, scegliere in modo variato/casuale tra le foto disponibili della cartella, così che nell'arco di più giorni vengano effettivamente usati scatti diversi e non un sottoinsieme fisso.
+
+Resta fermo quanto segue:
+
 - NON usare SVG generate da Claude;
 - NON usare immagini segnaposto;
-- NON inventare una fotografia.
+- NON inventare o generare una fotografia;
+- se DAVVERO non esiste alcuna foto reale idonea in tutto il repository per quel tema, solo allora l'articolo resta senza immagine.
 
 ## Hero di sezione
 
@@ -513,14 +523,15 @@ Deve essere dedicata soprattutto a:
 - temi politici controversi;
 - grandi controversie nelle quali fonti diverse raccontano lo stesso fatto in maniera significativamente differente.
 
-Il formato può includere:
+Regola vincolante (Mario, 4/9/2026): la sezione Confronto deve avere OBBLIGATORIAMENTE tre voci, non due. Il formato è sempre:
 
-- "Prospettiva A";
-- "Prospettiva B";
-- eventuale "Terza voce";
-- "Cosa sappiamo".
+- "Prospettiva A" (duel-side left);
+- "Prospettiva B" (duel-side right);
+- "Terza voce" (duel-side third) — indipendente, non allineata né a A né a B: una fonte neutrale, un'analisi critica, un dato verificabile di terze parti (agenzia neutrale, autorità/organizzazione internazionale, esperto di settore). Non è opzionale.
 
-La sezione non deve essere costruita per creare artificialmente un equilibrio 50/50.
+Markup di riferimento (già presente e testato in template.html/index.html): due `.duel-side` (left/right) dentro il primo `.duel-grid`, poi un secondo `.duel-grid` con `style="grid-template-columns:1fr; border-top:1px solid var(--rule);"` contenente il solo `.duel-side.third` a piena larghezza. Non modificare il CSS: questo secondo `.duel-grid` con lo style inline è il modo corretto, già previsto dal template, per ottenere la terza voce senza toccare la regola `.duel-grid{grid-template-columns:1fr 1fr;}`.
+
+La sezione non deve essere costruita per creare artificialmente un equilibrio 50/50 — la terza voce serve ad aggiungere un elemento verificabile o un'angolazione diversa, non a fare da ago della bilancia forzato.
 
 Se una versione è supportata da prove molto più solide, va detto.
 
