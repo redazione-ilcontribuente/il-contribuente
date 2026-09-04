@@ -259,22 +259,26 @@ Se Mario fornisce una fotografia per un articolo:
 - non applicare scrim o gradiente;
 - non modificarne arbitrariamente l'aspetto.
 
-Regola vincolante (Mario, 4/9/2026): OGNI articolo di OGNI sezione a formato articoli (incluse le voci del Confronto) deve avere una propria immagine. Non è ammesso lasciare un articolo senza immagine, salvo il caso limite in cui l'intera cartella tematica del giorno sia realmente vuota o priva di scatti anche solo accettabili (mai per pigrizia o per "risparmiare" ricerca).
+Regola vincolante (Mario, 4/9/2026): OGNI articolo di OGNI sezione a formato articoli (incluse le voci del Confronto) deve avere, quando possibile, una propria immagine.
 
-Come procedere quando la cartella tematica ha meno foto delle notizie della sezione (es. 2 foto per 4 articoli):
+Regola vincolante e PRIORITARIA (Mario, 4/9/2026, ribadita la sera stessa): NON RIPETERE MAI LA STESSA IMMAGINE NELLA STESSA EDIZIONE. Questo divieto è assoluto e viene prima della regola "ogni articolo deve avere un'immagine": se garantire un'immagine a un articolo significherebbe riusare una foto già assegnata a un altro articolo della stessa edizione, quell'articolo resta SENZA immagine. Meglio una card senza foto che due card con la stessa foto nello stesso giorno.
+
+Come procedere quando la cartella tematica ha meno foto non ancora usate oggi delle notizie della sezione (es. 2 foto disponibili per 4 articoli):
 
 - usare prima tutte le foto non ancora usate nell'edizione del giorno in quella cartella;
-- se la cartella tematica non basta, guardare in cartelle affini per argomento già presenti nel repository (es. `salute/` in aggiunta a `benessere/`, `guerra/` e `confronto/` per la sezione Confronto) prima di riutilizzare uno scatto già assegnato oggi;
-- solo come ultima risorsa, riutilizzare nella stessa edizione una foto già assegnata a un altro articolo della STESSA sezione (mai prendere in prestito da una sezione tematicamente slegata solo per riempire): è preferibile a lasciare la card senza immagine.
+- se non bastano, guardare in cartelle affini per argomento già presenti nel repository (es. `salute/` in aggiunta a `benessere/`, `guerra/` e `confronto/` per la sezione Confronto) per trovare scatti non ancora usati oggi;
+- se anche le cartelle affini sono esaurite, gli articoli restanti della sezione restano semplicemente SENZA immagine. NON riutilizzare in nessun caso, per nessun motivo, una foto già assegnata a un altro articolo della stessa edizione, nemmeno all'interno della stessa sezione.
 
 Variazione nel tempo (Mario, 4/9/2026): la selezione delle foto all'interno di una cartella non deve ripetere sempre le stesse preferite edizione dopo edizione. A parità di idoneità, scegliere in modo variato/casuale tra le foto disponibili della cartella, così che nell'arco di più giorni vengano effettivamente usati scatti diversi e non un sottoinsieme fisso.
+
+Controllo obbligatorio prima di pubblicare: contare i file immagine effettivamente usati nell'edizione (i valori dentro `src="immagini/..."`) e verificare che non ci siano duplicati. Se un doppione emerge, rimuovere l'immagine dal secondo articolo (non sostituirla con un'altra presa da una sezione slegata solo per riempire).
 
 Resta fermo quanto segue:
 
 - NON usare SVG generate da Claude;
 - NON usare immagini segnaposto;
 - NON inventare o generare una fotografia;
-- se DAVVERO non esiste alcuna foto reale idonea in tutto il repository per quel tema, solo allora l'articolo resta senza immagine.
+- meglio nessuna immagine che un'immagine ripetuta o presa da una cartella tematicamente slegata.
 
 ## Hero di sezione
 
@@ -1070,6 +1074,8 @@ Prima della pubblicazione verificare:
 - numeri e citazioni verificati.
 
 ### Immagini
+- nessuna immagine ripetuta nella stessa edizione (controllo obbligatorio, vedi sezione 8) — questo vale prima di tutto il resto;
+- ogni articolo ha, quando possibile senza ripetere una foto già usata oggi, una propria immagine;
 - soltanto immagini fornite da Mario;
 - nessuna immagine generata autonomamente;
 - nessun testo sopra le fotografie.
