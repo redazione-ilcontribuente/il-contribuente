@@ -369,9 +369,7 @@ MAI:
 
 Ogni notizia deve essere realmente attuale.
 
-Regola standard:
-
-- pubblicazione della fonte originale entro le ultime 24-36 ore rispetto al momento della costruzione della rassegna.
+Regola vincolante (Mario, 4/9/2026, sostituisce la precedente finestra 24-36 ore): pubblicazione della fonte originale entro le ultime 12 ore, MASSIMO 24 ore, rispetto al momento della costruzione della rassegna. Non 24-36: 24 ore è il tetto assoluto, non l'obiettivo. Verificare data E ora di pubblicazione di ogni fonte, non solo il giorno.
 
 La regola vale per tutte le sezioni di attualità:
 
@@ -894,7 +892,7 @@ Ogni dato deve riportare:
 
 Non usare un dato vecchio facendolo sembrare corrente.
 
-I dati periodici possono essere più vecchi della finestra 24-36 ore se sono gli ultimi dati ufficiali disponibili, purché siano chiaramente datati.
+I dati periodici possono essere più vecchi della finestra 12-24 ore se sono gli ultimi dati ufficiali disponibili, purché siano chiaramente datati.
 
 ---
 
@@ -965,7 +963,7 @@ Il lettore non deve vedere il processo interno di costruzione della rassegna.
 NON scrivere:
 
 - "abbiamo trovato solo due notizie";
-- "rispetta la finestra di 24-36 ore";
+- "rispetta la finestra di 12-24 ore";
 - "abbiamo fatto tre ricerche";
 - "secondo le regole di Mario";
 - "non abbiamo trovato altro";
