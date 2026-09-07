@@ -259,7 +259,7 @@ Se Mario fornisce una fotografia per un articolo:
 - non applicare scrim o gradiente;
 - non modificarne arbitrariamente l'aspetto.
 
-Regola vincolante (Mario, 4/9/2026): OGNI articolo di OGNI sezione a formato articoli (incluse le voci del Confronto) deve avere, quando possibile, una propria immagine.
+Regola vincolante (Mario, 4/9/2026): OGNI articolo di OGNI sezione a formato articoli (incluse le voci del Confronto) deve avere, una propria immagine.
 
 Regola vincolante e PRIORITARIA (Mario, 4/9/2026, ribadita la sera stessa): NON RIPETERE MAI LA STESSA IMMAGINE NELLA STESSA EDIZIONE. Questo divieto è assoluto e viene prima della regola "ogni articolo deve avere un'immagine": se garantire un'immagine a un articolo significherebbe riusare una foto già assegnata a un altro articolo della stessa edizione, quell'articolo resta SENZA immagine. Meglio una card senza foto che due card con la stessa foto nello stesso giorno.
 
