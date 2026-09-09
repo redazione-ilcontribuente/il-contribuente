@@ -407,6 +407,51 @@
     .toc-link{ font-size:15px; }
     .toc-link:not(:first-child){ margin-left:13px; padding-left:13px; }
   }
+  /* ===== Mini card delle sezioni-dashboard (Sicurezza Pubblica, Dati Immigrazione) —
+     fuori dal riquadro dell'indice, subito sotto, con bordo proprio: su richiesta
+     di Mario del 9/9/2026, per distinguerle visivamente dalle voci normali
+     dell'indice. Sicurezza Pubblica sempre prima di Dati Immigrazione. ===== */
+  .toc-dashboards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:12px 0 0 0;
+  }
+  .toc-dashboard-card{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--card);
+    border:1.5px solid var(--navy);
+    border-radius:8px;
+    padding:12px 20px;
+    box-shadow: var(--shadow-sm);
+    text-decoration:none;
+    transition: box-shadow .18s ease, transform .18s ease;
+  }
+  .toc-dashboard-card:hover{ box-shadow: var(--shadow-md); transform:translateY(-1px); }
+  .toc-dashboard-tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#fff;
+    background:var(--navy);
+    padding:3px 8px;
+    border-radius:4px;
+    white-space:nowrap;
+  }
+  .toc-dashboard-label{
+    font-family:'Fraunces',serif;
+    font-weight:800;
+    font-size:16px;
+    color:var(--ink);
+  }
+  @media (max-width:640px){
+    .toc-dashboards{ gap:10px; }
+    .toc-dashboard-card{ padding:9px 14px; }
+    .toc-dashboard-label{ font-size:14.5px; }
+  }
   @media (max-width:640px){
     .market-bar-inner{
       display:grid;
@@ -530,6 +575,8 @@
     color:#fff;
     text-transform:uppercase;
     box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.25);
+    white-space:nowrap;
+    flex-shrink:0;
   }
   .tag-italia{background:linear-gradient(160deg,#2c5c8a,var(--navy-deep));}
   .tag-europa{background:linear-gradient(160deg,#3c6e5a,var(--green-deep));}
@@ -541,6 +588,7 @@
   .tag-confronto{background:linear-gradient(160deg,#4a4f57,#22262b);}
   .tag-benessere{background:linear-gradient(160deg,#3d8a7a,#1d4a41);}
   .tag-palestina{background:linear-gradient(160deg,#4a4f57,#22262b);}
+  .tag-sicurezza{background:linear-gradient(160deg,#7c1d16,#4a0f0a);}
   .section-title{
     font-family:'Fraunces',serif;
     font-weight:700;
@@ -1038,9 +1086,9 @@
     .stat-value{ font-size:clamp(17px, 5.6vw, 22px); }
     .stat-delta{ font-size:10.5px; }
     .section{ margin-bottom:36px; }
-    .section-head{ margin-bottom:16px; }
+    .section-head{ margin-bottom:16px; flex-wrap:wrap; row-gap:8px; }
     .section-tag{ font-size:10px; padding:4px 9px; }
-    .section-title{ font-size:20px; }
+    .section-title{ font-size:20px; flex-basis:100%; }
     .section-note{ font-size:13px; line-height:1.5; }
     .article{ padding:16px 16px; }
     .article h3{ font-size:16.5px; line-height:1.3; margin-bottom:10px; }
@@ -1515,7 +1563,7 @@
     <a class="badge" href="https://www.venetotoday.it" target="_blank" rel="noopener noreferrer">VenetoToday</a>
   </div>
   <button type="button" id="badgesToggleBtn" class="badges-toggle-btn" style="display:none;">Vedi altri</button>
-  <a href="../archivio.html" class="back-link">Archivio edizioni &rarr;</a>
+  <a href="archivio.html" class="back-link">Archivio edizioni &rarr;</a>
 </div>
 <div class="ticker-wrap">
   <div class="ticker">
@@ -1582,31 +1630,31 @@
   <div class="side-col">
     <div class="sidebar-block">
       <div class="sidebar-kicker">Approfondimenti fissi</div>
-      <a href="../SuperPotenze/superPower.html" class="sidebar-item">
+      <a href="SuperPotenze/superPower.html" class="sidebar-item">
         <span class="sidebar-item-title">Geopolitica</span>
         <span class="sidebar-item-desc">Le tre superpotenze: guerre, alleanze e potere nel mondo</span>
       </a>
-      <a href="../conflittiMondo/conflitto.html" class="sidebar-item">
+      <a href="conflittiMondo/conflitto.html" class="sidebar-item">
         <span class="sidebar-item-title">Conflitti nel mondo</span>
         <span class="sidebar-item-desc">La mappa interattiva di tutte le guerre attive oggi sul pianeta.</span>
       </a>
-      <a href="../immigrazioneEuropa/immigrazione.html" class="sidebar-item">
+      <a href="immigrazioneEuropa/immigrazione.html" class="sidebar-item">
         <span class="sidebar-item-title">Immigrazione in Europa</span>
         <span class="sidebar-item-desc">Da dove vengono davvero i migranti irregolari: cause politiche, accordi e cause socioeconomiche.</span>
       </a>
-      <a href="../guerre/index.html" class="sidebar-item">
+      <a href="guerre/index.html" class="sidebar-item">
         <span class="sidebar-item-title">Guerre</span>
         <span class="sidebar-item-desc">Palestina-Israele, Russia-Ucraina e altri conflitti, dalle origini a oggi.</span>
       </a>
-      <a href="../dazi/dazi1.html" class="sidebar-item">
+      <a href="dazi/dazi1.html" class="sidebar-item">
         <span class="sidebar-item-title">Dazi e guerre commerciali</span>
         <span class="sidebar-item-desc">Dal "Liberation Day" 2025 alla sentenza della Corte Suprema, fino al nuovo fronte con il Canada.</span>
       </a>
-      <a href="../sanzioni/sanzioni1.html" class="sidebar-item">
+      <a href="sanzioni/sanzioni1.html" class="sidebar-item">
         <span class="sidebar-item-title">Sanzioni nel mondo</span>
         <span class="sidebar-item-desc">Iran, Russia, Corea del Nord: come funzionano i tre principali regimi sanzionatori attivi.</span>
       </a>
-      <a href="../glossario/glossario.html" class="sidebar-item">
+      <a href="glossario/glossario.html" class="sidebar-item">
         <span class="sidebar-item-title">Cosa significa</span>
         <span class="sidebar-item-desc">Il piccolo glossario dei termini che tornano ogni giorno nella rassegna.</span>
       </a>
@@ -1616,7 +1664,7 @@
       <div class="sidebar-kicker">Termine del giorno</div>
       <div class="sidebar-term-name">Endotipo</div>
       <div class="sidebar-term-def">In medicina di precisione, un sottogruppo di pazienti definito da un meccanismo biologico condiviso (ad esempio un particolare profilo immunitario o metabolico) piuttosto che dai soli sintomi clinici: individuarlo permette, in teoria, di stimare il rischio o la risposta a una terapia in modo più mirato rispetto a trattare una malattia come un blocco unico.</div>
-      <a href="../glossario/glossario.html" class="sidebar-mini-link">Tutti i termini &rarr;</a>
+      <a href="glossario/glossario.html" class="sidebar-mini-link">Tutti i termini &rarr;</a>
     </div>
 
     <div class="sidebar-block">
@@ -1645,8 +1693,11 @@
         <a href="#tecnologia" class="toc-link">Tecnologia</a>
         <a href="#ia" class="toc-link">Intelligenza Artificiale</a>
         <a href="#immigrazione-italia" class="toc-link">Immigrazione Italia</a>
-        <a href="#dati-immigrazione" class="toc-link">Dati Immigrazione</a>
       </div>
+    </div>
+    <div class="toc-dashboards">
+      <a href="#sicurezza-pubblica" class="toc-dashboard-card"><span class="toc-dashboard-tag">Dashboard</span><span class="toc-dashboard-label">Sicurezza Pubblica</span></a>
+      <a href="#dati-immigrazione" class="toc-dashboard-card"><span class="toc-dashboard-tag">Dashboard</span><span class="toc-dashboard-label">Dati Immigrazione</span></a>
     </div>
   </div>
 
@@ -2327,6 +2378,194 @@
       <div class="bar-row"><div class="bar-label">Volontari assistiti</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:17%" data-tooltip="Volontari assistiti: 837"></div></div><div class="bar-value">837</div></div>
       <div class="side-note">Il totale di 5.810 rimpatri nei primi otto mesi del 2026 è già superiore all'intero 2024 (5.704) e si avvicina al totale dell'intero 2025 (6.772): il confronto è tra un dato parziale (2026) e due anni completi, quindi non ancora conclusivo sul ritmo annuo finale.</div>
       <div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Ministero dell'Interno; Il Sud24 (dato al 31/8-2/9/2026).</div>
+    </div>
+  </div>
+
+  <div class="section" id="sicurezza-pubblica">
+    <div class="section-head">
+      <span class="section-tag tag-sicurezza">Sicurezza Pubblica</span>
+      <h2 class="section-title">Sicurezza pubblica, i numeri</h2>
+    </div>
+    <div class="section-note">Ogni giorno: attività delle forze dell'ordine, reati denunciati in Italia e come risponde la giustizia — misure cautelari, arresti domiciliari e scarcerazioni. Dati aggiornati quotidianamente.</div>
+    <div class="section-note" style="margin-top:18px; font-weight:700; color:var(--ink);">1. Lavoro delle forze dell'ordine</div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">Interdittive antimafia</div>
+        <div class="kpi-value">499</div>
+        <div class="kpi-note">primo semestre 2026, +19,9% su H1 2025 (416) — Viminale</div>
+      </div>
+      <div class="kpi rimpatri">
+        <div class="kpi-label">Droga sequestrata</div>
+        <div class="kpi-value">25,2 t</div>
+        <div class="kpi-note">primo semestre 2026, -6,3% su H1 2025 (~26,9 t) — Viminale</div>
+      </div>
+      <div class="kpi arrivi">
+        <div class="kpi-label">Carenza di organico (Polizia + Carabinieri)</div>
+        <div class="kpi-value">oltre 23.000</div>
+        <div class="kpi-note">unità mancanti sul previsto per legge, dati dic. 2024/mar. 2025 — dettaglio nel grafico organico</div>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Presidio del territorio: controlli, denunce e arresti</div>
+      <div class="chart-period">dal 2023 (operazioni ad alto impatto) e dal 2024 ("zone rosse") al 30/6/2026 — Viminale</div>
+      <div class="bar-row"><div class="bar-label">Persone controllate, "zone rosse"</div><div class="bar-track"><div class="bar-fill asilo" style="width:100%" data-tooltip="2,3 milioni"></div></div><div class="bar-value">2,3 mln</div></div>
+      <div class="bar-row"><div class="bar-label">Persone controllate, operazioni alto impatto</div><div class="bar-track"><div class="bar-fill asilo" style="width:48%" data-tooltip="1,1 milioni"></div></div><div class="bar-value">1,1 mln</div></div>
+      <div class="bar-row"><div class="bar-label">Allontanamenti da "zone rosse"</div><div class="bar-track"><div class="bar-fill asilo" style="width:6%" data-tooltip="12.876"></div></div><div class="bar-value">12.876</div></div>
+      <div class="bar-row"><div class="bar-label">Denunce, operazioni alto impatto</div><div class="bar-track"><div class="bar-fill asilo" style="width:6%" data-tooltip="circa 14.000"></div></div><div class="bar-value">~14.000</div></div>
+      <div class="bar-row"><div class="bar-label">Arresti, operazioni alto impatto</div><div class="bar-track"><div class="bar-fill asilo" style="width:5%" data-tooltip="2.373"></div></div><div class="bar-value">2.373</div></div>
+      <div class="side-note">Il Viminale pubblica queste due misure solo come dato cumulato (non anno su anno): le "operazioni ad alto impatto" dal 2023, le "zone rosse" (aree dove è vietato l'accesso a persone con precedenti) dal 2024 in alcune città.</div>
+      <div class="dv-sources">Fonte: Ministero dell'Interno, Dossier Ferragosto 2026.</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Criminalità organizzata: primo semestre 2026 vs 2025</div>
+      <div class="chart-period">Gennaio-giugno 2026 su gennaio-giugno 2025 — Viminale</div>
+      <div class="bar-row"><div class="bar-label">Interdittive antimafia — H1 2025</div><div class="bar-track"><div class="bar-fill" style="width:83%; background:#c7bc9f" data-tooltip="416"></div></div><div class="bar-value">416</div></div>
+      <div class="bar-row"><div class="bar-label">Interdittive antimafia — H1 2026</div><div class="bar-track"><div class="bar-fill asilo" style="width:100%" data-tooltip="499, +19,9%"></div></div><div class="bar-value">499</div></div>
+      <div class="bar-row"><div class="bar-label">Informazioni antimafia — H1 2025</div><div class="bar-track"><div class="bar-fill" style="width:76%; background:#c7bc9f" data-tooltip="293"></div></div><div class="bar-value">293</div></div>
+      <div class="bar-row"><div class="bar-label">Informazioni antimafia — H1 2026</div><div class="bar-track"><div class="bar-fill asilo" style="width:100%" data-tooltip="387, +32,1%"></div></div><div class="bar-value">387</div></div>
+      <div class="bar-row"><div class="bar-label">Denunciati/arrestati droga — H1 2025</div><div class="bar-track"><div class="bar-fill" style="width:100%; background:#c7bc9f" data-tooltip="~13.327 (stima)"></div></div><div class="bar-value">~13.327</div></div>
+      <div class="bar-row"><div class="bar-label">Denunciati/arrestati droga — H1 2026</div><div class="bar-track"><div class="bar-fill asilo" style="width:89%" data-tooltip="11.914, -10,6%"></div></div><div class="bar-value">11.914</div></div>
+      <div class="bar-row"><div class="bar-label">Droga sequestrata in stazioni — H1 2025</div><div class="bar-track"><div class="bar-fill" style="width:36%; background:#c7bc9f" data-tooltip="6,14 t"></div></div><div class="bar-value">6,1 t</div></div>
+      <div class="bar-row"><div class="bar-label">Droga sequestrata in stazioni — H1 2026</div><div class="bar-track"><div class="bar-fill asilo" style="width:100%" data-tooltip="17,18 t, +179,9%"></div></div><div class="bar-value">17,2 t</div></div>
+      <div class="side-note">Barre chiare = 2025, barre blu = 2026 (stesso semestre a confronto). Scioglimenti di enti locali per infiltrazione mafiosa: 6 nel primo semestre 2026, contro 7 nello stesso periodo del 2025.</div>
+      <div class="dv-sources">Fonte: Ministero dell'Interno, Dossier Ferragosto 2026.</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Organico delle forze di polizia: previsto ed effettivo</div>
+      <div class="chart-period">Polizia di Stato 31/12/2024, Carabinieri marzo 2025, Guardia di Finanza 2022 — dati più recenti pubblicati per corpo</div>
+      <div class="bar-row"><div class="bar-label">Polizia di Stato: effettivo/previsto</div><div class="bar-track"><div class="bar-fill arrivi" style="width:89%" data-tooltip="92.687 su 103.730 previsti"></div></div><div class="bar-value">89,4%</div></div>
+      <div class="bar-row"><div class="bar-label">Carabinieri: effettivo/previsto</div><div class="bar-track"><div class="bar-fill arrivi" style="width:90%" data-tooltip="108.963 su 120.956 previsti"></div></div><div class="bar-value">90,1%</div></div>
+      <div class="side-note">Polizia di Stato: 92.687 effettivi su 103.730 previsti (31/12/2024), mancano 11.043 unità (-10,6%). Carabinieri: 108.963 su 120.956 previsti (marzo 2025), mancano 11.993 (-9,9%). Guardia di Finanza: 59.498 effettivi (2022), in calo dal 2018 (65.323); non pubblica un dato di organico previsto comparabile.</div>
+      <div class="dv-sources">Fonte: Sky TG24 su dati Polizia di Stato e Carabinieri; Il Fatto Quotidiano su dati Guardia di Finanza (2022).</div>
+    </div>
+
+    <div class="section-note" style="margin-top:10px; font-weight:700; color:var(--ink);">2. Quadro dei reati</div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">Reati denunciati, primo semestre</div>
+        <div class="kpi-value">1.068.240</div>
+        <div class="kpi-note">gennaio-giugno 2026, Viminale — Dossier Ferragosto 2026</div>
+      </div>
+      <div class="kpi rimpatri">
+        <div class="kpi-label">Variazione sullo stesso periodo 2025</div>
+        <div class="kpi-value">-10%</div>
+        <div class="kpi-note">H1 2026 (1.068.240) su H1 2025 (1.186.268)</div>
+      </div>
+      <div class="kpi arrivi">
+        <div class="kpi-label">Quota di stranieri tra gli arrestati</div>
+        <div class="kpi-value">34,7%</div>
+        <div class="kpi-note">2024, ultimo dato disponibile, Viminale/Sole 24 Ore — italiani: 65,3%</div>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Reati denunciati: primo semestre 2026 vs 2025</div>
+      <div class="chart-period">Gennaio-giugno, confronto 2026 su 2025 — Ministero dell'Interno</div>
+      <div class="bar-row"><div class="bar-label">Gennaio-giugno 2025</div><div class="bar-track"><div class="bar-fill" style="width:100%; background:#c7bc9f" data-tooltip="1.186.268"></div></div><div class="bar-value">1.186.268</div></div>
+      <div class="bar-row"><div class="bar-label">Gennaio-giugno 2026</div><div class="bar-track"><div class="bar-fill asilo" style="width:90%" data-tooltip="1.068.240 (-10%)"></div></div><div class="bar-value">1.068.240</div></div>
+      <div class="side-note">Il dato ufficiale Istat più recente su base annua intera resta il 2024: 2.399.347 reati, +2,5% sul 2023. Il confronto qui sopra è invece sul primo semestre, pubblicato dal Viminale ad agosto 2026 e quindi più aggiornato.</div>
+      <div class="dv-sources">Fonte: Ministero dell'Interno, Dossier Ferragosto 2026 (semestre); Istat/Viminale, Ufficio Centrale di Statistica (dato annuale 2024).</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Reati per tipologia: primo semestre 2026 vs 2025</div>
+      <div class="chart-period">Gennaio-giugno 2026 su gennaio-giugno 2025 — Viminale</div>
+      <div class="bar-row"><div class="bar-label">Furti — H1 2025</div><div class="bar-track"><div class="bar-fill" style="width:100%; background:#c7bc9f" data-tooltip="493.975"></div></div><div class="bar-value">493.975</div></div>
+      <div class="bar-row"><div class="bar-label">Furti — H1 2026</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:89%" data-tooltip="437.800, -11,4%"></div></div><div class="bar-value">437.800</div></div>
+      <div class="bar-row"><div class="bar-label">Truffe e frodi informatiche — H1 2025</div><div class="bar-track"><div class="bar-fill" style="width:100%; background:#c7bc9f" data-tooltip="152.012"></div></div><div class="bar-value">152.012</div></div>
+      <div class="bar-row"><div class="bar-label">Truffe e frodi informatiche — H1 2026</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:90%" data-tooltip="137.529, -9,5%"></div></div><div class="bar-value">137.529</div></div>
+      <div class="bar-row"><div class="bar-label">Rapine — H1 2025</div><div class="bar-track"><div class="bar-fill" style="width:100%; background:#c7bc9f" data-tooltip="14.275"></div></div><div class="bar-value">14.275</div></div>
+      <div class="bar-row"><div class="bar-label">Rapine — H1 2026</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:88%" data-tooltip="12.515, -12,3%"></div></div><div class="bar-value">12.515</div></div>
+      <div class="bar-row"><div class="bar-label">Violenze sessuali — H1 2025</div><div class="bar-track"><div class="bar-fill" style="width:100%; background:#c7bc9f" data-tooltip="3.384"></div></div><div class="bar-value">3.384</div></div>
+      <div class="bar-row"><div class="bar-label">Violenze sessuali — H1 2026</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:93%" data-tooltip="3.142, -7,1%"></div></div><div class="bar-value">3.142</div></div>
+      <div class="bar-row"><div class="bar-label">Omicidi volontari — H1 2025</div><div class="bar-track"><div class="bar-fill" style="width:100%; background:#c7bc9f" data-tooltip="163"></div></div><div class="bar-value">163</div></div>
+      <div class="bar-row"><div class="bar-label">Omicidi volontari — H1 2026</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:85%" data-tooltip="138, -15,3%"></div></div><div class="bar-value">138</div></div>
+      <div class="bar-row"><div class="bar-label">di cui femminicidi — H1 2025</div><div class="bar-track"><div class="bar-fill" style="width:100%; background:#c7bc9f" data-tooltip="54"></div></div><div class="bar-value">54</div></div>
+      <div class="bar-row"><div class="bar-label">di cui femminicidi — H1 2026</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:63%" data-tooltip="34, -37%"></div></div><div class="bar-value">34</div></div>
+      <div class="side-note">Barre chiare = gennaio-giugno 2025, barre arancioni = gennaio-giugno 2026: ogni coppia è confrontabile solo al suo interno (scale diverse tra una categoria e l'altra).</div>
+      <details class="table-view">
+        <summary>Vedi tabella dati completa</summary>
+        <table class="data-table">
+          <tr><th>Tipo di reato</th><th>H1 2026</th><th>H1 2025</th><th>Var.</th></tr>
+          <tr><td>Omicidi volontari</td><td class="num">138</td><td class="num">163</td><td class="num">-15,3%</td></tr>
+          <tr><td>di cui femminicidi (vittime donne)</td><td class="num">34</td><td class="num">54</td><td class="num">-37%</td></tr>
+          <tr><td>Rapine</td><td class="num">12.515</td><td class="num">14.275</td><td class="num">-12,3%</td></tr>
+          <tr><td>Furti</td><td class="num">437.800</td><td class="num">493.975</td><td class="num">-11,4%</td></tr>
+          <tr><td>Violenze sessuali</td><td class="num">3.142</td><td class="num">3.384</td><td class="num">-7,1%</td></tr>
+          <tr><td>Truffe e frodi informatiche</td><td class="num">137.529</td><td class="num">152.012</td><td class="num">-9,5%</td></tr>
+        </table>
+      </details>
+      <div class="side-note">Lesioni dolose, estorsioni e reati in materia di stupefacenti non sono ancora pubblicati con il dettaglio del primo semestre 2026: l'ultimo dato disponibile resta l'anno intero 2024 (lesioni dolose 66.962, +6,7% sul 2023; estorsioni 12.076, +5,6%; reati stupefacenti 33.166, +4,4%). Furti in abitazione, con strappo (scippo), con destrezza (borseggio) e d'auto non sono pubblicati come denunce scomposte: l'Istat li rileva come "vittime" in un sondaggio a parte (indagine sulla sicurezza dei cittadini 2022-2023): 167.000 vittime di furto in abitazione, 337.000 di scippo, 506.000 di borseggio, 140.000 di furto d'auto — numeri di persone che dichiarano di aver subito il reato, non di denunce.</div>
+      <div class="dv-sources">Fonte: Ministero dell'Interno, Dossier Ferragosto 2026 (dati semestrali); Istat/Viminale, Ufficio Centrale di Statistica (dati annuali 2024 in nota); Istat, indagine sulla sicurezza dei cittadini 2022-2023 (vittime furti, in nota).</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Indice di criminalità per provincia (classifica Sole 24 Ore 2025)</div>
+      <div class="chart-period">Edizione 2025, su dati 2024 — Il Sole 24 Ore</div>
+      <div class="bar-row"><div class="bar-label">Milano</div><div class="bar-track"><div class="bar-fill asilo" style="width:100%" data-tooltip="6.952,35 ogni 100mila ab."></div></div><div class="bar-value">6.952</div></div>
+      <div class="bar-row"><div class="bar-label">Firenze</div><div class="bar-track"><div class="bar-fill asilo" style="width:94%" data-tooltip="6.507,79"></div></div><div class="bar-value">6.508</div></div>
+      <div class="bar-row"><div class="bar-label">Roma</div><div class="bar-track"><div class="bar-fill asilo" style="width:92%" data-tooltip="6.401,85"></div></div><div class="bar-value">6.402</div></div>
+      <div class="bar-row"><div class="bar-label">Bologna</div><div class="bar-track"><div class="bar-fill asilo" style="width:87%" data-tooltip="6.055,26"></div></div><div class="bar-value">6.055</div></div>
+      <div class="bar-row"><div class="bar-label">Rimini</div><div class="bar-track"><div class="bar-fill asilo" style="width:86%" data-tooltip="5.995,63"></div></div><div class="bar-value">5.996</div></div>
+      <div class="bar-row"><div class="bar-label">Torino</div><div class="bar-track"><div class="bar-fill asilo" style="width:84%" data-tooltip="5.827,60"></div></div><div class="bar-value">5.828</div></div>
+      <div class="side-note">Indice: denunce ogni 100mila abitanti. Ad oggi (settembre 2026) questa resta l'edizione più recente: Il Sole 24 Ore aggiorna l'indice una volta l'anno, con circa un anno di scarto sui dati (l'edizione 2025 è basata sui reati del 2024). Non pubblica una media Italia in un unico numero; qui sono riportate le prime 6 province. Le province più sicure non sono state reperite in forma verificabile per questa edizione.</div>
+      <div class="dv-sources">Fonte: Il Sole 24 Ore, "Indice della criminalità", edizione 2025.</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Autori identificati: nazionalità ed età</div>
+      <div class="chart-period">2024 — Viminale/Sole 24 Ore</div>
+      <div class="bar-row"><div class="bar-label">Italiani (quota su arrestati)</div><div class="bar-track"><div class="bar-fill arrivi" style="width:100%" data-tooltip="65,3%"></div></div><div class="bar-value">65,3%</div></div>
+      <div class="bar-row"><div class="bar-label">Stranieri (quota su arrestati)</div><div class="bar-track"><div class="bar-fill arrivi" style="width:53%" data-tooltip="34,7%"></div></div><div class="bar-value">34,7%</div></div>
+      <div class="bar-row"><div class="bar-label">Minorenni (quota sulle denunce totali)</div><div class="bar-track"><div class="bar-fill arrivi" style="width:8%" data-tooltip="~5% (38.247 segnalazioni)"></div></div><div class="bar-value">~5%</div></div>
+      <div class="side-note">Per i reati predatori la quota di stranieri sale: rapine 52,3% (60,1% se avvenute in pubblica via), furti con strappo 61%, furti con destrezza 69%. I minorenni segnalati nel 2024 sono stati 38.247, +16% sul 2023: una segnalazione su 5 riguarda una rapina. Il Viminale non ha ancora pubblicato un aggiornamento 2025/2026 di questo spaccato per nazionalità ed età.</div>
+      <div class="dv-sources">Fonte: Banca dati interforze del Viminale, elaborazione Il Sole 24 Ore.</div>
+    </div>
+
+    <div class="section-note" style="margin-top:10px; font-weight:700; color:var(--ink);">3. Reati e risposta della giustizia</div>
+    <div class="section-note">Cosa succede dopo l'arresto: quante richieste di carcerazione vengono accolte, quante misure alternative vengono concesse al loro posto, e i casi in cui una persona già condannata o arrestata torna a commettere reati.</div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">Misure cautelari personali emesse</div>
+        <div class="kpi-value">94.168</div>
+        <div class="kpi-note">2024 (ultimo anno disponibile), +14,8% sul 2023 — Ministero della Giustizia</div>
+      </div>
+      <div class="kpi rimpatri">
+        <div class="kpi-label">Misure non detentive (invece del carcere)</div>
+        <div class="kpi-value">48,9%</div>
+        <div class="kpi-note">es. obbligo di dimora o di firma, 2024</div>
+      </div>
+      <div class="kpi arrivi">
+        <div class="kpi-label">Recidiva</div>
+        <div class="kpi-value">68%</div>
+        <div class="kpi-note">unico studio ufficiale mai realizzato, dati 1998 — nessun aggiornamento pubblicato da allora</div>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Esiti delle misure cautelari personali</div>
+      <div class="chart-period">2024 (ultimo anno disponibile) — Ministero della Giustizia</div>
+      <div class="bar-row"><div class="bar-label">Custodia in carcere</div><div class="bar-track"><div class="bar-fill asilo" style="width:59%" data-tooltip="28,9% (27.261 misure)"></div></div><div class="bar-value">28,9%</div></div>
+      <div class="bar-row"><div class="bar-label">Arresti domiciliari (con o senza braccialetto)</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:45%" data-tooltip="22,2% (20.888 misure)"></div></div><div class="bar-value">22,2%</div></div>
+      <div class="bar-row"><div class="bar-label">Altra misura non detentiva</div><div class="bar-track"><div class="bar-fill arrivi" style="width:100%" data-tooltip="48,9% (46.051 misure)"></div></div><div class="bar-value">48,9%</div></div>
+      <div class="side-note">Su 94.168 misure cautelari personali emesse nel 2024 (+14,8% sul 2023, invertendo il calo 2020-2023), il 51,1% è stato di tipo detentivo (carcere o domiciliari) e il 48,9% non detentivo. Il dato sulle richieste della Procura respinte dal giudice non è pubblicato in forma aggregata a livello nazionale.</div>
+      <div class="dv-sources">Fonte: Ministero della Giustizia, "Misure cautelari personali emesse nel 2024", aggiornamento gennaio 2025.</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Recidiva: cosa dice l'unico studio ufficiale</div>
+      <div class="chart-period">Dati 1998, Dipartimento Amministrazione Penitenziaria — pubblicato nel 2007</div>
+      <div class="bar-row"><div class="bar-label">Torna a delinquere dopo il carcere</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:100%" data-tooltip="68%"></div></div><div class="bar-value">68%</div></div>
+      <div class="bar-row"><div class="bar-label">Torna a delinquere con misure alternative</div><div class="bar-track"><div class="bar-fill asilo" style="width:28%" data-tooltip="19%"></div></div><div class="bar-value">19%</div></div>
+      <div class="side-note">Non esiste un dato ufficiale più recente sulla recidiva in Italia: lo studio di Fabrizio Leonardi (DAP) resta l'unico mai realizzato su scala nazionale. Nel 2012 il Ministero della Giustizia annunciò una nuova ricerca, mai completata né pubblicata.</div>
+      <div class="dv-sources">Fonte: F. Leonardi, Dipartimento dell'Amministrazione Penitenziaria, "Rassegna penitenziaria e criminologica", 2007 (dati 1998).</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Casi recenti: decisioni della magistratura</div>
+      <div class="chart-period">Cronaca giudiziaria verificata</div>
+      <details class="table-view" open>
+        <summary>Vedi tabella casi</summary>
+        <table class="data-table">
+          <tr><th>Data</th><th>Reato contestato</th><th>Decisione</th><th>Motivazione riportata</th><th>Fonte</th></tr>
+          <tr><td>11/5/2026</td><td>Furti, rapine, ricettazione, resistenza a pubblico ufficiale (Agrigento)</td><td>Da carcere ad arresti domiciliari in comunità (a Bologna), dopo condanna a 7 anni e 10 mesi</td><td>Il gup ha accolto l'istanza della difesa; il pubblico ministero si era opposto</td><td>AgrigentoOggi</td></tr>
+        </table>
+      </details>
+      <div class="side-note">In questa tabella vanno solo casi con provvedimento reale e verificabile, con testata/fonte citata: niente nomi non confermati dalle fonti e nessun commento nostro alla decisione, si riporta il fatto e chi giudica è il lettore. La tabella si aggiorna con i nuovi casi verificati che emergono nella rassegna quotidiana.</div>
+      <div class="dv-sources">Fonte citata caso per caso in tabella.</div>
     </div>
   </div>
 
