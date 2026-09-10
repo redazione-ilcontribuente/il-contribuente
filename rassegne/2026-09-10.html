@@ -448,9 +448,14 @@
     font-size:16px;
     color:var(--ink);
   }
+  .toc-dashboard-mobile-only{ display:none; }
+  @media (max-width:900px){
+    .toc-dashboard-mobile-only{ display:inline-flex; }
+  }
   @media (max-width:640px){
-    .toc-dashboards{ gap:10px; }
-    .toc-dashboard-card{ padding:9px 14px; }
+    .toc-dashboards{ flex-direction:column; flex-wrap:nowrap; gap:10px; }
+    .toc-dashboard-card{ display:flex; width:100%; box-sizing:border-box; padding:9px 14px; }
+    .toc-dashboard-mobile-only{ display:flex; }
     .toc-dashboard-label{ font-size:14.5px; }
   }
   @media (max-width:640px){
@@ -1627,7 +1632,7 @@
 </div>
 <div class="wrap">
 <div class="page-grid">
-<div class="side-col">
+<div class="side-col" id="approfondimenti">
 <div class="sidebar-block">
 <div class="sidebar-kicker">Approfondimenti fissi</div>
 <a class="sidebar-item" href="../SuperPotenze/superPower.html">
@@ -1694,8 +1699,9 @@
 </div>
 </div>
 <div class="toc-dashboards">
-<a class="toc-dashboard-card" href="#sicurezza-pubblica"><span class="toc-dashboard-tag">Dashboard</span><span class="toc-dashboard-label">Sicurezza Pubblica</span></a>
 <a class="toc-dashboard-card" href="#dati-immigrazione"><span class="toc-dashboard-tag">Dashboard</span><span class="toc-dashboard-label">Dati Immigrazione</span></a>
+<a class="toc-dashboard-card" href="#sicurezza-pubblica"><span class="toc-dashboard-tag">Dashboard</span><span class="toc-dashboard-label">Sicurezza Pubblica</span></a>
+<a class="toc-dashboard-card toc-dashboard-mobile-only" href="#approfondimenti"><span class="toc-dashboard-tag">Sezione</span><span class="toc-dashboard-label">Approfondimenti</span></a>
 </div>
 </div>
 <div class="verify-badge">
@@ -1704,7 +1710,7 @@
 <div class="quote-day">
 <div class="quote-day-inner">
 <div class="quote-day-label">Citazione del giorno · 1/2</div>
-<div class="quote-day-text">"I would advise Iran not to get cute."</div>
+<div class="quote-day-text">"I would advise Iran not to get cute." «Consiglierei all’Iran di non fare il furbo.»</div>
 <div class="quote-day-author">Donald Trump — 9 settembre 2026, convention repubblicana</div>
 </div>
 </div>

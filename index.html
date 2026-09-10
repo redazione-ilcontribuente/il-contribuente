@@ -448,9 +448,14 @@
     font-size:16px;
     color:var(--ink);
   }
+  .toc-dashboard-mobile-only{ display:none; }
+  @media (max-width:900px){
+    .toc-dashboard-mobile-only{ display:inline-flex; }
+  }
   @media (max-width:640px){
-    .toc-dashboards{ gap:10px; }
-    .toc-dashboard-card{ padding:9px 14px; }
+    .toc-dashboards{ flex-direction:column; flex-wrap:nowrap; gap:10px; }
+    .toc-dashboard-card{ display:flex; width:100%; box-sizing:border-box; padding:9px 14px; }
+    .toc-dashboard-mobile-only{ display:flex; }
     .toc-dashboard-label{ font-size:14.5px; }
   }
   @media (max-width:640px){
@@ -1627,7 +1632,7 @@
 </div>
 <div class="wrap">
 <div class="page-grid">
-<div class="side-col">
+<div class="side-col" id="approfondimenti">
 <div class="sidebar-block">
 <div class="sidebar-kicker">Approfondimenti fissi</div>
 <a class="sidebar-item" href="SuperPotenze/superPower.html">
@@ -1694,8 +1699,9 @@
 </div>
 </div>
 <div class="toc-dashboards">
-<a class="toc-dashboard-card" href="#sicurezza-pubblica"><span class="toc-dashboard-tag">Dashboard</span><span class="toc-dashboard-label">Sicurezza Pubblica</span></a>
 <a class="toc-dashboard-card" href="#dati-immigrazione"><span class="toc-dashboard-tag">Dashboard</span><span class="toc-dashboard-label">Dati Immigrazione</span></a>
+<a class="toc-dashboard-card" href="#sicurezza-pubblica"><span class="toc-dashboard-tag">Dashboard</span><span class="toc-dashboard-label">Sicurezza Pubblica</span></a>
+<a class="toc-dashboard-card toc-dashboard-mobile-only" href="#approfondimenti"><span class="toc-dashboard-tag">Sezione</span><span class="toc-dashboard-label">Approfondimenti</span></a>
 </div>
 </div>
 <div class="verify-badge">
@@ -1810,9 +1816,9 @@
 </div>
 <div class="articles">
 <div class="article lead">
-<div class="article-image"><img alt="Industria automobilistica europea" loading="lazy" src="immagini/dall'estero/alana-harris-BV5S6U9FT3o-unsplash.jpg"/></div>
+<div class="article-image"><img alt="Industria automobilistica europea" loading="lazy" src="immagini/dall-estero/alana-harris-BV5S6U9FT3o-unsplash.jpg"/></div>
 <h3>Reuters: l’industria italiana dell’auto chiede dazi Ue dell’80% su veicoli e componenti cinesi</h3>
-<p>Reuters racconta dall'estero l'allarme lanciato dall'Anfia sulla tenuta della filiera automobilistica italiana ed europea. Il presidente Roberto Vavassori propone che le importazioni cinesi restino senza dazi fino all'8% delle immatricolazioni annuali europee e che, oltre quella soglia, venga applicato un dazio dell'80% sia ai veicoli sia ai componenti.</p>
+<p>Reuters racconta dall’estero l’allarme lanciato dall’Anfia sulla tenuta della filiera automobilistica italiana ed europea. Il presidente Roberto Vavassori propone che le importazioni cinesi restino senza dazi fino all’8% delle immatricolazioni annuali europee e che, oltre quella soglia, venga applicato un dazio dell’80% sia ai veicoli sia ai componenti.</p>
 <div class="body-extra">
 <p>La richiesta nasce dal timore che la contrazione della produzione europea e la crescita dei marchi cinesi colpiscano soprattutto i fornitori. Vavassori stima che, senza maggiore protezione, le esportazioni italiane di componentistica potrebbero ridursi fortemente entro il 2028. Reuters sottolinea anche il peso della Germania: nel 2025 i fornitori italiani hanno esportato verso il mercato tedesco prodotti per circa 4,9 miliardi di euro, con Volkswagen come cliente centrale.</p>
 <p>Nel quadro comparato emerge soprattutto il nodo della componentistica: il tema non è soltanto il prezzo finale delle auto, ma la sopravvivenza di una rete di fornitori italiani molto integrata con i costruttori tedeschi e francesi. Le testate economiche europee collegano la proposta anche alla discussione più ampia sulla politica industriale dell’Unione e sugli strumenti con cui Bruxelles può reagire alla crescita della produzione cinese senza innescare una guerra commerciale generalizzata.</p></div>
@@ -1821,7 +1827,7 @@
 <span class="source">Fonti confrontate: <a href="https://www.ansa.it/" rel="noopener noreferrer" target="_blank">ANSA</a>, <a href="https://tg24.sky.it/" rel="noopener noreferrer" target="_blank">Sky TG24</a>, <a href="https://www.rainews.it/articoli/2026/09/volano-prezzi-di-petrolio-e-gas-giu-le-borse-europee-e8062b60-7e66-419b-a88a-4f94b12996e6.html" rel="noopener noreferrer" target="_blank">RaiNews</a>, <a href="https://www.corriere.it/tecnologia/diretta-live/26_settembre_09/l-evento-apple-in-diretta-il-debutto-del-ceo-john-ternus-con-il-primo-iphone-pieghevole.shtml" rel="noopener noreferrer" target="_blank">Corriere della Sera</a></span>
 </div>
 <div class="article">
-<div class="article-image"><img alt="Fabbrica e lavoro industriale" loading="lazy" src="immagini/dall'estero/douglas-schneiders-ahVwKN8F_eA-unsplash.jpg"/></div>
+<div class="article-image"><img alt="Fabbrica e lavoro industriale" loading="lazy" src="immagini/dall-estero/douglas-schneiders-ahVwKN8F_eA-unsplash.jpg"/></div>
 <h3>Reuters: sciopero negli stabilimenti italiani Electrolux contro il piano di tagli</h3>
 <p>I sindacati italiani hanno proclamato per il 15 settembre una giornata di sciopero negli stabilimenti Electrolux in Italia. Reuters riferisce che la mobilitazione nasce dal mancato avanzamento del confronto sul piano di ristrutturazione, che prevede riduzioni di personale e la chiusura di un sito produttivo.</p>
 <div class="body-extra">
