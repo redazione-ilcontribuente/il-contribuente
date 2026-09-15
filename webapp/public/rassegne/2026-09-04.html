@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rassegna Stampa — 4 Settembre 2026</title>
+<link rel="icon" type="image/png" href="logo.jpeg">
+<meta property="og:title" content="Il Contribuente — Rassegna Stampa Quotidiana">
+<meta property="og:description" content="Confronto quotidiano tra le principali testate italiane e internazionali.">
+<meta property="og:image" content="https://ilcontribuente.redazioneit.workers.dev/og_image.png">
+<meta property="og:url" content="https://ilcontribuente.redazioneit.workers.dev/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9da;
+    --paper2:#e4dcc7;
+    --ink:#1b1e22;
+    --ink-soft:#565c64;
+    --rule:#c7bc9f;
+    --red:#a3291f;
+    --red-deep:#7c1d16;
+    --navy:#1f3a5f;
+    --navy-deep:#122438;
+    --gold:#a97a1f;
+    --gold-deep:#7d5a13;
+    --green:#3d6b4f;
+    --green-deep:#264734;
+    --wine:#6b2438;
+    --wine-deep:#481725;
+    --blue-l:#1c4f8a;
+    --blue-l-deep:#0f345e;
+    --red-r:#b3392a;
+    --red-r-deep:#832216;
+    --card:#fdfcf7;
+    --shadow-sm: 0 1px 2px rgba(20,15,5,.06), 0 2px 6px rgba(20,15,5,.05);
+    --shadow-md: 0 4px 10px rgba(20,15,5,.10), 0 10px 26px rgba(20,15,5,.10);
+    --shadow-lg: 0 10px 24px rgba(20,15,5,.16), 0 22px 50px rgba(20,15,5,.14);
+    --shadow-inset: inset 0 1px 0 rgba(255,255,255,.5);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;overflow-x:hidden;max-width:100%;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 10% -10%, #f8f4e8 0%, transparent 60%),
+      radial-gradient(1000px 500px at 100% 0%, #e9e0c8 0%, transparent 55%),
+      linear-gradient(180deg, var(--paper) 0%, var(--paper2) 100%);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:0 0 70px 0;
+  }
+  .masthead{
+    position:relative;
+    background:
+      radial-gradient(900px 300px at 20% -60%, rgba(255,255,255,.08), transparent 60%),
+      linear-gradient(160deg, #23282e 0%, #14171b 100%);
+    color:var(--paper);
+    padding:52px 6vw 40px 6vw;
+    box-shadow: var(--shadow-lg);
+    overflow:hidden;
+  }
+  .masthead::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:0;
+    height:6px;
+    background:linear-gradient(90deg, var(--red-deep), var(--red) 40%, var(--gold) 70%, var(--navy) 100%);
+    box-shadow:0 2px 8px rgba(0,0,0,.4);
+  }
+  .masthead-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:10px;
+    min-width:0;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#a8a196;
+    margin-bottom:26px;
+    border-bottom:1px solid #34383e;
+    padding-bottom:18px;
+  }
+  .masthead-title{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(40px,6.4vw,72px);
+    line-height:.95;
+    letter-spacing:-.01em;
+    margin:0;
+    text-shadow: 0 2px 0 rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.5);
+  }
+  .masthead-title em{
+    font-style:italic;
+    font-weight:400;
+    background:linear-gradient(180deg, #d84d3e, #a3291f);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .masthead-sub{
+    font-family:'Inter',sans-serif;
+    font-size:17px;
+    color:#9aa0aa;
+    margin-top:18px;
+    max-width:700px;
+    line-height:1.6;
+  }
+  .masthead-badges{
+    display:flex; gap:8px; margin-top:26px; flex-wrap:wrap;
+  }
+  .masthead-badges .badge.badge-hidden{ display:none; }
+  .badges-toggle-btn{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:5px 12px;
+    border-radius:3px;
+    border:1px solid var(--rule);
+    background:transparent;
+    color:var(--navy);
+    cursor:pointer;
+    margin-top:10px;
+  }
+  .badges-toggle-btn:hover{ background:var(--paper2); }
+  .badge{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:5px 10px;
+    border-radius:3px;
+    background:linear-gradient(180deg, #2e333a, #21252b);
+    color:#c9c0a8;
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.06);
+    border:1px solid #3a3f47;
+    text-decoration:none;
+    display:inline-block;
+    cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+  }
+  .badge:hover, .badge:focus-visible, .badge:active{
+    background:linear-gradient(180deg, #c99a3a, var(--gold));
+    color:#fff;
+    border-color:var(--gold-deep);
+    transform:translateY(-2px);
+    box-shadow: 0 6px 14px rgba(169,122,31,.35), inset 0 1px 0 rgba(255,255,255,.3);
+  }
+  .back-link{
+    display:block;
+    margin-top:18px;
+    color:#e9e4d6;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    text-decoration:none;
+    border-bottom:1px solid #565c64;
+    padding-bottom:2px;
+  }
+  .ticker-wrap{
+    background:linear-gradient(180deg, var(--red), var(--red-deep));
+    color:#fff;
+    overflow:hidden;
+    white-space:nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.15);
+    position:relative;
+    z-index:2;
+  }
+  .ticker{
+    display:inline-block;
+    padding:10px 0;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    letter-spacing:.03em;
+    font-weight:600;
+    animation:scroll 56s linear infinite;
+  }
+  .ticker span{margin-right:52px;}
+  @keyframes scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+  .market-bar{
+    position:sticky;
+    top:0;
+    z-index:30;
+    background:linear-gradient(160deg, #1c1f24, #0f1114);
+    border-bottom:2px solid var(--gold);
+    box-shadow: 0 4px 14px rgba(0,0,0,.3);
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  .market-bar-inner{
+    display:flex;
+    align-items:stretch;
+    justify-content:center;
+    gap:16px;
+    padding:22px 6vw;
+    white-space:nowrap;
+    flex-wrap:wrap;
+    perspective:900px;
+  }
+  .market-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:4px;
+    background:linear-gradient(160deg, #33373e, #1a1d21);
+    border:1px solid #3a3f47;
+    border-radius:12px;
+    padding:12px 20px;
+    flex-shrink:0;
+    min-width:120px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.08) inset,
+      0 -14px 18px -14px rgba(0,0,0,.55) inset,
+      0 4px 8px rgba(0,0,0,.35),
+      0 14px 26px rgba(0,0,0,.35);
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .market-card:hover{
+    transform:perspective(700px) rotateX(4deg) translateY(-6px);
+    border-color:var(--gold);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.14) inset,
+      0 -14px 18px -14px rgba(0,0,0,.55) inset,
+      0 6px 14px rgba(0,0,0,.4),
+      0 26px 44px rgba(0,0,0,.45),
+      0 0 0 1px rgba(169,122,31,.35),
+      0 12px 26px rgba(169,122,31,.28);
+  }
+  .market-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#8a8f97;
+  }
+  .market-value{
+    font-family:'JetBrains Mono',monospace;
+    font-size:20px;
+    font-weight:700;
+    color:#e9e4d6;
+    line-height:1.2;
+  }
+  .market-delta{ font-size:11.5px; }
+  .market-delta.up{ color:#e07a5f; }
+  .market-delta.down{ color:#7fb787; }
+  .market-source{
+    font-family:'Inter',sans-serif;
+    font-size:9.5px;
+    color:#6b7178;
+    line-height:1.3;
+    max-width:130px;
+    white-space:normal;
+  }
+  .quote-day{
+    max-width:1260px;
+    margin:0 auto 24px auto;
+    padding:0 6vw;
+  }
+  .quote-day-inner{
+    background:linear-gradient(160deg, #f3e6c4, #ecdcb2);
+    border-left:5px solid var(--gold);
+    border-radius:8px;
+    padding:22px 28px;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,.4);
+  }
+  .quote-day-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:8px;
+  }
+  .quote-day-text{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:20px;
+    line-height:1.4;
+    color:var(--ink);
+    margin-bottom:8px;
+  }
+  .quote-day-author{
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  @media (max-width:640px){
+    .quote-day-inner{ padding:16px 18px; }
+    .quote-day-text{ font-size:16px; }
+  }
+  /* ===== INDICE — box in stile "citazione del giorno"/"stat" del quotidiano,
+     ricolorato in navy (invece dell'oro di quote-day/agenda), stessa larghezza
+     di .agenda-box. Scrittura: kicker in JetBrains Mono maiuscolo tracciato
+     (come .stat-label/.quote-day-label) + voci in Fraunces grassetto (come
+     .stat-value). Cursore a penna stilografica sui link. Stile fisso e
+     permanente (SKILL.md/template.html). ===== */
+  .toc{
+    margin:0 0 44px 0;
+  }
+  .toc-inner{
+    background:linear-gradient(160deg, #eaeef3, #dde4ec);
+    border-left:5px solid var(--navy);
+    border-radius:8px;
+    padding:22px 28px;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,.4);
+  }
+  /* ===== Fascia "Approfondimenti fissi" (Guerre) — colore petrolio approvato da
+     Mario il 21/8/2026, dopo vari tentativi in oro (troppo simile a .quote-day-inner)
+     e in bronzo scuro (troppo scuro). NON cambiare colore senza chiederglielo di nuovo. ===== */
+  .pinned-strip{
+    margin:0 0 28px 0;
+    background:linear-gradient(160deg, #a8c9c9, #7fa8a8);
+    border-left:5px solid #2f5c5c;
+    border-radius:8px;
+    padding:14px 28px;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,.35);
+    display:block;
+  }
+  .pinned-kicker{
+    display:block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#1d3a3a;
+    white-space:nowrap;
+    margin-bottom:8px;
+  }
+  .pinned-link, .pinned-sub{ display:inline; }
+  .pinned-sub{ margin-left:4px; }
+  .pinned-link{
+    font-family:'Fraunces',serif;
+    font-weight:800;
+    font-size:17px;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:1px;
+  }
+  .pinned-link:hover{ border-bottom-color:var(--ink); }
+  .pinned-sub{
+    font-family:'Inter',sans-serif;
+    font-weight:400;
+    font-size:13.5px;
+    color:#1d3a3a;
+  }
+  .pinned-sep{
+    color:#2f5c5c;
+    opacity:.6;
+    font-size:15px;
+  }
+  /* ===== Card "Palestinesi uccisi" nella .market-bar — Mario, 22/8/2026:
+     riusa lo stile .market-card esistente con bordo rosso scuro e valore
+     in rosso (inline style sulla card), niente CSS dedicato: è la stessa
+     card vista nel template del 21/8, ripristinata su richiesta di Mario
+     dopo un breve esperimento con altri stili. Stile fisso e permanente. ===== */
+  .toc-kicker{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--navy);
+    margin-bottom:12px;
+  }
+  .toc-links{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    row-gap:12px;
+    column-gap:0;
+  }
+  .toc-link{
+    font-family:'Fraunces',serif;
+    font-size:18px;
+    font-weight:800;
+    color:var(--ink);
+    text-decoration:none;
+    position:relative;
+    padding:2px 1px;
+    cursor:
+      url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSAxNiAxNikiPgogICAgPHBhdGggZD0iTTEzLjMgMiBMMTguNyAyIEwxOC43IDIwIEwxNiAzMCBMMTMuMyAyMCBaIiBmaWxsPSIjMWIxZTIyIiBzdHJva2U9IiNmZGZjZjciIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8cmVjdCB4PSIxMy4zIiB5PSIxNy41IiB3aWR0aD0iNS40IiBoZWlnaHQ9IjIuNiIgZmlsbD0iI2E5N2ExZiIvPgogICAgPHBhdGggZD0iTTE2IDMwIEwxNC4zIDIwLjEgTDE3LjcgMjAuMSBaIiBmaWxsPSIjYTk3YTFmIi8+CiAgICA8cmVjdCB4PSIxMy42IiB5PSIyIiB3aWR0aD0iNC44IiBoZWlnaHQ9IjQuNSIgcng9IjAuNiIgZmlsbD0iIzNkNDU1MCIvPgogIDwvZz4KPC9zdmc+Cg==") 6 26,
+      pointer;
+    transition:color .18s ease;
+  }
+  .toc-link:not(:first-child){ margin-left:18px; padding-left:18px; border-left:1px solid rgba(31,58,95,.25); }
+  .toc-link::after{
+    content:'';
+    position:absolute;
+    left:1px; right:1px; bottom:-3px;
+    height:2px;
+    background:var(--gold-deep);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .22s ease;
+  }
+  .toc-link:hover{ color:var(--navy-deep); }
+  .toc-link:hover::after{ background:var(--gold); transform:scaleX(1); }
+  .toc-link:active{ color:var(--ink); }
+  @media (max-width:640px){
+    .toc-inner{ padding:16px 18px; }
+    .toc-link{ font-size:15px; }
+    .toc-link:not(:first-child){ margin-left:13px; padding-left:13px; }
+  }
+  @media (max-width:640px){
+    .market-bar-inner{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:6px;
+      padding:10px 4vw;
+      white-space:normal;
+    }
+    .market-card{ padding:7px 6px; min-width:0; gap:2px; border-radius:6px; }
+    .market-label{ font-size:8px; letter-spacing:.03em; }
+    .market-value{ font-size:13px; }
+    .market-delta{ font-size:8.5px; }
+    .market-source{ font-size:7px; max-width:100%; line-height:1.2; }
+  }
+  @media (min-width:641px) and (max-width:1024px){
+    .market-bar-inner{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:10px;
+      padding:12px 5vw;
+      white-space:normal;
+      justify-items:center;
+    }
+    .market-card{ width:100%; max-width:180px; padding:10px 12px; }
+    .market-value{ font-size:17px; }
+    .market-source{ font-size:9px; }
+  }
+  .wrap{
+    max-width:1260px;
+    margin:0 auto;
+    padding:48px 6vw 0 6vw;
+  }
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:18px;
+    margin-bottom:44px;
+    perspective:1000px;
+  }
+  .stat{
+    --accent-shadow: rgba(31,58,95,.24);
+    background:linear-gradient(160deg, #ffffff, #f7f3e8);
+    border-radius:16px;
+    padding:18px 20px;
+    box-shadow:
+      0 1px 1px rgba(255,255,255,.7) inset,
+      0 1px 2px rgba(20,15,5,.06),
+      0 10px 20px rgba(20,15,5,.10),
+      0 26px 48px -18px var(--accent-shadow);
+    border-top:3px solid var(--navy);
+    transition:transform .25s ease, box-shadow .25s ease;
+    min-width:0;
+    max-width:100%;
+    overflow:hidden;
+    box-sizing:border-box;
+  }
+  .stat:hover{
+    transform:perspective(800px) rotateX(4deg) translateY(-7px);
+    box-shadow:
+      0 1px 1px rgba(255,255,255,.8) inset,
+      0 2px 4px rgba(20,15,5,.08),
+      0 16px 30px rgba(20,15,5,.14),
+      0 40px 70px -18px var(--accent-shadow);
+  }
+  .stat.red{border-top-color:var(--red); --accent-shadow: rgba(163,41,31,.30);}
+  .stat.gold{border-top-color:var(--gold); --accent-shadow: rgba(169,122,31,.30);}
+  .stat.green{border-top-color:var(--green); --accent-shadow: rgba(61,107,79,.30);}
+  .stat.wine{border-top-color:var(--wine); --accent-shadow: rgba(107,36,56,.30);}
+  .stat-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--ink-soft);
+    margin-bottom:8px;
+    overflow-wrap:break-word;
+    word-break:break-word;
+    hyphens:auto;
+  }
+  .stat-value{
+    font-family:'Fraunces',serif;
+    font-weight:800;
+    font-size:clamp(20px, 4.2vw, 34px);
+    line-height:1.05;
+    margin-bottom:6px;
+    text-shadow: 0 1px 0 rgba(255,255,255,.7);
+    overflow-wrap:break-word;
+    word-break:break-word;
+    hyphens:auto;
+  }
+  .stat-delta{
+    font-size:13px;
+    color:var(--ink-soft);
+    overflow-wrap:break-word;
+    word-break:break-word;
+  }
+  .section{
+    margin-bottom:52px;
+    scroll-margin-top:90px;
+  }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:24px;
+    position:relative;
+    padding-bottom:12px;
+  }
+  .section-head::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:0;
+    height:3px;
+    background:linear-gradient(90deg, var(--ink) 0%, var(--ink) 40%, transparent 100%);
+  }
+  .section-tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    letter-spacing:.1em;
+    padding:6px 12px;
+    border-radius:4px;
+    color:#fff;
+    text-transform:uppercase;
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.25);
+  }
+  .tag-italia{background:linear-gradient(160deg,#2c5c8a,var(--navy-deep));}
+  .tag-europa{background:linear-gradient(160deg,#3c6e5a,var(--green-deep));}
+  .tag-mondo{background:linear-gradient(160deg,#8a3350,var(--wine-deep));}
+  .tag-migra{background:linear-gradient(160deg,#c79433,var(--gold-deep));}
+  .tag-fin{background:linear-gradient(160deg,#4d8a68,var(--green-deep));}
+  .tag-finanza{background:linear-gradient(160deg,#9c6a2c,#5c3d14);}
+  .tag-tecnologia{background:linear-gradient(160deg,#5a4a9c,#2c2154);}
+  .tag-confronto{background:linear-gradient(160deg,#4a4f57,#22262b);}
+  .tag-benessere{background:linear-gradient(160deg,#3d8a7a,#1d4a41);}
+  .tag-palestina{background:linear-gradient(160deg,#4a4f57,#22262b);}
+  .section-title{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:clamp(28px,3.4vw,38px);
+    margin:0;
+    color:var(--ink);
+  }
+  .section-note{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:-14px 0 24px 0;
+    max-width:760px;
+    line-height:1.5;
+  }
+  .articles{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:22px;
+    align-items:start;
+  }
+  @media (max-width:820px){
+    .articles{grid-template-columns:1fr;}
+  }
+  /* ===== REGOLA UNIVERSALE DI LAYOUT PER I BLOCCHI DI NOTIZIE (regola di Mario, 24/8/2026) =====
+     Vale per TUTTE le sezioni a blocco-notizie (.articles/.article) di tutto il documento —
+     Italia, Disagio città, Europa, Mondo, Finanza, Benessere, Tecnologia, Dall'estero, IA,
+     Immigrazione Italia, Immigrazione Europa — con qualunque numero di articoli (2, 3 o 4).
+     ESCLUSA SOLO "Dati Immigrazione", che non usa .articles ma un formato diverso
+     (.chart-card/.kpi-row) e quindi non è toccata da queste regole.
+     Principio: la prima notizia è SEMPRE orizzontale (piena larghezza, come il lead).
+     - 1 articolo: piena larghezza, comportamento naturale, nessuna regola extra necessaria.
+     - 2 articoli: ENTRAMBI orizzontali (piena larghezza), impilati uno sotto l'altro.
+       MAI un lead largo + un secondo articolo stretto in una colonna: spreca spazio ed è vietato.
+     - 3 articoli: la prima orizzontale (lead), le altre due in verticale, affiancate in una
+       riga di 2 colonne uguali che riempiono tutta la larghezza.
+     - 4 articoli: comportamento standard (già di default): la prima orizzontale (lead),
+       le altre tre in verticale, affiancate in una riga di 3 colonne uguali. */
+  .articles:has(> .article:nth-child(2):last-child){
+    grid-template-columns:1fr;
+  }
+  .articles:has(> .article:nth-child(2):last-child) > .article.lead{
+    grid-column:auto;
+  }
+  .articles:has(> .article:nth-child(2):last-child) > .article.lead::before{
+    display:none;
+  }
+  .articles:has(> .article:nth-child(3):last-child){
+    grid-template-columns:1fr 1fr;
+  }
+  .articles:has(> .article:nth-child(3):last-child) > .article.lead{
+    grid-column:1 / -1;
+  }
+  .article{
+    background:linear-gradient(165deg, #ffffff 0%, var(--card) 60%);
+    border-radius:10px;
+    padding:24px 26px;
+    box-shadow: var(--shadow-md), var(--shadow-inset);
+    position:relative;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  /* ===== Immagine di apertura articolo (regola di Mario, 25/8/2026) =====
+     Un'unica immagine per articolo, sempre la prima cosa nella card, sempre correlata
+     al contenuto. Bordo a bordo (nessun margine laterale/superiore, si estende oltre
+     il padding della card), altezza compatta — non un blocco dominante. Illustrazioni
+     originali in SVG, nella palette del giornale — mai foto prese dalle testate citate,
+     per restare coerenti con la policy sul copyright nel footer. Vale per TUTTI gli
+     articoli (.article) e per le voci del Confronto (.duel-side). */
+  .article-image{
+    width:calc(100% + 52px);
+    height:108px;
+    margin:-24px -26px 16px -26px;
+    border-radius:10px 10px 0 0;
+    overflow:hidden;
+    display:block;
+  }
+  .article-image svg{
+    display:block;
+    width:100%;
+    height:100%;
+  }
+  .article-image img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .duel-side .article-image{
+    width:calc(100% + 48px);
+    margin:-22px -24px 14px -24px;
+    border-radius:0;
+  }
+  @media (max-width:640px){
+    .article-image{ width:calc(100% + 32px); height:88px; margin:-16px -16px 12px -16px; }
+    .duel-side .article-image{ width:calc(100% + 32px); margin:-14px -16px 10px -16px; }
+  }
+  /* ===== Hero fotografico di sezione (25/8/2026, corretto la sera del 25/8/2026 su richiesta di Mario) =====
+     Una sola immagine per sezione, tra il titolo e la nota. Foto a piena larghezza,
+     SENZA scurimento e SENZA testo sovrapposto: il titolo è già nell'h2 sopra, non va ripetuto. */
+  .section-hero{
+    position:relative;
+    width:100%;
+    aspect-ratio: 2.4 / 1;
+    border-radius:12px;
+    overflow:hidden;
+    margin:0 0 28px 0;
+    box-shadow: var(--shadow-md);
+  }
+  .section-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  @media (max-width:640px){
+    .section-hero{ aspect-ratio: 1.9 / 1; border-radius:10px; }
+  }
+  .article:hover{
+    transform:translateY(-4px);
+    box-shadow: var(--shadow-lg), var(--shadow-inset);
+  }
+  .article.lead{
+    grid-column:1 / -1;
+  }
+  .article.lead::before{
+    content:"";
+    position:absolute; top:0; left:0; bottom:0; width:5px;
+    border-radius:10px 0 0 10px;
+    background:linear-gradient(180deg, var(--red), var(--red-deep));
+  }
+  .article h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:23px;
+    line-height:1.28;
+    margin:0 0 13px 0;
+    color:var(--ink);
+  }
+  .article p{
+    font-size:18px;
+    line-height:1.7;
+    color:var(--ink);
+    margin:0 0 11px 0;
+  }
+  .article p:last-of-type{margin-bottom:0;}
+  .source{
+    display:inline-block;
+    margin-top:14px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    letter-spacing:.05em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    border-top:1px solid var(--rule);
+    padding-top:11px;
+    width:100%;
+  }
+  .source a{
+    color:inherit;
+    text-decoration:none;
+    border-bottom:1px dotted currentColor;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .source a:hover{
+    color:var(--gold-deep);
+    border-bottom-color:var(--gold-deep);
+  }
+  .callout{
+    background:linear-gradient(160deg, #f3e6c4, #ecdcb2);
+    border-radius:6px;
+    border-left:4px solid var(--gold);
+    padding:14px 16px;
+    margin:14px 0;
+    font-size:18.5px;
+    line-height:1.55;
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.4);
+  }
+  .callout b{color:var(--wine);}
+  /* ===== VERIFICA FONTI (badge sotto l'indice) ===== */
+  .verify-badge{
+    max-width:1260px;
+    margin:0 auto 24px auto;
+    padding:0 6vw;
+  }
+  .verify-badge-inner{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    flex-wrap:wrap;
+    text-align:center;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    color:var(--ink-soft);
+    background:rgba(169,122,31,.08);
+    border:1px solid rgba(169,122,31,.28);
+    border-radius:30px;
+    padding:9px 20px;
+  }
+  .verify-badge-inner strong{ color:var(--gold-deep); }
+  /* ===== AGENDA "COSA SUCCEDE OGGI" ===== */
+  .agenda-box{
+    background:linear-gradient(165deg, #ffffff 0%, var(--card) 60%);
+    border-radius:14px;
+    padding:20px 24px;
+    margin-bottom:44px;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,.5);
+    border-top:3px solid var(--gold);
+  }
+  .agenda-title{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:19px;
+    margin:0 0 14px 0;
+    color:var(--ink);
+  }
+  .agenda-list{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+  }
+  .agenda-item{
+    display:flex;
+    gap:12px;
+    align-items:baseline;
+    font-size:14.5px;
+    line-height:1.5;
+  }
+  .agenda-time{
+    font-family:'JetBrains Mono',monospace;
+    font-weight:700;
+    font-size:13px;
+    color:var(--gold-deep);
+    flex-shrink:0;
+    min-width:52px;
+  }
+  .agenda-event{ color:var(--ink); }
+  /* ===== BOX "DA SAPERE PER CAPIRE" — presente in ogni sezione ===== */
+  .context-box{
+    background:linear-gradient(160deg, #eef3f8, #e3ebf3);
+    border-left:4px solid var(--navy);
+    border-radius:8px;
+    padding:16px 20px;
+    margin-bottom:20px;
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.5);
+  }
+  .context-box-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--navy);
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .context-box p{
+    font-size:15.5px;
+    line-height:1.6;
+    color:var(--ink);
+    margin:0;
+  }
+  @media (max-width:640px){
+    .verify-badge-inner{ font-size:10.5px; padding:8px 14px; }
+    .agenda-box{ padding:15px 16px; }
+    .agenda-title{ font-size:16px; }
+    .agenda-item{ font-size:13px; }
+    .context-box{ padding:13px 15px; }
+    .context-box p{ font-size:14px; }
+  }
+  .persp{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    margin-top:16px;
+    padding:14px;
+    border-radius:6px;
+    background:rgba(31,58,95,.05);
+  }
+  .persp.ru{background:rgba(163,41,31,.06);}
+  .persp-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:#fff;
+    background:var(--navy);
+    padding:4px 9px;
+    border-radius:3px;
+    white-space:nowrap;
+    flex-shrink:0;
+    margin-top:2px;
+    box-shadow: var(--shadow-sm);
+  }
+  .persp.ru .persp-label{background:var(--red);}
+  .persp p{font-size:18.5px;margin:0;}
+  .datatable{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    font-size:18.5px;
+    margin-top:12px;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .datatable th,.datatable td{
+    text-align:left;
+    padding:9px 12px;
+    border-bottom:1px solid var(--rule);
+    background:#fff;
+  }
+  .datatable th{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:#fff;
+    background:linear-gradient(160deg,#2c5c8a,var(--navy-deep));
+  }
+  .datatable td.num{font-family:'JetBrains Mono',monospace;font-weight:700;}
+  .down{color:var(--green-deep);}
+  .up{color:var(--red-deep);}
+  .duel{
+    background:linear-gradient(165deg, #ffffff 0%, var(--card) 70%);
+    border-radius:12px;
+    padding:0;
+    box-shadow: var(--shadow-lg), var(--shadow-inset);
+    margin-bottom:26px;
+    overflow:hidden;
+  }
+  .duel-fact{
+    padding:20px 26px;
+    background:linear-gradient(160deg,#2b2f35,#181b1f);
+    color:#e9e4d6;
+  }
+  .duel-fact-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#a8a196;
+    margin-bottom:6px;
+  }
+  .duel-fact-text{
+    font-family:'Fraunces',serif;
+    font-size:23px;
+    font-weight:600;
+    line-height:1.35;
+  }
+  .duel-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  @media (max-width:760px){
+    .duel-grid{grid-template-columns:1fr;}
+  }
+  .duel-side{
+    padding:22px 24px;
+    position:relative;
+  }
+  .duel-side.left{
+    background:linear-gradient(160deg, #eaf1fa, #dfe9f5);
+    border-right:1px solid var(--rule);
+  }
+  .duel-side.right{
+    background:linear-gradient(160deg, #faeae7, #f5ddd8);
+  }
+  /* ===== Terza prospettiva nel Confronto (regola di Mario, 31/8/2026) =====
+     Quando i box di prospettiva sono 3, ognuno deve avere uno sfondo diverso:
+     .left (azzurro) e .right (rosa) restano quelli di sempre, .third (verde)
+     va usato SEMPRE per il terzo box (es. "voce indipendente"), mai riciclando
+     .left o .right. Stile fisso e permanente. ===== */
+  .duel-side.third{
+    background:linear-gradient(160deg, #eaf3e9, #dcebd8);
+  }
+  @media (max-width:760px){
+    .duel-side.left{border-right:none; border-bottom:1px solid var(--rule);}
+  }
+  .duel-tag{
+    display:inline-block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:#fff;
+    padding:5px 11px;
+    border-radius:4px;
+    margin-bottom:12px;
+    box-shadow: var(--shadow-sm);
+  }
+  .duel-side.left .duel-tag{background:linear-gradient(160deg,#4a4f57,#22262b);}
+  .duel-side.right .duel-tag{background:linear-gradient(160deg,#4a4f57,#22262b);}
+  .duel-side.third .duel-tag{background:linear-gradient(160deg,#4a4f57,#22262b);}
+  .duel-outlet{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:18.5px;
+    margin-bottom:8px;
+  }
+  .duel-headline{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:18px;
+    line-height:1.4;
+    margin-bottom:10px;
+    color:var(--ink);
+  }
+  .duel-side p.body{
+    font-size:18.5px;
+    line-height:1.68;
+    margin:0 0 8px 0;
+  }
+  .duel-side .source{border-top-color:rgba(0,0,0,.12);}
+  /* "Continua a leggere" — solo sezione Confronto (pilota). Il .context-box
+     "Da sapere per capire" e il .duel-fact "Il fatto" restano sempre interi,
+     non vengono mai troncati: il collassamento riguarda solo i paragrafi
+     .body dei .duel-side, dal secondo paragrafo in poi. */
+  .duel-side .body-extra, .article .body-extra{ display:none; }
+  .duel-side.expanded .body-extra, .article.expanded .body-extra{ display:block; }
+  .article .read-more-btn{ margin-top:0; }
+  .read-more-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:none;
+    border:none;
+    border-bottom:1px solid var(--gold-deep);
+    padding:0 0 2px 0;
+    margin:2px 0 14px 0;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    cursor:pointer;
+    transition:color .18s ease, border-color .18s ease;
+  }
+  .read-more-btn:hover{ color:var(--ink); border-color:var(--ink); }
+  .read-more-btn .rm-arrow{ transition:transform .22s ease; display:inline-block; }
+  .duel-side.expanded .read-more-btn .rm-arrow{ transform:rotate(180deg); }
+  .footer{
+    max-width:1260px;
+    margin:30px auto 0 auto;
+    padding:22px 6vw;
+    border-top:3px double var(--ink);
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .back-to-top{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:linear-gradient(160deg,#2c333a,#14171b);
+    color:#e9e4d6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    box-shadow: var(--shadow-lg);
+    text-decoration:none;
+    z-index:50;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;
+  }
+  .back-to-top.show{
+    opacity:1;
+    pointer-events:auto;
+  }
+  .back-to-top:active{ transform:scale(0.92); }
+  @media (max-width:640px){
+    .masthead{ padding:20px 5vw 16px 5vw; }
+    .masthead-top{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:4px;
+      font-size:10px;
+    }
+    .masthead-title{ font-size:42px; line-height:0.92; }
+    .masthead-sub{ font-size:13.5px; line-height:1.45; }
+    .badge{ font-size:10px; padding:3px 7px; }
+    .ticker{ font-size:11px; }
+    .wrap{ padding:22px 5vw 0 5vw; }
+    .stats{ grid-template-columns:repeat(auto-fit,minmax(135px,1fr)); gap:10px; margin-bottom:32px; }
+    .stat{ padding:12px 14px; min-width:0; }
+    .stat-label{ font-size:9.5px; }
+    .stat-value{ font-size:clamp(17px, 5.6vw, 22px); }
+    .stat-delta{ font-size:10.5px; }
+    .section{ margin-bottom:36px; }
+    .section-head{ margin-bottom:16px; }
+    .section-tag{ font-size:10px; padding:4px 9px; }
+    .section-title{ font-size:20px; }
+    .section-note{ font-size:13px; line-height:1.5; }
+    .article{ padding:16px 16px; }
+    .article h3{ font-size:16.5px; line-height:1.3; margin-bottom:10px; }
+    .article p{ font-size:14.5px; line-height:1.55; }
+    .callout{ font-size:14px; padding:12px 14px; }
+    .source{ font-size:10px; }
+    .datatable{ font-size:14px; }
+    .duel-fact{ padding:14px 16px; }
+    .duel-fact-label{ font-size:10px; }
+    .duel-fact-text{ font-size:16px; line-height:1.3; }
+    .duel-side{ padding:14px 16px; }
+    .duel-tag{ font-size:10px; padding:4px 9px; }
+    .duel-outlet{ font-size:15px; }
+    .duel-headline{ font-size:14.5px; }
+    .duel-side p.body{ font-size:14.5px; line-height:1.5; }
+    .persp p{ font-size:14.5px; }
+    .persp-label{ font-size:10px; }
+    .back-to-top{ width:44px; height:44px; bottom:16px; right:16px; font-size:18px; }
+  }
+  @media (min-width:641px) and (max-width:1024px){
+    .stats{ grid-template-columns:repeat(2,1fr); gap:14px; }
+    .stat-value{ font-size:clamp(22px, 3.4vw, 30px); }
+  }
+  .footer-legal{
+    max-width:1260px;
+    margin:24px auto 0 auto;
+    padding:20px 6vw 0 6vw;
+    border-top:1px solid var(--rule);
+    font-family:'Inter',sans-serif;
+    font-size:10px;
+    line-height:1.55;
+    color:var(--ink-soft);
+    opacity:0.75;
+  }
+  .footer-legal p{ margin:0 0 8px 0; }
+  .footer-legal p:last-child{ margin-bottom:0; }
+  .footer-cc{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-top:14px;
+    padding-top:12px;
+    border-top:1px solid var(--rule);
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    letter-spacing:.04em;
+    color:var(--ink-soft);
+    text-align:center;
+    flex-wrap:wrap;
+  }
+  .footer-cc a{
+    color:var(--ink-soft);
+    text-decoration:underline;
+  }
+  .footer-cc-icon{
+    display:inline-flex;
+    align-items:center;
+    gap:3px;
+    border:1px solid var(--rule);
+    border-radius:3px;
+    padding:2px 6px;
+    font-weight:700;
+  }
+  .footer-note{
+    max-width:1260px;
+    margin:14px auto 0 auto;
+    padding:0 6vw 8px 6vw;
+    font-family:'Inter',sans-serif;
+    font-style:italic;
+    font-size:12.5px;
+    line-height:1.5;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+  /* ===== DASHBOARD (sezione finale) ===== */
+  .kpi-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:24px; }
+  .kpi{ background:#fcfcfb; border-radius:10px; padding:20px 22px; box-shadow:var(--shadow-md); border-top:4px solid #2a78d6; }
+  .kpi.rimpatri{ border-top-color:#eb6834; }
+  .kpi.arrivi{ border-top-color:#1baf7a; }
+  .kpi-label{ font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:8px; }
+  .kpi-value{ font-family:'Inter',sans-serif; font-weight:800; font-size:32px; color:var(--ink); line-height:1; margin-bottom:6px; }
+  .kpi-note{ font-size:12.5px; color:#898781; line-height:1.5; }
+  .chart-card{ background:#fcfcfb; border-radius:10px; padding:26px 28px; box-shadow:var(--shadow-md); margin-bottom:22px; }
+  .chart-title{ font-family:'Fraunces',serif; font-weight:700; font-size:21px; margin:0 0 4px 0; color:var(--ink); }
+  .chart-period{ font-size:12.5px; color:var(--ink-soft); margin-bottom:20px; }
+  .bar-row{ display:flex; align-items:center; gap:10px; margin-bottom:13px; max-width:100%; }
+  .bar-row:last-child{ margin-bottom:0; }
+  .bar-label{ width:150px; flex-shrink:0; font-size:13px; color:var(--ink); font-weight:600; text-align:right; line-height:1.25; }
+  .bar-track{ flex:1 1 auto; min-width:0; position:relative; height:24px; background:#e1e0d9; border-radius:4px; overflow:visible; }
+  .bar-fill{ height:100%; max-width:100%; border-radius:4px 0 0 4px; position:relative; }
+  .bar-fill.asilo{ background:#2a78d6; }
+  .bar-fill.rimpatri{ background:#eb6834; }
+  .bar-fill.arrivi{ background:#1baf7a; }
+  .bar-value{ flex-shrink:0; min-width:64px; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; color:var(--ink); white-space:nowrap; text-align:left; }
+  .bar-fill[data-tooltip]{ position:relative; }
+  .bar-fill[data-tooltip]:hover::after{ content:attr(data-tooltip); position:absolute; bottom:130%; left:0; background:#14171b; color:#fdfcf7; font-size:11.5px; font-family:'Inter',sans-serif; padding:6px 10px; border-radius:6px; white-space:nowrap; box-shadow:var(--shadow-md); z-index:5; }
+  .dv-delta{ font-family:'JetBrains Mono',monospace; font-size:12px; margin-left:8px; }
+  .dv-delta.down{ color:#006300; }
+  .dv-delta.up{ color:var(--red); }
+  .side-note{ background:rgba(31,58,95,.06); border-radius:8px; padding:13px 15px; margin-top:16px; font-size:13px; color:var(--ink-soft); line-height:1.6; }
+  .side-note strong{ color:var(--ink); }
+  details.table-view{ margin-top:18px; }
+  details.table-view summary{ cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.05em; text-transform:uppercase; color:var(--navy); font-weight:700; padding:8px 0; }
+  table.data-table{ width:100%; border-collapse:separate; border-spacing:0; font-size:14px; margin-top:8px; border-radius:6px; overflow:hidden; box-shadow:0 1px 2px rgba(0,0,0,.06); }
+  table.data-table th, table.data-table td{ text-align:left; padding:8px 12px; border-bottom:1px solid var(--rule); background:#fff; }
+  table.data-table th{ font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:#fff; background:linear-gradient(160deg,#2c5c8a,var(--navy-deep)); }
+  table.data-table td.num{ font-family:'JetBrains Mono',monospace; font-weight:700; font-variant-numeric:tabular-nums; }
+  table.data-table td.nd{ color:#898781; font-style:italic; }
+  .dv-sources{ font-size:12px; color:#898781; border-top:1px solid var(--rule); margin-top:20px; padding-top:12px; line-height:1.6; }
+  @media (max-width:640px){
+    .kpi-row{ grid-template-columns:1fr; gap:10px; }
+    .kpi{ padding:14px 16px; }
+    .kpi-value{ font-size:24px; }
+    .chart-card{ padding:16px 14px; }
+    .chart-title{ font-size:17px; }
+    .chart-period{ font-size:11px; margin-bottom:14px; }
+    .bar-row{ flex-wrap:wrap; row-gap:4px; margin-bottom:15px; }
+    .bar-label{ flex-basis:100%; width:auto; text-align:left; font-size:12px; }
+    .bar-track{ height:20px; }
+    .bar-value{ font-size:12px; min-width:56px; }
+    table.data-table{ font-size:11.5px; }
+    table.data-table th, table.data-table td{ padding:6px 8px; }
+    .side-note, .dv-sources{ font-size:11.5px; }
+  }
+  /* ===== OVERLAY INTRO (obbligatorio ogni giorno) ===== */
+  .overlay{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .overlay-box{
+    position: relative;
+    max-width: 560px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(250,248,244,0.94));
+    border-radius: 16px;
+    padding: 44px 40px 40px;
+    box-shadow:
+      0 1px 2px rgba(0,0,0,0.06),
+      0 8px 16px rgba(0,0,0,0.12),
+      0 24px 48px rgba(0,0,0,0.22),
+      0 48px 90px rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.7);
+    border-top: 1px solid rgba(255,255,255,0.9);
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .overlay-box .close-x{
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    font-size: 22px;
+    color: #666;
+    cursor: pointer;
+    line-height: 1;
+    background: rgba(0,0,0,0.05);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: background 0.15s, color 0.15s;
+  }
+  .overlay-box .close-x:hover{ color: #000; background: rgba(0,0,0,0.1); }
+  .overlay-box h3{
+    margin: 0 0 4px 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+  }
+  .overlay-box h3::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #1a1a1a;
+    margin-top: 12px;
+    margin-bottom: 18px;
+  }
+  .overlay-box p{
+    font-size: 17px;
+    line-height: 1.75;
+    color: #222;
+    margin: 0;
+    text-align: left;
+    text-indent: 0;
+  }
+  body.overlay-open{ overflow:hidden; }
+  /* ===== LAYOUT A DUE COLONNE — sidebar "Approfondimenti" a sinistra (Mario, 26/8/2026,
+     ispirata alla colonna "Ultime notizie" di Cointelegraph.it). Stile fisso e permanente:
+     sidebar semplice, senza card pesanti, titolo Fraunces + descrizione Inter, separatori
+     sottili — non i box colorati "pinned-strip" usati prima del 26/8/2026. ===== */
+  .page-grid{
+    display:grid;
+    grid-template-columns: 240px 1fr;
+    gap:36px;
+    align-items:start;
+  }
+  .side-col{
+    position:sticky;
+    top:96px;
+  }
+  .sidebar-block{
+    padding-top:4px;
+  }
+  .sidebar-kicker{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--navy);
+    margin-bottom:16px;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--ink);
+  }
+  .sidebar-item{
+    display:block;
+    text-decoration:none;
+    padding:14px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .sidebar-item:first-of-type{ padding-top:0; }
+  .sidebar-item:last-child{ border-bottom:none; }
+  .sidebar-item-title{
+    display:block;
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:16.5px;
+    line-height:1.32;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+  .sidebar-item:hover .sidebar-item-title{ color:var(--navy-deep); text-decoration:underline; }
+  .sidebar-item-desc{
+    display:block;
+    font-family:'Inter',sans-serif;
+    font-size:12.5px;
+    line-height:1.5;
+    color:var(--ink-soft);
+  }
+  .main-col{ min-width:0; }
+  .sidebar-block + .sidebar-block{ margin-top:36px; }
+  .sidebar-mini-list{ display:flex; flex-direction:column; gap:14px; }
+  .sidebar-mini-item{ display:block; text-decoration:none; }
+  .sidebar-mini-tag{
+    display:block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:3px;
+  }
+  .sidebar-mini-title{
+    display:block;
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:14.5px;
+    line-height:1.3;
+    color:var(--ink);
+  }
+  .sidebar-mini-item:hover .sidebar-mini-title{ color:var(--navy-deep); text-decoration:underline; }
+  .sidebar-mini-link{
+    display:inline-block;
+    margin-top:12px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+  }
+  .sidebar-mini-link:hover{ color:var(--ink); border-bottom-color:var(--ink); }
+  .sidebar-term-name{ font-family:'Fraunces',serif; font-weight:800; font-size:18px; margin-bottom:8px; color:var(--ink); }
+  .sidebar-term-def{ font-size:13px; line-height:1.6; color:var(--ink-soft); }
+  .sidebar-stats{ display:flex; flex-direction:column; gap:14px; }
+  .sidebar-stat-value{ font-family:'Fraunces',serif; font-weight:800; font-size:23px; color:var(--ink); line-height:1; }
+  .sidebar-stat-label{ font-family:'JetBrains Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); margin-top:4px; }
+  @media (max-width:900px){
+    /* Su schermi stretti la prima notizia deve restare in cima: il contenuto
+       principale passa avanti nell'ordine visivo, la colonna "Approfondimenti"
+       scorre più in basso, dopo tutte le sezioni (regola di Mario, 26/8/2026). */
+    .page-grid{ grid-template-columns:1fr; gap:0; }
+    .main-col{ order:1; }
+    .side-col{ order:2; position:static; margin-top:36px; margin-bottom:0; }
+    .sidebar-block{
+      background:linear-gradient(160deg, #eaeef3, #dde4ec);
+      border-left:5px solid var(--navy);
+      border-radius:8px;
+      padding:18px 20px;
+    }
+    .sidebar-block + .sidebar-block{ margin-top:14px; }
+  }
+</style>
+</head>
+<body id="top" data-edition="2026-09-04" data-published="2026-09-04T05:30:00+02:00">
+<!-- ===== OVERLAY INTRO — SEMPRE PRESENTE, IDENTICO OGNI GIORNO ===== -->
+<div class="overlay" id="introOverlay">
+<div class="overlay-box">
+<button class="close-x" id="closeOverlay" aria-label="Chiudi">&times;</button>
+<h3>Un modo diverso di leggere le notizie</h3>
+<p>Ogni notizia ha tante voci quante sono le penne che la scrivono.<br><br>Un giornale sceglie un titolo, un altro ne sceglie uno opposto; uno mette la notizia in prima pagina, un altro la nasconde in fondo.<br><br>Nessuno mente del tutto, ma nessuno racconta tutto.<br><br>"Il Contribuente" nasce per mettere queste voci una accanto all'altra — italiane e straniere — senza sceglierne una al posto tuo.<br><br>I fatti restano fatti. Il pensiero, quello, resta tuo.</p>
+</div>
+</div>
+<div class="masthead">
+  <div class="masthead-top">
+    <span>Edizione digitale</span>
+    <span>4 Settembre 2026</span>
+    <span>Rassegna stampa quotidiana</span>
+  </div>
+  <h1 class="masthead-title">Il <em>Contribuente</em></h1>
+  <div class="masthead-sub">Italia, Europa, geopolitica, immigrazione, mercati e benessere — sintesi multi-fonte, con confronto diretto tra testate diverse sugli stessi fatti, senza etichette politiche.</div>
+  <div class="masthead-badges">
+    <a class="badge" href="https://www.ansa.it" target="_blank" rel="noopener noreferrer">Ansa</a>
+    <a class="badge" href="https://www.lapresse.it" target="_blank" rel="noopener noreferrer">LaPresse</a>
+    <a class="badge" href="https://www.corriere.it" target="_blank" rel="noopener noreferrer">Corriere della Sera</a>
+    <a class="badge" href="https://www.ilsole24ore.com" target="_blank" rel="noopener noreferrer">Il Sole 24 Ore</a>
+    <a class="badge" href="https://www.tgcom24.mediaset.it" target="_blank" rel="noopener noreferrer">Tgcom24</a>
+    <a class="badge" href="https://www.adnkronos.com" target="_blank" rel="noopener noreferrer">Adnkronos</a>
+    <a class="badge" href="https://www.open.online" target="_blank" rel="noopener noreferrer">Open</a>
+    <a class="badge" href="https://www.ilpost.it" target="_blank" rel="noopener noreferrer">Il Post</a>
+    <a class="badge" href="https://www.ilfattoquotidiano.it" target="_blank" rel="noopener noreferrer">Il Fatto Quotidiano</a>
+    <a class="badge" href="https://www.ilgiornale.it" target="_blank" rel="noopener noreferrer">Il Giornale</a>
+    <a class="badge" href="https://www.lanazione.it" target="_blank" rel="noopener noreferrer">La Nazione</a>
+    <a class="badge" href="https://www.ilmattino.it" target="_blank" rel="noopener noreferrer">Il Mattino</a>
+    <a class="badge" href="https://www.ilgiorno.it" target="_blank" rel="noopener noreferrer">Il Giorno</a>
+    <a class="badge" href="https://www.romatoday.it" target="_blank" rel="noopener noreferrer">RomaToday</a>
+    <a class="badge" href="https://www.dire.it" target="_blank" rel="noopener noreferrer">Dire</a>
+    <a class="badge" href="https://www.rsi.ch" target="_blank" rel="noopener noreferrer">RSI</a>
+    <a class="badge" href="https://it.euronews.com" target="_blank" rel="noopener noreferrer">Euronews</a>
+    <a class="badge" href="https://www.quotidiano.net" target="_blank" rel="noopener noreferrer">Quotidiano Nazionale</a>
+    <a class="badge" href="https://www.globalist.it" target="_blank" rel="noopener noreferrer">Globalist</a>
+    <a class="badge" href="https://www.panorama.it" target="_blank" rel="noopener noreferrer">Panorama</a>
+    <a class="badge" href="https://www.iltempo.it" target="_blank" rel="noopener noreferrer">Il Tempo</a>
+    <a class="badge" href="https://www.virgilio.it" target="_blank" rel="noopener noreferrer">Virgilio Notizie</a>
+    <a class="badge" href="https://www.cnn.com" target="_blank" rel="noopener noreferrer">CNN</a>
+    <a class="badge" href="https://www.bloomberg.com" target="_blank" rel="noopener noreferrer">Bloomberg</a>
+    <a class="badge" href="https://www.cnbc.com" target="_blank" rel="noopener noreferrer">CNBC</a>
+    <a class="badge" href="https://www.internazionale.it" target="_blank" rel="noopener noreferrer">Internazionale (Reuters)</a>
+    <a class="badge" href="https://www.elespanol.com" target="_blank" rel="noopener noreferrer">El Español</a>
+    <a class="badge" href="https://www.laregione.ch" target="_blank" rel="noopener noreferrer">laRegione.ch</a>
+    <a class="badge" href="https://tg24.sky.it" target="_blank" rel="noopener noreferrer">Sky TG24</a>
+    <a class="badge" href="https://www.ilgiornaleditalia.it" target="_blank" rel="noopener noreferrer">Il Giornale d'Italia</a>
+    <a class="badge" href="https://it.finance.yahoo.com" target="_blank" rel="noopener noreferrer">Yahoo Finanza Italia</a>
+    <a class="badge" href="https://www.ilsussidiario.net" target="_blank" rel="noopener noreferrer">Il Sussidiario</a>
+    <a class="badge" href="https://www.agenzianova.com" target="_blank" rel="noopener noreferrer">Agenzia Nova</a>
+    <a class="badge" href="https://www.journaldunet.com" target="_blank" rel="noopener noreferrer">Journal du Net</a>
+    <a class="badge" href="https://www.publicsenat.fr" target="_blank" rel="noopener noreferrer">Public Sénat</a>
+    <a class="badge" href="https://theobjective.com" target="_blank" rel="noopener noreferrer">The Objective</a>
+    <a class="badge" href="https://www.timesofisrael.com" target="_blank" rel="noopener noreferrer">Times of Israel</a>
+    <a class="badge" href="https://www.cfr.org" target="_blank" rel="noopener noreferrer">Cfr</a>
+    <a class="badge" href="https://techstartups.com" target="_blank" rel="noopener noreferrer">Tech Startups</a>
+    <a class="badge" href="https://www.frontex.europa.eu" target="_blank" rel="noopener noreferrer">Frontex</a>
+    <a class="badge" href="https://www.fnsi.it" target="_blank" rel="noopener noreferrer">FNSI</a>
+    <a class="badge" href="https://www.milanotoday.it" target="_blank" rel="noopener noreferrer">MilanoToday</a>
+    <a class="badge" href="https://www.sciencedaily.com" target="_blank" rel="noopener noreferrer">ScienceDaily</a>
+    <a class="badge" href="https://jamanetwork.com" target="_blank" rel="noopener noreferrer">JAMA Network Open</a>
+    <a class="badge" href="https://www.nature.com" target="_blank" rel="noopener noreferrer">Nature</a>
+    <a class="badge" href="https://news.uthscsa.edu" target="_blank" rel="noopener noreferrer">UT Health San Antonio</a>
+    <a class="badge" href="https://www.cam.ac.uk" target="_blank" rel="noopener noreferrer">University of Cambridge</a>
+    <a class="badge" href="https://dataconomy.com" target="_blank" rel="noopener noreferrer">Dataconomy</a>
+    <a class="badge" href="https://techcrunch.com" target="_blank" rel="noopener noreferrer">TechCrunch</a>
+    <a class="badge" href="https://www.washingtonpost.com" target="_blank" rel="noopener noreferrer">Washington Post</a>
+    <a class="badge" href="https://fortune.com" target="_blank" rel="noopener noreferrer">Fortune</a>
+    <a class="badge" href="https://www.aljazeera.com" target="_blank" rel="noopener noreferrer">Al Jazeera</a>
+    <a class="badge" href="https://www.anews.com.tr" target="_blank" rel="noopener noreferrer">anews</a>
+    <a class="badge" href="https://wtop.com" target="_blank" rel="noopener noreferrer">WTOP</a>
+    <a class="badge" href="https://www.axios.com" target="_blank" rel="noopener noreferrer">Axios</a>
+    <a class="badge" href="https://www.adn24.it" target="_blank" rel="noopener noreferrer">Adn24</a>
+    <a class="badge" href="https://www.arabnews.com" target="_blank" rel="noopener noreferrer">Arab News</a>
+    <a class="badge" href="https://www.hrw.org" target="_blank" rel="noopener noreferrer">Human Rights Watch</a>
+    <a class="badge" href="https://english.news.cn" target="_blank" rel="noopener noreferrer">Xinhua</a>
+    <a class="badge" href="https://spaceflightnow.com" target="_blank" rel="noopener noreferrer">Spaceflight Now</a>
+    <a class="badge" href="https://www.reuters.com" target="_blank" rel="noopener noreferrer">Reuters</a>
+    <a class="badge" href="https://www.wsj.com" target="_blank" rel="noopener noreferrer">Wall Street Journal</a>
+    <a class="badge" href="https://www.luccaindiretta.it" target="_blank" rel="noopener noreferrer">LuccaInDiretta</a>
+    <a class="badge" href="https://forzearmate.org" target="_blank" rel="noopener noreferrer">forzearmate.org</a>
+    <a class="badge" href="https://ria.ru" target="_blank" rel="noopener noreferrer">RIA Novosti</a>
+    <a class="badge" href="https://www.npr.org" target="_blank" rel="noopener noreferrer">NPR</a>
+    <a class="badge" href="https://www.cbsnews.com" target="_blank" rel="noopener noreferrer">CBS News</a>
+    <a class="badge" href="https://www.aa.com.tr" target="_blank" rel="noopener noreferrer">Anadolu Agency</a>
+    <a class="badge" href="https://www.lavocedinewyork.com" target="_blank" rel="noopener noreferrer">La Voce di New York</a>
+    <a class="badge" href="https://federconsumatori.it" target="_blank" rel="noopener noreferrer">Federconsumatori</a>
+    <a class="badge" href="https://www.infocilento.it" target="_blank" rel="noopener noreferrer">InfoCilento</a>
+    <a class="badge" href="https://www.salernotoday.it" target="_blank" rel="noopener noreferrer">SalernoToday</a>
+    <a class="badge" href="https://www.ilgallo.it" target="_blank" rel="noopener noreferrer">Il Gallo</a>
+    <a class="badge" href="https://www.corrieresalentino.it" target="_blank" rel="noopener noreferrer">Corriere Salentino</a>
+    <a class="badge" href="https://www.immediato.net" target="_blank" rel="noopener noreferrer">l'Immediato</a>
+    <a class="badge" href="https://altarimini.it" target="_blank" rel="noopener noreferrer">Altarimini</a>
+    <a class="badge" href="https://www.statoquotidiano.it" target="_blank" rel="noopener noreferrer">Stato Quotidiano</a>
+    <a class="badge" href="https://www.pbs.org" target="_blank" rel="noopener noreferrer">PBS NewsHour</a>
+    <a class="badge" href="https://www.pakistantoday.com.pk" target="_blank" rel="noopener noreferrer">Pakistan Today</a>
+    <a class="badge" href="https://sudantribune.com" target="_blank" rel="noopener noreferrer">Sudan Tribune</a>
+    <a class="badge" href="https://www.milanofinanza.it" target="_blank" rel="noopener noreferrer">MilanoFinanza</a>
+    <a class="badge" href="https://easternherald.com" target="_blank" rel="noopener noreferrer">Eastern Herald</a>
+    <a class="badge" href="https://en.spaziocrypto.com" target="_blank" rel="noopener noreferrer">Spaziocrypto</a>
+    <a class="badge" href="https://www.quifinanza.it" target="_blank" rel="noopener noreferrer">QuiFinanza</a>
+    <a class="badge" href="https://www.federalreserve.gov" target="_blank" rel="noopener noreferrer">Federal Reserve</a>
+    <a class="badge" href="https://www.italpress.com" target="_blank" rel="noopener noreferrer">Italpress</a>
+    <a class="badge" href="https://www.blitzquotidiano.it" target="_blank" rel="noopener noreferrer">Blitz Quotidiano</a>
+    <a class="badge" href="https://www.teleacras.it" target="_blank" rel="noopener noreferrer">Teleacras</a>
+    <a class="badge" href="https://www.imolaoggi.it" target="_blank" rel="noopener noreferrer">Imola Oggi</a>
+    <a class="badge" href="https://finance.yahoo.com" target="_blank" rel="noopener noreferrer">Yahoo Finance</a>
+    <a class="badge" href="https://www.98zero.com" target="_blank" rel="noopener noreferrer">98Zero</a>
+    <a class="badge" href="https://www.agi.it" target="_blank" rel="noopener noreferrer">AGI</a>
+    <a class="badge" href="https://www.bleepingcomputer.com" target="_blank" rel="noopener noreferrer">BleepingComputer</a>
+    <a class="badge" href="https://www.borsaitaliana.it" target="_blank" rel="noopener noreferrer">Borsa Italiana/Radiocor</a>
+    <a class="badge" href="https://www.catanzaroinforma.it" target="_blank" rel="noopener noreferrer">CatanzaroInforma</a>
+    <a class="badge" href="https://www.chinadaily.com.cn" target="_blank" rel="noopener noreferrer">China Daily</a>
+    <a class="badge" href="https://www.coindesk.com" target="_blank" rel="noopener noreferrer">CoinDesk</a>
+    <a class="badge" href="https://cyprus-mail.com" target="_blank" rel="noopener noreferrer">Cyprus Mail</a>
+    <a class="badge" href="https://www.engadget.com" target="_blank" rel="noopener noreferrer">Engadget</a>
+    <a class="badge" href="https://english.elpais.com" target="_blank" rel="noopener noreferrer">El País</a>
+    <a class="badge" href="https://www.fanpage.it" target="_blank" rel="noopener noreferrer">Fanpage</a>
+    <a class="badge" href="https://www.grandangoloagrigento.it" target="_blank" rel="noopener noreferrer">GrandangoloAgrigento</a>
+    <a class="badge" href="https://www.infobae.com" target="_blank" rel="noopener noreferrer">Infobae</a>
+    <a class="badge" href="https://www.investing.com" target="_blank" rel="noopener noreferrer">Investing.com</a>
+    <a class="badge" href="https://www.macrumors.com" target="_blank" rel="noopener noreferrer">MacRumors</a>
+    <a class="badge" href="https://openai.com" target="_blank" rel="noopener noreferrer">OpenAI</a>
+    <a class="badge" href="https://tass.com" target="_blank" rel="noopener noreferrer">Tass</a>
+    <a class="badge" href="https://www.telenuova.tv" target="_blank" rel="noopener noreferrer">Telenuova</a>
+    <a class="badge" href="https://www.tempostretto.it" target="_blank" rel="noopener noreferrer">Tempo Stretto</a>
+    <a class="badge" href="https://the-decoder.com" target="_blank" rel="noopener noreferrer">The Decoder</a>
+    <a class="badge" href="https://www.theguardian.com" target="_blank" rel="noopener noreferrer">The Guardian</a>
+    <a class="badge" href="https://venezuelanalysis.com" target="_blank" rel="noopener noreferrer">Venezuelanalysis</a>
+    <a class="badge" href="https://english.wafa.ps" target="_blank" rel="noopener noreferrer">WAFA</a>
+    <a class="badge" href="https://www.rferl.org" target="_blank" rel="noopener noreferrer">RFE/RL</a>
+    <a class="badge" href="https://www.washingtontimes.com" target="_blank" rel="noopener noreferrer">Washington Times</a>
+    <a class="badge" href="https://abc7ny.com" target="_blank" rel="noopener noreferrer">ABC7 New York</a>
+    <a class="badge" href="https://www.elconstitucional.es" target="_blank" rel="noopener noreferrer">El Constitucional</a>
+    <a class="badge" href="https://euroweeklynews.com" target="_blank" rel="noopener noreferrer">Euro Weekly News</a>
+    <a class="badge" href="https://www.ilfoglio.it" target="_blank" rel="noopener noreferrer">Il Foglio</a>
+    <a class="badge" href="https://9to5mac.com" target="_blank" rel="noopener noreferrer">9to5Mac</a>
+    <a class="badge" href="https://www.apple.com/newsroom" target="_blank" rel="noopener noreferrer">Apple Newsroom</a>
+    <a class="badge" href="https://www.smartphonology.it" target="_blank" rel="noopener noreferrer">Smartphonology</a>
+    <a class="badge" href="https://www.teleborsa.it" target="_blank" rel="noopener noreferrer">Teleborsa</a>
+    <a class="badge" href="https://www.quotidianolavoce.it" target="_blank" rel="noopener noreferrer">Quotidiano La Voce</a>
+    <a class="badge" href="https://www.primaonline.it" target="_blank" rel="noopener noreferrer">Prima Online</a>
+    <a class="badge" href="https://www.cronachedellacampania.it" target="_blank" rel="noopener noreferrer">Cronache della Campania</a>
+    <a class="badge" href="https://www.bresciatomorrow.it" target="_blank" rel="noopener noreferrer">Brescia Tomorrow</a>
+    <a class="badge" href="https://www.cronachediscienza.it" target="_blank" rel="noopener noreferrer">Cronache di Scienza</a>
+    <a class="badge" href="https://thehackernews.com" target="_blank" rel="noopener noreferrer">The Hacker News</a>
+    <a class="badge" href="https://www.agrigentonotizie.it" target="_blank" rel="noopener noreferrer">AgrigentoNotizie</a>
+    <a class="badge" href="https://www.sardegnagol.eu" target="_blank" rel="noopener noreferrer">Sardegnagol</a>
+    <a class="badge" href="https://www.radiobullets.com" target="_blank" rel="noopener noreferrer">Radio Bullets</a>
+    <a class="badge" href="https://tech.everyeye.it" target="_blank" rel="noopener noreferrer">Tech Everyeye</a>
+    <a class="badge" href="https://irpimedia.irpi.eu" target="_blank" rel="noopener noreferrer">IrpiMedia</a>
+    <a class="badge" href="https://askanews.it" target="_blank" rel="noopener noreferrer">Askanews</a>
+    <a class="badge" href="https://it.benzinga.com" target="_blank" rel="noopener noreferrer">Benzinga Italia</a>
+    <a class="badge" href="https://www.casertanews.it" target="_blank" rel="noopener noreferrer">CasertaNews</a>
+    <a class="badge" href="https://www.channeldraw.org" target="_blank" rel="noopener noreferrer">ChannelDraw</a>
+    <a class="badge" href="https://www.fnob.it" target="_blank" rel="noopener noreferrer">FNOB</a>
+    <a class="badge" href="https://www.giocareinborsa.com" target="_blank" rel="noopener noreferrer">Giocare in Borsa</a>
+    <a class="badge" href="https://www.latinatoday.it" target="_blank" rel="noopener noreferrer">LatinaToday</a>
+    <a class="badge" href="https://www.leggo.it" target="_blank" rel="noopener noreferrer">Leggo</a>
+    <a class="badge" href="https://www.lettera43.it" target="_blank" rel="noopener noreferrer">Lettera43</a>
+    <a class="badge" href="https://milano.notizie.it" target="_blank" rel="noopener noreferrer">Milano Notizie</a>
+    <a class="badge" href="https://www.interno.gov.it" target="_blank" rel="noopener noreferrer">Ministero dell'Interno</a>
+    <a class="badge" href="https://www.thesocialpost.it" target="_blank" rel="noopener noreferrer">The Social Post</a>
+    <a class="badge" href="https://www.wantedinrome.com" target="_blank" rel="noopener noreferrer">Wanted in Rome</a>
+    <a class="badge" href="https://www.thoracic.org" target="_blank" rel="noopener noreferrer">American Thoracic Society</a>
+    <!-- Testate aggiuntive citate negli articoli di oggi, 4/9/2026 -->
+    <a class="badge" href="https://kyivindependent.com" target="_blank" rel="noopener noreferrer">Kyiv Independent</a>
+    <a class="badge" href="https://www.themoscowtimes.com" target="_blank" rel="noopener noreferrer">The Moscow Times</a>
+    <a class="badge" href="https://www.brasildefato.com.br" target="_blank" rel="noopener noreferrer">Brasil de Fato</a>
+    <a class="badge" href="https://www.notus.org" target="_blank" rel="noopener noreferrer">NOTUS</a>
+    <a class="badge" href="https://www.news.de" target="_blank" rel="noopener noreferrer">news.de (dpa)</a>
+    <a class="badge" href="https://www.thelocal.it" target="_blank" rel="noopener noreferrer">The Local Italy</a>
+    <a class="badge" href="https://www.borderline24.com" target="_blank" rel="noopener noreferrer">Borderline24</a>
+    <a class="badge" href="https://roma.lamilano.it" target="_blank" rel="noopener noreferrer">La Milano</a>
+    <a class="badge" href="https://www.veronaoggi.it" target="_blank" rel="noopener noreferrer">VeronaOggi</a>
+    <a class="badge" href="https://www.airwaysmag.com" target="_blank" rel="noopener noreferrer">Airways Magazine</a>
+    <a class="badge" href="https://www.easa.europa.eu" target="_blank" rel="noopener noreferrer">EASA</a>
+    <a class="badge" href="https://www.umbriajournal.com" target="_blank" rel="noopener noreferrer">Umbria Journal</a>
+    <a class="badge" href="https://www.investiremag.it" target="_blank" rel="noopener noreferrer">Investire Oggi</a>
+    <a class="badge" href="https://www.idealista.it" target="_blank" rel="noopener noreferrer">Idealista News</a>
+    <a class="badge" href="https://blogs.nvidia.com" target="_blank" rel="noopener noreferrer">Nvidia Newsroom</a>
+    <a class="badge" href="https://www.theregister.com" target="_blank" rel="noopener noreferrer">The Register</a>
+    <a class="badge" href="https://www.morningtech.it" target="_blank" rel="noopener noreferrer">MorningTech</a>
+    <a class="badge" href="https://www.adexchanger.com" target="_blank" rel="noopener noreferrer">AdExchanger</a>
+    <a class="badge" href="https://www.tradingkey.com" target="_blank" rel="noopener noreferrer">TradingKey</a>
+    <a class="badge" href="https://www.smartworld.it" target="_blank" rel="noopener noreferrer">SmartWorld</a>
+    <a class="badge" href="https://www.businesspeople.it" target="_blank" rel="noopener noreferrer">BusinessPeople</a>
+    <a class="badge" href="https://www.eurekalert.org" target="_blank" rel="noopener noreferrer">EurekAlert!</a>
+    <a class="badge" href="https://www.ilsud24.it" target="_blank" rel="noopener noreferrer">Il Sud24</a>
+    <a class="badge" href="https://www.giornalepartiteiva.it" target="_blank" rel="noopener noreferrer">Giornale Partite Iva</a>
+  </div>
+  <button type="button" id="badgesToggleBtn" class="badges-toggle-btn" style="display:none;">Vedi altri</button>
+  <a href="../archivio.html" class="back-link">Archivio edizioni &rarr;</a>
+</div>
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>&#9733; GOVERNO MELONI, RECORD DI LONGEVITÀ: 1.413 GIORNI, FESTA A BARI</span>
+    <span>&#9733; FIRENZE, UCCIDE L'EX COMPAGNA E LA GETTA DA UN VIADOTTO DELL'A1: LEI AVEVA CHIAMATO LA POLIZIA DAL BAGAGLIAIO</span>
+    <span>&#9733; ZELENSKY AVVERTE SUI CIELI RUSSI, PUTIN: "TERRORISMO DI STATO"</span>
+    <span>&#9733; USA-IRAN, NUOVI RAID: TEHERAN DENUNCIA 18 MORTI, PETROLIO SOPRA I 95 DOLLARI</span>
+    <span>&#9733; VENETO, PRIMA REGIONE DI CENTRODESTRA CON LA LEGGE SUL FINE VITA</span>
+    <span>&#9733; INFLAZIONE EUROZONA AL 3,3%: BCE VERSO IL RIALZO DEI TASSI IL 10 SETTEMBRE</span>
+    <span>&#9733; FINANCIAL TIMES: "VANNACCI CAVALLO DI TROIA DELLA RUSSIA". IL GENERALE REPLICA</span>
+    <span>&#9733; NVIDIA ACQUISTA HUGGING FACE PER QUASI 13 MILIARDI DI DOLLARI</span>
+    <span>&#9733; SBARCHI IN CALO DEL 55% NEL 2026, FERMATA A LAMPEDUSA LA NAVE HUMANITY 2</span>
+    <span>&#9733; GOOGLE EVITA LO SCORPORO DELL'AD-TECH, TESLA SVELA IL CYBERCAB</span>
+    <span>&#9733; LOTTOMATICA-CIRSA, NASCE UN COLOSSO DEL GIOCO DA 2 MILIARDI DI EBITDA</span>
+    <span>&#9733; LEUCEMIA, COMBINAZIONE SENZA CHEMIO INTENSIVA RADDOPPIA LA SOPRAVVIVENZA LIBERA DA PROGRESSIONE</span>
+  </div>
+</div>
+<div class="market-bar">
+  <div class="market-bar-inner">
+    <div class="market-card">
+      <div class="market-label">Benzina</div>
+      <div class="market-value">2,039€/L</div>
+      <div class="market-delta up">Prezzo medio self, in rialzo</div>
+      <div class="market-source">self, media nazionale (Mimit, 3/9)</div>
+    </div>
+    <div class="market-card">
+      <div class="market-label">Diesel</div>
+      <div class="market-value">2,147€/L</div>
+      <div class="market-delta up">Prezzo medio self, in rialzo</div>
+      <div class="market-source">self, media nazionale (Mimit, 3/9)</div>
+    </div>
+    <div class="market-card">
+      <div class="market-label">Petrolio</div>
+      <div class="market-value">95,13$</div>
+      <div class="market-delta down">Brent, -0,52% oggi</div>
+      <div class="market-source">al barile (Investing.com, 4/9)</div>
+    </div>
+    <div class="market-card">
+      <div class="market-label">Gas TTF</div>
+      <div class="market-value">72,82€</div>
+      <div class="market-delta down">-1,1% oggi</div>
+      <div class="market-source">al MWh, Amsterdam (Ansa, 3/9)</div>
+    </div>
+    <div class="market-card">
+      <div class="market-label">Oro</div>
+      <div class="market-value">~122,50€/g</div>
+      <div class="market-delta up">+0,64% oggi</div>
+      <div class="market-source">al grammo (Il Sole 24 Ore, 3/9)</div>
+    </div>
+    <div class="market-card">
+      <div class="market-label">Bitcoin</div>
+      <div class="market-value">~77.270$</div>
+      <div class="market-delta up">+0,35% in 24h</div>
+      <div class="market-source">quotazione (Investing.com, 4/9)</div>
+    </div>
+    <div class="market-card" style="border-color:#7c1d16;">
+      <div class="market-label">Palestinesi uccisi</div>
+      <div class="market-value" style="color:#e07a5f;">73.454</div>
+      <div class="market-delta up">di cui 1.318 dalla tregua dell'11 ottobre 2025</div>
+      <div class="market-source">dal 7/10/2023, dati sanitari Gaza (WAFA, 30/8/2026)</div>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+<div class="page-grid">
+  <div class="side-col">
+    <div class="sidebar-block">
+      <div class="sidebar-kicker">Approfondimenti fissi</div>
+      <a href="../SuperPotenze/superPower.html" class="sidebar-item">
+        <span class="sidebar-item-title">Geopolitica</span>
+        <span class="sidebar-item-desc">Le tre superpotenze: guerre, alleanze e potere nel mondo</span>
+      </a>
+      <a href="../conflittiMondo/conflitto.html" class="sidebar-item">
+        <span class="sidebar-item-title">Conflitti nel mondo</span>
+        <span class="sidebar-item-desc">La mappa interattiva di tutte le guerre attive oggi sul pianeta.</span>
+      </a>
+      <a href="../immigrazioneEuropa/immigrazione.html" class="sidebar-item">
+        <span class="sidebar-item-title">Immigrazione in Europa</span>
+        <span class="sidebar-item-desc">Da dove vengono davvero i migranti irregolari: cause politiche, accordi e cause socioeconomiche.</span>
+      </a>
+      <a href="../guerre/index.html" class="sidebar-item">
+        <span class="sidebar-item-title">Guerre</span>
+        <span class="sidebar-item-desc">Palestina-Israele, Russia-Ucraina e altri conflitti, dalle origini a oggi.</span>
+      </a>
+      <a href="../dazi/dazi1.html" class="sidebar-item">
+        <span class="sidebar-item-title">Dazi e guerre commerciali</span>
+        <span class="sidebar-item-desc">Dal "Liberation Day" 2025 alla sentenza della Corte Suprema, fino al nuovo fronte con il Canada.</span>
+      </a>
+      <a href="../sanzioni/sanzioni1.html" class="sidebar-item">
+        <span class="sidebar-item-title">Sanzioni nel mondo</span>
+        <span class="sidebar-item-desc">Iran, Russia, Corea del Nord: come funzionano i tre principali regimi sanzionatori attivi.</span>
+      </a>
+      <a href="../glossario/glossario.html" class="sidebar-item">
+        <span class="sidebar-item-title">Cosa significa</span>
+        <span class="sidebar-item-desc">Il piccolo glossario dei termini che tornano ogni giorno nella rassegna.</span>
+      </a>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-kicker">Termine del giorno</div>
+      <div class="sidebar-term-name">Cruscotto statistico (Viminale)</div>
+      <div class="sidebar-term-def">L'aggiornamento periodico pubblicato dal Ministero dell'Interno con i numeri su sbarchi, hotspot e rimpatri, confrontati anno su anno: la fonte principale con cui si misura, dati alla mano, l'andamento dei flussi migratori verso l'Italia.</div>
+      <a href="../glossario/glossario.html" class="sidebar-mini-link">Tutti i termini &rarr;</a>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-kicker">Il Contribuente in cifre</div>
+      <div class="sidebar-stats">
+        <div>
+          <div class="sidebar-stat-value">45</div>
+          <div class="sidebar-stat-label">Testate diverse citate solo oggi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-col">
+  <div class="toc">
+    <div class="toc-inner">
+      <div class="toc-kicker">Indice</div>
+      <div class="toc-links">
+        <a href="#confronto" class="toc-link">Confronto</a>
+        <a href="#estero" class="toc-link">Dall'estero</a>
+        <a href="#italia" class="toc-link">Italia</a>
+        <a href="#disagio" class="toc-link">Disagio città</a>
+        <a href="#europa" class="toc-link">Europa</a>
+        <a href="#mondo" class="toc-link">Mondo</a>
+        <a href="#finanza" class="toc-link">Finanza</a>
+        <a href="#benessere" class="toc-link">Benessere</a>
+        <a href="#tecnologia" class="toc-link">Tecnologia</a>
+        <a href="#ia" class="toc-link">Intelligenza Artificiale</a>
+        <a href="#immigrazione-italia" class="toc-link">Immigrazione Italia</a>
+        <a href="#dati-immigrazione" class="toc-link">Dati Immigrazione</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="verify-badge">
+    <div class="verify-badge-inner">&#10003; Oggi abbiamo confrontato <strong>62 fonti</strong> su <strong>45 testate</strong> diverse</div>
+  </div>
+
+  <div class="quote-day">
+    <div class="quote-day-inner">
+      <div class="quote-day-label">Citazione del giorno &middot; 1/2</div>
+      <div class="quote-day-text">"Coloro che tacciono, che non prestano attenzione a questo, diventano complici del terrorismo internazionale."</div>
+      <div class="quote-day-author">— Vladimir Putin, presidente russo, al Forum economico orientale di Vladivostok, sull'avvertimento di Zelensky riguardo allo spazio aereo russo</div>
+    </div>
+  </div>
+  <div class="quote-day">
+    <div class="quote-day-inner">
+      <div class="quote-day-label">Citazione del giorno &middot; 2/2</div>
+      <div class="quote-day-text">"Se dovesse succedere a me io vorrei poter decidere, di certo non vorrei che qualcun altro decidesse al mio posto."</div>
+      <div class="quote-day-author">— Luca Zaia, presidente del Consiglio regionale del Veneto, sul voto della regione sulla legge per il fine vita</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat" style="border-top-color:var(--navy);">
+      <div class="stat-label">Giorni consecutivi del governo Meloni, nuovo record della Repubblica</div>
+      <div class="stat-value">1.413</div>
+      <div class="stat-delta">supera il precedente primato del Berlusconi II (1.412 giorni)</div>
+    </div>
+    <div class="stat wine">
+      <div class="stat-label">Inflazione nell'eurozona ad agosto, massimo da tre anni</div>
+      <div class="stat-value">3,3%</div>
+      <div class="stat-delta">Bce verso il rialzo dei tassi il 9-10 settembre</div>
+    </div>
+    <div class="stat gold">
+      <div class="stat-label">Acquisizione di Hugging Face da parte di Nvidia</div>
+      <div class="stat-value">12,9 mld $</div>
+      <div class="stat-delta">la mossa più ambiziosa finora per consolidare l'ecosistema IA</div>
+    </div>
+    <div class="stat" style="border-top-color:#7c1d16;">
+      <div class="stat-label">Calo degli sbarchi in Italia nel 2026 rispetto al 2025</div>
+      <div class="stat-value">-55%</div>
+      <div class="stat-delta">19.747 arrivi dal 1&deg; gennaio, dato Viminale al 2/9</div>
+    </div>
+  </div>
+  <div class="section-note" style="margin-top:-32px; margin-bottom:44px;">Dati: Ansa/Youtrend per il record del governo Meloni, Idealista/Sky TG24 per l'inflazione eurozona, Nvidia Newsroom/Fortune per l'acquisizione di Hugging Face, Ministero dell'Interno per gli sbarchi. Numeri soggetti ad aggiornamento nelle prossime ore.</div>
+
+  <div class="agenda-box">
+    <h3 class="agenda-title">Cosa succede oggi</h3>
+    <div class="agenda-list">
+      <div class="agenda-item"><span class="agenda-time">Usa</span><span class="agenda-event">Il Bureau of Labor Statistics pubblica il rapporto sull'occupazione di agosto (nonfarm payrolls), atteso alle 14:30 italiane: dato chiave per le prossime mosse della Federal Reserve sui tassi</span></div>
+      <div class="agenda-item"><span class="agenda-time">Russia</span><span class="agenda-event">Si chiude a Vladivostok l'ultima giornata del Forum economico orientale (1-4 settembre), con Vladimir Putin protagonista degli interventi conclusivi</span></div>
+      <div class="agenda-item"><span class="agenda-time">Italia</span><span class="agenda-event">A Bari, evento pubblico di Fratelli d'Italia per il record di longevità del governo Meloni: discorso della premier atteso in serata, mobilitazione delle opposizioni in città</span></div>
+      <div class="agenda-item"><span class="agenda-time">Italia</span><span class="agenda-event">Debutta nei negozi il nuovo Samsung Galaxy S26 FE, disponibile da oggi in due configurazioni</span></div>
+    </div>
+  </div>
+
+
+  <!-- ===== CONFRONTO: ZELENSKY AVVERTE SUI CIELI RUSSI, PUTIN RISPONDE ===== -->
+  <div class="section" id="confronto">
+    <div class="section-head">
+      <span class="section-tag tag-confronto">Confronto</span>
+      <h2 class="section-title">Zelensky avverte le compagnie aeree sui cieli russi, Putin: "È terrorismo di Stato"</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>La guerra tra Russia e Ucraina, iniziata con l'invasione russa del 24 febbraio 2022, ha reso da allora inagibile lo spazio aereo ucraino, colpito da anni di missili e droni russi sulle città. Negli ultimi mesi Kiev ha intensificato una campagna di droni a lungo raggio contro raffinerie, depositi di carburante e infrastrutture militari in territorio russo, colpendo obiettivi anche a centinaia di chilometri dal confine. In parallelo prosegue un tentativo di mediazione statunitense per un accordo di pace, con contatti tra Mosca e Kiev proseguiti anche attraverso canali di intelligence.</p>
+    </div>
+    <div class="duel">
+      <div class="duel-fact">
+        <div class="duel-fact-label">Il fatto</div>
+        <div class="duel-fact-text">Il 1&deg; e 2 settembre 2026 il presidente ucraino Volodymyr Zelensky ha avvertito compagnie aeree, assicuratori e governi stranieri che lo spazio aereo russo, in particolare gli hub di Mosca e San Pietroburgo, sta diventando "completamente pericoloso" per l'espansione delle operazioni con droni ucraini a lungo raggio, affermando che "i cieli russi saranno di fatto chiusi". Il 3 settembre, al Forum economico orientale di Vladivostok, il presidente russo Vladimir Putin ha definito l'avvertimento un "atto di terrorismo di Stato", accostandolo agli attacchi ucraini contro navi mercantili. Putin ha comunque confermato che i contatti con Kiev proseguono tramite canali di intelligence, mentre Zelensky ha annunciato l'arrivo nei prossimi giorni di negoziatori statunitensi sia a Mosca sia a Kiev.</div>
+      </div>
+      <div class="duel-grid">
+        <div class="duel-side left">
+          <div class="article-image"><img src="../immagini/guerra/blue-photo-WmNy-05OthM-unsplash.jpg" alt="Cannone navale storico in un museo, bianco e nero" loading="lazy"></div>
+          <span class="duel-tag">Prospettiva ucraina — Kyiv Independent, Il Post</span><div class="duel-headline">Una pressione legittima per "portare la guerra" a Mosca</div>
+          <p class="body">Kyiv presenta l'avvertimento come conseguenza diretta dell'invasione: Zelensky ricorda che è stata la Russia a rendere inagibile lo spazio aereo ucraino dal febbraio 2022 con missili e droni sulle città, citando sei giorni consecutivi di bombardamenti su Kiev a inizio settembre, con almeno 12 morti il 1&deg; settembre. Funzionari ucraini descrivono l'obiettivo come "portare la guerra del Cremlino a casa della popolazione russa", interrompendo i collegamenti aerei di Mosca e San Pietroburgo. Zelensky assicura che i droni non prenderanno di mira aerei civili e si è detto pronto a sospendere temporaneamente gli attacchi per favorire i negoziati.</p>
+          <div class="body-extra">
+            <p class="body">L'avvertimento si inserisce nella più ampia campagna di droni a lungo raggio ucraini contro raffinerie, depositi di carburante e infrastrutture militari russe, che secondo fonti di Kyiv ha già ridotto la capacità di raffinazione del Paese. Il Kyiv Independent ricorda inoltre che un precedente piano per colpire direttamente gli aeroporti di Mosca con droni dotati di intelligenza artificiale, soprannominato "M&amp;M's", era stato accantonato a metà anno per i timori dello stesso Zelensky sulle possibili conseguenze per l'aviazione civile — segno, secondo Kiev, che l'attuale strategia punta a un effetto economico e psicologico, non a colpire i civili.</p>
+          </div>
+          <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+          <span class="source">Fonte: <a href="https://kyivindependent.com/the-russian-sky-is-becoming-completely-dangerous/" target="_blank" rel="noopener noreferrer">Kyiv Independent</a></span>
+        </div>
+        <div class="duel-side right">
+          <div class="article-image"><img src="../immagini/guerra/anna-ogiienko-Hx9uwtYnxdk-unsplash.jpg" alt="Rievocazione storica di soldati in uniforme militare" loading="lazy"></div>
+          <span class="duel-tag">Prospettiva russa — Interfax, Cremlino</span><div class="duel-headline">Per Mosca è terrorismo, "non si negozia con i terroristi"</div>
+          <p class="body">Il Cremlino definisce l'avvertimento un atto che mette a rischio l'aviazione civile internazionale. Putin ha detto che "chi tace, chi non presta attenzione a questo, diventa complice del terrorismo internazionale", riferendosi agli alleati occidentali di Kiev, e ha aggiunto che "non si negozia con i terroristi". Il ministero della Difesa russo ha minacciato "attacchi massicci" contro le infrastrutture energetiche ucraine, citando i raid ucraini ai depositi di carburante e alla logistica militare russa come prova delle reali intenzioni di Kiev.</p>
+          <div class="body-extra">
+            <p class="body">Mosca collega la dichiarazione di Zelensky alla lunga serie di attacchi ucraini già in corso da mesi contro raffinerie e impianti energetici russi, presentati come tentativi di destabilizzare l'economia nazionale. Putin ha comunque affermato che una possibilità di accordo esiste, citando il sostegno di Stati Uniti e Cina a un'intesa, e ha confermato che i canali di intelligence con Kiev restano aperti, in attesa dell'arrivo di negoziatori statunitensi sia a Mosca sia a Kiev nei prossimi giorni.</p>
+          </div>
+          <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+          <span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/topnews/2026/09/03/putin-minaccia-di-kiev-ai-voli-civili-complica-possibilita-di-negoziati-di-pace_036c8330-4578-4d12-a105-fdded249f1ab.html" target="_blank" rel="noopener noreferrer">ANSA (Interfax)</a></span>
+        </div>
+      </div>
+      <div class="duel-grid" style="grid-template-columns:1fr; border-top:1px solid var(--rule);">
+        <div class="duel-side third">
+          <div class="article-image"><img src="../immagini/guerra/brendan-beale-5ehZeIN3n2s-unsplash.jpg" alt="Militare con mascherina in tenuta da sicurezza" loading="lazy"></div>
+          <span class="duel-tag">Voce indipendente — Airways Magazine, EASA</span><div class="duel-headline">Non solo parole: le compagnie aeree cancellano già i voli su Mosca</div>
+          <p class="body">Secondo la rivista specializzata Airways Magazine, l'avvertimento di Zelensky ha già prodotto effetti concreti prima ancora dello scontro verbale con Putin: nella notte tra il 1&deg; e il 2 settembre la turca Pegasus Airlines ha cancellato 12 voli da/per l'aeroporto moscovita di Vnukovo, Turkish Airlines altri quattro, e un volo da Antalya è stato dirottato su Istanbul. Kiev ha inoltre notificato formalmente all'ICAO, l'agenzia Onu per l'aviazione civile, che lo spazio russo è a rischio per il traffico civile.</p>
+          <div class="body-extra">
+            <p class="body">La cautela precede peraltro la dichiarazione ucraina: dal gennaio 2025 l'Easa, l'agenzia europea per la sicurezza aerea, raccomanda di evitare lo spazio russo a ovest del 60&deg; meridiano est per i rischi legati alla guerra. Gli episodi di inizio settembre — 130 droni ucraini abbattuti secondo Mosca tra l'1 e il 2 settembre, con stop temporanei a Vnukovo e Domodedovo — mostrano che il rischio operativo esiste indipendentemente dalle accuse incrociate di "terrorismo di Stato": per vettori e assicuratori contano i dati aeroportuali, non la cornice politica dello scontro tra Kiev e Mosca.</p>
+          </div>
+          <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+          <span class="source">Fonte: <a href="https://www.airwaysmag.com/new-post/pegasus-moscow-flights-russian-airspace-warning" target="_blank" rel="noopener noreferrer">Airways Magazine</a>, <a href="https://www.easa.europa.eu/en/newsroom-and-events/news/eu-aviation-safety-agency-updates-safety-guidance-russian-airspace" target="_blank" rel="noopener noreferrer">EASA</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== DALL'ESTERO ===== -->
+  <div class="section" id="estero">
+    <div class="section-head">
+      <span class="section-tag tag-europa">Dall'estero</span>
+      <h2 class="section-title">Il record di Meloni e il caso Vannacci nella stampa estera</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Il governo di Giorgia Meloni, in carica dal 22 ottobre 2022, supera venerdì 4 settembre il precedente record di stabilità della Repubblica, detenuto dal secondo esecutivo di Silvio Berlusconi (1.412 giorni, 2001-2005). Dal 1946 l'Italia ha avuto 68 governi, con una durata media di appena 13 mesi. Il primato arriva mentre cresce nei sondaggi Futuro Nazionale, il partito fondato dal generale Roberto Vannacci, che propone di interrompere gli aiuti militari all'Ucraina e riaprire i canali con Mosca.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <div class="article-image"><img src="../immagini/dall'estero/alana-harris-BV5S6U9FT3o-unsplash.jpg" alt="Vista dall'oblò di un aereo su una città costiera" loading="lazy"></div>
+        <h3>Il governo Meloni supera Berlusconi: la stampa internazionale legge il record di stabilità</h3>
+        <p class="body">Il governo di Giorgia Meloni raggiunge venerdì 4 settembre 1.413 giorni consecutivi in carica, superando il primato di Silvio Berlusconi (1.412 giorni) e diventando l'esecutivo più longevo della Repubblica dal 1946. Lo riportano concordemente testate e agenzie internazionali, dalla tedesca dpa al britannico Euronews, fino a The Local Italy. Il deputato di Fratelli d'Italia Marco Osnato parla di "un punto di orgoglio", mentre secondo Euronews l'Italia non è mai stata "così centrale" nelle politiche europee su migrazione ed energia.</p>
+        <div class="body-extra">
+          <p class="body">Le fonti concordano sui dati: dal 1946 l'Italia ha avuto 68 governi con una durata media di appena 13 mesi, e la tenuta dell'esecutivo Meloni viene descritta come un'anomalia storica. Le interpretazioni divergono però sul bilancio. Secondo dpa, la premier ha più volte ricordato come inizialmente in molti "si fossero svegliati in sudore" pronosticando la caduta del governo entro sei mesi, ricordando anche come il settimanale tedesco Stern l'avesse un tempo definita "la donna più pericolosa d'Europa". Osservatori citati da Euronews indicano invece nella tenuta dei conti pubblici, difesa dalla premier e dal ministro dell'Economia Giancarlo Giorgetti, la ragione principale della fiducia guadagnata presso Bruxelles e i mercati.</p>
+          <p class="body">Le voci critiche riportate dalla stampa estera arrivano soprattutto da opposizione ed economisti. La deputata del Partito Democratico Chiara Braga sostiene, in dichiarazioni riprese da Euronews, che "questa stabilità non è stata capitalizzata" e non ha portato a "un miglioramento significativo delle condizioni di vita delle persone né della competitività delle imprese". Sulla stessa linea l'economista della Bocconi Tito Boeri, secondo cui il governo "ha cercato principalmente di sopravvivere facendo il meno possibile". Le fonti concordano infine nell'indicare la crescita del generale Roberto Vannacci e di Futuro Nazionale, dato intorno al 7% nei sondaggi, come la principale incognita per la maggioranza in vista delle elezioni del 2027.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.euronews.com/my-europe/2026/09/03/milestone-giorgia-melonis-right-wing-government-becomes-italys-longest-lasting-since-wwii" target="_blank" rel="noopener noreferrer">Euronews</a>, <a href="https://www.news.de/politik/859955624/immer-noch-da-giorgia-meloni-knackt-italiens-regierungsrekord-berlusconi-ueberholt-news-der-dpa-aktuell-zu-regierung-leuten-und-zum-4-september/1/" target="_blank" rel="noopener noreferrer">dpa</a>, <a href="https://www.thelocal.it/20260902/nothing-has-changed-meloni-government-set-to-become-italys-longest-lasting" target="_blank" rel="noopener noreferrer">The Local Italy</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/dall'estero/douglas-schneiders-ahVwKN8F_eA-unsplash.jpg" alt="Vista dall'oblò di un aereo su una costa" loading="lazy"></div>
+        <h3>Il Financial Times: "Vannacci cavallo di Troia della Russia". Il generale replica al giornale britannico</h3>
+        <p class="body">Il Financial Times ha pubblicato il 2 settembre un'inchiesta che descrive Roberto Vannacci, generale ed europarlamentare fondatore di Futuro Nazionale, come possibile "cavallo di Troia" per l'influenza russa in Italia, riprendendo un'analisi dell'European Council on Foreign Relations (Ecfr). Il giornale cita John Foreman, ex addetto della difesa dell'ambasciata britannica a Roma, secondo cui Vannacci ritiene che "la Russia dovrebbe restare un partner". Vannacci ha respinto pubblicamente l'accusa, definendola priva di prove.</p>
+        <div class="body-extra">
+          <p class="body">Secondo il Financial Times, il programma di Futuro Nazionale prevede di interrompere l'invio di armi all'Ucraina e riaprire i canali commerciali e militari con Mosca, sospesi dal 2014; il quotidiano ricorda anche un viaggio di Vannacci a Mosca nel 2021 per discutere una ripresa della cooperazione militare. Un articolo correlato di Open ipotizza che tra le ragioni della richiesta di Giorgia Meloni di riformare la legge elettorale con il ballottaggio vi sia la volontà di arginare un Vannacci "al 15%", definito un "rischio" per la tenuta della maggioranza.</p>
+          <p class="body">Vannacci ha risposto con una lettera aperta, scrivendo di rispondere "con mano tremante, dopo aver scoperto grazie a un vostro articolo di essere un candidato manciuriano" e accusando il giornale di basarsi su fonti "notoriamente russofobe" come Ecfr e Iai. Il generale ha respinto l'equivalenza tra il dissenso dalle politiche di Bruxelles e la slealtà verso l'Occidente. L'articolo del Financial Times non riporta reazioni ufficiali di Giorgia Meloni o di Fratelli d'Italia alla vicenda.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ilfoglio.it/en/politics/2026/09/02/news/the-fts-attack-on-vannacci-moscows-trojan-horse--406260" target="_blank" rel="noopener noreferrer">Financial Times (via Il Foglio)</a>, <a href="https://www.open.online/2026/09/02/financial-times-roberto-vannacci-russia/" target="_blank" rel="noopener noreferrer">Open</a></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== ITALIA ===== -->
+  <div class="section" id="italia">
+    <div class="section-head">
+      <span class="section-tag tag-italia">Italia</span>
+      <h2 class="section-title">Meloni festeggia il record a Bari, tra legge sul fine vita e allarme prezzi</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Il governo Meloni raggiunge venerdì 4 settembre 1.413 giorni di attività ininterrotta, superando il record del secondo esecutivo Berlusconi. Lo stesso giorno il Veneto diventa la prima regione di centrodestra con una legge sul suicidio assistito, dopo la sentenza della Corte Costituzionale n. 242/2019 (caso Cappato-Antoniani) che ne ha fissato i requisiti in assenza di una legge nazionale. Sul fronte economico, l'Istat certifica ad agosto un'inflazione al 3,3%, la più alta degli ultimi tre anni, trainata dai rincari energetici.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <div class="article-image"><img src="../immagini/italia/dmitry-voronov-qjNj5F03dxA-unsplash.jpg" alt="Il Colosseo illuminato di sera, simbolo di Roma" loading="lazy"></div>
+        <h3>Il governo Meloni festeggia a Bari il record di longevità, opposizioni in piazza</h3>
+        <p class="body">Il governo di Giorgia Meloni celebra venerdì 4 settembre, al porto di Bari, il raggiungimento di 1.413 giorni di attività ininterrotta, nuovo record della Repubblica che supera il precedente primato di Silvio Berlusconi (1.412 giorni). L'evento, aperto alle 16 con il discorso della premier previsto per le 19.15, coinvolge circa 10.000 partecipanti arrivati con un'ottantina di pullman organizzati da Fratelli d'Italia. Il partito ha diffuso un opuscolo di 28 pagine, "Il governo più stabile, l'Italia più forte", con i dati rivendicati dall'esecutivo.</p>
+        <div class="body-extra">
+          <p class="body">L'opuscolo di Fratelli d'Italia rivendica 1,3 milioni di nuovi posti di lavoro stabili, un tasso di occupazione record al 62,9%, 21 miliardi di euro restituiti agli italiani attraverso la riforma fiscale e una riduzione del rapporto deficit/Pil dall'8% al 3%. Il partito attribuisce al governo anche un calo dello spread Btp-Bund del 65,6% nel 2026 e una riduzione degli sbarchi di migranti dell'80% nel confronto gennaio-luglio con l'anno precedente. Le opposizioni contestano questo bilancio: PD, M5S e Avs sostengono che la stabilità del governo non si sia tradotta in miglioramenti concreti per i cittadini, mentre alcune associazioni studentesche hanno annunciato per la stessa giornata una mobilitazione a Bari, con lo slogan "Meloni vattin", per denunciare il caro affitti, il costo dei libri e le condizioni della scuola pubblica.</p>
+          <p class="body">La giornata arriva mentre l'Italia, dal 1946, ha avuto 68 governi con una durata media di appena 13 mesi, rendendo la stabilità dell'esecutivo Meloni un'eccezione nella storia repubblicana. Tra i nodi ancora aperti per la maggioranza restano il referendum sulla riforma della giustizia, bocciato a marzo 2026, e lo stallo parlamentare sulla riforma della legge elettorale, entrambi richiamati dalle opposizioni come segnali che la stabilità di governo non avrebbe prodotto tutti i risultati promessi in campagna elettorale.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/politica/2026/09/03/il-governo-meloni-eguaglia-il-berlusconi-ii-domani-il-record-di-longevita-e-la-festa_70bfd96c-a438-41fc-ba4b-3108938afbc8.html" target="_blank" rel="noopener noreferrer">ANSA</a>, <a href="https://www.borderline24.com/2026/08/29/meloni-vattin-a-bari-prevista-mobilitazione-nel-giorno-della-festa-prepariamo-opposizione-al-governo/" target="_blank" rel="noopener noreferrer">Borderline24</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/italia/bob-osias-kv5xfcHFMkg-unsplash.jpg" alt="Il Duomo di Milano in una giornata di sole" loading="lazy"></div>
+        <h3>Il Veneto approva la legge sul fine vita, prima regione di centrodestra a farlo</h3>
+        <p class="body">Il Consiglio regionale del Veneto ha approvato il 2 settembre la legge che disciplina tempi e modalità di accesso al suicidio medicalmente assistito, con 32 voti favorevoli, 14 contrari e 5 astensioni. Il Veneto diventa così la quarta regione italiana con una normativa in materia, dopo Toscana, Sardegna ed Emilia-Romagna, e la prima amministrata dal centrodestra. Decisivo il voto della Lega, compresi il presidente Alberto Stefani e l'ex governatore Luca Zaia, mentre Fratelli d'Italia e Futuro Nazionale hanno votato compatti contro il provvedimento.</p>
+        <div class="body-extra">
+          <p class="body">La legge recepisce i criteri fissati dalla Corte Costituzionale con la sentenza n. 242/2019: patologia irreversibile, sofferenze fisiche o psicologiche intollerabili per il paziente, dipendenza da trattamenti di sostegno vitale e piena capacità di decidere liberamente. Rispetto a proposte precedenti, il testo elimina il termine fisso di 20 giorni per la risposta delle Asl, sostituendolo con l'obbligo di procedere "senza ingiustificati ritardi". Su richiesta di Stefani sono stati inseriti emendamenti che rafforzano il ruolo delle cure palliative, con un medico palliativista nella commissione valutativa.</p>
+          <p class="body">L'Associazione Luca Coscioni, tramite il tesoriere Marco Cappato, ha accolto la legge come garanzia di "regole trasparenti, responsabilità definite e garanzie effettive", mentre l'associazione Pro Vita &amp; Famiglia, per voce di Antonio Brandi, ha contestato che la sentenza della Consulta non obblighi le Regioni a legiferare in materia. Dal 2019 in Veneto sono state presentate 16 richieste di accesso al suicidio assistito, di cui 3 autorizzate e 2 effettivamente realizzate; un testo analogo era stato respinto nel 2024 per un solo voto di scarto.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/topnews/2026/09/02/il-consiglio-regionale-del-veneto-approva-la-legge-sul-fine-vita_d9cc4e9e-2783-4142-bb0d-4fc24cbfccd5.html" target="_blank" rel="noopener noreferrer">ANSA</a>, <a href="https://www.ilpost.it/2026/09/02/veneto-approva-legge-suicidio-assistito/" target="_blank" rel="noopener noreferrer">Il Post</a>, <a href="https://www.fanpage.it/politica/fine-vita-veneto-vota-sul-suicidio-assistito-zaia-se-accadesse-a-me-vorrei-essere-libero-di-decidere/" target="_blank" rel="noopener noreferrer">Fanpage</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/italia/chris-wosika-vxFRv98-3rk-unsplash.jpg" alt="La Torre di Pisa e la Cattedrale in Piazza dei Miracoli" loading="lazy"></div>
+        <h3>Interferenze russe nel voto, divergenza nella maggioranza tra Tajani e Salvini</h3>
+        <p class="body">Il ministro degli Esteri Antonio Tajani ha dichiarato il 2 settembre, a margine di una riunione informale dei ministri degli Esteri Ue, che "possono esserci tentativi da parte della Federazione Russa di interferire nella vita democratica" italiana, invitando a "vigilare" in vista dei prossimi appuntamenti elettorali. Il vicepremier e leader della Lega Matteo Salvini ha replicato pubblicamente, affermando di non avere "l'ansia che i russi invadano Tor Bella Monaca".</p>
+        <div class="body-extra">
+          <p class="body">Le dichiarazioni di Tajani arrivano lo stesso giorno in cui il Financial Times pubblica l'inchiesta che descrive il generale Roberto Vannacci come possibile "cavallo di Troia" per l'influenza russa in Italia. Diverse testate italiane collegano le due vicende, osservando come l'allarme del ministro degli Esteri sia arrivato a ridosso della pubblicazione dell'inchiesta britannica. Il contesto europeo è reso più teso dal caso dei droni sull'aeroporto di Lipsia, in Germania, per i quali Berlino ha accusato ufficialmente Mosca il 1&deg; settembre.</p>
+          <p class="body">La replica di Salvini evidenzia una divergenza di valutazione all'interno della maggioranza di governo sul tema delle presunte ingerenze straniere: il leader della Lega ha parlato di un'eccessiva "ansia anti-russa", mentre Tajani ha ribadito la necessità di "intervenire in anticipo" per proteggere il processo democratico in vista delle prossime scadenze elettorali, comprese le elezioni politiche del 2027.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/2026/09/02/tajani-possibili-tentativi-dinfluenze-russe-sul-voto-in-italia_b5b916b3-ef32-4b43-8a37-f308d89e2059.html" target="_blank" rel="noopener noreferrer">ANSA</a></span>
+      </div>
+      <div class="article">
+        <h3>Inflazione al 3,3% ad agosto, massimo in tre anni: associazioni divise sulla lettura dei dati</h3>
+        <p class="body">L'Istat certifica che l'inflazione italiana è salita al 3,3% su base annua ad agosto 2026, dal 2,9% di luglio: il valore più alto degli ultimi tre anni. L'istituto attribuisce l'accelerazione soprattutto ai prezzi dell'energia, passati da +11,6% a +17,0%, mentre il paniere dei beni ad alta frequenza d'acquisto sale al 4,3% dal 3,4% precedente. Il carrello della spesa resta invece stabile, con un incremento dell'1,0%.</p>
+        <div class="body-extra">
+          <p class="body">Le associazioni di categoria offrono letture diverse dei dati. Confcommercio parla di un'inflazione "ancora sotto controllo", con "frizioni all'interno del sistema ancora limitate". Di segno opposto la valutazione di Confesercenti, che segnala un "rischio +4% entro fine anno" e chiede "interventi strutturali non più rinviabili". Il Codacons, elaborando i dati Istat, stima per una famiglia tipo un aggravio di circa 1.091 euro su base annua tra bollette (gas +31,3%, elettricità +9,7% sul mercato tutelato), carburanti (benzina +12% da luglio) e altre voci di spesa.</p>
+          <p class="body">Il governo, attraverso il decreto carburanti in vigore fino al 5 settembre, ha disposto un taglio delle accise sul gasolio, annunciando per la fase successiva "sostegni selettivi sulla base del reddito" contro il caro-energia. Le associazioni dei consumatori chiedono tuttavia misure più incisive, mentre gli osservatori concordano nell'indicare nelle tensioni internazionali sui mercati energetici la causa principale della nuova accelerazione dei prezzi.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/economia/2026/09/01/istat-prezzi-energia-spingono-linflazione-ad-agosto-sale-al-33_ec9011f4-f900-4d2e-b9c3-3c97ef615f18.html" target="_blank" rel="noopener noreferrer">ANSA</a>, <a href="https://www.giornalepartiteiva.it/2026/09/02/leggi-notizia/argomenti/news-4/articolo/confcommercio-dati-istat-inflazione-nessun-allarme-ma-preoccupano-i-costi-dellenergia.html" target="_blank" rel="noopener noreferrer">Confcommercio</a></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== DISAGIO CITTÀ ===== -->
+  <div class="section" id="disagio">
+    <div class="section-head">
+      <span class="section-tag tag-palestina">Disagio città</span>
+      <h2 class="section-title">Firenze, uccide l'ex compagna e la getta da un viadotto dell'A1 dopo averla rapita nel bagagliaio</h2>
+    </div>
+    <div class="section-note">Quattro episodi di cronaca distinti e senza collegamento tra loro, con fonti pubblicate tra il pomeriggio del 3 e la mattina del 4 settembre.</div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Gli episodi qui raccolti sono fatti di cronaca isolati, verificati singolarmente su fonti giornalistiche diverse: non indicano un fenomeno unico né un'emergenza nazionale.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <div class="article-image"><img src="../immagini/disagio_città/amaury-traver-Rm-C1oTUF8Y-unsplash.jpg" alt="Ambulanza ferma in strada" loading="lazy"></div>
+        <h3>Firenze, uccide l'ex compagna e la getta da un viadotto dell'A1: lei aveva chiamato la polizia dal bagagliaio</h3>
+        <p class="body">L'imprenditrice Lorena Isceri, 47 anni, è stata uccisa il 4 settembre dall'ex compagno Federico Vella, 36 anni, che l'ha rinchiusa nel bagagliaio della propria auto e ha guidato sull'autostrada A1 nei pressi di Firenze. Durante il tragitto la donna è riuscita a contattare tre volte i soccorsi, restando in linea con la polizia per circa 20 minuti e dicendo agli operatori: "Federico mi ha rapita, vuole uccidermi". Quando l'uomo si è accorto che aveva il telefono in mano, l'ha gettata dal viadotto Lora, da un'altezza di oltre 40 metri; poco dopo si è tolto la vita.</p>
+        <div class="body-extra">
+          <p class="body">La coppia si era lasciata settimane prima, dopo un viaggio in Grecia: un'amica aveva avvertito Isceri che l'ex l'avrebbe aspettata sotto casa, ma la donna aveva scelto di non sporgere denuncia. La polizia ha seguito lo spostamento del veicolo tramite la geolocalizzazione del telefono e le telecamere autostradali, restando in contatto con lei fino a pochi istanti prima della tragedia.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ilfattoquotidiano.it/2026/09/04/federico-mi-ha-rapita-vuole-uccidermi-le-tre-telefonate-di-lorena-isceri-dal-bagagliaio-dellauto-i-20-minuti-in-linea-con-la-polizia/8496561/" target="_blank" rel="noopener noreferrer">Il Fatto Quotidiano</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/disagio_città/carabinieri_terni_notte_02.jpg" alt="Auto dei Carabinieri di notte" loading="lazy"></div>
+        <h3>Roma, coltello alla gola e tirapugni in un negozio alla Montagnola: arrestato un 41enne</h3>
+        <p class="body">Un uomo di 41 anni, italiano e con precedenti penali, è stato arrestato nel pomeriggio del 3 settembre a Roma, nel quartiere Montagnola, dopo aver minacciato un cliente con un coltello puntato alla gola all'interno di un esercizio commerciale. Con un tirapugni ha inoltre danneggiato la vetrata del negozio. L'episodio segue un intervento del giorno precedente nello stesso locale, dove l'uomo aveva già causato danni con un bastone.</p>
+        <div class="body-extra">
+          <p class="body">Dopo una segnalazione al 112, gli agenti dei distretti Esposizione e Tor Carbone lo hanno intercettato a poca distanza dal negozio. Coltello e tirapugni sono stati sequestrati e le immagini delle telecamere di sorveglianza hanno confermato la dinamica. Nella successiva perquisizione domiciliare sono stati trovati anche un tirapugni metallico, tre pugnali e due sfollagente telescopici. L'uomo è stato arrestato per tentata rapina aggravata e il fermo è in attesa di convalida.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://roma.lamilano.it/roma-coltello-alla-gola-e-tirapugni-arrestato-41enne-per-tentata-rapina-2/" target="_blank" rel="noopener noreferrer">La Milano</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/disagio_città/tomas-robertson-AVHBzMbmmkE-unsplash.jpg" alt="Figura scura e sfocata in movimento" loading="lazy"></div>
+        <h3>Perugia, rissa a Colombella: 18enne accoltellato quattro volte durante la festa di paese</h3>
+        <p class="body">Un diciottenne è stato accoltellato nella notte tra il 2 e il 3 settembre a Colombella, frazione di Perugia, durante uno scontro tra due gruppi di giovani scoppiato nell'area verde di via Jesi mentre era in corso la festa della frazione. Il ragazzo ha riportato quattro ferite da arma da taglio, una delle quali alla schiena all'altezza dei polmoni, ed è stato trasportato in ospedale in codice rosso con una prognosi di dieci giorni. Alla polizia ha raccontato di essere stato colpito più volte con "un piccolo coltello".</p>
+        <div class="body-extra">
+          <p class="body">La Squadra Mobile della Questura di Perugia è incaricata di identificare l'autore dell'accoltellamento e gli altri partecipanti allo scontro, alcuni dei quali si erano già allontanati al momento dell'arrivo degli agenti. L'assenza di telecamere di sorveglianza nell'area verde complica le indagini, che al momento si basano soprattutto sulle testimonianze raccolte sul posto.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.umbriajournal.com/cronaca/accoltellato-durante-una-rissa-ferito-ragazzo-18enne-a-colombella-649692/" target="_blank" rel="noopener noreferrer">Umbria Journal</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/disagio_città/rhamely-kbWe3SvgLps-unsplash.jpg" alt="Mani alzate in un gesto di difesa, in bianco e nero" loading="lazy"></div>
+        <h3>Oderzo, banda assalta la gioielleria Corona: titolare minacciato con piede di porco e cacciavite</h3>
+        <p class="body">Una banda di quattro o cinque persone incappucciate ha assaltato nella notte tra il 2 e il 3 settembre la gioielleria Corona di piazza Grande a Oderzo, in provincia di Treviso, forzando l'ingresso e usando la polvere di un estintore per ridurre la visibilità delle telecamere prima di infrangere le teche. Il titolare, sceso in strada dopo l'allarme, ha affrontato i banditi in fuga ed è stato minacciato con un piede di porco e dei cacciaviti; l'intervento della vigilanza privata, in circa novanta secondi, li ha costretti a scappare lasciando parte della refurtiva.</p>
+        <div class="body-extra">
+          <p class="body">Il titolare ha raccontato di aver temuto di fare la stessa fine del nonno, ucciso decenni fa durante una rapina in gioielleria, e di non aver reagito fisicamente proprio per quel timore. I carabinieri della Tenenza di Oderzo hanno acquisito le immagini delle telecamere di sorveglianza; il valore della refurtiva, che comprenderebbe anche pezzi unici disegnati a mano, non è stato ancora quantificato ufficialmente.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.fanpage.it/attualita/gioielliere-minacciato-con-piede-di-porco-e-cacciavite-durante-una-rapina-mio-nonno-e-stato-ucciso-cosi/" target="_blank" rel="noopener noreferrer">Fanpage</a></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== EUROPA ===== -->
+  <div class="section" id="europa">
+    <div class="section-head">
+      <span class="section-tag tag-europa">Europa</span>
+      <h2 class="section-title">Bce verso il rialzo dei tassi, undici Paesi Ue propongono di limitare il veto in politica estera</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Il Consiglio direttivo della Banca centrale europea si riunisce otto volte l'anno per fissare i tassi di interesse in base all'obiettivo di un'inflazione al 2% nel medio periodo; l'ultima modifica risale a giugno 2026. In parallelo, nell'Unione europea le decisioni di politica estera richiedono ancora oggi l'unanimità dei 27 Stati membri: un singolo Paese può bloccare una misura, come accaduto più volte negli ultimi anni sui dossier relativi all'Ucraina. Alcuni governi propongono ora di ampliare il ricorso al voto a maggioranza qualificata.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <div class="article-image"><img src="../immagini/europa/mika-baumeister-Tz1k07Jl2no-unsplash.jpg" alt="Simbolo delle stelle dell'euro" loading="lazy"></div>
+        <h3>BCE verso il rialzo dei tassi il 10 settembre, inflazione all'eurozona al 3,3%</h3>
+        <p class="body">I mercati assegnano oltre il 95% di probabilità a un rialzo dei tassi da parte della Banca centrale europea nella riunione del 9-10 settembre a Berlino, secondo quanto dichiarato dal presidente della Bundesbank Joachim Nagel. L'inflazione dell'eurozona è salita al 3,3% in agosto dal 2,9% di luglio, il livello più alto da quasi tre anni, spinta dai costi energetici saliti al 14,3%. In Italia l'inflazione si attesta anch'essa al 3,3%, con gli energetici non regolamentati in crescita del 16,9%.</p>
+        <div class="body-extra">
+          <p class="body">Prima della revisione di giugno 2026 il tasso sui depositi era al 2,25%, quello sulle operazioni di rifinanziamento principale al 2,40% e quello sui prestiti marginali al 2,65%. Lo scenario prevalente sui mercati indica un aumento di 25 punti base, che porterebbe il tasso sui depositi al 2,50%. Nagel ha dichiarato che i mercati "comprendono abbastanza bene la funzione di reazione della Bce", pur mostrando cautela sulle decisioni successive a settembre. Olli Rehn, governatore della banca centrale finlandese, ha definito "comprensibili" le attese del mercato su un nuovo rialzo.</p>
+          <p class="body">Le proiezioni di base della Bce indicano un'inflazione al 3,0% per il 2026, in discesa al 2,3% nel 2027 e al 2,0% nel 2028, tornando così in linea con l'obiettivo di medio periodo dell'istituto di Francoforte.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://tg24.sky.it/economia/2026/09/03/bce-tassi-rialzo-settembre" target="_blank" rel="noopener noreferrer">Sky TG24</a> e <a href="https://www.investiremag.it/investire/2026/09/03/news/bce-rialzo-dei-tassi-sempre-piu-vicino-i-mercati-lo-vedono-con-oltre-il-95-di-probabilita/" target="_blank" rel="noopener noreferrer">Investire Oggi</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/europa/alex-ugolkov-KH3rp34YBOE-unsplash.jpg" alt="La scultura dell'euro davanti alla Banca Centrale Europea a Francoforte" loading="lazy"></div>
+        <h3>Undici Paesi Ue propongono di limitare il veto in politica estera</h3>
+        <p class="body">Austria, Belgio, Danimarca, Finlandia, Francia, Germania, Lussemburgo, Paesi Bassi, Romania, Spagna e Svezia hanno inviato un documento informale all'Alta rappresentante Ue Kaja Kallas per limitare l'uso del veto nelle decisioni di politica estera. La proposta, discussa il 2 settembre al Consiglio Affari Esteri informale di Wicklow, indica cinque principi, dal maggior ricorso alle "astensioni costruttive" all'obbligo di motivare in modo sostanziale il richiamo a un interesse nazionale vitale. L'Italia non figura tra i firmatari, pur avendo ricevuto il documento.</p>
+        <div class="body-extra">
+          <p class="body">Il testo propone di evitare che i veti vengano collegati "in maniera ostruzionistica a questioni sostanzialmente estranee" alla proposta in esame. I firmatari sottolineano che "dobbiamo garantire che questa cultura del consenso favorisca l'azione comune anziché impedirla". L'iniziativa arriva dopo anni in cui il governo ungherese di Viktor Orbán ha più volte utilizzato il diritto di veto per ottenere concessioni, bloccando tra l'altro nel 2026 un prestito da 90 miliardi di euro destinato all'Ucraina.</p>
+          <p class="body">Oltre all'Ungheria, anche gli Stati baltici non compaiono tra gli undici firmatari. Non sono al momento note reazioni ufficiali di Budapest né dei vertici dell'Ue al documento.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ansa.it/nuova_europa/it/notizie/nazioni/germania/2026/09/01/undici-paesi-ue-propongono-decalogo-per-superare-il-veto-in-politica-estera_a723c879-ec3b-4e74-8e25-1c2e776acd55.html" target="_blank" rel="noopener noreferrer">ANSA</a> e <a href="https://www.euronews.com/my-europe/2026/09/01/11-eu-countries-demand-end-to-obstructive-vetoes-on-foreign-policy" target="_blank" rel="noopener noreferrer">Euronews</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/europa/europeana-5d4lhsJgzWY-unsplash.jpg" alt="Antica mappa storica dell'Europa" loading="lazy"></div>
+        <h3>Allargamento Ue, Montenegro "in prima fila": obiettivo chiudere i capitoli entro l'anno</h3>
+        <p class="body">Il Montenegro è "in prima fila" nel processo di allargamento dell'Unione europea, con oltre la metà dei capitoli negoziali già chiusi, ha dichiarato il 3 settembre Thomas Byrne, ministro irlandese per gli Affari europei, al Consiglio Affari Generali informale di Dublino. La presidenza di turno irlandese punta a chiudere i restanti capitoli entro fine anno, mentre il trattato di adesione procede in parallelo e dovrà essere ratificato da tutti gli Stati membri.</p>
+        <div class="body-extra">
+          <p class="body">Secondo Byrne, anche l'Albania sta compiendo "eccellenti progressi" nel proprio percorso di adesione. Per Ucraina e Moldova l'obiettivo dichiarato dalla presidenza irlandese è l'apertura di tutti i capitoli negoziali prima della fine del semestre di guida del Consiglio, ma il traguardo resta condizionato all'unanimità dei 27 Stati membri. Sui tempi di ingresso di Kiev, Byrne ha affermato: "Vogliamo l'Ucraina nella Ue il prima possibile", ribadendo però che l'adesione resta "basata sul merito".</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ansa.it/nuova_europa/it/notizie/rubriche/altrenews/2026/09/03/presidenza-ue-montenegro-in-prima-fila-sullallargamento-capitoli-entro-lanno_14ab2e75-35f4-45a6-bb7d-26a3a2cfb148.html" target="_blank" rel="noopener noreferrer">ANSA</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/europa/henri-lajarrige-lombard-wb9kQq1frtE-unsplash.jpg" alt="Persona con una felpa a stelle dell'Unione Europea" loading="lazy"></div>
+        <h3>Il Cremlino contro Merz: "Mosse contro la Russia goffe"</h3>
+        <p class="body">Il portavoce del Cremlino Dmitry Peskov ha criticato il 3 settembre il cancelliere tedesco Friedrich Merz, accusandolo di cercare di "guadagnare punti" presso l'opinione pubblica tedesca con iniziative contro la Russia definite "quasi di forza", ma eseguite "in modo estremamente goffo". Le dichiarazioni, riprese dall'agenzia russa Tass, arrivano in un contesto di tensioni crescenti tra Berlino e Mosca legate al dossier del sabotaggio dei gasdotti Nord Stream.</p>
+        <div class="body-extra">
+          <p class="body">Peskov ha collegato le sue osservazioni al caso Nord Stream, sottolineando che "tutti coloro che negli ultimi anni hanno fatto saltare in aria qualcosa di tedesco erano ucraini", e ha messo in dubbio la coerenza della politica di Berlino verso Kiev. Al momento della pubblicazione non risultano reazioni ufficiali del governo tedesco alle dichiarazioni del portavoce del Cremlino.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/topnews/2026/09/03/cremlino-merz-fa-passi-bruschi-ma-in-modo-goffo_b681a393-bab0-415b-8758-bbd127e9e86d.html" target="_blank" rel="noopener noreferrer">ANSA</a></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== MONDO ===== -->
+  <div class="section" id="mondo">
+    <div class="section-head">
+      <span class="section-tag tag-mondo">Mondo</span>
+      <h2 class="section-title">Guerra Iran-Usa, G20 diviso sulla Cina, repubblicani in ansia per il voto di midterm</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>La crisi tra Stati Uniti e Iran ha raggiunto la sesta fase di scontri dall'apertura del conflitto, il 28 febbraio 2026, tra Washington, Israele e Teheran, alternando cicli di attacchi e tregue mai consolidate. Lo Stretto di Hormuz, da cui transita circa un quinto dell'export mondiale di petrolio, resta il punto più sensibile della crisi. Parallelamente, il Forum economico orientale di Vladivostok (1-4 settembre) e il vertice dei ministri finanziari del G20 ad Asheville hanno riportato al centro la partita economica tra Washington, Pechino e Mosca. Negli Stati Uniti, la campagna per le elezioni di midterm del 3 novembre 2026 entra intanto nel vivo.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <div class="article-image"><img src="../immagini/mondo/anirudh-Xu4Pz7GI9JY-unsplash.jpg" alt="La Terra vista dallo spazio di notte, con le luci delle città" loading="lazy"></div>
+        <h3>Usa e Iran tornano a colpirsi, il petrolio ai massimi da un mese</h3>
+        <p class="body">Il 1&deg; e 2 settembre le forze statunitensi hanno colpito siti militari iraniani nel sud del Paese, secondo il Comando centrale Usa (Centcom) in risposta a tentativi della Guardia rivoluzionaria di colpire naviglio commerciale nello Stretto di Hormuz e truppe americane in Giordania. L'Iran ha rivendicato missili contro basi Usa in Bahrein, Giordania e Iraq, e il 3 settembre contro il Kuwait. Teheran denuncia almeno 18 morti nei raid statunitensi, tra cui cinque civili in un attacco a una festa di matrimonio; Washington nega di aver preso di mira civili.</p>
+        <div class="body-extra">
+          <p class="body">È la sesta fase della crisi apertasi il 28 febbraio 2026 tra Stati Uniti, Israele e Iran. Il presidente Donald Trump ha escluso nuovi negoziati, dicendo che un accordo con Teheran "non varrebbe la carta su cui è scritto". La Guida suprema iraniana Mojtaba Khamenei ha promesso "lezioni indimenticabili" a Washington, mentre il vicepresidente Usa JD Vance si è detto "estremamente scettico" sulle accuse iraniane relative all'attacco al matrimonio.</p>
+          <p class="body">Sul piano economico, il greggio Brent è salito sopra i 96 dollari al barile, ai massimi da oltre un mese, dopo che i transiti nello Stretto di Hormuz sono crollati da 23 imbarcazioni la settimana precedente a 10 lunedì 31 agosto. Il Kuwait ha comunicato di aver intercettato missili e droni iraniani diretti contro il proprio territorio.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.aljazeera.com/news/2026/9/1/us-military-says-launching-new-attacks-on-iran" target="_blank" rel="noopener noreferrer">Al Jazeera</a>, <a href="https://www.cbsnews.com/live-updates/us-iran-war-trump-dismisses-diplomacy-tehran-says-wedding-hit-in-strike/" target="_blank" rel="noopener noreferrer">CBS News</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/mondo/amir-mortezaie-RPU5KFrPY90-unsplash.jpg" alt="Bandiere di diversi Paesi del mondo" loading="lazy"></div>
+        <h3>Il G20 finanze si spacca: la Cina sola contro il resto su Golfo e commercio</h3>
+        <p class="body">Il vertice dei ministri finanziari del G20 ad Asheville, in North Carolina, si è chiuso il 2 settembre senza un comunicato congiunto per il veto della Cina, unico Paese tra i venti membri a opporsi al testo finale. Pechino ha respinto in particolare i riferimenti alla "navigazione libera, sicura e prevedibile" nello Stretto di Hormuz e i passaggi sulle "economie non di mercato" che alimentano un flusso costante di esportazioni a basso costo, letti come un riferimento diretto al surplus commerciale cinese.</p>
+        <div class="body-extra">
+          <p class="body">Il segretario al Tesoro Usa Scott Bessent ha detto che "il Paese con il surplus di conto corrente più grande e insostenibile è la Repubblica popolare cinese", citando un avanzo commerciale cinese da 1.200 miliardi di dollari, e ha sottolineato che gli altri 19 membri hanno comunque sostenuto il testo proposto. Il ministro italiano dell'Economia Giancarlo Giorgetti ha definito l'incontro "complicato, in tempi particolari". Lo strappo arriva a circa tre settimane dalla prevista visita a Washington del presidente cinese Xi Jinping per un vertice con Trump.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/economia/2026/09/02/g20-finanze-tutti-tranne-la-cina-per-lo-stretto-di-hormuz-libero-e-sicuro_35b69925-70fe-49f9-8fdf-2d7194a188f9.html" target="_blank" rel="noopener noreferrer">ANSA</a>, <a href="https://www.axios.com/2026/09/02/china-g20-bessent-trade" target="_blank" rel="noopener noreferrer">Axios</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/mondo/aj-colores-ai5VAG9UOUM-unsplash.jpg" alt="Vista panoramica di un centro cittadino" loading="lazy"></div>
+        <h3>Putin: "Inflazione sotto controllo", nuovo record di scambi con la Cina</h3>
+        <p class="body">Parlando il 3 settembre al Forum economico orientale di Vladivostok, il presidente russo Vladimir Putin ha detto che il deficit di bilancio, salito al 2,8% del Pil nel primo semestre 2026, non rappresenta un rischio "critico" vista la ridotta esposizione debitoria del Paese, e che l'inflazione annua, al 6,3% al 31 agosto, resta sotto controllo. Putin ha inoltre annunciato che il commercio con la Cina toccherà quest'anno un nuovo record.</p>
+        <div class="body-extra">
+          <p class="body">"Considerando che abbiamo uno dei livelli più bassi di debito nazionale al mondo, non c'è nulla di critico qui", ha detto Putin, pur riconoscendo che gli alti costi di finanziamento stanno frenando gli investimenti delle imprese. Sul fronte commerciale, Putin ha ricordato che la Cina è il primo partner della Russia da 16 anni consecutivi: l'interscambio sarebbe cresciuto del 26,3% nei primi sette mesi del 2026.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.themoscowtimes.com/2026/09/03/russia-can-manage-its-growing-deficit-putin-says-a93630" target="_blank" rel="noopener noreferrer">The Moscow Times</a>, <a href="https://www.brasildefato.com.br/2026/09/03/putin-apresenta-estrategia-economica-da-russia-e-projeta-recorde-comercial-com-a-china/" target="_blank" rel="noopener noreferrer">Brasil de Fato</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/mondo/bent-van-aeken-Ztx1R03BlYU-unsplash.jpg" alt="Vista panoramica a effetto 'little planet' su una città costiera" loading="lazy"></div>
+        <h3>Repubblicani in ansia: a 60 giorni dal voto saltano la convention di Trump</h3>
+        <p class="body">A meno di sessanta giorni dalle elezioni di midterm del 3 novembre, diversi deputati repubblicani eletti in collegi in bilico hanno annunciato che salteranno la convention di partito organizzata da Trump a Dallas il 9 e 10 settembre. Il gradimento del presidente si attesta al 33% secondo un sondaggio Reuters/Ipsos di metà agosto, e diversi parlamentari preferiscono restare nei collegi a fare campagna.</p>
+        <div class="body-extra">
+          <p class="body">Il senatore Mike Rounds ha spiegato di voler "passare più tempo possibile" nel South Dakota "a parlare con la gente che ha delle preoccupazioni, una delle quali è il costo della vita". Il vicepresidente JD Vance ha commentato che per i candidati impegnati in corse serrate "a volte potrebbe essere meglio che stiano fuori a raccogliere fondi", mentre lo speaker della Camera Mike Johnson ha definito la scelta di ogni parlamentare "una decisione individuale".</p>
+          <p class="body">Cresce intanto la frustrazione repubblicana per l'uso del comitato di raccolta fondi (SuperPAC) legato a Trump, che questa settimana ha lanciato due spot concentrati sul presidente stesso anziché sui candidati in difficoltà. Il capogruppo repubblicano al Senato John Thune si è detto fiducioso che il comitato "inizierà a impegnarsi di più".</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.notus.org/republicans/trump-midterm-convention" target="_blank" rel="noopener noreferrer">NOTUS</a></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== FINANZA ===== -->
+  <div class="section" id="finanza">
+    <div class="section-head">
+      <span class="section-tag tag-finanza">Finanza</span>
+      <h2 class="section-title">Inflazione eurozona al 3,3%, Bce verso il rialzo dei tassi: Lottomatica-Cirsa, nasce un colosso del gioco</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>La Banca centrale europea ha un obiettivo di inflazione del 2% e si riunisce il 9-10 settembre 2026 per la prossima decisione sui tassi. Un'inflazione persistentemente sopra target, come quella registrata ad agosto, aumenta la probabilità che il board opti per un nuovo rialzo del costo del denaro dopo la fase di allentamento monetario dei mesi scorsi. Lo spread BTp-Bund misura la fiducia dei mercati nei titoli di Stato italiani rispetto a quelli tedeschi: valori più bassi indicano minore percezione di rischio.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <div class="article-image"><img src="../immagini/finanza/eduardo-rincon-WYtZz8uSyE4-unsplash.jpg" alt="Schermo con grafico di mercato azionario" loading="lazy"></div>
+        <h3>Inflazione eurozona al 3,3%, la Bce verso un nuovo rialzo dei tassi il 10 settembre</h3>
+        <p class="body">L'inflazione nell'eurozona è salita al 3,3% ad agosto, dal 2,9% di luglio, secondo i dati diffusi il 3 settembre: il livello più alto degli ultimi tre anni, ben sopra l'obiettivo del 2% fissato dalla Bce. In Italia l'Istat ha registrato lo stesso 3,3%, con Federconsumatori che stima un aggravio di 1.089 euro annui a famiglia. Il dato riapre la strada a un rialzo dei tassi nella riunione del board Bce del 10 settembre. La consigliera Isabel Schnabel ha detto che i tassi attuali "non sarebbero sufficienti a frenare l'aumento dell'inflazione".</p>
+        <div class="body-extra">
+          <p class="body">Il capo economista Bce Philip Lane prevede che l'inflazione resterà "intorno al 3%" per il resto del 2026. Secondo il presidente della Bundesbank Joachim Nagel, i mercati stanno già prezzando "un 95% di probabilità" di un aumento dei tassi, mentre il finlandese Olli Rehn ha definito queste aspettative "comprensibili". Le stime di mercato indicano un possibile aumento di 25 punti base, al 2,25%, con ulteriori strette non escluse a ottobre o dicembre.</p>
+          <p class="body">Sul piano pratico, l'impatto riguarderà soprattutto i mutui a tasso variabile collegati ai tassi Bce, con rate destinate a salire; i mutui fissi già sottoscritti restano invece invariati, mentre i nuovi contratti sono attesi a condizioni più onerose rispetto al 3,54% medio registrato a luglio sui mutui abitativi.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.idealista.it/news/finanza/economia/2026/09/03/441913-l-inflazione-accelera-nell-eurozona-e-apre-la-strada-a-un-altro-rialzo-dei-tassi-di" target="_blank" rel="noopener noreferrer">Idealista News</a> e <a href="https://tg24.sky.it/economia/2026/09/03/bce-tassi-rialzo-settembre" target="_blank" rel="noopener noreferrer">Sky TG24</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/finanza/brittany-bendabout-MJn7BQNeLnw-unsplash.jpg" alt="Mano che tiene banconote da un dollaro" loading="lazy"></div>
+        <h3>Piazza Affari chiude in rialzo, Lottomatica vola dopo l'accordo con Cirsa, giù Intercos</h3>
+        <p class="body">Il Ftse Mib ha chiuso la seduta del 3 settembre a 51.919 punti, in rialzo dello 0,25%, sostenuto dal rimbalzo di Lottomatica (+5,77%) dopo il calo della vigilia legato all'annuncio della fusione con la spagnola Cirsa. Bene anche Azimut (+3,4%), Tesmec (+7,45%) e Buzzi (+2,44%). Sul fronte opposto, Intercos ha ceduto oltre il 6% dopo il collocamento di azioni da parte del fondo L Catterton. Lo spread BTp-Bund si è attestato a 83,1 punti base, con il rendimento del BTp decennale al 4,18%.</p>
+        <div class="body-extra">
+          <p class="body">Il titolo Lottomatica, penalizzato il giorno dell'annuncio della fusione con Cirsa, ha recuperato terreno nella seduta successiva. Sul fronte opposto, Intercos ha scontato la cessione da parte del fondo L Catterton di 6 milioni di azioni, pari al 6,2% del capitale, a 13,50 euro per azione, con un incasso di 81 milioni di euro.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/topnews/2026/09/03/borsa-milano-tiene-025-corre-lottomatica-soffre-cucinelli_90ea0224-2b53-4f6d-b60e-3eae5d4606e9.html" target="_blank" rel="noopener noreferrer">ANSA</a></span>
+      </div>
+      <div class="article">
+        <h3>Lottomatica e Cirsa si fondono: nasce un colosso da 2 miliardi di Ebitda</h3>
+        <p class="body">Lottomatica e Cirsa hanno raggiunto, il 2 settembre, un accordo per una fusione interamente in azioni che darà vita al secondo operatore quotato al mondo nel gioco e nelle scommesse, con un Ebitda pro forma di circa 2 miliardi di euro. Cirsa sarà incorporata in Lottomatica con un rapporto di cambio di 0,668 nuove azioni Lottomatica per ogni titolo Cirsa posseduto. La nuova società sarà quotata sia a Milano sia a Madrid.</p>
+        <div class="body-extra">
+          <p class="body">Prima del perfezionamento dell'operazione, gli azionisti di Cirsa riceveranno un dividendo straordinario di 262 milioni di euro. A operazione conclusa, il consiglio della società combinata proporrà un'ulteriore distribuzione di capitale fino a 744 milioni di euro. Gli attuali soci di Lottomatica manterranno circa il 67,5% della nuova entità; Blackstone diventerà il maggiore singolo azionista con circa il 24% del capitale.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/economia/2026/09/02/lottomatica-raggiunge-accordo-fusione-con-la-spagnola-cirsa_2686dc04-e959-455f-ba80-a74f41c2007f.html" target="_blank" rel="noopener noreferrer">ANSA</a></span>
+      </div>
+      <div class="article">
+        <h3>Petrolio stabile sopra i 95 dollari, il gas resta sotto i 73 euro ad Amsterdam</h3>
+        <p class="body">Il Brent tratta il 4 settembre a 95,13 dollari al barile, in calo dello 0,52%. Sul mercato del gas, i future TTF di Amsterdam per consegna a ottobre hanno ceduto l'1,1% nella seduta del 3 settembre, scendendo a 72,82 euro al MWh e confermandosi sotto quota 73 euro dopo i massimi sopra i 74 euro dei giorni precedenti.</p>
+        <div class="body-extra">
+          <p class="body">Il greggio resta su livelli elevati rispetto alla media degli ultimi anni, pur restando lontano dal picco di 126,41 dollari toccato il 30 aprile 2026. Gli operatori guardano alle prossime mosse dell'Opec+ sulla produzione, in un contesto di tensioni geopolitiche che continua a sostenere le quotazioni. L'andamento di petrolio e gas si riflette sui listini dei carburanti in Italia, dove il prezzo medio della benzina self è salito a 2,039 euro al litro il 3 settembre, secondo i dati del Mimit.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/topnews/2026/09/03/il-gas-si-conferma-sotto-i-73-euro-sulla-piazza-ttf-di-amsterdam_4297e9c5-8433-4726-9944-f4a28ce62eed.html" target="_blank" rel="noopener noreferrer">ANSA</a> e <a href="https://www.investing.com/commodities/brent-oil" target="_blank" rel="noopener noreferrer">Investing.com</a></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== BENESSERE ===== -->
+  <div class="section" id="benessere">
+    <div class="section-head">
+      <span class="section-tag tag-benessere">Benessere</span>
+      <h2 class="section-title">Leucemia, cuore, ossa e mente: quattro studi recenti tra terapia, diagnosi e prevenzione</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Le notizie di oggi uniscono un trial clinico randomizzato di fase 2 sulla leucemia mieloide acuta, uno studio di validazione diagnostica sul cuore, un'analisi osservazionale su caffè e salute ossea e una revisione sistematica su mindfulness e pressione arteriosa. È una distinzione importante da tenere a mente: un trial randomizzato controllato può dimostrare un nesso causale tra trattamento ed esito, mentre uno studio osservazionale mostra solo un'associazione statistica, che può dipendere da altri fattori non misurati.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <div class="article-image"><img src="../immagini/benessere/salute-sanita-differenze.png" alt="Medico che protegge simbolicamente una famiglia" loading="lazy"></div>
+        <h3>Leucemia mieloide acuta: la combinazione senza chemioterapia intensiva raddoppia la sopravvivenza libera da progressione</h3>
+        <p class="body">Uno studio clinico randomizzato di fase 2, pubblicato il 2 settembre 2026 sul New England Journal of Medicine e condotto dal Mass General Brigham Cancer Institute, ha confrontato in 172 adulti con leucemia mieloide acuta la combinazione di azacitidina e venetoclax con la chemioterapia intensiva standard. Nel gruppo trattato con la combinazione, la sopravvivenza libera da progressione è stata di 14,5 mesi, contro 6,2 mesi nel gruppo con chemioterapia intensiva. Anche il tasso di remissione è risultato più alto, 78% contro 53%, con ricoveri ospedalieri più brevi.</p>
+        <div class="body-extra">
+          <p class="body">Lo studio, condotto in nove centri statunitensi nell'ambito del trial PARADIGM, ha arruolato pazienti considerati idonei alla chemioterapia intensiva, quasi il 75% dei quali presentava forme di leucemia più difficili da trattare. Il gruppo trattato con azacitidina-venetoclax ha registrato una degenza ospedaliera media di 12,5 giorni contro 27,3 giorni e meno eventi avversi gravi. Gli autori segnalano però un limite importante: lo studio non è stato disegnato per dimostrare un beneficio in termini di sopravvivenza globale, ma solo di sopravvivenza libera da progressione e di remissione.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.eurekalert.org/news-releases/1142162" target="_blank" rel="noopener noreferrer">EurekAlert! / Mass General Brigham</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/salute/img_approfondimento_Sanita.webp" alt="Medici con camice e stetoscopio in un corridoio d'ospedale" loading="lazy"></div>
+        <h3>Sindrome del cuore infranto o infarto? Un nuovo punteggio le distingue senza cateterismo</h3>
+        <p class="body">Un gruppo di ricerca guidato dall'Università di Zurigo ha sviluppato un punteggio diagnostico, chiamato BioTAK, capace di distinguere la sindrome takotsubo (il cosiddetto "cuore infranto") da un vero infarto senza ricorrere alla coronarografia invasiva. Lo studio, pubblicato sull'European Heart Journal e riportato il 2 settembre 2026, ha analizzato dati di oltre 3.600 pazienti per costruire il modello, poi validato su un gruppo indipendente di quasi 1.800 pazienti, classificando correttamente quasi il 90% dei partecipanti.</p>
+        <div class="body-extra">
+          <p class="body">I dati provengono da due registri internazionali: si tratta quindi di uno studio di accuratezza diagnostica su dati raccolti retrospettivamente, non di un trial clinico che modifica il trattamento dei pazienti. Gli stessi ricercatori precisano un limite chiaro: il BioTAK score "non è un sostituto della coronarografia quando è clinicamente necessaria", e il suo impiego pratico dovrà essere confermato da ulteriori studi prospettici.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.sciencedaily.com/releases/2026/09/260901070518.htm" target="_blank" rel="noopener noreferrer">ScienceDaily / Università di Zurigo</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/salute/sistema-sanitario-italia-commissione-europea.png" alt="Stetoscopio appoggiato su un grafico di dati" loading="lazy"></div>
+        <h3>Più di cinque caffè al giorno associati a minore densità ossea nelle donne anziane, ma senza prova di causalità</h3>
+        <p class="body">Uno studio osservazionale della Flinders University, pubblicato sulla rivista Nutrients e ripreso il 2 settembre 2026, ha seguito per dieci anni quasi 10.000 donne australiane over 65. I ricercatori hanno trovato che le donne che bevevano più di cinque tazze di caffè al giorno presentavano una densità ossea inferiore rispetto alle altre, mentre chi beveva tè mostrava valori leggermente più alti. Un consumo moderato, tra due e tre tazze al giorno, non è risultato associato a effetti negativi misurabili.</p>
+        <div class="body-extra">
+          <p class="body">Trattandosi di un'analisi osservazionale, lo studio può stabilire un'associazione statistica ma non una relazione di causa-effetto: altri fattori legati allo stile di vita, in particolare il consumo di alcol, sembrano amplificare la differenza osservata. Gli stessi autori invitano alla cautela: "i nostri risultati non significano che bisogna rinunciare al caffè o iniziare a bere tè a litri", sottolineando che le differenze riscontrate, per quanto statisticamente significative, sono state modeste.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.sciencedaily.com/releases/2026/09/260901070550.htm" target="_blank" rel="noopener noreferrer">ScienceDaily / Flinders University</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/benessere/angelina-sarycheva-Isj-7j1liis-unsplash.jpg" alt="Donna in una posizione di meditazione e respirazione" loading="lazy"></div>
+        <h3>Mindfulness e psicologia positiva: una revisione di 18 studi randomizzati le collega a un calo della pressione in 8-12 settimane</h3>
+        <p class="body">Una revisione sistematica di 18 studi randomizzati controllati, pubblicata sulla rivista Cardiology Clinics da un gruppo dell'Università dell'Illinois e ripresa il 1&deg; settembre 2026, ha esaminato l'effetto di pratiche come mindfulness, gratitudine e ottimismo sulla salute cardiovascolare. Gli studi, condotti su gruppi di 50-200 adulti a rischio cardiovascolare elevato, hanno mostrato riduzioni della pressione sistolica e dei marcatori infiammatori dopo programmi di 8-12 settimane. In uno degli interventi, la pressione sistolica è scesa in media di 7,6 punti.</p>
+        <div class="body-extra">
+          <p class="body">Trattandosi di una revisione di studi randomizzati controllati, l'evidenza di un nesso causale è più solida rispetto a uno studio osservazionale, ma gli autori segnalano limiti importanti: la ricerca precedente "spesso non ha stabilito con chiarezza quanto frequentemente le persone dovessero praticare queste tecniche, né per quanto tempo". Gli interventi analizzati erano inoltre eterogenei e i campioni relativamente piccoli, il che limita la possibilità di generalizzare i risultati.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.sciencedaily.com/releases/2026/09/260901010721.htm" target="_blank" rel="noopener noreferrer">ScienceDaily / University of Illinois Urbana-Champaign</a></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== TECNOLOGIA ===== -->
+  <div class="section" id="tecnologia">
+    <div class="section-head">
+      <span class="section-tag tag-tecnologia">Tecnologia</span>
+      <h2 class="section-title">Google evita lo scorporo dell'ad-tech, Tesla svela il Cybercab, Apple conferma l'evento del 9 settembre</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Negli Stati Uniti la giustizia antitrust ha già stabilito, in due procedimenti distinti, che Google detiene posizioni di monopolio illegali sia nella ricerca online sia nella pubblicità display: la domanda aperta, ora, è quanto le sentenze riescano davvero a incidere sul suo modello di business. Parallelamente, la corsa ai veicoli a guida autonoma entra in una fase più concreta, mentre i produttori di smartphone rinnovano i listini con l'autunno alle porte.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <div class="article-image"><img src="../immagini/tecnologia/dawid-w-RgMuDl_B-uc-unsplash.jpg" alt="Postazione di lavoro con doppio monitor e codice" loading="lazy"></div>
+        <h3>Google evita lo smembramento dell'ad-tech, ma dovrà cambiare le regole d'asta</h3>
+        <p class="body">La giudice federale Leonie Brinkema ha respinto la richiesta del Dipartimento di Giustizia americano di costringere Google a cedere le piattaforme pubblicitarie AdX e DFP. La sentenza, resa nota il 2 settembre, arriva mesi dopo che lo stesso tribunale aveva giudicato Google colpevole di monopolio illegale nella pubblicità display online. Al posto dello scorporo, la corte ha imposto una serie di "rimedi comportamentali": pubblicazione in tempo reale dei valori delle offerte su AdX ed eliminazione dei privilegi di "first look" e "last look" sulle proprie inserzioni.</p>
+        <div class="body-extra">
+          <p class="body">Il Dipartimento di Giustizia aveva sostenuto che solo una separazione strutturale avrebbe garantito una concorrenza reale. Google ha replicato che "la sfiducia non è una leva per aggirare i principi antitrust consolidati". La decisione ricalca, nella sostanza, quella adottata un anno prima dal giudice Amit Mehta nel caso sulla ricerca online, quando la stessa Google evitò la cessione di Chrome e Android.</p>
+          <p class="body">Le reazioni nel settore restano caute: Jay Friedman, capo della società di consulenza pubblicitaria CartographAI, ha definito la sentenza insufficiente. Il concorrente PubMatic ha accolto con favore i nuovi obblighi di trasparenza, sperando in un'applicazione effettiva. I dettagli operativi dei rimedi saranno pubblicati nelle prossime settimane.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.adexchanger.com/antitrust/google-wont-have-to-break-up-its-ad-tech-business-judge-brinkema-rules/" target="_blank" rel="noopener noreferrer">AdExchanger</a> e <a href="https://www.smartphonology.it/notizie-tech-3-settembre-meta-accelera-google-evita-lo-scorporo" target="_blank" rel="noopener noreferrer">Smartphonology</a></span>
+      </div>
+      <div class="article">
+        <h3>Tesla svela il Cybercab: robotaxi senza volante a 30mila dollari</h3>
+        <p class="body">Tesla ha presentato ufficialmente il 3 settembre ad Austin, in Texas, il Cybercab, il primo veicolo progettato specificamente per il proprio servizio di robotaxi. Il mezzo, a due posti con portiere ad ali di gabbiano, non ha volante né pedali e si affida interamente al sistema di guida autonoma FSD. Elon Musk ha indicato un prezzo obiettivo di circa 30mila dollari, nettamente inferiore a quello dei veicoli usati dal concorrente Waymo, stimati tra 70mila e 150mila dollari.</p>
+        <div class="body-extra">
+          <p class="body">La produzione del Cybercab è iniziata ad aprile 2026 e Tesla conduce già test su strade pubbliche ad Austin, ma non ha ancora comunicato una data di apertura del servizio ai clienti. Diversi analisti attribuiscono al business dei robotaxi tra il 30 e il 50% dell'attuale valutazione di Tesla, ma sottolineano che il passaggio da dimostrazioni pubbliche a un servizio commerciale su larga scala resta il vero banco di prova.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.agi.it/estero/news/2026-09-03/usa-tesla-cybercab-38862406/" target="_blank" rel="noopener noreferrer">AGI</a> e <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262148651-tesla-cybercab-officially-launched-today-tradingkey" target="_blank" rel="noopener noreferrer">TradingKey</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/tecnologia/ben-kolde-FaPxZ88yZrw-unsplash.jpg" alt="Laptop e iPhone su una scrivania" loading="lazy"></div>
+        <h3>Apple conferma l'evento del 9 settembre: al debutto il primo iPhone pieghevole</h3>
+        <p class="body">Apple terrà il prossimo 9 settembre a Cupertino il suo evento autunnale, il primo grande lancio sotto la guida del nuovo amministratore delegato John Ternus, subentrato a Tim Cook il 1&deg; settembre dopo quindici anni alla guida dell'azienda. Secondo le anticipazioni raccolte da 9to5Mac, sul palco arriveranno fino a sei nuovi prodotti: gli iPhone 18 Pro e Pro Max con chip A20 Pro, e il primo iPhone pieghevole della storia Apple.</p>
+        <div class="body-extra">
+          <p class="body">Accanto ai nuovi smartphone sono attesi l'Apple Watch Ultra 4 e l'Apple Watch Series 12; per gli auricolari si parla di nuovi AirPods 5. La transizione di Cook, che assume il ruolo di presidente esecutivo, avviene in un momento delicato per Apple, alle prese con il ritardo accumulato nello sviluppo delle proprie funzioni di intelligenza artificiale rispetto ai concorrenti.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://9to5mac.com/2026/09/03/apple-will-launch-six-major-new-products-next-week-heres-whats-coming/" target="_blank" rel="noopener noreferrer">9to5Mac</a> e <a href="https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/" target="_blank" rel="noopener noreferrer">Apple Newsroom</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/tecnologia/andrew-m--KWZtA2JHW0-unsplash.jpg" alt="Smartphone con app in primo piano" loading="lazy"></div>
+        <h3>Il Galaxy S26 FE debutta oggi in Italia: prezzo da 819 euro</h3>
+        <p class="body">Da oggi, 4 settembre, il Samsung Galaxy S26 FE è ufficialmente disponibile in Italia in due configurazioni: 8+128 GB a 819 euro e 8+256 GB a 919 euro. Lo smartphone monta un display Dynamic AMOLED 2X da 6,7 pollici a 120 Hz ed è il primo della gamma FE a debuttare con Android 17 e l'interfaccia One UI 9.</p>
+        <div class="body-extra">
+          <p class="body">Il comparto fotografico prevede un sensore principale da 50 megapixel affiancato da un ultragrandangolare da 12 megapixel e un teleobiettivo da 8 megapixel con zoom ottico 3x. La batteria da 4.900 mAh supporta la ricarica rapida a 45W. Samsung garantisce sul modello sette generazioni di aggiornamenti Android e sette anni di patch di sicurezza.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.smartworld.it/news/samsung-galaxy-s26-fe.html" target="_blank" rel="noopener noreferrer">SmartWorld</a> e <a href="https://www.businesspeople.it/hi-tech/galaxy-s26-fe-arriva-in-italia-prezzo-da-819-euro/" target="_blank" rel="noopener noreferrer">BusinessPeople</a></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== IA ===== -->
+  <div class="section" id="ia">
+    <div class="section-head">
+      <span class="section-tag tag-tecnologia">IA</span>
+      <h2 class="section-title">Nvidia acquisisce Hugging Face per quasi 13 miliardi di dollari; Meta e Google rilanciano sui modelli</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Nvidia domina il mercato dei chip per l'addestramento dei modelli di intelligenza artificiale, ma osserva con attenzione i tentativi dei principali clienti — da OpenAI a Meta — di sviluppare processori proprietari per ridurre la dipendenza dai suoi processori. Sul fronte dei modelli, la concorrenza tra i grandi laboratori resta serratissima, con nuove versioni rilasciate a distanza di poche settimane l'una dall'altra.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <div class="article-image"><img src="../immagini/intelligenza artificiale/8machine-_-LX8e3kgdgAs-unsplash.jpg" alt="Testa robotica incrinata con circuiti luminosi" loading="lazy"></div>
+        <h3>Nvidia acquisisce Hugging Face per quasi 13 miliardi di dollari</h3>
+        <p class="body">Nvidia ha annunciato il 3 settembre l'acquisizione della piattaforma open-source Hugging Face per 12,93 miliardi di dollari, la mossa più ambiziosa finora del produttore di chip per consolidare il proprio ruolo nell'ecosistema dell'intelligenza artificiale. Hugging Face conta 18 milioni di utenti tra sviluppatori e ricercatori, oltre 3 milioni di modelli e 500mila dataset condivisi, ed è utilizzata da circa 200mila aziende nel mondo.</p>
+        <div class="body-extra">
+          <p class="body">Non è il primo approccio di Nvidia: l'azienda aveva già partecipato nel 2023 a un round di finanziamento che valutava Hugging Face 4,5 miliardi di dollari, e lo scorso anno aveva offerto 500 milioni per una valutazione di 7 miliardi, proposta respinta dai fondatori per preservare l'indipendenza della piattaforma. Il CEO Nvidia Jensen Huang ha collegato l'operazione alla convinzione che "i modelli aperti accelerano l'innovazione".</p>
+          <p class="body">Nvidia e Hugging Face assicurano che la piattaforma resterà aperta, con sviluppatori liberi di scegliere modelli, framework e provider cloud indipendentemente dall'hardware Nvidia. Non mancano però le perplessità: Eric Hartford, creatore del modello Dolphin, ha segnalato il rischio che Nvidia possa in futuro favorire i contenuti legati al proprio hardware nella selezione dei modelli in evidenza sulla piattaforma.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/" target="_blank" rel="noopener noreferrer">Nvidia Newsroom</a> e <a href="https://fortune.com/2026/09/03/hugging-face-goes-from-a-scrappy-startup-named-after-an-emoji-to-13-billion-nvidia-acquisition/" target="_blank" rel="noopener noreferrer">Fortune</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/intelligenza artificiale/anastasiia-ornarin-AKLmClQnAMA-unsplash.jpg" alt="Silhouette umana dorata stilizzata" loading="lazy"></div>
+        <h3>La corsa ai modelli: Meta lancia Muse Spark 1.3, Google risponde con Gemini 3.8 Flash</h3>
+        <p class="body">A un giorno di distanza, Meta e Google hanno rilasciato nuovi modelli di intelligenza artificiale nel tentativo di guadagnare terreno su OpenAI e Anthropic. Meta Superintelligence Labs ha pubblicato il 2 settembre Muse Spark 1.3, che nella versione "xhigh" ottiene 61 punti nell'Artificial Analysis Intelligence Index; Google ha risposto con Gemini 3.8 Flash, quarto modello della serie Flash rilasciato in quattro mesi, capace di raggiungere 59 punti sullo stesso indice a un costo che Artificial Analysis definisce il più basso della sua categoria.</p>
+        <div class="body-extra">
+          <p class="body">In cima alla classifica restano i modelli di Anthropic, Claude Fable 5.1 (66 punti) e Claude Opus 5 (63), seguiti da GPT-5.6 Sol e Grok 4.6, entrambi a 61. Gemini 3.8 Flash costa 0,75 dollari per milione di token in input e 3,75 in output, un prezzo che Google definisce circa sei volte inferiore a quello di Claude Fable 5.1 per un livello di intelligenza comparabile.</p>
+          <p class="body">Entrambe le aziende puntano soprattutto su programmazione e attività "agentiche", cioè compiti articolati in più passaggi svolti in autonomia dal modello. Gemini 3.8 Flash è già disponibile su Google Antigravity, Gemini API, AI Studio e nell'app Gemini per i consumatori.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.theregister.com/ai-and-ml/2026/09/02/with-gemini-38-flash-google-reminds-everyone-its-still-in-the-race/5294049" target="_blank" rel="noopener noreferrer">The Register</a> e <a href="https://www.bloomberg.com/news/articles/2026-09-02/meta-releases-more-powerful-ai-model-edging-closer-to-rivals" target="_blank" rel="noopener noreferrer">Bloomberg</a></span>
+      </div>
+      <div class="article">
+        <h3>Apple accusa un ex ingegnere di aver portato segreti industriali a OpenAI</h3>
+        <p class="body">Apple ha rafforzato la causa intentata a luglio contro OpenAI, presentando nuove prove forensi contro Chang Liu, ingegnere che ha lasciato Cupertino per il laboratorio di intelligenza artificiale a gennaio 2026. Secondo la documentazione depositata da Apple, Liu avrebbe scaricato uno schema circuitale riservato e lo avrebbe eseguito all'interno di una simulazione mentre già lavorava per OpenAI, un utilizzo emerso grazie alla sincronizzazione via iCloud tra il suo vecchio Mac mini aziendale e il nuovo MacBook.</p>
+        <div class="body-extra">
+          <p class="body">Apple sostiene inoltre che Liu avrebbe cancellato dati probatori a giugno 2026, sfruttando un bug di autenticazione per mantenere l'accesso ai file aziendali. OpenAI ha respinto le accuse più gravi, sostenendo che l'accesso residuo sia riconducibile a una gestione inadeguata, da parte di Apple, della revoca dei permessi ai dipendenti usciti dall'azienda. Apple chiede ora ai giudici un'ingiunzione preliminare per bloccare lo sviluppo di dispositivi hardware di OpenAI basati sulle proprie tecnologie.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://techcrunch.com/2026/08/31/apple-shares-shocking-evidence-against-former-employee-accused-of-stealing-company-data-for-openai/" target="_blank" rel="noopener noreferrer">TechCrunch</a> e <a href="https://www.morningtech.it/apple-presenta-prove-schiaccianti-contro-openai-ottenute-dal-macbook-di-un-ex-dipendente/" target="_blank" rel="noopener noreferrer">MorningTech</a></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== IMMIGRAZIONE ITALIA ===== -->
+  <div class="section" id="immigrazione-italia">
+    <div class="section-head">
+      <span class="section-tag tag-migra">Immigrazione Italia</span>
+      <h2 class="section-title">Sbarchi in calo del 55% nel 2026; fermata a Lampedusa la nave Humanity 2</h2>
+    </div>
+    <div class="context-box">
+      <div class="context-box-label">Da sapere per capire</div>
+      <p>Il "cruscotto statistico giornaliero" del Dipartimento per le libertà civili e l'immigrazione del Ministero dell'Interno è il documento con cui il Viminale aggiorna periodicamente i numeri su sbarchi, rimpatri e accoglienza. Dal 2026 le navi delle organizzazioni non governative impegnate nel soccorso in mare sono tenute, in base al cosiddetto decreto Piantedosi, a comunicare immediatamente ogni intervento al Centro di coordinamento del soccorso marittimo competente: la mancata o tardiva comunicazione può essere sanzionata con il fermo amministrativo dell'imbarcazione.</p>
+    </div>
+    <div class="articles">
+      <div class="article lead">
+        <div class="article-image"><img src="../immagini/immigrazione italia/afiq-samat-T32yN3TVSvY-unsplash.jpg" alt="Spiaggia con imbarcazioni sulla costa" loading="lazy"></div>
+        <h3>Sbarchi in calo del 55% nel 2026, il cruscotto del Viminale aggiornato al 2 settembre</h3>
+        <p class="body">Il cruscotto statistico del Ministero dell'Interno, aggiornato alle ore 8 del 2 settembre 2026, registra 19.747 migranti sbarcati in Italia dal 1&deg; gennaio, contro i 43.860 dello stesso periodo del 2025: un calo del 55%, pari a 24.113 arrivi in meno. Nel periodo estivo tra il 3 luglio e il 1&deg; settembre gli sbarchi sono stati 5.137, contro i 12.748 dell'anno precedente (-59,7%). Nello stesso arco temporale, tra il 1&deg; gennaio e il 31 agosto, i rimpatri effettuati sono stati 5.810, di cui 4.973 forzati e 837 volontari assistiti.</p>
+        <div class="body-extra">
+          <p class="body">Il documento ufficiale, disponibile sul sito del Dipartimento per le libertà civili e l'immigrazione, non riporta nella sintesi ripresa dalla stampa un dato specifico aggiornato sui minori stranieri non accompagnati. Accanto ai dati sugli arrivi, resta il bilancio delle vittime in mare: secondo il Missing Migrants Project dell'Organizzazione internazionale per le migrazioni, almeno 914 persone sono morte o risultano disperse nel Mediterraneo centrale dall'inizio del 2026. Non risultano, alla data del 4 settembre, aggiornamenti del cruscotto successivi a quello del 2 settembre 2026.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://libertaciviliimmigrazione.dlci.interno.gov.it/documentazione/dati-e-statistiche/cruscotto-statistico-giornaliero" target="_blank" rel="noopener noreferrer">Ministero dell'Interno &ndash; Cruscotto statistico giornaliero</a> e <a href="https://www.ilsud24.it/2026/09/03/migranti-crollano-gli-sbarchi-irregolari/" target="_blank" rel="noopener noreferrer">Il Sud24</a></span>
+      </div>
+      <div class="article">
+        <div class="article-image"><img src="../immagini/immigrazione italia/anh-tuan-to-y1VaWqp8m5Q-unsplash.jpg" alt="Piccola imbarcazione solitaria in mare aperto" loading="lazy"></div>
+        <h3>Fermata a Lampedusa la nave Humanity 2 della ong Sos Humanity</h3>
+        <p class="body">La nave a vela Humanity 2, dell'organizzazione non governativa tedesca Sos Humanity, è stata colpita il 2 settembre da un fermo amministrativo a Lampedusa. Le autorità italiane contestano la mancata comunicazione immediata al Centro di coordinamento del soccorso marittimo competente di uno dei due interventi con cui l'equipaggio ha soccorso complessivamente 71 persone al largo della Libia tra il 28 e il 29 agosto.</p>
+        <div class="body-extra">
+          <p class="body">Ikram Jarmouni, membro dell'equipaggio di Sos Humanity, ha definito il fermo "una mossa politicamente motivata volta a ostacolare le operazioni di ricerca e soccorso", sostenendo che le autorità furono informate non appena la situazione a bordo fu sotto controllo; l'equipaggio ha riferito anche il ritrovamento di tre corpi durante le operazioni. L'ong ha annunciato ricorso contro il provvedimento. Le autorità italiane, dal canto loro, contestano la gestione delle comunicazioni durante gli interventi, ritenendola non conforme alla normativa vigente.</p>
+          <p class="body">L'episodio si inserisce in un 2026 in cui gli arrivi via mare in Italia risultano in calo del 55% rispetto al 2025, a fronte di almeno 914 morti o dispersi nel Mediterraneo centrale dall'inizio dell'anno secondo il Missing Migrants Project.</p>
+        </div>
+        <button type="button" class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">&#8595;</span></button>
+        <span class="source">Fonte: <a href="https://www.fanpage.it/politica/migranti-fermata-a-lampedusa-la-nave-di-sos-humanity-long-annuncia-ricorso-impediscono-i-soccorsi/" target="_blank" rel="noopener noreferrer">Fanpage</a> e <a href="https://www.ilgiornale.it/news/nazionale/fermata-unaltra-ong-tedesca-a-lampedusa-ma-gli-attivisti-non-ci-stanno-faremo-ricorso/" target="_blank" rel="noopener noreferrer">il Giornale</a></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section" id="dati-immigrazione">
+    <div class="section-head">
+      <span class="section-tag tag-migra">Dati Immigrazione</span>
+      <h2 class="section-title">Immigrazione, i numeri del 2026</h2>
+    </div>
+    <div class="section-note">Sbarchi, minori non accompagnati e rimpatri italiani (dati Viminale, periodi diversi indicati per ciascun dato). Ultimo aggiornamento disponibile del cruscotto statistico: 2 settembre 2026, ore 8:00.</div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">Sbarchi in Italia</div>
+        <div class="kpi-value">19.747</div>
+        <div class="kpi-note">1 gen - 2 set 2026, Viminale — -55% sul 2025 (43.860)</div>
+      </div>
+      <div class="kpi rimpatri">
+        <div class="kpi-label">Rimpatri dall'Italia</div>
+        <div class="kpi-value">5.810</div>
+        <div class="kpi-note">1 gen - 31 ago 2026, Viminale — 4.973 forzati, 837 volontari assistiti</div>
+      </div>
+      <div class="kpi arrivi">
+        <div class="kpi-label">Sbarchi periodo estivo (3 lug - 1 set)</div>
+        <div class="kpi-value">5.137</div>
+        <div class="kpi-note">Viminale — 12.748 nello stesso periodo 2025 (-59,7%)</div>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Sbarchi totali per anno: 2025, 2026 a confronto</div>
+      <div class="chart-period">1&deg; gennaio - 2 settembre, anni a confronto (Ministero dell'Interno)</div>
+      <div class="bar-row"><div class="bar-label">2025</div><div class="bar-track"><div class="bar-fill asilo" style="width:100%" data-tooltip="2025: 43.860"></div></div><div class="bar-value">43.860</div></div>
+      <div class="bar-row"><div class="bar-label">2026</div><div class="bar-track"><div class="bar-fill asilo" style="width:45%" data-tooltip="2026: 19.747"></div></div><div class="bar-value">19.747 <span class="dv-delta down">-55%</span></div></div>
+      <div class="side-note">Il calo del 2026 rispetto al 2025 si conferma su tutto il periodo osservato, con un ritmo di arrivi che dall'estate resta stabilmente più basso rispetto agli stessi mesi dell'anno precedente.</div>
+      <div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Ministero dell'Interno (dato al 2/9/2026, ore 8:00).</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Rimpatri dall'Italia, per tipologia</div>
+      <div class="chart-period">1&deg; gennaio - 31 agosto 2026 (Ministero dell'Interno)</div>
+      <div class="bar-row"><div class="bar-label">Forzati</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:100%" data-tooltip="Forzati: 4.973"></div></div><div class="bar-value">4.973</div></div>
+      <div class="bar-row"><div class="bar-label">Volontari assistiti</div><div class="bar-track"><div class="bar-fill rimpatri" style="width:17%" data-tooltip="Volontari assistiti: 837"></div></div><div class="bar-value">837</div></div>
+      <div class="side-note">Il totale di 5.810 rimpatri nel 2026 (gennaio-agosto) conferma il trend di crescita degli ultimi mesi, trainato soprattutto dai rimpatri forzati.</div>
+      <div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Ministero dell'Interno (dato al 31/8/2026).</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Vittime nel Mediterraneo centrale, dall'inizio del 2026</div>
+      <div class="chart-period">1&deg; gennaio - inizio settembre 2026</div>
+      <div class="bar-row"><div class="bar-label">Morti o dispersi</div><div class="bar-track"><div class="bar-fill asilo" style="width:100%" data-tooltip="914"></div></div><div class="bar-value">914</div></div>
+      <div class="side-note">Il numero, elaborato indipendentemente dai dati sugli sbarchi, mostra come il calo degli arrivi non abbia eliminato il rischio della traversata.</div>
+      <div class="dv-sources">Fonte: Missing Migrants Project, Organizzazione Internazionale per le Migrazioni (dato ripreso il 2-3/9/2026).</div>
+    </div>
+  </div>
+
+  </div>
+</div>
+</div>
+<div class="footer">
+  <span>Rassegna stampa — fonti multiple, tradotte e sintetizzate in italiano</span>
+  <span>Aggiornata: 4 Settembre 2026</span>
+</div>
+<div class="footer-note">"Il Contribuente" perché sei tu che paghi, in un modo o nell'altro, quasi tutta l'informazione. Questa pubblicazione prova a restituirti qualcosa mettendo a confronto i fatti, raccontati da più voci — l'idea te la fai tu.</div>
+<div class="footer-legal">
+  <p>Pubblicazione indipendente e personale, priva di finalità commerciali. Non sono presenti pubblicità, abbonamenti, sponsorizzazioni o finanziamenti di alcun tipo, pubblici o privati.</p>
+  <p>I contenuti pubblicati costituiscono sintesi originali e rielaborazioni redazionali di notizie di pubblico dominio, diffuse da testate giornalistiche terze regolarmente citate accanto a ciascun contenuto. Non viene riprodotto integralmente alcun testo, titolo, fotografia o materiale protetto da diritto d'autore appartenente alle testate citate. Si invita alla consultazione delle fonti originali, di cui vengono sempre indicati nome e riferimento.</p>
+  <p>Tutti i marchi, i loghi, i nomi e i segni distintivi delle testate menzionate restano di proprietà esclusiva dei rispettivi editori; la loro citazione ha esclusivo scopo informativo e di attribuzione della fonte, senza alcuna affiliazione, patrocinio o approvazione da parte delle testate stesse.</p>
+  <p>Questa pubblicazione non costituisce prodotto editoriale ai sensi dell'art. 1 della legge 7 marzo 2001, n. 62, non avendo carattere di periodicità regolarmente garantita né organizzazione redazionale strutturata, e non è pertanto soggetta a registrazione presso il Tribunale.</p>
+  <p>Le sintesi comparative tra testate riportano posizioni e opinioni riconducibili esclusivamente alle fonti citate, non a chi cura questa pubblicazione, il cui intento è offrire un quadro informativo comparato e non esprimere posizioni editoriali proprie.</p>
+  <p>Eventuali richieste di rettifica o rimozione di contenuti possono essere inoltrate a <a href="mailto:redazione.ilcontribuente@protonmail.com" style="color:var(--ink-soft);">redazione.ilcontribuente@protonmail.com</a> e saranno evase con la massima tempestività.</p>
+  <p style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule);">&copy; 2026 Il Contribuente. Tutti i diritti riservati. Le sintesi, le rielaborazioni redazionali, i confronti tra fonti e l'impaginazione originale di questa pubblicazione sono opera dell'autore e tutelati dalla legge sul diritto d'autore (l. 633/1941 e succ. mod.), anche in forma anonima o pseudonima ai sensi dell'art. 8. È vietata la riproduzione, copia integrale o parziale, ridistribuzione o pubblicazione altrove dei contenuti originali di questa testata senza autorizzazione, fatto salvo l'uso di brevi citazioni con obbligo di attribuzione alla fonte.</p>
+  <div class="footer-cc">
+    <span class="footer-cc-icon">CC BY-NC-ND</span>
+    <span>Informazione senza padroni &middot; Licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="noopener">Creative Commons Attribuzione – Non commerciale – Non opere derivate 4.0</a></span>
+  </div>
+</div>
+
+<a href="#top" id="backToTop" class="back-to-top" aria-label="Torna su">&#8593;</a>
+<script>
+  (function(){
+    var LIMIT = 15;
+    var container = document.querySelector('.masthead-badges');
+    var toggleBtn = document.getElementById('badgesToggleBtn');
+    if (!container || !toggleBtn) return;
+    var badges = Array.prototype.slice.call(container.querySelectorAll('.badge'));
+    if (badges.length <= LIMIT) return;
+    badges.forEach(function(b, i){
+      if (i >= LIMIT) b.classList.add('badge-hidden');
+    });
+    toggleBtn.style.display = 'inline-block';
+    var expanded = false;
+    toggleBtn.addEventListener('click', function(){
+      expanded = !expanded;
+      badges.forEach(function(b, i){
+        if (i >= LIMIT) b.classList.toggle('badge-hidden', !expanded);
+      });
+      toggleBtn.textContent = expanded ? 'Mostra meno' : 'Vedi altri';
+    });
+  })();
+  function toggleReadMore(el){
+    var card = el.closest('.duel-side, .article');
+    if (!card) return;
+    var expanded = card.classList.toggle('expanded');
+    el.innerHTML = expanded
+      ? 'Mostra meno <span class="rm-arrow">&#8595;</span>'
+      : 'Continua a leggere <span class="rm-arrow">&#8595;</span>';
+  }
+  var btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 400) { btn.classList.add('show'); }
+    else { btn.classList.remove('show'); }
+  });
+  (function(){
+    var overlay = document.getElementById('introOverlay');
+    var closeBtn = document.getElementById('closeOverlay');
+    if (!overlay || !closeBtn) return;
+    var edition = document.body.getAttribute('data-edition') || 'ignota';
+    var publishedRaw = document.body.getAttribute('data-published');
+    var storageKey = 'ilcontribuente_overlay_seen_' + edition;
+    var TWENTY_FOUR_HOURS_MS = 24 * 60 * 60 * 1000;
+    var expired = false;
+    if (publishedRaw) {
+      var publishedDate = new Date(publishedRaw);
+      if (!isNaN(publishedDate.getTime())) {
+        expired = (Date.now() - publishedDate.getTime()) > TWENTY_FOUR_HOURS_MS;
+      }
+    }
+    var alreadySeen = false;
+    try { alreadySeen = localStorage.getItem(storageKey) === '1'; } catch (e) { alreadySeen = false; }
+    function closeOverlay(){
+      overlay.style.display = 'none';
+      document.body.classList.remove('overlay-open');
+      try { localStorage.setItem(storageKey, '1'); } catch (e) {}
+    }
+    if (alreadySeen || expired) {
+      overlay.style.display = 'none';
+    } else {
+      document.body.classList.add('overlay-open');
+      closeBtn.addEventListener('click', closeOverlay);
+      overlay.addEventListener('click', function(e){
+        if (e.target === overlay) closeOverlay();
+      });
+    }
+  })();
+</script>
+<!-- Cloudflare Web Analytics -->
+ <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bb997896473e4d548b52561500832160"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

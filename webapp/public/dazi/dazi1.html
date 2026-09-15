@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dazi e guerre commerciali — Approfondimenti fissi | Il Contribuente</title>
+<meta name="description" content="La cronologia verificata dei dazi Usa dal Liberation Day 2025 alla sentenza della Corte Suprema, fino all'escalation con il Canada di agosto 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9da;
+    --paper2:#e4dcc7;
+    --ink:#1b1e22;
+    --ink-soft:#565c64;
+    --rule:#c7bc9f;
+    --red:#a3291f;
+    --red-deep:#7c1d16;
+    --navy:#1f3a5f;
+    --navy-deep:#122438;
+    --gold:#a97a1f;
+    --gold-deep:#7d5a13;
+    --green:#3d6b4f;
+    --green-deep:#264734;
+    --wine:#6b2438;
+    --wine-deep:#481725;
+    --card:#fdfcf7;
+    --shadow-sm:0 1px 3px rgba(27,30,34,.12);
+    --shadow-md:0 4px 16px rgba(27,30,34,.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:900px; margin:0 auto; padding:0 6vw 80px 6vw; }
+  .topnav{
+    max-width:900px;
+    margin:0 auto;
+    padding:22px 6vw 0 6vw;
+  }
+  .topnav a{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+  }
+  .topnav a:hover{ color:var(--ink); border-bottom-color:var(--ink); }
+  .masthead{ padding:30px 6vw 34px 6vw; border-bottom:3px solid var(--ink); max-width:900px; margin:0 auto; }
+  .dossier-kicker{
+    display:inline-block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#fff;
+    background:linear-gradient(160deg,#9c6a2c,#5c3d14);
+    padding:5px 12px;
+    border-radius:4px;
+    margin-bottom:16px;
+  }
+  h1.title{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(32px,5vw,50px);
+    line-height:1.08;
+    margin:0 0 14px 0;
+    color:var(--ink);
+  }
+  .subtitle{
+    font-family:'Inter',sans-serif;
+    font-size:17px;
+    color:var(--ink-soft);
+    max-width:640px;
+    margin:0;
+  }
+  .brand-line{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:20px;
+  }
+  .brand-line em{ font-style:normal; color:var(--ink); font-weight:700; }
+  .intro{
+    margin:36px 0 8px 0;
+    font-size:17.5px;
+    color:var(--ink);
+  }
+  .intro strong{ color:var(--gold-deep); }
+  .updated-note{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    margin:6px 0 40px 0;
+  }
+  .timeline{
+    position:relative;
+    margin:44px 0;
+    padding-left:28px;
+    border-left:3px solid var(--gold);
+  }
+  .era{
+    position:relative;
+    margin-bottom:40px;
+  }
+  .era::before{
+    content:'';
+    position:absolute;
+    left:-35px;
+    top:4px;
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:var(--gold);
+    border:3px solid var(--paper);
+    box-shadow:0 0 0 2px var(--gold);
+  }
+  .era.current::before{ background:var(--red-deep); box-shadow:0 0 0 2px var(--red-deep); }
+  .era-years{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    font-weight:700;
+    margin-bottom:6px;
+  }
+  .era.current .era-years{ color:var(--red-deep); }
+  .era-title{
+    font-family:'Fraunces',serif;
+    font-weight:800;
+    font-size:24px;
+    margin:0 0 10px 0;
+    color:var(--ink);
+  }
+  .era-body{ font-size:16px; color:var(--ink); }
+  .era-body p{ margin:0 0 12px 0; }
+  .era-numbers{
+    background:var(--card);
+    border-left:4px solid var(--gold);
+    border-radius:6px;
+    padding:14px 18px;
+    margin:14px 0;
+    box-shadow:var(--shadow-sm);
+  }
+  .era.current .era-numbers{ border-left-color:var(--red-deep); }
+  .era-numbers-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .era-numbers p{ margin:0; font-size:15px; }
+  .era-numbers strong{ color:var(--ink); }
+  .era-source{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:8px;
+  }
+  .cumulative-box{
+    background:linear-gradient(160deg,#9c6a2c,#5c3d14);
+    color:#fff;
+    border-radius:10px;
+    padding:26px 30px;
+    margin:44px 0;
+    box-shadow:var(--shadow-md);
+  }
+  .cumulative-box .k{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#e9d8b8;
+    margin-bottom:10px;
+  }
+  .cumulative-box p{ margin:0 0 10px 0; font-size:16px; }
+  .cumulative-box p:last-child{ margin-bottom:0; }
+  .cumulative-box strong{ color:#fff; }
+  .note-box{
+    background:linear-gradient(160deg, #eef3f8, #e3ebf3);
+    border-left:4px solid var(--navy);
+    border-radius:8px;
+    padding:16px 20px;
+    margin:24px 0;
+    font-size:15px;
+  }
+  .note-box .label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--navy);
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .sources-box{
+    margin:44px 0 0 0;
+    padding-top:24px;
+    border-top:1px solid var(--rule);
+  }
+  .sources-box h3{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin:0 0 12px 0;
+  }
+  .sources-box ul{ margin:0; padding-left:18px; font-size:13.5px; color:var(--ink-soft); }
+  .sources-box li{ margin-bottom:5px; }
+  footer{
+    max-width:900px;
+    margin:60px auto 0 auto;
+    padding:28px 6vw 40px 6vw;
+    border-top:3px solid var(--ink);
+  }
+  .footer-back{
+    display:inline-block;
+    margin-bottom:22px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--ink-soft);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+  }
+  .footer-legal p{
+    font-size:12px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin:0 0 8px 0;
+  }
+  .footer-legal p:last-child{ margin-bottom:0; }
+  @media (max-width:640px){
+    .timeline{ padding-left:20px; }
+    .era::before{ left:-27px; width:11px; height:11px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="../index.html">&larr; Il Contribuente</a>
+</div>
+
+<div class="masthead">
+  <span class="dossier-kicker">Approfondimenti fissi</span>
+  <h1 class="title">Dazi e guerre commerciali</h1>
+  <p class="subtitle">Come si è arrivati ai dazi di oggi: la cronologia verificata delle tariffe Usa dal "Liberation Day" del 2025 alla sentenza della Corte Suprema, fino al nuovo fronte aperto con il Canada ad agosto 2026.</p>
+  <div class="brand-line">Dossier di <em>Il Contribuente</em></div>
+</div>
+
+<div class="wrap">
+
+  <p class="intro">Nella rassegna quotidiana i dazi tornano quasi ogni settimana — un'azienda che crolla in borsa, un accordo commerciale, una nuova soglia percentuale. Ma la storia dietro ogni singolo annuncio è una sola, ed è più lineare di quanto sembri leggendola a puntate. Questa pagina la mette in fila, con date e percentuali sempre verificate.</p>
+  <div class="updated-note">Ultimo aggiornamento: 26 agosto 2026 &middot; i nuovi sviluppi vengono comunque ripresi anche nella rassegna quotidiana quando rilevanti</div>
+
+  <div class="timeline">
+
+    <div class="era">
+      <div class="era-years">2018 – 2019</div>
+      <h2 class="era-title">Il primo mandato: la guerra dei dazi con la Cina</h2>
+      <div class="era-body">
+        <p>Nel suo primo mandato, Trump introduce i primi dazi "Section 301" contro la Cina, accusata di pratiche commerciali sleali e trasferimento forzato di tecnologia. Sono le tariffe che, mai del tutto rimosse dall'amministrazione Biden, restano ancora oggi in vigore come base su cui si sono innestati i dazi molto più ampi del 2025.</p>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-years">13 febbraio – 2 aprile 2025</div>
+      <h2 class="era-title">Verso il "Liberation Day"</h2>
+      <div class="era-body">
+        <p>Il 13 febbraio 2025 Trump ordina uno studio di dazi "reciproci" calibrati Paese per Paese. Il 2 aprile, in una cerimonia al Rose Garden ribattezzata "Liberation Day", firma l'ordine esecutivo 14257: la base legale è l'IEEPA (International Emergency Economic Powers Act), una legge pensata per le emergenze nazionali, mai prima usata in questo modo per imporre dazi commerciali.</p>
+      </div>
+      <div class="era-numbers">
+        <div class="era-numbers-label">I numeri</div>
+        <p>Dal <strong>5 aprile 2025</strong>: aliquota base del <strong>10%</strong> su tutte le importazioni Usa. Dal 9 aprile dovevano scattare le aliquote punitive: Cina 34%, Unione europea 20%, Canada e Messico 25% (sui beni non coperti dall'accordo USMCA), Regno Unito 15%, Vietnam 46%.</p>
+        <div class="era-source">Fonte: Congress.gov (CRS), Wikipedia</div>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-years">9 aprile – 12 maggio 2025</div>
+      <h2 class="era-title">L'escalation record con la Cina</h2>
+      <div class="era-body">
+        <p>Dopo il crollo dei mercati (l'S&amp;P 500 aveva perso valore per giorni), il 9 aprile Trump concede una pausa di 90 giorni sulle aliquote sopra il 10% per tutti i Paesi tranne uno: la Cina. Con Pechino scatta invece un botta e risposta senza precedenti, che nel giro di una settimana porta i dazi americani sulla Cina fino al 245% su alcuni beni, mentre la Cina risponde salendo al 125% e presenta reclamo al Wto.</p>
+      </div>
+      <div class="era-numbers">
+        <div class="era-numbers-label">I numeri</div>
+        <p>Escalation: Usa 34% &rarr; 125% &rarr; <strong>145%</strong> (+20% di sovrattassa "fentanyl") &rarr; fino al <strong>245%</strong> su alcuni beni (17 aprile). Cina: 34% &rarr; 84% &rarr; <strong>125%</strong>. Il 12 maggio, alla "tregua di Ginevra", entrambe le parti tagliano drasticamente: Usa al 30%, Cina al 10%, per 90 giorni.</p>
+        <div class="era-source">Fonte: Incodocs U.S.-China Tariff Timeline, Wikipedia</div>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-years">27 luglio 2025</div>
+      <h2 class="era-title">Turnberry: l'accordo con l'Unione europea</h2>
+      <div class="era-body">
+        <p>A Turnberry, in Scozia, la presidente della Commissione Ue Ursula von der Leyen e Trump firmano un'intesa quadro per evitare una guerra commerciale totale: un dazio generale del 15% su gran parte dell'export europeo verso gli Usa (comprese le automobili, prima al 27,5%), con un regime "zero per zero" per aerei e componenti, apparecchiature per semiconduttori e materie prime critiche. In cambio, l'Ue si impegna ad acquistare energia Usa per 250 miliardi di dollari l'anno.</p>
+      </div>
+      <div class="era-numbers">
+        <div class="era-numbers-label">I numeri</div>
+        <p>Dazio generale Ue: <strong>15%</strong>. Impegno energetico Ue: <strong>250 miliardi $/anno</strong>, fino a circa 700 miliardi $ entro la fine del mandato Trump. L'Ue aveva preparato contromisure fino a 95 miliardi di euro, poi sospese per dare spazio ai negoziati.</p>
+        <div class="era-source">Fonte: Euronews, Parlamento europeo</div>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-years">Agosto – 30 ottobre 2025</div>
+      <h2 class="era-title">Proroghe e il vertice di Busan</h2>
+      <div class="era-body">
+        <p>La tregua Usa-Cina viene prorogata più volte (Stoccolma, poi fino al 10 novembre) mentre le due delegazioni negoziano. Il 30 ottobre, al vertice di Busan tra Trump e Xi Jinping, arriva un nuovo accordo: gli Usa dimezzano la sovrattassa "fentanyl" dal 20% al 10%, la Cina rinvia di un anno le nuove restrizioni sull'export di terre rare — cruciali per l'industria tecnologica occidentale — e si impegna su nuovi acquisti di soia americana.</p>
+      </div>
+      <div class="era-numbers">
+        <div class="era-numbers-label">I numeri</div>
+        <p>Dopo Busan, la tariffa complessiva media Usa sulla Cina scende a circa il <strong>47%</strong>.</p>
+        <div class="era-source">Fonte: CNBC</div>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-years">28 maggio 2025 – 20 febbraio 2026</div>
+      <h2 class="era-title">Il contenzioso legale: la sconfitta in Corte Suprema</h2>
+      <div class="era-body">
+        <p>Parallelamente al braccio di ferro diplomatico, si combatte una battaglia legale: la Corte del Commercio Internazionale Usa dichiara il 28 maggio 2025 che l'uso dell'IEEPA per imporre dazi è un eccesso di potere presidenziale, e il 29 agosto la Corte d'Appello federale conferma. Il caso arriva alla Corte Suprema, che il 20 febbraio 2026, con una maggioranza di 6 a 3, dichiara illegittimi tutti i dazi imposti tramite IEEPA: "la legge non contiene alcun riferimento a dazi o tariffe", scrivono i giudici.</p>
+      </div>
+      <div class="era-numbers">
+        <div class="era-numbers-label">I numeri</div>
+        <p>Annullati circa <strong>166 miliardi di dollari</strong> di dazi già riscossi; oltre <strong>2.000 cause</strong> per il rimborso, rinviate alle corti inferiori.</p>
+        <div class="era-source">Fonte: White &amp; Case, Wikipedia (Learning Resources, Inc. v. Trump)</div>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-years">24 febbraio 2026</div>
+      <h2 class="era-title">Fine dei dazi IEEPA, arriva la Section 122</h2>
+      <div class="era-body">
+        <p>A mezzanotte del 24 febbraio 2026 decadono tutti i dazi basati sull'IEEPA: il dazio "traffico" sulla Cina, quelli su Canada e Messico, i dazi reciproci globali. Lo stesso giorno Trump firma un nuovo dazio globale, questa volta basato sulla Section 122 del Trade Act del 1974 — una norma diversa, valida al massimo 150 giorni — al 10%, poi annunciato in aumento al 15%. Restano invece in vigore, perché basati su altre leggi mai toccate dalla sentenza, i dazi Section 301 (Cina) e Section 232 (acciaio, alluminio, automobili, rame).</p>
+      </div>
+      <div class="note-box">
+        <div class="label">Un dato contestato</div>
+        Le stime sulla tariffa media effettiva Usa-Cina dopo la sentenza variano da fonte a fonte, tra il 29,7% (Global Trade Alert) e il 35% (altre fonti di settore), a seconda di cosa viene incluso nel calcolo: un buon esempio di come lo stesso evento possa produrre numeri diversi senza che nessuna fonte stia necessariamente sbagliando.
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-years">12 marzo – 3 maggio 2025</div>
+      <h2 class="era-title">I dazi di settore: acciaio, alluminio, automobili</h2>
+      <div class="era-body">
+        <p>Al di fuori del braccio di ferro sui dazi "reciproci", restano sempre attivi i dazi settoriali basati sulla Section 232 (sicurezza nazionale), che la sentenza della Corte Suprema non ha toccato: acciaio e alluminio al 25% dal 12 marzo 2025, portati al 50% dal 4 giugno (il Regno Unito resta eccezionalmente al 25%, per un accordo bilaterale); automobili assemblate al 25% dal 3 aprile, componenti auto al 25% dal 3 maggio.</p>
+      </div>
+    </div>
+
+    <div class="era current">
+      <div class="era-years">24 agosto 2026</div>
+      <h2 class="era-title">Il nuovo fronte: auto e Canada</h2>
+      <div class="era-body">
+        <p>Dopo il collasso dei negoziati commerciali con Ottawa, Trump annuncia il 24 agosto 2026 l'aumento dal 25% al 50% dei dazi su automobili, autocarri e acciaio canadesi, con entrata in vigore prevista per il 1° gennaio 2027. Il premier canadese Mark Carney ha annunciato contromisure — dazi su acciaio Usa, latticini, elettrodomestici, macchinari agricoli e cellulosa/carta — attese per l'8 settembre 2026. È l'episodio che, nella rassegna del 26 agosto, ha fatto crollare in borsa Stellantis e altri titoli della filiera auto europea.</p>
+      </div>
+      <div class="era-numbers">
+        <div class="era-numbers-label">I numeri</div>
+        <p>Dazio auto/acciaio Canada: dal 25% al <strong>50%</strong>, dal 1° gennaio 2027.</p>
+        <div class="era-source">Fonte: CBS News</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cumulative-box">
+    <div class="k">Il quadro d'insieme</div>
+    <p>Dal "Liberation Day" alla sentenza della Corte Suprema, la tariffa media Usa sulle importazioni ha toccato oltre il <strong>17%</strong>, il livello più alto dalla Grande Depressione — anche dopo l'annullamento dei dazi IEEPA, restano infatti in vigore i dazi settoriali e quelli ereditati dal primo mandato Trump.</p>
+    <p>Per l'Italia e l'Europa, l'accordo di Turnberry (dazio generale 15%, comprese le auto) resta il quadro di riferimento, ma il Parlamento europeo lo considera "in sospeso" dopo la sentenza Usa di febbraio 2026, perché la nuova Section 122 rischia di sommarsi ad altre tariffe superando proprio quella soglia del 15% concordata.</p>
+  </div>
+
+  <div class="sources-box">
+    <h3>Fonti citate in questa pagina</h3>
+    <ul>
+      <li>Congress.gov, Congressional Research Service — cronologia dazi presidenziali 2025</li>
+      <li>Wikipedia — Liberation Day tariffs; Learning Resources, Inc. v. Trump</li>
+      <li>White &amp; Case — fine dei dazi IEEPA e Section 122</li>
+      <li>White House — Fact sheet su acciaio/alluminio e automobili</li>
+      <li>CBS News — dazi auto/acciaio sul Canada, agosto 2026</li>
+      <li>Euronews, Parlamento europeo — accordo Ue-Usa di Turnberry e suo stato dopo la sentenza</li>
+      <li>CNBC — vertice Trump-Xi di Busan, ottobre 2025</li>
+      <li>Incodocs — cronologia dazi Usa-Cina</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <a href="../index.html" class="footer-back">&larr; Torna a Il Contribuente</a>
+  <div class="footer-legal">
+    <p>Pubblicazione indipendente e personale, priva di finalità commerciali. Non sono presenti pubblicità, abbonamenti, sponsorizzazioni o finanziamenti di alcun tipo, pubblici o privati.</p>
+    <p>I contenuti pubblicati costituiscono sintesi originali e rielaborazioni redazionali di notizie di pubblico dominio, diffuse da fonti terze regolarmente citate accanto a ciascun contenuto. Non viene riprodotto integralmente alcun testo, titolo, fotografia o materiale protetto da diritto d'autore appartenente alle fonti citate. Si invita alla consultazione delle fonti originali.</p>
+    <p>Le sintesi riportano posizioni e opinioni riconducibili esclusivamente alle fonti citate, non a chi cura questa pubblicazione, il cui intento è offrire un quadro informativo comparato e non esprimere posizioni editoriali proprie.</p>
+    <p>Eventuali richieste di rettifica o rimozione di contenuti possono essere inoltrate a <a href="mailto:ilcontribuente@gmail.com" style="color:var(--ink-soft);">ilcontribuente@gmail.com</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
