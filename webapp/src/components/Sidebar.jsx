@@ -2,7 +2,8 @@ export default function Sidebar({ sidebar }) {
   return (
     <div className="side-col" id="approfondimenti">
       <div className="sidebar-block">
-        <div className="sidebar-kicker">Approfondimenti fissi</div>
+        <h2 className="sidebar-title">Approfondimenti</h2>
+        <div className="sidebar-kicker">Sezioni fisse, sempre disponibili</div>
         {sidebar.fixedLinks.map((link, i) => (
           <a href={link.href} className="sidebar-item" key={i}>
             <span className="sidebar-item-title">{link.title}</span>

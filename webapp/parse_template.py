@@ -87,11 +87,90 @@ def parse_chart_card(card):
     }
 
 
+def parse_timeline(el):
+    items = []
+    for it in el.select(":scope > .pb-timeline-item"):
+        items.append({
+            "year": text(it.find("div", class_="pb-timeline-year")),
+            "text": inner_html(it.find("div", class_="pb-timeline-text")),
+        })
+    return items
+
+
+def parse_map(el):
+    note = el.find("div", class_="pb-map-note")
+    points = []
+    for card in el.select(".pb-map-card"):
+        classes = card.get("class", [])
+        group = ""
+        for c in classes:
+            if c.startswith("pb-map-card-"):
+                group = c[len("pb-map-card-"):]
+        points.append({
+            "label": text(card.find("div", class_="pb-map-card-label")),
+            "group": group,
+            "text": inner_html(card.find("div", class_="pb-map-card-text")),
+        })
+    return {"note": inner_html(note) if note else "", "points": points}
+
+
+def parse_denunce(el):
+    items = []
+    for card in el.select(":scope > .pb-denuncia-card"):
+        chi = card.find("span", class_="pb-denuncia-chi")
+        tipo = card.find("span", class_="pb-denuncia-tipo")
+        formale = bool(tipo) and "formale" in tipo.get("class", [])
+        meta = card.find("div", class_="pb-denuncia-meta")
+        testo = card.find("div", class_="pb-denuncia-testo")
+        esito_div = card.find("div", class_="pb-denuncia-esito")
+        esito_span = esito_div.find("span") if esito_div else None
+        esito_classes = [c for c in (esito_div.get("class", []) if esito_div else []) if c != "pb-denuncia-esito"]
+        esito_stato = esito_classes[0] if esito_classes else ""
+        fonte = card.find("div", class_="pb-denuncia-fonte")
+        items.append({
+            "chi": text(chi),
+            "formale": formale,
+            "quando": text(meta),
+            "cosa": inner_html(testo),
+            "esito": inner_html(esito_span) if esito_span else "",
+            "esitoStato": esito_stato,
+            "fonteHtml": inner_html(fonte),
+        })
+    return items
+
+
+def parse_processi(el):
+    items = []
+    for card in el.select(":scope > .pb-processo-card"):
+        titolo = card.find("div", class_="pb-processo-title")
+        sub = card.find("div", class_="pb-processo-sub")
+        stato_div = card.find("div", class_="pb-processo-stato")
+        stato_span = stato_div.find_all("span")[-1] if stato_div else None
+        fasi = []
+        for fase in card.select(".pb-processo-fase"):
+            fasi.append({
+                "label": text(fase.find("div", class_="pb-processo-fase-label")),
+                "testo": inner_html(fase.find("div", class_="pb-processo-fase-testo")),
+            })
+        nota = card.find("div", class_="pb-processo-nota")
+        items.append({
+            "titolo": text(titolo),
+            "sottotitolo": text(sub),
+            "statoAttuale": inner_html(stato_span) if stato_span else "",
+            "fasi": fasi,
+            "notaHtml": inner_html(nota) if nota else None,
+        })
+    return items
+
+
 def parse_kpi_blocks(sec):
     """Scorre i figli diretti della sezione in ordine e ricostruisce la
     sequenza esatta di sotto-titoli, righe di kpi e grafici a barre
     (una sezione 'dati' come sicurezza-pubblica ha piu' blocchi di questo
-    tipo in successione, non un unico elenco piatto)."""
+    tipo in successione, non un unico elenco piatto). Le dashboard piu'
+    ricche (es. petrolio-basilicata) aggiungono sotto-titoli (pb-subhead),
+    cronologia (pb-timeline), cartina (pb-map-wrap), articoli annidati
+    (articles), denunce (pb-denunce-list) e processi (pb-processi-list)."""
     blocks = []
     for child in sec.find_all(recursive=False):
         classes = child.get("class", [])
@@ -109,6 +188,20 @@ def parse_kpi_blocks(sec):
             blocks.append({"kind": "kpiRow", "kpis": kpis})
         elif "chart-card" in classes:
             blocks.append({"kind": "chartCard", "card": parse_chart_card(child)})
+        elif "pb-subhead" in classes:
+            tag = child.find("span", class_="pb-subhead-tag")
+            blocks.append({"kind": "subhead", "label": text(tag), "style": child.get("style", "")})
+        elif "pb-timeline" in classes:
+            blocks.append({"kind": "timeline", "items": parse_timeline(child)})
+        elif "pb-map-wrap" in classes:
+            m = parse_map(child)
+            blocks.append({"kind": "map", "note": m["note"], "points": m["points"]})
+        elif "articles" in classes:
+            blocks.append({"kind": "articles", "articles": parse_articles(child)})
+        elif "pb-denunce-list" in classes:
+            blocks.append({"kind": "denunce", "items": parse_denunce(child)})
+        elif "pb-processi-list" in classes:
+            blocks.append({"kind": "processi", "items": parse_processi(child)})
     return blocks
 
 
@@ -128,18 +221,23 @@ def parse_section(sec):
         "context": [inner_html(p) for box in context_boxes for p in box.find_all("p")],
     }
 
-    duel = sec.find("div", class_="duel")
-    articles_container = sec.find("div", class_="articles")
-    kpi_row = sec.find("div", class_="kpi-row")
+    # scope a figli diretti: una sezione 'kpi' come petrolio-basilicata puo'
+    # contenere un blocco 'articles' annidato tra i suoi blocchi (le "ultime
+    # notizie" della dashboard), che non deve far scambiare l'intera sezione
+    # per una sezione di tipo 'articles'
+    duel = sec.find("div", class_="duel", recursive=False)
+    articles_container = sec.find("div", class_="articles", recursive=False)
+    kpi_row = sec.find("div", class_="kpi-row", recursive=False)
     if duel:
         result["type"] = "duel"
         result["duel"] = parse_duel(duel)
         divergence = sec.select_one(".context-box:nth-of-type(2) p, .context-box[style] p")
         result["divergence"] = inner_html(divergence)
-    elif articles_container:
-        result["type"] = "articles"
-        result["articles"] = parse_articles(articles_container)
     elif kpi_row:
+        # priorita' a kpi_row rispetto ad articles_container: una dashboard
+        # come petrolio-basilicata ha ENTRAMBI come figli diretti (un blocco
+        # 'articles' annidato tra i suoi blocchi, per le "ultime notizie"),
+        # e in quel caso il tipo della sezione resta 'kpi'
         result["type"] = "kpi"
         # per le sezioni 'dati' (es. sicurezza-pubblica) ci sono piu' note e
         # piu' blocchi kpi-row/chart-card in sequenza: teniamo tutto in
@@ -147,6 +245,9 @@ def parse_section(sec):
         # duplichiamo la prima nota anche nel campo 'note' generico
         result["note"] = None
         result["blocks"] = parse_kpi_blocks(sec)
+    elif articles_container:
+        result["type"] = "articles"
+        result["articles"] = parse_articles(articles_container)
     else:
         result["type"] = "unknown"
     return result

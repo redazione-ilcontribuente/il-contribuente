@@ -1,4 +1,9 @@
 import { parseStyle } from '../lib/styleUtil'
+import Timeline from './Timeline'
+import RegionMap from './RegionMap'
+import Article from './Article'
+import DenunceList from './DenunceList'
+import ProcessiList from './ProcessiList'
 
 function ChartCard({ card }) {
   return (
@@ -66,6 +71,34 @@ export default function KpiSection({ blocks }) {
         }
         if (b.kind === 'chartCard') {
           return <ChartCard card={b.card} key={i} />
+        }
+        if (b.kind === 'timeline') {
+          return <Timeline items={b.items} key={i} />
+        }
+        if (b.kind === 'map') {
+          return <RegionMap points={b.points} note={b.note} key={i} />
+        }
+        if (b.kind === 'subhead') {
+          return (
+            <div className="pb-subhead" key={i}>
+              <span className="pb-subhead-tag" style={parseStyle(b.style)}>{b.label}</span>
+            </div>
+          )
+        }
+        if (b.kind === 'articles') {
+          return (
+            <div className="articles" key={i}>
+              {b.articles.map((a, j) => (
+                <Article article={a} key={j} />
+              ))}
+            </div>
+          )
+        }
+        if (b.kind === 'denunce') {
+          return <DenunceList items={b.items} key={i} />
+        }
+        if (b.kind === 'processi') {
+          return <ProcessiList items={b.items} key={i} />
         }
         return null
       })}

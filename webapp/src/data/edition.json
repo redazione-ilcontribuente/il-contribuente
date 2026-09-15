@@ -648,6 +648,12 @@
       "mobileOnly": false
     },
     {
+      "href": "#petrolio-basilicata",
+      "tag": "Dashboard",
+      "label": "Petrolio Basilicata",
+      "mobileOnly": false
+    },
+    {
       "href": "#approfondimenti",
       "tag": "Sezione",
       "label": "Approfondimenti",
@@ -1951,6 +1957,489 @@
             "tableHtml": null,
             "sources": "Fonte: F. Leonardi, Dipartimento dell'Amministrazione Penitenziaria, \"Rassegna penitenziaria e criminologica\", 2007 (dati 1998)."
           }
+        }
+      ]
+    },
+    {
+      "id": "petrolio-basilicata",
+      "tag": "Petrolio Basilicata",
+      "tagClass": "tag-petrolio",
+      "title": "Petrolio in Basilicata: dati, cartina e cronologia",
+      "note": null,
+      "context": [],
+      "type": "kpi",
+      "blocks": [
+        {
+          "kind": "note",
+          "html": "Dashboard permanente: royalties, pozzi e produzione dei due poli estrattivi, cartina e cronologia dal 1878 a oggi. I dati pubblici disponibili sono parziali — specie sul riparto dei fondi tra i comuni non ospitanti impianti — e questa pagina lo segnala esplicitamente invece di nasconderlo. Aggiornata periodicamente, non ogni giorno.",
+          "style": ""
+        },
+        {
+          "kind": "kpiRow",
+          "kpis": [
+            {
+              "label": "Royalties dal 1996",
+              "value": "2,45 mld €",
+              "note": "Eni+Shell a Regione e Comuni · fonte Eni Basilicata, dato al 30/6/2025",
+              "extraClass": ""
+            },
+            {
+              "label": "Royalties Basilicata 2024",
+              "value": "141 mln €",
+              "note": "liquidate per l'estrazione 2023 · stima 2025: ~120 mln € (−11%)",
+              "extraClass": ""
+            },
+            {
+              "label": "Produzione petrolio 2024",
+              "value": "3,70 mln t",
+              "note": "84,8% del petrolio estratto in Italia (93% dell'onshore) · fonte UNMIG/MASE",
+              "extraClass": ""
+            },
+            {
+              "label": "Pozzi produttivi",
+              "value": "30",
+              "note": "24 in Val d'Agri (Eni), di cui 7 in area protetta · 6 a Tempa Rossa (Total) · dati Eni/TotalEnergies, 2026",
+              "extraClass": ""
+            },
+            {
+              "label": "Comuni con royalty diretta",
+              "value": "almeno 9",
+              "note": "6 in Val d'Agri, 3 a Tempa Rossa · altri 13–35 comuni condividono fondi collettivi senza un riparto pubblico per singolo comune",
+              "extraClass": ""
+            },
+            {
+              "label": "Occupati diretti Eni",
+              "value": "460",
+              "note": "65% residenti in Basilicata · Local Report 2023, ultimo dato numerico pubblico — il report 2024 non pubblica un totale occupati aggiornato; a marzo 2025 Eni dichiara solo “tenuta occupazionale”, senza cifre",
+              "extraClass": ""
+            },
+            {
+              "label": "Concessione Total (Tempa Rossa)",
+              "value": "fino al 2068",
+              "note": "proroga di 44 anni approvata dalla Giunta Bardi, 2024",
+              "extraClass": ""
+            },
+            {
+              "label": "Prezzo benzina",
+              "value": "2,03 €/litro",
+              "note": "Basilicata prima regione d'Italia per carburanti, +21,6% (CGIA di Mestre, mag. 2026) — unica regione produttrice con questo primato · benzina self-service, ago. 2026 (Mimit)",
+              "extraClass": ""
+            }
+          ]
+        },
+        {
+          "kind": "map",
+          "note": "Cartina a confini reali del Sud Italia (dati ISTAT). Clicca o tocca la Basilicata per lo zoom.",
+          "points": [
+            {
+              "label": "Potenza",
+              "group": "potenza",
+              "text": "Sede della Procura e del Tribunale dove si sono svolti i principali processi legati al petrolio (sversamento COVA, appalti, indotto)."
+            },
+            {
+              "label": "Viggiano",
+              "group": "valdagri",
+              "text": "Val d'Agri (Eni) — Centro Olio Val d'Agri (COVA): capacità 104.000 barili/giorno, concessione prorogata fino al 26 ottobre 2029."
+            },
+            {
+              "label": "Corleto Perticara",
+              "group": "temparossa",
+              "text": "Tempa Rossa (Total) — Centro Olio Tempa Rossa (COTR): TotalEnergies 50%, Shell 25%, Mitsui 25%. Concessione prorogata fino a 44 anni (2068)."
+            }
+          ]
+        },
+        {
+          "kind": "timeline",
+          "items": [
+            {
+              "year": "1878",
+              "text": "Prima traccia storica di petrolio segnalata a Tramutola."
+            },
+            {
+              "year": "1937",
+              "text": "Agip scopre il giacimento di Tramutola, primo sfruttamento petrolifero lucano."
+            },
+            {
+              "year": "1981",
+              "text": "Viene accertato il grande giacimento della Val d'Agri."
+            },
+            {
+              "year": "Maggio 1988",
+              "text": "Il pozzo esplorativo Monte Alpi 1 ne conferma le dimensioni."
+            },
+            {
+              "year": "1989",
+              "text": "La belga Fina (poi Total) scopre il giacimento di Tempa Rossa, tra Corleto Perticara e Gorgoglione."
+            },
+            {
+              "year": "1996",
+              "text": "Avvio della produzione commerciale in Val d'Agri."
+            },
+            {
+              "year": "7 ottobre 1998",
+              "text": "Protocollo d'Intesa Stato–Regione; royalty fissata al 7% dal 1° gennaio 1999."
+            },
+            {
+              "year": "2003",
+              "text": "Parte il Programma Operativo Val d'Agri, finanziato con 330 milioni di euro."
+            },
+            {
+              "year": "2008",
+              "text": "La Procura di Potenza apre l'inchiesta Tempa Rossa su corruzione e turbativa d'asta negli appalti del Centro Oli Total."
+            },
+            {
+              "year": "2015–2016",
+              "text": "Caso Guidi: la ministra dello Sviluppo Economico si dimette dopo un'intercettazione sull'emendamento legato a Tempa Rossa."
+            },
+            {
+              "year": "17 aprile 2016",
+              "text": "Referendum No-Triv: la Basilicata è l'unica regione italiana a superare il quorum del 50%."
+            },
+            {
+              "year": "2016–2017",
+              "text": "Scandalo sversamento al Centro Olio Val d'Agri: sequestri, arresti, esposto di Legambiente alla Procura (19 maggio 2017)."
+            },
+            {
+              "year": "26 ottobre 2019",
+              "text": "Scade la concessione Val d'Agri, resta bloccata da un contenzioso sul compenso per barile."
+            },
+            {
+              "year": "Dicembre 2020",
+              "text": "Avvio della produzione commerciale a Tempa Rossa, a regime da gennaio 2021."
+            },
+            {
+              "year": "10 marzo 2021",
+              "text": "Primo grado: Eni condannata (700.000€ + confisca 44,2 mln€), 7 dirigenti/funzionari condannati."
+            },
+            {
+              "year": "Marzo 2021",
+              "text": "La Regione ferma l'impianto Tempa Rossa per anomalie nelle emissioni."
+            },
+            {
+              "year": "Maggio 2024",
+              "text": "Concessione Val d'Agri prorogata fino al 2029 (Decreto n. 81)."
+            },
+            {
+              "year": "2024",
+              "text": "Concessione Tempa Rossa prorogata fino a 44 anni (2068)."
+            },
+            {
+              "year": "Ottobre 2024",
+              "text": "Liberiamo la Basilicata e il Comitato Aria Pulita denunciano un presunto emungimento illecito dalle falde."
+            },
+            {
+              "year": "Settembre 2025",
+              "text": "Anomalia in un pozzo di Tempa Rossa a Corleto Perticara, cittadini senza risposte ufficiali."
+            },
+            {
+              "year": "19–22 febbraio 2026",
+              "text": "La Corte d'Appello di Potenza assolve integralmente Eni e tutti gli imputati del processo COVA."
+            },
+            {
+              "year": "14 aprile 2026",
+              "text": "Eni e Shell annunciano un possibile raddoppio della produzione in Val d'Agri, da 40.000 a 80.000 barili/giorno, con 14 nuovi pozzi entro il 2034: la produzione reale resta a un terzo della capacità autorizzata (120.000 b/g)."
+            },
+            {
+              "year": "11–12 settembre 2026",
+              "text": "Il governo Meloni vara il decreto che introduce il commissariamento delle Regioni inadempienti sulle autorizzazioni."
+            }
+          ]
+        },
+        {
+          "kind": "chartCard",
+          "card": {
+            "id": "pozzi-produzione",
+            "title": "Produzione petrolio: Val d'Agri contro Tempa Rossa",
+            "period": "Dato più recente disponibile · fonte MilanoFinanza, 14/4/2026, su dichiarazioni Eni/Shell/TotalEnergies",
+            "bars": [
+              {
+                "label": "Val d'Agri (Eni) — 24 pozzi",
+                "value": "40.000 b/g",
+                "style": "width:100%",
+                "fillClass": "asilo",
+                "tooltip": ""
+              },
+              {
+                "label": "Tempa Rossa (Total) — 6 pozzi",
+                "value": "30.000 b/g",
+                "style": "width:75%",
+                "fillClass": "rimpatri",
+                "tooltip": ""
+              }
+            ],
+            "sideNotes": [
+              "<strong>Capacità autorizzata e non sfruttata:</strong> Val d'Agri produce al 33% dei 120.000 barili/giorno autorizzati; Tempa Rossa al 60% dei 50.000 b/g autorizzati. Sommando i due poli, la Basilicata estrae circa 65.000–70.000 barili/giorno su una capacità teorica combinata di 160.000 b/g: meno della metà del potenziale.",
+              "Nel 2025 la produzione regionale di petrolio è comunque scesa dell'11% rispetto al 2024 (da 2,79 a 2,48 milioni di tonnellate nei primi nove mesi), secondo l'assessore regionale allo Sviluppo Francesco Cupparo.",
+              "A Tempa Rossa non sono previsti nuovi pozzi: l'obiettivo dichiarato da TotalEnergies è un miglior utilizzo della capacità già autorizzata, non un ampliamento del giacimento."
+            ],
+            "tableHtml": null,
+            "sources": "Fonti: MilanoFinanza 14/4/2026 · Eni in Basilicata · TotalEnergies Italia · Italia2news 2/2/2026 (dichiarazioni Cupparo) · UNMIG/MASE, produzione 2024"
+          }
+        },
+        {
+          "kind": "chartCard",
+          "card": {
+            "id": "royalties-comuni",
+            "title": "Royalties dirette ai Comuni",
+            "period": "Val d'Agri: I semestre 2025, fonte Eni Basilicata · Tempa Rossa: anno 2024, dichiarazioni assessore Cupparo (Italia2news) — periodi diversi: sono gli unici dati ufficiali completi trovati per ciascuna area",
+            "bars": [
+              {
+                "label": "Corleto Perticara (Tempa Rossa) — 2024",
+                "value": "7,00 mln €",
+                "style": "width:100%",
+                "fillClass": "rimpatri",
+                "tooltip": ""
+              },
+              {
+                "label": "Viggiano (Val d'Agri) — H1 2025",
+                "value": "4,24 mln €",
+                "style": "width:61%",
+                "fillClass": "asilo",
+                "tooltip": ""
+              },
+              {
+                "label": "Gorgoglione (Tempa Rossa) — 2024",
+                "value": "1,50 mln €",
+                "style": "width:21%",
+                "fillClass": "rimpatri",
+                "tooltip": ""
+              },
+              {
+                "label": "Calvello (Val d'Agri) — H1 2025",
+                "value": "1,07 mln €",
+                "style": "width:15%",
+                "fillClass": "asilo",
+                "tooltip": ""
+              },
+              {
+                "label": "Grumento Nova (Val d'Agri) — H1 2025",
+                "value": "0,61 mln €",
+                "style": "width:9%",
+                "fillClass": "asilo",
+                "tooltip": ""
+              },
+              {
+                "label": "Marsico Nuovo (Val d'Agri) — H1 2025",
+                "value": "0,46 mln €",
+                "style": "width:7%",
+                "fillClass": "asilo",
+                "tooltip": ""
+              },
+              {
+                "label": "Marsicovetere (Val d'Agri) — H1 2025",
+                "value": "0,15 mln €",
+                "style": "width:2%",
+                "fillClass": "asilo",
+                "tooltip": ""
+              },
+              {
+                "label": "Montemurro (Val d'Agri) — H1 2025",
+                "value": "0,15 mln €",
+                "style": "width:2%",
+                "fillClass": "asilo",
+                "tooltip": ""
+              }
+            ],
+            "sideNotes": [
+              "<strong>Tutti e 6 i comuni della Val d'Agri con pozzi attivi incassano royalty dirette da Eni</strong> (qui il dato completo, I semestre 2025). Manca invece l'importo 2024 di Guardia Perticara (Tempa Rossa): le fonti disponibili non lo riportano separatamente dagli altri due comuni dell'area.",
+              "<strong>La cosa è più grande di questi 8 comuni.</strong> Un fondo di riequilibrio ambientale della concessione Gorgoglione (3 mln €, tranche 2020–2021) è stato condiviso anche da Aliano, Armento, Missanello, Anzi, Laurenzana, Castelmezzano, Pietrapertosa, Cirigliano, Stigliano e Accettura (fonte ANSA, 11/9/2023). Nel 2020 altri 35 comuni dell'area estrattiva più ampia si sono spartiti complessivamente 25,1 mln € (fonte Quotidiano del Sud). Per nessuno di questi fondi collettivi risulta pubblico un riparto per singolo comune: una lacuna di trasparenza segnalata anche dalla stampa locale, non un'omissione di questa rassegna."
+            ],
+            "tableHtml": null,
+            "sources": "Fonti: Eni Basilicata, Royalty e fiscalità (H1 2025) · Italia2news 2/2/2026, dichiarazioni Cupparo (dati 2024) · ANSA 11/9/2023 · Quotidiano del Sud 20/8/2021 e 31/8/2022"
+          }
+        },
+        {
+          "kind": "subhead",
+          "label": "Le ultime notizie",
+          "style": ""
+        },
+        {
+          "kind": "articles",
+          "articles": [
+            {
+              "lead": true,
+              "title": "Il governo Meloni vara il decreto sulle trivelle, la Basilicata rischia il commissariamento",
+              "leadParagraph": "Il Consiglio dei ministri ha approvato un provvedimento che accelera le autorizzazioni per la ricerca e l'estrazione di idrocarburi su terraferma. Se una Regione non si esprime entro 45 giorni, lo Stato può fissare un termine ulteriore e infine nominare un commissario ad acta che decide al suo posto.",
+              "bodyExtra": [
+                "La misura riguarda soprattutto la Basilicata, oltre a Sicilia, Emilia-Romagna, Puglia, Molise e alcune aree offshore adriatiche. Il ministro dell'Ambiente Gilberto Pichetto Fratin parla di sicurezza energetica nazionale; lo stesso ministro ha però ammesso che il prezzo dei carburanti dipende soprattutto dai mercati internazionali, non dalla produzione interna.",
+                "Alleanza Verdi Sinistra ha parlato di \"mani sul petrolio\"; il PD Basilicata lo definisce un tentativo di scavalcare l'autonomia regionale. Secondo i No Triv, azzerare in un anno tutte le riserve accertate coprirebbe meno di un decimo del fabbisogno petrolifero italiano."
+              ],
+              "sourceHtml": "L'Indipendente, Il Fatto Quotidiano, Open — 11-14/9/2026"
+            },
+            {
+              "lead": false,
+              "title": "Cgil denuncia un blackout con fiammata alla torcia del Centro Oli Eni",
+              "leadParagraph": "Il sindacato di Potenza segnala un guasto con fiamma visibile alla torcia di sicurezza dell'impianto di Viggiano e l'assenza di procedure di allarme verso la popolazione, chiedendo chiarezza a Eni, ARPAB e autorità competenti.",
+              "bodyExtra": [],
+              "sourceHtml": "Basilicata Notizie, 25/8/2026"
+            },
+            {
+              "lead": false,
+              "title": "Anomalie a un pozzo di Tempa Rossa, cittadini senza risposte",
+              "leadParagraph": "Un forte cattivo odore e segnalazioni di una possibile anomalia a un pozzo del Centro Oli Tempa Rossa allarmano Corleto Perticara. Una consigliera di minoranza chiede chiarimenti formali a Total, sindaco e ARPAB: nessuna comunicazione ufficiale risulta rilasciata.",
+              "bodyExtra": [],
+              "sourceHtml": "Basilicata24, 22/9/2025"
+            },
+            {
+              "lead": false,
+              "title": "Liberiamo la Basilicata denuncia un presunto emungimento illecito dalle falde",
+              "leadParagraph": "L'associazione e il Comitato Aria Pulita presentano una denuncia alla Procura di Potenza per un presunto prelievo illecito di petrolio dalle falde acquifere dal 2017, con pompe nascoste, e una possibile contaminazione collegata all'invaso del Pertusillo, bacino idropotabile per Puglia, Campania e Calabria.",
+              "bodyExtra": [],
+              "sourceHtml": "Italia2news, 28/10/2024"
+            },
+            {
+              "lead": false,
+              "title": "Eni e Shell verso il raddoppio della produzione in Val d'Agri",
+              "leadParagraph": "Il Centro Olio Val d'Agri produce oggi circa 40.000 barili al giorno, un terzo dei 120.000 autorizzati. Eni e Shell puntano a 14 nuovi pozzi entro il 2034 per arrivare a 80.000 barili/giorno, mentre a Tempa Rossa Total non prevede nuovi pozzi ma un uso più intenso della capacità già autorizzata.",
+              "bodyExtra": [
+                "La concessione Val d'Agri scade nel 2029. I nuovi progetti citati dalle aziende includono i pozzi Sant'Elia 1 e 2 e Cerro Falcone 7, oltre a Costa Molina 2 per la reiniezione a Montemurro."
+              ],
+              "sourceHtml": "MilanoFinanza, 14/4/2026 · Fuoritempo, 4/2026"
+            }
+          ]
+        },
+        {
+          "kind": "subhead",
+          "label": "Le denunce delle associazioni",
+          "style": ""
+        },
+        {
+          "kind": "denunce",
+          "items": [
+            {
+              "chi": "Legambiente",
+              "formale": true,
+              "quando": "19 maggio 2017",
+              "cosa": "Esposto penale alla Procura di Potenza sugli sversamenti di petrolio al Centro Olio Val d'Agri (COVA) di Viggiano.",
+              "esito": "ha dato impulso al procedimento sfociato nella condanna di primo grado (2021), poi interamente ribaltata in appello (2026). Legambiente è stata ammessa come parte civile il 23/11/2021.",
+              "esitoStato": "concluso",
+              "fonteHtml": "QualEnergia, 19/5/2017 · Legambiente.it"
+            },
+            {
+              "chi": "WWF Italia",
+              "formale": true,
+              "quando": "7 ottobre 2016",
+              "cosa": "Costituzione di parte civile nel procedimento sullo smaltimento illecito di rifiuti al Centro Oli di Viggiano, dopo il sequestro dell'impianto del 31/3/2016.",
+              "esito": "risarcimento riconosciuto in primo grado (2021), revocato con l'assoluzione integrale in appello (2026).",
+              "esitoStato": "concluso",
+              "fonteHtml": "WWF Italia, 7/10/2016"
+            },
+            {
+              "chi": "Cova Contro, Mediterraneo No Triv, No Scorie Trisaia",
+              "formale": true,
+              "quando": "25 luglio 2022",
+              "cosa": "Segnalazione formale al Difensore Civico della Regione Basilicata contro la mancata chiusura del procedimento PAUR sull'impianto di trattamento acque Eni Rewind a Viggiano, e contro l'esclusione delle associazioni dalla Conferenza di servizi.",
+              "esito": "non reperito nelle fonti consultate.",
+              "esitoStato": "in-corso",
+              "fonteHtml": "Basilicata24, 25/7/2022"
+            },
+            {
+              "chi": "Maurizio Bolognetti (Radicali Lucani)",
+              "formale": true,
+              "quando": "22 luglio 2016",
+              "cosa": "Esposto-denuncia alla Procura della Repubblica, alla DDA e al NOE Carabinieri su inquinamento idrico sotterraneo nell'area della concessione Gorgoglione (Tempa Rossa), basato su dati Total 2014-2015 con sforamenti di fluoruri, boro e benzopireni.",
+              "esito": "non reperito nelle fonti consultate.",
+              "esitoStato": "in-corso",
+              "fonteHtml": "Ufficio Stampa Basilicata, 22/7/2016"
+            },
+            {
+              "chi": "Liberiamo la Basilicata e il Comitato Aria Pulita Basilicata",
+              "formale": true,
+              "quando": "28 ottobre 2024",
+              "cosa": "Denuncia alla Procura di Potenza per presunto emungimento illecito di petrolio dalle falde acquifere dal 2017, con pompe nascoste, e contaminazione collegata all'invaso del Pertusillo.",
+              "esito": "non reperito nelle fonti consultate.",
+              "esitoStato": "in-corso",
+              "fonteHtml": "Italia2news, 28/10/2024"
+            },
+            {
+              "chi": "CGIL Potenza",
+              "formale": false,
+              "quando": "25 agosto 2026",
+              "cosa": "Dichiarazione pubblica su un blackout con fiammata alla torcia del Centro Oli Eni di Viggiano e sull'assenza di procedure di allarme verso la popolazione.",
+              "esito": "si tratta di una dichiarazione pubblica, non di un esposto formale depositato.",
+              "esitoStato": "",
+              "fonteHtml": "Basilicata Notizie, 25/8/2026"
+            },
+            {
+              "chi": "CSAIL (comitato civico Val d'Agri)",
+              "formale": false,
+              "quando": "2024–2025",
+              "cosa": "Il comitato, presieduto da Filippo Massaro, denuncia pubblicamente l'uso delle royalty nei 5 comuni Val d'Agri (76,8 mln € incassati negli ultimi 3 anni, di cui 50 mln solo da Viggiano): critica in particolare i 20 milioni investiti in impianti per il turismo invernale, definiti un fallimento, e chiede controlli su tracciabilità della spesa e occupazione, estesi anche all'Ente Parco Appennino Lucano.",
+              "esito": "non si tratta di un esposto giudiziario ma di una campagna di controllo civico pubblico; nessun procedimento giudiziario risulta collegato nelle fonti consultate.",
+              "esitoStato": "",
+              "fonteHtml": "AGR Basilicata (agr.regione.basilicata.it)"
+            }
+          ]
+        },
+        {
+          "kind": "subhead",
+          "label": "I processi a Potenza",
+          "style": ""
+        },
+        {
+          "kind": "processi",
+          "items": [
+            {
+              "titolo": "Processo per lo sversamento al Centro Olio Val d'Agri",
+              "sottotitolo": "Disastro ambientale e traffico illecito di rifiuti — Eni e 7 ex dirigenti/funzionari",
+              "statoAttuale": "Dopo l'assoluzione integrale in appello (febbraio 2026), <strong>nessuno dei soggetti coinvolti risulta oggi penalmente responsabile</strong> in via giudiziale definitiva accertata. Il primo grado del 2021 è stato interamente ribaltato.",
+              "fasi": [
+                {
+                  "label": "Indagini, 2016–2019",
+                  "testo": "Procura di Potenza (PM Laura Triassi): oltre 30 imputati tra persone fisiche e società, sequestri dell'impianto nel 2016 e nell'aprile 2017 dopo lo sversamento di circa 400 tonnellate di petrolio."
+                },
+                {
+                  "label": "Primo grado — 10 marzo 2021",
+                  "testo": "Tribunale di Potenza (giudice Rosario Baglioni): Eni condannata per traffico illecito di rifiuti (sanzione 700.000€ + confisca per equivalente di 44,2 milioni€). Condannati Ruggero Gheller, Nicola Allegro e Luca Bagatti (2 anni); Enrico Trovato, Roberta Angelini e Vincenzo Lisandrelli (1 anno e 4 mesi); Salvatore Lambiase, ex dirigente dell'Ufficio compatibilità ambientale della Regione (1 anno e 6 mesi) — tutte pene sospese. Assolti 27 imputati e 9 società. Ammesse 278 parti civili, tra cui la Regione Basilicata."
+                },
+                {
+                  "label": "Appello — 19-22 febbraio 2026",
+                  "testo": "Corte d'Appello di Potenza (presidente Lucia Casale): <strong>assoluzione totale</strong> di Eni e dei 7 condannati, formula \"il fatto non costituisce reato\"/\"il fatto non sussiste\". Revocate sanzione, confisca e risarcimenti alle parti civili. Motivazioni non ancora depositate al momento della sentenza; nessun ricorso in Cassazione risulta annunciato nelle fonti consultate."
+                }
+              ],
+              "notaHtml": "Un filone parallelo (\"disastro ambientale\"), aperto il 30 settembre 2021 dal PM Montemurro contro due degli stessi imputati, era ancora in corso a ottobre 2024: la stampa locale lo ha definito una \"lenta eutanasia del processo\". Il suo esito finale non risulta confermato con certezza dalle fonti consultate."
+            },
+            {
+              "titolo": "Caso \"Tempa Rossa-Guidi\"",
+              "sottotitolo": "Le dimissioni della ministra dello Sviluppo Economico, 2015–2017",
+              "statoAttuale": "<strong>Archiviato</strong> dalla Procura di Roma nel gennaio 2017. Nessuno degli indagati è stato rinviato a giudizio.",
+              "fasi": [
+                {
+                  "label": "2015",
+                  "testo": "Un'intercettazione rivela l'allora ministra dello Sviluppo Economico Federica Guidi rassicurare il compagno Gianluca Gemelli sul buon esito di un emendamento alla legge di Stabilità legato al progetto Tempa Rossa di Total."
+                },
+                {
+                  "label": "31 marzo 2016",
+                  "testo": "Guidi si dimette da ministra. <strong>Non risulta indagata.</strong> Vengono indagati Gianluca Gemelli, l'ammiraglio Giuseppe De Giorgi (ex capo di Stato Maggiore della Marina) e Nicola Colicchi, con ipotesi di abuso d'ufficio e associazione a delinquere."
+                },
+                {
+                  "label": "10 gennaio 2017",
+                  "testo": "La Procura di Roma (PM Roberto Felici) chiede l'archiviazione, definendo il comportamento di Gemelli \"censurabile\" ma privo di riscontri su richieste di compensi."
+                }
+              ],
+              "notaHtml": null
+            },
+            {
+              "titolo": "Inchiesta Tempa Rossa 2008",
+              "sottotitolo": "Corruzione e turbativa d'asta sugli appalti del Centro Oli Total",
+              "statoAttuale": "Per il senatore Salvatore Margiotta il procedimento si è concluso con l'<strong>assoluzione definitiva</strong> della Cassazione (27 febbraio 2016). Per gli altri imputati, le fonti consultate riportano solo la condanna di primo grado (2016): l'esito di eventuali appelli <strong>non è stato reperito con certezza</strong>.",
+              "fasi": [
+                {
+                  "label": "2008",
+                  "testo": "La Procura di Potenza (PM Henry John Woodcock) apre l'inchiesta su corruzione e turbativa d'asta negli appalti per la costruzione del Centro Oli di Total."
+                },
+                {
+                  "label": "Aprile 2016, primo grado",
+                  "testo": "Condannati Lionel Lehva (ex AD Total Italia, 3 anni e mezzo), Jean Paul Juguet (3 anni e mezzo), Roberto Francini e Roberto Pasi (7 anni), Francesco Rocco Ferrara e Ignazio Tornetta — ex sindaco di Gorgoglione — (7 anni), altri imprenditori e funzionari; 18 assoluzioni."
+                },
+                {
+                  "label": "Salvatore Margiotta (senatore PD)",
+                  "testo": "Assolto in primo grado, condannato in appello nel 2014 (1 anno e 6 mesi), <strong>assolto in via definitiva dalla Cassazione il 27 febbraio 2016</strong> per \"insussistenza del fatto\"."
+                }
+              ],
+              "notaHtml": "Procedimento distinto dal caso Guidi (2015-2017): riguarda fatti del 2008, senza relazione diretta con quel caso."
+            }
+          ]
         }
       ]
     }
