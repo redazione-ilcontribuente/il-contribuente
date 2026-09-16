@@ -87,9 +87,9 @@ def parse_chart_card(card):
     }
 
 
-def parse_timeline(el):
+def parse_timeline(div):
     items = []
-    for it in el.select(":scope > .pb-timeline-item"):
+    for it in div.select(":scope > .pb-timeline-item"):
         items.append({
             "year": text(it.find("div", class_="pb-timeline-year")),
             "text": inner_html(it.find("div", class_="pb-timeline-text")),
@@ -97,80 +97,77 @@ def parse_timeline(el):
     return items
 
 
-def parse_map(el):
-    note = el.find("div", class_="pb-map-note")
+def parse_map_wrap(div):
+    note_div = div.find("div", class_="pb-map-note", recursive=False)
     points = []
-    for card in el.select(".pb-map-card"):
-        classes = card.get("class", [])
-        group = ""
-        for c in classes:
-            if c.startswith("pb-map-card-"):
-                group = c[len("pb-map-card-"):]
-        points.append({
-            "label": text(card.find("div", class_="pb-map-card-label")),
-            "group": group,
-            "text": inner_html(card.find("div", class_="pb-map-card-text")),
-        })
-    return {"note": inner_html(note) if note else "", "points": points}
+    map_list = div.find("div", class_="pb-map-list", recursive=False)
+    if map_list:
+        for card in map_list.select(":scope > .pb-map-card"):
+            classes = card.get("class", [])
+            group = ""
+            for c in classes:
+                if c.startswith("pb-map-card-"):
+                    group = c[len("pb-map-card-"):]
+            points.append({
+                "label": text(card.find("div", class_="pb-map-card-label")),
+                "group": group,
+                "text": inner_html(card.find("div", class_="pb-map-card-text")),
+            })
+    return {"note": text(note_div) if note_div else "", "points": points}
 
 
-def parse_denunce(el):
+def parse_denunce(div):
     items = []
-    for card in el.select(":scope > .pb-denuncia-card"):
-        chi = card.find("span", class_="pb-denuncia-chi")
+    for card in div.select(":scope > .pb-denuncia-card"):
         tipo = card.find("span", class_="pb-denuncia-tipo")
-        formale = bool(tipo) and "formale" in tipo.get("class", [])
-        meta = card.find("div", class_="pb-denuncia-meta")
-        testo = card.find("div", class_="pb-denuncia-testo")
+        tipo_classes = tipo.get("class", []) if tipo else []
         esito_div = card.find("div", class_="pb-denuncia-esito")
-        esito_span = esito_div.find("span") if esito_div else None
         esito_classes = [c for c in (esito_div.get("class", []) if esito_div else []) if c != "pb-denuncia-esito"]
-        esito_stato = esito_classes[0] if esito_classes else ""
+        esito_span = esito_div.find("span") if esito_div else None
         fonte = card.find("div", class_="pb-denuncia-fonte")
         items.append({
-            "chi": text(chi),
-            "formale": formale,
-            "quando": text(meta),
-            "cosa": inner_html(testo),
+            "chi": text(card.find("span", class_="pb-denuncia-chi")),
+            "formale": "formale" in tipo_classes,
+            "quando": text(card.find("div", class_="pb-denuncia-meta")),
+            "cosa": inner_html(card.find("div", class_="pb-denuncia-testo")),
             "esito": inner_html(esito_span) if esito_span else "",
-            "esitoStato": esito_stato,
-            "fonteHtml": inner_html(fonte),
+            "esitoStato": esito_classes[0] if esito_classes else "",
+            "fonteHtml": inner_html(fonte) if fonte else "",
         })
     return items
 
 
-def parse_processi(el):
+def parse_processi(div):
     items = []
-    for card in el.select(":scope > .pb-processo-card"):
-        titolo = card.find("div", class_="pb-processo-title")
+    for card in div.select(":scope > .pb-processo-card"):
         sub = card.find("div", class_="pb-processo-sub")
-        stato_div = card.find("div", class_="pb-processo-stato")
-        stato_span = stato_div.find_all("span")[-1] if stato_div else None
+        stato = card.find("div", class_="pb-processo-stato")
+        stato_span = stato.find_all("span")[-1] if stato and len(stato.find_all("span")) > 1 else None
         fasi = []
-        for fase in card.select(".pb-processo-fase"):
-            fasi.append({
-                "label": text(fase.find("div", class_="pb-processo-fase-label")),
-                "testo": inner_html(fase.find("div", class_="pb-processo-fase-testo")),
-            })
+        fasi_wrap = card.find("div", class_="pb-processo-fasi")
+        if fasi_wrap:
+            for f in fasi_wrap.select(":scope > .pb-processo-fase"):
+                fasi.append({
+                    "label": text(f.find("div", class_="pb-processo-fase-label")),
+                    "testo": inner_html(f.find("div", class_="pb-processo-fase-testo")),
+                })
         nota = card.find("div", class_="pb-processo-nota")
         items.append({
-            "titolo": text(titolo),
-            "sottotitolo": text(sub),
+            "titolo": text(card.find("div", class_="pb-processo-title")),
+            "sottotitolo": text(sub) if sub else "",
             "statoAttuale": inner_html(stato_span) if stato_span else "",
             "fasi": fasi,
-            "notaHtml": inner_html(nota) if nota else None,
+            "notaHtml": inner_html(nota) if nota else "",
         })
     return items
 
 
 def parse_kpi_blocks(sec):
     """Scorre i figli diretti della sezione in ordine e ricostruisce la
-    sequenza esatta di sotto-titoli, righe di kpi e grafici a barre
-    (una sezione 'dati' come sicurezza-pubblica ha piu' blocchi di questo
-    tipo in successione, non un unico elenco piatto). Le dashboard piu'
-    ricche (es. petrolio-basilicata) aggiungono sotto-titoli (pb-subhead),
-    cronologia (pb-timeline), cartina (pb-map-wrap), articoli annidati
-    (articles), denunce (pb-denunce-list) e processi (pb-processi-list)."""
+    sequenza esatta di sotto-titoli, righe di kpi, grafici a barre, mappa,
+    timeline, denunce e processi (una sezione 'dati' come sicurezza-pubblica
+    o petrolio-basilicata ha piu' blocchi di questo tipo in successione, non
+    un unico elenco piatto)."""
     blocks = []
     for child in sec.find_all(recursive=False):
         classes = child.get("class", [])
@@ -190,12 +187,12 @@ def parse_kpi_blocks(sec):
             blocks.append({"kind": "chartCard", "card": parse_chart_card(child)})
         elif "pb-subhead" in classes:
             tag = child.find("span", class_="pb-subhead-tag")
-            blocks.append({"kind": "subhead", "label": text(tag), "style": child.get("style", "")})
+            blocks.append({"kind": "subhead", "label": text(tag), "style": tag.get("style", "") if tag else ""})
+        elif "pb-map-wrap" in classes:
+            m = parse_map_wrap(child)
+            blocks.append({"kind": "map", "points": m["points"], "note": m["note"]})
         elif "pb-timeline" in classes:
             blocks.append({"kind": "timeline", "items": parse_timeline(child)})
-        elif "pb-map-wrap" in classes:
-            m = parse_map(child)
-            blocks.append({"kind": "map", "note": m["note"], "points": m["points"]})
         elif "articles" in classes:
             blocks.append({"kind": "articles", "articles": parse_articles(child)})
         elif "pb-denunce-list" in classes:
@@ -221,23 +218,20 @@ def parse_section(sec):
         "context": [inner_html(p) for box in context_boxes for p in box.find_all("p")],
     }
 
-    # scope a figli diretti: una sezione 'kpi' come petrolio-basilicata puo'
-    # contenere un blocco 'articles' annidato tra i suoi blocchi (le "ultime
-    # notizie" della dashboard), che non deve far scambiare l'intera sezione
-    # per una sezione di tipo 'articles'
-    duel = sec.find("div", class_="duel", recursive=False)
-    articles_container = sec.find("div", class_="articles", recursive=False)
+    duel = sec.find("div", class_="duel")
+    # una sezione dashboard (kpi-row come figlio diretto, es. Dati Immigrazione
+    # o Petrolio Basilicata) va sempre riconosciuta come 'kpi' anche se contiene
+    # una lista .articles annidata piu' in basso (es. "Le ultime notizie"):
+    # altrimenti il primo .articles trovato per errore fa cadere tutta la
+    # sezione nel ramo 'articles' semplice, perdendo mappa/timeline/kpi/ecc.
     kpi_row = sec.find("div", class_="kpi-row", recursive=False)
+    articles_container = sec.find("div", class_="articles")
     if duel:
         result["type"] = "duel"
         result["duel"] = parse_duel(duel)
         divergence = sec.select_one(".context-box:nth-of-type(2) p, .context-box[style] p")
         result["divergence"] = inner_html(divergence)
     elif kpi_row:
-        # priorita' a kpi_row rispetto ad articles_container: una dashboard
-        # come petrolio-basilicata ha ENTRAMBI come figli diretti (un blocco
-        # 'articles' annidato tra i suoi blocchi, per le "ultime notizie"),
-        # e in quel caso il tipo della sezione resta 'kpi'
         result["type"] = "kpi"
         # per le sezioni 'dati' (es. sicurezza-pubblica) ci sono piu' note e
         # piu' blocchi kpi-row/chart-card in sequenza: teniamo tutto in
