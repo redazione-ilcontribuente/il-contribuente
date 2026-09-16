@@ -1981,17 +1981,21 @@
         },
         {
           "lead": false,
-          "title": "Anomalie a un pozzo di Tempa Rossa, cittadini senza risposte",
-          "leadParagraph": "Un forte cattivo odore e segnalazioni di una possibile anomalia a un pozzo del Centro Oli Tempa Rossa allarmano Corleto Perticara. Una consigliera di minoranza chiede chiarimenti formali a Total, sindaco e ARPAB: nessuna comunicazione ufficiale risulta rilasciata.",
-          "bodyExtra": [],
-          "sourceHtml": "Basilicata24, 22/9/2025"
+          "title": "Pichetto e Bardi: «Nessun aumento dei tetti di estrazione» in Basilicata",
+          "leadParagraph": "Il ministro dell'Ambiente Gilberto Pichetto Fratin e il presidente della Regione Vito Bardi rispondono con una nota congiunta ai timori di un aumento dei limiti estrattivi dopo il decreto sulle attività energetiche strategiche: i tetti fissati dai protocolli Val d'Agri (1998) e Tempa Rossa (2006) restano \"pienamente in vigore e vincolanti\".",
+          "bodyExtra": [
+            "I due assicurano che la produzione potrà variare solo \"nel rispetto dei limiti\" già previsti, con controlli ambientali rafforzati tramite il monitoraggio continuo dell'ARPAB e il mantenimento delle royalty ai Comuni lucani."
+          ],
+          "sourceHtml": "ANSA, 15/9/2026"
         },
         {
           "lead": false,
-          "title": "Liberiamo la Basilicata denuncia un presunto emungimento illecito dalle falde",
-          "leadParagraph": "L'associazione e il Comitato Aria Pulita presentano una denuncia alla Procura di Potenza per un presunto prelievo illecito di petrolio dalle falde acquifere dal 2017, con pompe nascoste, e una possibile contaminazione collegata all'invaso del Pertusillo, bacino idropotabile per Puglia, Campania e Calabria.",
-          "bodyExtra": [],
-          "sourceHtml": "Italia2news, 28/10/2024"
+          "title": "Decreto trivelle, opposizione e No Triv contro il piano di Meloni e Tajani",
+          "leadParagraph": "Otto consiglieri regionali di centrosinistra e M5S chiedono che Bardi riferisca in Consiglio sul decreto e valutano un ricorso alla Corte Costituzionale per presunta violazione della leale collaborazione Stato-Regioni, dopo l'annuncio di Meloni e Tajani di voler \"triplicare\" l'estrazione nazionale.",
+          "bodyExtra": [
+            "Per il Coordinamento No Triv la \"triplicazione\" è propaganda, perché l'Italia resterebbe comunque dipendente dall'estero per oltre il 90% del fabbisogno e la raffineria di Taranto non potrebbe assorbire tutta la produzione lucana. Angelo Bonelli (AVS) parla di \"mistificazione\": le riserve coprirebbero solo sei mesi di fabbisogno nazionale."
+          ],
+          "sourceHtml": "QualEnergia, 15/9/2026"
         },
         {
           "lead": false,
