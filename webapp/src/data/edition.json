@@ -1,10 +1,10 @@
 {
-  "edition": "2026-09-16",
-  "published": "2026-09-16T08:30:00+02:00",
+  "edition": "2026-09-17",
+  "published": "2026-09-17T05:30:00+02:00",
   "masthead": {
     "topLine": [
       "Edizione digitale",
-      "16 Settembre 2026",
+      "17 Settembre 2026",
       "Rassegna stampa quotidiana"
     ],
     "titleHtml": "Il <em>Contribuente</em>",
@@ -465,67 +465,67 @@
     }
   ],
   "ticker": [
-    "SPAGNA/ITALIA — Scontro diplomatico sulla proroga dei controlli di frontiera Schengen",
-    "ITALIA — Ranucci fa ricorso d'urgenza contro la rimozione da Report",
-    "MEDIO ORIENTE — Gli Houthi conquistano isole nello stretto di Bab al-Mandeb, petrolio sopra i 108 dollari",
-    "CINA/IRAN — Il ministro degli Esteri iraniano a Pechino in cerca di una mediazione con gli Usa",
-    "POLONIA — Il consigliere di Putin Patrushev: «La annienteremmo in due o tre giorni»",
-    "FINANZA — Rendimenti obbligazionari ai massimi pluriennali, spread BTp-Bund in allargamento",
-    "IA — Nvidia: «non serve regolamentare l'IA»; OpenAI, Anthropic e Google in trattative sulla sicurezza",
-    "CRONACA — Perquisizioni per oltre 20 medici nell'inchiesta sui falsi certificati anti-Cpr"
+    "STRETTO DI HORMUZ — Usa e Iran raccontano in modo opposto lo stesso scontro navale",
+    "ROMA — Il Cdm abolisce il bollo auto per il 70% dei veicoli dal 2027",
+    "SENATO — Approvata la nuova legge elettorale, opposizioni in Aula con cartelli «no alla legge truffa»",
+    "BRUXELLES — Von der Leyen: «Europa forte e indipendente», il Parlamento si spacca",
+    "STATI UNITI — La Fed alza i tassi al 3,75%-4%, primo rialzo in tre anni",
+    "GAZA — Crolla un palazzo lesionato dalla guerra: fino a 21 morti durante la tregua",
+    "PRIVACY — L'Ue vieta i social ai minori di 13 anni con il “Kids Act”",
+    "NAPOLI — Rissa sulla Cumana a Pianura, due minorenni accoltellati"
   ],
   "market": [
     {
       "label": "Benzina",
-      "value": "2,107€/L",
-      "delta": "Nuovo massimo, effetto dell'escalation Houthi su Bab el-Mandeb; sconto accise in scadenza il 17/9",
+      "value": "2,133€/L",
+      "delta": "Nuovo aumento; sconto accise diesel in scadenza oggi",
       "deltaDirection": "up",
-      "source": "Mimit/Staffetta Quotidiana, 14/9",
+      "source": "Mimit/Staffetta Quotidiana, 16/9",
       "style": "",
       "valueStyle": ""
     },
     {
       "label": "Diesel",
-      "value": "2,216€/L",
-      "delta": "Senza lo sconto accise sarebbe già a 2,384€/L, nuovo record storico",
+      "value": "2,246€/L",
+      "delta": "Nuovo massimo storico, supera il record di marzo 2022",
       "deltaDirection": "up",
-      "source": "Mimit/Staffetta Quotidiana, 14/9",
+      "source": "Mimit/Staffetta Quotidiana, 16/9",
       "style": "",
       "valueStyle": ""
     },
     {
       "label": "Petrolio",
-      "value": "108,6 $",
-      "delta": "Brent +2,75% stamattina, sopra i 108 dollari per l'escalation Houthi-Arabia Saudita",
-      "deltaDirection": "up",
-      "source": "Investing.com, 16/9",
+      "value": "105,7 $",
+      "delta": "Brent -2,8%, dopo essersi avvicinato a 110$ per l'escalation a Hormuz",
+      "deltaDirection": "down",
+      "source": "Milano Finanza, 16/9",
       "style": "",
       "valueStyle": ""
     },
     {
       "label": "Gas TTF",
-      "value": "79,5€",
-      "delta": "In calo di circa il 3,6%, disaccoppiato dal rialzo del petrolio",
+      "value": "77,6€",
+      "delta": "In calo del 3%, dopo dichiarazioni distensive di Teheran",
       "deltaDirection": "down",
-      "source": "Trading Economics, 15/9",
+      "source": "ANSA, 16/9",
       "style": "",
       "valueStyle": ""
     },
     {
       "label": "Oro",
-      "value": "~120€/g",
-      "delta": "Sostanzialmente stabile; quotazione stimata da 4.298 $/oncia (XAU/USD)",
-      "deltaDirection": "down",
-      "source": "Investing.com, 16/9",
+      "value": "~130€/g",
+      "delta": "+0,70% a 4.364$/oncia",
+      "deltaDirection": "up",
+      "source": "GEA, 16/9",
       "style": "",
       "valueStyle": ""
     },
     {
       "label": "Bitcoin",
-      "value": "~65.880€",
-      "delta": "-3,25% nelle 24h; quotazione stimata da 76.015 $",
+      "value": "~65.500€",
+      "delta": "-4% nelle 24h, dopo la bocciatura del Clarity Act al Senato Usa",
       "deltaDirection": "down",
-      "source": "Investing.com, 16/9",
+      "source": "Fortune/Euronews, 16/9",
       "style": "",
       "valueStyle": ""
     },
@@ -583,7 +583,7 @@
     },
     "stats": [
       {
-        "value": "40+",
+        "value": "39+",
         "label": "Testate controllate per l’edizione di oggi"
       }
     ]
@@ -660,42 +660,50 @@
       "mobileOnly": true
     }
   ],
-  "verifyBadgeHtml": "✓ Oggi abbiamo confrontato <strong>oltre 40 fonti</strong> su <strong>28 testate</strong>",
+  "verifyBadgeHtml": "✓ Oggi abbiamo confrontato <strong>oltre 46 fonti</strong> su <strong>39 testate</strong>",
   "quotes": [
     {
       "label": "Citazione del giorno · 1/2",
-      "text": "«Non è una questione di stabilità. Lo fate perché credete di rischiare di perdere le prossime elezioni.»",
-      "author": "— Matteo Renzi, leader di Italia Viva, dopo il voto del Senato sulla riforma della legge elettorale; dichiarazione riportata da Reuters"
+      "text": "«Altri parlano di patrimoniali, noi togliamo una delle tasse più odiate.»",
+      "author": "— Giorgia Meloni, presidente del Consiglio, in conferenza stampa dopo il Cdm sull'abolizione del bollo auto; 16/9/2026 (Il Messaggero/Leggo)"
     },
     {
       "label": "Citazione del giorno · 2/2",
-      "text": "«Assurda, inutile e vergognosa.»",
-      "author": "— José Manuel Albares, ministro degli Esteri spagnolo, sulla proroga dei controlli di frontiera decisa dall'Italia (v. Confronto)"
+      "text": "«Vogliono frantumare l'Ue. Lottiamo per la nostra Europa.»",
+      "author": "— Ursula von der Leyen, discorso sullo Stato dell'Unione a Strasburgo, 16/9/2026 (ANSA)"
     }
   ],
   "topStats": [
     {
       "label": "Calo degli sbarchi in Italia da inizio 2026",
-      "value": "-55%",
-      "delta": "21.031 arrivi contro 47.150 nello stesso periodo del 2025; ultimo dato Viminale disponibile, aggiornato al 9 settembre 2026",
+      "value": "-56%",
+      "delta": "21.445 arrivi contro 49.077 nello stesso periodo del 2025 (1 gen - 16 set 2026); cruscotto Viminale aggiornato al 16/9",
       "style": "border-top-color:#7c1d16; text-decoration:none; color:inherit; cursor:pointer;",
       "extraClass": "",
       "href": "#dati-immigrazione"
     },
     {
-      "label": "Raccolta di Mistral AI, il più grande round tech europeo",
-      "value": "3 mld €",
-      "delta": "Round annunciato l’8 settembre: 3 miliardi di euro e valutazione di circa 21 miliardi; dato strutturale, non quotazione giornaliera",
+      "label": "Costo dell'abolizione del bollo auto",
+      "value": "2,3 mld €",
+      "delta": "Esenzione per il 70% del parco auto italiano dal 2027, decreto approvato il 16 settembre",
       "style": "border-top-color:var(--navy);",
       "extraClass": "",
       "href": null
     },
     {
-      "label": "Record esposti nella fuga di dati vietnamita sui passeggeri aerei",
-      "value": "220,8 mln",
-      "delta": "220,8 milioni di record di viaggio esposti; nessun aggiornamento successivo verificato, resta l'ultimo dato pubblico",
+      "label": "Diesel al nuovo massimo storico",
+      "value": "2,246 €/L",
+      "delta": "Prezzo self-service del 16 settembre; supera il precedente record di marzo 2022",
       "style": "",
       "extraClass": "wine",
+      "href": null
+    },
+    {
+      "label": "Rialzo dei tassi della Federal Reserve",
+      "value": "3,75%-4%",
+      "delta": "Primo rialzo in tre anni, 16 settembre; possibile nuovo aumento entro fine 2026",
+      "style": "border-top-color:var(--navy);",
+      "extraClass": "",
       "href": null
     },
     {
@@ -707,39 +715,31 @@
       "href": "guerre/pi.html"
     },
     {
-      "label": "Omicidi volontari in Italia",
-      "value": "138",
-      "delta": "138 vittime nel primo semestre 2026; ultimo dato Viminale disponibile",
-      "style": "text-decoration:none; color:inherit; cursor:pointer;",
-      "extraClass": "red",
-      "href": "#reati-tipologia"
-    },
-    {
-      "label": "Donne vittime di omicidio volontario e femminicidio",
-      "value": "34",
-      "delta": "34 nel primo semestre 2026: 26 vittime di omicidio volontario e 8 del reato di femminicidio; ultimo dato Viminale",
-      "style": "text-decoration:none; color:inherit; cursor:pointer;",
+      "label": "Italiane che hanno subito violenza prima dei 16 anni",
+      "value": "14,9%",
+      "delta": "Circa 3,2 milioni di donne; rapporto Istat pubblicato il 16 settembre 2026",
+      "style": "",
       "extraClass": "wine",
-      "href": "#reati-tipologia"
+      "href": null
     }
   ],
-  "topStatsNote": "Dati verificati: Ministero dell’Interno per sbarchi e sicurezza; Reuters per Mistral; fonti di sicurezza informatica per il data breach vietnamita; Ministero della Sanità di Gaza per il cumulativo delle vittime. Per i dati periodici viene indicata la data dell’ultimo aggiornamento ufficiale disponibile.",
+  "topStatsNote": "Dati verificati: cruscotto statistico giornaliero del Ministero dell'Interno per sbarchi e rimpatri; Consiglio dei ministri n. 189 per il bollo auto; Mimit/Staffetta Quotidiana per i carburanti; Federal Reserve per i tassi; Ministero della Sanità di Gaza per il cumulativo delle vittime; Istat per il rapporto sulla violenza. Per i dati periodici viene indicata la data dell'ultimo aggiornamento ufficiale disponibile.",
   "agenda": [
     {
-      "time": "Oggi 16/9",
-      "event": "Italia, perquisizioni della polizia postale e dello Sco in nove città per l'inchiesta sui falsi certificati medici anti-Cpr."
+      "time": "Oggi 17/9",
+      "event": "Bruxelles, la Commissione europea presenta ufficialmente il “Kids Act” sui minori online, annunciato il giorno prima da von der Leyen."
     },
     {
-      "time": "Oggi 16/9",
-      "event": "Regno Unito, pubblicati i dati sull'inflazione di agosto: prezzi al consumo al 3,1%."
+      "time": "Oggi 17/9",
+      "event": "Eurostat pubblica il dato finale sull'inflazione dell'eurozona di agosto, attesa al +3,3% annuo."
     },
     {
-      "time": "Oggi 16/9",
-      "event": "L'Aja, attesa la sentenza del tribunale Onu sui crimini di guerra a carico dell'ex presidente del Kosovo Hashim Thaçi."
+      "time": "Oggi 17/9",
+      "event": "Bank of England, decisione di politica monetaria e conferenza stampa del governatore Andrew Bailey; tassi attesi invariati al 3,75%."
     },
     {
-      "time": "Oggi 16/9",
-      "event": "Golfo Persico e Mar Rosso, prosegue l'escalation tra Houthi e forze saudite dopo la conquista delle isole nello stretto di Bab al-Mandeb."
+      "time": "Oggi 17/9",
+      "event": "Italia, ultimo giorno dello sconto sull'accisa del gasolio: da domani l'aliquota torna piena, salvo nuove misure del governo."
     }
   ],
   "sections": [
@@ -747,72 +747,82 @@
       "id": "confronto",
       "tag": "Confronto",
       "tagClass": "tag-confronto",
-      "title": "Schengen, scontro diplomatico tra Italia e Spagna sulla proroga dei controlli di frontiera",
+      "title": "Stretto di Hormuz: Usa e Iran raccontano in modo opposto lo stesso scontro navale",
       "note": null,
       "context": [
-        "Il codice Schengen permette a uno Stato membro di reintrodurre temporaneamente i controlli alle frontiere interne per motivi di sicurezza nazionale. L'Italia lo ha fatto più volte negli ultimi anni; il 15 settembre ha prorogato di altri 15 giorni quelli con la Spagna, innescando uno scontro verbale diretto tra i due governi nella stessa giornata.",
-        "Le due parti non contestano il fatto materiale — la proroga dei controlli c'è stata ed è di 15 giorni — ma divergono sulla motivazione (tecnica e neutra per Roma, atto politico ingiustificato per Madrid), sulla responsabilità dell'escalation (Tajani attribuisce la tensione alla reazione spagnola, Albares alla decisione italiana) e sul registro: da una dichiarazione di policy italiana si è passati, da parte spagnola, a un attacco diretto alla leadership di Meloni e Tajani, senza una replica di tono analogo da Roma. Non risultano, nella finestra temporale considerata, prese di posizione ufficiali di Bruxelles."
+        "Dal 28 febbraio 2026 è in corso la “guerra dell'Iran 2026”, iniziata con attacchi aerei Usa-israeliani che hanno ucciso la Guida Suprema Ali Khamenei durante negoziati sul nucleare. Un cessate il fuoco è saltato l'8 luglio e da allora l'Iran mantiene un blocco parziale dello Stretto di Hormuz, arteria da cui transita gran parte del petrolio mondiale, mentre gli Stati Uniti conducono una campagna aeronavale per proteggere il traffico commerciale."
       ],
       "type": "duel",
       "duel": {
-        "fact": "Il 15 settembre 2026 il governo italiano ha prorogato di altri 15 giorni i controlli alle frontiere interne Schengen con la Spagna, motivandoli con ragioni di sicurezza nazionale. La decisione ha innescato uno scontro verbale diretto tra Roma e Madrid nella stessa giornata: il vicepremier e ministro degli Esteri Antonio Tajani ha difeso la misura come applicazione dei trattati europei, mentre la Spagna ha reagito definendola ingiustificata e avrebbe attivato controlli \"speculari\" verso l'Italia. Non risultano, al momento, dichiarazioni ufficiali della Commissione europea sulla vicenda.",
+        "fact": "La sera di lunedì 14 settembre 2026, al largo del porto iraniano di Kargan (provincia di Hormozgan), le forze Usa hanno aperto il fuoco contro due piccole imbarcazioni. Il portavoce del Comando Centrale americano (Centcom), capitano Tim Hawkins, ha confermato il 15 settembre che sono state distrutte due imbarcazioni del Corpo delle Guardie della Rivoluzione islamica (Irgc) che tentavano di impossessarsi di un drone navale della Marina Usa. Le autorità iraniane, tramite il vice-governatore di Hormozgan Ahmad Nafisi e l’agenzia Tasnim, hanno invece parlato di un attacco a due pescherecci civili, con diversi pescatori dispersi e ricerche in corso. Non risulta verifica indipendente sul campo.",
         "sides": [
           {
             "variant": "left",
-            "tag": "Prospettiva A — Governo italiano",
-            "headline": "Tajani: «Applichiamo i trattati, nessun pregiudizio verso Madrid»",
-            "body": "Tajani, su X, ha scritto che l'Italia \"applica le regole e i trattati europei con l'unico obiettivo di difendere la sicurezza delle frontiere e dei cittadini\", precisando di non avere \"alcun pregiudizio\" verso la Spagna. Ha definito la reazione spagnola \"fuori luogo, inopportuna e inutilmente aggressiva\".",
+            "tag": "Prospettiva A — Stati Uniti / Centcom",
+            "headline": "«Imbarcazioni iraniane hanno tentato di impossessarsi di un drone navale Usa»",
+            "body": "Per Washington si è trattato di un’azione di autodifesa nella missione di protezione del traffico commerciale nello Stretto di Hormuz, da cui transitano circa 14 milioni di barili di petrolio al giorno. Secondo Centcom, imbarcazioni veloci dell’Irgc hanno tentato di catturare un drone di superficie americano in pattugliamento; il drone ha risposto e le forze Usa hanno mantenuto il controllo del mezzo.",
             "bodyExtra": [
-              "Nella narrazione del governo italiano, ripresa anche da fonti vicine al Viminale, la Spagna resterebbe un Paese a \"rischio basso\" ma da monitorare con \"cautela altissima\": una definizione che, secondo Roma, giustificherebbe la proroga come misura tecnica e non come atto ostile verso Madrid.",
-              "Il governo italiano non ha fornito, nelle dichiarazioni riprese dalle fonti consultate, esempi concreti delle minacce alla sicurezza che giustificherebbero la proroga, limitandosi a richiamare il principio generale di applicazione dei trattati Schengen."
+              "Il capitano Hawkins ha dichiarato che «piccole imbarcazioni iraniane hanno di recente tentato di impossessarsi di un mezzo di superficie senza pilota statunitense». L’episodio si inserisce in una campagna Usa per mantenere aperto lo stretto dopo il blocco imposto da Teheran a fine marzo: i transiti giornalieri di petroliere sarebbero scesi da una media di 18 a sole 4 navi il 15 settembre.",
+              "Il Times of Israel ha ripreso la stessa versione in un liveblog del 15 settembre, confermando l’incrocio di fonti sul lato occidentale."
             ],
-            "sourceHtml": "Fonti confrontate: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a> · <a href=\"https://www.huffingtonpost.it\" rel=\"noopener noreferrer\" target=\"_blank\">HuffPost Italia</a>, 15/9/2026"
+            "sourceHtml": "Fonti confrontate: <a href=\"https://www.axios.com\" rel=\"noopener noreferrer\" target=\"_blank\">Axios</a> · <a href=\"https://www.timesofisrael.com\" rel=\"noopener noreferrer\" target=\"_blank\">Times of Israel</a>, 15/9/2026"
           },
           {
             "variant": "right",
-            "tag": "Prospettiva B — Governo spagnolo",
-            "headline": "Albares: «Assurda, inutile e vergognosa»; Meloni «non all'altezza»",
-            "body": "Il ministro degli Esteri spagnolo José Manuel Albares ha bollato la decisione italiana come \"assurda, inutile e vergognosa\", aggiungendo che Giorgia Meloni non sarebbe \"una leader europea all'altezza\" della situazione e che né lei né Tajani lo sarebbero.",
+            "tag": "Prospettiva B — Iran / Tasnim, Irgc",
+            "headline": "«Due pescherecci colpiti da un drone: pescatori dispersi»",
+            "body": "I media iraniani, in particolare l’agenzia Tasnim (vicina all’Irgc), descrivono l’accaduto come un attacco a imbarcazioni da pesca civili nelle acque davanti al porto di Kargan, la sera di lunedì 14 settembre. Il vice-governatore di Hormozgan, Ahmad Nafisi, ha dichiarato che «diversi pescatori risultano dispersi» e che sono state avviate operazioni di ricerca e soccorso.",
             "bodyExtra": [
-              "Albares ha inoltre ricordato che la Spagna aveva prestato assistenza all'Italia durante gli sbarchi di migranti a Lampedusa, presentando la mossa italiana anche come un mancato riconoscimento di solidarietà pregressa tra i due Paesi.",
-              "Il salto di registro, da una dichiarazione di policy a un attacco diretto alla competenza politica di Meloni e Tajani, non ha finora ricevuto una risposta di analoga durezza da parte italiana, che ha preferito mantenere un tono più istituzionale."
+              "Nafisi non ha confermato né smentito esplicitamente la presenza di mezzi militari Irgc sul posto. Separatamente, l’Irgc ha rivendicato di aver abbattuto, la mattina del 15 settembre, un drone americano di tipo Mq-1 nello stretto con il proprio sistema di difesa aerea, episodio che le fonti statunitensi consultate non confermano né menzionano.",
+              "L’agenzia russa Tass ha ripreso la versione della tv di Stato iraniana Irib, parlando genericamente di «droni che hanno attaccato pescherecci nella provincia di Hormozgan»."
             ],
-            "sourceHtml": "Fonti confrontate: <a href=\"https://www.lasicilia.it\" rel=\"noopener noreferrer\" target=\"_blank\">La Sicilia</a> · <a href=\"https://www.globalist.it\" rel=\"noopener noreferrer\" target=\"_blank\">Globalist</a>, 15/9/2026"
+            "sourceHtml": "Fonte: <a href=\"https://www.tasnimnews.com\" rel=\"noopener noreferrer\" target=\"_blank\">Tasnim News Agency</a>, 15/9/2026"
+          },
+          {
+            "variant": "third",
+            "tag": "Terza voce — Gulf News (Emirati Arabi Uniti, indipendente)",
+            "headline": "Un quotidiano del Golfo non allineato conferma i dispersi, ma non risolve il giallo su chi abbia sparato",
+            "body": "Gulf News, quotidiano di Dubai indipendente sia da Washington sia da Teheran, riporta lo stesso episodio citando fonti diverse da quelle occidentali: oltre al vice-governatore Ahmad Nafisi (tramite l’agenzia Mehr, non Tasnim), cita direttamente la Marina dei pasdaran tramite Sepah News, e colloca l’area colpita anche nelle acque vicine all’isola di Larak, non solo davanti a Kargan.",
+            "bodyExtra": [
+              "Anche questa fonte regionale, pur non avendo interesse diretto nello scontro tra Usa e Iran, non è riuscita a verificare sul campo chi abbia effettivamente colpito le imbarcazioni: si limita a riportare la ricostruzione diffusa dalle autorità e dai media iraniani, senza confermarla né smentirla in modo indipendente.",
+              "Il fatto che nemmeno una testata regionale terza sia riuscita ad andare oltre le due versioni ufficiali conferma quanto la zona resti difficile da verificare in modo autonomo, e che il punto controverso — se le imbarcazioni colpite fossero mezzi militari o pescherecci — resta a oggi non dirimibile con le fonti disponibili."
+            ],
+            "sourceHtml": "Fonte: <a href=\"https://gulfnews.com\" rel=\"noopener noreferrer\" target=\"_blank\">Gulf News</a>, 15/9/2026"
           }
         ]
       },
-      "divergence": "Il codice Schengen permette a uno Stato membro di reintrodurre temporaneamente i controlli alle frontiere interne per motivi di sicurezza nazionale. L'Italia lo ha fatto più volte negli ultimi anni; il 15 settembre ha prorogato di altri 15 giorni quelli con la Spagna, innescando uno scontro verbale diretto tra i due governi nella stessa giornata."
+      "divergence": null
     },
     {
       "id": "estero",
       "tag": "Dall'estero",
       "tagClass": "tag-europa",
-      "title": "Dall'estero: Reuters sulla riforma elettorale di Meloni, Politico sul ritorno al nucleare",
+      "title": "Dall'estero: Reuters su bollo auto e riforma elettorale, la stampa internazionale legge l'Italia pre-voto",
       "note": null,
       "context": [
-        "Due letture della stampa internazionale sull'Italia di oggi: la partita interna sulla legge elettorale raccontata da Reuters come una mossa di Meloni per blindare la propria maggioranza, e il ritorno al nucleare descritto da Politico come una scelta di sicurezza energetica più che ideologica."
+        "Due notizie italiane raccontate dalla stampa internazionale nella stessa giornata: l’abolizione del bollo auto e l’approvazione al Senato della riforma elettorale, entrambe lette da Reuters come mosse di un governo che guarda già alle elezioni del 2027."
       ],
       "type": "articles",
       "articles": [
         {
           "lead": true,
-          "title": "Reuters: il Senato approva la riforma elettorale di Meloni, l'opposizione accusa",
-          "leadParagraph": "Una contestata riforma della legge elettorale italiana ha ottenuto martedì l'approvazione del Senato tra le critiche dell'opposizione, che accusa la premier Giorgia Meloni di cambiare le regole per migliorare le proprie chance di rielezione. La coalizione conservatrice di Meloni ha proposto un sistema proporzionale che garantirebbe la maggioranza parlamentare a qualsiasi alleanza sopra il 42% dei voti; il provvedimento, approvato 113 voti a 71, deve ora tornare alla Camera per il via libera definitivo.",
+          "title": "«L’Italia di Meloni abolisce il bollo auto per 14,5 milioni di veicoli a un anno dal voto»",
+          "leadParagraph": "Il governo italiano ha annunciato l’abolizione del bollo auto — la tassa di possesso sui veicoli — per tutte le motociclette e oltre il 70% delle auto di piccola e media cilindrata (fino a 80 kW, un solo veicolo per cittadino). La premier Giorgia Meloni ha dichiarato: «Oggi il governo elimina una delle tasse più odiate dagli italiani». La misura riguarda 14,5 milioni tra auto e moto e costerà circa 2,36 miliardi di euro, in vista delle elezioni nazionali del 2027.",
           "bodyExtra": [
-            "Con il sistema attuale, la maggior parte dei parlamentari è eletta con il proporzionale, mentre un terzo con collegi uninominali che gli analisti citati da Reuters ritengono favorire l'opposizione di centrosinistra: la riforma li abolirebbe. La coalizione difende la misura come garanzia di stabilità politica, in un Paese storicamente segnato da governi di breve durata; Meloni, in carica dal 2022, è diventata questo mese la guida dell'esecutivo più longevo dal dopoguerra.",
-            "«Non è una questione di stabilità. Lo fate perché credete di rischiare di perdere le prossime elezioni», ha replicato l'ex premier Matteo Renzi, leader di Italia Viva. Alcuni osservatori notano che la nuova legge potrebbe in realtà favorire gli avversari di Meloni, mentre il nuovo partito di destra \"Futura Nazione\" erode consensi alla sua coalizione; la riforma imporrebbe inoltre a ogni alleanza di indicare il proprio candidato premier prima del voto, complicando i rapporti già tesi tra le forze di opposizione."
+            "Secondo Reuters la misura nasce come intervento una tantum per il 2027, ma il ministro dell’Economia Giancarlo Giorgetti ha detto che il governo cercherà di renderla permanente con la legge di bilancio 2027. L’agenzia colloca la decisione nel contesto di una coalizione di centrodestra che, secondo i sondaggi citati, è sotto pressione del nuovo partito guidato dall’ex generale Roberto Vannacci, in crescita nei consensi.",
+            "Reuters riporta anche le critiche di alcuni osservatori, che definiscono l’iniziativa una «distrazione» dai rincari di energia e carburante che pesano sulle famiglie italiane. La cornice scelta dall’agenzia è quella di un taglio fiscale pre-elettorale, frame ricorrente nella copertura internazionale dei governi che si avvicinano al voto."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.reuters.com\" rel=\"noopener noreferrer\" target=\"_blank\">Reuters</a>, Angelo Amante, 15/9/2026"
+          "sourceHtml": "Fonte: <a href=\"https://www.internazionale.it\" rel=\"noopener noreferrer\" target=\"_blank\">Reuters, via Internazionale</a>; <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA English</a>, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Politico: l'Italia punta a tornare al nucleare entro il 2035",
-          "leadParagraph": "L'Italia potrebbe tornare a produrre energia nucleare entro il 2035, ha dichiarato a Politico il ministro dell'Energia Gilberto Pichetto Fratin, mentre una legge storica per invertire lo stop decennale al nucleare si avvia al voto in Senato dopo il via libera della Camera a giugno. L'Italia abbandonò il nucleare dopo il referendum del 1987, sull'onda di Chernobyl, chiudendo le ultime centrali nel 1990: ora l'incertezza geopolitica e i costi elettrici tra i più alti d'Europa spingono a un ripensamento.",
+          "lead": true,
+          "title": "Il Senato italiano approva la riforma elettorale di Meloni tra le proteste dell'opposizione",
+          "leadParagraph": "Il Senato italiano ha approvato con 113 voti favorevoli e 71 contrari la riforma elettorale voluta dal governo Meloni, che introduce un sistema interamente proporzionale con una soglia del 42% per garantire la maggioranza dei seggi alla coalizione che la superi, abolendo i collegi uninominali che oggi valgono un terzo dei seggi e che l’opposizione ritiene a essa favorevoli.",
           "bodyExtra": [
-            "Pichetto Fratin ha collegato gli shock energetici legati a Ucraina e Golfo Persico a una \"eccessiva dipendenza\" italiana dalle forniture estere, definendo il nucleare una questione di \"sicurezza nazionale\". Il piano punta su piccoli reattori modulari (Smr): la produzione in serie entro fine decennio potrebbe ridurre i tempi di costruzione a tre o quattro anni, permettendo la generazione nel 2034-2035. La legge non autorizza subito nuovi cantieri, ma pone le basi per un'autorità di sicurezza nucleare indipendente e per un deposito nazionale delle scorie radioattive.",
-            "Enel, Ansaldo Energia e Leonardo hanno costituito la joint venture Nuclitalia per valutare le tecnologie; a giugno la francese Edf ha firmato un'intesa con partner industriali italiani per i primi impianti entro il 2035. Il verde Angelo Bonelli accusa il governo di favorire \"chi inquina\", citando i recenti stop per il caldo ai reattori in Francia e Romania; Pichetto Fratin ammette che un futuro governo potrebbe tornare indietro: «Siamo una democrazia, se gli italiani scelgono l'arretratezza sarà comunque una scelta democratica»."
+            "Secondo Reuters l’opposizione ha accusato apertamente Meloni di cambiare le regole del gioco per favorire la propria rielezione. L’ex premier Matteo Renzi ha dichiarato in aula: «Voi lo fate perché credete ci sia il rischio di perdere le prossime elezioni». I senatori di centrosinistra hanno esposto cartelli con la scritta «No alla legge sulle frodi».",
+            "Il testo, modificato al Senato con la reintroduzione di un voto di preferenza parziale, dovrà tornare alla Camera per l’approvazione definitiva. Reuters inquadra la riforma nella crescente frammentazione del centrodestra italiano, minacciato dall’ascesa del partito di Vannacci, elemento che renderebbe più urgente per Meloni blindare per tempo le regole elettorali in vista del 2027."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.politico.eu\" rel=\"noopener noreferrer\" target=\"_blank\">Politico Europe</a>, Hannah Roberts, 14/9/2026"
+          "sourceHtml": "Fonte: <a href=\"https://www.internazionale.it\" rel=\"noopener noreferrer\" target=\"_blank\">Reuters, via Internazionale</a>; <a href=\"https://www.thelocal.it\" rel=\"noopener noreferrer\" target=\"_blank\">The Local Italy</a>, 15/9/2026"
         }
       ]
     },
@@ -820,52 +830,52 @@
       "id": "italia",
       "tag": "Italia",
       "tagClass": "tag-italia",
-      "title": "Italia: Ranucci fa ricorso contro Report, un ex bancario spiava i conti di Meloni e Mattarella",
+      "title": "Italia: il governo abolisce il bollo auto, il Senato approva la legge elettorale, sentenza sul clan del Gargano",
       "note": null,
       "context": [
-        "Una giornata segnata da un caso di indipendenza editoriale in Rai, da un accesso abusivo ai conti correnti delle massime cariche dello Stato, dal rincaro dei carburanti che ha portato a un Consiglio dei ministri, e dalla cenere dell'Etna che ha bloccato per ore l'aeroporto di Catania."
+        "Una giornata densa sul fronte interno: una manovra fiscale che tocca 14,5 milioni di veicoli, il primo via libera a una riforma elettorale contestata, una sentenza da oltre 300 anni di carcere contro un clan del Gargano e un rapporto Istat sulla violenza contro le donne ripreso anche dall’Onu."
       ],
       "type": "articles",
       "articles": [
         {
           "lead": true,
-          "title": "Sigfrido Ranucci fa ricorso d'urgenza contro la rimozione da Report",
-          "leadParagraph": "Sigfrido Ranucci ha presentato un ricorso d'urgenza per essere reintegrato alla guida di Report, il programma di inchiesta Rai da cui è stato rimosso, chiedendo una decisione prima dell'inizio della nuova stagione televisiva. Nel ricorso, il suo team legale parla di un allontanamento dal \"carattere discriminatorio\" e frutto di \"pressioni politiche\". Ranucci, intervenuto alla Festa de Il Fatto Quotidiano, ha ribadito la volontà di continuare a occuparsi di inchieste giornalistiche.",
+          "title": "Il governo abolisce il bollo auto per il 70% dei veicoli dal 2027, proroga anche lo sconto sul gasolio",
+          "leadParagraph": "Il Consiglio dei ministri n. 189, riunito il 16 settembre a Palazzo Chigi, ha approvato un decreto legge che dal 2027 esenta dal bollo auto un veicolo a persona con potenza fino a 80 kW (circa 109 cv) e tutti i motocicli, misura che secondo il governo copre circa il 70% del parco auto italiano. Il provvedimento proroga anche il taglio dell’accisa sul gasolio: 12,2 centesimi al litro dal 18 al 25 settembre, poi 6,1 centesimi fino al 5 ottobre. Costo stimato dell’esenzione bollo: 2,3 miliardi l’anno.",
           "bodyExtra": [
-            "Il caso riaccende la questione della presunta lottizzazione politica della Rai, tema ricorrente negli ultimi governi ma che assume peso specifico trattandosi di uno dei programmi di inchiesta più seguiti della tv pubblica. Il Movimento 5 Stelle e altre forze di opposizione hanno espresso solidarietà a Ranucci, mentre dalla maggioranza non risultano, nelle fonti consultate, prese di posizione dettagliate.",
-            "L'esito del ricorso, atteso prima del debutto della nuova stagione, sarà un banco di prova sull'indipendenza editoriale della tv pubblica, in un contesto in cui il caso Report si aggiunge ad altre polemiche sulla gestione dell'informazione Rai emerse negli ultimi mesi."
+            "Giorgia Meloni ha presentato la misura in conferenza stampa definendo il bollo «una delle tasse più odiate» e rivendicando la scelta rispetto a chi «parla di patrimoniali». Il ministro dei Trasporti Matteo Salvini ha sottolineato l’impatto su «milioni di due ruote»; il ministro degli Esteri Antonio Tajani ha rivendicato la paternità della misura per Forza Italia, richiamando la linea di Silvio Berlusconi.",
+            "Le opposizioni, colte di sorpresa secondo la ricostruzione dell’ANSA, hanno parlato di «mossa elettorale». Il governatore della Toscana Eugenio Giani ha accusato l’esecutivo di «demagogia elettorale spericolata», sostenendo che la sua regione perderebbe 350 milioni di gettito a fronte di soli 100 milioni di compensazione statale."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ilfattoquotidiano.it\" rel=\"noopener noreferrer\" target=\"_blank\">Il Fatto Quotidiano</a>, 15/9/2026"
+          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a> · <a href=\"https://www.agenpress.it\" rel=\"noopener noreferrer\" target=\"_blank\">Agenpress</a>, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Spiava i conti di Mattarella e Meloni: ex bancario di Intesa verso il processo",
-          "leadParagraph": "Si sono chiuse il 15 settembre le indagini a carico di un ex dipendente di Intesa Sanpaolo accusato di aver consultato senza autorizzazione i conti correnti del presidente della Repubblica Sergio Mattarella e della premier Giorgia Meloni, insieme a quelli di altre 3.570 persone. L'uomo, la cui posizione in banca era già stata archiviata, si avvia ora verso il processo.",
+          "lead": true,
+          "title": "Il Senato approva la nuova legge elettorale, opposizioni in Aula con cartelli «no alla legge truffa»",
+          "leadParagraph": "Il Senato ha approvato il 15-16 settembre la nuova legge elettorale con 113 voti favorevoli, 71 contrari e 2 astenuti. Il sistema, di impianto proporzionale, prevede un premio di maggioranza per la coalizione che raggiunga il 42% dei consensi (fino a 70 deputati e 35 senatori aggiuntivi) e reintroduce un voto di preferenza parziale. I partiti dovranno indicare il candidato premier al momento del deposito del simbolo. Il testo torna ora alla Camera per la terza lettura, calendarizzata al 28 settembre.",
           "bodyExtra": [
-            "Il numero elevato di conti consultati, oltre 3.500, solleva interrogativi sui controlli interni degli istituti di credito sull'accesso ai dati sensibili dei correntisti, specie quando coinvolgono le più alte cariche dello Stato: uno dei casi di accesso abusivo più estesi mai emersi in Italia in questo ambito.",
-            "Il caso si inserisce in un filone di episodi di accessi abusivi a banche dati, bancarie ma anche pubbliche, che negli ultimi anni ha riguardato più volte esponenti istituzionali italiani, riportando l'attenzione sulla sicurezza informatica del settore bancario."
+            "Le opposizioni hanno protestato in Aula alzando cartelli con la scritta «No alla legge truffa»; il senatore M5S Luca Pirondini ha mostrato un fac-simile di scheda con la scritta «Fratelli di casta». I sostenitori della riforma replicano che il voto di preferenza, pur incompleto, ridurrebbe il potere di veto dei segretari di partito nella scelta dei parlamentari.",
+            "Resta aperto, secondo le cronache parlamentari, il nodo della collocazione del generale Roberto Vannacci nel nuovo sistema di alleanze del centrodestra. Nello stesso giro di dichiarazioni si è registrata una frizione nella maggioranza sul fronte europeo: Fratelli d’Italia ha votato al Parlamento europeo con Vannacci e Lega contro lo scudo anti-ingerenze russe, posizione che alcuni osservatori segnalano in tensione con la linea filo-Kiev di Meloni."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 15/9/2026"
+          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a> · Civico20, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Carburanti, diesel a +1 euro al pieno: il governo convoca un Cdm",
-          "leadParagraph": "I prezzi di benzina e diesel sono saliti bruscamente nelle ultime 24 ore: un pieno di diesel costa oggi circa un euro in più rispetto al giorno precedente, mentre la benzina è salita di 70 centesimi; nell'arco di due settimane l'aumento complessivo per un pieno sfiora i 5 euro. Le cause indicate sono la chiusura di un oleodotto in Arabia Saudita e l'aggravarsi del conflitto tra Stati Uniti e Iran.",
+          "lead": true,
+          "title": "Clan del Gargano, oltre 300 anni di carcere per 40 imputati nel processo «Mari e Monti»",
+          "leadParagraph": "Il Tribunale di Bari ha emesso il 16 settembre la sentenza di primo grado, con rito abbreviato, nei confronti di 40 imputati del clan Li Bergolis-Miucci, attivo tra Monte Sant’Angelo e diversi centri del Gargano. Le pene inflitte superano complessivamente i 300 anni di reclusione, per associazione di tipo mafioso, estorsioni, traffico di droga e di armi. Il reggente Enzo Miucci è stato condannato a 20 anni, come Raffaele Palena e Claudio Iannoli; 14 anni per il figlio Antonio Miucci, 6 anni per la moglie del boss Marilina Scarabino.",
           "bodyExtra": [
-            "L'analista Davide Tabarelli ha avvertito che \"la situazione peggiorerà\". Di fronte all'impennata dei prezzi alla pompa, che pesa direttamente su famiglie e imprese di trasporto, è stato convocato un Consiglio dei ministri per valutare contromisure; tra le ipotesi allo studio non è escluso un prolungamento del taglio delle accise attualmente in vigore (v. anche sezione Finanza per i dati di mercato).",
-            "La vicenda si inserisce in un quadro di instabilità energetica internazionale che, secondo gli analisti, rischia di protrarsi nelle prossime settimane, con ricadute dirette sull'inflazione e sul potere d'acquisto in vista della manovra 2027."
+            "Il processo nasce dall’inchiesta della Dda di Bari denominata «Mari e Monti», che nell’ottobre 2024 aveva portato a un blitz con decine di arresti. Il verdetto di settembre chiude il troncone con rito abbreviato, mentre altri otto imputati saranno giudicati separatamente con rito ordinario; il giudice ha inflitto condanne comprese tra 3 e 13 anni agli imputati minori.",
+            "L’inchiesta aveva già portato, nei mesi precedenti, a sequestri di beni per oltre 355 milioni di euro accumulati in tre anni di indagini patrimoniali, segno — secondo gli inquirenti — della capacità del clan di reinvestire i proventi illeciti in settori come turismo ed edilizia nell’area del Gargano."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ilfattoquotidiano.it\" rel=\"noopener noreferrer\" target=\"_blank\">Il Fatto Quotidiano</a>, 15/9/2026, ore 16:42"
+          "sourceHtml": "Fonte: L’Immediato, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Cenere dall'Etna blocca l'aeroporto di Catania, poi riaperto in serata",
-          "leadParagraph": "Una nube di cenere vulcanica emessa dall'Etna ha costretto lo scalo di Catania Fontanarossa a sospendere i voli nel pomeriggio del 15 settembre, con la chiusura degli spazi aerei che si temeva potesse protrarsi fino alle 22. Nella tarda serata l'Enav ha comunicato la riapertura degli spazi aerei e la ripresa piena dell'operatività dell'aeroporto.",
+          "lead": true,
+          "title": "Istat: il 15% delle italiane ha subito violenza prima dei 16 anni. L'Onu cita l'Italia sui femminicidi",
+          "leadParagraph": "L’Istat ha diffuso il 16 settembre il rapporto «La violenza sulle donne dall’infanzia all’età adulta»: il 7,8% delle donne italiane (circa 1,65 milioni) dichiara di aver subito violenza sessuale prima dei 16 anni, in calo dal 10,6% del 2014; includendo anche la violenza fisica la quota sale al 14,9% (circa 3,2 milioni). Nella stessa giornata l’Alto commissario Onu per i diritti umani Volker Türk ha definito il femminicidio «una tendenza allarmante» a livello globale, citando l’Italia: «nelle ultime settimane sette donne sono state uccise da partner o ex partner».",
           "bodyExtra": [
-            "Lo stop ha causato ritardi e dirottamenti su altri scali siciliani per diverse ore, in un episodio che si ripete periodicamente per l'attività eruttiva del vulcano, tra i più attivi d'Europa, e che comporta protocolli di sicurezza aerea consolidati tra Enav ed Ente Nazionale per l'Aviazione Civile.",
-            "Il caso conferma la vulnerabilità dello scalo catanese, il quarto in Italia per traffico passeggeri, alle emissioni di cenere dell'Etna, che negli ultimi anni hanno causato ripetute chiusure temporanee dello spazio aereo nella Sicilia orientale."
+            "Secondo l’Istat la maggior parte delle violenze sessuali si concentra tra gli 11 e i 16 anni, anche se l’8,2% delle vittime ricorda il primo episodio prima dei 6 anni; gli autori sono in prevalenza uomini, spesso familiari, amici o conoscenti. Oltre il 58% delle vittime non ha mai raccontato l’accaduto a nessuno.",
+            "Türk ha collegato il fenomeno a «discriminazione, disuguaglianza e stereotipi di genere» e ha denunciato «notevoli lacune nei dati» che rendono difficile il monitoraggio internazionale dei femminicidi. Le due fonti — l’istituto di statistica nazionale e l’agenzia Onu — convergono nel descrivere un fenomeno strutturale, pur misurandolo con metodologie e orizzonti temporali differenti."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 15/9/2026"
+          "sourceHtml": "Fonte: ANSA, 16/9/2026"
         }
       ]
     },
@@ -873,42 +883,52 @@
       "id": "disagio",
       "tag": "Disagio città",
       "tagClass": "tag-palestina",
-      "title": "Disagio città: colpo di pistola a Roma, assalto alla polizia a Palermo, carcere per Torino",
+      "title": "Disagio città: quattro accoltellamenti distinti tra Napoli, Cesenatico, Eboli e Teramo",
       "note": null,
       "context": [
-        "Tre episodi distinti, non collegati tra loro, tra Roma, Palermo e Torino: una donna ferita da un proiettile in strada, un assalto a otto poliziotti durante una gara clandestina di moto, e la decisione del Tribunale del Riesame sul caso di molestie a una tredicenne."
+        "Quattro episodi di violenza con arma da taglio avvenuti in città diverse tra il 15 e il 16 settembre, senza alcun collegamento noto tra loro: si tratta di episodi distinti, non di un’unica emergenza coordinata."
       ],
       "type": "articles",
       "articles": [
         {
           "lead": true,
-          "title": "Roma, donna colpita da un proiettile in pieno centro a Prati",
-          "leadParagraph": "Lunedì 15 settembre, nel pomeriggio, in via della Giuliana, quartiere Prati, la giornalista e scrittrice Cristina Stillitano è stata colpita al tricipite da un proiettile mentre camminava parlando al telefono. L'oggetto, compatibile con un corpo metallico pesante, è rimasto conficcato nel braccio e dovrà essere rimosso chirurgicamente. «Ho sentito un forte colpo al braccio e mi sono accorta che sanguinavo», ha raccontato la donna.",
+          "title": "Napoli, rissa sulla Cumana degenera in accoltellamento: due minorenni feriti, uno è grave",
+          "leadParagraph": "Nella serata del 15 settembre due ragazzi egiziani di 16 e 17 anni sono stati accoltellati nei pressi della stazione di Pianura, sulla linea Cumana. Il litigio era iniziato a bordo del treno «per futili motivi» e si è trasformato in aggressione una volta scesi dal convoglio. Il 16enne ha riportato una ferita alla schiena non giudicata in pericolo di vita; il 17enne una ferita addominale grave, con ricovero al San Paolo di Fuorigrotta. Gli aggressori risultavano ancora non identificati alla mattina del 16 settembre.",
           "bodyExtra": [
-            "I carabinieri, coordinati dal maggiore Guido Romano Rosadoni, hanno perquisito alcune abitazioni della zona sospettate di ospitare l'origine del colpo, forse un'arma ad aria compressa sparata da un edificio o dalla strada. Commercianti della zona hanno riferito di episodi analoghi già avvenuti in precedenza contro donne e turisti.",
-            "Resta da accertare il tipo di arma e la traiettoria; cresce la preoccupazione dei residenti per l'incolumità dei bambini nella zona, una delle più frequentate del centro storico romano."
+            "La Squadra mobile ha avviato accertamenti sulle telecamere della Cumana e delle zone limitrofe, raccogliendo testimonianze per ricostruire cosa sia accaduto tra la lite sul treno e l’accoltellamento avvenuto poco dopo. Non è ancora chiaro il numero degli aggressori né il loro rapporto con le vittime.",
+            "Secondo la stampa locale napoletana, il 16 settembre è stato fermato un minorenne per tentato omicidio ritenuto coinvolto nella vicenda; resta comunque accertato, come fatto principale, la doppia aggressione a coltellate di due giovanissimi su una linea di trasporto pubblico molto frequentata dell’area flegrea."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 15/9/2026, ore 12:42, agg. 19:19"
+          "sourceHtml": "Fonte: The Social Post, 15/9/2026"
         },
         {
-          "lead": false,
-          "title": "Palermo, cento residenti assaltano otto poliziotti durante una gara clandestina",
-          "leadParagraph": "Nella notte tra il 13 e il 14 settembre, nel quartiere Falsomiele, agenti intervenuti per fermare una gara illegale di motociclette sono stati circondati da circa cento residenti e presi a sassate, con due auto di servizio danneggiate. Otto poliziotti sono rimasti feriti, quattro con prognosi di sette giorni e quattro di cinque. Sono stati fermati due centauri, di 27 e 52 anni, trovati con hashish, cocaina, una pistola scacciacani e contanti.",
+          "lead": true,
+          "title": "Cesenatico, accoltellamento in Piazza Costa: arrestato per tentato omicidio. La Uil: «Non sono più episodi isolati»",
+          "leadParagraph": "Nella notte tra il 15 e il 16 settembre, un uomo colombiano di circa 50 anni ha accoltellato all’addome un uomo marocchino di circa 30 anni in Piazza Costa a Cesenatico, al culmine di una lite tra i due, già noti per precedenti legati all’alcol. La vittima è stata trasportata in codice rosso al trauma center dell’ospedale Bufalini di Cesena. I carabinieri hanno rintracciato e arrestato l’aggressore poco dopo, a poche centinaia di metri dal luogo dell’aggressione.",
           "bodyExtra": [
-            "Durante l'inseguimento di uno dei centauri in fuga, la folla è scesa in strada accerchiando i mezzi di polizia; sono intervenuti una dozzina di equipaggi aggiuntivi, reparti mobili e carabinieri, con colpi sparati in aria per disperdere la folla.",
-            "Il ministro dell'Interno Matteo Piantedosi ha commentato: «Fatti come questo testimoniano che il problema è di chi commette reati e non riconosce le regole fondamentali della civile convivenza»."
+            "Il sindaco di Cesenatico Matteo Gozzoli ha ringraziato pubblicamente i carabinieri per «l’immediato arresto dell’autore dell’accoltellamento», augurando una pronta guarigione alla vittima e rimandando ogni ulteriore valutazione agli sviluppi delle indagini.",
+            "La Uil di Cesena ha commentato l’episodio con toni netti: «Microcriminalità e violenza ormai sono le padrone delle notti dei nostri centri storici e non stiamo più parlando di episodi isolati», chiedendo più presidio del territorio e illuminazione stradale migliore."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 14/9/2026"
+          "sourceHtml": "Fonte: Corriere Romagna · Living Cesenatico, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Torino, disposto il carcere per l'uomo che molestò una tredicenne",
-          "leadParagraph": "Il Tribunale del Riesame di Torino ha disposto il 15 settembre il ritorno in carcere di un 42enne, commesso di un minimarket a Borgo Vittoria, accusato di aver molestato sessualmente una tredicenne e un'altra cliente di 40 anni all'interno del negozio il 28 agosto scorso. La ragazzina, entrata per acquistare bevande per i fratelli, è uscita \"terrorizzata e sotto choc\".",
+          "lead": true,
+          "title": "Eboli, aggredisce l'anziano vicino di casa a coltellate alla gola e poi lo porta lui stesso al pronto soccorso",
+          "leadParagraph": "A Eboli (Salerno) un uomo di 35 anni, vicino di casa della vittima, è entrato il 15 settembre nell’appartamento di un 81enne che stava riposando e lo ha colpito con un coltello alla gola, ferendolo gravemente nella zona della giugulare. Dopo l’aggressione, l’uomo ha tamponato la ferita con un panno, ha preso l’auto della vittima e l’ha accompagnata personalmente al pronto soccorso, allontanandosi prima dell’arrivo dei soccorritori.",
           "bodyExtra": [
-            "La decisione ribalta quella del giudice che il 1° settembre aveva scarcerato l'uomo con obbligo di firma; la procuratrice Eleonora Sciorella aveva fatto appello segnalando rischio di fuga e reiterazione del reato.",
-            "Il caso ha avuto forte risonanza politica: il ministro della Giustizia Carlo Nordio ha disposto un'ispezione dopo le proteste pubbliche, e la premier Giorgia Meloni ha criticato la scarcerazione iniziale."
+            "I carabinieri della compagnia locale hanno identificato rapidamente il presunto aggressore attraverso gli accertamenti sul posto e hanno trasmesso la notizia di reato alla Procura competente, che ha aperto un fascicolo per tentato omicidio. Il 35enne risulta indagato.",
+            "Non sono ancora chiare le motivazioni del gesto: gli investigatori stanno ricostruendo i rapporti pregressi tra i due vicini di casa per stabilire se all’origine dell’aggressione vi fosse un litigio o un dissidio di vicinato. La vittima resta ricoverata in ospedale."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 15/9/2026"
+          "sourceHtml": "Fonte: InfoCilento · Italia2news, 15-16/9/2026"
+        },
+        {
+          "lead": true,
+          "title": "Teramo, arrestato sei giorni dopo l'accoltellamento di via Pannella: in casa aveva droga sintetica",
+          "leadParagraph": "A Teramo, un 21enne di nazionalità tunisina è stato arrestato la mattina del 16 settembre, sei giorni dopo aver accoltellato con sette fendenti un connazionale di 25 anni sotto il portico della chiesa del Sacro Cuore, in via Pannella, la sera del 9 settembre. La vittima, ricoverata all’ospedale Mazzini, non ha riportato lesioni a organi vitali. Nell’abitazione dell’arrestato la Squadra Mobile ha sequestrato hashish e circa un grammo di Mdma rosa.",
+          "bodyExtra": [
+            "Oltre alla custodia cautelare nel carcere di Castrogno, al giovane sono stati notificati l’Avviso Orale e il Dacur (divieto di accesso alle aree urbane); nella stessa operazione altri quattro giovani stranieri sono stati sanzionati amministrativamente.",
+            "Secondo la ricostruzione della stampa locale, l’accoltellamento sarebbe scaturito da un diverbio nato vicino alla stazione ferroviaria; le forze dell’ordine non escludono che dietro l’episodio vi siano contrasti territoriali legati allo spaccio. Nei giorni successivi è stato annunciato un rafforzamento della presenza di polizia nelle zone centrali."
+          ],
+          "sourceHtml": "Fonte: Rete8 · CityRumors Abruzzo, 16/9/2026"
         }
       ]
     },
@@ -916,52 +936,52 @@
       "id": "europa",
       "tag": "Europa",
       "tagClass": "tag-europa",
-      "title": "Europa: Patrushev minaccia la Polonia, caccia italiani abbattono un drone in Lituania",
+      "title": "Europa: von der Leyen invoca «un'Europa forte» nel discorso sullo Stato dell'Unione, il Parlamento si spacca",
       "note": null,
       "context": [
-        "Quattro fili dello stesso filo conduttore: la crescente tensione russa verso il fianco orientale della Nato, l'intercettazione di un drone sospetto da parte di caccia italiani, le parole della diplomazia Ue sull'attacco a un treno in Ucraina, e la richiesta di dodici Paesi europei di rafforzare la presenza nell'Artico."
+        "Il 16 settembre la presidente della Commissione europea Ursula von der Leyen ha tenuto a Strasburgo il discorso annuale sullo Stato dell’Unione, toccando sicurezza, migrazione e tutela dei minori online: un solo intervento da cui sono nate quattro notizie distinte, con reazioni politiche molto divise."
       ],
       "type": "articles",
       "articles": [
         {
           "lead": true,
-          "title": "Consigliere di Putin minaccia la Polonia: «Annientata in due o tre giorni»",
-          "leadParagraph": "Nikolay Patrushev, consigliere del presidente russo Vladimir Putin, ha dichiarato che Mosca dispiegherebbe \"tutto l'arsenale di forze e risorse disponibili\" contro la Polonia in caso di attacco, sostenendo che lo Stato polacco \"cesserebbe di esistere in due o tre giorni\". Le parole rispondono al ministro degli Esteri polacco Radosław Sikorski, che aveva ipotizzato una vittoria di Varsavia in caso di scontro con la Russia; Patrushev ha bollato quella valutazione come \"dilettantesca\".",
+          "title": "Discorso sullo Stato dell'Unione: von der Leyen invoca un'Europa «forte e indipendente», il Parlamento si spacca",
+          "leadParagraph": "La presidente della Commissione europea Ursula von der Leyen ha tenuto il 16 settembre a Strasburgo il discorso annuale sullo Stato dell’Unione, definendo l’obiettivo di «un’Europa forte e indipendente che difenda i propri valori» contro forze che, a suo dire, vogliono «frantumare l’Ue». Le reazioni dei gruppi politici del Parlamento europeo mostrano un quadro fortemente polarizzato, dal plauso del Ppe alle critiche durissime di destra sovranista e sinistra.",
           "bodyExtra": [
-            "La dichiarazione arriva in un clima di tensione crescente sul fianco orientale della Nato, dopo settimane di incursioni di droni nello spazio aereo di Polonia, Lituania ed Estonia attribuite a Mosca, che Bruxelles ha condannato più volte come violazioni della sovranità Ue.",
-            "Al momento non risultano reazioni ufficiali del governo polacco alle parole di Patrushev, riportate dall'agenzia russa Tass e dal quotidiano Argumenty i Fakty."
+            "Von der Leyen ha descritto ultranazionalisti, euroscettici, interferenze russe e disinformazione come minacce che condividono l’obiettivo di minare l’unità democratica europea. Il capogruppo del Ppe Manfred Weber è stato tra i pochi a esprimersi in termini pienamente positivi, elogiando le misure su intelligenza artificiale e tutela dei minori.",
+            "Le critiche sono arrivate da più direzioni: i Patriots for Europe hanno parlato di «promesse non mantenute» sull’industria; l’estrema destra sovranista ha definito «drammatica» la crisi migratoria a Ceuta; i Verdi hanno denunciato incoerenza sul Green Deal; S&amp;D ha chiesto una tassa sugli extra-profitti energetici; La Sinistra ha accusato von der Leyen di essere scollegata dalla realtà di deindustrializzazione e povertà crescente."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a> (da Tass/Argumenty i Fakty), 15/9/2026, ore 10:44"
+          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a> · <a href=\"https://www.euronews.com\" rel=\"noopener noreferrer\" target=\"_blank\">Euronews</a>, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Caccia italiani abbattono un drone sospetto russo sui cieli della Lituania",
-          "leadParagraph": "Due Eurofighter EF-2000 italiani della Task Force \"Baltic Thunder III\", schierati nella missione Nato di sorveglianza del fianco orientale, sono decollati in emergenza tra la notte del 14 e il mattino del 15 settembre per intercettare un drone non identificato che aveva violato lo spazio aereo lituano, neutralizzandolo secondo le procedure operative Nato. Fonti dell'Alleanza lo ritengono di sospetta origine russa.",
+          "lead": true,
+          "title": "Bruxelles propone un «Consiglio europeo per la sicurezza» contro sabotaggi e minacce ibride",
+          "leadParagraph": "Nel discorso sullo Stato dell’Unione, von der Leyen ha proposto la creazione di un «European Security Council», forum di leader dedicato alla sicurezza del continente, insieme a un «protocollo di emergenza» che permetterebbe a qualsiasi Stato membro di convocare riunioni urgenti in caso di crisi. La presidente ha motivato la proposta con l’aumento di «attacchi ibridi» attribuiti a Mosca.",
           "bodyExtra": [
-            "Le autorità lituane e la Nato hanno aperto un'indagine formale per confermarne la provenienza. È il secondo episodio in un mese che coinvolge i caccia italiani nei Paesi baltici, segno dell'intensificarsi delle incursioni ai confini orientali dell'Unione.",
-            "Il ministero della Difesa italiano ha confermato l'operazione, precisando che gli accertamenti sull'origine del velivolo restano preliminari; l'episodio si aggiunge a una serie di sconfinamenti che nei mesi scorsi hanno riguardato anche Polonia ed Estonia."
+            "Secondo la ricostruzione di Kyiv Post, il nuovo Consiglio includerebbe, oltre agli Stati membri Ue, partner come Regno Unito, Ucraina, Canada e Norvegia: un allargamento che riflette la volontà di superare i confini istituzionali dell’Unione su temi di sicurezza e difesa.",
+            "Von der Leyen ha inoltre promesso maggiore assistenza umanitaria a Kyiv e lo sviluppo congiunto di un sistema di difesa missilistica con l’Ucraina in vista dell’inverno. La proposta dovrà ora essere negoziata con i governi nazionali, che restano gli attori decisivi in materia di difesa: non è quindi un atto immediatamente vincolante."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 15/9/2026, ore 10:11"
+          "sourceHtml": "Fonte: Kyiv Post · U.S. News &amp; World Report, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Kallas in Finlandia: «L'attacco al treno ucraino voleva spaventare l'Occidente»",
-          "leadParagraph": "L'Alta rappresentante Ue per la politica estera, Kaja Kallas, in visita in Finlandia, ha commentato il recente raid russo contro un treno in Ucraina definendolo un tentativo di \"spaventare l'Occidente\". Al suo fianco, il premier finlandese Petteri Orpo ha chiesto \"più sostegno a Kiev e più sanzioni\", avvertendo che \"i russi stanno giocando una partita molto pericolosa\".",
+          "lead": true,
+          "title": "Ue Kids Act: stop ai social sotto i 13 anni, mini-account fino ai 15",
+          "leadParagraph": "La Commissione europea presenta oggi, 17 settembre, l’«EU Kids Act», il pacchetto normativo annunciato da von der Leyen per limitare l’uso di social network, videogiochi online e chatbot IA da parte dei minori. La proposta vieta l’accesso ai social sotto i 13 anni, consente dai 13 ai 15 anni solo «mini-account» con controllo parentale, e riserva ai maggiori di 15 anni profili con maggiori garanzie di sicurezza.",
           "bodyExtra": [
-            "Le dichiarazioni si inseriscono nel dibattito, sempre più acceso tra i governi del Nord ed Est Europa, su un nuovo pacchetto di sanzioni Ue e su un incremento degli aiuti militari a Kiev, dopo settimane di attacchi russi alle infrastrutture civili e di trasporto ucraine.",
-            "Helsinki, che condivide oltre 1.300 km di confine con la Russia, è tra i Paesi che spingono più duramente a Bruxelles; Kallas ha ribadito che l'Ue coordinerà con gli alleati la risposta alle \"provocazioni\" russe."
+            "Il testo inverte l’onere della prova sulle piattaforme: saranno le aziende a dover dimostrare la sicurezza dei propri servizi, eliminare i meccanismi di design che incentivano un uso prolungato e introdurre sistemi affidabili di verifica dell’età. Le sanzioni previste arrivano fino al 6% del fatturato mondiale delle aziende.",
+            "La proposta ha ricevuto il sostegno esplicito di Francia e Spagna: il premier spagnolo Pedro Sánchez ha dichiarato che «l’infanzia si protegge con le nostre democrazie». Save the Children ha accolto positivamente l’iniziativa, chiedendo però verifiche dell’età «proporzionate e rispettose della privacy»."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 14/9/2026"
+          "sourceHtml": "Fonte: ANSA · MacRumors, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Dodici Paesi europei chiedono all'Ue di rafforzare la presenza nell'Artico",
-          "leadParagraph": "Dodici Paesi europei hanno inviato una lettera congiunta a Bruxelles per sollecitare un rafforzamento della presenza Ue nella regione artica, sullo sfondo della crescente competizione geopolitica con Russia e Cina per rotte e risorse settentrionali. Il presidente del Consiglio europeo, António Costa, ha dichiarato: «L'Artico è una regione strategica per tutta l'Ue, la sicurezza è in gioco».",
+          "lead": true,
+          "title": "«Ceuta è Europa»: von der Leyen annuncia una legge d'emergenza sulle crisi migratorie dopo l'estate a Ceuta",
+          "leadParagraph": "Rivolgendosi direttamente alla Spagna, von der Leyen ha dichiarato che «la frontiera di Ceuta è una frontiera europea, perché Ceuta è Spagna, Ceuta è Europa», annunciando l’intenzione di elaborare uno «strumento europeo di risposta alle emergenze» per gestire future crisi migratorie di massa. L’annuncio segue l’attraversamento irregolare, a fine luglio, di circa 80.000 persone dal Marocco verso l’enclave spagnola.",
           "bodyExtra": [
-            "L'iniziativa arriva mentre cresce l'attenzione di Bruxelles per lo scioglimento dei ghiacci artici, che apre nuove rotte commerciali e militari rivendicate anche da Mosca, che nella regione mantiene una forte presenza militare, e da Pechino, autodefinitasi potenza \"quasi-artica\".",
-            "I firmatari, tra cui i Paesi nordici e baltici, chiedono investimenti in infrastrutture, sorveglianza satellitare e capacità navali, oltre a un coordinamento più stretto con la Nato."
+            "Secondo il quotidiano spagnolo The Objective, von der Leyen ha insistito sull’applicazione del Patto Ue su migrazione e asilo per rafforzare le frontiere esterne e accelerare i rimpatri. Il commissario Ue alla Migrazione, Magnus Brunner, ha confermato che la priorità resta il rapido ritorno dei migranti irregolari.",
+            "Sul piano operativo, è prevista una visita di Brunner a Madrid per incontrare i ministri spagnoli competenti. Il nuovo strumento normativo dovrà ancora essere formalizzato in una proposta legislativa: resta per ora un annuncio politico, non un atto già in vigore."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 14/9/2026"
+          "sourceHtml": "Fonte: ANSA · The Objective, 16/9/2026"
         }
       ]
     },
@@ -969,52 +989,42 @@
       "id": "mondo",
       "tag": "Mondo",
       "tagClass": "tag-mondo",
-      "title": "Mondo: gli Houthi conquistano isole strategiche, la Cina si propone mediatrice Usa-Iran",
+      "title": "Mondo: un drone russo colpisce un bus in Ucraina, crolla un palazzo a Gaza, Riad intercetta un drone Houthi",
       "note": null,
       "context": [
-        "Il conflitto Usa-Iran, con gli Houthi yemeniti al fianco di Teheran, si allarga nello stretto di Bab al-Mandeb; sullo sfondo il possibile ruolo di mediazione cinese, l'escalation russa vicino al confine polacco e il ritorno della Russia nelle basi militari siriane."
+        "Tre fatti distinti confermano l’intensità dei fronti aperti nel mondo: la campagna russa contro le infrastrutture civili ucraine, il fragile cessate il fuoco a Gaza e la tensione tra la coalizione a guida saudita e i ribelli Houthi nello Yemen."
       ],
       "type": "articles",
       "articles": [
         {
           "lead": true,
-          "title": "Houthi conquistano isole strategiche, oleodotto saudita colpito, petrolio in impennata",
-          "leadParagraph": "Lo scontro tra Stati Uniti e Iran si allarga: nella notte tra 14 e 15 settembre i ribelli Houthi yemeniti hanno conquistato due isole strategiche nello stretto di Bab al-Mandeb, tra cui l'isola di Mayun, mentre l'Arabia Saudita ha intensificato i raid aerei contro le loro postazioni. L'oleodotto saudita East-West, lungo 1.200 km e vitale per circa il 5% dell'offerta petrolifera mondiale, resta danneggiato dopo un attacco, con Washington che promette una ripresa delle esportazioni \"entro pochi giorni\".",
+          "title": "Un drone russo colpisce un autobus di passeggeri in Ucraina: 5 morti",
+          "leadParagraph": "Un drone russo ha colpito un minibus di passeggeri nel distretto di Nikopol, regione di Dnipropetrovsk, nell’Ucraina meridionale, la sera del 15 settembre, uccidendo almeno 5 persone e ferendone almeno 7. Il presidente Volodymyr Zelensky ha definito l’attacco «un’altra atrocità» priva di scopo militare; il governatore regionale Oleksandr Hanzha ha confermato il bilancio. Nessun commento è arrivato dalla Russia sull’episodio specifico.",
           "bodyExtra": [
-            "Il petrolio ha superato i 100 dollari al barile e i rendimenti dei Treasury Usa hanno toccato un picco a 19 anni. Il conflitto ha già causato perdite ingenti alle forze americane, tra cui un Boeing E-3 Sentry colpito alla base di Prince Sultan in Arabia Saudita; oltre 2.000 yemeniti sono fuggiti verso Gibuti per l'aggravarsi degli scontri.",
-            "Il vicepresidente Usa JD Vance ha dichiarato che l'amministrazione è \"pienamente consapevole\" dell'avanzata Houthi nel Mar Rosso. Il previsto vertice Iran-Golfo in Oman è stato rinviato, complicando ulteriormente il dialogo regionale."
+            "Secondo l’Associated Press, lo stesso giorno sono stati colpiti anche un treno passeggeri e alcune locomotive elettriche in altre regioni ucraine, nel quadro di quella che l’agenzia descrive come una campagna sistematica russa contro le infrastrutture ferroviarie.",
+            "Al Jazeera inquadra l’episodio nel trend di escalation degli attacchi aerei russi: nel primo semestre 2026 sono stati uccisi 1.396 civili ucraini, il 37% in più rispetto allo stesso periodo del 2025."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.aljazeera.com\" rel=\"noopener noreferrer\" target=\"_blank\">Al Jazeera</a>, 14-15/9/2026"
+          "sourceHtml": "Fonte: Associated Press · Al Jazeera, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Cina si propone mediatrice tra Washington e Teheran",
-          "leadParagraph": "Il ministro degli Esteri iraniano Abbas Araghchi è arrivato a Pechino mercoledì per la sua seconda visita dell'anno, nel tentativo di esplorare vie di de-escalation nella guerra con gli Stati Uniti. Il presidente cinese Xi Jinping ha rilanciato un piano in quattro punti basato su coesistenza pacifica, sovranità nazionale, diritto internazionale ed equilibrio tra sviluppo e sicurezza.",
+          "lead": true,
+          "title": "Crolla a Gaza City un palazzo lesionato dalla guerra: almeno 19-21 morti durante la tregua",
+          "leadParagraph": "Un edificio residenziale di sei piani nel quartiere di Tal al-Hawa, a Gaza City, danneggiato da raid israeliani nel 2024 e nel marzo 2025 e mai ricostruito, è crollato nella notte tra il 15 e il 16 settembre, uccidendo secondo le fonti tra 19 e 21 persone e lasciando decine di dispersi sotto le macerie. L’edificio ospitava circa 100 sfollati privi di alternative abitative.",
           "bodyExtra": [
-            "Sul tavolo anche il programma nucleare iraniano, sotto rinnovata pressione di Washington ed europei, e la protezione degli scambi commerciali Cina-Iran, in particolare l'acquisto di greggio. Gli analisti restano scettici sulla reale capacità di Pechino di fare da paciere, dato che la Cina evita tradizionalmente di immischiarsi in conflitti tra terzi.",
-            "L'ex ministro degli Esteri iraniano Zarif ha parlato comunque di \"iniziative costruttive\". Sullo sfondo resta la rivalità Washington-Pechino, con un incontro Trump-Xi previsto a Washington per fine settembre."
+            "Secondo l’Associated Press la tregua in vigore da quasi un anno non ha fermato i raid israeliani, che avrebbero causato almeno 1.375 morti dall’inizio del cessate il fuoco; il governo palestinese ha attribuito il crollo alla «guerra genocida».",
+            "Il Times of Israel riporta la stessa dinamica strutturale (danni pregressi, non un nuovo raid) senza però includere una dichiarazione dell’esercito israeliano; Al Jazeera cita il sindaco di Gaza City, Yahya Al Sarraj: «Non è il primo crollo… temiamo non sia l’ultimo»."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.aljazeera.com\" rel=\"noopener noreferrer\" target=\"_blank\">Al Jazeera</a>, 15/9/2026"
+          "sourceHtml": "Fonte: Associated Press · Al Jazeera · Times of Israel, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Russia colpisce vicino al confine polacco, la Nato promette più sostegno a Kiev",
-          "leadParagraph": "L'Alleanza Atlantica ha annunciato un rafforzamento del sostegno militare a Kiev dopo attacchi russi avvenuti in prossimità del confine con la Polonia, riportati il 14 settembre. Non sono ancora disponibili dettagli completi su vittime e localizzazione precisa degli attacchi, ma la notizia si inserisce in un contesto di crescente tensione tra Mosca e i Paesi Nato orientali (v. anche sezione Europa).",
+          "lead": true,
+          "title": "Arabia Saudita: intercettato un drone Houthi diretto verso La Mecca, è «linea rossa»",
+          "leadParagraph": "La coalizione a guida saudita ha annunciato di aver intercettato e distrutto, la sera di martedì 15 settembre, un drone lanciato dagli Houthi yemeniti prima che entrasse nello spazio aereo riservato della Mecca. Il portavoce della coalizione, Turki al-Maliki, ha definito l’episodio un tentativo di «intimidire i fedeli», aggiungendo che la sicurezza dei pellegrini è «una linea rossa». Gli Houthi hanno negato categoricamente ogni responsabilità.",
           "bodyExtra": [
-            "Nello stesso giorno sono stati riportati anche due morti a Kiev per attacchi russi contro le stazioni di rifornimento della capitale, nell'ambito di una campagna mirata contro le infrastrutture energetiche ucraine.",
-            "Parallelamente, cresce la componente tecnologica del conflitto: sia Mosca che Kiev starebbero accelerando verso una guerra di droni \"pienamente autonomi\", capaci di colpire senza intervento umano diretto, una nuova soglia nell'uso bellico dell'intelligenza artificiale."
+            "Secondo Al Jazeera, per la prima volta dal 2017 è stata emessa un’allerta di sicurezza per la città santa, poi rapidamente revocata; l’episodio arriva mentre la tregua del 2022 tra sauditi e Houthi, già in crisi dal blocco marittimo houthi di luglio 2026, appare sempre più fragile.",
+            "Cnn descrive indignazione nel mondo musulmano contro i ribelli yemeniti; una fonte militare Houthi citata dalla stessa copertura ha dichiarato: «Neghiamo categoricamente che vi sia una minaccia dallo Yemen diretta verso La Mecca»."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.aljazeera.com\" rel=\"noopener noreferrer\" target=\"_blank\">Al Jazeera</a>, 14/9/2026"
-        },
-        {
-          "lead": false,
-          "title": "Mosca torna in Siria: primo rifornimento alle basi militari dopo il nuovo accordo",
-          "leadParagraph": "Un convoglio navale russo di quattro navi ha attraccato il 7 settembre nel porto di Tartous, in Siria, effettuando la prima missione di rifornimento dall'intesa raggiunta ad agosto tra Mosca e il nuovo governo di Damasco, dopo 18 mesi di negoziati. L'accordo trasforma le due uniche basi russe fuori dall'ex Unione Sovietica, Tartous e la base aerea di Hmeimim, in \"centri congiunti di addestramento\".",
-          "bodyExtra": [
-            "Il convoglio comprendeva la nave cargo Sparta, la petroliera militare Akademik Pashin e la cisterna General Skobelev, due delle quali sottoposte a sanzioni occidentali.",
-            "Mosca era intervenuta militarmente in Siria durante la guerra civile a sostegno dell'ex presidente Bashar al-Assad; dopo la sua caduta nel 2024, il Cremlino ha lavorato per preservare i legami strategici con la nuova amministrazione siriana, mantenendo così il proprio unico avamposto navale nel Mediterraneo."
-          ],
-          "sourceHtml": "Fonte: <a href=\"https://www.aljazeera.com\" rel=\"noopener noreferrer\" target=\"_blank\">Al Jazeera</a>, 15/9/2026"
+          "sourceHtml": "Fonte: Al Jazeera · CNN, 16/9/2026"
         }
       ]
     },
@@ -1022,52 +1032,52 @@
       "id": "finanza",
       "tag": "Finanza",
       "tagClass": "tag-finanza",
-      "title": "Finanza: petrolio in tensione per il Medio Oriente, rendimenti ai massimi pluriennali",
+      "title": "Finanza: la Fed alza i tassi al 3,75-4%, bocciato il Clarity Act sulle cripto, diesel al record storico",
       "note": null,
       "context": [
-        "Le tensioni in Medio Oriente restano il driver principale dei mercati petroliferi, mentre una vendita obbligazionaria globale spinge i rendimenti ai massimi da anni; sullo sfondo, il braccio di ferro tra UniCredit e Commerzbank e nuovi rincari alla pompa in Italia."
+        "Una giornata di mercati mossa da tre fronti distinti: la prima stretta monetaria della Fed in tre anni, lo stop del Senato Usa alla legge sulle criptovalute e il nuovo record dei prezzi dei carburanti in Italia proprio nel giorno in cui scade lo sconto sulle accise."
       ],
       "type": "articles",
       "articles": [
         {
           "lead": true,
-          "title": "Petrolio in tensione per il Medio Oriente, Wall Street guarda alla Fed",
-          "leadParagraph": "Il Brent è scambiato stamattina a 108,6 dollari al barile, in rialzo di circa il 2,75% rispetto alla chiusura precedente di 105,68 dollari. Ieri Wall Street ha chiuso in calo (Dow Jones -0,81%) in attesa della decisione della Federal Reserve sui tassi; il Brent era già salito ieri del 2,3% a 108 dollari.",
+          "title": "La Fed alza i tassi al 3,75-4%, primo rialzo in tre anni. Casa Bianca: «decisione infelice»",
+          "leadParagraph": "La Federal Reserve ha alzato il 16 settembre il tasso di riferimento di 25 punti base, dal 3,50-3,75% al 3,75-4%: è il primo rialzo dopo tre anni di tagli consecutivi, motivato da un’inflazione che il Fomc vede al 3,7% a fine 2026. Il presidente della Fed Kevin Warsh non ha rilasciato dichiarazioni pubbliche dettagliate nella nota diffusa dal board.",
           "bodyExtra": [
-            "Le tensioni in Medio Oriente restano il driver principale dei mercati petroliferi da almeno tre sedute, mentre le borse europee monitorano gli sviluppi con cautela. Il ministro dell'Economia Giorgetti ha dichiarato che le spese per contenere i costi energetici di famiglie e imprese non intaccheranno il percorso di risanamento dei conti pubblici.",
-            "Curiosamente il gas naturale europeo si muove in direzione opposta: il TTF è sceso a circa 79,5 euro/MWh, un calo di circa il 3,6%, segnale di un disaccoppiamento temporaneo tra il rischio geopolitico sul petrolio e le scorte di gas in Europa."
+            "Il comitato ha segnalato la possibilità di un ulteriore rialzo entro fine anno, al 4,00-4,25%. La decisione arriva in un contesto di pressione politica: il presidente Trump chiede da mesi tagli dei tassi. Il consigliere economico della Casa Bianca Kevin Hassett aveva anticipato che Trump «non sarà super felice» di un rialzo, pur difendendo formalmente l’indipendenza della Fed.",
+            "Dopo l’annuncio, il portavoce della Casa Bianca Kush Desai ha definito la scelta «la decisione piuttosto infelice della Fed». Sul fronte opposto, l’economista Kristin Forbes (Mit) ha osservato che «i presidenti della Fed che seguono la pressione politica non vengono ricordati bene nella storia»."
           ],
-          "sourceHtml": "Fonti confrontate: <a href=\"https://www.investing.com\" rel=\"noopener noreferrer\" target=\"_blank\">Investing.com</a> · <a href=\"https://www.milanofinanza.it\" rel=\"noopener noreferrer\" target=\"_blank\">MilanoFinanza</a>, 15-16/9/2026"
+          "sourceHtml": "Fonte: ANSA · Money.it, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Rendimenti obbligazionari ai massimi pluriennali, spread BTp in allargamento",
-          "leadParagraph": "Il rendimento del BTp decennale è salito al 4,38% il 14 settembre, con lo spread rispetto al Bund tedesco tra gli 88 e i 91 punti base a seconda della rilevazione, ai massimi da novembre 2023. Negli Stati Uniti i rendimenti dei Treasury a 10 anni hanno toccato i massimi dal 2007. Lo scorso 10 settembre la Bce aveva alzato i tassi di un quarto di punto, portando il tasso sui depositi al 2,50%, dicendosi \"pronta a rispondere allo shock energetico\".",
+          "lead": true,
+          "title": "Il Senato Usa boccia il Clarity Act, Bitcoin scende sotto i 76.000 dollari",
+          "leadParagraph": "Il Senato degli Stati Uniti ha respinto il 15-16 settembre, con 49 voti a favore e 50 contrari (ne servivano 60), il Clarity Act, la legge che avrebbe introdotto il primo quadro normativo federale per le criptovalute. Il mercato ha reagito con vendite diffuse: Bitcoin è sceso di circa il 4% in 24 ore, sotto i 76.000 dollari, con perdite più marcate su altri token (XRP intorno al -10%, Ethereum circa -5%).",
           "bodyExtra": [
-            "Il quadro descritto dalle fonti consultate è quello di una vendita obbligazionaria globale innescata dallo shock energetico e da una Bce tornata a un orientamento restrittivo, un'inversione rispetto al ciclo di tagli dei mesi precedenti. Si segnala inoltre un allargamento dello spread anche con l'Oat francese, a indicare tensioni non solo sul debito periferico ma anche sul cuore dell'Eurozona.",
-            "Gli analisti restano divisi su quanto la fase restrittiva della Bce possa protrarsi, in un contesto in cui lo shock energetico legato al Golfo Persico complica il quadro dell'inflazione europea nei prossimi mesi."
+            "Secondo Euronews, il voto è stato bloccato principalmente dall’opposizione democratica guidata dalla senatrice Elizabeth Warren, che ha giudicato insufficienti le garanzie per investitori e sicurezza nazionale. La senatrice repubblicana Cynthia Lummis ha commentato: «Credo che abbiamo finito. È finita».",
+            "Le conseguenze di mercato sono state ampie: Coinbase ha perso l’8,65% in Borsa, si sono registrate liquidazioni per oltre 770 milioni di dollari in 24 ore e gli Etf spot su Bitcoin hanno segnato deflussi per circa 450 milioni di dollari. Il calendario politico chiude ormai la porta a una nuova legge crypto nel 2026."
           ],
-          "sourceHtml": "Fonti confrontate: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a> · <a href=\"https://www.milanofinanza.it\" rel=\"noopener noreferrer\" target=\"_blank\">MilanoFinanza</a>, 14-15/9/2026"
+          "sourceHtml": "Fonte: Euronews · WebEconomia.it, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "UniCredit chiede il cambio ai vertici di Commerzbank",
-          "leadParagraph": "UniCredit ha chiesto le dimissioni del presidente e dell'amministratore delegato di Commerzbank, nell'ambito del braccio di ferro per il controllo della banca tedesca. Sul listino milanese, nella seduta del 15 settembre, il titolo UniCredit ha perso il 2,24%, tra i peggiori del Ftse Mib insieme a Moncler (-1,98%) e Bper Banca (-1,66%).",
+          "lead": true,
+          "title": "Diesel al record storico in Italia: oggi ultimo giorno dello sconto sulle accise",
+          "leadParagraph": "Il prezzo medio del diesel self-service in Italia ha toccato il 16 settembre un nuovo massimo storico a 2,246 euro al litro, superando il precedente record di marzo 2022; la benzina self-service è salita a 2,133 euro al litro. Adnkronos collega i rincari alla tensione sul greggio, con il Brent che nella parte iniziale della settimana si era avvicinato ai 110 dollari al barile per l’escalation nello Stretto di Hormuz.",
           "bodyExtra": [
-            "Sul fronte regolamentare, UniCredit ha peraltro ottenuto dalla Bce l'autorizzazione sul cosiddetto \"Danish compromise\", con un beneficio stimato di 52 punti base sul Cet1, un elemento che compensa in parte la giornata difficile in Borsa per il titolo.",
-            "La partita Commerzbank si intreccia quindi con un contesto di mercato complessivamente debole per il comparto bancario italiano, penalizzato nella stessa seduta dal clima di cautela sui titoli più esposti alle tensioni geopolitiche."
+            "Il rialzo arriva in una fase delicata: un decreto del 10 settembre aveva prorogato fino a oggi, 17 settembre, lo sconto sull’accisa del diesel; da domani l’aliquota tornerà a quella ordinaria (672,90 euro per mille litri, dai 532,90 attuali), salvo nuovi interventi del governo. La riduzione vale oggi circa 17 centesimi al litro, Iva inclusa.",
+            "Nel pomeriggio del 16 settembre il quadro sul greggio è in parte mutato: il Brent ha chiuso la seduta europea a 105,7 dollari al barile, in calo del 2,8%. Il governo starebbe valutando, come alternativa a una nuova proroga generalizzata, un bonus carburante più selettivo da 100 euro per lavoratori dipendenti e autonomi."
           ],
-          "sourceHtml": "Fonti confrontate: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a> · <a href=\"https://www.milanofinanza.it\" rel=\"noopener noreferrer\" target=\"_blank\">MilanoFinanza</a>, 14-15/9/2026"
+          "sourceHtml": "Fonte: Adnkronos · Milano Finanza, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Carburanti ancora in rialzo in Italia: benzina self a 2,107 €/litro",
-          "leadParagraph": "Nuovo aumento per i prezzi dei carburanti in Italia: secondo il Mimit, il prezzo medio nazionale della benzina in modalità self-service è salito a 2,107 euro al litro. Il rincaro accompagna la fiammata del greggio, con il Brent salito del 2,75% questa mattina a 108,6 dollari al barile (v. articolo precedente e sezione Italia per la risposta del governo).",
+          "lead": true,
+          "title": "Borse europee positive in attesa della Fed, Piazza Affari maglia rosa",
+          "leadParagraph": "Le borse europee hanno chiuso il 16 settembre in rialzo, in un clima di attesa per la decisione della Federal Reserve e per il discorso di von der Leyen sullo Stato dell’Unione. Il Ftse Mib ha guadagnato lo 0,8% chiudendo a 51.969 punti; positivi anche Dax (+0,5%), Ftse 100 (+0,3%), Cac 40 (+0,6%) e Ibex 35 (+0,4%).",
           "bodyExtra": [
-            "Non è stato possibile verificare in giornata un aggiornamento più recente del dato sul diesel self-service nazionale rispetto ai 2,216 euro/litro già rilevati dal Mimit il 14 settembre: il dato resta quindi quello più recente disponibile.",
-            "Le associazioni dei consumatori chiedono da giorni una proroga dello sconto sulle accise oltre la scadenza del 17 settembre, mentre il governo valuta interventi mirati, come discusso nel Consiglio dei ministri convocato per la giornata (v. sezione Italia)."
+            "A Piazza Affari le vendite al dettaglio Usa più forti delle attese hanno rafforzato il dollaro (cambio euro/dollaro a 1,1537) e sostenuto il sentiment. Tra i singoli titoli, Prysmian ha guadagnato il 3,4%, seguita da Lottomatica (+2,76%) e Italgas (+2,4%); in controtendenza Stellantis (-3,3%) e Nexi (-1,3%). Lo spread Btp-Bund si è attestato a 87 punti.",
+            "Teleborsa, con un aggiornamento infragiornaliero delle 14:18, indicava un progresso ancora più marcato del Ftse Mib, attribuendo il buon andamento delle piazze europee al tentativo di «recuperare terreno dopo le perdite incassate in precedenza»."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>/Mimit, 14/9/2026"
+          "sourceHtml": "Fonte: ANSA · Milano Finanza · Teleborsa, 16/9/2026"
         }
       ]
     },
@@ -1075,52 +1085,52 @@
       "id": "benessere",
       "tag": "Benessere",
       "tagClass": "tag-benessere",
-      "title": "Benessere: un'IA per l'immunoterapia nel tumore al polmone, West Nile in calo",
+      "title": "Benessere: l'esercizio fisico riduce mortalità nei malati oncologici, la «dose giusta» di cereali integrali per il cuore",
       "note": null,
       "context": [
-        "Dalla ricerca oncologica italiana a un nuovo farmaco per il tumore al seno, fino ai bollettini su inquinamento e West Nile: quattro notizie di salute, tutte con un livello di evidenza scientifica esplicitato con chiarezza."
+        "Quattro studi e rapporti pubblicati il 15-16 settembre, con gradi di certezza scientifica diversi: da una meta-analisi di studi randomizzati a uno studio osservazionale su diete e invecchiamento, fino a un rapporto di categoria dei ricercatori oncologici Usa."
       ],
       "type": "articles",
       "articles": [
         {
           "lead": true,
-          "title": "Un'intelligenza artificiale aiuta a prevedere la risposta all'immunoterapia nel tumore del polmone",
-          "leadParagraph": "Un progetto internazionale coordinato dalla Fondazione Irccs Istituto Nazionale dei Tumori di Milano ha sviluppato un sistema di intelligenza artificiale che integra immagini Tc, dati di patologia digitale, informazioni genomiche e parametri clinico-laboratoristici per stimare la risposta individuale all'immunoterapia nel carcinoma polmonare non a piccole cellule metastatico. Lo studio, presentato alla World Conference on Lung Cancer 2026, ha coinvolto 2.396 pazienti: è uno strumento di supporto decisionale in fase di validazione, non un test già in uso nella pratica clinica.",
+          "title": "L'esercizio fisico durante le cure oncologiche riduce mortalità e recidive, secondo una meta-analisi",
+          "leadParagraph": "Una revisione sistematica e meta-analisi pubblicata il 15 settembre sul British Journal of Sports Medicine, basata su 21 studi clinici randomizzati per un totale di 8.449 partecipanti (età media 54 anni, 88% donne), ha rilevato che i pazienti oncologici che hanno svolto esercizio fisico strutturato durante o dopo le cure hanno avuto una probabilità di morte inferiore del 23% e di recidiva inferiore del 17% rispetto a chi non lo ha svolto. I tumori più rappresentati sono seno, colon e pancreas.",
           "bodyExtra": [
-            "Il progetto, chiamato I3Lung, guidato dall'oncologa Arsela Prelaj, usa modelli di machine learning per combinare dati eterogenei. È stato condotto anche uno studio di usabilità su 100 pazienti e 20 medici: il beneficio maggiore si è osservato tra i non specialisti, che potrebbero usare lo strumento come supporto nella stratificazione dei pazienti.",
-            "Trattandosi di uno studio prospettico-osservazionale con validazione di usabilità, non equivale a una raccomandazione terapeutica: servono conferme prospettiche più ampie prima di un impiego clinico su larga scala."
+            "Gli autori indicano diversi meccanismi biologici plausibili: potenziamento della risposta immunitaria, miglioramento della circolazione sanguigna nei tessuti tumorali, riduzione degli ormoni sessuali circolanti e favorimento della riparazione del danno al Dna cellulare. I benefici risultano più marcati nelle malattie in stadio iniziale e tra i pazienti costanti nell’attività fisica nel tempo.",
+            "Si tratta di un’analisi di studi randomizzati controllati, quindi con un disegno più solido di un semplice studio osservazionale, ma gli stessi autori segnalano limiti: variabilità nei protocolli tra i diversi trial, possibile tendenza dei partecipanti più attivi ad avere anche altri comportamenti salutari, e scarsità di evidenze sulle malattie in stadio avanzato."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.quotidianosanita.it\" rel=\"noopener noreferrer\" target=\"_blank\">Quotidiano Sanità</a>, 14/9/2026"
+          "sourceHtml": "Fonte: EurekAlert! / British Journal of Sports Medicine, 15/9/2026"
         },
         {
-          "lead": false,
-          "title": "Aifa approva un nuovo farmaco per un sottogruppo di tumore al seno",
-          "leadParagraph": "L'Agenzia Italiana del Farmaco ha approvato la rimborsabilità di inavolisib, in combinazione con palbociclib e fulvestrant, per pazienti con carcinoma mammario Hr+/Her2-negativo, localmente avanzato o metastatico, resistente alla terapia endocrina e con mutazione del gene Pik3ca, presente in circa il 40% dei casi metastatici di questo sottotipo. L'approvazione si basa sullo studio randomizzato di fase III Inavo120.",
+          "lead": true,
+          "title": "Cereali integrali, la «dose giusta» per il cuore: 4-6 porzioni al giorno secondo una meta-analisi",
+          "leadParagraph": "Una meta-analisi pubblicata il 16 settembre sull’European Heart Journal, che ha riunito 87 studi clinici randomizzati con oltre 6.500 partecipanti in Asia, Europa, Nord America, Australia e Brasile, indica che consumare tra 60 e 100 grammi di cereali integrali al giorno (circa 4-6 porzioni) è associato ai maggiori miglioramenti nei fattori di rischio cardiovascolare, rispetto a quantità inferiori o superiori.",
           "bodyExtra": [
-            "Nello studio, su 325 pazienti, l'aggiunta del farmaco ha ridotto del 57% il rischio di progressione o morte, con sopravvivenza libera da progressione più che raddoppiata (15,0 contro 7,3 mesi) e sopravvivenza globale mediana di 34,0 contro 27,0 mesi.",
-            "Essendo un trial randomizzato di fase III, il livello di evidenza è alto; l'indicazione resta però circoscritta al sottogruppo con la specifica mutazione, da accertare con test molecolare prima di iniziare la terapia."
+            "Nei gruppi che assumevano questa quantità sono stati osservati miglioramenti in peso corporeo, circonferenza vita, pressione arteriosa, colesterolo totale e Ldl, trigliceridi, glicemia e un marcatore di infiammazione. Si tratta di fattori di rischio intermedi, non di una misura diretta di infarti o ictus evitati.",
+            "Gli stessi autori segnalano limiti rilevanti: gli studi inclusi avevano una durata media di appena otto settimane, insufficiente per valutare benefici a lungo termine, e nessuno degli studi ha misurato direttamente eventi cardiovascolari. Il dato è quindi un’associazione solida su marcatori di rischio, non ancora una prova di riduzione della malattia."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.quotidianosanita.it\" rel=\"noopener noreferrer\" target=\"_blank\">Quotidiano Sanità</a>, 14/9/2026 (comunicazione Aifa)"
+          "sourceHtml": "Fonte: EurekAlert! / European Heart Journal, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Inquinamento atmosferico e rischio di glaucoma: cosa dice davvero lo studio",
-          "leadParagraph": "Una meta-analisi presentata al congresso europeo dei chirurghi della cataratta ha esaminato 41 studi osservazionali sul legame tra esposizione all'inquinamento atmosferico e patologie oculari, rilevando che nelle aree più inquinate il rischio di glaucoma può risultare fino al 70% più alto. Lo studio, condotto da Ahmed Alnabihi del King Khaled Eye Specialist Hospital di Riad, è di tipo osservazionale: descrive un'associazione statistica, non una causalità diretta accertata.",
+          "lead": true,
+          "title": "Alimentazione sana e invecchiamento biologico: non esiste «la» dieta migliore, secondo uno studio tedesco",
+          "leadParagraph": "Uno studio osservazionale pubblicato il 16 settembre su Nature Communications dal Dzne (Centro tedesco per le malattie neurodegenerative), condotto su circa 7.500 persone, ha confrontato l’aderenza a dieci modelli alimentari — tra cui dieta mediterranea, nordica, plant-based, Dash e Mind — con l’età biologica misurata tramite marcatori epigenetici.",
           "bodyExtra": [
-            "I meccanismi ipotizzati, stress ossidativo e infiammazione cronica indotta dalle particelle fini, sono plausibili ma non confermati da studi sperimentali sull'uomo.",
-            "Le meta-analisi di studi osservazionali risentono di fattori confondenti (età, fumo, accesso alle cure oculistiche) controllati in modo disomogeneo dagli studi originari, il che impone cautela nell'interpretazione del dato."
+            "Il risultato principale è che seguire un’alimentazione sana, indipendentemente dal modello specifico scelto, è associato a un invecchiamento biologico più lento, con un effetto misurabile ma non drammatico. Circa il 70% dei percorsi biologici coinvolti risultava condiviso tra tutte e dieci le diete analizzate, il che spiega perché nessun singolo regime sia risultato nettamente superiore.",
+            "Essendo uno studio osservazionale, non permette di stabilire un nesso di causalità diretta: le persone che seguono un’alimentazione sana potrebbero condividere anche altre abitudini favorevoli (attività fisica, non fumare) che influenzano indipendentemente l’invecchiamento biologico."
           ],
-          "sourceHtml": "Fonte: congresso europeo dei chirurghi della cataratta, ripreso da <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 13-14/9/2026"
+          "sourceHtml": "Fonte: Miragenews / Nature Communications (Dzne), 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "West Nile virus: bollettino Iss, circolazione stabile e letalità in calo",
-          "leadParagraph": "L'ultimo bollettino di sorveglianza dell'Istituto Superiore di Sanità, aggiornato al 10 settembre, registra 312 casi confermati di infezione da virus West Nile in Italia, di cui 156 nella forma neuroinvasiva e 13 decessi. Il tasso di letalità tra le forme neuroinvasive è al 7,7%, in calo rispetto al 13,9% dello stesso periodo del 2025, pur con circolazione del virus attiva in 16 regioni.",
+          "lead": true,
+          "title": "Rapporto Aacr 2026: mortalità per cancro giù del 35% in trent'anni, 11 nuovi farmaci approvati",
+          "leadParagraph": "L’American Association for Cancer Research (Aacr) ha pubblicato il 16 settembre il suo 16° rapporto annuale, documentando un calo del tasso di mortalità per cancro negli Stati Uniti del 35% tra il 1991 e il 2024, pari a circa 4,8 milioni di decessi evitati secondo le stime dell’associazione. Tra luglio 2025 e giugno 2026 la Fda ha approvato 11 nuovi farmaci antitumorali.",
           "bodyExtra": [
-            "Il bollettino segnala anche 40 casi asintomatici tra donatori di sangue, 115 casi di febbre da West Nile e 9 casi di virus Usutu, concentrati in Lombardia.",
-            "Il virus si trasmette tramite zanzare Culex; le forme neuroinvasive colpiscono soprattutto anziani e immunocompromessi. Si tratta di dati di sorveglianza epidemiologica, utili per orientare misure di prevenzione, non di uno studio clinico."
+            "Tra le novità terapeutiche figurano la prima terapia mirata per un raro tumore cerebrale con specifici marcatori genetici, la prima molecola «proteolysis-targeting chimera» per il tumore al seno e il primo inibitore del checkpoint immunitario per il cancro ovarico. La sopravvivenza a cinque anni per i tumori in stadio avanzato è più che raddoppiata in trent’anni, dal 17% al 36%.",
+            "Il presidente dell’Aacr, Keith Flaherty, ha dichiarato che «i progressi contro il cancro stanno procedendo rapidamente… non possiamo fermarci qui». Va segnalato che si tratta di un rapporto pubblicato dalla principale associazione di categoria dei ricercatori oncologici statunitensi, che ha quindi anche un interesse diretto a sostenere l’aumento dei finanziamenti alla ricerca."
           ],
-          "sourceHtml": "Fonte: Istituto Superiore di Sanità – Epicentro, bollettino al 10/9/2026"
+          "sourceHtml": "Fonte: AACR, comunicato ufficiale, 16/9/2026"
         }
       ]
     },
@@ -1128,42 +1138,52 @@
       "id": "tecnologia",
       "tag": "Tecnologia",
       "tagClass": "tag-tecnologia",
-      "title": "Tecnologia: la truffa Revolut con una Pec italiana compromessa, gli Usa armano lo spazio",
-      "note": "Tre notizie solide invece dello standard di quattro: la ricerca odierna non ha permesso di confermare un quarto episodio tech realmente fresco e distinto dai temi già trattati altrove nell'edizione.",
+      "title": "Tecnologia: una Pec italiana compromessa costa a Revolut i dati di 680 clienti, l'Ue vara il «Kids Act»",
+      "note": null,
       "context": [
-        "Dalla cybersicurezza italiana coinvolta in una frode internazionale, alla prima ammissione ufficiale Usa sulle armi orbitali, fino al nuovo tentativo di SpaceX di portare Starship in orbita."
+        "Una giornata di tecnologia dominata da un caso di cybersicurezza con al centro un ente pubblico italiano, la nuova stretta europea su social e minori, e due notizie dal fronte dei semiconduttori."
       ],
       "type": "articles",
       "articles": [
         {
           "lead": true,
-          "title": "Pec italiana compromessa, Revolut consegna dati di clienti agli hacker",
-          "leadParagraph": "Un gruppo di hacker è riuscito a farsi consegnare dati sensibili (passaporto, carta d'identità, conti bancari, operazioni con Bitcoin) di alcune centinaia di correntisti, stimati in 680 dal Financial Times, della banca fintech Revolut, servendosi di una mail compromessa di un'istituzione italiana: la prefettura di Reggio Calabria. Sul caso indaga la Polizia postale per accesso abusivo a sistema informatico e frode informatica; la banca precisa che \"i sistemi di Revolut e i fondi dei clienti non sono stati toccati\".",
+          "title": "Truffa via Pec compromessa: hacker ottengono da Revolut i dati di 680 clienti",
+          "leadParagraph": "Per circa cinque mesi un gruppo di cybercriminali ha usato una casella di posta elettronica certificata (Pec) riconducibile alla Prefettura di Reggio Calabria per inviare a Revolut richieste dati apparenti ufficiali, firmate come «Polizia Postale». La fintech britannica, obbligata per legge a rispondere alle richieste delle forze dell’ordine, ha consegnato passaporti, carte d’identità, dati bancari e cronologie di operazioni in bitcoin di circa 680 clienti. Il caso è ora al centro di indagini di Polizia Postale, Banca d’Italia e Agenzia per la Cybersicurezza Nazionale.",
           "bodyExtra": [
-            "La truffa è proseguita per circa cinque mesi prima di essere scoperta: le richieste sembravano provenire da una Pec istituzionale col dominio \"interno.it\" e firmate \"Polizia postale\", e gli istituti finanziari sono tenuti per legge a trattare come vincolanti le comunicazioni da domini governativi verificati. Mancavano però segnali tipici delle richieste autentiche, come il decreto dell'autorità giudiziaria a corredo.",
-            "Tra le vittime anche l'imprenditore francese Mark Karpelès, secondo cui \"Revolut non avrebbe dovuto inviare dati dei clienti solo perché la mail proveniva da un'agenzia governativa\". Il Codacons chiede alle autorità di accertare quante istituzioni italiane siano state violate e quali altre Pec siano state usate per frodi simili."
+            "Secondo la ricostruzione di ANSA e MilanoFinanza, le richieste fraudolente provenivano da un dominio istituzionale italiano con apparente autenticazione tecnica valida, il che ha permesso ai truffatori di aggirare i controlli interni di Revolut per mesi. Le autorità stanno verificando se si sia trattato di uno spoofing dell’indirizzo Pec oppure di una violazione diretta dei sistemi dell’ente pubblico.",
+            "Revolut ha dichiarato che «i sistemi e i fondi dei clienti non sono stati toccati» e di aver bloccato immediatamente l’indirizzo compromesso. Tra le vittime, l’ex Ceo di Mt. Gox Mark Karpelès ha criticato pubblicamente la banca sostenendo che non avrebbe dovuto fornire dati sensibili solo perché la richiesta proveniva da un dominio governativo, senza ulteriori verifiche."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 15/9/2026"
+          "sourceHtml": "Fonte: ANSA · MilanoFinanza, 15/9/2026"
         },
         {
-          "lead": false,
-          "title": "Usa, per la prima volta ammesso il dispiegamento di armi nello spazio",
-          "leadParagraph": "Il segretario dell'Aeronautica Usa Troy Meink, che sovrintende anche la U.S. Space Force, ha dichiarato in un discorso che il Pentagono dispone di \"armi di controllo spaziale in orbita capaci di difendere le forze congiunte da azioni ostili avversarie\", senza specificare tipo, funzione o numero degli ordigni schierati: la prima ammissione ufficiale di questo tipo da parte militare americana.",
+          "lead": true,
+          "title": "L'Ue presenta il «Kids Act»: stop ai social per gli under 13, limiti ai chatbot IA",
+          "leadParagraph": "La Commissione europea ha annunciato il 16 settembre il «Kids Act», un pacchetto di regole per proteggere i minori online. La proposta vieta l’accesso a social e piattaforme di gaming ai minori di 13 anni senza supervisione dei genitori, impone consenso genitoriale per la fascia 13-15 anni, e introduce restrizioni sui chatbot IA per evitare che creino «attaccamenti emotivi malsani». Multe fino al 6% del fatturato globale per le aziende inadempienti.",
           "bodyExtra": [
-            "Un portavoce dell'Aeronautica ha precisato alla testata TechCrunch che le armi servono a difendere gli Usa \"da un attacco abilitato dallo spazio\", ricordando che Washington segnala dal 2007 test di armi russe e cinesi nello spazio: «Lo spazio è un dominio conteso, dobbiamo poter tutelare gli interessi della nazione».",
-            "La Space Force sostiene che la Russia stia sviluppando un satellite \"progettato per trasportare un'arma nucleare\"; gli Usa avevano finora sempre evitato di confermare pubblicamente la distruzione di satelliti in orbita, poiché tali attacchi generano detriti pericolosi per altri oggetti spaziali e astronauti."
+            "Il provvedimento richiede alle piattaforme sistemi di verifica dell’età tramite un’app ufficiale di identificazione, oltre a misure contro i meccanismi di design che favoriscono la dipendenza. La pubblicazione del testo integrale era attesa per giovedì 17 settembre, subito dopo l’annuncio politico della Commissione.",
+            "La misura si inserisce in un dibattito europeo più ampio sulla sicurezza digitale dei minori, alimentato anche da iniziative nazionali come quella francese, che punta a vietare i social ai minori di 15 anni. Restano da chiarire i meccanismi pratici di verifica dell’età senza violare la privacy degli utenti adulti."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://techcrunch.com\" rel=\"noopener noreferrer\" target=\"_blank\">TechCrunch</a>, Zack Whittaker, 15/9/2026"
+          "sourceHtml": "Fonte: MacRumors · Euronews, 15-16/9/2026"
         },
         {
-          "lead": false,
-          "title": "SpaceX tenterà per la prima volta l'orbita con Starship il 22 settembre",
-          "leadParagraph": "SpaceX ha annunciato che il 22 settembre tenterà, con il 14° volo di prova di Starship, di portare per la prima volta lo stadio superiore del mega-razzo in orbita terrestre. Durante il test, con una finestra di lancio di 75 minuti dalle 7:15 ora del Texas, l'azienda punta a rilasciare in orbita le prime 26 unità Starlink di terza generazione.",
+          "lead": true,
+          "title": "Altera, ex divisione chip di Intel, deposita in via riservata la domanda di Ipo Usa",
+          "leadParagraph": "Altera, produttore di chip programmabili (Fpga) nato dalla scorporazione della divisione omonima di Intel, ha depositato in forma confidenziale la richiesta di quotazione in borsa negli Stati Uniti. Secondo Reuters, l’operazione potrebbe raccogliere oltre 2 miliardi di dollari. Silver Lake controlla il 51% della società dopo l’acquisizione della quota di maggioranza nel settembre 2025, mentre Intel mantiene il restante 49%.",
           "bodyExtra": [
-            "Se riuscito, sarà il primo lancio di Starship a generare ricavi per la divisione lanci di SpaceX. È il secondo test dello stadio superiore da quando SpaceX è diventata pubblica con la più grande Ipo della storia, a giugno; il primo, a luglio, aveva solo testato la capacità di rilascio dei satelliti.",
-            "SpaceX non tenterà questa volta di recuperare né lo stadio superiore né il booster Super Heavy, dopo le difficoltà di riaccensione dei motori riscontrate nel volo precedente: l'azienda ha introdotto ulteriori modifiche hardware e software per correggere i problemi osservati."
+            "Intel aveva acquisito Altera nel 2015 per circa 16,7 miliardi di dollari, per poi cederne la maggioranza a Silver Lake un anno fa in un’operazione che valutava l’azienda 8,75 miliardi di dollari, un forte ridimensionamento rispetto al prezzo pagato inizialmente.",
+            "L’operazione arriva in un momento di forte espansione per il mercato dei semiconduttori, trainato dalla domanda legata anche ai chip per l’intelligenza artificiale, sebbene i prodotti Fpga di Altera siano utilizzati soprattutto in ambito industriale, telecomunicazioni e automotive."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://techcrunch.com\" rel=\"noopener noreferrer\" target=\"_blank\">TechCrunch</a>, 15/9/2026"
+          "sourceHtml": "Fonte: Reuters, via The Star · Bloomberg, 15/9/2026"
+        },
+        {
+          "lead": true,
+          "title": "MediaTek lancia il Dimensity 9600 Pro, primo chip mobile su processo 2nm di Tsmc",
+          "leadParagraph": "MediaTek ha presentato il Dimensity 9600 Pro, il suo primo system-on-chip per smartphone realizzato sul processo produttivo a 2 nanometri di Tsmc. Il chip adotta nuovi core Arm C2 e promette un miglioramento delle prestazioni single-core del 17% rispetto al Dimensity 9500, con un taglio dei consumi energetici fino al 40% sulla componente Npu; è il primo chip mobile a supportare la memoria Lpddr6.",
+          "bodyExtra": [
+            "Sul fronte grafico, la nuova Gpu G2-Ultra Nx offre un incremento del 27% nelle prestazioni di picco. Nei benchmark Geekbench 6.4 citati da Gizmochina, il chip totalizza 4.276 punti in single-core contro i 3.666 del Dimensity 9500. Il chip conta oltre 33 miliardi di transistor.",
+            "Il lancio consolida la posizione di Tsmc nella corsa ai processi produttivi più avanzati, in competizione diretta con Samsung Foundry. Secondo 9to5Google, il primo smartphone a montare il nuovo chip sarà l’Oppo Find X10 Pro Max."
+          ],
+          "sourceHtml": "Fonte: 9to5Google · Gizmochina, 15/9/2026"
         }
       ]
     },
@@ -1171,42 +1191,52 @@
       "id": "ia",
       "tag": "IA",
       "tagClass": "tag-tecnologia",
-      "title": "IA: Nvidia contro le nuove regole, OpenAI-Anthropic-Google in trattative sulla sicurezza",
+      "title": "IA: OpenAI verso una valutazione da 1.200 miliardi, Google lancia Gemini 3.8 Live, la Spagna registra il primo data breach agentivo",
       "note": null,
       "context": [
-        "Due segnali opposti sullo stesso fronte: da un lato Nvidia scommette sull'autoregolamentazione del mercato, dall'altro i tre principali laboratori di IA discutono da settimane standard comuni di sicurezza; sullo sfondo, i data center che scontentano le comunità che li ospitano."
+        "Quattro notizie che mostrano la doppia velocità dell’intelligenza artificiale: capitali record per i grandi laboratori, nuovi modelli vocali «agentivi» e i primi segnali concreti di come la stessa tecnologia possa essere usata per attacchi informatici autonomi."
       ],
       "type": "articles",
       "articles": [
         {
           "lead": true,
-          "title": "Jensen Huang (Nvidia): «Non serve regolamentare l'IA, la sicurezza è compito nostro»",
-          "leadParagraph": "Il Ceo di Nvidia Jensen Huang, intervenendo martedì alla conferenza Dreamforce di Salesforce a San Francisco, ha dichiarato che l'intelligenza artificiale non necessita di nuove leggi: la sicurezza, ha detto, \"è un problema di ingegneria, non legale\", perché l'IA resta solo hardware e software costruiti da esseri umani. Secondo Huang sarà il mercato stesso a imporre standard adeguati, spingendo le aziende a non lanciare prodotti di cui non sono certe.",
+          "title": "OpenAI verso una valutazione da 1.200 miliardi di dollari, Altman esclude l'Ipo nel 2026",
+          "leadParagraph": "OpenAI è in trattative preliminari con investitori per un nuovo round di finanziamento che porterebbe la valutazione dell’azienda a circa 1.200 miliardi di dollari, contro gli 852 miliardi di marzo 2024. Il Ceo Sam Altman ha escluso una quotazione in borsa nel corso del 2026, citando le preoccupazioni legate alla sicurezza dell’intelligenza artificiale come motivo principale del rinvio.",
           "bodyExtra": [
-            "Le parole di Huang arrivano nello stesso giorno in cui emerge che OpenAI, Anthropic e Google DeepMind sono da settimane in trattative riservate proprio per coordinare regole di sicurezza sui modelli più avanzati, un segnale opposto alla fiducia nell'autoregolamentazione pura invocata dal Ceo di Nvidia.",
-            "Diversi osservatori notano che la posizione di Huang è comoda per un'azienda che ha guadagnato enormemente dal boom dell'IA. Il dibattito si inserisce nel clima politico Usa, dove l'amministrazione Trump considera \"esagerate\" le preoccupazioni sulla sicurezza IA, temendo che eventuali rallentamenti avvantaggino la Cina."
+            "Le discussioni sono ancora in fase iniziale e l’ammontare preciso del round non è stato reso noto. Se confermata, la valutazione rappresenterebbe un incremento di circa 350 miliardi di dollari rispetto all’ultimo round noto, un salto che riflette sia la crescita dei ricavi sia le aspettative degli investitori su futuri sviluppi dei modelli.",
+            "Il rinvio dell’Ipo segna una divergenza strategica rispetto al principale concorrente Anthropic, che secondo alcune fonti starebbe invece preparando una quotazione già per ottobre 2026. La scelta di OpenAI di restare privata più a lungo riflette la volontà dichiarata di gestire con più margine le questioni di sicurezza prima degli obblighi di trasparenza di una società quotata."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://techcrunch.com\" rel=\"noopener noreferrer\" target=\"_blank\">TechCrunch</a>, Julie Bort, 16/9/2026"
+          "sourceHtml": "Fonte: Benzinga · Yahoo Finance, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "OpenAI, Anthropic e Google DeepMind: colloqui riservati da settimane sulla sicurezza",
-          "leadParagraph": "Chris Lehane, responsabile delle politiche globali di OpenAI, ha confermato martedì che la sua azienda dialoga da settimane con i rivali Anthropic e Google DeepMind su come gestire i rischi dei modelli più avanzati. La notizia, anticipata da Bloomberg, riguarda la possibile creazione di un organismo di settore per fissare standard comuni e verifiche indipendenti nei laboratori.",
+          "lead": true,
+          "title": "Google lancia Gemini 3.8 Live, l'IA vocale che ragiona e agisce in tempo reale",
+          "leadParagraph": "Google ha annunciato Gemini 3.8 Live e la variante «Extended Thinking», due modelli per agenti vocali conversazionali capaci di comprendere input visivi e di eseguire strumenti e chiamate Api in background mentre proseguono il dialogo. I nuovi modelli supportano 97 lingue con cambio automatico durante la conversazione e sono disponibili da subito per sviluppatori tramite Gemini Api.",
           "bodyExtra": [
-            "Lehane ha collegato l'iniziativa al sostegno di OpenAI per una norma dell'atto \"Frontier\", che introdurrebbe controlli indipendenti obbligatori nei principali laboratori IA. Le tre aziende, storicamente in feroce competizione commerciale, sostengono di non aver bisogno di un'autorizzazione governativa per collaborare sulla sicurezza dei sistemi di frontiera.",
-            "La convergenza tra i tre colossi, emersa proprio mentre Nvidia si schiera contro nuove regole (v. articolo precedente), rivela una frattura nel settore su quanto affidarsi all'autoregolamentazione volontaria piuttosto che a una legislazione vincolante."
+            "Secondo i dati pubblicati da Google, Gemini 3.8 Live ottiene il punteggio più alto nello Speech to Speech Quality Index (82,6) e raggiunge il 97,7% sul benchmark Big Bench Audio, con un tasso di completamento di compiti agentivi del 68,6% sul test τ-Voice.",
+            "Oltre che per gli sviluppatori, i nuovi modelli saranno integrati nell’app Gemini, in Google Workspace e nella funzione Search Live. Testate come Heise hanno confermato il lancio descrivendolo come un passo verso agenti vocali «pronti per la produzione»."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://techcrunch.com\" rel=\"noopener noreferrer\" target=\"_blank\">TechCrunch</a> (da Bloomberg), 15/9/2026"
+          "sourceHtml": "Fonte: Google (blog ufficiale) · Heise Online, 15-16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Il boom dei data center per l'IA scontra le città già segnate dall'industria pesante",
-          "leadParagraph": "A Philadelphia due nuovi siti proposti per data center dedicati all'IA, tra cui l'ex sede della più grande raffineria della Costa Est Usa, chiusa nel 2019, incontrano la resistenza degli abitanti, già colpiti da tassi elevati di tumori e malattie respiratorie legati all'inquinamento industriale pregresso. Città come Denver, Indianapolis e Charlotte hanno già approvato moratorie sulla costruzione.",
+          "lead": true,
+          "title": "Amodei propone valutatori di sicurezza indipendenti nei laboratori IA, ma scoppia la polemica sull'indipendenza di Metr",
+          "leadParagraph": "Il Ceo di Anthropic Dario Amodei ha proposto, in un saggio pubblicato nel weekend, di concedere a valutatori esterni indipendenti un accesso ai sistemi aziendali paragonabile a quello dei dipendenti, per monitorare dall’interno gli sforzi di sicurezza dei laboratori di IA. Sam Altman ha segnalato che anche OpenAI seguirà una pratica simile; l’organizzazione indicata da Amodei come principale candidato, Metr, ha subito attirato critiche sulla propria indipendenza.",
           "bodyExtra": [
-            "Secondo le proiezioni citate, entro il 2035 i data center statunitensi consumeranno più gas naturale di Germania e Giappone messi insieme, con emissioni aggiuntive pari al 12% di quelle odierne del Paese. Le comunità denunciano anche il rischio di sovraccarico della rete elettrica nelle ondate di calore e il consumo di risorse idriche locali.",
-            "Il fenomeno riflette la corsa infrastrutturale innescata dalla domanda di calcolo per addestrare e far girare i grandi modelli linguistici, un tema che negli Stati Uniti si sta trasformando in un conflitto locale tra sviluppo tecnologico e qualità della vita."
+            "Secondo TechCrunch, né Anthropic né OpenAI hanno ancora specificato quali valutatori lavoreranno concretamente con loro, con quali tempistiche o a quali sistemi avranno accesso. I ricercatori temono che accordi di riservatezza restrittivi finiscano per limitare l’effettiva autonomia dei valutatori.",
+            "Secondo Breitbart, critici interni ed esterni al settore hanno definito Metr «intrecciata con gli investitori e il personale di Anthropic»; una fonte della Casa Bianca l’ha descritta come «sostanzialmente Anthropic in un’altra forma». Metr è nata come costola dell’Alignment Research Center."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://techcrunch.com\" rel=\"noopener noreferrer\" target=\"_blank\">TechCrunch</a>, Amanda Silberling, 15/9/2026"
+          "sourceHtml": "Fonte: TechCrunch · Breitbart, 16/9/2026"
+        },
+        {
+          "lead": true,
+          "title": "Spagna registra il primo data breach eseguito autonomamente da un agente IA",
+          "leadParagraph": "L’Agenzia spagnola per la protezione dei dati (Aepd) ha reso pubblica quella che definisce la prima violazione di dati personali portata a termine in autonomia da un agente di intelligenza artificiale, senza intervento umano diretto nelle fasi operative. Un agente basato su un modello linguistico ha ottenuto accesso a un sistema tramite credenziali compromesse, ha esplorato l’applicazione alla ricerca di vulnerabilità, e infine ha modificato dati personali e consultato documenti finanziari.",
+          "bodyExtra": [
+            "Secondo SecurityWeek, l’Aepd ha descritto l’attacco come una sequenza di tre fasi concatenate: accesso, ricognizione delle vulnerabilità e manipolazione dei dati. L’agenzia sottolinea che il sistema era in grado di «ricevere un obiettivo, pianificare compiti intermedi, utilizzare strumenti, eseguire codice… e modificare le sue azioni autonomamente», un «cambiamento qualitativo» rispetto alle minacce informatiche tradizionali.",
+            "BleepingComputer riporta che, secondo l’Aepd, l’intelligenza artificiale non introduce minacce di tipo nuovo, ma ne accelera drasticamente velocità e portata. L’autorità invita le organizzazioni a rafforzare la sicurezza delle credenziali di accesso e a dotarsi di meccanismi di rilevamento automatizzati."
+          ],
+          "sourceHtml": "Fonte: SecurityWeek · BleepingComputer, 16/9/2026"
         }
       ]
     },
@@ -1214,32 +1244,32 @@
       "id": "immigrazione-italia",
       "tag": "Immigrazione Italia",
       "tagClass": "tag-migra",
-      "title": "Immigrazione Italia: perquisizioni per oltre 20 medici nell'inchiesta sui falsi certificati anti-Cpr",
+      "title": "Immigrazione Italia: perquisizioni per certificati anti-Cpr falsi, il Viminale conferma il calo degli sbarchi",
       "note": null,
       "context": [
-        "Un'indagine della Procura di Ravenna sulla presunta formazione di certificati medici falsi per evitare l'invio nei Cpr di cittadini stranieri irregolari, e i dati più aggiornati disponibili sugli sbarchi in Italia nel 2026."
+        "Due fatti distinti sul fronte immigrazione: un’indagine nazionale su presunti certificati medici falsi per evitare i trasferimenti nei Cpr, e l’aggiornamento del cruscotto statistico del Viminale che conferma il trend di calo degli sbarchi rispetto agli ultimi due anni."
       ],
       "type": "articles",
       "articles": [
         {
           "lead": true,
-          "title": "Certificati anti-Cpr, perquisizioni per oltre 20 medici in nove città",
-          "leadParagraph": "La polizia, con lo Sco di Roma e la squadra Mobile di Ravenna, sta eseguendo più decreti di perquisizione, locale, personale e informatica, emessi dalla Procura ravennate nell'ambito di un procedimento sulla presunta formazione e il rilascio di certificazioni mediche false per impedire l'invio di cittadini stranieri irregolari nei Centri di permanenza per il rimpatrio. L'attività giudiziaria interessa oltre venti professionisti nelle città di Bari, Biella, Bologna, Firenze, Livorno, Milano, Rimini, Roma e Varese.",
+          "title": "Certificati medici falsi per evitare il Cpr: perquisizioni a oltre 20 medici in nove città",
+          "leadParagraph": "La Procura di Ravenna ha coordinato il 16 settembre una vasta operazione di perquisizioni — eseguita dallo Sco della Polizia di Roma e dalla Mobile di Ravenna — nei confronti di oltre venti medici sospettati di aver formato e rilasciato certificati sanitari falsi per impedire il trasferimento di cittadini stranieri irregolari nei Centri di permanenza per il rimpatrio (Cpr). Le perquisizioni hanno interessato professionisti attivi a Bari, Biella, Bologna, Firenze, Livorno, Milano, Rimini, Roma e Varese.",
           "bodyExtra": [
-            "Destinatari dei decreti sono, a eccezione di un caso, medici non iscritti nel registro delle persone nei cui confronti si svolgono le indagini preliminari: un dettaglio procedurale che indica un'inchiesta ancora nella sua fase iniziale, senza indagati formalmente individuati per la quasi totalità dei perquisiti.",
-            "L'inchiesta si inserisce nel più ampio dibattito sui trattenimenti nei Cpr e sui requisiti sanitari che possono precluderli, un tema più volte al centro di ricorsi e verifiche giudiziarie negli ultimi anni."
+            "Secondo l’ANSA, con una sola eccezione i medici coinvolti non risultano ancora formalmente iscritti nel registro degli indagati: l’attività ha natura di accertamento preliminare su scala nazionale. Non sono stati resi noti né il numero di casi Cpr coinvolti né dichiarazioni ufficiali della Procura al momento della pubblicazione della notizia.",
+            "Il tema dei certificati medici nei trattenimenti si inserisce in un dibattito già acceso sui Cpr: un rapporto di Amnesty International sul protocollo Italia-Albania, pubblicato il 14 settembre, aveva denunciato l’uso di fermi fisici su circa 30 persone trasferite nel centro di Gjadër e una quota di rimpatri effettivi (15%) giudicata bassa rispetto ai trasferimenti (620 persone dall’aprile 2025)."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 16/9/2026, ore 08:18"
+          "sourceHtml": "Fonte: ANSA, 16/9/2026"
         },
         {
-          "lead": false,
-          "title": "Migranti, 21.031 sbarchi da inizio anno: calo del 55% sul 2025",
-          "leadParagraph": "Sono 21.031 le persone sbarcate sulle coste italiane dal primo gennaio al 9 settembre 2026, secondo l'ultimo aggiornamento del Ministero dell'Interno: un calo del 55% rispetto alle 47.150 dello stesso periodo del 2025. Nei soli primi giorni di settembre sono arrivate 1.469 persone via mare; nessun aggiornamento più recente del dato è stato reperibile alla data odierna.",
+          "lead": true,
+          "title": "Sbarchi ancora in calo (-56% sul 2025), rimpatri in aumento: il nuovo aggiornamento del Viminale",
+          "leadParagraph": "Il cruscotto statistico giornaliero del Dipartimento per le libertà civili e l’immigrazione, aggiornato al 16 settembre, conferma il trend degli ultimi mesi: dal 1° gennaio al 16 settembre sono sbarcati in Italia 21.445 migranti, contro i 49.077 dello stesso periodo del 2025 (-56%) e i 44.768 del 2024. Nello stesso periodo i rimpatri sono saliti a 6.134 (5.258 forzati e 876 volontari assistiti), contro i 4.585 del 2025.",
           "bodyExtra": [
-            "Le nazionalità più rappresentate restano Bangladesh (5.363 persone, 25,5% del totale), Somalia (2.457), Algeria (2.228), Sudan (1.665), Pakistan (1.459), Egitto (1.331) ed Eritrea (1.318). Sul fronte dei rimpatri, dal primo gennaio al 7 settembre sono state allontanate 5.934 persone, di cui 5.078 con rimpatrio forzato e 856 con rimpatrio volontario assistito.",
-            "Il calo degli sbarchi accompagna anche una riduzione delle partenze dalla Libia e dalla Tunisia, le due principali rotte del Mediterraneo centrale, in un quadro che il Viminale attribuisce sia al rafforzamento della cooperazione con i Paesi di partenza sia agli accordi bilaterali stipulati negli ultimi anni."
+            "Le nazionalità più rappresentate tra gli sbarchi di settembre sono Bangladesh (5.465 su base annua), Somalia (2.542), Algeria (2.504), Sudan (1.671), Pakistan (1.467), Eritrea (1.430), Egitto (1.354) e Tunisia (1.161). In calo marcato anche i minori stranieri non accompagnati: 4.314 tra il 1° e il 14 settembre, contro 8.804 nello stesso periodo del 2025.",
+            "Il dato di metà settembre conferma quanto già segnalato da AgenSIR il 9 settembre (21.031 sbarchi da inizio anno): nella settimana successiva gli arrivi sono cresciuti di circa 400 unità, un ritmo coerente con l’andamento decrescente rivendicato dal governo nei mesi precedenti."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.agensir.it\" rel=\"noopener noreferrer\" target=\"_blank\">AgenSir</a>, dato Viminale al 9/9/2026"
+          "sourceHtml": "Fonte: Ministero dell'Interno, Cruscotto statistico giornaliero, 16/9/2026 · AgenSIR, 9/9/2026"
         }
       ]
     },
@@ -1254,7 +1284,7 @@
       "blocks": [
         {
           "kind": "note",
-          "html": "Sbarchi, minori non accompagnati e rimpatri italiani (dati Viminale, periodi diversi indicati per ciascun dato, per evitare di sommare numeri di periodi diversi senza dirlo).",
+          "html": "Sbarchi, minori non accompagnati e rimpatri italiani (cruscotto statistico giornaliero del Viminale, aggiornato al 16 settembre 2026; periodi diversi indicati per ciascun dato).",
           "style": ""
         },
         {
@@ -1262,20 +1292,20 @@
           "kpis": [
             {
               "label": "Sbarchi in Italia",
-              "value": "21.031",
-              "note": "1 gen - 9 set 2026, Viminale — -55% sul 2025 (47.150); nessun aggiornamento più recente confermato",
+              "value": "21.445",
+              "note": "1 gen - 16 set 2026, Viminale — -56% sul 2025 (49.077)",
               "extraClass": ""
             },
             {
               "label": "Rimpatri dall'Italia",
-              "value": "5.810",
-              "note": "1 gen - 31 ago 2026, Viminale — 4.973 forzati, 837 volontari assistiti",
+              "value": "6.134",
+              "note": "1 gen - 16 set 2026, Viminale — 5.258 forzati, 876 volontari assistiti",
               "extraClass": "rimpatri"
             },
             {
-              "label": "Minori non accompagnati a Lampedusa",
-              "value": "140",
-              "note": "Presenti nell'hotspot di Lampedusa all'8 set 2026, su 297 ospiti totali — dato locale, non nazionale",
+              "label": "Minori non accompagnati (sbarchi)",
+              "value": "4.314",
+              "note": "Minori non accompagnati, 1-14 set 2026 — contro 8.804 nello stesso periodo 2025",
               "extraClass": "arrivi"
             }
           ]

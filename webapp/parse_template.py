@@ -229,8 +229,20 @@ def parse_section(sec):
     if duel:
         result["type"] = "duel"
         result["duel"] = parse_duel(duel)
-        divergence = sec.select_one(".context-box:nth-of-type(2) p, .context-box[style] p")
-        result["divergence"] = inner_html(divergence)
+        # NOTA (bug fix 17/9/2026): il vecchio selettore ".context-box:nth-of-type(2)" contava il
+        # 2° <div> figlio della sezione a prescindere dalla classe (nth-of-type ignora la classe),
+        # quindi con un solo context-box "Da sapere per capire" (che e' comunque il 2° div dopo
+        # section-head) veniva erroneamente riletto come "divergenza", duplicando lo stesso testo
+        # due volte in pagina. Il box "Dove le fonti divergono" non si usa piu' (regola permanente
+        # di Mario, 17/9/2026: sempre 3 voci, mai il riepilogo delle divergenze): questo selettore
+        # resta solo come compatibilita' per vecchie edizioni che avessero un secondo context-box
+        # con attributo style dedicato — un solo context-box senza style non deve mai far scattare
+        # questo campo.
+        context_boxes_all = sec.find_all("div", class_="context-box", recursive=False)
+        divergence = None
+        if len(context_boxes_all) >= 2 and context_boxes_all[1].get("style"):
+            divergence = context_boxes_all[1].find("p")
+        result["divergence"] = inner_html(divergence) if divergence is not None else None
     elif kpi_row:
         result["type"] = "kpi"
         # per le sezioni 'dati' (es. sicurezza-pubblica) ci sono piu' note e
