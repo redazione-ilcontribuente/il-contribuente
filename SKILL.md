@@ -986,14 +986,17 @@ Selezionare titoli realmente rappresentativi delle sezioni e non riempirlo con t
 
 # 34. MARKET BAR
 
-Aggiornare, quando previsto dal template:
+Regola vincolante (Mario, 2/9/2026 e 31/8/2026): le card della market bar sono SEMPRE le stesse, ogni giorno, aggiornate con valori reali:
 
 - benzina;
 - diesel;
 - petrolio;
 - gas;
 - oro;
-- bitcoin.
+- bitcoin;
+- Palestinesi uccisi (dal 7 ottobre 2023, Gaza) — SEMPRE presente ogni giorno, non solo nei giorni in cui il Confronto tratta Gaza.
+
+NON aggiungere la card dello spread Btp-Bund: Mario non la vuole. Aggiungere una card nuova, diversa da queste, SOLO quando una notizia specifica del giorno la giustifica chiaramente (es. un evento eccezionale con un numero-chiave associato); altrimenti l'elenco non va toccato.
 
 Indicare fonte e data/ora di riferimento quando disponibili.
 
@@ -1163,4 +1166,38 @@ Le 4-5 frasi iniziali devono essere sufficienti per capire subito cosa è succes
 I pulsanti devono funzionare tramite JavaScript senza cambiare pagina. Quando l'articolo è aperto, **Continua a leggere** non deve più essere visibile e deve comparire **Mostra meno**. Quando viene richiuso, avviene il contrario.
 
 La struttura HTML/CSS/JS deve essere uniforme in tutte le sezioni, così l'utente impara una sola interazione e la ritrova in tutto il giornale.
+
+---
+
+# 41. SEZIONI FISSE EXTRA (fuori indice) — MAI TOCCARE SENZA CHIEDERE
+
+Oltre all'indice standard della sezione 5, il sito pubblicato include altre sezioni/dashboard fisse che Mario ha aggiunto nel tempo direttamente nelle edizioni, e che NON fanno parte dell'indice/della lista di sezioni da riscrivere ogni giorno:
+
+- Sezione "Approfondimenti fissi" (sidebar, id `approfondimenti`) — link fissi (Geopolitica, Conflitti nel mondo, Immigrazione in Europa, Guerre, Dazi, Sanzioni, Glossario) e box "Termine del giorno"/statistiche;
+- Dashboard "Sicurezza Pubblica" (id `sicurezza-pubblica`);
+- Dashboard "Petrolio Basilicata" (id `petrolio-basilicata`), con la sotto-lista "Le ultime notizie".
+
+Regola vincolante e assoluta (Mario, 16/9/2026, ribadita più volte): queste sezioni, e la dashboard "Dati Immigrazione" dell'indice standard, vanno copiate IDENTICHE da un'edizione all'altra — layout, HTML e CSS non vanno mai rigenerati, riscritti o "corretti" di propria iniziativa, nemmeno per sistemare un bug di stile evidente. Se emerge un problema (es. un layout che sembra rotto), or se Mario segnala che qualcosa in una di queste sezioni non va, si spiega la diagnosi e si PROPONE la correzione, ma si chiede sempre conferma esplicita prima di modificare il codice di queste sezioni. Aggiornare solo i dati/testo/date al loro interno quando esplicitamente richiesto.
+
+## Nota tecnica nota (17/9/2026): grid a 5 articoli
+
+La "regola universale di layout" della sezione 6 (1 articolo pieno, 2 impilati, 3 = lead + 2 affiancate, 4 = lead + 3 affiancate) è implementata in CSS con selettori `:has(> .article:nth-child(N):last-child)` che coprono solo i casi a 2, 3 o 4 articoli totali. La lista "Le ultime notizie" di Petrolio Basilicata ha 5 articoli: nessuna regola CSS li copre esplicitamente, quindi il grid di default (3 colonne fisse) li spezza in modo ibrido (3 affiancati + 1 isolato), né un vero affiancamento né uno stack pulito — probabile causa dei ripetuti cambi tra "verticale" e "orizzontale" chiesti da Mario in giorni diversi. Prima di toccare il CSS di questa sezione per "risolverlo", chiedere sempre conferma a Mario (vedi regola sopra): la soluzione tecnica più pulita è aggiungere una regola CSS dedicata al caso "5 articoli totali" in template.html, non forzare uno stack verticale né lasciare il comportamento di default.
+
+---
+
+# 42. PROCEDURA OPERATIVA QUOTIDIANA E CONSEGNA
+
+Regola vincolante (Mario, 16/9/2026), procedura obbligatoria ogni mattina, sempre in quest'ordine:
+
+1. Creare l'edizione del giorno (contenuti e date aggiornate, stesso layout/template di sempre).
+2. Archiviare l'edizione del giorno precedente in `rassegne/` (e nella copia gemella `webapp/public/rassegne/`) con il nome `YYYY-MM-DD.html` corrispondente alla sua data.
+3. Aggiungere in `archivio.html` (e nella copia gemella `webapp/public/archivio.html`) la voce mancante che punta all'edizione del giorno precedente appena archiviata.
+
+Controlli obbligatori prima di consegnare, per non ripetere errori già fatti in passato:
+
+- Tutte le date sul sito pubblicato sono aggiornate: `data-edition`/`data-published` nel body, data nel masthead, footer — e `index.html`/gli asset di `dist/` sono stati rigenerati con `npm run build` e ricopiati, non solo `edition.json`.
+- Il link "Archivio edizioni" nel file HTML appena archiviato (dentro `rassegne/`) punta a `../archivio.html` (con `../`), mai a `archivio.html` senza prefisso.
+- Consegnare sempre insieme alla rassegna del giorno anche il glossario `glossario.html` aggiornato con gli eventuali nuovi termini comparsi in quell'edizione (regola del 31/8/2026), rispettando la struttura/codice esistente senza reinventarla.
+
+Il push su GitHub lo fa SEMPRE Mario manualmente: non va mai fatto in autonomia dalla rassegna automatica. Se il push automatico (o l'accesso al Mac) non dovesse riuscire per qualsiasi motivo, i file dell'edizione vanno comunque preparati e consegnati (in chat e/o sul Mac se raggiungibile) così che Mario possa pubblicarli lui stesso senza perdere tempo — non bloccarsi solo perché un passaggio automatico fallisce.
 
