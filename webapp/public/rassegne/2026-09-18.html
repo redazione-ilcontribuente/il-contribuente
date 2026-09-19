@@ -646,6 +646,49 @@
   .articles:has(> .article:nth-child(3):last-child) > .article.lead{
     grid-column:1 / -1;
   }
+
+  /* ===== Notizie della dashboard Petrolio Basilicata: SEMPRE affiancate in orizzontale,
+     su ogni dispositivo, ma FISSE — niente barra a scorrimento (richiesta esplicita di
+     Mario, 15/9/2026, che corregge la versione a scorrimento del 15/9/2026 mattina).
+     Qui, e SOLO qui, non si applica la regola universale del 24/8/2026 che sotto 820px
+     impila gli articoli in un'unica colonna: restano invece una griglia fissa a 2
+     colonne, tutte visibili senza scorrere. Scoping via #petrolio-basilicata: non tocca
+     nessun'altra sezione del giornale. ===== */
+  @media (max-width:820px){
+    #petrolio-basilicata .articles{
+      display:grid !important;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
+    }
+    #petrolio-basilicata .articles .article.lead{
+      grid-column:1 / -1;
+    }
+  }
+  @media (max-width:480px){
+    #petrolio-basilicata .articles{ gap:10px; }
+  }
+  /* ===== Petrolio Basilicata, "Le ultime notizie": le card NON-lead devono SEMPRE
+     stare affiancate in UN'UNICA riga orizzontale fissa, qualunque sia il loro
+     numero — mai una card isolata che va a capo da sola sotto le altre.
+     Bug ricorrente (16-18/9/2026): la regola universale del 24/8/2026 gestisce
+     esplicitamente solo i casi con 2, 3 o 4 articoli totali (selettori
+     :nth-child(2)/(3):last-child); con 5 o più articoli totali il grid di
+     default a 3 colonne fisse spezzava le card non-lead in modo ibrido
+     (es. 3 affiancate + 1 isolata sotto). Qui aggiungiamo i casi mancanti,
+     SOLO per questa sezione (scoping #petrolio-basilicata, nessun'altra
+     sezione è toccata), fino a 7 articoli totali (margine per il futuro).
+     Regola PERMANENTE richiesta con forza da Mario il 18/9/2026: niente
+     scorrimento orizzontale (già vietato il 15/9/2026), le colonne si
+     stringono ma restano sempre tutte sulla stessa riga, su ogni dispositivo. */
+  #petrolio-basilicata .articles:has(> .article:nth-child(5):last-child){
+    grid-template-columns:repeat(4, 1fr);
+  }
+  #petrolio-basilicata .articles:has(> .article:nth-child(6):last-child){
+    grid-template-columns:repeat(5, 1fr);
+  }
+  #petrolio-basilicata .articles:has(> .article:nth-child(7):last-child){
+    grid-template-columns:repeat(6, 1fr);
+  }
   .article{
     background:linear-gradient(165deg, #ffffff 0%, var(--card) 60%);
     border-radius:10px;
