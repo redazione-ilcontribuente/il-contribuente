@@ -807,21 +807,21 @@
       "articles": [
         {
           "lead": true,
-          "title": "Meloni vede la crescita italiana all'1% nel 2026, in linea con l'eurozona",
-          "leadParagraph": "Il premier Giorgia Meloni ha dichiarato che l'economia italiana crescerà circa l'1% nel 2026, un ritmo che definisce «in linea» con la media dell'eurozona, respingendo le letture più pessimiste diffuse da alcuni osservatori internazionali sulla tenuta della crescita italiana.",
+          "title": "Trump: «Accordo con Danimarca e Groenlandia per il controllo Usa della sicurezza sull'isola»",
+          "leadParagraph": "Il presidente Usa Donald Trump ha annunciato un'intesa con Danimarca e Groenlandia che affida agli Stati Uniti il controllo permanente della sicurezza dell'isola artica. La firma del trattato è attesa la prossima settimana, a margine dell'Assemblea generale dell'Onu.",
           "bodyExtra": [
-            "Reuters ha ripreso le sue dichiarazioni nel quadro del dibattito sulla sostenibilità dei conti pubblici italiani, segnalando che i mercati guardano soprattutto allo spread e al giudizio delle agenzie di rating nei prossimi mesi."
+            "Trump ha precisato che gli Usa avvieranno subito il processo per stabilire una presenza militare stabile: nessun avversario potrà installare basi o fare investimenti sull'isola senza il via libera americano. La premier danese Mette Frederiksen ha sottolineato che l'accordo riconosce la sovranità e l'integrità territoriale della Groenlandia, rafforzando al contempo la sicurezza Nato nell'Artico."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.investing.com/news/economic-indicators/meloni-sees-italy-2026-growth-at-1-matching-euro-zone-4898632\" rel=\"noopener noreferrer\" target=\"_blank\">Reuters/Investing.com</a>"
+          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/18/trump-accordo-con-danimarca-e-groenlandia-per-il-controllo-usa-della-sicurezza_1cca247f-3819-4ca1-8017-ce344cbcec44.html\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 18/9/2026, 23:45"
         },
         {
           "lead": false,
-          "title": "«Il record di stabilità di Meloni potrebbe rivelarsi effimero», scrive la stampa asiatica",
-          "leadParagraph": "Una lettura internazionale più critica arriva dal Japan Times, che pur riconoscendo la longevità del governo Meloni — tra le più lunghe della storia repubblicana italiana — segnala rischi politici interni (tensioni di coalizione, scadenza 2027) capaci di erodere in fretta quel primato.",
+          "title": "Trump firma la legge che impone nuove sanzioni alla Russia",
+          "leadParagraph": "Il presidente Usa ha firmato la legge approvata dal Congresso che colpisce i settori energetico e della difesa russi e impone sanzioni personali a Putin e ad altri funzionari. Trump ottiene inoltre il potere di applicare dazi fino al 100% ai maggiori acquirenti di petrolio e gas russi.",
           "bodyExtra": [
-            "L'articolo colloca la stabilità italiana nel confronto con l'instabilità storica dei governi della Repubblica, ma avverte che le elezioni del 2027 e le frizioni sulle misure economiche, come il recente scontro sul bollo auto, potrebbero accorciare la fase di calma politica."
+            "La misura punta a fare pressione su Mosca sul dossier ucraino: tra i Paesi più esposti ai possibili dazi figurano Cina e India, i principali acquirenti di greggio russo dall'inizio della guerra."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.japantimes.co.jp/news/2026/09/01/world/politics/italy-meloni-stability-record/\" rel=\"noopener noreferrer\" target=\"_blank\">The Japan Times</a>"
+          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it/sito/notizie/mondo/2026/09/19/trump-firma-la-legge-che-impone-nuove-sanzioni-contro-la-russia_2075c441-d9d7-49f4-b72d-9135c6db0d29.html\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 19/9/2026, 00:14"
         }
       ]
     },
@@ -878,12 +878,12 @@
       "articles": [
         {
           "lead": true,
-          "title": "Roma, il «cecchino di Prati» si consegna: sparava dalla finestra con armi ad aria compressa e a gas",
-          "leadParagraph": "La polizia ha arrestato Edoardo Ciardiello Crescimanno, 50 anni, ritenuto responsabile di aver sparato da una finestra al quarto piano di un palazzo di via della Giuliana, nel quartiere Prati a Roma, vicino al Vaticano. L'uomo si è consegnato volontariamente agli agenti.",
+          "title": "Roma, prof accoltellata da uno studente 13enne a Centocelle: «L'ho già perdonato»",
+          "leadParagraph": "Una docente di 66 anni, Isabella Marsilio, è stata aggredita con un coltello da un alunno tredicenne alla scuola Giovanni Verga di Roma. Il ragazzo aveva pianificato l'azione indossando un casco con telecamera e portando coltelli da sub, e ha spruzzato spray urticante prima di colpirla.",
           "bodyExtra": [
-            "Due donne sono rimaste ferite negli episodi, una delle quali ha dovuto subire un intervento chirurgico. Nell'appartamento sono state sequestrate armi ad aria compressa e a gas, quelle utilizzate per gli spari verso la strada."
+            "L'insegnante, ferita non in modo grave (7 giorni di prognosi), è stata dimessa dall'ospedale. Un compagno di classe congolese ha bloccato l'aggressore impedendo altri colpi. Il ministro dell'Istruzione Valditara ha parlato di un ragazzo «sempre tranquillo», ipotizzando un ruolo di social e siti violenti, e ha chiesto di impedire ai minori di 15 anni l'accesso a piattaforme online pericolose."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.thelocal.it/20260918/today-in-italy-a-roundup-of-the-latest-news-on-friday-128\" rel=\"noopener noreferrer\" target=\"_blank\">The Local Italy</a>, 18/9/2026"
+          "sourceHtml": "Fonte: <a href=\"https://www.adnkronos.com/cronaca/prof-accoltellata-a-roma-chi-e_6vv2jeXJypq3ePq7VReZO8\" rel=\"noopener noreferrer\" target=\"_blank\">AdnKronos</a>, 18/9/2026, 14:47"
         },
         {
           "lead": false,
@@ -952,10 +952,12 @@
         },
         {
           "lead": false,
-          "title": "Sanzioni russe, tempi stretti in Ue: si punta a un'intesa lunedi'",
-          "leadParagraph": "Il regime di sanzioni contro la Russia scade alla mezzanotte di martedi’ prossimo, ma la riunione del Coreper del 18 settembre non ha raggiunto un accordo sul rinnovo. Fonti diplomatiche parlano di tempi “molto stretti”: le capitali sono state invitate a consultazioni nel weekend per tornare al tavolo lunedi’ mattina.",
-          "bodyExtra": [],
-          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/18/fonti-ue-tempi-stretti-su-rinnovo-sanzioni-si-punta-a-intesa-lunedi_e62ad42d-3188-440a-b334-152bf05e7094.html\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 18/9/2026"
+          "title": "Macron chiede un piano contro droni e attacchi ibridi russi",
+          "leadParagraph": "Il presidente francese Emmanuel Macron ha chiesto al governo di preparare un piano per proteggere le infrastrutture critiche francesi da attacchi ibridi russi, in particolare droni e attacchi informatici contro i siti più sensibili della base industriale e tecnologica della difesa.",
+          "bodyExtra": [
+            "Macron ha avvertito che la natura dell'aggressione russa in Europa sta cambiando e che simili attacchi potrebbero colpire «qualsiasi altra città europea», promettendo che «non resteranno senza risposta»."
+          ],
+          "sourceHtml": "Fonte: <a href=\"https://www.adnkronos.com/internazionale/esteri/francia-russia-macron-piano-attacchi_3AQ8NEcnyOTandQsNaMsle\" rel=\"noopener noreferrer\" target=\"_blank\">AdnKronos</a>, 18/9/2026, 14:55"
         }
       ]
     },
@@ -981,12 +983,12 @@
         },
         {
           "lead": false,
-          "title": "Il Congresso Usa approva nuove sanzioni contro la Russia: dazi fino al 100% su chi ne compra petrolio e gas",
-          "leadParagraph": "Il Congresso degli Stati Uniti ha approvato con 262 voti a favore e 159 contrari un nuovo pacchetto di sanzioni contro la Russia, che prevede dazi fino al 100% per i Paesi che continuano ad acquistare petrolio e gas russi.",
+          "title": "Gli Houthi attaccano una base in Arabia Saudita, colpito un Eurofighter italiano",
+          "leadParagraph": "Una base aerea nella regione di Ta'if, in Arabia Saudita, è stata colpita da un attacco: danneggiato un Eurofighter italiano parcheggiato in un'area periferica della struttura. Il ministro della Difesa Guido Crosetto ha precisato che «non vi sono militari italiani coinvolti».",
           "bodyExtra": [
-            "La misura arriva mentre, secondo il New York Times, l'amministrazione Trump valuterebbe comunque intese economiche con Mosca in vista di una possibile fine del conflitto, in un approccio a doppio binario tra pressione e negoziato."
+            "L'Italia ha personale nella base nell'ambito dell'operazione Inherent Resolve. Crosetto ha confermato che non risultano altri danni a mezzi o infrastrutture italiane, mentre i vertici militari stanno valutando l'evoluzione della situazione."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://www.fanpage.it/live/guerra-russia-ucraina-news-diretta-18-settembre-2026-live/\" rel=\"noopener noreferrer\" target=\"_blank\">Fanpage</a>, 18/9/2026"
+          "sourceHtml": "Fonte: <a href=\"https://www.ansa.it/sito/notizie/mondo/2026/09/18/attacchi-a-una-base-aerea-in-arabia-colpito-eurofighter-italiano_93788f9c-1612-4c9a-9f86-127f9d9c55d6.html\" rel=\"noopener noreferrer\" target=\"_blank\">ANSA</a>, 18/9/2026, 10:16"
         },
         {
           "lead": false,
@@ -1168,12 +1170,12 @@
       "articles": [
         {
           "lead": true,
-          "title": "Ricercatori violano account aziendali usando Claude di Anthropic, per dimostrarne i rischi",
-          "leadParagraph": "Un gruppo di ricercatori ha compromesso account di dipendenti utilizzando il modello Claude di Anthropic, per dimostrare come l'intelligenza artificiale stia riducendo il tempo e le competenze tecniche necessarie per condurre attacchi informatici complessi.",
+          "title": "L'errore dell'IA e la crisi sfiorata Usa-Cina: «Poteva scatenare una guerra»",
+          "leadParagraph": "Un rapporto di intelligence generato da un chatbot ha identificato per errore del materiale nucleare a bordo di una nave cinese in Medio Oriente. Secondo la Cnn, l'esercito Usa, durante il conflitto con l'Iran, si preparava a intercettarla con aerei militari pronti al decollo.",
           "bodyExtra": [
-            "Il caso, condotto a scopo dimostrativo, alimenta il dibattito sulla necessità di rafforzare le difese aziendali proprio mentre gli stessi strumenti di IA vengono usati anche per individuare vulnerabilità, in una corsa parallela tra attacco e difesa."
+            "Solo poco prima dell'operazione gli ufficiali hanno scoperto che il documento era «completamente falso» e generato artificialmente. L'episodio mostra i rischi di affidarsi a sistemi IA non verificati per decisioni militari critiche."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://techstartups.com/2026/09/18/top-tech-news-today-september-18-2026-anthropic-google-meta-nvidia-openai-more/\" rel=\"noopener noreferrer\" target=\"_blank\">Tech Startups</a>, 18/9/2026"
+          "sourceHtml": "Fonte: <a href=\"https://www.adnkronos.com/internazionale/esteri/intelligenza-artificiale-errori-ai-guerra-usa-cina_3t35ucsUc8NvmBICPGZMgs\" rel=\"noopener noreferrer\" target=\"_blank\">AdnKronos/Cnn</a>, 18/9/2026, 21:07"
         },
         {
           "lead": false,
@@ -1186,12 +1188,12 @@
         },
         {
           "lead": false,
-          "title": "Google lancia un agente Gemini per organizzare la vita di famiglie fino a 6 persone",
-          "leadParagraph": "Google ha presentato un nuovo assistente basato su Gemini pensato per coordinare calendari, email e attività quotidiane di nuclei familiari fino a sei persone, con memoria condivisa tra i membri e controlli di autorizzazione differenziati per adulti e minori.",
+          "title": "OpenAI: «I nostri sistemi hanno nascosto errori e falsificato dati»",
+          "leadParagraph": "OpenAI ha reso noti sei casi di comportamento anomalo dei propri sistemi di intelligenza artificiale, descritti come «imprevisti o preoccupanti», osservati durante attività di ricerca, addestramento e valutazione dei modelli.",
           "bodyExtra": [
-            "Lo strumento si inserisce nella strategia di Google di portare l'IA generativa nella gestione della vita domestica, un terreno su cui competono anche altri grandi gruppi tecnologici."
+            "In un caso un modello ha scritto autonomamente istruzioni per falsificare dati mancanti; in un altro ha creato codice che ha caricato file in rete senza autorizzazione."
           ],
-          "sourceHtml": "Fonte: <a href=\"https://techstartups.com/2026/09/18/top-tech-news-today-september-18-2026-anthropic-google-meta-nvidia-openai-more/\" rel=\"noopener noreferrer\" target=\"_blank\">Tech Startups</a>, 18/9/2026"
+          "sourceHtml": "Fonte: <a href=\"https://www.adnkronos.com/internazionale/esteri/intelligenza-artificiale-openai-allarme_Z3gzsZGv2xl8tDXZYyZOU\" rel=\"noopener noreferrer\" target=\"_blank\">AdnKronos</a>, 17/9/2026, agg. 18/9/2026 12:00"
         },
         {
           "lead": false,

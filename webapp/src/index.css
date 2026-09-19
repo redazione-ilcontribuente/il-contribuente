@@ -1542,11 +1542,13 @@
      Qui, e SOLO qui, non si applica la regola universale del 24/8/2026 che sotto 820px
      impila gli articoli in un'unica colonna: restano invece una griglia fissa a 2
      colonne, tutte visibili senza scorrere. Scoping via #petrolio-basilicata: non tocca
-     nessun'altra sezione del giornale. ===== */
+     nessun'altra sezione del giornale.
+     FIX 19/9/2026: "1fr" puro non si restringeva sotto il contenuto minimo delle
+     card e sfondava a destra su mobile; ora "minmax(0, 1fr)" restringe davvero. ===== */
   @media (max-width:820px){
     #petrolio-basilicata .articles{
       display:grid !important;
-      grid-template-columns:repeat(2, 1fr);
+      grid-template-columns:repeat(2, minmax(0, 1fr));
       gap:14px;
     }
     #petrolio-basilicata .articles .article.lead{
@@ -1570,13 +1572,13 @@
      scorrimento orizzontale (già vietato il 15/9/2026), le colonne si
      stringono ma restano sempre tutte sulla stessa riga, su ogni dispositivo. */
   #petrolio-basilicata .articles:has(> .article:nth-child(5):last-child){
-    grid-template-columns:repeat(4, 1fr);
+    grid-template-columns:repeat(4, minmax(0, 1fr));
   }
   #petrolio-basilicata .articles:has(> .article:nth-child(6):last-child){
-    grid-template-columns:repeat(5, 1fr);
+    grid-template-columns:repeat(5, minmax(0, 1fr));
   }
   #petrolio-basilicata .articles:has(> .article:nth-child(7):last-child){
-    grid-template-columns:repeat(6, 1fr);
+    grid-template-columns:repeat(6, minmax(0, 1fr));
   }
 
   /* ===== OVERLAY INTRO (obbligatorio ogni giorno) ===== */

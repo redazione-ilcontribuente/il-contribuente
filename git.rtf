@@ -21,3 +21,19 @@ Scrivi: cd ~/Desktop/Il_Contribuente
 Scrivi: git add .
 Scrivi: git commit -m "17.09.2026"
 Scrivi: git push
+
+Trovato il vero problema, finalmente: c'è uno script pubblica.sh che fa la build corretta del sito React (npm run build) e poi copia il risultato (dist/index.html + assets/*.js/*.css) nella cartella principale, che è quella che Cloudflare pubblica davvero.
+
+Quello script non è stato eseguito da 4 giorni (l'ultima build risale al 15 settembre). Tutte le modifiche che abbiamo fatto oggi ai file HTML e a edition.json non sono mai state "compilate" nel sito React — per questo online non cambia mai nulla, qualunque cosa pubblichiamo su GitHub o Cloudflare.
+
+Ecco la soluzione definitiva. C'è uno script che fa tutto il lavoro corretto (pubblica.sh), ma non gira da 4 giorni — bisogna lanciarlo.
+
+Apri il terminale in VS Code (o Terminale del Mac)
+Scrivi:
+cd ~/Desktop/Il_Contribuente/webapp
+./pubblica.sh ../rassegne/2026-09-19.html
+Aspetta che finisca (fa la build React, può metterci un minuto)
+Quando chiede "Vuoi pubblicarlo ora online? (s/n)", scrivi s e premi invio
+Fatto — quello farà anche git add/commit/push automaticamente
+
+Questo ricostruisce davvero il sito con i contenuti di oggi e lo pubblica per bene.
