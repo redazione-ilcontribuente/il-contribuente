@@ -186,6 +186,8 @@ Regola generale:
 
 NON scegliere manualmente larghezze diverse per le singole card.
 
+REGOLA VINCOLANTE E PERMANENTE (Mario, 20/9/2026, "da oggi in poi"): gli articoli non vanno MAI impilati uno sotto l'altro a piena larghezza quando sono più di uno nella stessa sezione — devono sempre stare affiancati in orizzontale nella stessa riga, sullo stesso principio già fissato per "Le ultime notizie" di Petrolio Basilicata. Aggiornata di conseguenza la regola per 2 articoli totali: ora stanno affiancati in 2 colonne uguali (non più impilati uno sopra l'altro). La regola vale per tutte le sezioni a formato articoli, incluso qualunque caso limite (5 o più notizie) analogo a quello già risolto per Petrolio Basilicata: applicare la stessa tecnica CSS (`:has()` + colonne `minmax(0, 1fr)`) se il numero di articoli di una sezione standard dovesse mai superare 4.
+
 NON lasciare spazi vuoti intenzionali.
 
 NON modificare il CSS dell'edizione per correggere manualmente la griglia.
@@ -242,6 +244,8 @@ Può contenere:
 - spiegazioni necessarie.
 
 Non deve diventare un resoconto del lavoro della redazione.
+
+REGOLA VINCOLANTE (Mario, 20/9/2026): il box "Da sapere per capire" di OGNI sezione deve essere corposo, non una singola riga stringata. Target: 3-5 frasi (un vero paragrafo), che diano al lettore un quadro reale del contesto e non un sottotitolo travestito da box. Vale per tutte le sezioni, ogni giorno.
 
 ---
 
@@ -308,6 +312,10 @@ I colori, i bordi, gli sfondi, i font e le dimensioni sono quelli definiti nel t
 NON modificarli durante la produzione quotidiana.
 
 Se Mario vuole cambiare la grafica, la modifica va applicata al template permanente.
+
+REGOLA VINCOLANTE E PERMANENTE (Mario, 20/9/2026): il font (tipo di scrittura) di titolo, testo e approfondimento deve essere lo STESSO per tutti gli articoli di tutte le sezioni, Confronto incluso — mai mescolare famiglie diverse tra un articolo e l'altro o tra una sezione e l'altra. Applicato nel template: `Georgia, 'Times New Roman', serif` per `.article h3`, `.article p`, `.duel-outlet`, `.duel-headline`, `.duel-fact-text`, `.duel-side p.body`. Le etichette tecniche (fonte, badge, ticker, market bar) restano nel loro font monospazio/sans dedicato: la regola riguarda il testo editoriale degli articoli, non la chrome dell'interfaccia.
+
+REGOLA VINCOLANTE E PERMANENTE (Mario, 20/9/2026): le sezioni NON mostrano più l'etichetta colorata (TAG) prima del titolo di sezione (es. "Confronto", "Europa"). Il tag è nascosto via CSS (`.section-tag{display:none;}`) nel template: non va riattivato senza richiesta esplicita di Mario, e non va rimosso dal markup (serve comunque per l'accessibilità/struttura interna).
 
 ---
 
@@ -525,7 +533,7 @@ Deve essere dedicata soprattutto a:
 - temi politici controversi;
 - grandi controversie nelle quali fonti diverse raccontano lo stesso fatto in maniera significativamente differente.
 
-Regola vincolante (Mario, 4/9/2026): la sezione Confronto deve avere OBBLIGATORIAMENTE tre voci, non due. Il formato è sempre:
+Regola vincolante (Mario, 4/9/2026, RIBADITA il 20/9/2026 — "la sezione confronto ha sempre 3 notizie"): la sezione Confronto deve avere SEMPRE E OBBLIGATORIAMENTE tre voci, non due, in ogni edizione senza eccezioni. Il formato è sempre:
 
 - "Prospettiva A" (duel-side left);
 - "Prospettiva B" (duel-side right);
@@ -1148,14 +1156,15 @@ Per una rassegna completa, rispettare sempre l'intero indice sopra definito.
 
 Questa struttura vale per ogni articolo di tutte le sezioni dell'indice, senza eccezioni per le normali card editoriali.
 
+REGOLA AGGIORNATA E VINCOLANTE (Mario, 20/9/2026, sostituisce l'ordine precedente): il pulsante Continua a leggere/Mostra meno deve stare SEMPRE ALLA FINE DELL'ARTICOLO, MAI IN MEZZO. Non va mai messo subito dopo "Il fatto" e prima dell'approfondimento.
+
 Ordine obbligatorio:
 
-1. **Da sapere per capire** — breve contesto indispensabile per comprendere la notizia.
-2. **Il fatto** — apertura immediata con **4-5 frasi** chiare e informative.
-3. **Continua a leggere** — pulsante che espande il resto dell'articolo.
-4. **Approfondimento** — contenuto completo, dati, reazioni, contesto e confronto tra fonti.
-5. **Fonte/i** — in fondo al contenuto espanso.
-6. **Mostra meno** — pulsante finale che richiude l'articolo e riporta alla visualizzazione iniziale.
+1. **Da sapere per capire** — breve contesto indispensabile per comprendere la notizia (vedi anche sezione 7: deve essere un paragrafo corposo, non una riga).
+2. **Il fatto** — apertura immediata con **4-5 frasi** chiare e informative (sempre visibile).
+3. **Approfondimento** — contenuto completo, dati, reazioni, contesto e confronto tra fonti (nascosto di default in `.body-extra`, compare quando l'articolo viene espanso).
+4. **Fonte/i** — in fondo al contenuto, sempre visibile.
+5. **Continua a leggere / Mostra meno** — UNICO pulsante, posizionato per ultimo, dopo la fonte: è l'ultimo elemento dell'articolo, non uno spartiacque a metà testo.
 
 Il testo completo NON deve essere visibile tutto nella card iniziale. L'obiettivo è mantenere la pagina leggibile e compatta, evitando articoli infiniti che occupano verticalmente tutta la sezione.
 
@@ -1163,7 +1172,7 @@ Le 4-5 frasi iniziali devono essere sufficienti per capire subito cosa è succes
 
 **Da sapere per capire** non è un titolo ornamentale: deve contenere realmente il contesto necessario. **Il fatto** deve invece partire dall'aggiornamento attuale.
 
-I pulsanti devono funzionare tramite JavaScript senza cambiare pagina. Quando l'articolo è aperto, **Continua a leggere** non deve più essere visibile e deve comparire **Mostra meno**. Quando viene richiuso, avviene il contrario.
+I pulsanti devono funzionare tramite JavaScript senza cambiare pagina. Quando l'articolo è aperto, **Continua a leggere** non deve più essere visibile e deve comparire **Mostra meno**, sempre in fondo. Quando viene richiuso, avviene il contrario.
 
 La struttura HTML/CSS/JS deve essere uniforme in tutte le sezioni, così l'utente impara una sola interazione e la ritrova in tutto il giornale.
 
@@ -1175,7 +1184,7 @@ Oltre all'indice standard della sezione 5, il sito pubblicato include altre sezi
 
 - Sezione "Approfondimenti fissi" (sidebar, id `approfondimenti`) — link fissi (Geopolitica, Conflitti nel mondo, Immigrazione in Europa, Guerre, Dazi, Sanzioni, Glossario) e box "Termine del giorno"/statistiche;
 - Dashboard "Sicurezza Pubblica" (id `sicurezza-pubblica`);
-- Dashboard "Petrolio Basilicata" (id `petrolio-basilicata`), con la sotto-lista "Le ultime notizie".
+- Dashboard "Petrolio Basilicata" (id `petrolio-basilicata`), con la sotto-lista "Le ultime notizie" — REGOLA ASSOLUTA E PERMANENTE (ribadita 20/9/2026): tutte le notizie di questa sotto-lista devono SEMPRE essere affiancate in orizzontale, per sempre, su ogni dispositivo, senza alcuna eccezione futura.
 
 Regola vincolante e assoluta (Mario, 16/9/2026, ribadita più volte): queste sezioni, e la dashboard "Dati Immigrazione" dell'indice standard, vanno copiate IDENTICHE da un'edizione all'altra — layout, HTML e CSS non vanno mai rigenerati, riscritti o "corretti" di propria iniziativa, nemmeno per sistemare un bug di stile evidente. Se emerge un problema (es. un layout che sembra rotto), or se Mario segnala che qualcosa in una di queste sezioni non va, si spiega la diagnosi e si PROPONE la correzione, ma si chiede sempre conferma esplicita prima di modificare il codice di queste sezioni. Aggiornare solo i dati/testo/date al loro interno quando esplicitamente richiesto.
 

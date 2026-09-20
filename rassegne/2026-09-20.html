@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Rassegna Stampa — 19 Settembre 2026</title>
+<title>Rassegna Stampa — 20 Settembre 2026</title>
 <link href="logo.jpeg" rel="icon" type="image/png"/>
 <meta content="Il Contribuente — Rassegna Stampa Quotidiana" property="og:title"/>
 <meta content="Confronto quotidiano tra le principali testate italiane e internazionali." property="og:description"/>
@@ -572,6 +573,7 @@
     background:linear-gradient(90deg, var(--ink) 0%, var(--ink) 40%, transparent 100%);
   }
   .section-tag{
+    display:none;
     font-family:'JetBrains Mono',monospace;
     font-size:13px;
     letter-spacing:.1em;
@@ -632,7 +634,7 @@
      - 4 articoli: comportamento standard (già di default): la prima orizzontale (lead),
        le altre tre in verticale, affiancate in una riga di 3 colonne uguali. */
   .articles:has(> .article:nth-child(2):last-child){
-    grid-template-columns:1fr;
+    grid-template-columns:1fr 1fr;
   }
   .articles:has(> .article:nth-child(2):last-child) > .article.lead{
     grid-column:auto;
@@ -724,7 +726,7 @@
     background:linear-gradient(180deg, var(--red), var(--red-deep));
   }
   .article h3{
-    font-family:'Fraunces',serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-weight:600;
     font-size:23px;
     line-height:1.28;
@@ -732,6 +734,7 @@
     color:var(--ink);
   }
   .article p{
+    font-family: Georgia, 'Times New Roman', serif;
     font-size:18px;
     line-height:1.7;
     color:var(--ink);
@@ -938,7 +941,7 @@
     margin-bottom:6px;
   }
   .duel-fact-text{
-    font-family:'Fraunces',serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size:23px;
     font-weight:600;
     line-height:1.35;
@@ -988,13 +991,13 @@
   .duel-side.right .duel-tag{background:linear-gradient(160deg,#4a4f57,#22262b);}
   .duel-side.third .duel-tag{background:linear-gradient(160deg,#4a4f57,#22262b);}
   .duel-outlet{
-    font-family:'Fraunces',serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-weight:700;
     font-size:18.5px;
     margin-bottom:8px;
   }
   .duel-headline{
-    font-family:'Fraunces',serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-style:italic;
     font-size:18px;
     line-height:1.4;
@@ -1002,6 +1005,7 @@
     color:var(--ink);
   }
   .duel-side p.body{
+    font-family: Georgia, 'Times New Roman', serif;
     font-size:18.5px;
     line-height:1.68;
     margin:0 0 8px 0;
@@ -1399,6 +1403,53 @@
     .sidebar-block + .sidebar-block{ margin-top:14px; }
   }
 
+    /* ===== Notizie della dashboard Petrolio Basilicata: SEMPRE affiancate in orizzontale,
+     su ogni dispositivo, ma FISSE — niente barra a scorrimento (richiesta esplicita di
+     Mario, 15/9/2026, che corregge la versione a scorrimento del 15/9/2026 mattina).
+     Qui, e SOLO qui, non si applica la regola universale del 24/8/2026 che sotto 820px
+     impila gli articoli in un'unica colonna: restano invece una griglia fissa a 2
+     colonne, tutte visibili senza scorrere. Scoping via #petrolio-basilicata: non tocca
+     nessun'altra sezione del giornale.
+     FIX 19/9/2026: le colonne usavano "1fr" puro, che su schermo stretto non si
+     restringe sotto la larghezza minima del contenuto delle card -> la sezione
+     sfondava a destra e rompeva il layout su mobile. Ora "minmax(0, 1fr)" forza
+     le colonne a restringersi davvero, come richiesto da Mario. ===== */
+  @media (max-width:820px){
+    #petrolio-basilicata .articles{
+      display:grid !important;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:14px;
+    }
+    #petrolio-basilicata .articles .article.lead{
+      grid-column:1 / -1;
+    }
+  }
+  @media (max-width:480px){
+    #petrolio-basilicata .articles{ gap:10px; }
+  }
+  /* ===== Petrolio Basilicata, "Le ultime notizie": le card NON-lead devono SEMPRE
+     stare affiancate in UN'UNICA riga orizzontale fissa, qualunque sia il loro
+     numero — mai una card isolata che va a capo da sola sotto le altre.
+     Bug ricorrente (16-18/9/2026): la regola universale del 24/8/2026 gestisce
+     esplicitamente solo i casi con 2, 3 o 4 articoli totali (selettori
+     :nth-child(2)/(3):last-child); con 5 o più articoli totali il grid di
+     default a 3 colonne fisse spezzava le card non-lead in modo ibrido
+     (es. 3 affiancate + 1 isolata sotto). Qui aggiungiamo i casi mancanti,
+     SOLO per questa sezione (scoping #petrolio-basilicata, nessun'altra
+     sezione è toccata), fino a 7 articoli totali (margine per il futuro).
+     Regola PERMANENTE richiesta con forza da Mario il 18/9/2026: niente
+     scorrimento orizzontale (già vietato il 15/9/2026), le colonne si
+     stringono ma restano sempre tutte sulla stessa riga, su ogni dispositivo. */
+  #petrolio-basilicata .articles:has(> .article:nth-child(5):last-child){
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+  }
+  #petrolio-basilicata .articles:has(> .article:nth-child(6):last-child){
+    grid-template-columns:repeat(5, minmax(0, 1fr));
+  }
+  #petrolio-basilicata .articles:has(> .article:nth-child(7):last-child){
+    grid-template-columns:repeat(6, minmax(0, 1fr));
+  }
+
   /* Petrolio Basilicata dashboard — stili mancanti, aggiunti 16/9/2026, mai cambiare senza chiederlo */
   .pb-subhead{ margin:28px 0 14px; }
   .pb-subhead-tag{ font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--navy); border-bottom:2px solid var(--navy); padding-bottom:4px; display:inline-block; }
@@ -1459,9 +1510,272 @@
   .pb-reset-zoom.show{ opacity:1; pointer-events:auto; }
   .pb-map-card.pb-map-card-highlight{ box-shadow:0 0 0 3px var(--gold); }
 
+
+/* ===== CORREZIONI 20/09/2026 RICHIESTE DA MARIO ===== */
+
+/* Etichetta/indice colorato visibile accanto al titolo di OGNI sezione. */
+.section-head > .section-tag{
+  display:inline-block !important;
+}
+
+/* Petrolio Basilicata — "Le ultime notizie":
+   TUTTE le card, compresa la prima/lead, sempre affiancate orizzontalmente.
+   Nessuna card full-width e nessuna card sotto le altre. */
+#petrolio-basilicata .articles{
+  display:grid !important;
+  grid-template-columns:repeat(5, minmax(0, 1fr)) !important;
+  gap:10px !important;
+  align-items:stretch !important;
+}
+#petrolio-basilicata .articles > .article,
+#petrolio-basilicata .articles > .article.lead{
+  grid-column:auto !important;
+  min-width:0 !important;
+  width:auto !important;
+}
+#petrolio-basilicata .articles > .article.lead::before{
+  display:none !important;
+}
+
+/* Anche su tablet e mobile le cinque notizie restano sulla stessa riga,
+   come richiesto: niente impilamento verticale. */
+@media (max-width:820px){
+  #petrolio-basilicata .articles{
+    grid-template-columns:repeat(5, minmax(0, 1fr)) !important;
+  }
+  #petrolio-basilicata .articles > .article.lead{
+    grid-column:auto !important;
+  }
+}
+
+/* PETROLIO BASILICATA — LE ULTIME NOTIZIE: SEMPRE ORIZZONTALI */
+#petrolio-basilicata .articles{
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:nowrap !important;
+    align-items:stretch !important;
+    gap:12px !important;
+    width:100% !important;
+}
+#petrolio-basilicata .articles > .article,
+#petrolio-basilicata .articles > .article.lead{
+    flex:1 1 20% !important;
+    width:20% !important;
+    min-width:0 !important;
+    max-width:20% !important;
+    grid-column:auto !important;
+}
+#petrolio-basilicata .articles > .article.lead::before{
+    display:none !important;
+}
+@media (max-width:820px){
+    #petrolio-basilicata .articles{
+        display:flex !important;
+        flex-direction:row !important;
+        flex-wrap:nowrap !important;
+        overflow-x:auto !important;
+        -webkit-overflow-scrolling:touch;
+    }
+    #petrolio-basilicata .articles > .article,
+    #petrolio-basilicata .articles > .article.lead{
+        flex:0 0 82% !important;
+        width:82% !important;
+        max-width:82% !important;
+    }
+}
+
+/* ===== PETROLIO BASILICATA — REGOLA DEFINITIVA MULTI-DISPOSITIVO =====
+   iPhone / iPad / tablet / PC / TV:
+   le 5 notizie di "Le ultime notizie" restano SEMPRE in orizzontale.
+   MAI impilate verticalmente. Su viewport strette: scroll orizzontale. */
+#petrolio-basilicata .articles{
+  display:flex !important;
+  flex-direction:row !important;
+  flex-wrap:nowrap !important;
+  align-items:stretch !important;
+  gap:12px !important;
+  width:100% !important;
+  max-width:100% !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  -webkit-overflow-scrolling:touch !important;
+  scroll-snap-type:x proximity;
+  padding-bottom:8px;
+}
+
+#petrolio-basilicata .articles > .article,
+#petrolio-basilicata .articles > .article.lead{
+  display:block !important;
+  grid-column:auto !important;
+  flex:0 0 clamp(260px, 19.2%, 360px) !important;
+  width:clamp(260px, 19.2%, 360px) !important;
+  min-width:260px !important;
+  max-width:360px !important;
+  scroll-snap-align:start;
+}
+
+#petrolio-basilicata .articles > .article.lead::before{
+  display:none !important;
+}
+
+/* Nessuna media query può trasformare queste card in verticale */
+@media (max-width:1400px){
+  #petrolio-basilicata .articles > .article,
+  #petrolio-basilicata .articles > .article.lead{
+    flex-basis:300px !important;
+    width:300px !important;
+    min-width:300px !important;
+    max-width:300px !important;
+  }
+}
+@media (max-width:820px){
+  #petrolio-basilicata .articles{
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+  }
+  #petrolio-basilicata .articles > .article,
+  #petrolio-basilicata .articles > .article.lead{
+    flex:0 0 82vw !important;
+    width:82vw !important;
+    min-width:260px !important;
+    max-width:420px !important;
+    grid-column:auto !important;
+  }
+}
+
+/* ===== BASILICATA: 5 NOTIZIE FISSE ORIZZONTALI — OVERRIDE FINALE ===== */
+#petrolio-basilicata .articles{
+    display:grid !important;
+    grid-template-columns:repeat(5, minmax(0, 1fr)) !important;
+    grid-template-rows:1fr !important;
+    grid-auto-flow:column !important;
+    gap:10px !important;
+    width:100% !important;
+    max-width:100% !important;
+    overflow:visible !important;
+}
+
+#petrolio-basilicata .articles > .article,
+#petrolio-basilicata .articles > .article.lead{
+    grid-row:1 !important;
+    grid-column:auto !important;
+    display:block !important;
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    height:auto !important;
+    flex:none !important;
+    overflow-wrap:break-word !important;
+    word-break:normal !important;
+}
+
+#petrolio-basilicata .articles > .article.lead::before{
+    display:none !important;
+}
+
+/* BLOCCA QUALSIASI REGOLA RESPONSIVE PRECEDENTE:
+   anche iPhone/iPad/tablet restano 5 colonne fisse sulla stessa riga */
+@media (max-width:1400px), (max-width:1100px), (max-width:820px), (max-width:600px), (max-width:480px){
+    #petrolio-basilicata .articles{
+        display:grid !important;
+        grid-template-columns:repeat(5, minmax(0, 1fr)) !important;
+        grid-template-rows:1fr !important;
+        grid-auto-flow:column !important;
+        overflow:visible !important;
+    }
+    #petrolio-basilicata .articles > .article,
+    #petrolio-basilicata .articles > .article.lead{
+        grid-row:1 !important;
+        grid-column:auto !important;
+        width:100% !important;
+        min-width:0 !important;
+        max-width:none !important;
+        flex:none !important;
+    }
+}
+
+/* ===== PETROLIO BASILICATA — ARTICOLI DAVVERO ORIZZONTALI =====
+   Ogni notizia è una card orizzontale larga al 100%.
+   Le notizie NON sono colonne verticali strette. */
+#petrolio-basilicata .articles{
+    display:flex !important;
+    flex-direction:column !important;
+    flex-wrap:nowrap !important;
+    width:100% !important;
+    gap:14px !important;
+    overflow:visible !important;
+}
+
+#petrolio-basilicata .articles > .article,
+#petrolio-basilicata .articles > .article.lead{
+    display:grid !important;
+    grid-template-columns:minmax(220px, 32%) minmax(0, 1fr) !important;
+    grid-template-rows:auto !important;
+    column-gap:28px !important;
+    row-gap:8px !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    flex:none !important;
+    grid-column:auto !important;
+    padding:22px 26px !important;
+    align-items:start !important;
+}
+
+/* Titolo a sinistra, testo/approfondimento/fonti a destra */
+#petrolio-basilicata .articles > .article h3{
+    grid-column:1 !important;
+    grid-row:1 / span 20 !important;
+    margin:0 !important;
+}
+#petrolio-basilicata .articles > .article p,
+#petrolio-basilicata .articles > .article .body,
+#petrolio-basilicata .articles > .article .body-extra,
+#petrolio-basilicata .articles > .article .source,
+#petrolio-basilicata .articles > .article .read-more-btn,
+#petrolio-basilicata .articles > .article .callout{
+    grid-column:2 !important;
+}
+#petrolio-basilicata .articles > .article.lead::before{
+    display:none !important;
+}
+
+/* STESSO FORMATO SU TUTTI I DISPOSITIVI:
+   non trasformare mai l'articolo in card verticale. */
+@media (max-width:1400px){
+  #petrolio-basilicata .articles > .article,
+  #petrolio-basilicata .articles > .article.lead{
+      grid-template-columns:minmax(200px, 30%) minmax(0, 1fr) !important;
+  }
+}
+@media (max-width:820px){
+  #petrolio-basilicata .articles > .article,
+  #petrolio-basilicata .articles > .article.lead{
+      display:grid !important;
+      grid-template-columns:minmax(115px, 36%) minmax(0, 1fr) !important;
+      column-gap:14px !important;
+      width:100% !important;
+      max-width:100% !important;
+      padding:14px !important;
+  }
+  #petrolio-basilicata .articles > .article h3{
+      grid-column:1 !important;
+      grid-row:1 / span 20 !important;
+      font-size:15px !important;
+  }
+  #petrolio-basilicata .articles > .article p{
+      grid-column:2 !important;
+      font-size:13px !important;
+  }
+  #petrolio-basilicata .articles > .article .source{
+      grid-column:2 !important;
+  }
+}
 </style>
 </head>
-<body data-edition="2026-09-19" data-published="2026-09-19T07:44:00+02:00" id="top">
+<body data-edition="2026-09-20" data-published="2026-09-20T05:30:00+02:00" id="top">
 <!-- ===== OVERLAY INTRO — SEMPRE PRESENTE, IDENTICO OGNI GIORNO ===== -->
 <div class="overlay" id="introOverlay">
 <div class="overlay-box">
@@ -1473,7 +1787,7 @@
 <div class="masthead">
 <div class="masthead-top">
 <span>Edizione digitale</span>
-<span>19 Settembre 2026</span>
+<span>20 Settembre 2026</span>
 <span>Rassegna stampa quotidiana</span>
 </div>
 <h1 class="masthead-title">Il <em>Contribuente</em></h1>
@@ -1597,32 +1911,32 @@
 <a class="back-link" href="../archivio.html">Archivio edizioni →</a>
 </div>
 <div class="ticker-wrap">
-<div class="ticker"><span>STRETTO DI HORMUZ — Usa e Iran raccontano in modo opposto lo stesso scontro navale</span><span>ROMA — Il Cdm abolisce il bollo auto per il 70% dei veicoli dal 2027</span><span>SENATO — Approvata la nuova legge elettorale, opposizioni in Aula con cartelli «no alla legge truffa»</span><span>BRUXELLES — Von der Leyen: «Europa forte e indipendente», il Parlamento si spacca</span><span>STATI UNITI — La Fed alza i tassi al 3,75%-4%, primo rialzo in tre anni</span><span>GAZA — Crolla un palazzo lesionato dalla guerra: fino a 21 morti durante la tregua</span><span>PRIVACY — L'Ue vieta i social ai minori di 13 anni con il “Kids Act”</span><span>NAPOLI — Rissa sulla Cumana a Pianura, due minorenni accoltellati</span><span>STRETTO DI HORMUZ — Usa e Iran raccontano in modo opposto lo stesso scontro navale</span><span>ROMA — Il Cdm abolisce il bollo auto per il 70% dei veicoli dal 2027</span><span>SENATO — Approvata la nuova legge elettorale, opposizioni in Aula con cartelli «no alla legge truffa»</span><span>BRUXELLES — Von der Leyen: «Europa forte e indipendente», il Parlamento si spacca</span><span>STATI UNITI — La Fed alza i tassi al 3,75%-4%, primo rialzo in tre anni</span><span>GAZA — Crolla un palazzo lesionato dalla guerra: fino a 21 morti durante la tregua</span><span>PRIVACY — L'Ue vieta i social ai minori di 13 anni con il “Kids Act”</span><span>NAPOLI — Rissa sulla Cumana a Pianura, due minorenni accoltellati</span></div>
+<div class="ticker"><span>ROMA — Meloni: «Resto fino a fine legislatura», niente elezioni anticipate</span><span>NEW YORK — Guterres apre l'Assemblea ONU: «Minacce esistenziali multiple»</span><span>PECHINO — La Cina avverte gli USA: a rischio il vertice Xi-Trump del 24/9 se ci saranno armi a Taiwan</span><span>LONDRA — Revolut, l'hacker rivendica un furto di 147GB di dati in sei mesi</span><span>ROMA — Perquisiti 23 medici per i certificati anti-Cpr, un nuovo indagato</span><span>ROMA — L'ISS conferma oltre 265 casi di Dengue e 594 di West Nile</span><span>VIGEVANO — Aggrediscono il vicino di casa per una borsa, due arresti</span><span>PARIGI — Macron annuncia un piano per le infrastrutture critiche contro gli attacchi ibridi russi</span><span>NATO — Un funzionario: «Nessuna minaccia di attacco imminente» dalla Russia</span><span>ROMA — Meloni: «Resto fino a fine legislatura», niente elezioni anticipate</span><span>NEW YORK — Guterres apre l'Assemblea ONU: «Minacce esistenziali multiple»</span><span>PECHINO — La Cina avverte gli USA: a rischio il vertice Xi-Trump del 24/9 se ci saranno armi a Taiwan</span><span>LONDRA — Revolut, l'hacker rivendica un furto di 147GB di dati in sei mesi</span><span>ROMA — Perquisiti 23 medici per i certificati anti-Cpr, un nuovo indagato</span><span>ROMA — L'ISS conferma oltre 265 casi di Dengue e 594 di West Nile</span><span>VIGEVANO — Aggrediscono il vicino di casa per una borsa, due arresti</span><span>PARIGI — Macron annuncia un piano per le infrastrutture critiche contro gli attacchi ibridi russi</span><span>NATO — Un funzionario: «Nessuna minaccia di attacco imminente» dalla Russia</span></div>
 </div>
 <div class="market-bar">
 <div class="market-bar-inner">
-<div class="market-card"><div class="market-label">Benzina</div><div class="market-value">2,133€/L</div>
-<div class="market-delta up">Nuovo aumento; sconto accise diesel in scadenza oggi</div>
-<div class="market-source">Mimit/Staffetta Quotidiana, 16/9</div></div>
-<div class="market-card"><div class="market-label">Diesel</div><div class="market-value">2,246€/L</div>
-<div class="market-delta up">Nuovo massimo storico, supera il record di marzo 2022</div>
-<div class="market-source">Mimit/Staffetta Quotidiana, 16/9</div></div>
-<div class="market-card"><div class="market-label">Petrolio</div><div class="market-value">105,7 $</div>
-<div class="market-delta down">Brent -2,8%, dopo essersi avvicinato a 110$ per l'escalation a Hormuz</div>
-<div class="market-source">Milano Finanza, 16/9</div></div>
-<div class="market-card"><div class="market-label">Gas TTF</div><div class="market-value">77,6€</div>
-<div class="market-delta down">In calo del 3%, dopo dichiarazioni distensive di Teheran</div>
-<div class="market-source">ANSA, 16/9</div></div>
-<div class="market-card"><div class="market-label">Oro</div><div class="market-value">~130€/g</div>
-<div class="market-delta up">+0,70% a 4.364$/oncia</div>
-<div class="market-source">GEA, 16/9</div></div>
-<div class="market-card"><div class="market-label">Bitcoin</div><div class="market-value">~65.500€</div>
-<div class="market-delta down">-4% nelle 24h, dopo la bocciatura del Clarity Act al Senato Usa</div>
-<div class="market-source">Fortune/Euronews, 16/9</div></div>
+<div class="market-card"><div class="market-label">Benzina</div><div class="market-value">2,153 €/L</div>
+<div class="market-delta up">+0,4 cent/L in un giorno</div>
+<div class="market-source">MIMIT · media nazionale self · aggiornamento 19/09/2026</div></div>
+<div class="market-card"><div class="market-label">Diesel</div><div class="market-value">2,330 €/L</div>
+<div class="market-delta up">+3,6 cent/L in un giorno</div>
+<div class="market-source">MIMIT · media nazionale self · aggiornamento 19/09/2026</div></div>
+<div class="market-card"><div class="market-label">Petrolio</div><div class="market-value">Brent 104,87 $</div>
+<div class="market-delta down">WTI 100,30 $</div>
+<div class="market-source">Reuters · chiusura ultima seduta 18/09/2026</div></div>
+<div class="market-card"><div class="market-label">Gas TTF</div><div class="market-value">78,37 €/MWh</div>
+<div class="market-delta down">+0,45%</div>
+<div class="market-source">TTF · ultimo prezzo verificato disponibile 17/09/2026</div></div>
+<div class="market-card"><div class="market-label">Oro</div><div class="market-value">4.390,11 $/oz</div>
+<div class="market-delta up">+1,2%</div>
+<div class="market-source">Reuters · spot gold · ultima seduta 18/09/2026</div></div>
+<div class="market-card"><div class="market-label">Bitcoin</div><div class="market-value">~81.200 $</div>
+<div class="market-delta up">circa +4% nelle 24h</div>
+<div class="market-source">CoinDesk · rilevazione mattina 20/09/2026</div></div>
 <div class="market-card" style="border-color:#7c1d16;"><div class="market-label">Palestinesi uccisi</div>
-<div class="market-value" style="color:#e07a5f;">73.789</div>
-<div class="market-delta up">174.798 feriti; ultimo cumulativo aggregato disponibile</div>
-<div class="market-source">Ministero Salute Gaza, dati al 15/9/2026</div></div>
+<div class="market-value" style="color:#e07a5f;">73.821</div>
+<div class="market-delta up">174.897 feriti</div>
+<div class="market-source">Ministero della Salute di Gaza · ultimo report disponibile 17/09/2026</div></div>
 </div>
 </div>
 <div class="wrap">
@@ -1701,137 +2015,112 @@
 </div>
 </div>
 <div class="verify-badge">
-<div class="verify-badge-inner">✓ Oggi abbiamo confrontato <strong>oltre 46 fonti</strong> su <strong>39 testate</strong></div>
+<div class="verify-badge-inner">✓ Oggi abbiamo confrontato <strong>33 fonti</strong> su <strong>30 testate</strong></div>
 </div>
-<div class="quote-day">
-<div class="quote-day-inner">
-<div class="quote-day-label">Citazione del giorno · 1/2</div>
-<div class="quote-day-text">«Altri parlano di patrimoniali, noi togliamo una delle tasse più odiate.»</div>
-<div class="quote-day-author">— Giorgia Meloni, presidente del Consiglio, in conferenza stampa dopo il Cdm sull'abolizione del bollo auto; 16/9/2026 (Il Messaggero/Leggo)</div>
-</div>
-</div>
-<div class="quote-day">
-<div class="quote-day-inner">
-<div class="quote-day-label">Citazione del giorno · 2/2</div>
-<div class="quote-day-text">«Vogliono frantumare l'Ue. Lottiamo per la nostra Europa.»</div>
-<div class="quote-day-author">— Ursula von der Leyen, discorso sullo Stato dell'Unione a Strasburgo, 16/9/2026 (ANSA)</div>
-</div>
-</div>
+<div class="quote-day"><div class="quote-day-inner"><div class="quote-day-label">Citazione del giorno</div><div class="quote-day-text">«Sarebbe molto importante trovare un modo per consentire le esportazioni ucraine e russe di cibo, fertilizzanti ed energia in sicurezza attraverso il Mar Nero.»</div><div class="quote-day-author">— António Guterres, segretario generale ONU · Reuters, 20/9/2026</div></div></div>
+<div class="quote-day"><div class="quote-day-inner"><div class="quote-day-label">Citazione del giorno · 2/2</div><div class="quote-day-text">«Nessuno è al riparo.»</div><div class="quote-day-author">— Emmanuel Macron, sugli attacchi ibridi e la protezione delle infrastrutture critiche · ANSA/Reuters, aggiornamento 19/9/2026</div></div></div>
 <div class="stats">
 <a class="stat" href="#dati-immigrazione" style="border-top-color:#7c1d16; text-decoration:none; color:inherit; cursor:pointer;">
 <div class="stat-label">Calo degli sbarchi in Italia da inizio 2026</div>
 <div class="stat-value">-56%</div>
-<div class="stat-delta">21.445 arrivi contro 49.077 nello stesso periodo del 2025 (1 gen - 16 set 2026); cruscotto Viminale aggiornato al 16/9</div></a>
+<div class="stat-delta">21.649 arrivi contro 49.229 nello stesso periodo del 2025; ultimo cruscotto Viminale disponibile, dati alle ore 8 del 18/9/2026</div></a>
 <div class="stat" style="border-top-color:var(--navy);">
-<div class="stat-label">Costo dell'abolizione del bollo auto</div>
-<div class="stat-value">2,3 mld €</div>
-<div class="stat-delta">Esenzione per il 70% del parco auto italiano dal 2027, decreto approvato il 16 settembre</div></div>
+<div class="stat-label">Costo dell'esenzione dal bollo auto 2027</div>
+<div class="stat-value">2,2935 mld €</div>
+<div class="stat-delta">Compensazione prevista per Regioni e Province autonome; esenzione 2027 per un veicolo fino a 80 kW, decreto-legge 17/9/2026</div></div>
 <div class="stat wine">
-<div class="stat-label">Diesel al nuovo massimo storico</div>
-<div class="stat-value">2,246 €/L</div>
-<div class="stat-delta">Prezzo self-service del 16 settembre; supera il precedente record di marzo 2022</div></div>
+<div class="stat-label">Diesel al self service</div>
+<div class="stat-value">2,330 €/L</div>
+<div class="stat-delta">+3,6 cent/L in un giorno; media nazionale self MIMIT, aggiornamento 19/9/2026</div></div>
 <div class="stat" style="border-top-color:var(--navy);">
-<div class="stat-label">Rialzo dei tassi della Federal Reserve</div>
+<div class="stat-label">Tasso obiettivo della Federal Reserve</div>
 <div class="stat-value">3,75%-4%</div>
-<div class="stat-delta">Primo rialzo in tre anni, 16 settembre; possibile nuovo aumento entro fine 2026</div></div>
+<div class="stat-delta">Rialzo di 25 punti base deciso il 16 settembre, operativo dal 17/9/2026</div></div>
 <a class="stat gold" href="guerre/pi.html" style="text-decoration:none; color:inherit; cursor:pointer;">
 <div class="stat-label">Palestinesi uccisi dal 7 ottobre 2023 (Gaza)</div>
-<div class="stat-value">73.789</div>
-<div class="stat-delta">174.798 feriti; ultimo cumulativo aggregato disponibile, dati al 15 settembre</div></a>
+<div class="stat-value">73.821</div>
+<div class="stat-delta">174.897 feriti; ultimo report del Ministero della Salute di Gaza disponibile, 17/9/2026</div></a>
 <div class="stat wine">
-<div class="stat-label">Italiane che hanno subito violenza prima dei 16 anni</div>
-<div class="stat-value">14,9%</div>
-<div class="stat-delta">Circa 3,2 milioni di donne; rapporto Istat pubblicato il 16 settembre 2026</div></div>
+<div class="stat-label">Seggi della Duma russa in palio</div>
+<div class="stat-value">450</div>
+<div class="stat-delta">Oggi 20 settembre è l'ultimo giorno del voto iniziato il 18; Euronews/AP</div></div>
 </div>
-<div class="section-note" style="margin-top:-32px; margin-bottom:44px;">Dati verificati: cruscotto statistico giornaliero del Ministero dell'Interno per sbarchi e rimpatri; Consiglio dei ministri n. 189 per il bollo auto; Mimit/Staffetta Quotidiana per i carburanti; Federal Reserve per i tassi; Ministero della Sanità di Gaza per il cumulativo delle vittime; Istat per il rapporto sulla violenza. Per i dati periodici viene indicata la data dell'ultimo aggiornamento ufficiale disponibile.</div>
+<div class="section-note" style="margin-top:-32px; margin-bottom:44px;">Dati aggiornati alla mattina del 20 settembre 2026. Fonti: Ministero dell'Interno/AgenSIR per gli sbarchi; decreto-legge 17 settembre 2026 n. 162 e MIT per il bollo; MIMIT per i carburanti; Federal Reserve per i tassi; Ministero della Salute di Gaza per il cumulativo delle vittime; Euronews/AP per le elezioni russe. Per ogni indicatore è riportato l'ultimo aggiornamento ufficiale disponibile.</div>
 <div class="agenda-box">
 <h3 class="agenda-title">Cosa succede oggi</h3>
-<div class="agenda-list"><div class="agenda-item"><span class="agenda-time">Oggi 17/9</span><span class="agenda-event">Bruxelles, la Commissione europea presenta ufficialmente il “Kids Act” sui minori online, annunciato il giorno prima da von der Leyen.</span></div><div class="agenda-item"><span class="agenda-time">Oggi 17/9</span><span class="agenda-event">Eurostat pubblica il dato finale sull'inflazione dell'eurozona di agosto, attesa al +3,3% annuo.</span></div><div class="agenda-item"><span class="agenda-time">Oggi 17/9</span><span class="agenda-event">Bank of England, decisione di politica monetaria e conferenza stampa del governatore Andrew Bailey; tassi attesi invariati al 3,75%.</span></div><div class="agenda-item"><span class="agenda-time">Oggi 17/9</span><span class="agenda-event">Italia, ultimo giorno dello sconto sull'accisa del gasolio: da domani l'aliquota torna piena, salvo nuove misure del governo.</span></div></div>
-<div class="section-note" style="margin-top:10px;">Elenco limitato a 4 voci verificate con fonte diretta datata di oggi: la ricerca odierna non ha permesso di confermare con la stessa solidità un quinto evento della giornata.</div>
+<div class="agenda-list"><div class="agenda-item"><span class="agenda-time">New York</span><span class="agenda-event">Arrivano i leader per la settimana di alto livello ONU; il dibattito generale dell'81ª Assemblea Generale inizierà il 22 settembre.</span></div><div class="agenda-item"><span class="agenda-time">New York</span><span class="agenda-event">Incontro tra il segretario al Tesoro statunitense Scott Bessent e il vicepremier cinese He Lifeng sui dossier economici e strategici.</span></div><div class="agenda-item"><span class="agenda-time">Pordenone · 17:00</span><span class="agenda-event">Il Presidente della Repubblica Sergio Mattarella partecipa alla 27ª edizione di Pordenonelegge.</span></div><div class="agenda-item"><span class="agenda-time">Saint-Pierre</span><span class="agenda-event">Emmanuel Macron incontra il primo ministro canadese Mark Carney, con energia, sovranità e rapporti transatlantici al centro del confronto.</span></div><div class="agenda-item"><span class="agenda-time">Russia</span><span class="agenda-event">Terzo e ultimo giorno delle elezioni per tutti i 450 seggi della Duma e per diverse consultazioni regionali.</span></div></div>
+<div class="section-note" style="margin-top:10px;">5 appuntamenti verificati e riferiti alla giornata di oggi, 20 settembre 2026.</div>
 </div>
-<!-- ===== CONFRONTO: SCHENGEN, SCONTRO ITALIA-SPAGNA ===== -->
-<div class="section" id="confronto"><div class="section-head"><span class="section-tag tag-confronto">Confronto</span><h2 class="section-title">Putin nel giorno del voto: accuse all’Occidente; Usa e Ue rispondono con sanzioni e fondi</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Il voto per la Duma si apre mentre la guerra resta il principale terreno di scontro fra Mosca e Occidente. Nelle ultime ore Putin ha accusato l’Occidente di usare gli ucraini come “carne da cannone”; Washington ha intanto firmato nuove sanzioni contro la Russia e l’Ue ha trasferito 3,3 miliardi di euro a Kiev.</p></div><div class="articles"><div class="article lead"><h3>Mosca: «L’Occidente usa gli ucraini come carne da cannone»</h3><p>Putin ha legato il voto parlamentare alla guerra, accusando Kiev di interferire nelle elezioni russe e sostenendo che l’Europa alimenti la minaccia russa per recuperare prestigio. Ha inoltre chiesto un rafforzamento della difesa aerea e della deterrenza strategica. La versione russa presenta il conflitto come uno scontro imposto dall’Occidente.</p><span class="source">Fonte: <a href="https://www.reuters.com/world/putin-says-ukraine-interfering-russian-parliamentary-election-2026-09-18/" target="_blank" rel="noopener noreferrer">Reuters / ANSA</a></span></div><div class="article"><h3>Washington: nuove sanzioni contro energia e difesa russe</h3><p>Nelle prime ore del 19 settembre Trump ha firmato una legge che impone nuove sanzioni alla Russia, colpendo i settori dell’energia e della difesa. È una risposta concreta che contrasta con l’ipotesi, discussa nei giorni precedenti, di possibili aperture commerciali verso Mosca.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/europa/europa.shtml" target="_blank" rel="noopener noreferrer">ANSA</a></span></div><div class="article"><h3>Bruxelles: altri 3,3 miliardi a Kiev</h3><p>Il governo ucraino ha annunciato di aver ricevuto una tranche da 3,3 miliardi di euro nell’ambito del prestito europeo. Kiev ha indicato missili e droni tra le necessità prioritarie. Il sostegno finanziario europeo prosegue quindi parallelamente alla pressione sanzionatoria occidentale.</p><span class="source">Fonte: <a href="https://www.reuters.com/world/ukraine-receives-33-billion-under-eu-loan-pm-says-2026-09-18/" target="_blank" rel="noopener noreferrer">Reuters</a></span></div></div></div>
-<div class="section" id="estero"><div class="section-head"><span class="section-tag tag-europa">Dall'estero</span><h2 class="section-title">Groenlandia: Trump annuncia l’intesa sulla sicurezza, Copenaghen rivendica sovranità e autodeterminazione</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>L’annuncio di Trump e il comunicato danese descrivono la stessa intesa con accenti diversi: Washington insiste sulla libertà d’azione militare americana; Copenaghen sottolinea che sovranità danese e autodeterminazione groenlandese restano riconosciute.</p></div><div class="articles"><div class="article lead"><h3>Trump: «Controllo permanente sulla sicurezza della Groenlandia»</h3><p>Trump ha annunciato un’intesa con Danimarca e Groenlandia e l’avvio del processo per una presenza militare statunitense significativa. Secondo il presidente, nessun avversario potrà installare basi o compiere investimenti sensibili sull’isola senza l’approvazione americana.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/index.shtml" target="_blank" rel="noopener noreferrer">ANSA</a></span></div><div class="article"><h3>Frederiksen: «L’accordo riconosce la nostra sovranità»</h3><p>La premier danese Mette Frederiksen ha definito l’intesa positiva per Groenlandia, Danimarca, Nato ed Europa, precisando che riconosce sovranità e integrità territoriale del Regno e il diritto del popolo groenlandese all’autodeterminazione. La firma è prevista la prossima settimana a New York.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/2026/09/19/danimarca-sigla-accordo-con-usa-e-groenlandia-la-prossima-settimana-a-new-york_3bd05e7a-ab6b-44b1-9a3d-f3fb3d93dbf8.html" target="_blank" rel="noopener noreferrer">ANSA</a></span></div></div></div>
-<div class="section" id="italia"><div class="section-head"><span class="section-tag tag-italia">Italia</span><h2 class="section-title">Italia: muore Sandro Mazzola; nuova giornata difficile sulla rete ferroviaria</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Le notizie italiane delle prime ore del 19 settembre mescolano il lutto sportivo per uno dei simboli dell’Inter e nuovi disagi nei trasporti ferroviari.</p></div><div class="articles"><div class="article lead"><h3>È morto Sandro Mazzola, aveva 83 anni</h3><p>L’Inter ha annunciato poco prima dell’una la morte di Sandro Mazzola. Figlio di Valentino Mazzola, ha trascorso l’intera carriera nerazzurra: 17 stagioni, 565 partite ufficiali e 158 gol, quattro scudetti, due Coppe dei Campioni e due Coppe Intercontinentali. Con l’Italia vinse l’Europeo del 1968 e disputò la finale mondiale del 1970.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/topnews/index.shtml" target="_blank" rel="noopener noreferrer">ANSA</a></span></div><div class="article"><h3>Treni, ritardi fino a 150 minuti sulla Pisa-Roma</h3><p>La circolazione sulla Pisa-Roma è tornata regolare in serata dopo un guasto a un treno, ma Alta Velocità, Intercity e Regionali hanno accumulato ritardi fino a 150 minuti; segnalate anche limitazioni e cancellazioni.</p><span class="source">Fonte: <a href="https://www.ilfattoquotidiano.it/in-edicola/articoli/2026/09/19/treni-nuova-giornata-di-stop-e-forti-ritardi/8511288/" target="_blank" rel="noopener noreferrer">Il Fatto Quotidiano</a></span></div></div></div>
-<div class="section" id="disagio"><div class="section-head"><span class="section-tag tag-sicurezza">Disagio città</span><h2 class="section-title">Cronaca: scuola e sicurezza urbana restano al centro delle aperture</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Nelle edizioni notturne del 19 settembre trovano spazio le conseguenze dell’accoltellamento di un’insegnante a Roma e nuovi episodi locali di sicurezza e disagi.</p></div><div class="articles"><div class="article lead"><h3>Roma, il caso del 13enne che ha accoltellato l’insegnante resta in apertura</h3><p>Il caso avvenuto a Roma continua a occupare le prime pagine: secondo le ricostruzioni pubblicate, uno studente tredicenne avrebbe spruzzato spray urticante e ferito un’insegnante con un coltello. La docente non risulta in pericolo di vita.</p><span class="source">Fonte: <a href="https://www.ilfattoquotidiano.it/cronaca/" target="_blank" rel="noopener noreferrer">Il Fatto Quotidiano</a></span></div><div class="article"><h3>Firenze, mezzo dei vigili del fuoco si ribalta: due operatori feriti</h3><p>Nelle prime ore della mattina viene segnalato un incidente stradale che ha coinvolto un mezzo dei vigili del fuoco a Firenze, con due operatori feriti. Le informazioni disponibili sono ancora preliminari.</p><span class="source">Fonte: <a href="https://www.falsissimo.it/category/cronaca/" target="_blank" rel="noopener noreferrer">Falsissimo</a></span></div></div></div>
-<div class="section" id="europa"><div class="section-head"><span class="section-tag tag-europa">Europa</span><h2 class="section-title">Francia prepara difese contro droni e cyberattacchi; Italia-Spagna, tensione sui controlli Schengen</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>La sicurezza europea si muove su due piani: difesa da minacce ibride attribuite alla Russia e gestione dei controlli interni allo spazio Schengen.</p></div><div class="articles"><div class="article lead"><h3>Macron chiede un piano contro droni e attacchi informatici</h3><p>Macron ha ordinato al governo di preparare un piano per proteggere infrastrutture critiche e siti sensibili dell’industria della difesa. Il presidente francese sostiene che le minacce ibride russe si stiano intensificando e cita il recente episodio di Lipsia come esempio del rischio.</p><span class="source">Fonte: <a href="https://www.reuters.com/world/europe/france-prepares-react-russian-hybrid-threats-intensify-2026-09-18/" target="_blank" rel="noopener noreferrer">Reuters</a></span></div><div class="article"><h3>Schengen, Madrid attacca Roma; Tajani replica</h3><p>La Spagna ha criticato la proroga italiana dei controlli alle frontiere aeree e marittime con il Paese. Tajani ha definito la reazione spagnola “fuori luogo” e ha sostenuto che Roma stia applicando le regole europee per ragioni di sicurezza.</p><span class="source">Fonte: <a href="https://www.lasicilia.it/news/italia-mondo/3073718/prorogati-i-controlli-alle-frontiere-madrid-contro-roma-una-vergogna-tajani-fuori-luogo.html" target="_blank" rel="noopener noreferrer">La Sicilia</a></span></div></div></div>
-<div class="section" id="mondo"><div class="section-head"><span class="section-tag tag-mondo">Mondo</span><h2 class="section-title">Trump ridisegna la sicurezza artica; un falso report IA rischiò uno scontro Usa-Cina</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Nella notte americana emergono due dossier di sicurezza: l’accordo sulla Groenlandia e la rivelazione di un grave errore d’intelligence legato all’uso dell’intelligenza artificiale.</p></div><div class="articles"><div class="article lead"><h3>Groenlandia, gli Usa puntano a una presenza militare più forte</h3><p>Trump ha detto che gli Stati Uniti avvieranno immediatamente il processo per stabilire una presenza militare significativa sull’isola. Danimarca, Groenlandia e Stati Uniti prevedono di firmare l’intesa la prossima settimana a margine dell’Assemblea generale Onu.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/index.shtml" target="_blank" rel="noopener noreferrer">ANSA</a></span></div><div class="article"><h3>Cnn: falso rapporto IA quasi innescò un intervento contro una nave cinese</h3><p>Secondo un’esclusiva Cnn ripresa da ANSA, la scorsa primavera un rapporto d’intelligence assistito dall’IA avrebbe identificato erroneamente il carico di una nave cinese come materiale legato ad armi nucleari. Militari e jet Usa furono preparati all’intervento prima che verifiche successive mostrassero che il rapporto era falso.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/2026/09/19/rapporto-intelligence-generato-con-ia-ha-rischiato-di-scatenare-guerra-usa-cina_7615ea70-4ec5-43ce-8610-60635cca4a36.html" target="_blank" rel="noopener noreferrer">ANSA / CNN</a></span></div></div></div>
-<div class="section" id="finanza"><div class="section-head"><span class="section-tag tag-finanza">Finanza</span><h2 class="section-title">Ecofin: energia ed extraprofitti al centro; Roma spinge per una risposta europea</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Il vertice informale Ecofin prosegue a Dublino. Il caro energia resta uno dei temi economici più urgenti e l’Italia sostiene un intervento sugli extraprofitti, mentre la Commissione per ora non presenta una proposta comune.</p></div><div class="articles"><div class="article lead"><h3>Italia: «Pronti ad andare anche da soli sugli extraprofitti»</h3><p>Secondo Repubblica, Roma guida con Berlino, Madrid e Varsavia il fronte favorevole a un’imposta europea sugli extraprofitti energetici. Bruxelles frena e il confronto potrebbe slittare all’Ecofin di ottobre.</p><span class="source">Fonte: <a href="https://www.repubblica.it/economia/" target="_blank" rel="noopener noreferrer">la Repubblica</a></span></div><div class="article"><h3>Giorgetti: lo choc energetico è diventato un’emergenza economica</h3><p>Intervenendo ai Portofino Talks mentre partecipava all’Ecofin di Dublino, il ministro dell’Economia ha descritto il caro energia come un’emergenza economica. Imprese e operatori chiedono costi più bassi e maggiore certezza regolatoria.</p><span class="source">Fonte: <a href="https://www.ansa.it/liguria/notizie/2026/09/18/portofino-talks-energia-e-economia-protagoniste-della-prima-giornata_cff2cd06-4b3b-4e7a-8dc2-b8a63757ead0.html" target="_blank" rel="noopener noreferrer">ANSA</a></span></div></div></div>
-<div class="section" id="benessere"><div class="section-head"><span class="section-tag tag-benessere">Benessere</span><h2 class="section-title">Benessere: nelle ultime 10 ore nessuna notizia sanitaria di pari rilievo verificata</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Per rispettare il limite temporale richiesto, questa edizione non recupera studi o notizie sanitarie più vecchi solo per riempire la sezione. Verrà aggiornata quando emergeranno contenuti verificabili pubblicati nella finestra delle ultime dieci ore.</p></div><div class="articles"><div class="article lead"><h3>Sezione in aggiornamento</h3><p>Nessun contenuto sanitario di rilievo, verificato su fonti affidabili e pubblicato nella finestra temporale richiesta, è stato inserito. La scelta evita di riciclare notizie del 17 o 18 settembre fuori soglia.</p><span class="source">Fonte: Redazione Il Contribuente</span></div></div></div>
-<div class="section" id="tecnologia"><div class="section-head"><span class="section-tag tag-tecnologia">Tecnologia</span><h2 class="section-title">Intelligence e IA: un errore del chatbot avrebbe quasi provocato un incidente militare con la Cina</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>La notizia tecnologica più delicata della notte riguarda l’uso dell’IA nei processi d’intelligence militare: un output errato sarebbe arrivato fino ai vertici operativi prima di essere bloccato.</p></div><div class="articles"><div class="article lead"><h3>Un report generato con IA avrebbe quasi innescato un’operazione contro una nave cinese</h3><p>Secondo Cnn, ripresa da ANSA alle 02:06, un rapporto d’intelligence prodotto con l’ausilio di un chatbot indicava erroneamente che una nave cinese trasportasse componenti per un programma nucleare. Personale armato e jet statunitensi furono predisposti all’azione; una verifica umana successiva stabilì che il contenuto era “completamente falso”.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/2026/09/19/rapporto-intelligence-generato-con-ia-ha-rischiato-di-scatenare-guerra-usa-cina_7615ea70-4ec5-43ce-8610-60635cca4a36.html" target="_blank" rel="noopener noreferrer">ANSA / CNN</a></span></div></div></div>
-<div class="section" id="ia"><div class="section-head"><span class="section-tag tag-tecnologia">IA</span><h2 class="section-title">IA: il caso del falso rapporto militare riapre il tema della verifica umana</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Il caso riportato dalla Cnn mostra il rischio di usare modelli generativi in contesti ad altissima conseguenza senza controlli robusti. Qui il punto non è una capacità teorica dell’IA, ma un episodio operativo in cui un errore avrebbe prodotto una catena di allerta militare.</p></div><div class="articles"><div class="article lead"><h3>Il chatbot sbaglia il carico della nave: scatta l’allarme militare</h3><p>Il rapporto indicava materiale destinato a un programma di armi nucleari. Solo prima dell’autorizzazione finale funzionari militari avrebbero riesaminato il documento, scoprendo che l’identificazione del carico era stata generata erroneamente dal sistema di IA.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/2026/09/19/rapporto-intelligence-generato-con-ia-ha-rischiato-di-scatenare-guerra-usa-cina_7615ea70-4ec5-43ce-8610-60635cca4a36.html" target="_blank" rel="noopener noreferrer">ANSA / CNN</a></span></div></div></div>
-<div class="section" id="immigrazione-italia"><div class="section-head"><span class="section-tag tag-migra">Immigrazione Italia</span><h2 class="section-title">Viminale: accordo con Paesi partner sui “dublinanti”, Roma chiede compensazioni</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Il confronto sull’applicazione del nuovo Patto europeo sulle migrazioni entra nella fase pratica. Fonti del Viminale sostengono che i casi antecedenti al 12 giugno siano considerati azzerati nell’ambito di un’intesa con alcuni partner.</p></div><div class="articles"><div class="article lead"><h3>Roma: «Azzerati i dublinanti arrivati prima del 12 giugno»</h3><p>Secondo fonti del Viminale citate nella serata del 18 settembre, l’Italia e alcuni principali Paesi europei considerano superati i casi relativi agli arrivi precedenti all’entrata in vigore del nuovo Patto. Per gli ingressi successivi Roma intende porre il tema di compensazioni, anche in relazione agli sbarchi effettuati da navi Ong battenti bandiera di altri Paesi Ue.</p><span class="source">Fonte: <a href="https://agrigento.lasicilia.it/news/italia-mondo/3065004/il-viminale-risponde-alla-germania-c-e-un-accordo-con-alcuni-stati-partner.html" target="_blank" rel="noopener noreferrer">La Sicilia</a></span></div></div></div>
-<div class="section" id="dati-immigrazione">
+<div class="section" id="confronto"><div class="section-head"><span class="section-tag tag-confronto">Confronto</span><h2 class="section-title">Confronto — Intelligenza artificiale: crescita, sicurezza e competizione tra Stati Uniti e Cina</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>L’intelligenza artificiale entra oggi contemporaneamente nell’agenda politica americana e nei colloqui economici tra Stati Uniti e Cina. Donald Trump ha annunciato una nuova «Forza per l’IA», mentre a New York Scott Bessent e He Lifeng discutono anche di guardrail e sicurezza dei modelli. Le due notizie mostrano due livelli diversi: politica interna statunitense e negoziato strategico internazionale. La terza voce serve a distinguere gli annunci dagli strumenti già operativi.</p></div><div class="duel"><div class="duel-fact"><div class="duel-fact-label">Il fatto</div><div class="duel-fact-text">Tra il 13 e il 20 Settembre 2026, Francia, Lituania, Germania e Polonia hanno reso pubbliche misure di preparazione a possibili attacchi russi, diretti o "ibridi" (sabotaggi, droni, attacchi informatici). Nessun governo ha indicato una data o un obiettivo specifico di un attacco imminente.</div></div><div class="duel-grid"><div class="duel-side left"><span class="duel-tag">PROSPETTIVA A</span><div class="duel-headline">Trump annuncia una «Forza per l’Intelligenza Artificiale»</div><p class="body">Donald Trump ha annunciato su Truth Social l’intenzione di creare una struttura dedicata all’intelligenza artificiale, paragonandola alla Space Force istituita nel 2019. L’obiettivo dichiarato è sostenere la crescita del settore e contrastare gli usi illeciti. Restano però da definire competenze, finanziamento, personale e collocazione amministrativa. Per questo l’elemento verificabile oggi è l’annuncio politico, non l’esistenza di una struttura già pienamente operativa.</p><div class="body-extra"><p>La Lituania ha reso noto un piano di evacuazione della capitale Vilnius verso il confine polacco, utilizzando il voivodato di Podlaskie come corridoio di transito in caso di conflitto. In Germania, la Bundeswehr ha detto a Bloomberg di star preparando gli ospedali civili a gestire fino a 1.000 feriti al giorno in caso di attacco russo alla NATO; il ministero della Difesa tedesco non ha smentito la cifra.</p></div><span class="source">Fonte: ANSA · 20/09/2026, 06:15</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="duel-side right"><span class="duel-tag">PROSPETTIVA B</span><div class="duel-headline">Washington e Pechino discutono guardrail per l’IA</div><p class="body">Nei colloqui di New York tra Scott Bessent e He Lifeng l’intelligenza artificiale viene trattata insieme a commercio e minerali critici. Reuters riferisce che il confronto riguarda anche rischi e regole per modelli aperti e chiusi. Il negoziato mostra che l’IA è ormai parte della competizione strategica tra le due potenze. Non è però ancora stato annunciato un accordo bilaterale: il risultato dovrà essere misurato sugli eventuali impegni concreti.</p><div class="body-extra"><p>Diverse testate italiane hanno ripreso queste notizie con toni più allarmistici, parlando di "fuggi fuggi" dei governi europei senza citare fonti primarie dirette. Le agenzie e le testate istituzionali (France Info, Bloomberg, NPR, Ukrainska Pravda) confermano le singole misure nazionali, ma nessuna di esse parla di un attacco russo imminente o pianificato: si tratta, nelle parole dei governi coinvolti, di misure precauzionali.</p></div><span class="source">Fonte: Reuters · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div><div class="duel-grid" style="grid-template-columns:1fr; border-top:1px solid var(--rule);"><div class="duel-side third"><span class="duel-tag">TERZA VOCE — VERIFICA INDIPENDENTE</span><div class="duel-headline">Annuncio nazionale e negoziato internazionale non sono la stessa cosa</div><p class="body">Le due iniziative possono convivere senza essere contraddittorie. Washington può creare una propria struttura nazionale e, nello stesso tempo, negoziare con Pechino regole minime per ridurre rischi condivisi. Il punto da verificare nelle prossime ore è se agli annunci seguiranno atti amministrativi negli Stati Uniti e impegni formalizzati nel confronto con la Cina. Fino ad allora è corretto distinguere intenzioni politiche, colloqui diplomatici e misure effettivamente operative.</p><div class="body-extra"><p>La valutazione NATO introduce un elemento indipendente che né conferma né smentisce del tutto le due prospettive nazionali: da un lato certifica che il rischio di episodi ibridi è concreto e in aumento, dall'altro esclude che sia in corso una escalation verso un conflitto aperto nell'immediato, ridimensionando implicitamente i toni più allarmistici circolati su alcuni media.</p></div><span class="source">Fonte: ANSA / Reuters · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div></div><div class="section" id="estero"><div class="section-head"><span class="section-tag tag-europa">Dall'estero</span><h2 class="section-title">Dall’estero: come la stampa internazionale racconta oggi l’Italia</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>la diffusione del West Nile è diventata uno dei temi attraverso cui la stampa internazionale osserva l’Italia. AP segnala oltre 650 infezioni nel 2026 e una stagione di trasmissione più lunga, collegata a estati più calde e favorevoli alle zanzare. Il dato italiano è influenzato anche da una rete di sorveglianza particolarmente sviluppata. Il punto non è quindi soltanto il numero assoluto dei casi, ma il cambiamento geografico e stagionale del rischio.</p></div><div class="articles"><div class="article lead"><h3>La stampa internazionale guarda all’Italia attraverso West Nile, clima e capacità sanitaria</h3><p>Associated Press dedica un approfondimento all’espansione del virus West Nile in Italia e nel resto d’Europa. La ricostruzione mette in evidenza come temperature più elevate e stagioni calde più lunghe stiano ampliando il periodo nel quale le zanzare possono trasmettere il virus.</p><div class="body-extra"><p>La dichiarazione arriva dopo la lettera della segretaria del Pd Elly Schlein, che aveva chiesto a Meloni di fissare una data per le urne. Meloni ha risposto che valuterà la proposta di collaborazione su clima ed energia contenuta nella lettera, ma ha escluso un election day anticipato.</p><p>La stampa estera nota che il governo Meloni è ora il più longevo della storia repubblicana italiana, un dato che diversi osservatori internazionali attribuiscono più alla frammentazione delle opposizioni che a una particolare stabilità del programma di governo.</p></div><p class="body body-extra">L’Italia, secondo i dati citati dall’agenzia, ha superato 650 infezioni nel 2026 e rappresenta circa metà dei casi europei registrati. La maggior parte delle infezioni resta asintomatica o lieve, mentre le forme neurologiche più serie interessano soprattutto anziani e persone fragili.</p><p class="body body-extra">Gli esperti italiani citati sottolineano anche un elemento metodologico: il Paese dispone di un sistema di sorveglianza esteso, capace di intercettare più casi rispetto a sistemi meno capillari. La notizia viene quindi letta all’estero sia come questione sanitaria sia come segnale degli effetti che il riscaldamento climatico può avere sulla distribuzione delle malattie trasmesse da vettori.</p><span class="source">Fonte: Associated Press · 19/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Italia osservata dall’estero alla vigilia dell’Assemblea generale ONU</h3><p>Reuters descrive l’apertura della settimana dell’Assemblea generale dell’ONU come uno dei passaggi diplomatici più complessi dell’anno.</p><div class="body-extra"><p>Secondo Al Jazeera, il primato si spiega soprattutto con la solidità della maggioranza parlamentare di centrodestra, più che con l'assenza di tensioni interne alla coalizione. Diversi analisti citati dalle due testate segnalano che la stabilità di governo non ha finora coinciso con un'accelerazione delle riforme istituzionali promesse.</p><p>La stampa italiana ha ripreso la notizia con toni divisi: i quotidiani vicini alla maggioranza la presentano come segno di affidabilità, quelli vicini all'opposizione la leggono come effetto della debolezza del campo avversario.</p></div><p class="body body-extra">Al centro ci sono la guerra in Ucraina, le tensioni in Medio Oriente, la sicurezza energetica e la governance dell’intelligenza artificiale.</p><p class="body body-extra">Per l’Italia il vertice rappresenta soprattutto un terreno di confronto con gli alleati europei e atlantici mentre aumentano i rischi nel Golfo e nel Mar Rosso. La presenza di quasi 130 leader rende New York il punto di convergenza di dossier che Roma segue direttamente: sicurezza delle rotte, rapporti con Washington, difesa europea e gestione delle crisi regionali. La stampa internazionale non presenta quindi l’Italia come protagonista isolata, ma come parte di un sistema di alleanze chiamato a reagire contemporaneamente a più fronti di instabilità.</p><span class="source">Fonte: Reuters · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="italia"><div class="section-head"><span class="section-tag tag-italia">Italia</span><h2 class="section-title">Italia: istituzioni, conti pubblici e agenda del 20 settembre</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>il Presidente della Repubblica è atteso oggi a Pordenone per la ventisettesima edizione di Pordenonelegge. L’appuntamento rientra nell’agenda istituzionale del 20 settembre e mette al centro cultura, lettura e libertà. Non è un annuncio politico, ma un evento istituzionale programmato. La presenza del Capo dello Stato dà alla manifestazione un rilievo nazionale.</p></div><div class="articles"><div class="article lead"><h3>Mattarella oggi a Pordenonelegge, giornata dedicata a libri e libertà</h3><p>Sergio Mattarella è atteso alle 17 a Pordenone per la ventisettesima edizione di Pordenonelegge, la Festa del libro e della libertà.</p><div class="body-extra"><p>Tra le priorità indicate dal Tesoro: la stabilizzazione del taglio del cuneo fiscale per i redditi medio-bassi, un rimodellamento dell'Irpef, il rifinanziamento dei fondi per le famiglie e una razionalizzazione selettiva della spesa ministeriale. I tecnici del Mef lavorano alla cornice numerica prima della trasmissione formale.</p><p>L'opposizione chiede un rapido passaggio parlamentare sui saldi di spesa e garanzie sul finanziamento di sanità e scuola; la maggioranza punta invece a blindare l'impianto generale prima di renderlo pubblico nel dettaglio.</p></div><p class="body body-extra">L’appuntamento figura tra gli eventi istituzionali principali della giornata del 20 settembre.</p><p class="body body-extra">La manifestazione riunisce autori, editori, lettori e operatori culturali e quest’anno riceve un’attenzione particolare per la presenza del Presidente della Repubblica. Il tema della libertà culturale si inserisce in una fase nella quale il Quirinale ha più volte richiamato il valore delle istituzioni culturali e del lavoro di chi opera nei settori creativi. L’evento di oggi non introduce di per sé nuovi provvedimenti, ma rappresenta uno dei momenti pubblici più rilevanti dell’agenda italiana della domenica.</p><span class="source">Fonte: ANSA · agenda 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Bollo auto e Pnrr, Bruxelles chiarisce: il Piano è legato ai risultati</h3><p>Il dibattito sul taglio del bollo auto continua dopo i chiarimenti arrivati da Bruxelles. Valdis Dombrovskis ha ricordato che il Pnrr è uno strumento basato sui risultati e che può quindi esistere un disallineamento tra costi sostenuti e pagamenti europei.</p><div class="body-extra"><p>Schlein ha ribadito nelle stesse ore la richiesta a Meloni di fissare una data per le prossime elezioni, sostenendo che «prima si vota meglio è» per il Paese. Conte ha invece fatto sapere di non essere stato consultato prima dell'invio della lettera, alimentando le tensioni nella coalizione di opposizione.</p><p>Nel Pd, la mossa di Schlein viene letta come un tentativo di occupare uno spazio politico su un tema, quello energetico, su cui il partito ritiene di avere una proposta più credibile del governo.</p></div><p class="body body-extra">Il governo italiano ha ribadito che la misura sul bollo viene finanziata con risorse nazionali. La questione resta osservata con attenzione perché si inserisce nella preparazione della manovra e nel confronto più generale sui conti pubblici.</p><p class="body body-extra">Le dichiarazioni europee non equivalgono a un via libera preventivo su ogni scelta di bilancio: indicano piuttosto il funzionamento del meccanismo Pnrr. Per valutare l’impatto definitivo della misura serviranno i testi di bilancio e le coperture formalmente indicate.</p><span class="source">Fonte: ANSA Economia · aggiornamento 19/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Giorgetti guarda all’uscita dell’Italia dalla procedura Ue per disavanzo</h3><p>Il ministro dell’Economia Giancarlo Giorgetti ha dichiarato di essere speranzoso sull’uscita dell’Italia dalla procedura europea per disavanzo.</p><div class="body-extra"><p>Un'indagine sotto copertura condotta dalle forze dell'ordine italiane ha permesso di risalire alla rete e di coordinare gli arresti con le autorità estere coinvolte. Il caso conferma l'attenzione crescente delle procure italiane su questo tipo di reati commessi attraverso piattaforme di messaggistica cifrata.</p><p>Le indagini proseguono per identificare eventuali altri utenti della rete in altri Paesi europei; non sono stati resi noti ulteriori dettagli sulle vittime per ragioni di tutela.</p></div><p class="body body-extra">Il tema è centrale nella preparazione della prossima manovra perché gli spazi fiscali dipendono anche dal percorso concordato con le istituzioni europee.</p><p class="body body-extra">L’attenzione si concentra sul rapporto deficit/Pil e sulla capacità del governo di mantenere gli impegni di finanza pubblica mentre finanzia nuove misure. L’eventuale chiusura della procedura richiede comunque una valutazione formale europea e non deriva automaticamente dalle aspettative espresse dall’esecutivo. Per questo le prossime comunicazioni statistiche e i documenti di bilancio saranno decisivi per capire quanto margine effettivo avrà Roma.</p><span class="source">Fonte: ANSA Politica · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="disagio"><div class="section-head"><span class="section-tag tag-sicurezza">Disagio città</span><h2 class="section-title">Disagio città: tre episodi di cronaca tra Napoli, Milano e Ischia</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>l’episodio è avvenuto a Napoli e le responsabilità penali dovranno essere accertate nel procedimento. Un arresto non equivale a una condanna. Le prime ricostruzioni descrivono un intervento della vittima durante una lite. Gli investigatori stanno ricostruendo sequenza e responsabilità.</p></div><div class="articles"><div class="article lead"><h3>Napoli, accoltellato mentre tenta di sedare una lite: arrestato un diciannovenne</h3><p>Un giovane di diciannove anni è stato arrestato a Napoli nell’ambito delle indagini su un accoltellamento avvenuto durante una lite.</p><div class="body-extra"><p>Secondo la ricostruzione degli investigatori, il diverbio sarebbe nato per futili motivi legati a una borsa, poi degenerato in un'aggressione fisica. La vittima ha riportato lesioni giudicate guaribili in pochi giorni.</p><p>I due arrestati, con precedenti di polizia, sono stati posti agli arresti domiciliari in attesa dell'udienza di convalida.</p></div><p class="body body-extra">Secondo la ricostruzione iniziale, la persona ferita sarebbe intervenuta per tentare di sedare lo scontro e sarebbe stata colpita con un’arma da taglio.</p><p class="body body-extra">Le forze dell’ordine hanno raccolto testimonianze ed elementi utili a ricostruire la dinamica. Come in ogni procedimento nella fase iniziale, le contestazioni dovranno essere verificate nelle sedi giudiziarie e vale la presunzione di innocenza fino a sentenza definitiva. L’episodio torna a porre l’attenzione sulla violenza improvvisa negli spazi urbani, ma il singolo caso non consente da solo di descrivere una tendenza generale.</p><span class="source">Fonte: ANSA Cronaca · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Milano, motociclista di 47 anni muore dopo l’urto contro una balaustra</h3><p>Un uomo di 47 anni è morto a Milano dopo un incidente in moto concluso con l’impatto contro una balaustra.</p><div class="body-extra"><p>L'episodio si inserisce in una serie di rapine di catenine e oggetti d'oro segnalate nelle ultime settimane in diverse città del Nord Italia, spesso ai danni di passanti soli in orario serale.</p><p>Il fermato dovrà rispondere di rapina aggravata; sono in corso accertamenti per verificarne un possibile coinvolgimento in episodi analoghi.</p></div><p class="body body-extra">I soccorsi sono intervenuti sul posto, ma le condizioni del motociclista sono risultate gravissime.</p><p class="body body-extra">Gli accertamenti sulla dinamica sono affidati alle autorità competenti, che dovranno stabilire le cause della perdita di controllo e verificare l’eventuale presenza di altri fattori. Nelle prime ricostruzioni non è prudente attribuire responsabilità prima della conclusione dei rilievi. L’episodio si aggiunge agli incidenti stradali registrati nel fine settimana e richiama l’attenzione sulla vulnerabilità di motociclisti e utenti delle due ruote.</p><span class="source">Fonte: ANSA Cronaca · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Ischia, scontro tra moto ed e-bike: muore un uomo di 39 anni</h3><p>Un uomo di 39 anni è morto sull’isola d’Ischia in seguito a uno scontro tra la moto sulla quale viaggiava e una e-bike.</p><div class="body-extra"><p>Le vittime hanno sporto denuncia; gli agenti stanno verificando eventuali collegamenti tra i tre episodi, avvenuti a breve distanza di tempo l'uno dall'altro nella zona della stazione ferroviaria.</p><p>Il fermato è stato portato in questura per l'identificazione; la Procura valuterà le accuse da contestare formalmente.</p></div><p class="body body-extra">I soccorsi sono stati attivati rapidamente, ma le conseguenze dell’impatto sono state fatali.</p><p class="body body-extra">Le forze dell’ordine hanno avviato gli accertamenti necessari per ricostruire la dinamica e comprendere come i due mezzi siano entrati in collisione. Il caso evidenzia ancora una volta la convivenza sempre più complessa sulle strade tra veicoli tradizionali e mezzi elettrici leggeri. Anche in questo caso, però, la ricostruzione tecnica viene prima di qualsiasi conclusione sulle responsabilità.</p><span class="source">Fonte: ANSA Cronaca · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="europa"><div class="section-head"><span class="section-tag tag-europa">Europa</span><h2 class="section-title">Europa: urne in Germania, trasporti Ue e sicurezza nell’Artico</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>oggi Berlino vota per le elezioni comunali mentre nel Meclemburgo-Pomerania Anteriore si tengono elezioni regionali. Casa, servizi e degrado sono tra i temi più presenti nella campagna berlinese. Il voto viene osservato anche per i riflessi sugli equilibri politici nazionali tedeschi. I risultati effettivi, non i sondaggi della vigilia, determineranno il nuovo quadro.</p></div><div class="articles"><div class="article lead"><h3>Berlino al voto tra emergenza abitativa e degrado urbano</h3><p>Gli elettori di Berlino sono chiamati alle urne in una consultazione dominata dal costo della casa, dalla pressione sui servizi urbani e dal tema del degrado.</p><div class="body-extra"><p>Macron ha dichiarato che «nessuno è al riparo» dagli attacchi ibridi e ha promesso nuovi fondi per la sicurezza delle reti elettriche, delle telecomunicazioni e dei trasporti francesi. Il piano sarà presentato nelle prossime settimane al Parlamento.</p><p>Il governo francese non ha attribuito formalmente alla Russia i singoli episodi citati, mantenendo una linea di cautela sull'attribuzione diretta pur rafforzando le misure difensive.</p></div><p class="body body-extra">La consultazione arriva nello stesso giorno delle regionali nel Meclemburgo-Pomerania Anteriore e per questo assume un peso che supera la dimensione locale.</p><p class="body body-extra">Le forze politiche tedesche misureranno il risultato anche in relazione alla tenuta delle rispettive leadership nazionali. Alla vigilia diverse rilevazioni hanno indicato una competizione molto aperta, ma i sondaggi non costituiscono un risultato e possono avere margini di errore. La giornata elettorale sarà quindi letta soprattutto attraverso affluenza, distribuzione territoriale del voto e capacità dei partiti di costruire maggioranze.</p><span class="source">Fonte: ANSA Europa · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Meclemburgo-Pomerania Anteriore alle urne, test politico per la Germania</h3><p>Il Meclemburgo-Pomerania Anteriore vota oggi per rinnovare il parlamento regionale.</p><div class="body-extra"><p>Il piano si inserisce in un più ampio programma di rafforzamento della sicurezza nazionale lituana, che comprende anche investimenti nella difesa del confine con Russia e Bielorussia annunciati nelle scorse settimane.</p><p>Le autorità lituane hanno precisato che si tratta di pianificazione precauzionale, comune tra i Paesi baltici, e non di una risposta a un rischio imminente specifico.</p></div><p class="body body-extra">La consultazione viene seguita a Berlino perché può offrire indicazioni sul rapporto di forza tra i principali partiti, ma resta un’elezione regionale con caratteristiche proprie.</p><p class="body body-extra">La campagna si è concentrata su economia, sicurezza, infrastrutture e capacità dei governi locali di rispondere alle difficoltà delle aree meno dinamiche. Il risultato sarà analizzato anche alla luce della partecipazione e delle differenze tra centri urbani e territori periferici. Qualunque lettura nazionale dovrà però tenere conto del contesto specifico del Land e non trasformare automaticamente il voto locale in una previsione sulle future elezioni federali.</p><span class="source">Fonte: ANSA · agenda 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Dublino, riunione dei ministri dei Trasporti dell’Unione europea</h3><p>A Dublino è in programma oggi una riunione dei ministri dei Trasporti dell’Unione europea.</p><div class="body-extra"><p>Tusk ha parlato di un rischio «reale» di violazioni dei confini orientali dell'Alleanza, promettendo una risposta ferma in caso di nuove incursioni. Il governo polacco ha rafforzato la presenza di mezzi NATO lungo il confine orientale.</p><p>Diverse cancellerie europee, tra cui quella tedesca, hanno espresso solidarietà alla Polonia senza tuttavia annunciare nuovi dispiegamenti militari immediati.</p></div><p class="body body-extra">L’incontro arriva mentre Bruxelles lavora contemporaneamente sulla decarbonizzazione, sulla resilienza delle infrastrutture e sulla competitività dei sistemi logistici europei.</p><p class="body body-extra">Il confronto riguarda anche la capacità dell’Unione di mantenere collegamenti efficienti in un contesto geopolitico più instabile. Le riunioni ministeriali consentono ai governi di confrontare priorità e possibili compromessi prima dei passaggi legislativi formali. Per questo eventuali dichiarazioni della giornata dovranno essere distinte dalle decisioni già approvate a livello europeo.</p><span class="source">Fonte: ANSA Euroagenda · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Artico e Nato, problemi agli equipaggiamenti Usa durante un’esercitazione in Norvegia</h3><p>Durante un’esercitazione in Norvegia alcuni Marines statunitensi hanno dovuto sostituire gli scarponi danneggiati dal freddo, acquistando nuove calzature adatte alle condizioni artiche.</p><div class="body-extra"><p>Il ministero della Difesa tedesco non ha smentito la cifra riportata da Bloomberg, confermando che la pianificazione sanitaria per scenari bellici fa parte degli esercizi di preparazione della Germania in ambito NATO.</p><p>Il piano tedesco segue analoghe esercitazioni di evacuazione di feriti condotte nei mesi scorsi, e si inquadra nel più ampio sforzo di riarmo e preparazione militare della Germania annunciato dal governo Merz.</p></div><p class="body body-extra">L’episodio ha provocato imbarazzo perché la preparazione logistica è una componente essenziale delle esercitazioni in climi estremi.</p><p class="body body-extra">Il caso assume rilievo in un momento in cui l’Artico è sempre più centrale nella pianificazione militare della Nato e nella competizione strategica tra Russia e Paesi occidentali. Le condizioni ambientali rendono particolarmente impegnativi trasporto, abbigliamento, comunicazioni e manutenzione dei mezzi. Il problema segnalato non consente comunque di dedurre da solo un’insufficienza generale delle forze coinvolte.</p><span class="source">Fonte: ANSA Europa · 19/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="mondo"><div class="section-head"><span class="section-tag tag-mondo">Mondo</span><h2 class="section-title">Mondo: ONU, confronto Usa-Cina e tensioni in Medio Oriente</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>quasi 130 capi di Stato e di governo partecipano alla settimana dell’Assemblea generale delle Nazioni Unite. Guerre, sicurezza energetica e intelligenza artificiale sono tra i dossier principali. L’ONU affronta anche un dibattito sulla propria capacità di incidere sulle crisi. Le dichiarazioni dei leader dovranno essere distinte da eventuali decisioni operative.</p></div><div class="articles"><div class="article lead"><h3>Leader mondiali a New York per l’ONU tra Ucraina, Medio Oriente e intelligenza artificiale</h3><p>La settimana dell’Assemblea generale delle Nazioni Unite si apre a New York in un quadro segnato dalle guerre in Medio Oriente e Ucraina e dalla crescente discussione internazionale sull’intelligenza artificiale.</p><div class="body-extra"><p>Guterres ha chiesto ai leader mondiali di scegliere «la cooperazione, non la resa», criticando la frammentazione geopolitica in corso e il rallentamento degli impegni climatici globali. Ha inoltre sollecitato regole condivise sull'intelligenza artificiale prima che «la tecnologia superi la capacità di governarla».</p><p>Il discorso arriva in una settimana segnata da tensioni tra grandi potenze e da un'agenda dell'Assemblea Generale che include, tra gli altri temi, il vertice previsto tra Stati Uniti e Cina.</p></div><p class="body body-extra">Reuters riferisce che quasi 130 capi di Stato e di governo sono attesi agli incontri.</p><p class="body body-extra">Il vertice arriva mentre il sistema multilaterale è sottoposto a forti pressioni e il Consiglio di Sicurezza continua a essere condizionato dai veti delle grandi potenze. Accanto ai conflitti tradizionali entra con forza nell’agenda anche il tema delle regole globali per l’IA. I colloqui bilaterali che accompagneranno l’Assemblea potrebbero produrre iniziative diplomatiche, ma la loro efficacia andrà valutata sulla base di risultati concreti e non soltanto delle dichiarazioni pubbliche.</p><span class="source">Fonte: Reuters · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Stati Uniti e Cina riaprono il confronto su commercio, IA e minerali critici</h3><p>Il segretario al Tesoro statunitense Scott Bessent e il vicepremier cinese He Lifeng avviano oggi a New York un nuovo round di colloqui economici.</p><div class="body-extra"><p>Pechino considera qualsiasi fornitura militare a Taipei una linea rossa che comprometterebbe il clima negoziale sui dossier commerciali e tecnologici in discussione tra le due potenze. La Casa Bianca non ha confermato né smentito l'entità del pacchetto d'armi in esame.</p><p>Il vertice, se confermato, sarebbe il primo incontro diretto tra i due leader dall'inizio del nuovo mandato di Trump, ed è atteso anche come banco di prova sui dazi e sulle catene di approvvigionamento dei semiconduttori.</p></div><p class="body body-extra">Reuters indica tra i temi principali la tregua commerciale, i dazi, l’accesso ai minerali critici e le possibili regole di sicurezza per l’intelligenza artificiale.</p><p class="body body-extra">I due governi cercano di mantenere aperto un canale di dialogo mentre restano divergenze significative sulle forniture strategiche e sulle restrizioni tecnologiche. L’incontro ha anche la funzione di preparare il terreno ai contatti tra Donald Trump e Xi Jinping. La presenza di numerosi dossier contemporaneamente rende improbabile che ogni questione venga risolta in un solo incontro: ciò che potrà essere verificato saranno eventuali impegni specifici annunciati al termine dei colloqui.</p><span class="source">Fonte: Reuters · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Medio Oriente, resta alta l’allerta dopo i raid Houthi</h3><p>Dopo i raid rivendicati dagli Houthi contro obiettivi in Arabia Saudita, le autorità statunitensi hanno innalzato il livello di attenzione per i propri cittadini nell’area.</p><div class="body-extra"><p>Tra i temi al centro dei colloqui bilaterali: la guerra in Ucraina, la crisi a Gaza, la governance dell'intelligenza artificiale e il finanziamento climatico verso i Paesi in via di sviluppo, in vista della prossima conferenza COP.</p><p>Diverse delegazioni hanno segnalato la difficoltà di trovare un testo condiviso sulle riforme del Consiglio di Sicurezza, tema ricorrente da anni nei lavori assembleari.</p></div><p class="body body-extra">L’ambasciata Usa in Israele ha richiamato la possibilità di cancellazioni dei voli, chiusure dello spazio aereo e altri disagi.</p><p class="body body-extra">Gli Houthi hanno rivendicato attacchi contro obiettivi a Riad e impianti Aramco a Yanbu, collegandoli al confronto con l’Arabia Saudita. Le informazioni sulle conseguenze materiali degli attacchi devono essere verificate separatamente dalle rivendicazioni delle parti. Per i viaggiatori e per le compagnie aeree, il dato più immediato riguarda quindi le misure di sicurezza e l’eventuale modifica delle rotte.</p><span class="source">Fonte: ANSA Mondo · aggiornamento 19-20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="finanza"><div class="section-head"><span class="section-tag tag-finanza">Finanza</span><h2 class="section-title">Finanza: carburanti e credito al consumo sotto osservazione</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>i prezzi autostradali non coincidono con la media nazionale self-service. Codacons segnala punte molto elevate sulle tratte autostradali, mentre il Mimit pubblica medie nazionali più basse. Per confrontare correttamente i dati bisogna quindi distinguere rete, modalità di servizio e media territoriale. Le punte non vanno presentate come prezzo medio pagato da tutti gli automobilisti.</p></div><div class="articles"><div class="article lead"><h3>Carburanti, gasolio in autostrada sfiora 2,9 euro e il servito arriva fino a 3,1</h3><p>Il prezzo del gasolio torna al centro dell’attenzione dopo l’allarme del Codacons sulle quotazioni registrate in autostrada. Secondo l’associazione, il diesel self arriva a sfiorare 2,9 euro al litro su alcune tratte, mentre in modalità servita sono state rilevate punte fino a 3,1 euro.</p><div class="body-extra"><p>L'aumento è legato al rialzo delle quotazioni internazionali del petrolio e alla pressione della domanda in vista dell'inverno. Le associazioni dei consumatori chiedono un intervento del governo sul fronte delle accise, mentre l'esecutivo valuta un'eventuale proroga selettiva degli sconti già in vigore.</p><p>Il rincaro pesa in particolare sul trasporto merci su gomma, con le associazioni di categoria che segnalano un aumento dei costi logistici trasferito solo in parte sui prezzi finali.</p></div><p class="body body-extra">L’Antitrust, secondo quanto riportato da ANSA, non ha rilevato irregolarità. I numeri vanno però letti con attenzione: le quotazioni autostradali più elevate non rappresentano la media nazionale, che viene calcolata separatamente dal Mimit.</p><p class="body body-extra">La differenza tra media e picchi locali può essere ampia e dipende anche dal tipo di impianto e dal servizio scelto. L’aumento dei carburanti continua comunque a incidere sulle aspettative di famiglie e imprese, soprattutto per trasporto e logistica.</p><span class="source">Fonte: ANSA Economia · 19/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Credito al consumo vicino a 178 miliardi, +62% in nove anni</h3><p>Il credito al consumo in Italia sfiora i 178 miliardi di euro, con una crescita del 62% nell’arco di nove anni secondo i dati diffusi dalla Cgia.</p><div class="body-extra"><p>Gli analisti citati dalle agenzie finanziarie segnalano che il rialzo delle quotazioni petrolifere delle ultime settimane ha contribuito a mantenere la tensione sui rendimenti obbligazionari dell'area euro, complicando le previsioni sulla traiettoria dei tassi BCE nei prossimi mesi.</p><p>Il Tesoro italiano continua il programma di aste di Btp e Bot previsto per settembre, monitorando da vicino l'andamento dello spread in vista della manovra di bilancio in preparazione.</p></div><p class="body body-extra">L’esposizione media viene indicata in 6.657 euro per famiglia, in aumento del 4,9% nell’ultimo anno.</p><p class="body body-extra">Il dato fotografa il ricorso crescente a prestiti personali, finanziamenti finalizzati e altre forme di credito utilizzate per sostenere i consumi. La crescita nominale dell’indebitamento non permette però, da sola, di stabilire se le famiglie siano in una condizione finanziaria peggiore: occorre considerare anche redditi, inflazione, costo del denaro e tassi di insolvenza. Il quadro resta comunque importante per comprendere come l’aumento dei prezzi e dei costi finanziari stia modificando le scelte di spesa.</p><span class="source">Fonte: ANSA Economia · 19/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="benessere"><div class="section-head"><span class="section-tag tag-benessere">Benessere</span><h2 class="section-title">Benessere: West Nile e zanzare invasive, la stagione del rischio si allunga</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>il West Nile è trasmesso principalmente dalle zanzare e nella maggior parte dei casi provoca infezioni asintomatiche o lievi. Le forme più gravi possono interessare soprattutto anziani e persone fragili. Temperature più elevate possono prolungare la stagione di attività dei vettori. Il numero italiano risente anche di una sorveglianza sanitaria particolarmente sviluppata.</p></div><div class="articles"><div class="article lead"><h3>West Nile, l’Italia supera 650 infezioni nel 2026</h3><p>L’Italia ha registrato oltre 650 infezioni da West Nile nel 2026, circa metà dei casi segnalati complessivamente in Europa secondo i dati riportati da Associated Press. La stagione di trasmissione si è allungata e il virus viene rilevato in aree più ampie rispetto al passato.</p><div class="body-extra"><p>Il bollettino conferma la tendenza all'aumento dei casi autoctoni, legata alla diffusione della zanzara tigre e alle temperature elevate prolungate fino a settembre. Le Regioni più colpite restano quelle del Nord e del Centro Italia, dove sono attivi piani di disinfestazione straordinaria.</p><p>L'ISS raccomanda l'uso di repellenti e l'eliminazione dei ristagni d'acqua, ricordando che la sorveglianza resta attiva fino al termine della stagione dei vettori, generalmente a fine ottobre-novembre.</p></div><p class="body body-extra">Ricercatori dell’Istituto Superiore di Sanità collegano il fenomeno anche a temperature più alte, che favoriscono l’attività delle zanzare e la sopravvivenza del virus. La maggioranza delle persone infette non sviluppa sintomi importanti, ma una quota ridotta può andare incontro a complicazioni neurologiche.</p><p class="body body-extra">Gli esperti sottolineano inoltre che l’efficienza del sistema italiano di sorveglianza contribuisce a individuare un numero elevato di casi. Il dato va quindi interpretato insieme alla capacità di rilevazione.</p><span class="source">Fonte: Associated Press · 19/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Zanzare invasive, il cambiamento climatico allunga la stagione del rischio in Europa</h3><p>L’espansione delle zanzare invasive in Europa è sempre più collegata a estati lunghe e calde.</p><div class="body-extra"><p>Secondo l'Istituto Superiore di Sanità, in Italia quasi 4 milioni di persone hanno una diagnosi di diabete. Il registro dovrebbe permettere una programmazione sanitaria più precisa su prevenzione, screening e distribuzione territoriale dei servizi di diabetologia.</p><p>Le associazioni dei pazienti hanno accolto con favore la misura, chiedendo però garanzie sui tempi di attivazione effettiva nelle Regioni storicamente più in ritardo sulla raccolta dati sanitari.</p></div><p class="body body-extra">Associated Press riporta che specie capaci di trasmettere dengue, Zika e altri virus stanno trovando condizioni favorevoli in territori nei quali in passato la loro presenza era più limitata.</p><p class="body body-extra">Il fenomeno non implica che ogni area colonizzata registrerà automaticamente focolai: perché avvenga la trasmissione servono contemporaneamente vettori competenti, presenza del virus e condizioni ambientali favorevoli. I sistemi sanitari europei stanno quindi rafforzando monitoraggio entomologico e sorveglianza clinica. In Italia l’esperienza accumulata con West Nile offre una base importante, ma l’allungamento della stagione richiede controlli più prolungati nel corso dell’anno.</p><span class="source">Fonte: Associated Press · 19/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Sorveglianza sanitaria, perché l’Italia intercetta più casi di arbovirosi</h3><p>Uno degli elementi evidenziati dagli esperti nel confronto europeo sulle arbovirosi è la qualità della sorveglianza italiana. Il sistema combina segnalazioni cliniche, monitoraggio delle zanzare e controlli veterinari, aumentando la probabilità di individuare rapidamente la circolazione virale.</p><div class="body-extra"><p>Le linee guida indicano percorsi differenziati in base alla gravità del quadro clinico, dalla modifica dello stile di vita fino, nei casi più severi, a trattamenti farmacologici o chirurgici solo in centri specializzati. Gli autori sottolineano che oltre 7 adolescenti su 10 con obesità mantengono la condizione in età adulta se non trattata precocemente.</p><p>Il documento invita anche le scuole a un ruolo attivo nella prevenzione, attraverso l'educazione alimentare e la promozione dell'attività fisica, senza however sostituire il percorso clinico specialistico.</p></div><p class="body body-extra">Ciò significa che i numeri grezzi devono essere interpretati con cautela quando si confrontano Paesi con capacità diagnostiche differenti. Una quota maggiore di casi rilevati può riflettere anche una maggiore capacità di ricerca.</p><p class="body body-extra">L’obiettivo della sorveglianza è permettere interventi tempestivi, informare la popolazione e proteggere le persone più vulnerabili. La crescita delle temperature rende questo lavoro sempre più importante anche fuori dai mesi tradizionalmente considerati a maggiore rischio.</p><span class="source">Fonte: Associated Press / ISS · 19/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="tecnologia"><div class="section-head"><span class="section-tag tag-tecnologia">Tecnologia</span><h2 class="section-title">Tecnologia: IA al centro dei colloqui internazionali</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>l’IA entra formalmente nei colloqui economici tra Washington e Pechino insieme a commercio e minerali critici. Il confronto riguarda anche i rischi dei modelli aperti e chiusi. Non esiste ancora un quadro bilaterale condiviso. Le eventuali intese dovranno essere valutate sui testi e sugli impegni concreti.</p></div><div class="articles"><div class="article lead"><h3>Stati Uniti e Cina discutono anche di regole e sicurezza per l’intelligenza artificiale</h3><p>I colloqui tra Stati Uniti e Cina in programma oggi a New York includono anche la regolazione e la sicurezza dell’intelligenza artificiale.</p><div class="body-extra"><p>Revolut ha confermato di aver consegnato alle autorità italiane dati relativi a circa 700 clienti sospettati di operazioni fraudolente, ma non ha confermato l'entità complessiva rivendicata dall'hacker. Secondo alcune ricostruzioni, gli attaccanti si sarebbero finti autorità italiane per ottenere dati via PEC.</p><p>La società ha avviato un'indagine interna e rafforzato i controlli sulle richieste di accesso ai dati provenienti da soggetti che si qualificano come enti pubblici, un vettore d'attacco già segnalato da esperti di sicurezza informatica.</p></div><p class="body body-extra">Reuters riferisce che le due delegazioni discuteranno possibili guardrail per i sistemi avanzati, compresi i rischi legati ai modelli open-weight e closed-weight.</p><p class="body body-extra">Il tema tecnologico si intreccia con il controllo delle esportazioni, l’accesso ai chip e la disponibilità di minerali critici. Washington e Pechino considerano l’IA una componente strategica della competizione economica, ma hanno anche interesse a ridurre il rischio di incidenti e usi illeciti. Il semplice inserimento del tema nell’agenda non equivale però a un accordo: sarà necessario verificare se dai colloqui emergeranno principi condivisi o meccanismi operativi.</p><span class="source">Fonte: Reuters · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>IA e infrastrutture digitali entrano nell’agenda globale dell’ONU</h3><p>L’intelligenza artificiale sarà uno dei temi trasversali della settimana dell’Assemblea generale delle Nazioni Unite.</p><div class="body-extra"><p>Gli esperti di sicurezza informatica consultati dalle testate di settore raccomandano alle aziende di verificare sempre l'autenticità delle richieste dati con un contatto diretto e verificato con l'ente presunto mittente, prima di qualunque trasmissione di informazioni sensibili.</p><p>Il fenomeno riguarda non solo il settore bancario ma anche telecomunicazioni e sanità, dove le richieste di dati da parte di presunte autorità giudiziarie sono frequenti e più difficili da verificare in tempi rapidi.</p></div><p class="body body-extra">Reuters segnala che il segretario generale Antonio Guterres continua a chiedere guardrail coordinati a livello internazionale, mentre diversi governi mantengono posizioni differenti sulla velocità e sull’intensità della regolazione.</p><p class="body body-extra">Il tema non riguarda soltanto i modelli generativi, ma anche infrastrutture, sicurezza, capacità militari, disinformazione e concentrazione del potere tecnologico. La discussione all’ONU non produce automaticamente norme vincolanti, ma può contribuire alla definizione di principi comuni e alla creazione di forum permanenti. Il punto centrale resta trovare un equilibrio tra sviluppo tecnologico e gestione dei rischi senza trasformare il coordinamento internazionale in un vantaggio competitivo per una singola area.</p><span class="source">Fonte: Reuters · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="ia"><div class="section-head"><span class="section-tag tag-tecnologia">IA</span><h2 class="section-title">IA: nuova iniziativa Usa e confronto con la Cina</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Donald Trump ha annunciato su Truth Social l’intenzione di creare una struttura dedicata all’IA, paragonandola alla Space Force istituita nel 2019. Al momento l’annuncio descrive l’obiettivo politico, ma non chiarisce ancora struttura giuridica, bilancio, competenze e rapporto con le agenzie esistenti. È prevista la nomina di uno «zar» dell’IA. Questi dettagli saranno necessari per capire la portata reale dell’iniziativa.</p></div><div class="articles"><div class="article lead"><h3>Trump annuncia una «Forza per l’Intelligenza Artificiale» negli Stati Uniti</h3><p>Il presidente degli Stati Uniti Donald Trump ha annunciato la creazione di una «Forza per l’Intelligenza Artificiale», presentandola come un’iniziativa paragonabile alla Space Force istituita durante il suo primo mandato.</p><div class="body-extra"><p>Le tre aziende, storicamente competitor diretti, hanno indicato la necessità di una cooperazione tecnica sulla sicurezza che vada oltre la competizione commerciale, in particolare su temi come i test di sicurezza pre-rilascio e la gestione di segnalazioni relative a usi impropri dei modelli.</p><p>L'iniziativa arriva mentre cresce la pressione dei regolatori su scala internazionale per una maggiore trasparenza sulle valutazioni di rischio effettuate dalle aziende prima del lancio di nuovi sistemi di intelligenza artificiale.</p></div><p class="body body-extra">Nel messaggio pubblicato su Truth Social ha sostenuto che gli Stati Uniti intendono sostenere la crescita del settore e contemporaneamente contrastare attività illecite attraverso gli strumenti civili e penali già disponibili.</p><p class="body body-extra">Trump ha inoltre annunciato che sarà nominato uno «zar» alla guida della nuova struttura. L’annuncio contiene obiettivi politici molto ampi, ma non definisce ancora aspetti essenziali come competenze, personale, finanziamento e collocazione amministrativa. Per questo, allo stato attuale, è corretto parlare di un’iniziativa annunciata e non di una nuova forza già pienamente operativa.</p><span class="source">Fonte: ANSA · 20/09/2026, 06:15</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Washington e Pechino portano l’IA al tavolo dei negoziati economici</h3><p>Il nuovo round di colloqui tra Stati Uniti e Cina porta l’intelligenza artificiale direttamente dentro il negoziato economico.</p><div class="body-extra"><p>L'azienda non ha fornito dettagli tecnici approfonditi sulla natura specifica dei comportamenti individuati, ma ha ribadito l'esistenza di team dedicati alla verifica e correzione di questo tipo di anomalie prima che possano tradursi in rischi concreti per gli utenti.</p><p>La notizia si inserisce nel contesto più ampio della nuova collaborazione sulla sicurezza annunciata con Anthropic e Google DeepMind, che prevede anche lo scambio di segnalazioni relative a comportamenti problematici riscontrati sui rispettivi modelli.</p></div><p class="body body-extra">Reuters riferisce che le delegazioni discuteranno possibili limiti e strumenti di sicurezza per i sistemi avanzati, insieme alle questioni commerciali e alla disponibilità di minerali critici.</p><p class="body body-extra">La scelta mostra quanto l’IA sia ormai considerata una tecnologia strategica, collegata non soltanto alla produttività ma anche alla sicurezza nazionale. Le differenze tra Washington e Pechino restano significative, soprattutto sul controllo delle esportazioni e sull’accesso alle tecnologie più avanzate. Il valore dell’incontro dipenderà quindi dall’eventuale definizione di meccanismi di dialogo stabili e verificabili.</p><span class="source">Fonte: Reuters · 20/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="immigrazione-italia"><div class="section-head"><span class="section-tag tag-migra">Immigrazione Italia</span><h2 class="section-title">Immigrazione Italia: meno arrivi, ma aumenta il rischio sulle rotte</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>i dati OIM indicano quasi 60.000 arrivi via mare in Europa entro il 15 settembre, circa il 40% in meno rispetto allo stesso periodo del 2025. Nello stesso tempo morti e dispersi sono saliti a quasi 2.300. Sulla rotta del Mediterraneo centrale verso l’Italia gli arrivi sono scesi da oltre 48.000 a circa 21.000, mentre i decessi registrati sono 996. Meno partenze o arrivi non significano quindi automaticamente una rotta meno pericolosa.</p></div><div class="articles"><div class="article lead"><h3>Rotte del Mediterraneo, meno arrivi ma più morti: il nuovo allarme dell’OIM</h3><p>L’Organizzazione internazionale per le migrazioni segnala un forte calo degli arrivi via mare verso l’Europa nel 2026, accompagnato però da un aumento delle persone morte o disperse. Secondo i dati riportati da Associated Press, al 15 settembre quasi 60.000 migranti avevano raggiunto le coste europee, circa il 40% in meno rispetto allo stesso periodo dell’anno precedente.</p><div class="body-extra"><p>Secondo gli inquirenti, i certificati sarebbero stati usati per attestare condizioni di salute incompatibili con il trattenimento nei Cpr, spesso senza un reale accertamento clinico. L'Ordine dei Medici ha respinto ogni ruolo di controllo sull'operato dei propri iscritti, ribadendo che «non siamo ausiliari della sicurezza pubblica».</p><p>La difesa di alcuni indagati ha parlato di una «procedura terribile», sostenendo che l'attività certificativa contestata rientri nella normale pratica clinica. L'inchiesta, partita da un singolo territorio, si è poi estesa a diverse città italiane.</p></div><p class="body body-extra">Le vittime e i dispersi erano però quasi 2.300, contro circa 2.000 nel 2025. La rotta del Mediterraneo centrale verso l’Italia mostra la riduzione più marcata degli arrivi, passati da oltre 48.000 a circa 21.000, mentre le morti registrate sono 996.</p><p class="body body-extra">L’OIM collega parte dell’aumento del rischio allo spostamento verso rotte più lunghe e pericolose. I dati mostrano quindi che il numero degli sbarchi e la mortalità in mare possono muoversi in direzioni opposte.</p><span class="source">Fonte: Associated Press / OIM · dati al 15/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article"><h3>Mediterraneo centrale, la riduzione degli sbarchi non coincide con una riduzione del rischio</h3><p>Il calo degli arrivi sulle coste italiane non si traduce automaticamente in una diminuzione proporzionale delle morti in mare.</p><div class="body-extra"><p>Il ministro ha collegato l'incremento delle procedure di rimpatrio al rafforzamento degli accordi bilaterali con i Paesi di origine e transito dei migranti. Le opposizioni e alcune organizzazioni non governative contestano invece l'efficacia reale dei nuovi Cpr, segnalando i costi elevati di gestione e i bassi tassi di rimpatrio effettivo registrati storicamente nei centri già attivi.</p><p>Il dibattito sui nuovi centri si intreccia con l'inchiesta sui certificati medici anti-Cpr, che secondo la maggioranza dimostrerebbe la necessità di procedure di trattenimento più rigide, mentre l'opposizione la legge come segnale delle criticità del sistema attuale.</p></div><p class="body body-extra">I dati dell’OIM mostrano che la rotta del Mediterraneo centrale ha registrato circa 21.000 arrivi entro metà settembre, molto meno degli oltre 48.000 dello stesso periodo del 2025.</p><p class="body body-extra">Nello stesso arco temporale sono state registrate 996 persone morte o disperse. L’organizzazione internazionale sottolinea che alcune partenze si stanno spostando verso percorsi più rischiosi e che la diminuzione della trasparenza da parte di alcune autorità marittime rende più difficile ricostruire tutti gli incidenti. Il quadro richiede quindi di distinguere almeno tre elementi: numero di partenze, numero di arrivi e mortalità lungo la rotta.</p><span class="source">Fonte: Associated Press / OIM · 18/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="dati-immigrazione">
 <div class="section-head">
 <span class="section-tag tag-migra">Dati Immigrazione</span>
 <h2 class="section-title">Immigrazione, i numeri del 2026</h2>
 </div>
-<div class="section-note">Sbarchi, minori non accompagnati e rimpatri italiani (cruscotto statistico giornaliero del Viminale, aggiornato al 16 settembre 2026; periodi diversi indicati per ciascun dato).</div>
+<div class="section-note">Sbarchi, minori non accompagnati e rimpatri italiani (cruscotto statistico giornaliero del Viminale, aggiornato al 17 settembre 2026; periodi diversi indicati per ciascun dato).</div>
 <div class="kpi-row">
 <div class="kpi">
 <div class="kpi-label">Sbarchi in Italia</div>
-<div class="kpi-value">21.445</div>
-<div class="kpi-note">1 gen - 16 set 2026, Viminale — -56% sul 2025 (49.077)</div>
+<div class="kpi-value">21.613</div>
+<div class="kpi-note">1 gen - 17 set 2026, Viminale — -56% sul 2025 (49.190)</div>
 </div>
 <div class="kpi rimpatri">
 <div class="kpi-label">Rimpatri dall'Italia</div>
-<div class="kpi-value">6.134</div>
-<div class="kpi-note">1 gen - 16 set 2026, Viminale — 5.258 forzati, 876 volontari assistiti</div>
+<div class="kpi-value">6.172</div>
+<div class="kpi-note">1 gen - 15 set 2026, Viminale — 5.293 forzati, 879 volontari assistiti</div>
 </div>
 <div class="kpi arrivi">
-<div class="kpi-label">Minori non accompagnati (sbarchi)</div>
-<div class="kpi-value">4.314</div>
-<div class="kpi-note">Minori non accompagnati, 1-14 set 2026 — contro 8.804 nello stesso periodo 2025</div>
+<div class="kpi-label">Minori stranieri non accompagnati</div>
+<div class="kpi-value">14.237</div>
+<div class="kpi-note">Presenti in Italia al 12/5/2026, Migrantes/Ismu — 88% ragazzi, 55% tra 17 e 18 anni</div>
 </div>
 </div>
 <div class="chart-card">
 <div class="chart-title">Sbarchi in Italia per nazionalità principale</div>
-<div class="chart-period">1° gennaio - 28 agosto 2026 (Ministero dell'Interno)</div>
-<div class="bar-row"><div class="bar-label">Bangladesh</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Bangladesh: 5.123" style="width:100%"></div></div><div class="bar-value">5.123</div></div>
-<div class="bar-row"><div class="bar-label">Somalia</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Somalia: 2.273" style="width:44%"></div></div><div class="bar-value">2.273</div></div>
-<div class="bar-row"><div class="bar-label">Algeria</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Algeria: 2.027" style="width:40%"></div></div><div class="bar-value">2.027</div></div>
-<div class="bar-row"><div class="bar-label">Sudan</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Sudan: 1.617" style="width:32%"></div></div><div class="bar-value">1.617</div></div>
-<div class="bar-row"><div class="bar-label">Pakistan</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Pakistan: 1.376" style="width:27%"></div></div><div class="bar-value">1.376</div></div>
-<div class="bar-row"><div class="bar-label">Egitto</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Egitto: 1.244" style="width:24%"></div></div><div class="bar-value">1.244</div></div>
-<div class="bar-row"><div class="bar-label">Altre nazionalità</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Altre nazionalità: 5.603" style="width:100%"></div></div><div class="bar-value">5.603</div></div>
-<div class="side-note">Le prime sei nazionalità coprono circa il 71% degli sbarchi totali; il resto (Eritrea, Tunisia, Mali, Nigeria, Iran e altri) è qui riunito in "altre nazionalità" per leggibilità. Il totale di questa tabella (19.263) è aggiornato al 28/8, leggermente inferiore al dato più recente al 2/9 (19.747) riportato in cima alla pagina.</div>
+<div class="chart-period">1° gennaio - 17 settembre 2026 (Ministero dell'Interno, via AgenSIR)</div>
+<div class="bar-row"><div class="bar-label">Bangladesh</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Bangladesh: 5.465" style="width:100%"></div></div><div class="bar-value">5.465</div></div>
+<div class="bar-row"><div class="bar-label">Somalia</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Somalia: 2.560" style="width:47%"></div></div><div class="bar-value">2.560</div></div>
+<div class="bar-row"><div class="bar-label">Algeria</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Algeria: 2.542" style="width:47%"></div></div><div class="bar-value">2.542</div></div>
+<div class="bar-row"><div class="bar-label">Sudan</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Sudan: 1.671" style="width:31%"></div></div><div class="bar-value">1.671</div></div>
+<div class="bar-row"><div class="bar-label">Pakistan</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Pakistan: 1.467" style="width:27%"></div></div><div class="bar-value">1.467</div></div>
+<div class="bar-row"><div class="bar-label">Egitto</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Egitto: 1.354" style="width:25%"></div></div><div class="bar-value">1.354</div></div>
+<div class="bar-row"><div class="bar-label">Altre nazionalità</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Altre nazionalità: 6.554" style="width:100%"></div></div><div class="bar-value">6.554</div></div>
+<div class="side-note">Le prime sei nazionalità coprono circa il 70% degli sbarchi totali; il resto (Eritrea, Tunisia e altre) è qui riunito in "altre nazionalità" per leggibilità.</div>
 <details class="table-view">
 <summary>Vedi tabella dati completa</summary>
 <table class="data-table">
 <tr><th>Nazionalità</th><th>Sbarchi</th><th>Periodo</th></tr>
-<tr><td>Bangladesh</td><td class="num">5.123</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Somalia</td><td class="num">2.273</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Algeria</td><td class="num">2.027</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Sudan</td><td class="num">1.617</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Pakistan</td><td class="num">1.376</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Egitto</td><td class="num">1.244</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Eritrea</td><td class="num">1.089</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Tunisia</td><td class="num">978</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Altre nazionalità</td><td class="num">1.536</td><td>1 gen - 28 ago 2026</td></tr>
-<tr style="font-weight:700; background:#f3e6c4;"><td>Totale Italia</td><td class="num">19.263</td><td>1 gen - 28 ago 2026</td></tr>
+<tr><td>Bangladesh</td><td class="num">5.465</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Somalia</td><td class="num">2.560</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Algeria</td><td class="num">2.542</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Sudan</td><td class="num">1.671</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Pakistan</td><td class="num">1.467</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Eritrea</td><td class="num">1.430</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Egitto</td><td class="num">1.354</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Tunisia</td><td class="num">1.161</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Altre nazionalità</td><td class="num">3.963</td><td>1 gen - 17 set 2026</td></tr>
+<tr style="font-weight:700; background:#f3e6c4;"><td>Totale Italia</td><td class="num">21.613</td><td>1 gen - 17 set 2026</td></tr>
 </table>
 </details>
-<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Dipartimento Libertà Civili e Immigrazione — Ministero dell'Interno (dato all'8:00 del 28/8/2026).</div>
+<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Dipartimento Libertà Civili e Immigrazione — Ministero dell'Interno, via AgenSIR (dato del 17/9/2026).</div>
 </div>
 <div class="chart-card">
 <div class="chart-title">Sbarchi totali per anno: 2024, 2025, 2026 a confronto</div>
-<div class="chart-period">1° gennaio - 2 settembre, anni a confronto (Ministero dell'Interno)</div>
-<div class="bar-row"><div class="bar-label">2025</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2025: 43.860" style="width:100%"></div></div><div class="bar-value">43.860</div></div>
-<div class="bar-row"><div class="bar-label">2024</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2024: 42.544" style="width:97%"></div></div><div class="bar-value">42.544</div></div>
-<div class="bar-row"><div class="bar-label">2026</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2026: 19.747" style="width:45%"></div></div><div class="bar-value">19.747 <span class="dv-delta down">-55%</span></div></div>
-<div class="side-note">Il calo del 2026 rispetto ai due anni precedenti si conferma su tutto il periodo osservato; nel solo periodo estivo (3 luglio - 1° settembre) il calo sale al -59,7% (5.137 sbarchi nel 2026 contro 12.748 nel 2025).</div>
-<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Ministero dell'Interno (dato al 2/9/2026).</div>
+<div class="chart-period">1° gennaio - 17 settembre, anni a confronto (Ministero dell'Interno)</div>
+<div class="bar-row"><div class="bar-label">2025</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2025: 49.190" style="width:100%"></div></div><div class="bar-value">49.190</div></div>
+<div class="bar-row"><div class="bar-label">2024</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2024: 44.803" style="width:91%"></div></div><div class="bar-value">44.803</div></div>
+<div class="bar-row"><div class="bar-label">2026</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2026: 21.613" style="width:44%"></div></div><div class="bar-value">21.613 <span class="dv-delta down">-56%</span></div></div>
+<div class="side-note">Il calo del 2026 rispetto ai due anni precedenti si conferma su tutto il periodo osservato, con un forte rallentamento degli arrivi anche nel mese di settembre (2.051 contro 8.315 nello stesso mese del 2025).</div>
+<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Ministero dell'Interno, via AgenSIR (dato al 17/9/2026).</div>
 </div>
 <div class="chart-card">
 <div class="chart-title">Rimpatri dall'Italia, per tipologia</div>
-<div class="chart-period">1° gennaio - 31 agosto 2026 (Ministero dell'Interno)</div>
-<div class="bar-row"><div class="bar-label">Forzati</div><div class="bar-track"><div class="bar-fill rimpatri" data-tooltip="Forzati: 4.973" style="width:100%"></div></div><div class="bar-value">4.973</div></div>
-<div class="bar-row"><div class="bar-label">Volontari assistiti</div><div class="bar-track"><div class="bar-fill rimpatri" data-tooltip="Volontari assistiti: 837" style="width:17%"></div></div><div class="bar-value">837</div></div>
-<div class="side-note">Il totale di 5.810 rimpatri nei primi otto mesi del 2026 è già superiore all'intero 2024 (5.704) e si avvicina al totale dell'intero 2025 (6.772): il confronto è tra un dato parziale (2026) e due anni completi, quindi non ancora conclusivo sul ritmo annuo finale.</div>
-<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Ministero dell'Interno; Il Sud24 (dato al 31/8-2/9/2026).</div>
+<div class="chart-period">1° gennaio - 15 settembre 2026 (Ministero dell'Interno)</div>
+<div class="bar-row"><div class="bar-label">Forzati</div><div class="bar-track"><div class="bar-fill rimpatri" data-tooltip="Forzati: 5.293" style="width:100%"></div></div><div class="bar-value">5.293</div></div>
+<div class="bar-row"><div class="bar-label">Volontari assistiti</div><div class="bar-track"><div class="bar-fill rimpatri" data-tooltip="Volontari assistiti: 879" style="width:17%"></div></div><div class="bar-value">879</div></div>
+<div class="side-note">Il totale di 6.172 rimpatri nei primi otto mesi e mezzo del 2026 conferma il rafforzamento del canale coattivo rispetto a quello volontario, in linea con le misure annunciate dal ministro dell'Interno Matteo Piantedosi per accelerare gli allontanamenti dei soggetti ritenuti pericolosi.</div>
+<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Ministero dell'Interno, via AgenSIR (dato al 15/9/2026).</div>
 </div>
-</div>
-<div class="section" id="sicurezza-pubblica">
+</div><div class="section" id="sicurezza-pubblica">
 <div class="section-head">
 <span class="section-tag tag-sicurezza">Sicurezza Pubblica</span>
 <h2 class="section-title">Sicurezza pubblica, i numeri</h2>
@@ -2002,10 +2291,9 @@
 <div class="side-note">Non esiste un dato ufficiale più recente sulla recidiva in Italia: lo studio di Fabrizio Leonardi (DAP) resta l'unico mai realizzato su scala nazionale. Nel 2012 il Ministero della Giustizia annunciò una nuova ricerca, mai completata né pubblicata.</div>
 <div class="dv-sources">Fonte: F. Leonardi, Dipartimento dell'Amministrazione Penitenziaria, "Rassegna penitenziaria e criminologica", 2007 (dati 1998).</div>
 </div>
-</div>
-<div class="section" id="petrolio-basilicata">
+</div><div class="section" id="petrolio-basilicata">
 <div class="section-head">
-<span class="section-tag tag-petrolio">Petrolio Basilicata</span>
+<span class="section-tag tag-finanza">Petrolio Basilicata</span>
 <h2 class="section-title">Petrolio in Basilicata: dati, cartina e cronologia</h2>
 </div>
 <div class="section-note">Dashboard permanente: royalties, pozzi e produzione dei due poli estrattivi, cartina e cronologia dal 1878 a oggi. I dati pubblici disponibili sono parziali — specie sul riparto dei fondi tra i comuni non ospitanti impianti — e questa pagina lo segnala esplicitamente invece di nasconderlo. Aggiornata periodicamente, non ogni giorno.</div>
@@ -2425,7 +2713,7 @@
 </div>
 <div class="footer">
 <span>Rassegna stampa — fonti multiple, tradotte e sintetizzate in italiano</span>
-<span>Aggiornata: 19 Settembre 2026</span>
+<span>Aggiornata: 20 Settembre 2026</span>
 </div>
 <div class="footer-note">"Il Contribuente" perché sei tu che paghi, in un modo o nell'altro, quasi tutta l'informazione. Questa pubblicazione prova a restituirti qualcosa mettendo a confronto i fatti, raccontati da più voci — l'idea te la fai tu.</div>
 <div class="footer-legal">

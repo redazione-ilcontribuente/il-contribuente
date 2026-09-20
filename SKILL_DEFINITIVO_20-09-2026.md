@@ -68,26 +68,26 @@ Deve metterlo nella condizione di farsi un'idea.
 Prima di costruire l'edizione quotidiana:
 
 1. Verificare che `SKILL.md` sia integro.
-2. Verificare che `index.html` esista nella stessa cartella.
-3. Leggere integralmente l'`index.html` corrente: da 10 settembre 2026 è il MASTER permanente da aggiornare ogni giorno.
-4. Verificare che l'index contenga almeno:
+2. Verificare che `template.html` esista nella stessa cartella.
+3. Leggere integralmente `template.html`.
+4. Verificare che il template contenga almeno:
    - `.article-image`;
    - la logica di layout dinamico già prevista dal template;
    - l'overlay "Un modo diverso di leggere le notizie";
    - il blocco `.footer-legal`;
    - gli script permanenti del template.
-5. Se l'index manca o è chiaramente incompleto, NON inventare una nuova struttura HTML.
-6. Informare Mario di ciò che manca e chiedere il ripristino dell'index/backup.
+5. Se il template manca o è chiaramente incompleto, NON inventare una nuova struttura HTML.
+6. Informare Mario di ciò che manca e chiedere il ripristino del template/backup.
 
-Da 10 settembre 2026 `index.html` è la fonte di verità per struttura, CSS, collegamenti e comportamento della pagina. Gli altri file del progetto sono approfondimenti fissi e NON vanno aggiornati quotidianamente.
+Il template è la fonte di verità per struttura, CSS e comportamento della pagina.
 
 ---
 
-# 3. INDEX.HTML — REGOLA ASSOLUTA
+# 3. TEMPLATE HTML — REGOLA ASSOLUTA
 
-Da 10 settembre 2026 `index.html` è il file master permanente del quotidiano "Il Contribuente".
+`template.html` è il template permanente del quotidiano "Il Contribuente".
 
-Deve essere utilizzato come base di ogni nuova edizione e deve essere l'UNICO file aggiornato quotidianamente.
+Deve essere utilizzato come base di ogni nuova edizione.
 
 NON ridisegnare il giornale ogni giorno.
 
@@ -108,9 +108,9 @@ NON cambiare arbitrariamente:
 - licenza;
 - comportamento responsive.
 
-Quando Mario richiede una modifica strutturale, grafica o funzionale permanente, applicarla all'`index.html` master e aggiornare anche `SKILL.md` se la modifica introduce una nuova regola da conservare.
+Quando Mario richiede una modifica strutturale o grafica permanente, la modifica deve essere fatta nel `template.html`, non soltanto nell'edizione del giorno.
 
-Gli approfondimenti e gli altri file del sito restano fissi salvo richiesta esplicita. Ogni nuova edizione deve aggiornare l'index, non reinventare il contenitore.
+Ogni nuova edizione deve aggiornare i contenuti, non reinventare il contenitore.
 
 ---
 
@@ -119,7 +119,7 @@ Gli approfondimenti e gli altri file del sito restano fissi salvo richiesta espl
 L'ordine operativo corretto è:
 
 1. controllo integrità;
-2. lettura integrale dell'index master;
+2. lettura del template;
 3. verifica dell'indice e delle sezioni;
 4. ricerca delle notizie;
 5. confronto e verifica delle fonti;
@@ -127,7 +127,7 @@ L'ordine operativo corretto è:
 7. presentazione a Mario dell'elenco dei titoli;
 8. dopo il passaggio titoli, scrittura degli articoli;
 9. inserimento delle immagini fornite da Mario;
-10. aggiornamento ticker, mercati, citazioni, agenda, statistiche, dashboard e TUTTE le card;
+10. aggiornamento ticker, mercati, citazioni, agenda, statistiche e dashboard;
 11. controllo finale di freschezza, fonti, lunghezza, layout e coerenza;
 12. generazione dell'HTML definitivo.
 
@@ -151,11 +151,8 @@ L'indice attuale di Il Contribuente è:
 10. IA
 11. Immigrazione Italia
 12. Dati Immigrazione
-13. Sicurezza Pubblica
 
-Inoltre, su tablet/mobile è presente la mini-card **Approfondimenti**, che porta alla colonna/sezione degli approfondimenti fissi.
-
-Queste sono le voci e i collegamenti strutturali da rispettare.
+Queste sono le voci da rispettare.
 
 NON aggiungere automaticamente nuove sezioni all'indice.
 
@@ -176,28 +173,31 @@ L'ordine delle sezioni deve rimanere invariato.
 
 Il layout è una regola strutturale, non editoriale.
 
-Il CSS dell'index master decide automaticamente la disposizione delle card.
+Il CSS del template decide automaticamente la disposizione delle card.
 
-La prima notizia di una sezione a formato articoli è il lead e occupa tutta la larghezza.
+La prima notizia di una sezione a formato articoli resta marcata come `lead`, ma quando nella sezione sono presenti più articoli NON deve occupare da sola tutta la larghezza: le card devono rispettare l'affiancamento orizzontale permanente.
 
 Regola generale:
 
 - 1 articolo → piena larghezza;
-- 2 articoli → entrambi a piena larghezza, uno sotto l'altro;
-- 3 articoli → lead pieno + due card affiancate;
-- 4 articoli → lead pieno + tre card affiancate.
+- 2 articoli → due colonne uguali, affiancate nella stessa riga;
+- 3 articoli → tre colonne affiancate nella stessa riga;
+- 4 articoli → quattro colonne affiancate nella stessa riga;
+- 5 o più articoli → tutti affiancati orizzontalmente secondo la regola permanente del template, senza trasformarli in uno stack verticale.
 
 NON scegliere manualmente larghezze diverse per le singole card.
 
+REGOLA VINCOLANTE E PERMANENTE (Mario, 20/9/2026, "da oggi in poi"): gli articoli non vanno MAI impilati uno sotto l'altro a piena larghezza quando sono più di uno nella stessa sezione — devono sempre stare affiancati in orizzontale nella stessa riga, sullo stesso principio già fissato per "Le ultime notizie" di Petrolio Basilicata. Aggiornata di conseguenza la regola per 2 articoli totali: ora stanno affiancati in 2 colonne uguali (non più impilati uno sopra l'altro). La regola vale per tutte le sezioni a formato articoli, incluso qualunque caso limite (5 o più notizie) analogo a quello già risolto per Petrolio Basilicata: applicare la stessa tecnica CSS (`:has()` + colonne `minmax(0, 1fr)`) se il numero di articoli di una sezione standard dovesse mai superare 4.
+
 NON lasciare spazi vuoti intenzionali.
 
-NON modificare il CSS dell'edizione per correggere manualmente la griglia, salvo una modifica strutturale esplicitamente richiesta da Mario e destinata a diventare permanente nell'index master.
+NON modificare il CSS dell'edizione per correggere manualmente la griglia.
 
 Il primo articolo deve essere marcato come:
 
 `class="article lead"`
 
-e l'index master deve occuparsi del resto.
+e il template deve occuparsi del resto.
 
 Dati Immigrazione utilizza il proprio formato dashboard e non segue la griglia `.articles`.
 
@@ -205,7 +205,7 @@ Dati Immigrazione utilizza il proprio formato dashboard e non segue la griglia `
 
 # 7. COMPONENTI E BOX
 
-Devono essere mantenuti i componenti già presenti nell'index master, tra cui:
+Devono essere mantenuti i componenti già presenti nel template, tra cui:
 
 - masthead;
 - ticker;
@@ -230,7 +230,7 @@ Devono essere mantenuti i componenti già presenti nell'index master, tra cui:
 - kpi-row;
 - footer-legal.
 
-Non creare componenti alternativi quando l'index master possiede già quello necessario.
+Non creare componenti alternativi quando il template possiede già quello necessario.
 
 ## Da sapere per capire
 
@@ -245,6 +245,8 @@ Può contenere:
 - spiegazioni necessarie.
 
 Non deve diventare un resoconto del lavoro della redazione.
+
+REGOLA VINCOLANTE (Mario, 20/9/2026): il box "Da sapere per capire" di OGNI sezione deve essere corposo, non una singola riga stringata. Target: 3-5 frasi (un vero paragrafo), che diano al lettore un quadro reale del contesto e non un sottotitolo travestito da box. Vale per tutte le sezioni, ogni giorno.
 
 ---
 
@@ -306,11 +308,15 @@ Non generare immagini fotorealistiche di persone reali riconoscibili e presentar
 
 Il colore non è una regola editoriale separata.
 
-I colori, i bordi, gli sfondi, i font e le dimensioni sono quelli definiti nell'index master.
+I colori, i bordi, gli sfondi, i font e le dimensioni sono quelli definiti nel template.
 
 NON modificarli durante la produzione quotidiana.
 
-Se Mario vuole cambiare la grafica, la modifica va applicata all'index master permanente.
+Se Mario vuole cambiare la grafica, la modifica va applicata al template permanente.
+
+REGOLA VINCOLANTE E PERMANENTE (Mario, 20/9/2026): il font (tipo di scrittura) di titolo, testo e approfondimento deve essere lo STESSO per tutti gli articoli di tutte le sezioni, Confronto incluso — mai mescolare famiglie diverse tra un articolo e l'altro o tra una sezione e l'altra. Applicato nel template: `Georgia, 'Times New Roman', serif` per `.article h3`, `.article p`, `.duel-outlet`, `.duel-headline`, `.duel-fact-text`, `.duel-side p.body`. Le etichette tecniche (fonte, badge, ticker, market bar) restano nel loro font monospazio/sans dedicato: la regola riguarda il testo editoriale degli articoli, non la chrome dell'interfaccia.
+
+REGOLA VINCOLANTE E PERMANENTE (Mario, 20/9/2026): le sezioni NON mostrano più l'etichetta colorata (TAG) prima del titolo di sezione (es. "Confronto", "Europa"). Il tag è nascosto via CSS (`.section-tag{display:none;}`) nel template: non va riattivato senza richiesta esplicita di Mario, e non va rimosso dal markup (serve comunque per l'accessibilità/struttura interna).
 
 ---
 
@@ -370,9 +376,11 @@ MAI:
 
 # 11. FRESCHEZZA
 
+**PRIORITÀ:** in caso di contrasto con qualsiasi altra parte del file, prevale la regola delle 8 ore.
+
 Ogni notizia deve essere realmente attuale.
 
-Regola vincolante (Mario, 4/9/2026, sostituisce la precedente finestra 24-36 ore): pubblicazione della fonte originale entro le ultime 12 ore, MASSIMO 24 ore, rispetto al momento della costruzione della rassegna. Non 24-36: 24 ore è il tetto assoluto, non l'obiettivo. Verificare data E ora di pubblicazione di ogni fonte, non solo il giorno.
+REGOLA VINCOLANTE E PRIORITARIA (Mario, 20/9/2026, sostituisce integralmente le precedenti finestre 12/24 e 24-36 ore): per tutte le notizie di attualità, la fonte originale deve essere stata pubblicata o aggiornata nelle ULTIME 8 ORE rispetto al momento in cui viene costruita la rassegna. Otto ore è il tetto massimo, non un obiettivo indicativo. Verificare sempre DATA E ORA della fonte originale. Una notizia oltre le 8 ore non può essere usata come notizia del giorno per riempire una sezione.
 
 La regola vale per tutte le sezioni di attualità:
 
@@ -400,7 +408,7 @@ Sono ammessi contenuti più vecchi esclusivamente quando sono chiaramente:
 - spiegazione;
 - serie statistica periodica.
 
-Questi contenuti non devono essere presentati come "notizie del giorno".
+Questi contenuti non devono essere presentati come "notizie del giorno" e devono essere chiaramente etichettati come contesto, dato storico, quadro normativo o ultimo dato ufficiale disponibile. L'eccezione NON consente di usare come attualità una notizia oltre le 8 ore.
 
 ---
 
@@ -410,7 +418,7 @@ Gli articoli devono essere più pieni della precedente versione.
 
 Obiettivo indicativo:
 
-**250-350 parole per articolo**, salvo casi in cui la natura della notizia richieda una lunghezza diversa.
+**300-450 parole per articolo**, salvo casi in cui la natura della notizia richieda una lunghezza diversa. Per i lead o le notizie principali è ammesso arrivare a circa 500 parole quando esistono informazioni, dati e fonti sufficienti. Non allungare mai artificialmente.
 
 La priorità non è raggiungere un numero artificiale di parole, ma fornire informazioni sufficienti.
 
@@ -528,13 +536,13 @@ Deve essere dedicata soprattutto a:
 - temi politici controversi;
 - grandi controversie nelle quali fonti diverse raccontano lo stesso fatto in maniera significativamente differente.
 
-Regola vincolante (Mario, 4/9/2026): la sezione Confronto deve avere OBBLIGATORIAMENTE tre voci, non due. Il formato è sempre:
+Regola vincolante (Mario, 4/9/2026, RIBADITA il 20/9/2026 — "la sezione confronto ha sempre 3 notizie"): la sezione Confronto deve avere SEMPRE E OBBLIGATORIAMENTE tre voci, non due, in ogni edizione senza eccezioni. Il formato è sempre:
 
 - "Prospettiva A" (duel-side left);
 - "Prospettiva B" (duel-side right);
 - "Terza voce" (duel-side third) — indipendente, non allineata né a A né a B: una fonte neutrale, un'analisi critica, un dato verificabile di terze parti (agenzia neutrale, autorità/organizzazione internazionale, esperto di settore). Non è opzionale.
 
-Markup di riferimento (già presente e testato nell'index master): due `.duel-side` (left/right) dentro il primo `.duel-grid`, poi un secondo `.duel-grid` con `style="grid-template-columns:1fr; border-top:1px solid var(--rule);"` contenente il solo `.duel-side.third` a piena larghezza. Non modificare il CSS: questo secondo `.duel-grid` con lo style inline è il modo corretto, già previsto dal template, per ottenere la terza voce senza toccare la regola `.duel-grid{grid-template-columns:1fr 1fr;}`.
+Markup di riferimento (già presente e testato in template.html/index.html): due `.duel-side` (left/right) dentro il primo `.duel-grid`, poi un secondo `.duel-grid` con `style="grid-template-columns:1fr; border-top:1px solid var(--rule);"` contenente il solo `.duel-side.third` a piena larghezza. Non modificare il CSS: questo secondo `.duel-grid` con lo style inline è il modo corretto, già previsto dal template, per ottenere la terza voce senza toccare la regola `.duel-grid{grid-template-columns:1fr 1fr;}`.
 
 La sezione non deve essere costruita per creare artificialmente un equilibrio 50/50 — la terza voce serve ad aggiungere un elemento verificabile o un'angolazione diversa, non a fare da ago della bilancia forzato.
 
@@ -989,14 +997,17 @@ Selezionare titoli realmente rappresentativi delle sezioni e non riempirlo con t
 
 # 34. MARKET BAR
 
-Aggiornare ogni giorno, quando presenti nell'index:
+Regola vincolante (Mario, 2/9/2026 e 31/8/2026): le card della market bar sono SEMPRE le stesse, ogni giorno, aggiornate con valori reali:
 
 - benzina;
 - diesel;
 - petrolio;
 - gas;
 - oro;
-- bitcoin.
+- bitcoin;
+- Palestinesi uccisi (dal 7 ottobre 2023, Gaza) — SEMPRE presente ogni giorno, non solo nei giorni in cui il Confronto tratta Gaza.
+
+NON aggiungere la card dello spread Btp-Bund: Mario non la vuole. Aggiungere una card nuova, diversa da queste, SOLO quando una notizia specifica del giorno la giustifica chiaramente (es. un evento eccezionale con un numero-chiave associato); altrimenti l'elenco non va toccato.
 
 Indicare fonte e data/ora di riferimento quando disponibili.
 
@@ -1008,7 +1019,7 @@ Non mescolare quotazioni riferite a momenti diversi senza indicarlo.
 
 Regola permanente (Mario, 3/9/2026): questa sezione contiene SOLO ED ESCLUSIVAMENTE notizie/eventi della data di pubblicazione della rassegna stessa, a livello mondiale — non scadenze, appuntamenti o decisioni previste per giorni successivi, e non eventi già passati.
 
-Selezionare esattamente 5 voci: le 5 cose più importanti che accadono nel mondo in quella giornata specifica (possono includere, quando pertinenti quel giorno: eventi politici, decisioni prese o annunciate, dati economici pubblicati, appuntamenti internazionali, eventi tecnologici, scadenze normative che scadono proprio oggi). Non è un calendario di cose future: se un fatto non sta accadendo OGGI, non va in agenda, anche se è rilevante e imminente (va eventualmente nel corpo dell'articolo della sezione pertinente, non qui).
+Selezionare FINO A 5 voci: idealmente le 5 cose più importanti che accadono nel mondo in quella giornata specifica (possono includere, quando pertinenti quel giorno: eventi politici, decisioni prese o annunciate, dati economici pubblicati, appuntamenti internazionali, eventi tecnologici, scadenze normative che scadono proprio oggi). Non è un calendario di cose future: se un fatto non sta accadendo OGGI, non va in agenda, anche se è rilevante e imminente (va eventualmente nel corpo dell'articolo della sezione pertinente, non qui).
 
 Non forzare a 5 se davvero non ci sono 5 fatti mondiali abbastanza rilevanti nella giornata: meglio 3-4 voci solide che riempire con notizie minori (stessa logica anti-filler della sezione 10).
 
@@ -1046,7 +1057,7 @@ Non inventare valori.
 Prima della pubblicazione verificare:
 
 ### Struttura
-- index master corretto;
+- template corretto;
 - indice corretto;
 - ordine corretto;
 - nessun CSS alterato;
@@ -1060,8 +1071,9 @@ Prima della pubblicazione verificare:
 - nessuna duplicazione inutile.
 
 ### Freschezza
-- data originale di ogni notizia verificata;
-- nessuna notizia vecchia spacciata per nuova.
+- data E ora originali di ogni notizia verificate;
+- ogni notizia di attualità entro le ultime 8 ore;
+- nessuna notizia oltre le 8 ore usata come riempitivo o spacciata per nuova.
 
 ### Confronto
 - fonti differenti realmente consultate;
@@ -1086,14 +1098,36 @@ Prima della pubblicazione verificare:
 - traduzioni corrette;
 - nomi propri e numeri verificati.
 
-### File da aggiornare
-- aggiornare quotidianamente SOLO `index.html`;
-- NON aggiornare automaticamente `archivio.html`, dossier, pagine guerre, sanzioni, glossario o altri approfondimenti;
-- modificare un approfondimento soltanto se Mario lo richiede esplicitamente.
+### Archivio
+- archivio.html aggiornato con l'edizione del giorno precedente (mai con quella di oggi, che vive su index.html finché non viene sostituita domani);
+- nessuna voce duplicata in archivio.html.
 
 ### Agenda
 - "Cosa succede oggi" contiene solo fatti della data di pubblicazione odierna, a livello mondiale, non scadenze future né eventi passati;
 - al massimo 5 voci, senza filler per raggiungere quel numero.
+
+---
+
+
+# REGOLE PERMANENTI DI LAYOUT E LETTURA — 20/09/2026
+
+Le seguenti regole sono VINCOLANTI, PERMANENTI e hanno priorità su eventuali istruzioni precedenti incompatibili presenti nel file.
+
+1. **Tutti gli articoli del quotidiano sono sempre in orizzontale.** Da oggi in poi, quando una sezione contiene più articoli, le card devono essere affiancate orizzontalmente e non impilate verticalmente. La regola vale per tutte le sezioni editoriali del quotidiano. Un solo articolo può naturalmente occupare la larghezza disponibile.
+
+2. **Petrolio Basilicata è sempre orizzontale.** Tutte le notizie della sezione/dashboard `Petrolio Basilicata`, compresa la sotto-lista **“Le ultime notizie”**, devono essere SEMPRE disposte in orizzontale. Questa regola è permanente e non deve essere reinterpretata nelle edizioni future.
+
+3. **Font editoriale uniforme.** Titoli, testo principale, approfondimenti e contenuti editoriali devono utilizzare la stessa famiglia tipografica in tutte le sezioni, `Confronto` compreso. Il font concreto è quello stabilito dal template permanente (attualmente famiglia serif tipo Georgia/Times New Roman). Non mescolare font editoriali differenti tra sezioni o articoli. Sono escluse da questa regola le componenti tecniche dell'interfaccia come ticker, badge, fonti e market bar quando il template assegna loro intenzionalmente un font differente.
+
+4. **“Continua a leggere / Mostra meno” sempre alla fine.** Il controllo deve essere SEMPRE l'ultimo elemento visivo dell'articolo, dopo `Da sapere per capire`, `Il fatto`, tutto l'`Approfondimento` e il blocco `Fonte/i`. Non deve comparire mai tra il testo iniziale e l'approfondimento, né in qualsiasi altra posizione intermedia.
+
+5. **Nessun TAG prima del titolo delle sezioni.** Le sezioni non devono mostrare visivamente l'etichetta/tag colorato prima del titolo. Se il markup mantiene `.section-tag` per ragioni strutturali o di accessibilità, deve restare nascosto come previsto dal template.
+
+6. **“Da sapere per capire” deve essere corposo.** Ogni box deve offrire vero contesto e non funzionare come semplice sottotitolo. Deve contenere normalmente almeno **3-5 frasi sostanziali**, e può essere più lungo quando la complessità della notizia lo richiede. Deve spiegare precedenti, quadro necessario, termini, numeri o elementi indispensabili per comprendere il fatto senza ripetere inutilmente l'articolo.
+
+7. **Confronto contiene sempre 3 voci.** La sezione `Confronto` deve avere in ogni edizione esattamente tre prospettive editoriali: `Prospettiva A`, `Prospettiva B` e `Terza voce`. La terza voce deve aggiungere verifica indipendente, dati, fonte istituzionale o un'angolazione realmente distinta; non deve essere inventata per creare una falsa equivalenza.
+
+In caso di contrasto con una regola più vecchia presente nel documento, **prevalgono queste sette regole permanenti del 20/09/2026**.
 
 ---
 
@@ -1128,201 +1162,7 @@ e poter formare autonomamente il proprio giudizio.
 
 ---
 
-
-# 40. REGOLE PERMANENTI DAL 10 SETTEMBRE 2026 — INDEX, CARD E COLLEGAMENTI
-
-Questa sezione sostituisce qualsiasi istruzione precedente incompatibile.
-
-## Unico file da aggiornare ogni giorno
-
-Da oggi l'unico file da aggiornare quotidianamente è:
-
-`index.html`
-
-Le altre pagine del sito sono **approfondimenti fissi** e NON devono essere aggiornate ogni giorno, salvo richiesta esplicita di Mario.
-
-Ogni nuova rassegna deve quindi partire dall'ultimo `index.html` master disponibile e produrre il nuovo `index.html` del giorno.
-
-## Regola assoluta: aggiornare TUTTE le card
-
-Ogni giorno devono essere controllate e aggiornate **TUTTE le card dinamiche presenti nell'index**, nessuna esclusa.
-
-Questo comprende:
-
-- ticker;
-- market bar;
-- citazioni del giorno;
-- statistiche principali;
-- agenda;
-- card statistiche;
-- dashboard;
-- badge fonti/testate;
-- eventuali numeri, date, percentuali, variazioni e note temporali.
-
-Non lasciare una card con dati del giorno precedente solo perché la notizia principale è stata aggiornata.
-
-Se il dato ufficiale non cambia, può restare uguale, ma deve essere verificato come ultimo dato disponibile e la data/fonte deve restare corretta.
-
-## Market bar — card permanenti
-
-Il market bar deve mantenere le categorie previste dall'index master:
-
-- Benzina
-- Diesel
-- Petrolio
-- Gas TTF
-- Oro
-- Bitcoin
-- Palestinesi uccisi dal 7 ottobre 2023 (Gaza), se presente nel market bar dell'index master
-
-Aggiornare ogni giorno valori, fonte e riferimento temporale quando esiste un dato più recente.
-
-## Card statistiche principali — struttura corrente
-
-L'index master contiene sei card statistiche principali:
-
-1. **Calo degli sbarchi in Italia da inizio 2026**
-2. **Raccolta di Mistral AI, il più grande round tech europeo**
-3. **Record esposti nella fuga di dati vietnamita sui passeggeri aerei**
-4. **Palestinesi uccisi dal 7 ottobre 2023 (Gaza)**
-5. **Omicidi volontari in Italia**
-6. **Donne vittime di omicidio volontario e femminicidio**
-
-Le card possono cambiare contenuto in futuro soltanto su richiesta di Mario o quando la logica editoriale dell'index master lo prevede. Fino ad allora la loro presenza e struttura vanno mantenute.
-
-## Card cliccabili — comportamento obbligatorio
-
-Le seguenti card sono interamente cliccabili/toccabili, non soltanto il testo:
-
-### Sbarchi
-La card:
-
-**Calo degli sbarchi in Italia da inizio 2026**
-
-deve collegarsi a:
-
-`#dati-immigrazione`
-
-cioè alla dashboard con titolo:
-
-**Immigrazione, i numeri del 2026**
-
-### Omicidi
-La card:
-
-**Omicidi volontari in Italia**
-
-deve collegarsi a:
-
-`#reati-tipologia`
-
-### Donne vittime di omicidio volontario e femminicidio
-La card:
-
-**Donne vittime di omicidio volontario e femminicidio**
-
-deve collegarsi a:
-
-`#reati-tipologia`
-
-Il target è la chart-card con titolo:
-
-**Reati per tipologia: primo semestre 2026 vs 2025**
-
-### Gaza
-La card:
-
-**Palestinesi uccisi dal 7 ottobre 2023 (Gaza)**
-
-deve collegarsi al dossier fisso:
-
-`guerre/pi.html`
-
-Questi collegamenti devono funzionare su desktop, tablet/iPad e smartphone.
-
-NON trasformare solo il titolo in link: l'intera card deve restare cliccabile.
-
-NON cambiare l'aspetto grafico delle card collegate.
-
-## ID permanenti da non rinominare
-
-Devono essere mantenuti:
-
-`id="dati-immigrazione"`
-
-`id="sicurezza-pubblica"`
-
-`id="reati-tipologia"`
-
-`id="approfondimenti"`
-
-Non rinominare o rimuovere questi ID, perché sono usati dai collegamenti interni dell'index.
-
-## Dashboard nell'indice
-
-Nella zona dell'indice devono essere mantenute le mini-card:
-
-- **Dati Immigrazione** → `#dati-immigrazione`
-- **Sicurezza Pubblica** → `#sicurezza-pubblica`
-
-Su tablet/mobile deve comparire anche:
-
-- **Approfondimenti** → `#approfondimenti`
-
-Ordine mobile obbligatorio:
-
-1. Dati Immigrazione
-2. Sicurezza Pubblica
-3. Approfondimenti
-
-Su desktop la mini-card Approfondimenti resta nascosta se così previsto dall'index master; la colonna Approfondimenti resta nella sua posizione laterale.
-
-## Continua a leggere — posizione corretta
-
-Per ogni normale articolo l'ordine visivo deve essere:
-
-1. testo iniziale dell'articolo;
-2. eventuale testo aggiuntivo nascosto/espandibile;
-3. **Continua a leggere** su una nuova riga dopo il testo;
-4. fonti.
-
-Il pulsante NON deve comparire prima della conclusione del testo iniziale e NON deve essere spostato dopo le fonti.
-
-Quando l'articolo viene aperto, il comportamento JavaScript già presente nell'index master deve essere mantenuto.
-
-## Approfondimenti fissi
-
-Le pagine come:
-
-- guerre;
-- sanzioni;
-- dazi;
-- glossario;
-- immigrazione Europa;
-- SuperPotenze;
-- altri dossier fissi;
-
-non vanno riscritte o aggiornate quotidianamente.
-
-Devono essere toccate soltanto quando Mario chiede esplicitamente di modificarle.
-
-## Controllo finale specifico delle card
-
-Prima di consegnare l'index quotidiano verificare sempre:
-
-- che tutte le card previste siano presenti;
-- che TUTTI i valori dinamici siano stati controllati;
-- che le date siano aggiornate;
-- che le fonti siano aggiornate;
-- che nessuna card conservi per errore un dato superato;
-- che i link delle card cliccabili funzionino;
-- che `#dati-immigrazione`, `#sicurezza-pubblica`, `#reati-tipologia` e `#approfondimenti` esistano;
-- che `guerre/pi.html` resti il link della card Gaza;
-- che desktop, tablet e mobile mantengano il comportamento previsto dall'index master.
-
----
-
-# 41. ATTIVAZIONE
+# 40. ATTIVAZIONE
 
 La skill si attiva quando Mario chiede:
 
@@ -1334,7 +1174,7 @@ La skill si attiva quando Mario chiede:
 - "cosa succede nel mondo";
 - oppure una richiesta equivalente di aggiornamento dell'attualità.
 
-Se Mario restringe il tema, utilizzare soltanto le sezioni pertinenti ma mantenere la struttura dell'index master.
+Se Mario restringe il tema, utilizzare soltanto le sezioni pertinenti ma mantenere il template.
 
 Per una rassegna completa, rispettare sempre l'intero indice sopra definito.
 
@@ -1343,14 +1183,15 @@ Per una rassegna completa, rispettare sempre l'intero indice sopra definito.
 
 Questa struttura vale per ogni articolo di tutte le sezioni dell'indice, senza eccezioni per le normali card editoriali.
 
+REGOLA AGGIORNATA E VINCOLANTE (Mario, 20/9/2026, sostituisce l'ordine precedente): il pulsante Continua a leggere/Mostra meno deve stare SEMPRE ALLA FINE DELL'ARTICOLO, MAI IN MEZZO. Non va mai messo subito dopo "Il fatto" e prima dell'approfondimento.
+
 Ordine obbligatorio:
 
-1. **Da sapere per capire** — breve contesto indispensabile per comprendere la notizia.
-2. **Il fatto** — apertura immediata con **4-5 frasi** chiare e informative.
-3. **Continua a leggere** — pulsante che espande il resto dell'articolo.
-4. **Approfondimento** — contenuto completo, dati, reazioni, contesto e confronto tra fonti.
-5. **Fonte/i** — in fondo al contenuto espanso.
-6. **Mostra meno** — pulsante finale che richiude l'articolo e riporta alla visualizzazione iniziale.
+1. **Da sapere per capire** — breve contesto indispensabile per comprendere la notizia (vedi anche sezione 7: deve essere un paragrafo corposo, non una riga).
+2. **Il fatto** — apertura immediata con **4-5 frasi** chiare e informative (sempre visibile).
+3. **Approfondimento** — contenuto completo, dati, reazioni, contesto e confronto tra fonti (nascosto di default in `.body-extra`, compare quando l'articolo viene espanso).
+4. **Fonte/i** — in fondo al contenuto, sempre visibile.
+5. **Continua a leggere / Mostra meno** — UNICO pulsante, posizionato per ultimo, dopo la fonte: è l'ultimo elemento dell'articolo, non uno spartiacque a metà testo.
 
 Il testo completo NON deve essere visibile tutto nella card iniziale. L'obiettivo è mantenere la pagina leggibile e compatta, evitando articoli infiniti che occupano verticalmente tutta la sezione.
 
@@ -1358,72 +1199,41 @@ Le 4-5 frasi iniziali devono essere sufficienti per capire subito cosa è succes
 
 **Da sapere per capire** non è un titolo ornamentale: deve contenere realmente il contesto necessario. **Il fatto** deve invece partire dall'aggiornamento attuale.
 
-I pulsanti devono funzionare tramite JavaScript senza cambiare pagina. Quando l'articolo è aperto, **Continua a leggere** non deve più essere visibile e deve comparire **Mostra meno**. Quando viene richiuso, avviene il contrario.
+I pulsanti devono funzionare tramite JavaScript senza cambiare pagina. Quando l'articolo è aperto, **Continua a leggere** non deve più essere visibile e deve comparire **Mostra meno**, sempre in fondo. Quando viene richiuso, avviene il contrario.
 
 La struttura HTML/CSS/JS deve essere uniforme in tutte le sezioni, così l'utente impara una sola interazione e la ritrova in tutto il giornale.
 
 ---
 
-# 41. REGOLE PERMANENTI DAL 10 SETTEMBRE 2026 — INDEX, CARD E COLLEGAMENTI
+# 41. SEZIONI FISSE EXTRA (fuori indice) — MAI TOCCARE SENZA CHIEDERE
 
-Da questa data l'`index.html` corrente è l'unico file da aggiornare quotidianamente. Tutti gli altri file del progetto sono approfondimenti fissi e restano invariati, salvo richiesta esplicita di Mario.
+Oltre all'indice standard della sezione 5, il sito pubblicato include altre sezioni/dashboard fisse che Mario ha aggiunto nel tempo direttamente nelle edizioni, e che NON fanno parte dell'indice/della lista di sezioni da riscrivere ogni giorno:
 
-## Aggiornamento quotidiano obbligatorio di TUTTE le card
+- Sezione "Approfondimenti fissi" (sidebar, id `approfondimenti`) — link fissi (Geopolitica, Conflitti nel mondo, Immigrazione in Europa, Guerre, Dazi, Sanzioni, Glossario) e box "Termine del giorno"/statistiche;
+- Dashboard "Sicurezza Pubblica" (id `sicurezza-pubblica`);
+- Dashboard "Petrolio Basilicata" (id `petrolio-basilicata`), con la sotto-lista "Le ultime notizie" — REGOLA ASSOLUTA E PERMANENTE (ribadita 20/9/2026): tutte le notizie di questa sotto-lista devono SEMPRE essere affiancate in orizzontale, per sempre, su ogni dispositivo, senza alcuna eccezione futura.
 
-Ogni giorno bisogna controllare e aggiornare TUTTE le card presenti nell'index, senza eccezioni. Nessuna card deve restare con un valore, una data o una fonte del giorno precedente se esiste un dato più recente verificabile. Questo vale sia per le card della market bar sia per le card statistiche grandi.
+Regola vincolante e assoluta (Mario, 16/9/2026, ribadita più volte): queste sezioni, e la dashboard "Dati Immigrazione" dell'indice standard, vanno copiate IDENTICHE da un'edizione all'altra — layout, HTML e CSS non vanno mai rigenerati, riscritti o "corretti" di propria iniziativa, nemmeno per sistemare un bug di stile evidente. Se emerge un problema (es. un layout che sembra rotto), or se Mario segnala che qualcosa in una di queste sezioni non va, si spiega la diagnosi e si PROPONE la correzione, ma si chiede sempre conferma esplicita prima di modificare il codice di queste sezioni. Aggiornare solo i dati/testo/date al loro interno quando esplicitamente richiesto.
 
-Le card statistiche attualmente previste sono 6:
+## Nota tecnica nota (17/9/2026): grid a 5 articoli
 
-1. **Calo degli sbarchi in Italia da inizio 2026**;
-2. **Raccolta di Mistral AI, il più grande round tech europeo**;
-3. **Record esposti nella fuga di dati vietnamita sui passeggeri aerei**;
-4. **Palestinesi uccisi dal 7 ottobre 2023 (Gaza)**;
-5. **Omicidi volontari in Italia**;
-6. **Donne vittime di omicidio volontario e femminicidio**.
+La regola permanente aggiornata del 20/9/2026 è l'affiancamento orizzontale quando una sezione contiene più articoli. Il vecchio comportamento "2 impilati / lead a piena larghezza + card successive" è SUPERATO e non deve essere ripristinato. Per 5 o più articoli, incluso "Le ultime notizie" di Petrolio Basilicata, il template deve prevedere esplicitamente una griglia orizzontale coerente tramite `:has()` e colonne `minmax(0, 1fr)`. Non applicare correzioni locali all'edizione del giorno: l'eventuale adeguamento CSS va fatto nel template permanente.
 
-Le sei card vanno mantenute nello stesso stile visivo già presente nell'index master. Non ridisegnarle e non sostituirle con componenti diversi.
+---
 
-## Card cliccabili: comportamento permanente
+# 42. PROCEDURA OPERATIVA QUOTIDIANA E CONSEGNA
 
-Quando una card è collegata a un approfondimento o a un punto interno della pagina, deve essere cliccabile/toccabile su TUTTA la superficie della card, non soltanto sul testo. Il comportamento deve funzionare allo stesso modo su desktop, iPad e smartphone. Mantenere il testo senza sottolineature e i colori ereditati, come già implementato nell'index master.
+Regola vincolante (Mario, 16/9/2026), procedura obbligatoria ogni mattina, sempre in quest'ordine:
 
-Collegamenti permanenti attuali:
+1. Creare l'edizione del giorno (contenuti e date aggiornate, stesso layout/template di sempre).
+2. Archiviare l'edizione del giorno precedente in `rassegne/` (e nella copia gemella `webapp/public/rassegne/`) con il nome `YYYY-MM-DD.html` corrispondente alla sua data.
+3. Aggiungere in `archivio.html` (e nella copia gemella `webapp/public/archivio.html`) la voce mancante che punta all'edizione del giorno precedente appena archiviata.
 
-- **Calo degli sbarchi in Italia da inizio 2026** → `#dati-immigrazione`, cioè la sezione **Dati Immigrazione — “Immigrazione, i numeri del 2026”**;
-- **Omicidi volontari in Italia** → `#reati-tipologia`, cioè il grafico **“Reati per tipologia: primo semestre 2026 vs 2025”** nella sezione Sicurezza Pubblica;
-- **Donne vittime di omicidio volontario e femminicidio** → `#reati-tipologia`, stesso grafico della sezione Sicurezza Pubblica;
-- **Palestinesi uccisi dal 7 ottobre 2023 (Gaza)** → `guerre/pi.html`, dossier fisso **“Palestina e Israele: dalle origini a oggi”**.
+Controlli obbligatori prima di consegnare, per non ripetere errori già fatti in passato:
 
-I target/ID esistenti non devono essere rinominati senza richiesta esplicita, altrimenti i collegamenti delle card si rompono.
+- Tutte le date sul sito pubblicato sono aggiornate: `data-edition`/`data-published` nel body, data nel masthead, footer — e `index.html`/gli asset di `dist/` sono stati rigenerati con `npm run build` e ricopiati, non solo `edition.json`.
+- Il link "Archivio edizioni" nel file HTML appena archiviato (dentro `rassegne/`) punta a `../archivio.html` (con `../`), mai a `archivio.html` senza prefisso.
+- Consegnare sempre insieme alla rassegna del giorno anche il glossario `glossario.html` aggiornato con gli eventuali nuovi termini comparsi in quell'edizione (regola del 31/8/2026), rispettando la struttura/codice esistente senza reinventarla.
 
-## Card Omicidi e Femminicidi
-
-Le due card devono mostrare il dato corrente verificato senza inserire automaticamente un confronto con l'anno precedente nel testo della card. Il confronto storico resta nel grafico di Sicurezza Pubblica raggiungibile con il click/tap.
-
-## Dashboard dell'indice e Approfondimenti su mobile
-
-Sotto l'indice devono restare le mini-card dashboard già presenti:
-
-1. Dati Immigrazione;
-2. Sicurezza Pubblica;
-3. Approfondimenti — visibile come mini-card nell'indice sui dispositivi mobili/tablet secondo le media query già presenti.
-
-La colonna Approfondimenti resta nella sidebar su desktop; su schermi stretti scorre dopo il contenuto principale, come previsto dall'index master. Non modificare questo comportamento.
-
-## Pulsante “Continua a leggere”
-
-Nelle normali card articolo l'ordine visivo attuale deve essere preservato: testo iniziale dell'articolo → eventuale contenuto espandibile → ultimo periodo visibile → pulsante **Continua a leggere** su una nuova riga → blocco fonti. Non spostare il pulsante sopra l'ultimo testo visibile e non metterlo dopo le fonti.
-
-## Controllo finale specifico delle card
-
-Prima di consegnare l'HTML quotidiano verificare sempre:
-
-- che tutte le card presenti nell'index siano state controllate una per una;
-- che valori, date e fonti siano aggiornati quando esiste un dato nuovo;
-- che nessuna card dinamica riporti per errore il dato del giorno precedente;
-- che i quattro collegamenti permanenti sopra indicati funzionino;
-- che l'intera superficie delle card collegate sia cliccabile/toccabile;
-- che `#dati-immigrazione` e `#reati-tipologia` esistano ancora;
-- che il link `guerre/pi.html` non venga trasformato in un link esterno o rinominato;
-- che layout, hover e comportamento responsive siano rimasti identici.
+Il push su GitHub lo fa SEMPRE Mario manualmente: non va mai fatto in autonomia dalla rassegna automatica. Se il push automatico (o l'accesso al Mac) non dovesse riuscire per qualsiasi motivo, i file dell'edizione vanno comunque preparati e consegnati (in chat e/o sul Mac se raggiungibile) così che Mario possa pubblicarli lui stesso senza perdere tempo — non bloccarsi solo perché un passaggio automatico fallisce.
 
