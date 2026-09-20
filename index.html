@@ -1773,6 +1773,84 @@
       grid-column:2 !important;
   }
 }
+
+/* =========================================================
+   TEST — LAYOUT ARTICOLI + FONT EDITORIALE UNIFORME
+   20/09/2026
+   ========================================================= */
+
+/* Tutti gli articoli normali: una riga ciascuno, piena larghezza */
+.articles{
+  display:block !important;
+}
+
+.articles > .article,
+.articles > .article.lead{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  grid-column:auto !important;
+  margin:0 0 22px 0 !important;
+}
+
+.articles > .article:last-child{
+  margin-bottom:0 !important;
+}
+
+/* Nessuna immagine nelle normali card editoriali */
+.article-image{
+  display:none !important;
+}
+
+/* Font editoriale unico: titolo, testo visibile e testo espanso */
+.article h3,
+.article p,
+.article .body-extra,
+.article .body-extra p,
+.duel-fact-text,
+.duel-outlet,
+.duel-headline,
+.duel-side p.body,
+.duel-side .body-extra,
+.duel-side .body-extra p{
+  font-family: Georgia, 'Times New Roman', serif !important;
+}
+
+/* Il testo espanso eredita esattamente stile e dimensione del corpo */
+.article .body-extra,
+.article .body-extra p{
+  font-size:18px !important;
+  line-height:1.7 !important;
+  color:var(--ink) !important;
+  font-weight:400 !important;
+  font-style:normal !important;
+}
+
+/* Confronto: testo espanso uguale al testo già visibile */
+.duel-side .body-extra,
+.duel-side .body-extra p{
+  font-size:18.5px !important;
+  line-height:1.68 !important;
+  color:var(--ink) !important;
+}
+
+/* Smartphone: stessa famiglia tipografica, solo dimensione responsive */
+@media (max-width:640px){
+  .article .body-extra,
+  .article .body-extra p{
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size:14.5px !important;
+    line-height:1.55 !important;
+  }
+
+  .duel-side .body-extra,
+  .duel-side .body-extra p{
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size:14.5px !important;
+    line-height:1.5 !important;
+  }
+}
+
 </style>
 </head>
 <body data-edition="2026-09-20" data-published="2026-09-20T05:30:00+02:00" id="top">
