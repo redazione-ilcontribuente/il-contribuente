@@ -1212,4 +1212,154 @@ Controlli obbligatori prima di consegnare, per non ripetere errori già fatti in
 - Consegnare sempre insieme alla rassegna del giorno anche il glossario `glossario.html` aggiornato con gli eventuali nuovi termini comparsi in quell'edizione (regola del 31/8/2026), rispettando la struttura/codice esistente senza reinventarla.
 
 Il push su GitHub lo fa SEMPRE Mario manualmente: non va mai fatto in autonomia dalla rassegna automatica. Se il push automatico (o l'accesso al Mac) non dovesse riuscire per qualsiasi motivo, i file dell'edizione vanno comunque preparati e consegnati (in chat e/o sul Mac se raggiungibile) così che Mario possa pubblicarli lui stesso senza perdere tempo — non bloccarsi solo perché un passaggio automatico fallisce.
+---
 
+# 43. BACINO PERMANENTE DELLE FONTI — REGOLA VINCOLANTE
+
+Regola vincolante e permanente (Mario, 20/9/2026).
+
+Per ogni edizione de **Il Contribuente**, la ricerca delle notizie deve utilizzare prioritariamente il bacino di testate giornalistiche, agenzie, fonti scientifiche, istituzionali e specialistiche elencato in questa sezione.
+
+## Regole operative
+
+- Ogni articolo deve essere costruito tramite **confronto diretto tra testate/fonti diverse sullo stesso fatto**.
+- Quando disponibili, utilizzare **almeno 3 fonti realmente consultate, pertinenti e utili** per ogni articolo.
+- Le fonti devono apportare verifica, dettagli, dati, contesto, reazioni o prospettive utili. Non aggiungere una fonte soltanto per aumentare artificialmente il numero delle citazioni.
+- **ANSA non deve essere utilizzata automaticamente come fonte principale o dominante** dell'edizione. Va usata quando pertinente, insieme alle altre fonti del bacino.
+- Distribuire la ricerca tra fonti italiane, internazionali, locali, specialistiche, scientifiche e primarie in funzione dell'argomento.
+- Quando le fonti concordano, indicare chiaramente la convergenza.
+- Quando differiscono su fatti, numeri, ricostruzioni, responsabilità, interpretazioni o conseguenze, rendere visibile la divergenza e attribuirla alla fonte corretta.
+- Non creare contrasti artificiali quando le fonti non divergono realmente.
+- **Non attribuire etichette politiche o ideologiche alle testate.** Descrivere concretamente ciò che ciascuna fonte riporta.
+- Per dati, documenti, normative e dichiarazioni ufficiali, privilegiare quando disponibili anche le fonti primarie o istituzionali presenti nel bacino.
+- La presenza di una fonte in questo elenco non elimina le altre regole di qualità del presente `SKILL.md`: freschezza, verifica, attendibilità, pertinenza, confronto, attribuzione e distinzione tra fatti e interpretazioni restano obbligatorie.
+- Se una notizia importante non è adeguatamente verificabile attraverso fonti di questo bacino, non inventare collegamenti o citazioni. È preferibile scegliere un'altra notizia solida. Fonti esterne al bacino possono essere usate eccezionalmente quando indispensabili per una fonte primaria, un documento originale o una verifica che le fonti elencate non consentono, specificandone chiaramente la natura.
+
+## Elenco permanente delle fonti da utilizzare
+
+- [ANSA](https://www.ansa.it)
+- [LaPresse](https://www.lapresse.it)
+- [Corriere della Sera](https://www.corriere.it)
+- [Il Sole 24 Ore](https://www.ilsole24ore.com)
+- [Tgcom24](https://www.tgcom24.mediaset.it)
+- [Adnkronos](https://www.adnkronos.com)
+- [Open](https://www.open.online)
+- [Il Post](https://www.ilpost.it)
+- [Il Fatto Quotidiano](https://www.ilfattoquotidiano.it)
+- [Il Giornale](https://www.ilgiornale.it)
+- [La Nazione](https://www.lanazione.it)
+- [Il Mattino](https://www.ilmattino.it)
+- [Il Giorno](https://www.ilgiorno.it)
+- [RomaToday](https://www.romatoday.it)
+- [Dire](https://www.dire.it)
+- [RSI](https://www.rsi.ch)
+- [Euronews](https://it.euronews.com)
+- [Quotidiano Nazionale](https://www.quotidiano.net)
+- [Globalist](https://www.globalist.it)
+- [Panorama](https://www.panorama.it)
+- [Il Tempo](https://www.iltempo.it)
+- [Virgilio Notizie](https://www.virgilio.it)
+- [CNN](https://www.cnn.com)
+- [Bloomberg](https://www.bloomberg.com)
+- [CNBC](https://www.cnbc.com)
+- [Internazionale (Reuters)](https://www.internazionale.it)
+- [El Español](https://www.elespanol.com)
+- [laRegione.ch](https://www.laregione.ch)
+- [Sky TG24](https://tg24.sky.it)
+- [Il Giornale d'Italia](https://www.ilgiornaleditalia.it)
+- [Yahoo Finanza Italia](https://it.finance.yahoo.com)
+- [Il Sussidiario](https://www.ilsussidiario.net)
+- [Agenzia Nova](https://www.agenzianova.com)
+- [Journal du Net](https://www.journaldunet.com)
+- [Public Sénat](https://www.publicsenat.fr)
+- [The Objective](https://theobjective.com)
+- [Times of Israel](https://www.timesofisrael.com)
+- [CFR](https://www.cfr.org)
+- [Tech Startups](https://techstartups.com)
+- [Frontex](https://www.frontex.europa.eu)
+- [FNSI](https://www.fnsi.it)
+- [MilanoToday](https://www.milanotoday.it)
+- [ScienceDaily](https://www.sciencedaily.com)
+- [JAMA Network Open](https://jamanetwork.com)
+- [Nature](https://www.nature.com)
+- [UT Health San Antonio](https://news.uthscsa.edu)
+- [University of Cambridge](https://www.cam.ac.uk)
+- [Dataconomy](https://dataconomy.com)
+- [TechCrunch](https://techcrunch.com)
+- [Washington Post](https://www.washingtonpost.com)
+- [Fortune](https://fortune.com)
+- [Al Jazeera](https://www.aljazeera.com)
+- [anews](https://www.anews.com.tr)
+- [WTOP](https://wtop.com)
+- [Axios](https://www.axios.com)
+- [Adn24](https://www.adn24.it)
+- [Arab News](https://www.arabnews.com)
+- [Human Rights Watch](https://www.hrw.org)
+- [Xinhua](https://english.news.cn)
+- [Spaceflight Now](https://spaceflightnow.com)
+- [Reuters](https://www.reuters.com)
+- [Wall Street Journal](https://www.wsj.com)
+- [LuccaInDiretta](https://www.luccaindiretta.it)
+- [forzearmate.org](https://forzearmate.org)
+- [RIA Novosti](https://ria.ru)
+- [NPR](https://www.npr.org)
+- [CBS News](https://www.cbsnews.com)
+- [Anadolu Agency](https://www.aa.com.tr)
+- [La Voce di New York](https://www.lavocedinewyork.com)
+- [Federconsumatori](https://federconsumatori.it)
+- [InfoCilento](https://www.infocilento.it)
+- [SalernoToday](https://www.salernotoday.it)
+- [Il Gallo](https://www.ilgallo.it)
+- [Corriere Salentino](https://www.corrieresalentino.it)
+- [l'Immediato](https://www.immediato.net)
+- [Altarimini](https://altarimini.it)
+- [Stato Quotidiano](https://www.statoquotidiano.it)
+- [PBS NewsHour](https://www.pbs.org)
+- [Pakistan Today](https://www.pakistantoday.com.pk)
+- [Sudan Tribune](https://sudantribune.com)
+- [MilanoFinanza](https://www.milanofinanza.it)
+- [Eastern Herald](https://easternherald.com)
+- [Spaziocrypto](https://en.spaziocrypto.com)
+- [QuiFinanza](https://www.quifinanza.it)
+- [Federal Reserve](https://www.federalreserve.gov)
+- [Italpress](https://www.italpress.com)
+- [Blitz Quotidiano](https://www.blitzquotidiano.it)
+- [Teleacras](https://www.teleacras.it)
+- [Imola Oggi](https://www.imolaoggi.it)
+- [Yahoo Finance](https://finance.yahoo.com)
+- [98Zero](https://www.98zero.com)
+- [AGI](https://www.agi.it)
+- [BleepingComputer](https://www.bleepingcomputer.com)
+- [Borsa Italiana/Radiocor](https://www.borsaitaliana.it)
+- [CatanzaroInforma](https://www.catanzaroinforma.it)
+- [China Daily](https://www.chinadaily.com.cn)
+- [CoinDesk](https://www.coindesk.com)
+- [Cyprus Mail](https://cyprus-mail.com)
+- [Engadget](https://www.engadget.com)
+- [El País](https://english.elpais.com)
+- [Fanpage](https://www.fanpage.it)
+- [GrandangoloAgrigento](https://www.grandangoloagrigento.it)
+- [Infobae](https://www.infobae.com)
+- [Investing.com](https://www.investing.com)
+- [MacRumors](https://www.macrumors.com)
+- [OpenAI](https://openai.com)
+- [TASS](https://tass.com)
+- [Telenuova](https://www.telenuova.tv)
+- [Tempo Stretto](https://www.tempostretto.it)
+- [The Decoder](https://the-decoder.com)
+- [The Guardian](https://www.theguardian.com)
+- [Venezuelanalysis](https://venezuelanalysis.com)
+- [WAFA](https://english.wafa.ps)
+
+### Principio finale
+
+L'elenco è un **bacino di ricerca**, non una lista da citare meccanicamente. Per ogni notizia vanno selezionate le fonti che hanno realmente pubblicato informazioni pertinenti sullo stesso fatto. Il risultato deve mostrare al lettore **come fonti diverse raccontano la stessa notizia**, senza classificare politicamente le testate e senza trasformare il confronto in una falsa contrapposizione.
+
+## Regola toponomastica — KIEV
+
+Regola vincolante e permanente (Mario, 20/09/2026).
+
+- In tutti i contenuti de **Il Contribuente** utilizzare sempre la forma italiana **Kiev**.
+- Non utilizzare mai la grafia **Kyiv** nei testi redazionali, nei titoli, nei sottotitoli, nelle didascalie, nei box, nelle copertine e nei post social.
+- Se una fonte utilizza “Kyiv”, nella rielaborazione editoriale convertirlo in **Kiev**, salvo il caso di una citazione letterale in cui la grafia faccia parte del testo originale.
+- La regola serve a mantenere una terminologia immediatamente riconoscibile e uniforme per i lettori italiani.
