@@ -1363,3 +1363,199 @@ Regola vincolante e permanente (Mario, 20/09/2026).
 - Non utilizzare mai la grafia **Kyiv** nei testi redazionali, nei titoli, nei sottotitoli, nelle didascalie, nei box, nelle copertine e nei post social.
 - Se una fonte utilizza “Kyiv”, nella rielaborazione editoriale convertirlo in **Kiev**, salvo il caso di una citazione letterale in cui la grafia faccia parte del testo originale.
 - La regola serve a mantenere una terminologia immediatamente riconoscibile e uniforme per i lettori italiani.
+
+---
+
+# 44. MAPPA DELLE NOTIZIE — COLLEGAMENTO DINAMICO CON GLI ARTICOLI
+
+## Regola vincolante e permanente (Mario, 22/09/2026)
+
+La sezione **“Mappa delle notizie”** NON deve essere una semplice raccolta di link che rimandano genericamente alle sezioni del giornale.
+
+La mappa deve essere **alimentata dagli articoli effettivamente presenti nell’edizione del giorno** nelle seguenti tre sezioni dell’indice:
+
+- **Italia**;
+- **Disagio città**;
+- **Europa**.
+
+Queste tre voci dell’indice e la Mappa delle notizie devono quindi utilizzare gli stessi articoli dell’edizione corrente.
+
+## Funzionamento obbligatorio
+
+Per ogni articolo pubblicato nelle sezioni **Italia**, **Disagio città** ed **Europa**:
+
+1. identificare la località geografica principale della notizia;
+2. collegare l’articolo a tale località nella Mappa delle notizie;
+3. creare o aggiornare il relativo marker/punto geografico sulla mappa;
+4. associare al marker il titolo e il collegamento allo specifico articolo dell’edizione;
+5. facendo clic sul marker o sulla relativa voce della mappa, il lettore deve poter visualizzare/raggiungere lo specifico articolo corrispondente.
+
+Esempio vincolante:
+
+- se nella sezione **Disagio città** è presente un articolo relativo a un omicidio avvenuto a **Catania**, la Mappa delle notizie deve mostrare **Catania** e quel punto deve essere collegato a quello specifico articolo;
+- se nella sezione **Italia** sono presenti articoli relativi a **Roma**, **Milano** e **Napoli**, le rispettive località devono comparire nella mappa e devono essere associate agli articoli corretti;
+- lo stesso principio vale per la sezione **Europa**, con città e località europee pertinenti alle notizie pubblicate.
+
+## Collegamento con i filtri Italia / Disagio città / Europa
+
+I controlli **Italia**, **Disagio città** ed **Europa** presenti nella sezione Mappa delle notizie devono funzionare come filtri degli articoli geolocalizzati:
+
+- clic su **Italia** → mostra i marker/località derivati dagli articoli della sezione Italia;
+- clic su **Disagio città** → mostra i marker/località derivati dagli articoli della sezione Disagio città;
+- clic su **Europa** → mostra i marker/località derivati dagli articoli della sezione Europa.
+
+Il filtro NON deve limitarsi a portare il lettore alla sezione HTML corrispondente.
+
+## Regola contro i dati statici
+
+È vietato lasciare nella Mappa delle notizie località, marker, titoli o collegamenti appartenenti a edizioni precedenti quando i relativi articoli non sono presenti nell’edizione corrente.
+
+A ogni nuova rassegna la mappa deve essere rigenerata/aggiornata utilizzando esclusivamente gli articoli effettivamente pubblicati quel giorno nelle sezioni Italia, Disagio città ed Europa.
+
+La Mappa delle notizie è quindi una **rappresentazione geografica dinamica degli articoli dell’edizione corrente**, non un elemento editoriale indipendente.
+
+## Casi con più articoli nella stessa località
+
+Se più articoli dell’edizione appartengono alla stessa città o località:
+
+- non perdere nessun articolo;
+- il marker deve permettere di visualizzare tutti gli articoli associati a quella località, oppure devono essere utilizzati marker distinti se questa modalità è già prevista dal template;
+- ogni titolo deve mantenere il proprio collegamento allo specifico articolo.
+
+## Integrità del template
+
+Questa regola modifica la **logica dei dati della mappa**, non il suo design.
+
+NON modificare arbitrariamente:
+
+- grafica della mappa;
+- CSS;
+- colori;
+- font;
+- dimensioni;
+- struttura visiva;
+- controlli già previsti dal template.
+
+Il template resta la fonte di verità per l’aspetto e il comportamento grafico. Deve essere aggiornata soltanto la relazione dinamica tra articoli dell’edizione, località, filtri e marker.
+
+## Controllo obbligatorio prima della pubblicazione
+
+Prima di generare l’HTML definitivo verificare che:
+
+1. tutti gli articoli di **Italia** che possiedono una località identificabile siano presenti nella mappa;
+2. tutti gli articoli di **Disagio città** che possiedono una località identificabile siano presenti nella mappa;
+3. tutti gli articoli di **Europa** che possiedono una località identificabile siano presenti nella mappa;
+4. ogni marker punti all’articolo corretto;
+5. i filtri Italia / Disagio città / Europa mostrino gli articoli della categoria corretta;
+6. non siano rimasti marker o articoli di edizioni precedenti;
+7. eventuali località con più articoli non causino la perdita di nessuna notizia;
+8. i collegamenti continuino a funzionare anche dopo l’uso di `Continua a leggere / Mostra meno` e della navigazione interna della pagina.
+
+Questa verifica fa parte del controllo finale obbligatorio dell’edizione quotidiana.
+
+
+## FILTRI ESCLUSIVI DELLA MAPPA DELLE NOTIZIE — REGOLA VINCOLANTE
+
+I tre controlli **Italia**, **Disagio città** ed **Europa** della sezione **Mappa delle notizie** sono filtri **mutuamente esclusivi**.
+
+Quando il lettore seleziona una voce, la mappa deve mostrare **esclusivamente** i marker e gli articoli appartenenti a quella stessa sezione dell’indice:
+
+- **Italia** → mostra SOLO località, marker e articoli presenti nella sezione `#italia`;
+- **Disagio città** → mostra SOLO località, marker e articoli presenti nella sezione `#disagio`;
+- **Europa** → mostra SOLO località, marker e articoli presenti nella sezione `#europa`.
+
+È vietato mescolare nella stessa visualizzazione marker o articoli provenienti dalle altre due categorie. Per esempio, mentre è attivo **Italia**, nessuna notizia appartenente a **Disagio città** o **Europa** deve essere visibile nel pannello della mappa, nei marker, nelle etichette o nell’elenco degli articoli.
+
+Il filtro deve agire sui dati reali dell’edizione corrente e non su elenchi statici. A ogni apertura della Mappa delle notizie il codice deve rileggere gli articoli correnti della categoria selezionata, usando gli attributi geografici dell’articolo e il suo ID.
+
+Se più articoli della categoria attiva appartengono alla stessa località, il marker di quella località deve elencare **solo gli articoli della categoria attiva**. Gli articoli della stessa città appartenenti a un’altra categoria non devono comparire finché il lettore non seleziona quella categoria.
+
+### Verifica obbligatoria dei filtri
+
+Prima della pubblicazione testare separatamente i tre pulsanti:
+
+1. clic su **Italia**: zero articoli di Disagio città ed Europa;
+2. clic su **Disagio città**: zero articoli di Italia ed Europa;
+3. clic su **Europa**: zero articoli di Italia e Disagio città;
+4. ogni marker deve aprire esclusivamente articoli della categoria selezionata;
+5. cambiando filtro, marker, etichette, località, titolo e lista articoli della visualizzazione precedente devono essere rimossi e sostituiti con quelli del nuovo filtro;
+6. chiudendo e riaprendo la mappa su una categoria diversa non devono restare dati della categoria precedentemente selezionata.
+
+Questa regola è permanente e prevale su qualsiasi precedente comportamento della mappa che mostri contemporaneamente notizie di categorie diverse.
+
+---
+
+# 45. MAPPA DELLE NOTIZIE — AGGANCIO AUTOMATICO ARTICOLO ↔ MARKER
+
+## Regola vincolante e permanente (Mario, 23/09/2026)
+
+Questa regola rafforza e completa tutte le regole precedenti sulla **Mappa delle notizie**.
+
+### Principio assoluto
+
+La mappa NON deve contenere associazioni manuali o statiche del tipo:
+
+- `Napoli -> disagio-napoli`;
+- `Milano -> disagio-milano-1`;
+- elenchi JavaScript di ID scritti a mano;
+- località o titoli copiati da un'edizione precedente.
+
+La **fonte di verità è sempre l'articolo reale presente nell'HTML dell'edizione corrente**.
+
+Ogni articolo delle sezioni `#italia`, `#disagio` e `#europa` deve possedere:
+
+- un `id` univoco;
+- `data-geo-name` con la località reale principale;
+- `data-geo-lat` con la latitudine;
+- `data-geo-lng` con la longitudine.
+
+Il codice della mappa deve leggere questi attributi direttamente dal DOM e costruire automaticamente marker, popup, titoli e collegamenti.
+
+### Associazione obbligatoria
+
+Per ogni marker:
+
+`marker -> data geografici dell'articolo -> ID dello stesso articolo -> titolo dello stesso articolo`
+
+Non è consentito ricavare il titolo da un ID appartenente a un'altra notizia.
+
+Esempio: se l'articolo parla di **Giugliano**, il marker deve essere Giugliano e deve aprire quell'articolo. Un marker Napoli non può mostrare Frosinone, Pesaro, Milano o qualsiasi altra notizia.
+
+### Filtri
+
+I filtri sono mutuamente esclusivi:
+
+- `Italia` legge esclusivamente gli articoli dentro `#italia`;
+- `Disagio città` legge esclusivamente gli articoli dentro `#disagio`;
+- `Europa` legge esclusivamente gli articoli dentro `#europa`.
+
+A ogni cambio filtro il codice deve:
+
+1. eliminare marker e label precedenti;
+2. rileggere dal DOM esclusivamente la sezione scelta;
+3. ricostruire i marker usando gli articoli correnti;
+4. ricostruire popup e pulsanti usando ID e titoli correnti;
+5. non conservare alcun dato della categoria visualizzata in precedenza.
+
+### Più articoli nella stessa località
+
+Gli articoli con lo stesso `data-geo-name` devono essere raggruppati nello stesso marker senza perdere alcun articolo. Ogni voce del popup deve mantenere l'ID del proprio articolo.
+
+### Aggiornamento quotidiano
+
+Quando cambia una notizia, durante la costruzione dell'edizione devono essere aggiornati anche i suoi attributi geografici. Non è ammesso correggere quotidianamente a mano un secondo elenco JavaScript della mappa.
+
+### Test obbligatorio prima della pubblicazione
+
+Per TUTTI gli articoli di Italia, Disagio città ed Europa verificare automaticamente:
+
+1. presenza di ID univoco;
+2. presenza di `data-geo-name`, `data-geo-lat`, `data-geo-lng`;
+3. marker creato dalla sezione corretta;
+4. titolo del popup identico al titolo `<h3>` dell'articolo;
+5. click del popup che porta esattamente allo stesso ID;
+6. zero ID inesistenti;
+7. zero marker residui di edizioni precedenti;
+8. zero contaminazioni tra i tre filtri.
+
+Se anche un solo marker apre una notizia diversa dalla propria, l'HTML NON è pronto per la pubblicazione.
