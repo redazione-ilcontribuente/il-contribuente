@@ -1482,3 +1482,42 @@ Prima della pubblicazione testare separatamente i tre pulsanti:
 6. chiudendo e riaprendo la mappa su una categoria diversa non devono restare dati della categoria precedentemente selezionata.
 
 Questa regola è permanente e prevale su qualsiasi precedente comportamento della mappa che mostri contemporaneamente notizie di categorie diverse.
+
+## FILTRO RIGIDO DEI MARKER — REGOLA ASSOLUTA (Mario, 22/09/2026)
+
+Questa regola rafforza e rende non interpretabile la regola dei filtri esclusivi.
+
+Quando viene selezionata una delle tre voci della **Mappa delle notizie**, prima di mostrare la nuova categoria il codice deve **svuotare completamente la mappa**: marker, punti, label, località, popup, titoli e lista degli articoli della visualizzazione precedente devono essere rimossi.
+
+Successivamente devono essere caricati **soltanto** gli articoli appartenenti alla sezione selezionata e che dichiarano esplicitamente la stessa categoria geografica tramite `data-map-section`:
+
+- clic su **Italia** → leggere esclusivamente `#italia .article[data-map-section="italia"]`; sulla mappa non deve esistere alcun marker proveniente da `#disagio` o `#europa`;
+- clic su **Disagio città** → leggere esclusivamente `#disagio .article[data-map-section="disagio"]`; sulla mappa non deve esistere alcun marker proveniente da `#italia` o `#europa`;
+- clic su **Europa** → leggere esclusivamente `#europa .article[data-map-section="europa"]`; sulla mappa non deve esistere alcun marker proveniente da `#italia` o `#disagio`.
+
+Non è sufficiente nascondere il titolo o il popup delle altre categorie: **i loro punti geografici non devono essere presenti nei dati passati alla mappa**.
+
+Ogni marker deve inoltre essere ricontrollato prima della visualizzazione: l'articolo collegato deve trovarsi fisicamente dentro la sezione HTML attiva e il suo `data-map-section` deve coincidere con il filtro attivo. Se una delle due condizioni non coincide, quel marker/articolo deve essere escluso.
+
+Il cambio filtro deve seguire obbligatoriamente questa sequenza:
+
+1. annullare eventuali animazioni/timer della categoria precedente;
+2. azzerare `pointsData` e `labelsData` della mappa;
+3. azzerare l'elenco degli articoli e qualsiasi popup precedente;
+4. rileggere dal DOM soltanto la sezione selezionata;
+5. verificare `data-map-section` per ogni articolo;
+6. costruire i marker esclusivamente con quei dati;
+7. visualizzare soltanto quei marker e i relativi articoli.
+
+### Test obbligatorio prima della pubblicazione
+
+Eseguire tre test separati sull'HTML definitivo:
+
+- **Italia attiva:** il dataset della mappa deve contenere 0 marker/articoli con categoria `disagio` e 0 con categoria `europa`;
+- **Disagio città attiva:** il dataset deve contenere 0 marker/articoli con categoria `italia` e 0 con categoria `europa`;
+- **Europa attiva:** il dataset deve contenere 0 marker/articoli con categoria `italia` e 0 con categoria `disagio`.
+
+Se anche un solo marker di una categoria diversa rimane visibile, il controllo finale è fallito e l'edizione non deve essere considerata pronta.
+
+Questa è una regola permanente e prevale su qualsiasi precedente implementazione tecnica incompatibile, senza autorizzare modifiche alla grafica o alla struttura visiva del template.
+
