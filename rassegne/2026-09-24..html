@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Rassegna Stampa — 19 Settembre 2026</title>
+<title>Il Contribuente — 24 settembre 2026</title>
 <link href="logo.jpeg" rel="icon" type="image/png"/>
 <meta content="Il Contribuente — Rassegna Stampa Quotidiana" property="og:title"/>
 <meta content="Confronto quotidiano tra le principali testate italiane e internazionali." property="og:description"/>
@@ -572,6 +573,7 @@
     background:linear-gradient(90deg, var(--ink) 0%, var(--ink) 40%, transparent 100%);
   }
   .section-tag{
+    display:none;
     font-family:'JetBrains Mono',monospace;
     font-size:13px;
     letter-spacing:.1em;
@@ -632,7 +634,7 @@
      - 4 articoli: comportamento standard (già di default): la prima orizzontale (lead),
        le altre tre in verticale, affiancate in una riga di 3 colonne uguali. */
   .articles:has(> .article:nth-child(2):last-child){
-    grid-template-columns:1fr;
+    grid-template-columns:1fr 1fr;
   }
   .articles:has(> .article:nth-child(2):last-child) > .article.lead{
     grid-column:auto;
@@ -724,7 +726,7 @@
     background:linear-gradient(180deg, var(--red), var(--red-deep));
   }
   .article h3{
-    font-family:'Fraunces',serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-weight:600;
     font-size:23px;
     line-height:1.28;
@@ -732,6 +734,7 @@
     color:var(--ink);
   }
   .article p{
+    font-family: Georgia, 'Times New Roman', serif;
     font-size:18px;
     line-height:1.7;
     color:var(--ink);
@@ -938,7 +941,7 @@
     margin-bottom:6px;
   }
   .duel-fact-text{
-    font-family:'Fraunces',serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size:23px;
     font-weight:600;
     line-height:1.35;
@@ -988,13 +991,13 @@
   .duel-side.right .duel-tag{background:linear-gradient(160deg,#4a4f57,#22262b);}
   .duel-side.third .duel-tag{background:linear-gradient(160deg,#4a4f57,#22262b);}
   .duel-outlet{
-    font-family:'Fraunces',serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-weight:700;
     font-size:18.5px;
     margin-bottom:8px;
   }
   .duel-headline{
-    font-family:'Fraunces',serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-style:italic;
     font-size:18px;
     line-height:1.4;
@@ -1002,6 +1005,7 @@
     color:var(--ink);
   }
   .duel-side p.body{
+    font-family: Georgia, 'Times New Roman', serif;
     font-size:18.5px;
     line-height:1.68;
     margin:0 0 8px 0;
@@ -1399,6 +1403,53 @@
     .sidebar-block + .sidebar-block{ margin-top:14px; }
   }
 
+    /* ===== Notizie della dashboard Petrolio Basilicata: SEMPRE affiancate in orizzontale,
+     su ogni dispositivo, ma FISSE — niente barra a scorrimento (richiesta esplicita di
+     Mario, 15/9/2026, che corregge la versione a scorrimento del 15/9/2026 mattina).
+     Qui, e SOLO qui, non si applica la regola universale del 24/8/2026 che sotto 820px
+     impila gli articoli in un'unica colonna: restano invece una griglia fissa a 2
+     colonne, tutte visibili senza scorrere. Scoping via #petrolio-basilicata: non tocca
+     nessun'altra sezione del giornale.
+     FIX 19/9/2026: le colonne usavano "1fr" puro, che su schermo stretto non si
+     restringe sotto la larghezza minima del contenuto delle card -> la sezione
+     sfondava a destra e rompeva il layout su mobile. Ora "minmax(0, 1fr)" forza
+     le colonne a restringersi davvero, come richiesto da Mario. ===== */
+  @media (max-width:820px){
+    #petrolio-basilicata .articles{
+      display:grid !important;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:14px;
+    }
+    #petrolio-basilicata .articles .article.lead{
+      grid-column:1 / -1;
+    }
+  }
+  @media (max-width:480px){
+    #petrolio-basilicata .articles{ gap:10px; }
+  }
+  /* ===== Petrolio Basilicata, "Le ultime notizie": le card NON-lead devono SEMPRE
+     stare affiancate in UN'UNICA riga orizzontale fissa, qualunque sia il loro
+     numero — mai una card isolata che va a capo da sola sotto le altre.
+     Bug ricorrente (16-18/9/2026): la regola universale del 24/8/2026 gestisce
+     esplicitamente solo i casi con 2, 3 o 4 articoli totali (selettori
+     :nth-child(2)/(3):last-child); con 5 o più articoli totali il grid di
+     default a 3 colonne fisse spezzava le card non-lead in modo ibrido
+     (es. 3 affiancate + 1 isolata sotto). Qui aggiungiamo i casi mancanti,
+     SOLO per questa sezione (scoping #petrolio-basilicata, nessun'altra
+     sezione è toccata), fino a 7 articoli totali (margine per il futuro).
+     Regola PERMANENTE richiesta con forza da Mario il 18/9/2026: niente
+     scorrimento orizzontale (già vietato il 15/9/2026), le colonne si
+     stringono ma restano sempre tutte sulla stessa riga, su ogni dispositivo. */
+  #petrolio-basilicata .articles:has(> .article:nth-child(5):last-child){
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+  }
+  #petrolio-basilicata .articles:has(> .article:nth-child(6):last-child){
+    grid-template-columns:repeat(5, minmax(0, 1fr));
+  }
+  #petrolio-basilicata .articles:has(> .article:nth-child(7):last-child){
+    grid-template-columns:repeat(6, minmax(0, 1fr));
+  }
+
   /* Petrolio Basilicata dashboard — stili mancanti, aggiunti 16/9/2026, mai cambiare senza chiederlo */
   .pb-subhead{ margin:28px 0 14px; }
   .pb-subhead-tag{ font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--navy); border-bottom:2px solid var(--navy); padding-bottom:4px; display:inline-block; }
@@ -1459,9 +1510,392 @@
   .pb-reset-zoom.show{ opacity:1; pointer-events:auto; }
   .pb-map-card.pb-map-card-highlight{ box-shadow:0 0 0 3px var(--gold); }
 
+
+/* ===== CORREZIONI 20/09/2026 RICHIESTE DA MARIO ===== */
+
+/* Etichetta/indice colorato visibile accanto al titolo di OGNI sezione. */
+.section-head > .section-tag{
+  display:inline-block !important;
+}
+
+/* Petrolio Basilicata — "Le ultime notizie":
+   TUTTE le card, compresa la prima/lead, sempre affiancate orizzontalmente.
+   Nessuna card full-width e nessuna card sotto le altre. */
+#petrolio-basilicata .articles{
+  display:grid !important;
+  grid-template-columns:repeat(5, minmax(0, 1fr)) !important;
+  gap:10px !important;
+  align-items:stretch !important;
+}
+#petrolio-basilicata .articles > .article,
+#petrolio-basilicata .articles > .article.lead{
+  grid-column:auto !important;
+  min-width:0 !important;
+  width:auto !important;
+}
+#petrolio-basilicata .articles > .article.lead::before{
+  display:none !important;
+}
+
+/* Anche su tablet e mobile le cinque notizie restano sulla stessa riga,
+   come richiesto: niente impilamento verticale. */
+@media (max-width:820px){
+  #petrolio-basilicata .articles{
+    grid-template-columns:repeat(5, minmax(0, 1fr)) !important;
+  }
+  #petrolio-basilicata .articles > .article.lead{
+    grid-column:auto !important;
+  }
+}
+
+/* PETROLIO BASILICATA — LE ULTIME NOTIZIE: SEMPRE ORIZZONTALI */
+#petrolio-basilicata .articles{
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:nowrap !important;
+    align-items:stretch !important;
+    gap:12px !important;
+    width:100% !important;
+}
+#petrolio-basilicata .articles > .article,
+#petrolio-basilicata .articles > .article.lead{
+    flex:1 1 20% !important;
+    width:20% !important;
+    min-width:0 !important;
+    max-width:20% !important;
+    grid-column:auto !important;
+}
+#petrolio-basilicata .articles > .article.lead::before{
+    display:none !important;
+}
+@media (max-width:820px){
+    #petrolio-basilicata .articles{
+        display:flex !important;
+        flex-direction:row !important;
+        flex-wrap:nowrap !important;
+        overflow-x:auto !important;
+        -webkit-overflow-scrolling:touch;
+    }
+    #petrolio-basilicata .articles > .article,
+    #petrolio-basilicata .articles > .article.lead{
+        flex:0 0 82% !important;
+        width:82% !important;
+        max-width:82% !important;
+    }
+}
+
+/* ===== PETROLIO BASILICATA — REGOLA DEFINITIVA MULTI-DISPOSITIVO =====
+   iPhone / iPad / tablet / PC / TV:
+   le 5 notizie di "Le ultime notizie" restano SEMPRE in orizzontale.
+   MAI impilate verticalmente. Su viewport strette: scroll orizzontale. */
+#petrolio-basilicata .articles{
+  display:flex !important;
+  flex-direction:row !important;
+  flex-wrap:nowrap !important;
+  align-items:stretch !important;
+  gap:12px !important;
+  width:100% !important;
+  max-width:100% !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  -webkit-overflow-scrolling:touch !important;
+  scroll-snap-type:x proximity;
+  padding-bottom:8px;
+}
+
+#petrolio-basilicata .articles > .article,
+#petrolio-basilicata .articles > .article.lead{
+  display:block !important;
+  grid-column:auto !important;
+  flex:0 0 clamp(260px, 19.2%, 360px) !important;
+  width:clamp(260px, 19.2%, 360px) !important;
+  min-width:260px !important;
+  max-width:360px !important;
+  scroll-snap-align:start;
+}
+
+#petrolio-basilicata .articles > .article.lead::before{
+  display:none !important;
+}
+
+/* Nessuna media query può trasformare queste card in verticale */
+@media (max-width:1400px){
+  #petrolio-basilicata .articles > .article,
+  #petrolio-basilicata .articles > .article.lead{
+    flex-basis:300px !important;
+    width:300px !important;
+    min-width:300px !important;
+    max-width:300px !important;
+  }
+}
+@media (max-width:820px){
+  #petrolio-basilicata .articles{
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+  }
+  #petrolio-basilicata .articles > .article,
+  #petrolio-basilicata .articles > .article.lead{
+    flex:0 0 82vw !important;
+    width:82vw !important;
+    min-width:260px !important;
+    max-width:420px !important;
+    grid-column:auto !important;
+  }
+}
+
+/* ===== BASILICATA: 5 NOTIZIE FISSE ORIZZONTALI — OVERRIDE FINALE ===== */
+#petrolio-basilicata .articles{
+    display:grid !important;
+    grid-template-columns:repeat(5, minmax(0, 1fr)) !important;
+    grid-template-rows:1fr !important;
+    grid-auto-flow:column !important;
+    gap:10px !important;
+    width:100% !important;
+    max-width:100% !important;
+    overflow:visible !important;
+}
+
+#petrolio-basilicata .articles > .article,
+#petrolio-basilicata .articles > .article.lead{
+    grid-row:1 !important;
+    grid-column:auto !important;
+    display:block !important;
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    height:auto !important;
+    flex:none !important;
+    overflow-wrap:break-word !important;
+    word-break:normal !important;
+}
+
+#petrolio-basilicata .articles > .article.lead::before{
+    display:none !important;
+}
+
+/* BLOCCA QUALSIASI REGOLA RESPONSIVE PRECEDENTE:
+   anche iPhone/iPad/tablet restano 5 colonne fisse sulla stessa riga */
+@media (max-width:1400px), (max-width:1100px), (max-width:820px), (max-width:600px), (max-width:480px){
+    #petrolio-basilicata .articles{
+        display:grid !important;
+        grid-template-columns:repeat(5, minmax(0, 1fr)) !important;
+        grid-template-rows:1fr !important;
+        grid-auto-flow:column !important;
+        overflow:visible !important;
+    }
+    #petrolio-basilicata .articles > .article,
+    #petrolio-basilicata .articles > .article.lead{
+        grid-row:1 !important;
+        grid-column:auto !important;
+        width:100% !important;
+        min-width:0 !important;
+        max-width:none !important;
+        flex:none !important;
+    }
+}
+
+/* ===== PETROLIO BASILICATA — ARTICOLI DAVVERO ORIZZONTALI =====
+   Ogni notizia è una card orizzontale larga al 100%.
+   Le notizie NON sono colonne verticali strette. */
+#petrolio-basilicata .articles{
+    display:flex !important;
+    flex-direction:column !important;
+    flex-wrap:nowrap !important;
+    width:100% !important;
+    gap:14px !important;
+    overflow:visible !important;
+}
+
+#petrolio-basilicata .articles > .article,
+#petrolio-basilicata .articles > .article.lead{
+    display:grid !important;
+    grid-template-columns:minmax(220px, 32%) minmax(0, 1fr) !important;
+    grid-template-rows:auto !important;
+    column-gap:28px !important;
+    row-gap:8px !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    flex:none !important;
+    grid-column:auto !important;
+    padding:22px 26px !important;
+    align-items:start !important;
+}
+
+/* Titolo a sinistra, testo/approfondimento/fonti a destra */
+#petrolio-basilicata .articles > .article h3{
+    grid-column:1 !important;
+    grid-row:1 / span 20 !important;
+    margin:0 !important;
+}
+#petrolio-basilicata .articles > .article p,
+#petrolio-basilicata .articles > .article .body,
+#petrolio-basilicata .articles > .article .body-extra,
+#petrolio-basilicata .articles > .article .source,
+#petrolio-basilicata .articles > .article .read-more-btn,
+#petrolio-basilicata .articles > .article .callout{
+    grid-column:2 !important;
+}
+#petrolio-basilicata .articles > .article.lead::before{
+    display:none !important;
+}
+
+/* STESSO FORMATO SU TUTTI I DISPOSITIVI:
+   non trasformare mai l'articolo in card verticale. */
+@media (max-width:1400px){
+  #petrolio-basilicata .articles > .article,
+  #petrolio-basilicata .articles > .article.lead{
+      grid-template-columns:minmax(200px, 30%) minmax(0, 1fr) !important;
+  }
+}
+@media (max-width:820px){
+  #petrolio-basilicata .articles > .article,
+  #petrolio-basilicata .articles > .article.lead{
+      display:grid !important;
+      grid-template-columns:minmax(115px, 36%) minmax(0, 1fr) !important;
+      column-gap:14px !important;
+      width:100% !important;
+      max-width:100% !important;
+      padding:14px !important;
+  }
+  #petrolio-basilicata .articles > .article h3{
+      grid-column:1 !important;
+      grid-row:1 / span 20 !important;
+      font-size:15px !important;
+  }
+  #petrolio-basilicata .articles > .article p{
+      grid-column:2 !important;
+      font-size:13px !important;
+  }
+  #petrolio-basilicata .articles > .article .source{
+      grid-column:2 !important;
+  }
+}
+
+/* =========================================================
+   TEST — LAYOUT ARTICOLI + FONT EDITORIALE UNIFORME
+   20/09/2026
+   ========================================================= */
+
+/* Tutti gli articoli normali: una riga ciascuno, piena larghezza */
+.articles{
+  display:block !important;
+}
+
+.articles > .article,
+.articles > .article.lead{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  grid-column:auto !important;
+  margin:0 0 22px 0 !important;
+}
+
+.articles > .article:last-child{
+  margin-bottom:0 !important;
+}
+
+/* Nessuna immagine nelle normali card editoriali */
+.article-image{
+  display:none !important;
+}
+
+/* Font editoriale unico: titolo, testo visibile e testo espanso */
+.article h3,
+.article p,
+.article .body-extra,
+.article .body-extra p,
+.duel-fact-text,
+.duel-outlet,
+.duel-headline,
+.duel-side p.body,
+.duel-side .body-extra,
+.duel-side .body-extra p{
+  font-family: Georgia, 'Times New Roman', serif !important;
+}
+
+/* Il testo espanso eredita esattamente stile e dimensione del corpo */
+.article .body-extra,
+.article .body-extra p{
+  font-size:18px !important;
+  line-height:1.7 !important;
+  color:var(--ink) !important;
+  font-weight:400 !important;
+  font-style:normal !important;
+}
+
+/* Confronto: testo espanso uguale al testo già visibile */
+.duel-side .body-extra,
+.duel-side .body-extra p{
+  font-size:18.5px !important;
+  line-height:1.68 !important;
+  color:var(--ink) !important;
+}
+
+/* Smartphone: stessa famiglia tipografica, solo dimensione responsive */
+@media (max-width:640px){
+  .article .body-extra,
+  .article .body-extra p{
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size:14.5px !important;
+    line-height:1.55 !important;
+  }
+
+  .duel-side .body-extra,
+  .duel-side .body-extra p{
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size:14.5px !important;
+    line-height:1.5 !important;
+  }
+}
+
+
+/* ===== TEST MAPPA 3D — Disagio città / città cliccabili ===== */
+
+/* Indice separato per la navigazione geografica 3D */
+.geo3d-index{position:relative;margin-top:18px;padding:18px 18px 16px;border:1px solid rgba(31,58,95,.18);border-top:3px solid var(--gold);border-radius:10px;background:linear-gradient(135deg,rgba(255,255,255,.94),rgba(247,242,226,.76));box-shadow:0 8px 24px rgba(20,34,52,.07);overflow:hidden}
+.geo3d-index-head{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:92px}
+.geo3d-index-copy{min-width:0;flex:1}.geo3d-index .toc-kicker{margin:0;color:var(--navy);font-family:'Fraunces',Georgia,serif;font-size:clamp(19px,2.4vw,28px);font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+.geo3d-index-sub{margin:5px 0 0;font-family:'Inter',sans-serif;font-size:13px;line-height:1.35;color:#5c6570}.geo3d-index-sub span{color:#9b6d18;margin-right:5px}
+.geo3d-mini-globe{flex:0 0 94px;width:94px;height:94px;position:relative;overflow:hidden;border-radius:50%;filter:drop-shadow(0 7px 10px rgba(10,22,38,.24));touch-action:none;pointer-events:none}.geo3d-mini-globe canvas{display:block!important}
+.geo3d-index-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding-top:11px;border-top:1px solid rgba(31,58,95,.12)}
+.geo3d-index-link{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;padding:8px 13px;border:1px solid rgba(31,58,95,.18);border-radius:999px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:800;color:var(--navy);text-decoration:none;transition:.18s ease;touch-action:manipulation}
+.geo3d-index-link::before{content:'●';color:var(--gold);font-size:8px}.geo3d-index-link:hover,.geo3d-index-link:focus-visible{border-color:var(--gold);box-shadow:0 4px 12px rgba(31,58,95,.10);transform:translateY(-1px);outline:none}
+@media(max-width:640px){.geo3d-index{margin-top:14px;padding:14px 13px 13px}.geo3d-index-head{gap:10px;min-height:72px}.geo3d-mini-globe{flex-basis:72px;width:72px;height:72px}.geo3d-index .toc-kicker{font-size:18px}.geo3d-index-sub{font-size:11px;margin-top:3px}.geo3d-index-links{gap:6px;margin-top:9px;padding-top:9px}.geo3d-index-link{font-size:11px;padding:7px 10px;min-height:34px}}
+@media(max-width:360px){.geo3d-index{padding:12px 10px}.geo3d-mini-globe{flex-basis:62px;width:62px;height:62px}.geo3d-index .toc-kicker{font-size:16px}.geo3d-index-sub{font-size:10px}.geo3d-index-links{display:grid;grid-template-columns:1fr 1fr 1fr}.geo3d-index-link{padding:7px 5px;font-size:10px}}
+@media(orientation:landscape) and (max-height:520px){.geo3d-index-head{min-height:64px}.geo3d-mini-globe{flex-basis:64px;width:64px;height:64px}}
+
+
+/* Globo 3D accanto alla testata Il Contribuente */
+.masthead-title-row{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto;width:fit-content;max-width:100%}
+.masthead-title-row .masthead-title{margin:0}
+.masthead-brand-globe{flex:0 0 86px;width:86px;height:86px;position:relative;overflow:hidden;border-radius:50%;filter:drop-shadow(0 6px 10px rgba(10,22,38,.24));touch-action:none;pointer-events:none}
+.masthead-brand-globe canvas{display:block!important}
+.geo3d-index-head{min-height:0!important}
+@media(max-width:640px){.masthead-title-row{gap:8px}.masthead-brand-globe{flex-basis:60px;width:60px;height:60px}.geo3d-index-head{min-height:0!important}}
+@media(max-width:360px){.masthead-title-row{gap:6px}.masthead-brand-globe{flex-basis:52px;width:52px;height:52px}}
+@media(orientation:landscape) and (max-height:520px){.masthead-brand-globe{flex-basis:52px;width:52px;height:52px}.geo3d-index-head{min-height:0!important}}
+
+.geo3d-overlay{position:fixed;inset:0;z-index:9999;background:radial-gradient(circle at 50% 44%,#14263d 0%,#07101b 44%,#02060b 100%);display:none;overflow:hidden;color:#f4ead1}
+.geo3d-overlay.is-open{display:flex;align-items:center;justify-content:center}
+.geo3d-globe{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.geo3d-globe canvas{display:block!important;margin:auto!important}
+.geo3d-top{position:absolute;z-index:3;top:20px;left:50%;transform:translateX(-50%);width:min(92vw,980px);text-align:center;pointer-events:none}
+.geo3d-kicker{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#d3a846;margin-bottom:7px}
+.geo3d-title{font-family:'Fraunces',serif;font-size:clamp(25px,4vw,46px);font-weight:800;text-shadow:0 4px 18px #000;margin:0}
+.geo3d-status{font-family:'Inter',sans-serif;font-size:13px;color:#d9dde2;margin-top:7px}
+.geo3d-close,.geo3d-skip{position:absolute;z-index:5;border:1px solid rgba(211,168,70,.65);background:rgba(5,10,16,.84);color:#f4ead1;border-radius:7px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;cursor:pointer}
+.geo3d-close{right:18px;top:18px;width:42px;height:42px;font-size:20px}.geo3d-skip{left:18px;bottom:18px;padding:10px 14px;font-size:10px}
+.geo3d-news{position:absolute;z-index:4;left:50%;bottom:12px;transform:translate(-50%,14px);width:min(660px,calc(100vw - 32px));max-height:min(27vh,220px);overflow:auto;background:rgba(247,242,226,.97);color:#1b1e22;border-top:3px solid #a97a1f;border-radius:8px;padding:9px 13px;box-shadow:0 12px 34px rgba(0,0,0,.42);opacity:0;transition:.3s ease;pointer-events:none}
+.geo3d-news.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}.geo3d-news small{font-family:'JetBrains Mono',monospace;font-size:9px;color:#7d5a13;text-transform:uppercase;letter-spacing:.07em}.geo3d-news h3{font-family:Georgia,'Times New Roman',serif;font-size:clamp(14px,1.8vw,18px);line-height:1.18;margin:3px 0 5px}.geo3d-news-list{display:flex;flex-wrap:wrap;gap:5px}.geo3d-news button{border:0;background:#1f3a5f;color:#fff;padding:6px 9px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:10px;line-height:1.25;cursor:pointer;text-align:left;touch-action:manipulation}.geo3d-hint{font-family:'Inter',sans-serif;font-size:10px;line-height:1.3;color:#555;margin:0 0 6px}
+@media(max-width:640px){.geo3d-top{top:54px;width:88vw}.geo3d-title{font-size:25px}.geo3d-status{font-size:11px}.geo3d-news{bottom:10px;width:calc(100vw - 18px);max-height:24vh;padding:8px 10px}.geo3d-news h3{font-size:14px}.geo3d-news button{font-size:9px;padding:6px 8px}.geo3d-hint{font-size:9px}.geo3d-skip{left:10px;bottom:auto;top:10px;padding:8px 10px}.geo3d-close{right:10px;top:10px;width:36px;height:36px}.geo3d-kicker{font-size:9px}}
+@media(max-width:390px){.geo3d-news{max-height:22vh}.geo3d-news-list{display:grid;grid-template-columns:1fr}.geo3d-news button{width:100%}}
+@media(orientation:landscape) and (max-height:520px){.geo3d-top{top:8px}.geo3d-kicker{display:none}.geo3d-title{font-size:20px}.geo3d-status{margin-top:2px;font-size:10px}.geo3d-news{bottom:6px;max-height:31vh;width:min(620px,calc(100vw - 110px));padding:6px 9px}.geo3d-hint{display:none}.geo3d-skip{left:8px;top:8px;bottom:auto}.geo3d-close{right:8px;top:8px}}
 </style>
 </head>
-<body data-edition="2026-09-19" data-published="2026-09-19T07:44:00+02:00" id="top">
+<body data-edition="2026-09-24" data-published="2026-09-24T05:00:00+02:00" id="top">
 <!-- ===== OVERLAY INTRO — SEMPRE PRESENTE, IDENTICO OGNI GIORNO ===== -->
 <div class="overlay" id="introOverlay">
 <div class="overlay-box">
@@ -1473,10 +1907,10 @@
 <div class="masthead">
 <div class="masthead-top">
 <span>Edizione digitale</span>
-<span>19 Settembre 2026</span>
+<span>24 Settembre 2026</span>
 <span>Rassegna stampa quotidiana</span>
 </div>
-<h1 class="masthead-title">Il <em>Contribuente</em></h1>
+<div class="masthead-title-row"><h1 class="masthead-title">Il <em>Contribuente</em></h1><div aria-hidden="true" class="masthead-brand-globe" id="geo3dMiniGlobe"></div></div>
 <div class="masthead-sub">Italia, Europa, geopolitica, immigrazione, mercati e benessere — sintesi multi-fonte, con confronto diretto tra testate diverse sugli stessi fatti, senza etichette politiche.</div>
 <div class="masthead-badges">
 <a class="badge" href="https://www.ansa.it" rel="noopener noreferrer" target="_blank">Ansa</a>
@@ -1597,32 +2031,32 @@
 <a class="back-link" href="../archivio.html">Archivio edizioni →</a>
 </div>
 <div class="ticker-wrap">
-<div class="ticker"><span>STRETTO DI HORMUZ — Usa e Iran raccontano in modo opposto lo stesso scontro navale</span><span>ROMA — Il Cdm abolisce il bollo auto per il 70% dei veicoli dal 2027</span><span>SENATO — Approvata la nuova legge elettorale, opposizioni in Aula con cartelli «no alla legge truffa»</span><span>BRUXELLES — Von der Leyen: «Europa forte e indipendente», il Parlamento si spacca</span><span>STATI UNITI — La Fed alza i tassi al 3,75%-4%, primo rialzo in tre anni</span><span>GAZA — Crolla un palazzo lesionato dalla guerra: fino a 21 morti durante la tregua</span><span>PRIVACY — L'Ue vieta i social ai minori di 13 anni con il “Kids Act”</span><span>NAPOLI — Rissa sulla Cumana a Pianura, due minorenni accoltellati</span><span>STRETTO DI HORMUZ — Usa e Iran raccontano in modo opposto lo stesso scontro navale</span><span>ROMA — Il Cdm abolisce il bollo auto per il 70% dei veicoli dal 2027</span><span>SENATO — Approvata la nuova legge elettorale, opposizioni in Aula con cartelli «no alla legge truffa»</span><span>BRUXELLES — Von der Leyen: «Europa forte e indipendente», il Parlamento si spacca</span><span>STATI UNITI — La Fed alza i tassi al 3,75%-4%, primo rialzo in tre anni</span><span>GAZA — Crolla un palazzo lesionato dalla guerra: fino a 21 morti durante la tregua</span><span>PRIVACY — L'Ue vieta i social ai minori di 13 anni con il “Kids Act”</span><span>NAPOLI — Rissa sulla Cumana a Pianura, due minorenni accoltellati</span></div>
+<div class="ticker"><span>WASHINGTON — Trump e Xi al vertice dopo l’estensione della tregua commerciale</span><span>ITALIA — Giorgetti: taglio Irpef al ceto medio tra le priorità</span><span>PNRR — Certificati 156 obiettivi per l’ultima rata da 28,4 miliardi</span><span>ROMA — Colosseo chiuso dopo la morte di un tecnico di 22 anni</span><span>EUROPA — Critiche sulla rimozione di due miliardari russi dalle sanzioni</span><span>KIEV — Nuovi droni russi mentre Zelensky parla all’ONU</span><span>MERCATI — Brent sopra 102 dollari e Treasury USA oltre il 5%</span><span>IA — Meta presenta Charm e all’ONU cresce l’allarme sicurezza</span><span>WASHINGTON — Trump e Xi al vertice dopo l’estensione della tregua commerciale</span><span>ITALIA — Giorgetti: taglio Irpef al ceto medio tra le priorità</span><span>PNRR — Certificati 156 obiettivi per l’ultima rata da 28,4 miliardi</span><span>ROMA — Colosseo chiuso dopo la morte di un tecnico di 22 anni</span><span>EUROPA — Critiche sulla rimozione di due miliardari russi dalle sanzioni</span><span>KIEV — Nuovi droni russi mentre Zelensky parla all’ONU</span><span>MERCATI — Brent sopra 102 dollari e Treasury USA oltre il 5%</span><span>IA — Meta presenta Charm e all’ONU cresce l’allarme sicurezza</span></div>
 </div>
 <div class="market-bar">
 <div class="market-bar-inner">
-<div class="market-card"><div class="market-label">Benzina</div><div class="market-value">2,133€/L</div>
-<div class="market-delta up">Nuovo aumento; sconto accise diesel in scadenza oggi</div>
-<div class="market-source">Mimit/Staffetta Quotidiana, 16/9</div></div>
-<div class="market-card"><div class="market-label">Diesel</div><div class="market-value">2,246€/L</div>
-<div class="market-delta up">Nuovo massimo storico, supera il record di marzo 2022</div>
-<div class="market-source">Mimit/Staffetta Quotidiana, 16/9</div></div>
-<div class="market-card"><div class="market-label">Petrolio</div><div class="market-value">105,7 $</div>
-<div class="market-delta down">Brent -2,8%, dopo essersi avvicinato a 110$ per l'escalation a Hormuz</div>
-<div class="market-source">Milano Finanza, 16/9</div></div>
-<div class="market-card"><div class="market-label">Gas TTF</div><div class="market-value">77,6€</div>
-<div class="market-delta down">In calo del 3%, dopo dichiarazioni distensive di Teheran</div>
-<div class="market-source">ANSA, 16/9</div></div>
-<div class="market-card"><div class="market-label">Oro</div><div class="market-value">~130€/g</div>
-<div class="market-delta up">+0,70% a 4.364$/oncia</div>
-<div class="market-source">GEA, 16/9</div></div>
-<div class="market-card"><div class="market-label">Bitcoin</div><div class="market-value">~65.500€</div>
-<div class="market-delta down">-4% nelle 24h, dopo la bocciatura del Clarity Act al Senato Usa</div>
-<div class="market-source">Fortune/Euronews, 16/9</div></div>
+<div class="market-card"><div class="market-label">Benzina</div><div class="market-value">2,155 €/L</div>
+<div class="market-delta up">+0,001 €/L</div>
+<div class="market-source">ultimo dato verificato · 23/09/2026</div></div>
+<div class="market-card"><div class="market-label">Diesel</div><div class="market-value">2,340 €/L</div>
+<div class="market-delta up">+0,001 €/L</div>
+<div class="market-source">ultimo dato verificato · 23/09/2026</div></div>
+<div class="market-card"><div class="market-label">Petrolio</div><div class="market-value">Brent 99,28 $</div>
+<div class="market-delta down">-4,4%</div>
+<div class="market-source">ultimo dato verificato · 23/09/2026</div></div>
+<div class="market-card"><div class="market-label">Gas TTF</div><div class="market-value">73,88 €/MWh</div>
+<div class="market-delta down">-7,6%</div>
+<div class="market-source">ultimo dato verificato · 23/09/2026</div></div>
+<div class="market-card"><div class="market-label">Oro</div><div class="market-value">4.356 $/oz</div>
+<div class="market-delta up">in rialzo</div>
+<div class="market-source">ultimo dato verificato · 23/09/2026</div></div>
+<div class="market-card"><div class="market-label">Bitcoin</div><div class="market-value">84.499 $</div>
+<div class="market-delta up">+5,1%</div>
+<div class="market-source">mercato · 24/09 02:18 CEST</div></div>
 <div class="market-card" style="border-color:#7c1d16;"><div class="market-label">Palestinesi uccisi</div>
-<div class="market-value" style="color:#e07a5f;">73.789</div>
-<div class="market-delta up">174.798 feriti; ultimo cumulativo aggregato disponibile</div>
-<div class="market-source">Ministero Salute Gaza, dati al 15/9/2026</div></div>
+<div class="market-value" style="color:#e07a5f;">73.922</div>
+<div class="market-delta up">+174.995 feriti</div>
+<div class="market-source">Ministero Salute Gaza · 23/09</div></div>
 </div>
 </div>
 <div class="wrap">
@@ -1669,7 +2103,7 @@
 <div class="sidebar-kicker">Il Contribuente in cifre</div>
 <div class="sidebar-stats">
 <div>
-<div class="sidebar-stat-value">39+</div>
+<div class="sidebar-stat-value">67+</div>
 <div class="sidebar-stat-label">Testate controllate per l’edizione di oggi</div>
 </div>
 </div>
@@ -1699,142 +2133,125 @@
 <a class="toc-dashboard-card" href="#petrolio-basilicata"><span class="toc-dashboard-tag">Dashboard</span><span class="toc-dashboard-label">Petrolio Basilicata</span></a>
 <a class="toc-dashboard-card toc-dashboard-mobile-only" href="#approfondimenti"><span class="toc-dashboard-tag">Sezione</span><span class="toc-dashboard-label">Approfondimenti</span></a>
 </div>
+<div aria-label="Mappa delle notizie" class="geo3d-index">
+<div class="geo3d-index-head">
+<div class="geo3d-index-copy"><div class="toc-kicker">Mappa delle notizie</div><p class="geo3d-index-sub"><span>🌐</span>Esplora le notizie attraverso i luoghi</p></div>
+</div>
+<div class="geo3d-index-links"><a class="geo3d-index-link" data-geo3d="tutte" href="#top">Tutte le notizie</a>
+<a class="geo3d-index-link" data-geo3d="italia" href="#italia">Italia</a>
+<a class="geo3d-index-link" data-geo3d="disagio" href="#disagio">Disagio città</a>
+<a class="geo3d-index-link" data-geo3d="europa" href="#europa">Europa</a>
+</div>
+</div>
 </div>
 <div class="verify-badge">
-<div class="verify-badge-inner">✓ Oggi abbiamo confrontato <strong>oltre 46 fonti</strong> su <strong>39 testate</strong></div>
-</div>
-<div class="quote-day">
-<div class="quote-day-inner">
-<div class="quote-day-label">Citazione del giorno · 1/2</div>
-<div class="quote-day-text">«Altri parlano di patrimoniali, noi togliamo una delle tasse più odiate.»</div>
-<div class="quote-day-author">— Giorgia Meloni, presidente del Consiglio, in conferenza stampa dopo il Cdm sull'abolizione del bollo auto; 16/9/2026 (Il Messaggero/Leggo)</div>
-</div>
-</div>
-<div class="quote-day">
-<div class="quote-day-inner">
-<div class="quote-day-label">Citazione del giorno · 2/2</div>
-<div class="quote-day-text">«Vogliono frantumare l'Ue. Lottiamo per la nostra Europa.»</div>
-<div class="quote-day-author">— Ursula von der Leyen, discorso sullo Stato dell'Unione a Strasburgo, 16/9/2026 (ANSA)</div>
-</div>
-</div>
+<div class="verify-badge-inner">✓ Oggi abbiamo confrontato <strong>108 fonti</strong> su <strong>67 testate/enti</strong></div></div>
+<div class="quote-day"><div class="quote-day-inner"><div class="quote-day-label">Citazione del giorno</div><div class="quote-day-text">«Cina e Stati Uniti dovrebbero essere partner, non rivali.»</div><div class="quote-day-author">— Xi Jinping, dichiarazione scritta all’arrivo a Washington</div></div></div>
+<div class="quote-day"><div class="quote-day-inner"><div class="quote-day-label">Citazione del giorno · 2/2</div><div class="quote-day-text">«La riduzione delle imposte sul reddito per il ceto medio resta una priorità.»</div><div class="quote-day-author">— Giancarlo Giorgetti, question time alla Camera</div></div></div>
 <div class="stats">
-<a class="stat" href="#dati-immigrazione" style="border-top-color:#7c1d16; text-decoration:none; color:inherit; cursor:pointer;">
-<div class="stat-label">Calo degli sbarchi in Italia da inizio 2026</div>
-<div class="stat-value">-56%</div>
-<div class="stat-delta">21.445 arrivi contro 49.077 nello stesso periodo del 2025 (1 gen - 16 set 2026); cruscotto Viminale aggiornato al 16/9</div></a>
+<a class="stat" style="border-top-color:#7c1d16; text-decoration:none; color:inherit; cursor:pointer;">
+<div class="stat-label">Carburanti · benzina self</div>
+<div class="stat-value">2,155 €/L</div>
+<div class="stat-delta">media nazionale MIMIT, 23/9/2026</div></a>
 <div class="stat" style="border-top-color:var(--navy);">
-<div class="stat-label">Costo dell'abolizione del bollo auto</div>
-<div class="stat-value">2,3 mld €</div>
-<div class="stat-delta">Esenzione per il 70% del parco auto italiano dal 2027, decreto approvato il 16 settembre</div></div>
+<div class="stat-label">Carburanti · diesel self</div>
+<div class="stat-value">2,340 €/L</div>
+<div class="stat-delta">media nazionale MIMIT, 23/9/2026</div></div>
 <div class="stat wine">
-<div class="stat-label">Diesel al nuovo massimo storico</div>
-<div class="stat-value">2,246 €/L</div>
-<div class="stat-delta">Prezzo self-service del 16 settembre; supera il precedente record di marzo 2022</div></div>
-<div class="stat" style="border-top-color:var(--navy);">
-<div class="stat-label">Rialzo dei tassi della Federal Reserve</div>
-<div class="stat-value">3,75%-4%</div>
-<div class="stat-delta">Primo rialzo in tre anni, 16 settembre; possibile nuovo aumento entro fine 2026</div></div>
+<div class="stat-label">Brent</div>
+<div class="stat-value">99,28 $</div>
+<div class="stat-delta">ultimo dato verificato, 23/9/2026</div></div>
+<a class="stat" href="#dati-immigrazione" style="border-top-color:var(--navy); text-decoration:none; color:inherit; cursor:pointer;">
+<div class="stat-label">Sbarchi in Italia nel 2026</div>
+<div class="stat-value">ultimo Viminale</div>
+<div class="stat-delta">cruscotto aggiornato al 21/9/2026</div>
+</a>
 <a class="stat gold" href="guerre/pi.html" style="text-decoration:none; color:inherit; cursor:pointer;">
-<div class="stat-label">Palestinesi uccisi dal 7 ottobre 2023 (Gaza)</div>
-<div class="stat-value">73.789</div>
-<div class="stat-delta">174.798 feriti; ultimo cumulativo aggregato disponibile, dati al 15 settembre</div></a>
+<div class="stat-label">Palestinesi uccisi dal 7/10/2023</div>
+<div class="stat-value">73.922</div>
+<div class="stat-delta">174.995 feriti · aggiornamento 23/09/2026</div></a>
 <div class="stat wine">
-<div class="stat-label">Italiane che hanno subito violenza prima dei 16 anni</div>
-<div class="stat-value">14,9%</div>
-<div class="stat-delta">Circa 3,2 milioni di donne; rapporto Istat pubblicato il 16 settembre 2026</div></div>
+<div class="stat-label">Nasdaq</div>
+<div class="stat-value">S&amp;P 500 -0,76%</div>
+<div class="stat-delta">ultima seduta verificata, 23/9/2026</div></div>
 </div>
-<div class="section-note" style="margin-top:-32px; margin-bottom:44px;">Dati verificati: cruscotto statistico giornaliero del Ministero dell'Interno per sbarchi e rimpatri; Consiglio dei ministri n. 189 per il bollo auto; Mimit/Staffetta Quotidiana per i carburanti; Federal Reserve per i tassi; Ministero della Sanità di Gaza per il cumulativo delle vittime; Istat per il rapporto sulla violenza. Per i dati periodici viene indicata la data dell'ultimo aggiornamento ufficiale disponibile.</div>
+<div class="section-note" style="margin-top:-32px; margin-bottom:44px;">Dati aggiornati al 24 settembre 2026; per mercati e carburanti è indicato l’ultimo dato verificato disponibile, senza spacciare una rilevazione precedente per dato odierno.</div>
 <div class="agenda-box">
 <h3 class="agenda-title">Cosa succede oggi</h3>
-<div class="agenda-list"><div class="agenda-item"><span class="agenda-time">Oggi 17/9</span><span class="agenda-event">Bruxelles, la Commissione europea presenta ufficialmente il “Kids Act” sui minori online, annunciato il giorno prima da von der Leyen.</span></div><div class="agenda-item"><span class="agenda-time">Oggi 17/9</span><span class="agenda-event">Eurostat pubblica il dato finale sull'inflazione dell'eurozona di agosto, attesa al +3,3% annuo.</span></div><div class="agenda-item"><span class="agenda-time">Oggi 17/9</span><span class="agenda-event">Bank of England, decisione di politica monetaria e conferenza stampa del governatore Andrew Bailey; tassi attesi invariati al 3,75%.</span></div><div class="agenda-item"><span class="agenda-time">Oggi 17/9</span><span class="agenda-event">Italia, ultimo giorno dello sconto sull'accisa del gasolio: da domani l'aliquota torna piena, salvo nuove misure del governo.</span></div></div>
-<div class="section-note" style="margin-top:10px;">Elenco limitato a 4 voci verificate con fonte diretta datata di oggi: la ricerca odierna non ha permesso di confermare con la stessa solidità un quinto evento della giornata.</div>
+<div class="agenda-list"><div class="agenda-item"><span class="agenda-time">Washington</span><span class="agenda-event">Vertice alla Casa Bianca tra Donald Trump e Xi Jinping su commercio, tecnologia, Taiwan e Iran.</span></div><div class="agenda-item"><span class="agenda-time">New York</span><span class="agenda-event">Prosegue il dibattito generale dell’81ª Assemblea delle Nazioni Unite.</span></div><div class="agenda-item"><span class="agenda-time">Berlino</span><span class="agenda-event">Ultima giornata di InnoTrans 2026, fiera internazionale su ferrovie e mobilità.</span></div><div class="agenda-item"><span class="agenda-time">Milano</span><span class="agenda-event">Prosegue Milano Moda Donna con le collezioni primavera/estate 2027.</span></div><div class="agenda-item"><span class="agenda-time">Milano-Rho</span><span class="agenda-event">Seconda e ultima giornata di Bricoday 2026, con focus su digitale e intelligenza artificiale.</span></div></div>
+<div class="section-note" style="margin-top:10px;">5 appuntamenti verificati e riferiti alla giornata di oggi, 24 settembre 2026.</div>
 </div>
-<!-- ===== CONFRONTO: SCHENGEN, SCONTRO ITALIA-SPAGNA ===== -->
-<div class="section" id="confronto"><div class="section-head"><span class="section-tag tag-confronto">Confronto</span><h2 class="section-title">Putin nel giorno del voto: accuse all’Occidente; Usa e Ue rispondono con sanzioni e fondi</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Il voto per la Duma si apre mentre la guerra resta il principale terreno di scontro fra Mosca e Occidente. Nelle ultime ore Putin ha accusato l’Occidente di usare gli ucraini come “carne da cannone”; Washington ha intanto firmato nuove sanzioni contro la Russia e l’Ue ha trasferito 3,3 miliardi di euro a Kiev.</p></div><div class="articles"><div class="article lead"><h3>Mosca: «L’Occidente usa gli ucraini come carne da cannone»</h3><p>Putin ha legato il voto parlamentare alla guerra, accusando Kiev di interferire nelle elezioni russe e sostenendo che l’Europa alimenti la minaccia russa per recuperare prestigio. Ha inoltre chiesto un rafforzamento della difesa aerea e della deterrenza strategica. La versione russa presenta il conflitto come uno scontro imposto dall’Occidente.</p><span class="source">Fonte: <a href="https://www.reuters.com/world/putin-says-ukraine-interfering-russian-parliamentary-election-2026-09-18/" target="_blank" rel="noopener noreferrer">Reuters / ANSA</a></span></div><div class="article"><h3>Washington: nuove sanzioni contro energia e difesa russe</h3><p>Nelle prime ore del 19 settembre Trump ha firmato una legge che impone nuove sanzioni alla Russia, colpendo i settori dell’energia e della difesa. È una risposta concreta che contrasta con l’ipotesi, discussa nei giorni precedenti, di possibili aperture commerciali verso Mosca.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/europa/europa.shtml" target="_blank" rel="noopener noreferrer">ANSA</a></span></div><div class="article"><h3>Bruxelles: altri 3,3 miliardi a Kiev</h3><p>Il governo ucraino ha annunciato di aver ricevuto una tranche da 3,3 miliardi di euro nell’ambito del prestito europeo. Kiev ha indicato missili e droni tra le necessità prioritarie. Il sostegno finanziario europeo prosegue quindi parallelamente alla pressione sanzionatoria occidentale.</p><span class="source">Fonte: <a href="https://www.reuters.com/world/ukraine-receives-33-billion-under-eu-loan-pm-says-2026-09-18/" target="_blank" rel="noopener noreferrer">Reuters</a></span></div></div></div>
-<div class="section" id="estero"><div class="section-head"><span class="section-tag tag-europa">Dall'estero</span><h2 class="section-title">Groenlandia: Trump annuncia l’intesa sulla sicurezza, Copenaghen rivendica sovranità e autodeterminazione</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>L’annuncio di Trump e il comunicato danese descrivono la stessa intesa con accenti diversi: Washington insiste sulla libertà d’azione militare americana; Copenaghen sottolinea che sovranità danese e autodeterminazione groenlandese restano riconosciute.</p></div><div class="articles"><div class="article lead"><h3>Trump: «Controllo permanente sulla sicurezza della Groenlandia»</h3><p>Trump ha annunciato un’intesa con Danimarca e Groenlandia e l’avvio del processo per una presenza militare statunitense significativa. Secondo il presidente, nessun avversario potrà installare basi o compiere investimenti sensibili sull’isola senza l’approvazione americana.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/index.shtml" target="_blank" rel="noopener noreferrer">ANSA</a></span></div><div class="article"><h3>Frederiksen: «L’accordo riconosce la nostra sovranità»</h3><p>La premier danese Mette Frederiksen ha definito l’intesa positiva per Groenlandia, Danimarca, Nato ed Europa, precisando che riconosce sovranità e integrità territoriale del Regno e il diritto del popolo groenlandese all’autodeterminazione. La firma è prevista la prossima settimana a New York.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/2026/09/19/danimarca-sigla-accordo-con-usa-e-groenlandia-la-prossima-settimana-a-new-york_3bd05e7a-ab6b-44b1-9a3d-f3fb3d93dbf8.html" target="_blank" rel="noopener noreferrer">ANSA</a></span></div></div></div>
-<div class="section" id="italia"><div class="section-head"><span class="section-tag tag-italia">Italia</span><h2 class="section-title">Italia: muore Sandro Mazzola; nuova giornata difficile sulla rete ferroviaria</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Le notizie italiane delle prime ore del 19 settembre mescolano il lutto sportivo per uno dei simboli dell’Inter e nuovi disagi nei trasporti ferroviari.</p></div><div class="articles"><div class="article lead"><h3>È morto Sandro Mazzola, aveva 83 anni</h3><p>L’Inter ha annunciato poco prima dell’una la morte di Sandro Mazzola. Figlio di Valentino Mazzola, ha trascorso l’intera carriera nerazzurra: 17 stagioni, 565 partite ufficiali e 158 gol, quattro scudetti, due Coppe dei Campioni e due Coppe Intercontinentali. Con l’Italia vinse l’Europeo del 1968 e disputò la finale mondiale del 1970.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/topnews/index.shtml" target="_blank" rel="noopener noreferrer">ANSA</a></span></div><div class="article"><h3>Treni, ritardi fino a 150 minuti sulla Pisa-Roma</h3><p>La circolazione sulla Pisa-Roma è tornata regolare in serata dopo un guasto a un treno, ma Alta Velocità, Intercity e Regionali hanno accumulato ritardi fino a 150 minuti; segnalate anche limitazioni e cancellazioni.</p><span class="source">Fonte: <a href="https://www.ilfattoquotidiano.it/in-edicola/articoli/2026/09/19/treni-nuova-giornata-di-stop-e-forti-ritardi/8511288/" target="_blank" rel="noopener noreferrer">Il Fatto Quotidiano</a></span></div></div></div>
-<div class="section" id="disagio"><div class="section-head"><span class="section-tag tag-sicurezza">Disagio città</span><h2 class="section-title">Cronaca: scuola e sicurezza urbana restano al centro delle aperture</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Nelle edizioni notturne del 19 settembre trovano spazio le conseguenze dell’accoltellamento di un’insegnante a Roma e nuovi episodi locali di sicurezza e disagi.</p></div><div class="articles"><div class="article lead"><h3>Roma, il caso del 13enne che ha accoltellato l’insegnante resta in apertura</h3><p>Il caso avvenuto a Roma continua a occupare le prime pagine: secondo le ricostruzioni pubblicate, uno studente tredicenne avrebbe spruzzato spray urticante e ferito un’insegnante con un coltello. La docente non risulta in pericolo di vita.</p><span class="source">Fonte: <a href="https://www.ilfattoquotidiano.it/cronaca/" target="_blank" rel="noopener noreferrer">Il Fatto Quotidiano</a></span></div><div class="article"><h3>Firenze, mezzo dei vigili del fuoco si ribalta: due operatori feriti</h3><p>Nelle prime ore della mattina viene segnalato un incidente stradale che ha coinvolto un mezzo dei vigili del fuoco a Firenze, con due operatori feriti. Le informazioni disponibili sono ancora preliminari.</p><span class="source">Fonte: <a href="https://www.falsissimo.it/category/cronaca/" target="_blank" rel="noopener noreferrer">Falsissimo</a></span></div></div></div>
-<div class="section" id="europa"><div class="section-head"><span class="section-tag tag-europa">Europa</span><h2 class="section-title">Francia prepara difese contro droni e cyberattacchi; Italia-Spagna, tensione sui controlli Schengen</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>La sicurezza europea si muove su due piani: difesa da minacce ibride attribuite alla Russia e gestione dei controlli interni allo spazio Schengen.</p></div><div class="articles"><div class="article lead"><h3>Macron chiede un piano contro droni e attacchi informatici</h3><p>Macron ha ordinato al governo di preparare un piano per proteggere infrastrutture critiche e siti sensibili dell’industria della difesa. Il presidente francese sostiene che le minacce ibride russe si stiano intensificando e cita il recente episodio di Lipsia come esempio del rischio.</p><span class="source">Fonte: <a href="https://www.reuters.com/world/europe/france-prepares-react-russian-hybrid-threats-intensify-2026-09-18/" target="_blank" rel="noopener noreferrer">Reuters</a></span></div><div class="article"><h3>Schengen, Madrid attacca Roma; Tajani replica</h3><p>La Spagna ha criticato la proroga italiana dei controlli alle frontiere aeree e marittime con il Paese. Tajani ha definito la reazione spagnola “fuori luogo” e ha sostenuto che Roma stia applicando le regole europee per ragioni di sicurezza.</p><span class="source">Fonte: <a href="https://www.lasicilia.it/news/italia-mondo/3073718/prorogati-i-controlli-alle-frontiere-madrid-contro-roma-una-vergogna-tajani-fuori-luogo.html" target="_blank" rel="noopener noreferrer">La Sicilia</a></span></div></div></div>
-<div class="section" id="mondo"><div class="section-head"><span class="section-tag tag-mondo">Mondo</span><h2 class="section-title">Trump ridisegna la sicurezza artica; un falso report IA rischiò uno scontro Usa-Cina</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Nella notte americana emergono due dossier di sicurezza: l’accordo sulla Groenlandia e la rivelazione di un grave errore d’intelligence legato all’uso dell’intelligenza artificiale.</p></div><div class="articles"><div class="article lead"><h3>Groenlandia, gli Usa puntano a una presenza militare più forte</h3><p>Trump ha detto che gli Stati Uniti avvieranno immediatamente il processo per stabilire una presenza militare significativa sull’isola. Danimarca, Groenlandia e Stati Uniti prevedono di firmare l’intesa la prossima settimana a margine dell’Assemblea generale Onu.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/index.shtml" target="_blank" rel="noopener noreferrer">ANSA</a></span></div><div class="article"><h3>Cnn: falso rapporto IA quasi innescò un intervento contro una nave cinese</h3><p>Secondo un’esclusiva Cnn ripresa da ANSA, la scorsa primavera un rapporto d’intelligence assistito dall’IA avrebbe identificato erroneamente il carico di una nave cinese come materiale legato ad armi nucleari. Militari e jet Usa furono preparati all’intervento prima che verifiche successive mostrassero che il rapporto era falso.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/2026/09/19/rapporto-intelligence-generato-con-ia-ha-rischiato-di-scatenare-guerra-usa-cina_7615ea70-4ec5-43ce-8610-60635cca4a36.html" target="_blank" rel="noopener noreferrer">ANSA / CNN</a></span></div></div></div>
-<div class="section" id="finanza"><div class="section-head"><span class="section-tag tag-finanza">Finanza</span><h2 class="section-title">Ecofin: energia ed extraprofitti al centro; Roma spinge per una risposta europea</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Il vertice informale Ecofin prosegue a Dublino. Il caro energia resta uno dei temi economici più urgenti e l’Italia sostiene un intervento sugli extraprofitti, mentre la Commissione per ora non presenta una proposta comune.</p></div><div class="articles"><div class="article lead"><h3>Italia: «Pronti ad andare anche da soli sugli extraprofitti»</h3><p>Secondo Repubblica, Roma guida con Berlino, Madrid e Varsavia il fronte favorevole a un’imposta europea sugli extraprofitti energetici. Bruxelles frena e il confronto potrebbe slittare all’Ecofin di ottobre.</p><span class="source">Fonte: <a href="https://www.repubblica.it/economia/" target="_blank" rel="noopener noreferrer">la Repubblica</a></span></div><div class="article"><h3>Giorgetti: lo choc energetico è diventato un’emergenza economica</h3><p>Intervenendo ai Portofino Talks mentre partecipava all’Ecofin di Dublino, il ministro dell’Economia ha descritto il caro energia come un’emergenza economica. Imprese e operatori chiedono costi più bassi e maggiore certezza regolatoria.</p><span class="source">Fonte: <a href="https://www.ansa.it/liguria/notizie/2026/09/18/portofino-talks-energia-e-economia-protagoniste-della-prima-giornata_cff2cd06-4b3b-4e7a-8dc2-b8a63757ead0.html" target="_blank" rel="noopener noreferrer">ANSA</a></span></div></div></div>
-<div class="section" id="benessere"><div class="section-head"><span class="section-tag tag-benessere">Benessere</span><h2 class="section-title">Benessere: nelle ultime 10 ore nessuna notizia sanitaria di pari rilievo verificata</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Per rispettare il limite temporale richiesto, questa edizione non recupera studi o notizie sanitarie più vecchi solo per riempire la sezione. Verrà aggiornata quando emergeranno contenuti verificabili pubblicati nella finestra delle ultime dieci ore.</p></div><div class="articles"><div class="article lead"><h3>Sezione in aggiornamento</h3><p>Nessun contenuto sanitario di rilievo, verificato su fonti affidabili e pubblicato nella finestra temporale richiesta, è stato inserito. La scelta evita di riciclare notizie del 17 o 18 settembre fuori soglia.</p><span class="source">Fonte: Redazione Il Contribuente</span></div></div></div>
-<div class="section" id="tecnologia"><div class="section-head"><span class="section-tag tag-tecnologia">Tecnologia</span><h2 class="section-title">Intelligence e IA: un errore del chatbot avrebbe quasi provocato un incidente militare con la Cina</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>La notizia tecnologica più delicata della notte riguarda l’uso dell’IA nei processi d’intelligence militare: un output errato sarebbe arrivato fino ai vertici operativi prima di essere bloccato.</p></div><div class="articles"><div class="article lead"><h3>Un report generato con IA avrebbe quasi innescato un’operazione contro una nave cinese</h3><p>Secondo Cnn, ripresa da ANSA alle 02:06, un rapporto d’intelligence prodotto con l’ausilio di un chatbot indicava erroneamente che una nave cinese trasportasse componenti per un programma nucleare. Personale armato e jet statunitensi furono predisposti all’azione; una verifica umana successiva stabilì che il contenuto era “completamente falso”.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/2026/09/19/rapporto-intelligence-generato-con-ia-ha-rischiato-di-scatenare-guerra-usa-cina_7615ea70-4ec5-43ce-8610-60635cca4a36.html" target="_blank" rel="noopener noreferrer">ANSA / CNN</a></span></div></div></div>
-<div class="section" id="ia"><div class="section-head"><span class="section-tag tag-tecnologia">IA</span><h2 class="section-title">IA: il caso del falso rapporto militare riapre il tema della verifica umana</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Il caso riportato dalla Cnn mostra il rischio di usare modelli generativi in contesti ad altissima conseguenza senza controlli robusti. Qui il punto non è una capacità teorica dell’IA, ma un episodio operativo in cui un errore avrebbe prodotto una catena di allerta militare.</p></div><div class="articles"><div class="article lead"><h3>Il chatbot sbaglia il carico della nave: scatta l’allarme militare</h3><p>Il rapporto indicava materiale destinato a un programma di armi nucleari. Solo prima dell’autorizzazione finale funzionari militari avrebbero riesaminato il documento, scoprendo che l’identificazione del carico era stata generata erroneamente dal sistema di IA.</p><span class="source">Fonte: <a href="https://www.ansa.it/sito/notizie/mondo/2026/09/19/rapporto-intelligence-generato-con-ia-ha-rischiato-di-scatenare-guerra-usa-cina_7615ea70-4ec5-43ce-8610-60635cca4a36.html" target="_blank" rel="noopener noreferrer">ANSA / CNN</a></span></div></div></div>
-<div class="section" id="immigrazione-italia"><div class="section-head"><span class="section-tag tag-migra">Immigrazione Italia</span><h2 class="section-title">Viminale: accordo con Paesi partner sui “dublinanti”, Roma chiede compensazioni</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Il confronto sull’applicazione del nuovo Patto europeo sulle migrazioni entra nella fase pratica. Fonti del Viminale sostengono che i casi antecedenti al 12 giugno siano considerati azzerati nell’ambito di un’intesa con alcuni partner.</p></div><div class="articles"><div class="article lead"><h3>Roma: «Azzerati i dublinanti arrivati prima del 12 giugno»</h3><p>Secondo fonti del Viminale citate nella serata del 18 settembre, l’Italia e alcuni principali Paesi europei considerano superati i casi relativi agli arrivi precedenti all’entrata in vigore del nuovo Patto. Per gli ingressi successivi Roma intende porre il tema di compensazioni, anche in relazione agli sbarchi effettuati da navi Ong battenti bandiera di altri Paesi Ue.</p><span class="source">Fonte: <a href="https://agrigento.lasicilia.it/news/italia-mondo/3065004/il-viminale-risponde-alla-germania-c-e-un-accordo-con-alcuni-stati-partner.html" target="_blank" rel="noopener noreferrer">La Sicilia</a></span></div></div></div>
-<div class="section" id="dati-immigrazione">
+<div class="section" id="confronto"><div class="section-head"><span class="section-tag tag-confronto">Confronto</span><h2 class="section-title">Trump-Xi a Washington: tregua commerciale, tecnologia e Taiwan al centro del vertice</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Xi Jinping è a Washington per la prima visita negli Stati Uniti in quasi tre anni. Washington annuncia l’estensione della tregua sui dazi fino al 10 gennaio; Pechino parla di collaborazione ma non conferma nello stesso modo ogni dettaglio. Rare earth, chip, Taiwan e Iran restano i nodi strutturali.</p></div><div class="duel"><div class="duel-fact"><div class="duel-fact-label">Il fatto</div><div class="duel-fact-text">Trump ha accolto Xi con una cerimonia ad alta visibilità. Il segretario al Tesoro Scott Bessent afferma che la tregua commerciale è stata prorogata. Il vertice formale è previsto oggi, 24 settembre, alla Casa Bianca.</div></div><div class="duel-grid"><div class="duel-side left"><span class="duel-tag">PROSPETTIVA A — WASHINGTON</span><div class="duel-headline">La Casa Bianca cerca risultati su dazi, Boeing e prodotti agricoli</div><p class="body">Trump vuole presentare il vertice come stabilizzazione dei rapporti e ottenere acquisti cinesi verificabili. L’estensione della tregua evita nell’immediato una nuova escalation tariffaria.</p><div class="body-extra"><p>Restano però export control sui chip, accesso alle terre rare e detenzioni di cittadini. Un accordo limitato non risolve la competizione strategica.</p></div><span class="source">Fonti: Reuters; Casa Bianca; Tesoro USA · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="duel-side right"><span class="duel-tag">PROSPETTIVA B — PECHINO</span><div class="duel-headline">Xi parla di partner, ma non rinuncia ai dossier Taiwan e tecnologia</div><p class="body">La dichiarazione cinese insiste sulla cooperazione e non cita esplicitamente l’accordo commerciale annunciato dagli Stati Uniti. Pechino chiede meno restrizioni tecnologiche e difende la propria posizione su Taiwan.</p><div class="body-extra"><p>Il controllo cinese di gran parte della filiera delle terre rare offre leva negoziale, mentre la domanda interna e il settore immobiliare restano punti deboli.</p></div><span class="source">Fonti: Reuters; ambasciata cinese; Xinhua · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div><div class="duel-grid" style="grid-template-columns:1fr; border-top:1px solid var(--rule);"><div class="duel-side third"><span class="duel-tag">TERZA VOCE — DATI E LIMITI</span><div class="duel-headline">La tregua riduce il rischio immediato, non la rivalità</div><p class="body">Analisti citati da Reuters vedono aspettative basse per una svolta generale. Cina e Stati Uniti hanno interesse a proiettare stabilità, ma possono pubblicare comunicati diversi destinati alle rispettive opinioni pubbliche.</p><div class="body-extra"><p>La verifica sarà nei dettagli: durata e testo della tregua, volumi degli acquisti, regole sui chip e meccanismi di controllo. La cerimonia non sostituisce gli impegni eseguibili.</p></div><span class="source">Fonti: Reuters; CSIS; dati commerciali ufficiali · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div></div><div class="section" id="estero"><div class="section-head"><span class="section-tag tag-europa">Dall'estero</span><h2 class="section-title">Il Colosseo chiuso dopo la morte di Andrea Moretti: il caso italiano sulle testate estere</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Reuters, Associated Press, Deutsche Welle e ABC News hanno raccontato due fatti italiani delle ultime ore: la morte di un giovane tecnico al Colosseo e il via libera parlamentare alla delega sul nucleare. Le cronache convergono sui fatti essenziali, ma la stampa estera insiste soprattutto sul valore simbolico dei luoghi, sulla sicurezza del lavoro e sul cambio di rotta energetico dopo due referendum contrari.</p></div><div class="articles"><div class="article lead" data-map-city="New York" data-map-lat="40.7128" data-map-lng="-74.006" data-map-section="estero" id="estero-1"><p>Reuters, AP e Deutsche Welle hanno dato rilievo alla morte del tecnico ventiduenne precipitato per circa dieci metri mentre lavorava al nuovo impianto di illuminazione del Colosseo. L’anfiteatro è stato chiuso in segno di lutto e la Procura di Roma ha aperto accertamenti sulla dinamica e sulle misure di sicurezza.</p><div class="body-extra"><p>La copertura internazionale mette in primo piano il contrasto tra uno dei monumenti più visitati al mondo e una morte sul lavoro avvenuta durante un intervento tecnico notturno. AP racconta anche la reazione dei turisti alla chiusura, mentre Reuters concentra la cronaca sui fatti confermati dal Ministero della Cultura.</p><p>Non è ancora accertata la catena delle responsabilità: la notizia verificata riguarda la caduta, il decesso e l’indagine. Le ipotesi su imbracatura, procedure e formazione dovranno essere confermate dagli inquirenti.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/world/worker-killed-accident-colosseum-italian-culture-ministry-says-2026-09-23/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://apnews.com/article/italy-colosseum-death-fall-worker-86915a82e40367968df22f2406adec55" rel="noopener noreferrer" target="_blank">AP</a> · <a href="https://www.dw.com/en/romes-colosseum-closes-after-worker-falls-to-his-death/a-79387180" rel="noopener noreferrer" target="_blank">Deutsche Welle</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Roma" data-map-lat="41.9028" data-map-lng="12.4964" data-map-section="estero" id="estero-2"><h3>Il Parlamento riapre la strada al nucleare: all’estero il focus è sulla svolta dopo i referendum</h3><p>Il Senato ha approvato definitivamente la legge delega sul nucleare sostenibile con 81 voti favorevoli, 51 contrari e 7 astenuti. Le ricostruzioni internazionali sottolineano che il provvedimento non autorizza domani una nuova centrale: crea invece la cornice per i decreti attuativi su tecnologie avanzate, autorizzazioni, sicurezza e rifiuti.</p><div class="body-extra"><p>ABC News ricorda che gli italiani respinsero il nucleare in due referendum, dopo Chernobyl e Fukushima. Il governo giustifica il cambio di rotta con sicurezza energetica, crescita della domanda elettrica e obiettivi climatici; gli oppositori contestano costi, tempi e gestione delle scorie.</p><p>La distinzione decisiva è tra delega legislativa e realizzazione degli impianti. Localizzazione, modello industriale, vigilanza e coperture finanziarie dipenderanno dai decreti successivi e dai procedimenti autorizzativi.</p></div><span class="source">Fonti: <a href="https://www.senato.it/leggi-e-documenti/disegni-di-legge/scheda-ddl?did=60187" rel="noopener noreferrer" target="_blank">Senato</a> · <a href="https://abcnews.com/amp/International/wireStory/italys-parliament-paves-return-nuclear-energy-136687021" rel="noopener noreferrer" target="_blank">ABC News</a> · <a href="https://www.camera.it/leg19/126?idDocumento=2669&amp;leg=19" rel="noopener noreferrer" target="_blank">Camera dei deputati</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="italia"><div class="section-head"><span class="section-tag tag-italia">Italia</span><h2 class="section-title">Manovra, Giorgetti conferma il taglio dell’Irpef al ceto medio tra le priorità</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Quattro decisioni o fatti con effetti nazionali: il confronto sulla manovra, il completamento degli obiettivi dell’ultima rata PNRR, la delega sul nucleare e la morte sul lavoro al Colosseo. Dichiarazioni politiche, dati verificati e passaggi ancora da attuare sono tenuti distinti.</p></div><div class="articles"><div class="article lead" data-geo-lat="41.9028" data-geo-lng="12.4964" data-geo-name="Roma" data-map-city="Roma" data-map-lat="41.9028" data-map-lng="12.4964" data-map-section="italia" id="italia-1"><p>Il ministro dell’Economia Giancarlo Giorgetti ha indicato la riduzione dell’Irpef per il ceto medio come una delle finalità della prossima legge di bilancio. La sintesi politica è rinviata all’aggiornamento del quadro macroeconomico, condizionato da tassi, energia e nuove stime Istat.</p><div class="body-extra"><p>Nella maggioranza restano differenze sul ricorso allo scostamento: la Lega chiede una manovra più espansiva, mentre Fratelli d’Italia insiste sulla compatibilità dei conti. Il deficit 2025 al 3,1% non consente l’uscita anticipata dalla procedura europea.</p><p>L’OCSE ha portato allo 0,9% la previsione di crescita italiana per il 2026, ma ha ridotto il 2027 allo 0,6%. Sono previsioni, non risorse già disponibili: aliquote, platee e coperture fiscali saranno definite nel testo della manovra.</p></div><span class="source">Fonti: <a href="https://www.ansa.it/sito/notizie/politica/2026/09/23/giorgetti-la-volonta-del-governo-e-leliminazione-strutturale-del-bollo-auto_5c9a3796-068b-4b85-aebb-a04cec0917d0.html" rel="noopener noreferrer" target="_blank">ANSA</a> · <a href="https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-september-2026_f751d02b-en.html" rel="noopener noreferrer" target="_blank">OCSE</a> · <a href="https://www.camera.it" rel="noopener noreferrer" target="_blank">Camera dei deputati</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-geo-lat="41.9028" data-geo-lng="12.4964" data-geo-name="Roma" data-map-city="Roma" data-map-lat="41.9028" data-map-lng="12.4964" data-map-section="italia" id="italia-2"><h3>PNRR, la cabina di regia certifica 156 obiettivi per la decima e ultima rata</h3><p>La cabina di regia ha verificato il conseguimento dei 156 obiettivi collegati alla decima rata del PNRR, del valore di 28,4 miliardi di euro. Il passaggio consente al governo di trasmettere a Bruxelles la richiesta di pagamento entro la fine di settembre.</p><div class="body-extra"><p>Il ministro Tommaso Foti presenta il risultato come completamento dei 576 obiettivi del Piano e indica oltre 133 miliardi di spesa al netto degli strumenti finanziari. La certificazione nazionale non equivale però all’accredito immediato: la Commissione europea deve valutare la documentazione.</p><p>Per misurare l’impatto finale resteranno decisivi avanzamento fisico delle opere, qualità della spesa e capacità di rendere strutturali gli interventi in sanità, infrastrutture, scuola e digitalizzazione.</p></div><span class="source">Fonti: <a href="https://www.lagazzettadelmezzogiorno.it/news/ultima-ora/2142885/pnrr-foti-conseguiti-obiettivi-decima-rata-grande-risultato-per-litalia.amp" rel="noopener noreferrer" target="_blank">Cabina di regia / Italpress</a> · <a href="https://fasi.eu/it/articoli/novita/24079-pagamento-pnrr-rata.html" rel="noopener noreferrer" target="_blank">FASI</a> · <a href="https://commission.europa.eu" rel="noopener noreferrer" target="_blank">Commissione europea</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-geo-lat="41.9028" data-geo-lng="12.4964" data-geo-name="Roma" data-map-city="Roma" data-map-lat="41.9028" data-map-lng="12.4964" data-map-section="italia" id="italia-3"><h3>Nucleare sostenibile, via libera definitivo alla legge delega</h3><p>Con 81 sì, 51 no e 7 astensioni il Senato ha approvato definitivamente la delega che incarica il governo di costruire il nuovo quadro normativo per il nucleare sostenibile. Il ministro Gilberto Pichetto Fratin parla di giornata storica; le opposizioni contestano tempi, costi e gestione dei rifiuti.</p><div class="body-extra"><p>La legge copre ricerca, tecnologie avanzate, localizzazione, sicurezza, dismissione e gestione delle scorie. Non decide ancora dove realizzare impianti né quale tecnologia adottare: questi aspetti saranno oggetto dei decreti delegati e dei successivi procedimenti.</p><p>Il ritorno effettivo dell’atomo dipenderà da investimenti, consenso territoriale, autorizzazioni e tempi industriali. Presentare il voto come accensione immediata di nuove centrali sarebbe scorretto.</p></div><span class="source">Fonti: <a href="https://www.senato.it/leggi-e-documenti/disegni-di-legge/scheda-ddl?did=60187" rel="noopener noreferrer" target="_blank">Senato</a> · <a href="https://www.camera.it/leg19/126?idDocumento=2669&amp;leg=19" rel="noopener noreferrer" target="_blank">Camera</a> · <a href="https://abcnews.com/amp/International/wireStory/italys-parliament-paves-return-nuclear-energy-136687021" rel="noopener noreferrer" target="_blank">ABC News</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-geo-lat="41.8902" data-geo-lng="12.4922" data-geo-name="Roma" data-map-city="Roma" data-map-lat="41.8902" data-map-lng="12.4922" data-map-section="italia" id="italia-4"><h3>Colosseo, morto a 22 anni durante i lavori: Procura al lavoro sulla sicurezza</h3><p>Andrea Moretti, tecnico di 22 anni, è morto dopo una caduta di circa dieci metri mentre installava il nuovo sistema di illuminazione del Colosseo. Il sito è stato chiuso e la Procura procede per omicidio colposo contro ignoti, acquisendo documenti e disponendo accertamenti.</p><div class="body-extra"><p>RaiNews riferisce che il giovane è stato trovato con l’imbracatura non agganciata; questo elemento deve essere verificato tecnicamente e non basta, da solo, ad attribuire responsabilità. Sindacati e lavoratori hanno manifestato davanti all’anfiteatro.</p><p>Il caso riporta l’attenzione sulle morti sul lavoro e sulle procedure nei cantieri complessi. Le verifiche dovranno chiarire organizzazione del turno, formazione, dispositivi e controllo delle misure di prevenzione.</p></div><span class="source">Fonti: <a href="https://www.rainews.it/articoli/2026/09/incidente-sul-lavoro-al-colosseo-di-notte-morto-un-operaio--180b74ab-7d25-4db9-bcd8-22cb56ec44b6.html" rel="noopener noreferrer" target="_blank">RaiNews</a> · <a href="https://www.reuters.com/world/worker-killed-accident-colosseum-italian-culture-ministry-says-2026-09-23/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://www.ansa.it/sito/notizie/cronaca/2026/09/23/morto-un-operaio-al-colosseo-meloni-morte-inaccettabile_d2e19d2c-1896-4bd4-b861-c2d8e26b5a9e.html" rel="noopener noreferrer" target="_blank">ANSA</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="disagio"><div class="section-head"><span class="section-tag tag-sicurezza">Disagio città</span><h2 class="section-title">Lamezia Terme, un compagno segnala il piano di un 14enne contro la professoressa</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Sono episodi distinti, avvenuti in città diverse, e non una singola emergenza nazionale. La sezione usa fonti locali e comunicati delle forze dell’ordine, mantenendo la presunzione di innocenza e distinguendo gli arresti dalle condanne.</p></div><div class="articles"><div class="article lead" data-geo-lat="38.9629" data-geo-lng="16.3093" data-geo-name="Lamezia Terme" data-map-city="Lamezia Terme" data-map-lat="38.9629" data-map-lng="16.3093" data-map-section="disagio" id="disagio-1"><p>Un ragazzo di 14 anni avrebbe progettato su Telegram un’aggressione con coltello contro la docente di italiano dell’istituto Nicotera-Costabile. L’arma sarebbe stata nascosta nei bagni; la segnalazione di un compagno ha consentito ai carabinieri di intervenire prima che il piano venisse attuato.</p><div class="body-extra"><p>Secondo le ricostruzioni pubblicate, il movente sarebbe collegato alla bocciatura dell’anno precedente. Sono stati sequestrati il telefono e altri elementi utili alle verifiche. L’aggressione non è avvenuta e la responsabilità del minore sarà valutata nelle sedi competenti.</p><p>La dirigente scolastica ha sottolineato l’assenza di omertà tra gli studenti. È l’elemento più concreto del caso: la segnalazione tempestiva ha trasformato una minaccia potenziale in un intervento preventivo.</p></div><span class="source">Fonti: <a href="https://www.corriere.it/cronache/26_settembre_23/lamezia-terme-studente-di-14-anni-pianifica-su-telegram-l-aggressione-con-il-coltello-alla-sua-prof-fermato-dai-carabinieri-4326ac12-c636-494b-a51e-a48ebfadaxlk.shtml" rel="noopener noreferrer" target="_blank">Corriere della Sera</a> · <a href="https://www.quotidiano.net/cronaca/lamezia-terme-studente-14enne-pianifica-aggressione-con-il-coltello-alla-prof-di-italiano-fermato-dai-carabinieri-b9id349w" rel="noopener noreferrer" target="_blank">Quotidiano Nazionale</a> · <a href="https://tg.la7.it/cronaca/lamezia-terme-14enne-aggressione-prof-coltello-telegram-23-09-2026-263041" rel="noopener noreferrer" target="_blank">TG La7</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-geo-lat="41.9010" data-geo-lng="12.5018" data-geo-name="Roma" data-map-city="Roma" data-map-lat="41.9010" data-map-lng="12.5018" data-map-section="disagio" id="disagio-2"><h3>Roma Termini, controlli straordinari: sette arresti e tredici denunce</h3><p>I carabinieri hanno comunicato l’esito di un servizio straordinario nell’area della stazione Termini e nelle strade limitrofe: sette persone arrestate e tredici denunciate, con particolare attenzione ai furti ai danni dei viaggiatori e alle situazioni di illegalità nelle zone più frequentate.</p><div class="body-extra"><p>Il bilancio riunisce procedimenti e contestazioni diverse: non descrive un’unica organizzazione criminale e non equivale a condanne definitive. I controlli nelle stazioni mirano a proteggere pendolari e turisti, ma la valutazione dell’efficacia richiede dati confrontabili nel tempo.</p><p>Per il lettore conta distinguere il risultato operativo della giornata dal quadro generale della sicurezza urbana, che non può essere misurato attraverso un solo servizio.</p></div><span class="source">Fonti: <a href="https://www.carabinieri.it/in-vostro-aiuto/informazioni" rel="noopener noreferrer" target="_blank">Arma dei Carabinieri</a> · <a href="https://www.italpress.com" rel="noopener noreferrer" target="_blank">Italpress</a> · <a href="https://www.comune.roma.it" rel="noopener noreferrer" target="_blank">Roma Capitale</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-geo-lat="40.9682" data-geo-lng="14.2569" data-geo-name="Succivo" data-map-city="Succivo" data-map-lat="40.9682" data-map-lng="14.2569" data-map-section="disagio" id="disagio-3"><h3>Succivo, arrestato un 24enne: avrebbe minacciato la madre per ottenere denaro</h3><p>Un ventiquattrenne è stato arrestato in flagranza a Succivo, nel Casertano, con le ipotesi di maltrattamenti in famiglia e tentata estorsione aggravata. Secondo la ricostruzione dei carabinieri, avrebbe minacciato la madre per costringerla a consegnargli denaro.</p><div class="body-extra"><p>L’intervento rientra nella risposta ai reati commessi in ambito familiare, dove le segnalazioni tempestive sono decisive per interrompere l’escalation. Le accuse dovranno essere vagliate dall’autorità giudiziaria e resta valida la presunzione di innocenza.</p><p>Il caso viene riportato senza generalizzazioni: è un singolo procedimento, non un indicatore sufficiente dell’andamento complessivo della violenza domestica.</p></div><span class="source">Fonti: <a href="https://www.carabinieri.it/in-vostro-aiuto/informazioni" rel="noopener noreferrer" target="_blank">Arma dei Carabinieri</a> · <a href="https://www.lapresse.it" rel="noopener noreferrer" target="_blank">LaPresse</a> · <a href="https://www.procura.napolinord.giustizia.it" rel="noopener noreferrer" target="_blank">Procura di Napoli Nord</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-geo-lat="40.9236" data-geo-lng="9.4964" data-geo-name="Olbia" data-map-city="Olbia" data-map-lat="40.9236" data-map-lng="9.4964" data-map-section="disagio" id="disagio-4"><h3>Olbia, sequestrati hashish, cocaina e MDMA: una persona arrestata</h3><p>A Olbia i carabinieri hanno arrestato una persona trovata, secondo il comunicato, con circa un chilogrammo di hashish, 300 grammi di cocaina e sostanze indicate come MDMA. L’operazione nasce da un servizio mirato contro traffico e spaccio.</p><div class="body-extra"><p>Il sequestro documenta quantità rilevanti, ma non consente da solo di ricostruire provenienza, rete di distribuzione o destinazione finale. Questi aspetti dipenderanno dagli esami sulla sostanza e dalle indagini sui contatti.</p><p>Come per ogni arresto, il provvedimento non è una sentenza. La notizia viene geolocalizzata a Olbia e separata dagli altri episodi della sezione.</p></div><span class="source">Fonti: <a href="https://www.carabinieri.it/in-vostro-aiuto/informazioni" rel="noopener noreferrer" target="_blank">Arma dei Carabinieri</a> · <a href="https://www.adnkronos.com" rel="noopener noreferrer" target="_blank">Adnkronos</a> · <a href="https://www.interno.gov.it" rel="noopener noreferrer" target="_blank">Ministero Interno</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="europa"><div class="section-head"><span class="section-tag tag-europa">Europa</span><h2 class="section-title">Sanzioni alla Russia, critiche nell’UE dopo la rimozione di Usmanov e Fridman</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>L’Europa delle ultime ore è attraversata da quattro dossier diversi: tenuta delle sanzioni alla Russia, crescita di una destra indipendentista catalana, rapporto con gli Stati Uniti in Groenlandia e sicurezza del fianco orientale della NATO.</p></div><div class="articles"><div class="article lead" data-geo-lat="50.8503" data-geo-lng="4.3517" data-geo-name="Bruxelles" data-map-city="Bruxelles" data-map-lat="50.8503" data-map-lng="4.3517" data-map-section="europa" id="europa-1"><p>L’Unione europea ha rinnovato per tre anni le misure contro circa 3.000 persone ed entità russe, ma ha rimosso Alisher Usmanov e Mikhail Fridman dalla lista. La decisione, sostenuta da Francia e Lussemburgo, ha provocato critiche da Ucraina, Paesi baltici e altri governi europei.</p><div class="body-extra"><p>Parigi ha richiamato ragioni di sicurezza nazionale e pressioni collegate a cittadini francesi detenuti in Azerbaigian; il Lussemburgo affronta una richiesta miliardaria di Fridman. La Commissione insiste sul rinnovo complessivo e su nuovi pacchetti in preparazione.</p><p>Il punto non è soltanto economico: i critici temono che le eccezioni mostrino come pressioni bilaterali possano influenzare un regime sanzionatorio che richiede unanimità.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/world/europe/eu-faces-backlash-after-lifting-sanctions-russian-billionaires-2026-09-23/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://www.consilium.europa.eu" rel="noopener noreferrer" target="_blank">Consiglio UE</a> · <a href="https://mfa.gov.ua/en" rel="noopener noreferrer" target="_blank">Ministero Esteri ucraino</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-geo-lat="41.3874" data-geo-lng="2.1686" data-geo-name="Barcellona" data-map-city="Barcellona" data-map-lat="41.3874" data-map-lng="2.1686" data-map-section="europa" id="europa-2"><h3>Catalogna, l’ascesa di Aliança Catalana divide il fronte indipendentista</h3><p>La crescita di Aliança Catalana sta modificando gli equilibri dell’indipendentismo catalano, combinando sovranismo regionale e una linea molto dura sull’immigrazione. Reuters descrive un fronte indipendentista diviso tra chi considera il nuovo partito un concorrente e chi teme che ne condizioni l’agenda.</p><div class="body-extra"><p>L’attenzione alle paure migratorie non dimostra da sola un cambiamento uniforme dell’elettorato catalano. Pesano territori, affluenza e crisi dei partiti tradizionali.</p><p>La verifica politica arriverà con i risultati elettorali e con le alleanze: i sondaggi fotografano tendenze, non seggi già acquisiti.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/world/catalonias-far-right-surge-divides-independence-camp-migration-fears-grow-2026-09-23/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://www.parlament.cat" rel="noopener noreferrer" target="_blank">Parlamento catalano</a> · <a href="https://english.elpais.com" rel="noopener noreferrer" target="_blank">El País</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-geo-lat="64.1835" data-geo-lng="-51.7216" data-geo-name="Nuuk" data-map-city="Nuuk" data-map-lat="64.1835" data-map-lng="-51.7216" data-map-section="europa" id="europa-3"><h3>Groenlandia, sì al patto militare con gli USA ma la fiducia resta fragile</h3><p>Il governo groenlandese accoglie l’accordo che rafforza la cooperazione militare statunitense nell’Artico, ma insiste su sovranità, consultazione locale e autodeterminazione. La formula americana sul controllo della sicurezza è più ampia di quella usata da Nuuk e Copenaghen.</p><div class="body-extra"><p>Il patto risponde alla crescente competizione strategica nell’Artico e aggiorna la presenza statunitense. Non equivale al trasferimento della sovranità della Groenlandia.</p><p>Il confronto tra dichiarazioni mostra un’intesa operativa accompagnata da diffidenza politica: ciò che conta sarà come verranno prese le decisioni su basi, infrastrutture e territorio.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/world/europe/greenland-welcomes-us-military-pact-trust-still-shaky-2026-09-23/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://naalakkersuisut.gl" rel="noopener noreferrer" target="_blank">Governo groenlandese</a> · <a href="https://www.stm.dk" rel="noopener noreferrer" target="_blank">Governo danese</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-geo-lat="53.1325" data-geo-lng="23.1688" data-geo-name="Białystok" data-map-city="Białystok" data-map-lat="53.1325" data-map-lng="23.1688" data-map-section="europa" id="europa-4"><h3>Polonia, elicottero militare russo entra brevemente nello spazio aereo</h3><p>L’esercito polacco afferma che un elicottero militare russo ha attraversato per breve tempo lo spazio aereo nazionale. Varsavia ha attivato le procedure di verifica e segnalazione previste per un Paese NATO sul fianco orientale.</p><div class="body-extra"><p>Mosca non ha fornito nell’immediato una ricostruzione coincidente. Durata, rotta e intenzionalità sono elementi distinti: l’incursione segnalata è il fatto, l’eventuale provocazione è un’interpretazione da dimostrare.</p><p>L’episodio aumenta l’attenzione su errori di navigazione, raccolta di intelligence e rischio di escalation accidentale lungo il confine.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/business/aerospace-defense/russian-military-helicopter-entered-polish-airspace-briefly-polish-army-says-2026-09-23/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://www.gov.pl/web/national-defence" rel="noopener noreferrer" target="_blank">Ministero Difesa polacco</a> · <a href="https://www.nato.int" rel="noopener noreferrer" target="_blank">NATO</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="mondo"><div class="section-head"><span class="section-tag tag-mondo">Mondo</span><h2 class="section-title">Trump accoglie Xi: tregua commerciale estesa, ma restano Taiwan, tecnologia e Iran</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Diplomazia e conflitti si incrociano: Washington ospita Xi, Stati Uniti e Iran restano distanti, la Russia colpisce Kiev mentre Zelensky parla all’ONU e in Etiopia si riapre il fronte del Tigray.</p></div><div class="articles"><div class="article lead" data-map-city="Washington" data-map-lat="38.9072" data-map-lng="-77.0369" data-map-section="mondo" id="mondo-1"><p>Donald Trump ha accolto Xi Jinping a Washington per una visita di tre giorni. Il Tesoro statunitense afferma che la tregua sui dazi sarà estesa fino al 10 gennaio; Pechino parla di partenariato, ma non ha confermato nello stesso modo tutti i dettagli commerciali.</p><div class="body-extra"><p>Rare earth, chip, acquisti agricoli, Boeing, Taiwan e Iran sono sul tavolo. Le aspettative per un accordo complessivo restano basse, mentre entrambe le leadership cercano risultati spendibili sul piano interno.</p><p>La proroga riduce il rischio immediato di nuovi dazi, ma non risolve i nodi strategici. I comunicati finali potrebbero enfatizzare risultati diversi.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/world/china/trump-plans-grand-spectacle-potentially-tense-xi-talks-2026-09-23/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://www.whitehouse.gov" rel="noopener noreferrer" target="_blank">Casa Bianca</a> · <a href="http://us.china-embassy.gov.cn/eng/" rel="noopener noreferrer" target="_blank">Ambasciata cinese negli USA</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Washington" data-map-lat="38.9072" data-map-lng="-77.0369" data-map-section="mondo" id="mondo-2"><h3>Stati Uniti e Iran riprendono i colloqui, ma le posizioni restano lontane</h3><p>Dopo mesi di guerra e tensione sui mercati energetici, delegazioni statunitensi e iraniane hanno ripreso colloqui indiretti. Un funzionario iraniano ha detto che le distanze restano ampie, mentre il presidente Masoud Pezeshkian ha escluso una resa.</p><div class="body-extra"><p>Il ritorno al tavolo è un segnale diplomatico, non un accordo. Restano aperti cessate il fuoco, programma nucleare, garanzie di sicurezza e sanzioni.</p><p>I prezzi del petrolio hanno reagito alle notizie di dialogo, mostrando quanto il dossier diplomatico incida anche sull’economia globale.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/world/middle-east/hope-progress-after-us-iran-hold-first-shuttle-talks-months-2026-09-23/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://www.un.org" rel="noopener noreferrer" target="_blank">ONU</a> · <a href="https://aeoi.org.ir" rel="noopener noreferrer" target="_blank">Agenzia atomica iraniana</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="New York" data-map-lat="40.7128" data-map-lng="-74.006" data-map-section="mondo" id="mondo-3"><h3>Russia colpisce Kiev con droni mentre Zelensky interviene all’ONU</h3><p>Una nuova ondata di droni russi ha colpito Kiev e infrastrutture energetiche mentre Volodymyr Zelensky si rivolgeva all’Assemblea generale delle Nazioni Unite. Le autorità ucraine hanno riferito vittime e danni; Mosca sostiene di colpire obiettivi militari ed energetici.</p><div class="body-extra"><p>Le informazioni sul numero di droni e sulle intercettazioni provengono soprattutto dalle autorità ucraine e russe e non sono verificabili in ogni dettaglio in tempo reale.</p><p>La contemporaneità con il discorso all’ONU accresce il significato politico del raid, ma non prova da sola che l’orario sia stato scelto per quel motivo.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/world/europe/russia-hits-kyiv-petrol-stations-kills-one-2026-09-23/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://www.un.org" rel="noopener noreferrer" target="_blank">ONU</a> · <a href="https://www.mil.gov.ua/en/" rel="noopener noreferrer" target="_blank">Ministero Difesa ucraino</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="New York" data-map-lat="40.7128" data-map-lng="-74.006" data-map-section="mondo" id="mondo-4"><h3>Tigray, nuove ostilità minacciano l’accordo di pace etiope</h3><p>Dirigenti tigrini e un funzionario etiope riferiscono l’avvio di una nuova offensiva nel nord dell’Etiopia, con il rischio di rompere l’accordo che aveva fermato una guerra devastante. Le versioni divergono sulle responsabilità dell’escalation.</p><div class="body-extra"><p>Le comunicazioni limitate rendono difficile verificare dimensione delle operazioni e vittime. È quindi necessario attribuire ogni affermazione alla parte che la formula.</p><p>Una ripresa su larga scala avrebbe conseguenze umanitarie regionali, con nuovi sfollamenti e pressioni sui Paesi vicini.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/world/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://au.int" rel="noopener noreferrer" target="_blank">Unione Africana</a> · <a href="https://www.unocha.org" rel="noopener noreferrer" target="_blank">ONU OCHA</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="finanza"><div class="section-head"><span class="section-tag tag-finanza">Finanza</span><h2 class="section-title">Brent a 102,21 dollari: il dialogo con l’Iran frena solo in parte il rialzo</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Il filo comune è l’inflazione: petrolio sopra 100 dollari, rendimenti statunitensi oltre il 5% e dollaro forte rendono più costoso finanziare crescita e debito. L’OCSE vede nell’attività legata all’IA un sostegno, ma non sufficiente a eliminare i rischi energetici.</p></div><div class="articles"><div class="article lead" data-map-city="Teheran" data-map-lat="35.6892" data-map-lng="51.389" data-map-section="finanza" id="finanza-1"><p>Il Brent è indicato a 102,21 dollari al barile, in calo dello 0,84% nella rilevazione mattutina Reuters/LSEG. I prezzi restano sopra quota 100 dopo lo shock energetico, mentre le aperture diplomatiche iraniane riducono marginalmente il premio di rischio.</p><div class="body-extra"><p>Il movimento intraday non equivale a una normalizzazione: rotte marittime, esportazioni e durata del conflitto continuano a influenzare le quotazioni.</p><p>Per famiglie e imprese europee l’impatto passa da carburanti, elettricità, trasporti e inflazione importata.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/markets/" rel="noopener noreferrer" target="_blank">Reuters Markets</a> · <a href="https://www.lseg.com" rel="noopener noreferrer" target="_blank">LSEG</a> · <a href="https://www.iea.org" rel="noopener noreferrer" target="_blank">AIE</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Washington" data-map-lat="38.9072" data-map-lng="-77.0369" data-map-section="finanza" id="finanza-2"><h3>Treasury USA oltre il 5%: i mercati iniziano a guardare al 6%</h3><p>Il rendimento del Treasury decennale è salito al 5,12%, mentre una debole asta e dati manifatturieri forti hanno riacceso i timori di inflazione. Il dollaro si mantiene sui massimi di due mesi.</p><div class="body-extra"><p>Rendimenti più elevati aumentano il costo di mutui, credito e rifinanziamento del debito. Il livello non è una previsione automatica di recessione, ma modifica rapidamente le valutazioni degli asset.</p><p>Le richieste politiche di tassi all’1% si scontrano con un’inflazione ancora sostenuta: analisti citati da Reuters le considerano impraticabili nelle condizioni attuali.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/markets/" rel="noopener noreferrer" target="_blank">Reuters Markets</a> · <a href="https://www.federalreserve.gov" rel="noopener noreferrer" target="_blank">Federal Reserve</a> · <a href="https://home.treasury.gov" rel="noopener noreferrer" target="_blank">US Treasury</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Roma" data-map-lat="41.9028" data-map-lng="12.4964" data-map-section="finanza" id="finanza-3"><h3>Wall Street chiude in calo tra petrolio e rendimenti</h3><p>L’S&amp;P 500 ha chiuso a 7.706,03 punti, in calo dello 0,75%; l’Euro Stoxx 50 perde lo 0,39%, mentre il Nikkei avanza dell’1,33%. Il rialzo del greggio e dei rendimenti ha ridotto la propensione al rischio.</p><div class="body-extra"><p>I listini reagiscono insieme a politica monetaria, energia e risultati aziendali. Una singola seduta non definisce una tendenza, ma segnala un cambiamento nel costo del capitale.</p><p>Le quotazioni sono ritardate di almeno quindici minuti e vanno lette con l’orario della rilevazione.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/markets/" rel="noopener noreferrer" target="_blank">Reuters/LSEG</a> · <a href="https://www.borsaitaliana.it" rel="noopener noreferrer" target="_blank">Borsa Italiana</a> · <a href="https://www.cnbc.com" rel="noopener noreferrer" target="_blank">CNBC</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Roma" data-map-lat="41.9028" data-map-lng="12.4964" data-map-section="finanza" id="finanza-4"><h3>OCSE: crescita globale al 2,9% nel 2026, l’IA attenua lo shock energetico</h3><p>L’OCSE stima una crescita mondiale del 2,9% nel 2026 e del 3% nel 2027. L’attività legata all’intelligenza artificiale sostiene investimenti e produzione, ma prezzi energetici, tassi alti e redditi reali più deboli frenano la domanda.</p><div class="body-extra"><p>Per l’Italia la previsione 2026 sale allo 0,9%, mentre quella 2027 resta allo 0,6%. Si tratta di uno scenario condizionato all’andamento dell’energia e delle tensioni geopolitiche.</p><p>L’IA viene trattata come fattore economico, non come garanzia: investimenti concentrati e consumi elettrici elevati possono creare anche nuovi squilibri.</p></div><span class="source">Fonti: <a href="https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-september-2026_f751d02b-en.html" rel="noopener noreferrer" target="_blank">OCSE</a> · <a href="https://www.reuters.com/markets/" rel="noopener noreferrer" target="_blank">Reuters Markets</a> · <a href="https://www.imf.org/en/news" rel="noopener noreferrer" target="_blank">FMI</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="benessere"><div class="section-head"><span class="section-tag tag-benessere">Benessere</span><h2 class="section-title">Test ematico multi-tumore di Grail, i consulenti FDA giudicano i benefici superiori ai rischi</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Le notizie sanitarie richiedono cautela: un voto consultivo della FDA non è ancora un’autorizzazione, una mappa genetica non è una terapia e un risultato di laboratorio assistito dall’IA deve essere riprodotto indipendentemente.</p></div><div class="articles"><div class="article lead" data-map-city="Stati Uniti" data-map-lat="39.5" data-map-lng="-98.35" data-map-section="benessere" id="benessere-1"><p>Un gruppo di esperti esterni della FDA ha espresso un voto favorevole sul rapporto tra benefici e rischi del test ematico di Grail per la rilevazione di più tumori. Il parere apre la strada a una possibile decisione regolatoria, ma non equivale ancora all’approvazione finale.</p><div class="body-extra"><p>La questione centrale riguarda falsi positivi, tumori mancati e capacità del test di migliorare davvero gli esiti clinici. Una maggiore sensibilità non basta se conduce a procedure inutili.</p><p>La FDA valuterà dati, etichettatura e modalità d’uso prima di una decisione.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/" rel="noopener noreferrer" target="_blank">Reuters Health</a> · <a href="https://www.fda.gov" rel="noopener noreferrer" target="_blank">FDA</a> · <a href="https://grail.com" rel="noopener noreferrer" target="_blank">Grail</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Washington" data-map-lat="38.9072" data-map-lng="-77.0369" data-map-section="benessere" id="benessere-2"><h3>Stati Uniti, CDC conferma la prima morte del 2026 collegata al morbillo</h3><p>I CDC hanno confermato il primo decesso del 2026 associato al morbillo negli Stati Uniti, senza indicare lo Stato. Il dato arriva in un contesto di focolai e coperture vaccinali disomogenee.</p><div class="body-extra"><p>Il morbillo è altamente contagioso e può causare complicanze gravi. Un singolo decesso non descrive da solo l’andamento nazionale, ma richiama l’importanza della sorveglianza.</p><p>Le indicazioni terapeutiche e vaccinali devono provenire dalle autorità sanitarie e dal medico.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/" rel="noopener noreferrer" target="_blank">Reuters Health</a> · <a href="https://www.cdc.gov/measles/" rel="noopener noreferrer" target="_blank">CDC</a> · <a href="https://www.who.int" rel="noopener noreferrer" target="_blank">OMS</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Stati Uniti" data-map-lat="39.5" data-map-lng="-98.35" data-map-section="benessere" id="benessere-3"><h3>Corteccia prefrontale, gli scienziati mappano l’attività dei geni cellula per cellula</h3><p>Un nuovo atlante descrive come varia l’attività genetica nelle cellule della corteccia prefrontale, area coinvolta in decisioni, attenzione e comportamento. La mappa può aiutare a studiare disturbi neurologici e psichiatrici.</p><div class="body-extra"><p>Il lavoro è una risorsa di base: identifica tipi cellulari e programmi molecolari, ma non produce una cura immediata.</p><p>Confronti tra tessuti sani e malati potranno chiarire quali segnali sono cause, conseguenze o semplici correlazioni.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/" rel="noopener noreferrer" target="_blank">Reuters Health</a> · <a href="https://www.nature.com" rel="noopener noreferrer" target="_blank">Nature</a> · <a href="https://www.nih.gov" rel="noopener noreferrer" target="_blank">NIH</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="San Francisco" data-map-lat="37.7749" data-map-lng="-122.4194" data-map-section="benessere" id="benessere-4"><h3>Anthropic: Claude ha contribuito a individuare un nuovo sistema enzimatico</h3><p>Anthropic afferma che Claude ha aiutato ricercatori a scoprire un sistema enzimatico con proprietà che ricordano alcuni meccanismi di CRISPR. È il primo risultato annunciato dal laboratorio biologico dell’azienda.</p><div class="body-extra"><p>Il contributo dell’IA riguarda generazione di ipotesi e analisi; la validazione sperimentale resta umana e di laboratorio.</p><p>Il risultato dovrà essere descritto in dettaglio, riprodotto e valutato dalla comunità scientifica prima di stabilirne applicazioni cliniche.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://www.anthropic.com" rel="noopener noreferrer" target="_blank">Anthropic</a> · <a href="https://www.nature.com" rel="noopener noreferrer" target="_blank">Nature</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="tecnologia"><div class="section-head"><span class="section-tag tag-tecnologia">Tecnologia</span><h2 class="section-title">Australia: un agente OpenAI avrebbe violato un sito governativo</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>Le ultime ore mostrano il lato operativo della tecnologia: sicurezza dei sistemi pubblici, limiti della guida automatizzata, strumenti per creator e reti satellitari Bluetooth.</p></div><div class="articles"><div class="article lead" data-map-city="Washington" data-map-lat="38.9072" data-map-lng="-77.0369" data-map-section="tecnologia" id="tecnologia-1"><p>Le autorità australiane affermano che un agente basato su tecnologia OpenAI è stato usato per compromettere un sito pubblico. L’episodio viene indagato per chiarire configurazione, responsabilità e dati coinvolti.</p><div class="body-extra"><p>Dire che un modello è stato usato in un attacco non significa che l’azienda lo abbia autorizzato. È necessario distinguere capacità dello strumento, uso dell’operatore e vulnerabilità del bersaglio.</p><p>Il caso riapre il tema delle barriere per agenti in grado di eseguire azioni autonome.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/technology/" rel="noopener noreferrer" target="_blank">Reuters Technology</a> · <a href="https://www.cyber.gov.au" rel="noopener noreferrer" target="_blank">Governo australiano</a> · <a href="https://openai.com" rel="noopener noreferrer" target="_blank">OpenAI</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Washington" data-map-lat="38.9072" data-map-lng="-77.0369" data-map-section="tecnologia" id="tecnologia-2"><h3>Dati FBI violati: esposte informazioni sensibili sui ruoli di intelligence</h3><p>Un set di dati sottratto all’FBI conterrebbe informazioni sensibili su dipendenti e funzioni di intelligence. La portata effettiva dell’esposizione e il numero delle persone interessate sono ancora oggetto di verifica.</p><div class="body-extra"><p>Anche dati che non includono segreti operativi possono diventare pericolosi se combinati con altre fonti.</p><p>L’episodio mostra che classificazione, controllo degli accessi e risposta agli incidenti restano centrali quanto i nuovi strumenti di IA.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/technology/" rel="noopener noreferrer" target="_blank">Reuters Technology</a> · <a href="https://www.fbi.gov" rel="noopener noreferrer" target="_blank">FBI</a> · <a href="https://www.cisa.gov" rel="noopener noreferrer" target="_blank">CISA</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Bruxelles" data-map-lat="50.8503" data-map-lng="4.3517" data-map-section="tecnologia" id="tecnologia-3"><h3>Tesla FSD, test belga segnala errori sui limiti e sorpassi di ciclisti</h3><p>Un’organizzazione belga per la sicurezza stradale sostiene che il sistema FSD supervisionato di Tesla abbia superato frequentemente i limiti e tentato sorpassi vietati di ciclisti durante prove su strada.</p><div class="body-extra"><p>Il test non rappresenta tutte le condizioni di guida, ma identifica scenari che richiedono controllo regolatorio e miglioramento.</p><p>Il termine “supervisionato” è decisivo: il conducente resta responsabile e deve poter intervenire.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/business/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://www.tesla.com" rel="noopener noreferrer" target="_blank">Tesla</a> · <a href="https://www.euroncap.com" rel="noopener noreferrer" target="_blank">Euro NCAP</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="New York" data-map-lat="40.7128" data-map-lng="-74.006" data-map-section="tecnologia" id="tecnologia-4"><h3>YouTube presenta nuovi strumenti IA per creator e shopping</h3><p>YouTube ha annunciato al Made on YouTube di New York strumenti di generazione, personalizzazione e commercio per i creator. L’obiettivo è accelerare produzione e monetizzazione dei contenuti.</p><div class="body-extra"><p>Restano aperti trasparenza dei contenuti sintetici, diritti d’autore e distribuzione dei ricavi.</p><p>La disponibilità delle funzioni varierà per Paese e account: l’annuncio non significa rilascio immediato universale.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/technology/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://blog.youtube" rel="noopener noreferrer" target="_blank">YouTube</a> · <a href="https://blog.google" rel="noopener noreferrer" target="_blank">Google</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="ia"><div class="section-head"><span class="section-tag tag-tecnologia">IA</span><h2 class="section-title">Meta presenta Charm, dispositivo dedicato all’assistente Muse</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>L’intelligenza artificiale entra in dispositivi dedicati, ricerca biologica e diplomazia multilaterale. Le aziende accelerano, mentre governi e scienziati discutono limiti e responsabilità.</p></div><div class="articles"><div class="article lead" data-map-city="Washington" data-map-lat="38.9072" data-map-lng="-77.0369" data-map-section="ia" id="ia-1"><p>Mark Zuckerberg ha mostrato Meta Charm, un piccolo dispositivo portatile pensato per usare l’assistente Muse. La mossa estende la strategia hardware dell’azienda oltre gli occhiali intelligenti.</p><div class="body-extra"><p>Prezzo, autonomia, privacy e utilità rispetto allo smartphone determineranno l’adozione reale.</p><p>Il lancio segnala la corsa a un’interfaccia post-smartphone, ma non dimostra ancora l’esistenza di un nuovo mercato di massa.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/technology/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://about.meta.com" rel="noopener noreferrer" target="_blank">Meta</a> · <a href="https://techcrunch.com" rel="noopener noreferrer" target="_blank">TechCrunch</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="New York" data-map-lat="40.7128" data-map-lng="-74.006" data-map-section="ia" id="ia-2"><h3>Leader dell’IA all’ONU: sistemi più potenti aumentano i rischi di sicurezza</h3><p>Dirigenti e ricercatori hanno avvertito le Nazioni Unite che modelli più capaci possono amplificare cyberattacchi, disinformazione e usi biologici impropri. Il richiamo è a standard internazionali e valutazioni condivise.</p><div class="body-extra"><p>Le valutazioni sul rischio non coincidono sempre e non provano che gli scenari peggiori siano imminenti.</p><p>Il punto comune è la necessità di test, tracciabilità degli incidenti e cooperazione tra Paesi.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/world/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://www.un.org" rel="noopener noreferrer" target="_blank">ONU</a> · <a href="https://oecd.ai" rel="noopener noreferrer" target="_blank">OECD AI</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Bruxelles" data-map-lat="50.8503" data-map-lng="4.3517" data-map-section="ia" id="ia-3"><h3>Nvidia: niente esenzioni regolatorie speciali per le aziende di IA</h3><p>Jensen Huang ha sostenuto che le imprese dell’intelligenza artificiale non dovrebbero ricevere deroghe generali alle regole. La posizione arriva mentre il settore chiede procedure più rapide per infrastrutture e prodotti.</p><div class="body-extra"><p>Regole uniformi non significano necessariamente regole identiche per ogni rischio: sanità, finanza e intrattenimento hanno impatti diversi.</p><p>La sfida è evitare sia immunità di fatto sia vincoli che proteggano gli operatori già dominanti.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/technology/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://www.nvidia.com" rel="noopener noreferrer" target="_blank">Nvidia</a> · <a href="https://digital-strategy.ec.europa.eu" rel="noopener noreferrer" target="_blank">Commissione UE</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Washington" data-map-lat="38.9072" data-map-lng="-77.0369" data-map-section="ia" id="ia-4"><h3>Claude e il nuovo sistema enzimatico: l’IA entra nel ciclo sperimentale</h3><p>Il risultato annunciato da Anthropic mostra un modello usato non soltanto per riassumere letteratura, ma per proporre ipotesi poi testate in laboratorio.</p><div class="body-extra"><p>Il valore scientifico dipenderà dalla pubblicazione di metodi, dati e controlli.</p><p>L’episodio è promettente, ma non basta per concludere che i modelli possano fare ricerca biologica autonoma.</p></div><span class="source">Fonti: <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/" rel="noopener noreferrer" target="_blank">Reuters Health</a> · <a href="https://www.anthropic.com" rel="noopener noreferrer" target="_blank">Anthropic</a> · <a href="https://www.nature.com" rel="noopener noreferrer" target="_blank">Nature</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="immigrazione-italia"><div class="section-head"><span class="section-tag tag-migra">Immigrazione Italia</span><h2 class="section-title">OIM: arrivi via mare in Europa giù del 39%, morti e dispersi salgono a 2.292</h2></div><div class="context-box"><div class="context-box-label">Da sapere per capire</div><p>I dati aggiornati dell’OIM mostrano un calo degli arrivi via mare in Europa, soprattutto sulla rotta del Mediterraneo centrale, ma un aumento di morti e dispersi. Per l’Italia il quadro va letto insieme al cruscotto quotidiano del Ministero dell’Interno.</p></div><div class="articles"><div class="article lead" data-map-city="Roma" data-map-lat="41.9028" data-map-lng="12.4964" data-map-section="immigrazione-italia" id="immigrazione-italia-1"><p>Quasi 60.000 migranti e rifugiati sono arrivati via mare in Europa nel 2026, il 39% in meno rispetto allo stesso periodo del 2025. Nello stesso tempo almeno 2.292 persone sono morte o risultano disperse, contro 1.999 un anno prima.</p><div class="body-extra"><p>Sulla rotta del Mediterraneo centrale verso l’Italia gli arrivi sono scesi da 48.231 a 21.393, ma i decessi stimati restano molto elevati. Rotte più lunghe e meno visibili possono ridurre gli sbarchi registrati senza ridurre il rischio.</p><p>L’OIM avverte che il numero reale delle vittime può essere superiore, perché molti naufragi non vengono documentati.</p></div><span class="source">Fonti: <a href="https://www.iom.int/news/new-iom-data-migrant-arrivals-europe-fall-39-2026-while-deaths-continue-rise" rel="noopener noreferrer" target="_blank">OIM</a> · <a href="https://www.reuters.com/world/europe/migrant-sea-crossings-fall-become-more-deadly-iom-says-2026-09-17/" rel="noopener noreferrer" target="_blank">Reuters</a> · <a href="https://apnews.com/article/fa512b3ac2a31b8c4a79ae0e981ec94c" rel="noopener noreferrer" target="_blank">AP</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div><div class="article" data-map-city="Roma" data-map-lat="41.9028" data-map-lng="12.4964" data-map-section="immigrazione-italia" id="immigrazione-italia-2"><h3>Viminale, il cruscotto quotidiano resta la base per misurare gli sbarchi in Italia</h3><p>Il Ministero dell’Interno aggiorna il conteggio degli arrivi via mare, delle presenze in accoglienza e dei confronti con gli anni precedenti. I numeri vanno letti a parità di periodo, evitando di confrontare un dato parziale con un intero anno.</p><div class="body-extra"><p>Frontex segnala un calo del 35% degli attraversamenti irregolari alle frontiere UE nei primi otto mesi del 2026. Le rilevazioni di Frontex e gli sbarchi del Viminale misurano però fenomeni diversi e non sono sommabili automaticamente.</p><p>Nazionalità dichiarata, Paese di partenza, richiesta d’asilo e status giuridico sono categorie differenti.</p></div><span class="source">Fonti: <a href="https://www.interno.gov.it/it/stampa-e-comunicazione/dati-e-statistiche/sbarchi-e-accoglienza-dei-migranti-tutti-i-dati" rel="noopener noreferrer" target="_blank">Ministero Interno</a> · <a href="https://www.frontex.europa.eu/media-centre/news/news-release/frontex-irregular-border-crossings-into-the-eu-down-1-3-in-first-8-months-of-2026-WWxc7M" rel="noopener noreferrer" target="_blank">Frontex</a> · <a href="https://data.unhcr.org/en/situations/europe-sea-arrivals/location/24521" rel="noopener noreferrer" target="_blank">UNHCR</a> · 23-24/09/2026</span><button class="read-more-btn" onclick="toggleReadMore(this)">Continua a leggere <span class="rm-arrow">↓</span></button></div></div></div><div class="section" id="dati-immigrazione">
 <div class="section-head">
 <span class="section-tag tag-migra">Dati Immigrazione</span>
-<h2 class="section-title">Immigrazione, i numeri del 2026</h2>
 </div>
-<div class="section-note">Sbarchi, minori non accompagnati e rimpatri italiani (cruscotto statistico giornaliero del Viminale, aggiornato al 16 settembre 2026; periodi diversi indicati per ciascun dato).</div>
+<div class="section-note">Sbarchi, minori non accompagnati e rimpatri italiani (cruscotto statistico giornaliero del Viminale, aggiornato al 18 settembre 2026; periodi diversi indicati per ciascun dato).</div>
 <div class="kpi-row">
 <div class="kpi">
 <div class="kpi-label">Sbarchi in Italia</div>
-<div class="kpi-value">21.445</div>
-<div class="kpi-note">1 gen - 16 set 2026, Viminale — -56% sul 2025 (49.077)</div>
+<div class="kpi-value">21.613</div>
+<div class="kpi-note">1 gen - 17 set 2026, Viminale — -56% sul 2025 (49.190)</div>
 </div>
 <div class="kpi rimpatri">
 <div class="kpi-label">Rimpatri dall'Italia</div>
-<div class="kpi-value">6.134</div>
-<div class="kpi-note">1 gen - 16 set 2026, Viminale — 5.258 forzati, 876 volontari assistiti</div>
+<div class="kpi-value">6.172</div>
+<div class="kpi-note">1 gen - 15 set 2026, Viminale — 5.293 forzati, 879 volontari assistiti</div>
 </div>
 <div class="kpi arrivi">
-<div class="kpi-label">Minori non accompagnati (sbarchi)</div>
-<div class="kpi-value">4.314</div>
-<div class="kpi-note">Minori non accompagnati, 1-14 set 2026 — contro 8.804 nello stesso periodo 2025</div>
+<div class="kpi-label">Minori stranieri non accompagnati</div>
+<div class="kpi-value">14.237</div>
+<div class="kpi-note">Presenti in Italia al 12/5/2026, Migrantes/Ismu — 88% ragazzi, 55% tra 17 e 18 anni</div>
 </div>
 </div>
 <div class="chart-card">
 <div class="chart-title">Sbarchi in Italia per nazionalità principale</div>
-<div class="chart-period">1° gennaio - 28 agosto 2026 (Ministero dell'Interno)</div>
-<div class="bar-row"><div class="bar-label">Bangladesh</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Bangladesh: 5.123" style="width:100%"></div></div><div class="bar-value">5.123</div></div>
-<div class="bar-row"><div class="bar-label">Somalia</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Somalia: 2.273" style="width:44%"></div></div><div class="bar-value">2.273</div></div>
-<div class="bar-row"><div class="bar-label">Algeria</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Algeria: 2.027" style="width:40%"></div></div><div class="bar-value">2.027</div></div>
-<div class="bar-row"><div class="bar-label">Sudan</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Sudan: 1.617" style="width:32%"></div></div><div class="bar-value">1.617</div></div>
-<div class="bar-row"><div class="bar-label">Pakistan</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Pakistan: 1.376" style="width:27%"></div></div><div class="bar-value">1.376</div></div>
-<div class="bar-row"><div class="bar-label">Egitto</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Egitto: 1.244" style="width:24%"></div></div><div class="bar-value">1.244</div></div>
-<div class="bar-row"><div class="bar-label">Altre nazionalità</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Altre nazionalità: 5.603" style="width:100%"></div></div><div class="bar-value">5.603</div></div>
-<div class="side-note">Le prime sei nazionalità coprono circa il 71% degli sbarchi totali; il resto (Eritrea, Tunisia, Mali, Nigeria, Iran e altri) è qui riunito in "altre nazionalità" per leggibilità. Il totale di questa tabella (19.263) è aggiornato al 28/8, leggermente inferiore al dato più recente al 2/9 (19.747) riportato in cima alla pagina.</div>
+<div class="chart-period">1° gennaio - 17 settembre 2026 (Ministero dell'Interno, via AgenSIR)</div>
+<div class="bar-row"><div class="bar-label">Bangladesh</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Bangladesh: 5.465" style="width:100%"></div></div><div class="bar-value">5.465</div></div>
+<div class="bar-row"><div class="bar-label">Somalia</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Somalia: 2.560" style="width:47%"></div></div><div class="bar-value">2.560</div></div>
+<div class="bar-row"><div class="bar-label">Algeria</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Algeria: 2.542" style="width:47%"></div></div><div class="bar-value">2.542</div></div>
+<div class="bar-row"><div class="bar-label">Sudan</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Sudan: 1.671" style="width:31%"></div></div><div class="bar-value">1.671</div></div>
+<div class="bar-row"><div class="bar-label">Pakistan</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Pakistan: 1.467" style="width:27%"></div></div><div class="bar-value">1.467</div></div>
+<div class="bar-row"><div class="bar-label">Egitto</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Egitto: 1.354" style="width:25%"></div></div><div class="bar-value">1.354</div></div>
+<div class="bar-row"><div class="bar-label">Altre nazionalità</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="Altre nazionalità: 6.554" style="width:100%"></div></div><div class="bar-value">6.554</div></div>
+<div class="side-note">Le prime sei nazionalità coprono circa il 70% degli sbarchi totali; il resto (Eritrea, Tunisia e altre) è qui riunito in "altre nazionalità" per leggibilità.</div>
 <details class="table-view">
 <summary>Vedi tabella dati completa</summary>
 <table class="data-table">
 <tr><th>Nazionalità</th><th>Sbarchi</th><th>Periodo</th></tr>
-<tr><td>Bangladesh</td><td class="num">5.123</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Somalia</td><td class="num">2.273</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Algeria</td><td class="num">2.027</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Sudan</td><td class="num">1.617</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Pakistan</td><td class="num">1.376</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Egitto</td><td class="num">1.244</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Eritrea</td><td class="num">1.089</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Tunisia</td><td class="num">978</td><td>1 gen - 28 ago 2026</td></tr>
-<tr><td>Altre nazionalità</td><td class="num">1.536</td><td>1 gen - 28 ago 2026</td></tr>
-<tr style="font-weight:700; background:#f3e6c4;"><td>Totale Italia</td><td class="num">19.263</td><td>1 gen - 28 ago 2026</td></tr>
+<tr><td>Bangladesh</td><td class="num">5.465</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Somalia</td><td class="num">2.560</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Algeria</td><td class="num">2.542</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Sudan</td><td class="num">1.671</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Pakistan</td><td class="num">1.467</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Eritrea</td><td class="num">1.430</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Egitto</td><td class="num">1.354</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Tunisia</td><td class="num">1.161</td><td>1 gen - 17 set 2026</td></tr>
+<tr><td>Altre nazionalità</td><td class="num">3.963</td><td>1 gen - 17 set 2026</td></tr>
+<tr style="font-weight:700; background:#f3e6c4;"><td>Totale Italia</td><td class="num">21.613</td><td>1 gen - 17 set 2026</td></tr>
 </table>
 </details>
-<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Dipartimento Libertà Civili e Immigrazione — Ministero dell'Interno (dato all'8:00 del 28/8/2026).</div>
+<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Dipartimento Libertà Civili e Immigrazione — Ministero dell'Interno, via AgenSIR (dato del 17/9/2026).</div>
 </div>
 <div class="chart-card">
 <div class="chart-title">Sbarchi totali per anno: 2024, 2025, 2026 a confronto</div>
-<div class="chart-period">1° gennaio - 2 settembre, anni a confronto (Ministero dell'Interno)</div>
-<div class="bar-row"><div class="bar-label">2025</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2025: 43.860" style="width:100%"></div></div><div class="bar-value">43.860</div></div>
-<div class="bar-row"><div class="bar-label">2024</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2024: 42.544" style="width:97%"></div></div><div class="bar-value">42.544</div></div>
-<div class="bar-row"><div class="bar-label">2026</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2026: 19.747" style="width:45%"></div></div><div class="bar-value">19.747 <span class="dv-delta down">-55%</span></div></div>
-<div class="side-note">Il calo del 2026 rispetto ai due anni precedenti si conferma su tutto il periodo osservato; nel solo periodo estivo (3 luglio - 1° settembre) il calo sale al -59,7% (5.137 sbarchi nel 2026 contro 12.748 nel 2025).</div>
-<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Ministero dell'Interno (dato al 2/9/2026).</div>
+<div class="chart-period">1° gennaio - 17 settembre, anni a confronto (Ministero dell'Interno)</div>
+<div class="bar-row"><div class="bar-label">2025</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2025: 49.190" style="width:100%"></div></div><div class="bar-value">49.190</div></div>
+<div class="bar-row"><div class="bar-label">2024</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2024: 44.803" style="width:91%"></div></div><div class="bar-value">44.803</div></div>
+<div class="bar-row"><div class="bar-label">2026</div><div class="bar-track"><div class="bar-fill asilo" data-tooltip="2026: 21.613" style="width:44%"></div></div><div class="bar-value">21.613 <span class="dv-delta down">-56%</span></div></div>
+<div class="side-note">Il calo del 2026 rispetto ai due anni precedenti si conferma su tutto il periodo osservato, con un forte rallentamento degli arrivi anche nel mese di settembre (2.051 contro 8.315 nello stesso mese del 2025).</div>
+<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Ministero dell'Interno, via AgenSIR (dato al 17/9/2026).</div>
 </div>
 <div class="chart-card">
 <div class="chart-title">Rimpatri dall'Italia, per tipologia</div>
-<div class="chart-period">1° gennaio - 31 agosto 2026 (Ministero dell'Interno)</div>
-<div class="bar-row"><div class="bar-label">Forzati</div><div class="bar-track"><div class="bar-fill rimpatri" data-tooltip="Forzati: 4.973" style="width:100%"></div></div><div class="bar-value">4.973</div></div>
-<div class="bar-row"><div class="bar-label">Volontari assistiti</div><div class="bar-track"><div class="bar-fill rimpatri" data-tooltip="Volontari assistiti: 837" style="width:17%"></div></div><div class="bar-value">837</div></div>
-<div class="side-note">Il totale di 5.810 rimpatri nei primi otto mesi del 2026 è già superiore all'intero 2024 (5.704) e si avvicina al totale dell'intero 2025 (6.772): il confronto è tra un dato parziale (2026) e due anni completi, quindi non ancora conclusivo sul ritmo annuo finale.</div>
-<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Ministero dell'Interno; Il Sud24 (dato al 31/8-2/9/2026).</div>
+<div class="chart-period">1° gennaio - 15 settembre 2026 (Ministero dell'Interno)</div>
+<div class="bar-row"><div class="bar-label">Forzati</div><div class="bar-track"><div class="bar-fill rimpatri" data-tooltip="Forzati: 5.293" style="width:100%"></div></div><div class="bar-value">5.293</div></div>
+<div class="bar-row"><div class="bar-label">Volontari assistiti</div><div class="bar-track"><div class="bar-fill rimpatri" data-tooltip="Volontari assistiti: 879" style="width:17%"></div></div><div class="bar-value">879</div></div>
+<div class="side-note">Il totale di 6.172 rimpatri nei primi otto mesi e mezzo del 2026 conferma il rafforzamento del canale coattivo rispetto a quello volontario, in linea con le misure annunciate dal ministro dell'Interno Matteo Piantedosi per accelerare gli allontanamenti dei soggetti ritenuti pericolosi.</div>
+<div class="dv-sources">Fonte: Cruscotto statistico giornaliero, Ministero dell'Interno, via AgenSIR (dato al 15/9/2026).</div>
 </div>
-</div>
-<div class="section" id="sicurezza-pubblica">
+</div><div class="section" id="sicurezza-pubblica">
 <div class="section-head">
 <span class="section-tag tag-sicurezza">Sicurezza Pubblica</span>
-<h2 class="section-title">Sicurezza pubblica, i numeri</h2>
 </div>
 <div class="section-note">Attività delle forze dell’ordine, reati denunciati e risposta giudiziaria. Ogni dato riporta il proprio periodo: per le serie non giornaliere è mantenuto l’ultimo dato ufficiale disponibile, senza presentarlo come nuovo.</div>
 <div class="section-note" style="margin-top:18px; font-weight:700; color:var(--ink);">1. Lavoro delle forze dell'ordine</div>
@@ -2002,12 +2419,10 @@
 <div class="side-note">Non esiste un dato ufficiale più recente sulla recidiva in Italia: lo studio di Fabrizio Leonardi (DAP) resta l'unico mai realizzato su scala nazionale. Nel 2012 il Ministero della Giustizia annunciò una nuova ricerca, mai completata né pubblicata.</div>
 <div class="dv-sources">Fonte: F. Leonardi, Dipartimento dell'Amministrazione Penitenziaria, "Rassegna penitenziaria e criminologica", 2007 (dati 1998).</div>
 </div>
-</div>
-<div class="section" id="petrolio-basilicata">
+</div><div class="section" id="petrolio-basilicata">
 <div class="section-head">
-<span class="section-tag tag-petrolio">Petrolio Basilicata</span>
-<h2 class="section-title">Petrolio in Basilicata: dati, cartina e cronologia</h2>
-</div>
+<span class="section-tag tag-finanza">Petrolio Basilicata</span>
+<h2 class="section-title">Il governo Meloni vara il decreto sulle trivelle, la Basilicata rischia il commissariamento</h2></div>
 <div class="section-note">Dashboard permanente: royalties, pozzi e produzione dei due poli estrattivi, cartina e cronologia dal 1878 a oggi. I dati pubblici disponibili sono parziali — specie sul riparto dei fondi tra i comuni non ospitanti impianti — e questa pagina lo segnala esplicitamente invece di nasconderlo. Aggiornata periodicamente, non ogni giorno.</div>
 <div class="kpi-row">
 <div class="kpi">
@@ -2246,7 +2661,6 @@
 <div class="pb-subhead"><span class="pb-subhead-tag">Le ultime notizie</span></div>
 <div class="articles">
 <div class="article lead">
-<h3>Il governo Meloni vara il decreto sulle trivelle, la Basilicata rischia il commissariamento</h3>
 <p>Il Consiglio dei ministri ha approvato un provvedimento che accelera le autorizzazioni per la ricerca e l'estrazione di idrocarburi su terraferma. Se una Regione non si esprime entro 45 giorni, lo Stato può fissare un termine ulteriore e infine nominare un commissario ad acta che decide al suo posto.</p>
 <div class="body-extra">
 <p>La misura riguarda soprattutto la Basilicata, oltre a Sicilia, Emilia-Romagna, Puglia, Molise e alcune aree offshore adriatiche. Il ministro dell'Ambiente Gilberto Pichetto Fratin parla di sicurezza energetica nazionale; lo stesso ministro ha però ammesso che il prezzo dei carburanti dipende soprattutto dai mercati internazionali, non dalla produzione interna.</p>
@@ -2425,7 +2839,7 @@
 </div>
 <div class="footer">
 <span>Rassegna stampa — fonti multiple, tradotte e sintetizzate in italiano</span>
-<span>Aggiornata: 19 Settembre 2026</span>
+<span>Aggiornata: 24 Settembre 2026 · ore 07:10</span>
 </div>
 <div class="footer-note">"Il Contribuente" perché sei tu che paghi, in un modo o nell'altro, quasi tutta l'informazione. Questa pubblicazione prova a restituirti qualcosa mettendo a confronto i fatti, raccontati da più voci — l'idea te la fai tu.</div>
 <div class="footer-legal">
@@ -2441,8 +2855,48 @@
 <span>Informazione senza padroni · Licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" rel="noopener" target="_blank">Creative Commons Attribuzione – Non commerciale – Non opere derivate 4.0</a></span>
 </div>
 </div>
-<a aria-label="Torna su" class="back-to-top" href="#top" id="backToTop">↑</a>
-<script>
+<div aria-hidden="true" class="geo3d-overlay" id="geo3dOverlay"><div class="geo3d-globe" id="geo3dGlobe"></div><div class="geo3d-top"><div class="geo3d-kicker">Il Contribuente · Mappa delle notizie</div><h2 class="geo3d-title" id="geo3dTitle">Mappa delle notizie</h2><div class="geo3d-status" id="geo3dStatus">Seleziona una sezione</div></div><button aria-label="Chiudi" class="geo3d-close" id="geo3dClose">×</button><button class="geo3d-skip" id="geo3dSkip">Vai subito alla zona</button><div class="geo3d-news" id="geo3dNews"><small id="geo3dCity">Il Contribuente</small><h3 id="geo3dHeadline">Seleziona un luogo sulla mappa</h3><p class="geo3d-hint" id="geo3dHint">Clicca un punto o il nome del luogo per vedere gli articoli collegati.</p><div class="geo3d-news-list" id="geo3dNewsList"></div></div></div><a aria-label="Torna su" class="back-to-top" href="#top" id="backToTop">↑</a>
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script><script src="https://unpkg.com/globe.gl@2.32.1/dist/globe.gl.min.js"></script><script>
+(function(){
+ var overlay=document.getElementById('geo3dOverlay'),host=document.getElementById('geo3dGlobe'),close=document.getElementById('geo3dClose'),skip=document.getElementById('geo3dSkip'),news=document.getElementById('geo3dNews'),status=document.getElementById('geo3dStatus'),titleEl=document.getElementById('geo3dTitle'),cityEl=document.getElementById('geo3dCity'),headline=document.getElementById('geo3dHeadline'),hint=document.getElementById('geo3dHint'),list=document.getElementById('geo3dNewsList');
+ var globe=null,timers=[],current=null,currentPlaces=[];
+ var miniHost=document.getElementById('geo3dMiniGlobe'),miniGlobe=null;
+ function miniSize(){return innerWidth<=360?44:(innerWidth<=640?54:76)}
+ function buildMini(){if(!miniHost||miniGlobe||typeof Globe!=='function')return;var z=miniSize();miniGlobe=Globe()(miniHost).width(z).height(z).backgroundColor('rgba(0,0,0,0)').globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg').bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png').showAtmosphere(true).atmosphereColor('#7aa6d8').atmosphereAltitude(.13);miniGlobe.pointOfView({lat:18,lng:8,altitude:2.25},0);var c=miniGlobe.controls();c.enableZoom=false;c.enablePan=false;c.enableRotate=false;c.autoRotate=true;c.autoRotateSpeed=3.0}
+ buildMini();
+ function buildGeoCfg(){
+  var meta={tutte:{title:'Tutte le notizie',view:{lat:35,lng:12,altitude:1.75}},italia:{title:'Italia',view:{lat:42.7,lng:12.3,altitude:.30}},disagio:{title:'Disagio città',view:{lat:42.7,lng:12.3,altitude:.27}},europa:{title:'Europa',view:{lat:51,lng:11,altitude:.52}}};
+  var result={};
+  Object.keys(meta).forEach(function(key){result[key]={title:meta[key].title,view:meta[key].view,places:[]};var byPlace={};document.querySelectorAll(key==='tutte'?'.article[data-map-city]':'#'+key+' .article[data-map-city]').forEach(function(article){var name=article.getAttribute('data-map-city'),lat=parseFloat(article.getAttribute('data-map-lat')),lng=parseFloat(article.getAttribute('data-map-lng'));if(!name||!isFinite(lat)||!isFinite(lng)||!article.id)return;if(!byPlace[name]){byPlace[name]={name:name,lat:lat,lng:lng,articles:[]};result[key].places.push(byPlace[name])}byPlace[name].articles.push(article.id)});});
+  return result;
+ }
+ var cfg=buildGeoCfg();
+ function articleTitle(id){var e=document.getElementById(id);if(!e)return '';var h=e.querySelector('h3')||e.querySelector('.section-title');return h?h.textContent.trim():''}
+ function later(fn,ms){timers.push(setTimeout(fn,ms))} function clearTimers(){timers.forEach(clearTimeout);timers=[]}
+ function sizeGlobe(){if(globe){globe.width(innerWidth);globe.height(innerHeight)}}
+ function startAltitude(){var w=innerWidth,h=innerHeight;if(w<=430)return 3.55;if(w<=640)return 3.25;if(w<=900)return 2.85;if(h<=520)return 3.05;return 2.45}
+ function decoratePlaces(arr){return arr.map(function(p,i){return Object.assign({},p,{size:innerWidth<640?.18:.24,color:i%2?'#b3392a':'#d3a846'})})}
+ function build(){if(globe)return true;if(typeof Globe!=='function'){status.textContent='Impossibile caricare la mappa 3D.';return false}globe=Globe()(host).width(innerWidth).height(innerHeight).backgroundColor('rgba(0,0,0,0)').globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg').bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png').showAtmosphere(true).atmosphereColor('#7aa6d8').atmosphereAltitude(.16).pointLat('lat').pointLng('lng').pointColor('color').pointAltitude(.045).pointRadius('size').labelLat('lat').labelLng('lng').labelText('name').labelColor(function(){return '#fff4d6'}).labelSize(function(){return innerWidth<640?.22:.28}).labelDotRadius(.07).labelAltitude(.055).onPointClick(showPlace).onLabelClick(showPlace);globe.controls().enablePan=false;globe.controls().autoRotateSpeed=.5;return true}
+ function setData(){currentPlaces=decoratePlaces(current.places);globe.pointsData(currentPlaces).labelsData(currentPlaces)}
+ function areaFor(p){
+  var n=p.name;
+  var areas={
+   'Washington':{name:'Stati Uniti',lat:38.5,lng:-98.5,altitude:.82},'New York':{name:'Stati Uniti',lat:38.5,lng:-98.5,altitude:.82},
+   'Pechino':{name:'Cina',lat:35.8,lng:104.2,altitude:.82},'Asia':{name:'Asia orientale',lat:31,lng:105,altitude:1.0},
+   'Mosca':{name:'Russia',lat:57,lng:45,altitude:.92},'Berlino':{name:'Germania',lat:51.1,lng:10.4,altitude:.58},'Schwerin':{name:'Germania',lat:51.1,lng:10.4,altitude:.58},
+   'Bruxelles':{name:'Belgio',lat:50.6,lng:4.7,altitude:.50},'Londra':{name:'Regno Unito',lat:54.5,lng:-3,altitude:.56},
+   'Milano':{name:'Italia',lat:42.7,lng:12.3,altitude:.42},'Napoli':{name:'Italia',lat:42.7,lng:12.3,altitude:.42},'Frosinone':{name:'Italia',lat:42.7,lng:12.3,altitude:.42},'Roma':{name:'Italia',lat:42.7,lng:12.3,altitude:.42},'Pozzallo':{name:'Italia',lat:42.7,lng:12.3,altitude:.42},'Italia':{name:'Italia',lat:42.7,lng:12.3,altitude:.42},
+   'Europa':{name:'Europa',lat:50,lng:10,altitude:.92},'Mar Rosso':{name:'Mar Rosso',lat:20,lng:38.5,altitude:.72}
+  }; return areas[n]||{name:n,lat:p.lat,lng:p.lng,altitude:.78};
+ }
+ function showPlace(p){clearTimers();globe.controls().autoRotate=false;var a=areaFor(p);news.classList.remove('show');status.textContent='Avvicinamento · '+a.name;globe.pointOfView({lat:a.lat,lng:a.lng,altitude:a.altitude},700);later(function(){status.textContent=a.name+' → '+p.name;var alt=Math.max(.19,Math.min(.38,current.view.altitude*.68));globe.pointOfView({lat:p.lat,lng:p.lng,altitude:alt},800);cityEl.textContent=p.name+' · '+current.title;var valid=p.articles.map(function(id){var el=document.getElementById(id);return{id:id,title:articleTitle(id),ok:!!(el&&(current===cfg.tutte||el.closest('#'+Object.keys(cfg).find(function(k){return cfg[k]===current}))))}}).filter(function(x){return x.title&&x.ok});headline.textContent=valid.length>1?valid.length+' notizie · '+p.name:(valid[0]?valid[0].title:p.name);hint.textContent=valid.length>1?'Scegli quale articolo aprire.':'Apri l’articolo collegato a questo luogo.';list.innerHTML='';valid.forEach(function(a){var b=document.createElement('button');b.type='button';b.textContent=a.title+' →';b.onclick=function(){openArticle(a.id)};list.appendChild(b)});news.classList.add('show')},760)}
+ function finalView(){if(!build()||!current)return;globe.controls().autoRotate=false;setData();status.textContent=current.title+' · clicca un luogo';globe.pointOfView(current.view,1150);cityEl.textContent=current.title+' · Mappa';headline.textContent=currentPlaces.map(function(p){return p.name}).join(' · ');hint.textContent=current===cfg.tutte?'Clicca un punto o il nome del luogo per aprire le notizie collegate.':'Clicca un punto o il nome del luogo: sono mostrati solo gli articoli di '+current.title+'.';list.innerHTML='';news.classList.add('show')}
+ function openMap(e){e.preventDefault();var id=this.getAttribute('data-geo3d')||'';cfg=buildGeoCfg();current=cfg[id];if(!current)return;clearTimers();currentPlaces=[];news.classList.remove('show');list.innerHTML='';headline.textContent='Seleziona un luogo sulla mappa';cityEl.textContent=current.title;hint.textContent=current===cfg.tutte?'Sono collegate le notizie geolocalizzabili dell’edizione di oggi.':'Sono visibili solo le notizie della sezione '+current.title+'.';overlay.classList.add('is-open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';titleEl.textContent=current.title;skip.textContent='Vai subito alla zona';if(!build())return;globe.pointsData([]).labelsData([]);sizeGlobe();globe.controls().autoRotate=true;status.textContent=current.title+' · caricamento esclusivo';globe.pointOfView({lat:18,lng:8,altitude:startAltitude()},0);later(function(){status.textContent='Avvicinamento · '+current.title;globe.controls().autoRotate=false;globe.pointOfView({lat:current.view.lat,lng:current.view.lng,altitude:Math.max(1.05,current.view.altitude*1.65)},1350)},650);later(finalView,2150)}
+ function closeMap(){clearTimers();overlay.classList.remove('is-open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';news.classList.remove('show')}
+ function openArticle(id){closeMap();var t=document.getElementById(id);if(!t)return;t.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){t.classList.add('expanded');var b=t.querySelector('.read-more-btn');if(b)b.innerHTML='Mostra meno <span class="rm-arrow">↓</span>'},500)}
+ document.querySelectorAll('.geo3d-index-link[data-geo3d]').forEach(function(a){a.addEventListener('click',openMap)});close.addEventListener('click',closeMap);skip.addEventListener('click',function(){clearTimers();finalView()});window.addEventListener('resize',function(){sizeGlobe();if(current&&globe)setData();if(miniGlobe){var z=miniSize();miniGlobe.width(z);miniGlobe.height(z)}});
+})();
+</script><script>
   (function(){
     var LIMIT = 15;
     var container = document.querySelector('.masthead-badges');
