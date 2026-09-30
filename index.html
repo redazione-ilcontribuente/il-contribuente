@@ -311,6 +311,74 @@
     max-width:130px;
     white-space:normal;
   }
+
+  /* ===== Social ufficiali sotto le card mercato ===== */
+  .market-socials{
+    max-width:1260px;
+    margin:18px auto 24px;
+    padding:18px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:28px;
+    border:1px solid #5b4a24;
+    border-radius:14px;
+    background:
+      radial-gradient(500px 180px at 10% -20%, rgba(214,171,74,.10), transparent 60%),
+      linear-gradient(160deg,#272b31 0%,#171a1f 100%);
+    box-shadow:0 8px 22px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.04);
+  }
+  .market-social-label{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:21px;
+    color:#f0d083;
+    margin-right:10px;
+    white-space:nowrap;
+  }
+  .market-social-link{
+    width:78px;
+    height:78px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:18px;
+    text-decoration:none;
+    background:linear-gradient(160deg,#343941,#20242a);
+    border:1px solid #555c66;
+    box-shadow:0 8px 18px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.08);
+    transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+  }
+  .market-social-link:hover{
+    transform:translateY(-4px) scale(1.03);
+    border-color:#c99a35;
+    box-shadow:0 12px 24px rgba(0,0,0,.42),0 0 0 2px rgba(201,154,53,.12);
+  }
+  .market-social-link svg{
+    width:42px;
+    height:42px;
+    display:block;
+  }
+  .market-social-link.instagram svg{color:#f5b544;}
+  .market-social-link.tiktok svg{color:#f8f8f6;}
+  .market-social-link.facebook svg{color:#4b89dc;}
+  @media (max-width:640px){
+    .market-socials{
+      margin:14px 12px 20px;
+      padding:16px 14px;
+      gap:14px;
+      border-radius:12px;
+      flex-wrap:wrap;
+    }
+    .market-social-label{
+      width:100%;
+      text-align:center;
+      font-size:18px;
+      margin:0 0 4px;
+    }
+    .market-social-link{width:66px;height:66px;border-radius:16px;}
+    .market-social-link svg{width:36px;height:36px;}
+  }
   .quote-day{
     max-width:1260px;
     margin:0 auto 24px auto;
@@ -2163,6 +2231,19 @@
 </div>
 <div class="market-bar">
 <div class="market-bar-inner"><div class="market-card"><div class="market-label">Benzina</div><div class="market-value">2,158 €/L</div><div class="market-delta">rete stradale self; autostrada 2,252 €/L</div><div class="market-source">MIMIT / Il Sole 24 Ore · 28/09/2026 09:30</div></div><div class="market-card"><div class="market-label">Diesel</div><div class="market-value">2,369 €/L</div><div class="market-delta">rete stradale self; tetto Enilive 2,19 €/L separato</div><div class="market-source">MIMIT / DIRE · 28/09/2026</div></div><div class="market-card"><div class="market-label">Petrolio</div><div class="market-value">Brent 103,73 $/barile</div><div class="market-delta"></div><div class="market-source">Reuters · 30/09/2026 03:31 CEST</div></div><div class="market-card"><div class="market-label">Gas TTF</div><div class="market-value">72,07 €/MWh</div><div class="market-delta">ultimo valore verificato</div><div class="market-source">ICE TTF · 28/09/2026</div></div><div class="market-card"><div class="market-label">Oro</div><div class="market-value">3.679,28 €/oz</div><div class="market-delta">4.171,93 $/oz; cambio EUR/USD 1,1339</div><div class="market-source">Reuters · 30/09/2026 03:29 CEST</div></div><div class="market-card"><div class="market-label">Bitcoin</div><div class="market-value">73.523 €</div><div class="market-delta">83.368 $; cambio EUR/USD 1,1339</div><div class="market-source">quotazione mercato + Reuters FX · 30/09/2026 05:00 CEST</div></div><div class="market-card" style="border-color:#7c1d16;"><div class="market-label">Palestinesi uccisi</div><div class="market-value" style="color:#e07a5f;">74.016</div><div class="market-delta">dato attribuito al ministero della Salute di Gaza</div><div class="market-source">AP / fonti sanitarie locali · ultimo dato verificato 26/09/2026</div></div></div>
+
+<div class="market-socials" aria-label="Social ufficiali de Il Contribuente">
+  <span class="market-social-label">Seguici sui social</span>
+  <a class="market-social-link instagram" href="https://www.instagram.com/ilcontribuente.redazioneit?stkn=eHFtZmc5cGo0ZnRk&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Il Contribuente su Instagram" title="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+  </a>
+  <a class="market-social-link tiktok" href="https://www.tiktok.com/@ilcontribuente_ne" target="_blank" rel="noopener noreferrer" aria-label="Il Contribuente su TikTok" title="TikTok">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.6 3c.5 2.1 1.7 3.5 3.9 4.1v3.2c-1.4 0-2.7-.4-3.9-1.1v6.1a5.3 5.3 0 1 1-4.6-5.2v3.3a2.1 2.1 0 1 0 1.4 2V3h3.2z"/></svg>
+  </a>
+  <a class="market-social-link facebook" href="https://facebook.com/share/1FB8pWXg2R/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Il Contribuente su Facebook" title="Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v1.8H8V14h2.2v7h3.3z"/></svg>
+  </a>
+</div>
 </div>
 <div class="wrap">
 <div class="page-grid">
