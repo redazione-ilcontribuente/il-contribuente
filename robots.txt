@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ilcontribuente.redazioneit.workers.dev/sitemap.xml

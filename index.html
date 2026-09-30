@@ -5,6 +5,59 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Il Contribuente — 30 settembre 2026</title>
+<meta name="description" content="Il Contribuente: rassegna stampa quotidiana con confronto tra testate italiane e internazionali, notizie dall’Italia e dal mondo, economia, Europa, tecnologia e approfondimenti."/>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+<link rel="canonical" href="https://ilcontribuente.redazioneit.workers.dev/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Il Contribuente"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Il Contribuente — Rassegna stampa quotidiana"/>
+<meta name="twitter:description" content="Confronto quotidiano tra le principali testate italiane e internazionali."/>
+<meta name="twitter:image" content="https://ilcontribuente.redazioneit.workers.dev/og_image.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsMediaOrganization",
+      "@id": "https://ilcontribuente.redazioneit.workers.dev/#organization",
+      "name": "Il Contribuente",
+      "url": "https://ilcontribuente.redazioneit.workers.dev/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ilcontribuente.redazioneit.workers.dev/logo.jpeg"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ilcontribuente.redazioneit.workers.dev/#website",
+      "url": "https://ilcontribuente.redazioneit.workers.dev/",
+      "name": "Il Contribuente",
+      "inLanguage": "it-IT",
+      "publisher": {
+        "@id": "https://ilcontribuente.redazioneit.workers.dev/#organization"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://ilcontribuente.redazioneit.workers.dev/#webpage",
+      "url": "https://ilcontribuente.redazioneit.workers.dev/",
+      "name": "Il Contribuente — 30 settembre 2026",
+      "description": "Rassegna stampa quotidiana con confronto tra testate italiane e internazionali.",
+      "datePublished": "2026-09-30",
+      "dateModified": "2026-09-30",
+      "inLanguage": "it-IT",
+      "isPartOf": {
+        "@id": "https://ilcontribuente.redazioneit.workers.dev/#website"
+      },
+      "publisher": {
+        "@id": "https://ilcontribuente.redazioneit.workers.dev/#organization"
+      }
+    }
+  ]
+}
+</script>
 <link href="logo.jpeg" rel="icon" type="image/png"/>
 <meta content="Il Contribuente — Rassegna Stampa Quotidiana" property="og:title"/>
 <meta content="Confronto quotidiano tra le principali testate italiane e internazionali." property="og:description"/>
@@ -1903,6 +1956,73 @@
 /* Immagini editoriali incorporate: override finale */
 .article-image{display:block !important;overflow:hidden !important;background:#101820;}
 .article-image img{display:block !important;width:100% !important;height:100% !important;object-fit:cover !important;}
+
+/* ===== PETROLIO BASILICATA — LE ULTIME NOTIZIE: STILE CARD UNIFORME =====
+   Regola 30/09/2026: stessa estetica delle card standard del giornale.
+   Le notizie restano orizzontali a tutta larghezza, una sotto l'altra;
+   nessun layout interno speciale titolo/testo. Colori, padding, bordi,
+   ombre, immagini, font e spaziature ereditano lo stile .article globale. */
+#petrolio-basilicata .articles{
+  display:flex !important;
+  flex-direction:column !important;
+  flex-wrap:nowrap !important;
+  width:100% !important;
+  max-width:100% !important;
+  gap:22px !important;
+  overflow:visible !important;
+}
+#petrolio-basilicata .articles > .article,
+#petrolio-basilicata .articles > .article.lead{
+  display:block !important;
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  height:auto !important;
+  flex:none !important;
+  grid-column:auto !important;
+  grid-row:auto !important;
+  padding:24px 26px !important;
+  background:linear-gradient(165deg, #ffffff 0%, var(--card) 60%) !important;
+  border-radius:10px !important;
+  box-shadow:var(--shadow-md), var(--shadow-inset) !important;
+  position:relative !important;
+}
+#petrolio-basilicata .articles > .article h3,
+#petrolio-basilicata .articles > .article p,
+#petrolio-basilicata .articles > .article .body,
+#petrolio-basilicata .articles > .article .body-extra,
+#petrolio-basilicata .articles > .article .source,
+#petrolio-basilicata .articles > .article .read-more-btn,
+#petrolio-basilicata .articles > .article .callout,
+#petrolio-basilicata .articles > .article .article-image{
+  grid-column:auto !important;
+  grid-row:auto !important;
+}
+#petrolio-basilicata .articles > .article h3{
+  margin-top:0 !important;
+}
+#petrolio-basilicata .articles > .article .article-image{
+  width:calc(100% + 52px) !important;
+  height:108px !important;
+  margin:-24px -26px 16px -26px !important;
+  border-radius:10px 10px 0 0 !important;
+}
+#petrolio-basilicata .articles > .article.lead::before{
+  display:none !important;
+}
+@media (max-width:640px){
+  #petrolio-basilicata .articles{ gap:22px !important; }
+  #petrolio-basilicata .articles > .article,
+  #petrolio-basilicata .articles > .article.lead{
+    display:block !important;
+    padding:16px 16px !important;
+  }
+  #petrolio-basilicata .articles > .article .article-image{
+    width:calc(100% + 32px) !important;
+    height:88px !important;
+    margin:-16px -16px 12px -16px !important;
+  }
+}
 </style></head>
 <body data-edition="2026-09-28" data-published="2026-09-28T05:18:00+02:00" id="top">
 <!-- ===== OVERLAY INTRO — SEMPRE PRESENTE, IDENTICO OGNI GIORNO ===== -->
