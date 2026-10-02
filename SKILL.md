@@ -1559,3 +1559,79 @@ Per TUTTI gli articoli di Italia, Disagio città ed Europa verificare automatica
 8. zero contaminazioni tra i tre filtri.
 
 Se anche un solo marker apre una notizia diversa dalla propria, l'HTML NON è pronto per la pubblicazione.
+
+---
+
+# 45. AGGIORNAMENTO QUOTIDIANO COMPLETO DELL’EDIZIONE — OBBLIGATORIO
+
+## Regola vincolante e permanente (Mario, 02/10/2026)
+
+Ogni nuova edizione de **Il Contribuente** deve partire dal template HTML ufficiale del giorno precedente e mantenere invariato il telaio grafico, tecnico e SEO già approvato.
+
+## Devono restare invariati
+
+- struttura HTML/CSS/JS;
+- layout generale;
+- font e tipografia;
+- palette colori, gradienti, bordi, ombre e spaziature;
+- comportamento responsive;
+- componenti grafici fissi;
+- `canonical`;
+- `NewsMediaOrganization`;
+- `WebSite`;
+- nome del sito: **Il Contribuente**;
+- logica e struttura generale delle sezioni, salvo modifiche espressamente richieste.
+
+## Devono essere aggiornati OGNI GIORNO
+
+Tutti i contenuti editoriali e tutti i dati giornalieri devono essere aggiornati integralmente. Non basta cambiare la data dell’edizione.
+
+Aggiornare obbligatoriamente:
+
+- tutte le notizie di tutte le sezioni;
+- titoli, sottotitoli, testi, fonti e link;
+- le 3 notizie principali di apertura;
+- sezione **Confronto** e le sue 3 prospettive;
+- Dall’estero;
+- Italia;
+- Disagio città;
+- Europa;
+- Mondo;
+- Finanza;
+- Benessere;
+- Tecnologia;
+- IA;
+- Immigrazione Italia;
+- Immigrazione Europa;
+- Petrolio Basilicata;
+- Agenda;
+- Citazione del giorno;
+- KPI e dati di mercato;
+- statistiche;
+- dashboard;
+- ticker;
+- dossier permanenti con numeri aggiornati;
+- Mappa delle notizie, costruita dagli articoli reali dell’edizione corrente;
+- badge/contatori delle fonti quando presenti.
+
+## Metadati e data dell’edizione — aggiornamento quotidiano obbligatorio
+
+Ogni giorno devono essere aggiornati anche i metadati temporali della pagina:
+
+- `<title>` con il nome **Il Contribuente** e la data reale dell’edizione del giorno, per esempio: `Il Contribuente — 2 ottobre 2026`;
+- data visibile nella testata;
+- attributo `data-edition` del `<body>` nel formato `YYYY-MM-DD`;
+- attributo `data-published` del `<body>` con data e ora reali di pubblicazione e fuso orario;
+- nel JSON-LD della `CollectionPage`:
+  - `name` con la data reale dell’edizione;
+  - `datePublished` con la data reale dell’edizione;
+  - `dateModified` con la data reale dell’edizione.
+
+Le date del JSON-LD non devono mai restare ferme a un’edizione precedente.
+
+## Principio operativo finale
+
+**Ogni giorno cambiano completamente notizie, testi, dati, fonti, numeri e date; non cambia il telaio grafico/tecnico/SEO approvato del sito.**
+
+La nuova edizione deve quindi essere una vera rassegna aggiornata del giorno, non una copia del giorno precedente con la sola data modificata.
+
