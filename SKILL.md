@@ -1618,7 +1618,9 @@ Aggiornare obbligatoriamente:
 
 Ogni giorno devono essere aggiornati anche i metadati temporali della pagina:
 
-- `<title>` con il nome **Il Contribuente** e la data reale dell’edizione del giorno, per esempio: `Il Contribuente — 2 ottobre 2026`;
+- `<title>` SEMPRE fisso e senza data: `Il Contribuente — Rassegna stampa quotidiana`; la data dell’edizione NON deve mai essere inserita nel `<title>`;
+- `og:title` e `twitter:title` SEMPRE fissi e senza data: `Il Contribuente — Rassegna stampa quotidiana`;
+- la data dell’edizione resta invece nella meta description/og:description/twitter:description, nella testata visibile e nei metadati temporali/JSON-LD previsti;
 - data visibile nella testata;
 - attributo `data-edition` del `<body>` nel formato `YYYY-MM-DD`;
 - attributo `data-published` del `<body>` con data e ora reali di pubblicazione e fuso orario;
@@ -1635,3 +1637,32 @@ Le date del JSON-LD non devono mai restare ferme a un’edizione precedente.
 
 La nuova edizione deve quindi essere una vera rassegna aggiornata del giorno, non una copia del giorno precedente con la sola data modificata.
 
+---
+
+# 44. FRESCHEZZA ASSOLUTA — SOLO NOTIZIE DELLE ULTIME 8 ORE
+
+Regola vincolante e permanente dal 5 ottobre 2026.
+
+- Ogni edizione quotidiana de **Il Contribuente** deve contenere **SOLO notizie pubblicate o aggiornate nelle ultime 8 ore** rispetto all’orario reale di preparazione dell’edizione.
+- La regola vale per **tutte le sezioni e tutti gli articoli**, senza eccezioni.
+- Un dossier ancora aperto, una notizia importante o un fatto del giorno precedente **non giustificano** l’inserimento se l’ultimo aggiornamento verificabile supera le 8 ore.
+- Non basta che una pagina sia stata ripubblicata o che riporti una data recente: deve esistere un **aggiornamento giornalistico sostanziale e verificabile** entro la finestra delle 8 ore.
+- Prima della consegna dell’HTML deve essere eseguito un **controllo finale articolo per articolo** su data e ora delle fonti.
+- Qualsiasi articolo fuori dalla finestra delle 8 ore deve essere **eliminato e sostituito** con una notizia più fresca e verificata.
+- Non utilizzare articoli vecchi come riempitivo per mantenere il numero previsto di card. Se non esiste una notizia sufficientemente fresca e verificabile, cercare ulteriormente nel bacino permanente delle fonti.
+- L’utente non deve dover richiedere ogni mattina la sostituzione di notizie vecchie: questo controllo è parte obbligatoria della produzione quotidiana.
+
+
+
+---
+
+# 45. TITOLO SEO PERMANENTE — NESSUNA DATA NEL TITOLO
+
+Regola vincolante e permanente dal 5 ottobre 2026.
+
+- Il titolo SEO principale della homepage non deve cambiare con la data dell’edizione.
+- Usare sempre: `<title>Il Contribuente — Rassegna stampa quotidiana</title>`.
+- Usare sempre lo stesso testo anche per `og:title` e `twitter:title`.
+- Non generare automaticamente date dentro questi tre campi.
+- La data quotidiana deve continuare a essere aggiornata nella descrizione SEO, nelle descrizioni social, nella testata visibile, in `data-edition`, `data-published` e nei campi temporali JSON-LD.
+- Questa regola deve essere applicata al template ufficiale e a ogni `index.html` generato.
