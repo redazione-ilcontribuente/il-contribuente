@@ -4,29 +4,9 @@ title: "Rassegna stampa quotidiana — 5:00"
 description: "Rassegna stampa giornaliera che confronta fonti giornalistiche italiane e internazionali, traduce e sintetizza le notizie in italiano e mette in evidenza differenze, convergenze e prospettive delle diverse testate. La linea editoriale di Il Contribuente è il confronto tra fonti, non l'espressione di una posizione politica propria."
 ---
 
-# 1. CONTROLLO SEO E INDICIZZAZIONE — PRIMA DI TUTTO
-Prima di qualsiasi aggiornamento editoriale dell’edizione quotidiana, verificare SEMPRE che la homepage mantenga invariati questi elementi:
-
-- **URL della homepage:** `https://ilcontribuente.redazioneit.workers.dev/`
-- **Canonical:** `https://ilcontribuente.redazioneit.workers.dev/`
-- **Titolo SEO fisso:** `Il Contribuente — Rassegna stampa quotidiana`
-- lo stesso titolo fisso deve essere usato anche in `og:title` e `twitter:title`;
-- `robots` e `googlebot` devono restare configurati per consentire indicizzazione e scansione;
-- la struttura permanente dei dati JSON-LD del sito/testata non deve essere rimossa o alterata durante l’aggiornamento quotidiano; restano invece da aggiornare i campi temporali e la data dell’edizione già previsti dalle regole del file.
-
-**REGOLA ASSOLUTA:** non inserire mai la data nel `<title>`, in `og:title` o in `twitter:title`. La data dell’edizione deve invece essere aggiornata nella meta description e nei contenuti/metadati temporali previsti dal template.
-
-L’aggiornamento quotidiano di notizie, testi, immagini, dati, KPI, data dell’edizione e meta description **NON crea una nuova pagina e NON richiede una nuova indicizzazione manuale ogni mattina**, purché URL, canonical e titolo SEO sopra indicati restino stabili. Google può rilevare gli aggiornamenti attraverso le normali scansioni e la sitemap.
-
-La richiesta manuale di indicizzazione va utilizzata solo quando serve realmente, per esempio dopo una modifica SEO importante o quando Google continua a mostrare una versione obsoleta.
-
-Questo controllo SEO deve essere eseguito come **PRIMA verifica operativa** prima di modificare o generare l’edizione del giorno.
-
----
-
 # Rassegna stampa quotidiana — Il Contribuente
 
-## 2. IDENTITÀ EDITORIALE — REGOLA PRINCIPALE
+## 1. IDENTITÀ EDITORIALE — REGOLA PRINCIPALE
 
 Il Contribuente è una rassegna stampa comparativa.
 
@@ -83,7 +63,8 @@ Deve metterlo nella condizione di farsi un'idea.
 
 ---
 
-# 3. CONTROLLO DI INTEGRITÀ — PRIMA DI PRODURRE LA RASSEGNA
+# 2. CONTROLLO DI INTEGRITÀ — PRIMA DI PRODURRE LA RASSEGNA
+
 Prima di costruire l'edizione quotidiana:
 
 1. Verificare che `SKILL.md` sia integro.
@@ -102,7 +83,8 @@ Il template è la fonte di verità per struttura, CSS e comportamento della pagi
 
 ---
 
-# 4. TEMPLATE HTML — REGOLA ASSOLUTA
+# 3. TEMPLATE HTML — REGOLA ASSOLUTA
+
 `template.html` è il template permanente del quotidiano "Il Contribuente".
 
 Deve essere utilizzato come base di ogni nuova edizione.
@@ -132,7 +114,8 @@ Ogni nuova edizione deve aggiornare i contenuti, non reinventare il contenitore.
 
 ---
 
-# 5. ORDINE DI COSTRUZIONE
+# 4. ORDINE DI COSTRUZIONE
+
 L'ordine operativo corretto è:
 
 1. controllo integrità;
@@ -143,7 +126,7 @@ L'ordine operativo corretto è:
 6. selezione dei titoli;
 7. presentazione a Mario dell'elenco dei titoli;
 8. dopo il passaggio titoli, scrittura degli articoli;
-9. ricerca, selezione e inserimento autonomo delle immagini pertinenti agli articoli;
+9. inserimento delle immagini fornite da Mario;
 10. aggiornamento ticker, mercati, citazioni, agenda, statistiche e dashboard;
 11. controllo finale di freschezza, fonti, lunghezza, layout e coerenza;
 12. generazione dell'HTML definitivo.
@@ -152,7 +135,8 @@ Quando l'esecuzione è completamente automatica e non è disponibile un passaggi
 
 ---
 
-# 6. INDICE — STRUTTURA DA RISPETTARE
+# 5. INDICE — STRUTTURA DA RISPETTARE
+
 L'indice attuale di Il Contribuente è:
 
 1. Confronto
@@ -185,7 +169,8 @@ L'ordine delle sezioni deve rimanere invariato.
 
 ---
 
-# 7. LAYOUT — PRIMA LA STRUTTURA, POI I CONTENUTI
+# 6. LAYOUT — PRIMA LA STRUTTURA, POI I CONTENUTI
+
 Il layout è una regola strutturale, non editoriale.
 
 Il CSS del template decide automaticamente la disposizione delle card.
@@ -217,7 +202,8 @@ Dati Immigrazione utilizza il proprio formato dashboard e non segue la griglia `
 
 ---
 
-# 8. COMPONENTI E BOX
+# 7. COMPONENTI E BOX
+
 Devono essere mantenuti i componenti già presenti nel template, tra cui:
 
 - masthead;
@@ -263,15 +249,13 @@ REGOLA VINCOLANTE (Mario, 20/9/2026): il box "Da sapere per capire" di OGNI sezi
 
 ---
 
-# 9. IMMAGINI — RICERCA E SELEZIONE AUTONOMA
-Le immagini delle card degli articoli devono essere ricercate e selezionate autonomamente durante la preparazione dell’edizione: Mario non deve più fornirle.
+# 8. IMMAGINI — SOLO QUELLE FORNITE DA MARIO
 
-Per ogni articolo:
+Le immagini generate autonomamente da Claude per le card degli articoli sono vietate.
 
-- cercare una fotografia reale, pertinente e coerente con la notizia;
-- preferire immagini aggiornate e provenienti da fonti affidabili quando disponibili;
-- scegliere immagini di qualità visiva elevata: nitide, ben composte, interessanti e capaci di valorizzare la card, evitando immagini scadenti, sgranate, banali o poco leggibili;
-- a parità di pertinenza, scegliere la fotografia esteticamente migliore e più efficace per il lettore;
+Se Mario fornisce una fotografia per un articolo:
+
+- usarla;
 - inserirla nel contenitore `.article-image`;
 - mantenerla pulita;
 - non applicare testo sopra;
@@ -279,45 +263,39 @@ Per ogni articolo:
 - non applicare scrim o gradiente;
 - non modificarne arbitrariamente l'aspetto.
 
-Regola vincolante e ASSOLUTA: OGNI articolo di OGNI sezione a formato articoli (incluse le voci del Confronto) deve avere una propria immagine pertinente. Nessun articolo può essere pubblicato senza immagine.
+Regola vincolante (Mario, 4/9/2026): OGNI articolo di OGNI sezione a formato articoli (incluse le voci del Confronto) deve avere, una propria immagine.
 
-Regola vincolante e PRIORITARIA: NON RIPETERE MAI LA STESSA IMMAGINE NELLA STESSA EDIZIONE. Ogni articolo deve avere una fotografia distinta: se una prima ricerca non produce un'immagine pertinente e non ancora usata, continuare la ricerca fino a reperirne una adatta. Non lasciare articoli senza immagine e non riutilizzare immagini già assegnate ad altre card.
+Regola vincolante e PRIORITARIA (Mario, 4/9/2026, ribadita la sera stessa): NON RIPETERE MAI LA STESSA IMMAGINE NELLA STESSA EDIZIONE. Questo divieto è assoluto e viene prima della regola "ogni articolo deve avere un'immagine": se garantire un'immagine a un articolo significherebbe riusare una foto già assegnata a un altro articolo della stessa edizione, quell'articolo resta SENZA immagine. Meglio una card senza foto che due card con la stessa foto nello stesso giorno.
 
-La selezione delle immagini deve variare nel tempo: NON usare ogni giorno le stesse fotografie o gli stessi scatti per temi, persone o luoghi ricorrenti. Ogni nuova edizione deve cercare immagini diverse rispetto alle edizioni precedenti quando esistono alternative pertinenti, privilegiando fotografie più belle, nitide, curate e visivamente efficaci.
+Come procedere quando la cartella tematica ha meno foto non ancora usate oggi delle notizie della sezione (es. 2 foto disponibili per 4 articoli):
 
-Controllo obbligatorio prima di pubblicare: verificare tutte le immagini effettivamente usate nell'edizione e assicurarsi che non ci siano duplicati. Se un doppione emerge, sostituirlo con un'altra immagine pertinente e distinta. Non rimuovere l'immagine dal secondo articolo: continuare la ricerca finché ogni articolo dispone di una propria immagine distinta e pertinente.
+- usare prima tutte le foto non ancora usate nell'edizione del giorno in quella cartella;
+- se non bastano, guardare in cartelle affini per argomento già presenti nel repository (es. `salute/` in aggiunta a `benessere/`, `guerra/` e `confronto/` per la sezione Confronto) per trovare scatti non ancora usati oggi;
+- se anche le cartelle affini sono esaurite, gli articoli restanti della sezione restano semplicemente SENZA immagine. NON riutilizzare in nessun caso, per nessun motivo, una foto già assegnata a un altro articolo della stessa edizione, nemmeno all'interno della stessa sezione.
+
+Variazione nel tempo (Mario, 4/9/2026): la selezione delle foto all'interno di una cartella non deve ripetere sempre le stesse preferite edizione dopo edizione. A parità di idoneità, scegliere in modo variato/casuale tra le foto disponibili della cartella, così che nell'arco di più giorni vengano effettivamente usati scatti diversi e non un sottoinsieme fisso.
+
+Controllo obbligatorio prima di pubblicare: contare i file immagine effettivamente usati nell'edizione (i valori dentro `src="immagini/..."`) e verificare che non ci siano duplicati. Se un doppione emerge, rimuovere l'immagine dal secondo articolo (non sostituirla con un'altra presa da una sezione slegata solo per riempire).
 
 Resta fermo quanto segue:
 
-- NON usare SVG generate autonomamente;
+- NON usare SVG generate da Claude;
 - NON usare immagini segnaposto;
-- NON inventare o generare una fotografia di cronaca;
-- NON usare un'immagine tematicamente slegata dalla notizia solo per riempire una card;
-- ogni articolo deve comunque ricevere un'immagine distinta e pertinente: se necessario ampliare la ricerca, senza usare duplicati o immagini fuori tema.
-
-## Dimensione e resa delle immagini nelle card
-
-Le immagini degli articoli devono avere maggiore presenza visiva rispetto alle versioni precedenti della rassegna, senza alterare la struttura generale del template. Devono essere un poco più grandi in TUTTA la rassegna stampa, comprese le tre prospettive del Confronto e le card di Petrolio Basilicata.
-
-- Desktop/tablet: altezza indicativa delle `.article-image` circa 145 px.
-- Mobile: altezza indicativa circa 120 px.
-- Usare `object-fit: cover` per mantenere la card ordinata e riempire correttamente lo spazio.
-- L'immagine non deve diventare sproporzionata o dominare il testo: deve valorizzare visivamente l'articolo mantenendo l'equilibrio del template.
-- La qualità estetica è parte del controllo finale: immagini brutte, sgranate, poco pertinenti o ripetitive devono essere sostituite prima della consegna.
+- NON inventare o generare una fotografia;
+- meglio nessuna immagine che un'immagine ripetuta o presa da una cartella tematicamente slegata.
 
 ## Hero di sezione
 
-Quando il template prevede un hero fotografico e serve aggiornarlo:
+Se Mario fornisce un hero fotografico per una sezione:
 
-- reperire autonomamente un'immagine pertinente alla sezione;
-- inserirla come previsto dal template;
-- mantenerla pulita;
+- inserirlo come previsto dal template;
+- mantenerlo pulito;
 - nessun titolo sovrapposto;
 - nessuna didascalia sovrapposta;
 - nessun gradiente;
 - nessuno scurimento.
 
-Se non è possibile reperire un hero pertinente, non inventarlo.
+Se non viene fornito, non inventarlo.
 
 ## Persone reali
 
@@ -325,7 +303,8 @@ Non generare immagini fotorealistiche di persone reali riconoscibili e presentar
 
 ---
 
-# 10. COLORI E STILE
+# 9. COLORI E STILE
+
 Il colore non è una regola editoriale separata.
 
 I colori, i bordi, gli sfondi, i font e le dimensioni sono quelli definiti nel template.
@@ -343,7 +322,8 @@ REGOLA VINCOLANTE E PERMANENTE (Mario, 20/9/2026): le sezioni NON mostrano più 
 
 ---
 
-# 11. NUMERO DI ARTICOLI
+# 10. NUMERO DI ARTICOLI
+
 Il giornale deve essere PIENO E CORPOSO.
 
 Per le sezioni principali a formato articoli, lo standard è:
@@ -396,7 +376,44 @@ MAI:
 
 ---
 
+# 11. FRESCHEZZA
+
+Ogni notizia deve essere realmente attuale.
+
+Regola vincolante (Mario, 4/9/2026, sostituisce la precedente finestra 24-36 ore): pubblicazione della fonte originale entro le ultime 12 ore, MASSIMO 24 ore, rispetto al momento della costruzione della rassegna. Non 24-36: 24 ore è il tetto assoluto, non l'obiettivo. Verificare data E ora di pubblicazione di ogni fonte, non solo il giorno.
+
+La regola vale per tutte le sezioni di attualità:
+
+- Dall'estero;
+- Italia;
+- Disagio città;
+- Europa;
+- Mondo;
+- Finanza;
+- Benessere;
+- Tecnologia;
+- IA;
+- Immigrazione Italia.
+
+La data della fonte deve essere verificata.
+
+Non utilizzare una notizia vecchia soltanto perché è più completa.
+
+## Eccezioni
+
+Sono ammessi contenuti più vecchi esclusivamente quando sono chiaramente:
+
+- contesto storico;
+- quadro normativo;
+- spiegazione;
+- serie statistica periodica.
+
+Questi contenuti non devono essere presentati come "notizie del giorno".
+
+---
+
 # 12. LUNGHEZZA — GIORNALE CORPOSO
+
 Gli articoli devono essere più pieni della precedente versione.
 
 Obiettivo indicativo:
@@ -448,6 +465,7 @@ Il giornale deve essere corposo di INFORMAZIONI, non di parole.
 ---
 
 # 13. STRUTTURA DI OGNI ARTICOLO
+
 Ogni articolo dovrebbe seguire questo schema:
 
 1. Titolo informativo.
@@ -464,6 +482,7 @@ La domanda editoriale da applicare a ogni paragrafo è:
 ---
 
 # 14. CONFRONTO TRA FONTI — IL CUORE DEL GIORNALE
+
 Ogni notizia importante deve essere cercata attraverso più fonti.
 
 Non è obbligatorio avere sempre 3 fonti che dicono esattamente la stessa cosa.
@@ -506,6 +525,7 @@ Quando il contrasto è particolarmente importante, utilizzare la sezione Confron
 ---
 
 # 15. SEZIONE CONFRONTO
+
 La sezione Confronto è il simbolo editoriale di Il Contribuente.
 
 Deve essere dedicata soprattutto a:
@@ -533,6 +553,7 @@ L'obiettivo è il confronto, non la falsa equivalenza.
 ---
 
 # 16. GEOPOLITICA
+
 Per:
 
 - Ucraina;
@@ -566,6 +587,7 @@ Quando i dati sono contestati, attribuire sempre il dato alla fonte che lo sosti
 ---
 
 # 17. LINGUE E FONTI INTERNAZIONALI
+
 La ricerca non deve essere limitata all'italiano.
 
 Per temi internazionali usare, quando pertinente:
@@ -587,6 +609,7 @@ Tutto l'output finale deve essere in italiano.
 ---
 
 # 18. SEZIONE DALL'ESTERO
+
 Dall'estero NON significa "notizie estere".
 
 È la sezione dedicata a:
@@ -625,6 +648,7 @@ Numero:
 ---
 
 # 19. ITALIA
+
 Copre:
 
 - politica;
@@ -643,6 +667,7 @@ Privilegiare notizie che abbiano un impatto concreto o un peso politico/sociale 
 ---
 
 # 20. DISAGIO CITTÀ
+
 Copre:
 
 - criminalità;
@@ -661,6 +686,7 @@ Se la sezione viene costruita con più episodi, spiegare chiaramente che sono ep
 ---
 
 # 21. EUROPA
+
 Copre:
 
 - Unione Europea;
@@ -687,6 +713,7 @@ Fonti:
 ---
 
 # 22. MONDO
+
 Copre:
 
 - USA;
@@ -704,6 +731,7 @@ Quando una notizia geopolitica presenta versioni molto diverse, può essere appr
 ---
 
 # 23. FINANZA
+
 Copre:
 
 - Borse;
@@ -729,6 +757,7 @@ Non confondere dati di mercato con previsioni.
 ---
 
 # 24. BENESSERE
+
 Copre:
 
 - medicina;
@@ -761,6 +790,7 @@ Distinguere:
 ---
 
 # 25. TECNOLOGIA
+
 Copre la tecnologia generale:
 
 - hardware;
@@ -777,6 +807,7 @@ Le notizie specificamente dedicate all'intelligenza artificiale devono andare ne
 ---
 
 # 26. IA — INTELLIGENZA ARTIFICIALE
+
 Sezione separata da Tecnologia.
 
 Copre:
@@ -805,6 +836,7 @@ La sezione deve essere realmente aggiornata e non riempita con notizie tecnologi
 ---
 
 # 27. IMMIGRAZIONE ITALIA
+
 Copre:
 
 - sbarchi;
@@ -846,6 +878,7 @@ Numero:
 ---
 
 # 28. DATI IMMIGRAZIONE
+
 È la dashboard finale.
 
 Non trattarla come una normale sezione di articoli.
@@ -870,11 +903,12 @@ Ogni dato deve riportare:
 
 Non usare un dato vecchio facendolo sembrare corrente.
 
-I dati periodici della dashboard non sono notizie editoriali e possono essere più vecchi di 8 ore se sono gli ultimi dati ufficiali disponibili, purché siano chiaramente datati.
+I dati periodici possono essere più vecchi della finestra 12-24 ore se sono gli ultimi dati ufficiali disponibili, purché siano chiaramente datati.
 
 ---
 
 # 29. FONTI
+
 Le fonti devono essere citate alla fine dell'articolo nel blocco `.source`.
 
 Quando possibile:
@@ -894,6 +928,7 @@ NON inventare il numero.
 ---
 
 # 30. COPYRIGHT
+
 Le fonti vengono utilizzate per informazione e confronto.
 
 Non copiare integralmente articoli o titoli protetti.
@@ -907,6 +942,7 @@ Il resto deve essere parafrasato.
 ---
 
 # 31. TONO
+
 Il testo deve essere:
 
 - giornalistico;
@@ -932,11 +968,13 @@ Significa attribuirle correttamente.
 ---
 
 # 32. NIENTE META-COMMENTI
+
 Il lettore non deve vedere il processo interno di costruzione della rassegna.
 
 NON scrivere:
 
 - "abbiamo trovato solo due notizie";
+- "rispetta la finestra di 12-24 ore";
 - "abbiamo fatto tre ricerche";
 - "secondo le regole di Mario";
 - "non abbiamo trovato altro";
@@ -948,6 +986,7 @@ I box editoriali devono parlare dei FATTI, non del processo redazionale.
 ---
 
 # 33. TICKER
+
 Il ticker deve contenere le principali notizie dell'edizione.
 
 Deve essere aggiornato quotidianamente.
@@ -957,6 +996,7 @@ Selezionare titoli realmente rappresentativi delle sezioni e non riempirlo con t
 ---
 
 # 34. MARKET BAR
+
 Regola vincolante (Mario, 2/9/2026 e 31/8/2026): le card della market bar sono SEMPRE le stesse, ogni giorno, aggiornate con valori reali:
 
 - benzina;
@@ -976,6 +1016,7 @@ Non mescolare quotazioni riferite a momenti diversi senza indicarlo.
 ---
 
 # 35. AGENDA — COSA SUCCEDE OGGI
+
 Regola permanente (Mario, 3/9/2026): questa sezione contiene SOLO ED ESCLUSIVAMENTE notizie/eventi della data di pubblicazione della rassegna stessa, a livello mondiale — non scadenze, appuntamenti o decisioni previste per giorni successivi, e non eventi già passati.
 
 Selezionare esattamente 5 voci: le 5 cose più importanti che accadono nel mondo in quella giornata specifica (possono includere, quando pertinenti quel giorno: eventi politici, decisioni prese o annunciate, dati economici pubblicati, appuntamenti internazionali, eventi tecnologici, scadenze normative che scadono proprio oggi). Non è un calendario di cose future: se un fatto non sta accadendo OGGI, non va in agenda, anche se è rilevante e imminente (va eventualmente nel corpo dell'articolo della sezione pertinente, non qui).
@@ -985,6 +1026,7 @@ Non forzare a 5 se davvero non ci sono 5 fatti mondiali abbastanza rilevanti nel
 ---
 
 # 36. CITAZIONE DEL GIORNO
+
 Le citazioni devono essere:
 
 - realmente pronunciate/scritte dalla persona indicata;
@@ -996,6 +1038,7 @@ Non usare citazioni inventate o ricostruite.
 ---
 
 # 37. STATISTICHE DEL GIORNALE
+
 Le statistiche devono essere coerenti con l'edizione reale.
 
 Esempi:
@@ -1010,6 +1053,7 @@ Non inventare valori.
 ---
 
 # 38. CONTROLLO FINALE PRIMA DELLA PUBBLICAZIONE
+
 Prima della pubblicazione verificare:
 
 ### Struttura
@@ -1042,10 +1086,10 @@ Prima della pubblicazione verificare:
 - numeri e citazioni verificati.
 
 ### Immagini
-- nessuna immagine ripetuta nella stessa edizione (controllo obbligatorio, vedi sezione 9) — questo vale prima di tutto il resto;
-- ogni articolo, nessuno escluso, ha una propria immagine pertinente e distinta, senza ripetere una foto già usata oggi;
-- tutte le immagini sono ricercate, selezionate e fornite autonomamente durante la preparazione dell’edizione; Mario non deve fornire immagini;
-- nessuna fotografia di cronaca inventata o generata autonomamente;
+- nessuna immagine ripetuta nella stessa edizione (controllo obbligatorio, vedi sezione 8) — questo vale prima di tutto il resto;
+- ogni articolo ha, quando possibile senza ripetere una foto già usata oggi, una propria immagine;
+- soltanto immagini fornite da Mario;
+- nessuna immagine generata autonomamente;
 - nessun testo sopra le fotografie.
 
 ### Lingua
@@ -1064,6 +1108,7 @@ Prima della pubblicazione verificare:
 ---
 
 # 39. OBIETTIVO FINALE
+
 Il risultato deve sembrare un vero quotidiano digitale:
 
 - pieno;
@@ -1094,6 +1139,7 @@ e poter formare autonomamente il proprio giudizio.
 ---
 
 # 40. ATTIVAZIONE
+
 La skill si attiva quando Mario chiede:
 
 - "rassegna stampa";
@@ -1136,6 +1182,7 @@ La struttura HTML/CSS/JS deve essere uniforme in tutte le sezioni, così l'utent
 ---
 
 # 41. SEZIONI FISSE EXTRA (fuori indice) — MAI TOCCARE SENZA CHIEDERE
+
 Oltre all'indice standard della sezione 5, il sito pubblicato include altre sezioni/dashboard fisse che Mario ha aggiunto nel tempo direttamente nelle edizioni, e che NON fanno parte dell'indice/della lista di sezioni da riscrivere ogni giorno:
 
 - Sezione "Approfondimenti fissi" (sidebar, id `approfondimenti`) — link fissi (Geopolitica, Conflitti nel mondo, Immigrazione in Europa, Guerre, Dazi, Sanzioni, Glossario) e box "Termine del giorno"/statistiche;
@@ -1151,6 +1198,7 @@ La "regola universale di layout" della sezione 6 (1 articolo pieno, 2 impilati, 
 ---
 
 # 42. PROCEDURA OPERATIVA QUOTIDIANA E CONSEGNA
+
 Regola vincolante (Mario, 16/9/2026), procedura obbligatoria ogni mattina, sempre in quest'ordine:
 
 1. Creare l'edizione del giorno (contenuti e date aggiornate, stesso layout/template di sempre).
@@ -1167,6 +1215,7 @@ Il push su GitHub lo fa SEMPRE Mario manualmente: non va mai fatto in autonomia 
 ---
 
 # 43. BACINO PERMANENTE DELLE FONTI — REGOLA VINCOLANTE
+
 Regola vincolante e permanente (Mario, 20/9/2026).
 
 Per ogni edizione de **Il Contribuente**, la ricerca delle notizie deve utilizzare prioritariamente il bacino di testate giornalistiche, agenzie, fonti scientifiche, istituzionali e specialistiche elencato in questa sezione.
@@ -1318,6 +1367,7 @@ Regola vincolante e permanente (Mario, 20/09/2026).
 ---
 
 # 44. MAPPA DELLE NOTIZIE — COLLEGAMENTO DINAMICO CON GLI ARTICOLI
+
 ## Regola vincolante e permanente (Mario, 22/09/2026)
 
 La sezione **“Mappa delle notizie”** NON deve essere una semplice raccolta di link che rimandano genericamente alle sezioni del giornale.
@@ -1436,6 +1486,7 @@ Questa regola è permanente e prevale su qualsiasi precedente comportamento dell
 ---
 
 # 45. MAPPA DELLE NOTIZIE — AGGANCIO AUTOMATICO ARTICOLO ↔ MARKER
+
 ## Regola vincolante e permanente (Mario, 23/09/2026)
 
 Questa regola rafforza e completa tutte le regole precedenti sulla **Mappa delle notizie**.
@@ -1511,7 +1562,8 @@ Se anche un solo marker apre una notizia diversa dalla propria, l'HTML NON è pr
 
 ---
 
-# 46. AGGIORNAMENTO QUOTIDIANO COMPLETO DELL’EDIZIONE — OBBLIGATORIO
+# 45. AGGIORNAMENTO QUOTIDIANO COMPLETO DELL’EDIZIONE — OBBLIGATORIO
+
 ## Regola vincolante e permanente (Mario, 02/10/2026)
 
 Ogni nuova edizione de **Il Contribuente** deve partire dal template HTML ufficiale del giorno precedente e mantenere invariato il telaio grafico, tecnico e SEO già approvato.
@@ -1587,7 +1639,8 @@ La nuova edizione deve quindi essere una vera rassegna aggiornata del giorno, no
 
 ---
 
-# 47. FRESCHEZZA ASSOLUTA — SOLO NOTIZIE DELLE ULTIME 8 ORE
+# 44. FRESCHEZZA ASSOLUTA — SOLO NOTIZIE DELLE ULTIME 8 ORE
+
 Regola vincolante e permanente dal 5 ottobre 2026.
 
 - Ogni edizione quotidiana de **Il Contribuente** deve contenere **SOLO notizie pubblicate o aggiornate nelle ultime 8 ore** rispetto all’orario reale di preparazione dell’edizione.
@@ -1603,7 +1656,8 @@ Regola vincolante e permanente dal 5 ottobre 2026.
 
 ---
 
-# 48. TITOLO SEO PERMANENTE — NESSUNA DATA NEL TITOLO
+# 45. TITOLO SEO PERMANENTE — NESSUNA DATA NEL TITOLO
+
 Regola vincolante e permanente dal 5 ottobre 2026.
 
 - Il titolo SEO principale della homepage non deve cambiare con la data dell’edizione.
@@ -1612,12 +1666,3 @@ Regola vincolante e permanente dal 5 ottobre 2026.
 - Non generare automaticamente date dentro questi tre campi.
 - La data quotidiana deve continuare a essere aggiornata nella descrizione SEO, nelle descrizioni social, nella testata visibile, in `data-edition`, `data-published` e nei campi temporali JSON-LD.
 - Questa regola deve essere applicata al template ufficiale e a ogni `index.html` generato.
-
-## Regola permanente — immagini funzionanti e cartina Petrolio Basilicata
-
-- Nella sezione **Petrolio Basilicata**, la cartina deve essere **geograficamente fedele al vero Sud Italia**. La Basilicata deve essere rappresentata correttamente nel contesto reale di **Campania, Puglia, Calabria e Molise**, senza forme o posizioni geografiche approssimative. I punti e le località pertinenti alla sezione petrolio devono essere collocati correttamente.
-- **TUTTI gli articoli, nessuno escluso, devono avere un'immagine effettivamente visibile e funzionante nell'HTML.**
-- Non è sufficiente inserire un URL o un `src`: prima della consegna bisogna verificare che ogni immagine venga realmente caricata e visualizzata nel file HTML.
-- Ogni immagine deve essere pertinente alla specifica notizia, bella, nitida, di buona qualità e sufficientemente grande nel layout.
-- Le immagini devono essere tutte diverse tra loro nella stessa edizione e, per quanto possibile, diverse da quelle utilizzate nelle edizioni precedenti.
-- Se un'immagine non viene caricata, è rotta, bloccata dall'host o non è visibile nel browser, deve essere sostituita prima della consegna. Nessun articolo può essere consegnato con immagine mancante.

@@ -279,19 +279,29 @@ Per ogni articolo:
 - non applicare scrim o gradiente;
 - non modificarne arbitrariamente l'aspetto.
 
-Regola vincolante e ASSOLUTA: OGNI articolo di OGNI sezione a formato articoli (incluse le voci del Confronto) deve avere una propria immagine pertinente. Nessun articolo può essere pubblicato senza immagine.
+Regola vincolante e ASSOLUTA: OGNI articolo di OGNI sezione a formato articoli, incluse TUTTE le tre prospettive del Confronto, deve avere ESATTAMENTE UNA SOLA immagine pertinente. È vietato pubblicare un articolo senza immagine ed è vietato inserire due o più immagini nella stessa card/prospettiva. La verifica deve essere 1:1: numero di articoli/prospettive = numero di immagini effettivamente visualizzate.
 
-Regola vincolante e PRIORITARIA: NON RIPETERE MAI LA STESSA IMMAGINE NELLA STESSA EDIZIONE. Ogni articolo deve avere una fotografia distinta: se una prima ricerca non produce un'immagine pertinente e non ancora usata, continuare la ricerca fino a reperirne una adatta. Non lasciare articoli senza immagine e non riutilizzare immagini già assegnate ad altre card.
+Regola vincolante e PRIORITARIA: NON RIPETERE MAI LA STESSA IMMAGINE NELLA STESSA EDIZIONE. Tutte le immagini devono essere diverse tra loro, senza duplicati, né identici file/URL né riuso dello stesso scatto con ritagli o varianti che lo rendano sostanzialmente la stessa immagine. Se una prima ricerca non produce un'immagine pertinente e non ancora usata, continuare la ricerca fino a reperirne una adatta. Non lasciare articoli senza immagine e non riutilizzare immagini già assegnate ad altre card.
 
 La selezione delle immagini deve variare nel tempo: NON usare ogni giorno le stesse fotografie o gli stessi scatti per temi, persone o luoghi ricorrenti. Ogni nuova edizione deve cercare immagini diverse rispetto alle edizioni precedenti quando esistono alternative pertinenti, privilegiando fotografie più belle, nitide, curate e visivamente efficaci.
 
 Controllo obbligatorio prima di pubblicare: verificare tutte le immagini effettivamente usate nell'edizione e assicurarsi che non ci siano duplicati. Se un doppione emerge, sostituirlo con un'altra immagine pertinente e distinta. Non rimuovere l'immagine dal secondo articolo: continuare la ricerca finché ogni articolo dispone di una propria immagine distinta e pertinente.
 
+CONTROLLO TECNICO OBBLIGATORIO PRIMA DELLA CONSEGNA HTML:
+1. contare tutti gli articoli e tutte le tre prospettive del Confronto;
+2. verificare che ciascuno abbia ESATTAMENTE UNA SOLA `.article-image` con una sola immagine effettivamente visualizzabile;
+3. verificare che il numero totale di immagini corrisponda esattamente al numero totale di articoli/prospettive;
+4. verificare ZERO immagini mancanti;
+5. verificare ZERO duplicati, anche confrontando URL/file/hash quando possibile;
+6. verificare che nessuna card contenga più di una immagine;
+7. se uno solo di questi controlli fallisce, NON consegnare il file finché l'errore non è corretto.
+
 Resta fermo quanto segue:
 
 - NON usare SVG generate autonomamente;
 - NON usare immagini segnaposto;
-- NON inventare o generare una fotografia di cronaca;
+- sono ammesse fotografie reali oppure immagini generate con IA in stile realistico, purché pertinenti alla notizia;
+- se l'immagine è generata con IA e potrebbe essere confusa con una fotografia reale di cronaca, deve essere trattata/dichiarata come immagine illustrativa e non deve falsificare un evento specifico né collocare persone reali riconoscibili in situazioni inventate;
 - NON usare un'immagine tematicamente slegata dalla notizia solo per riempire una card;
 - ogni articolo deve comunque ricevere un'immagine distinta e pertinente: se necessario ampliare la ricerca, senza usare duplicati o immagini fuori tema.
 
@@ -1042,9 +1052,13 @@ Prima della pubblicazione verificare:
 - numeri e citazioni verificati.
 
 ### Immagini
-- nessuna immagine ripetuta nella stessa edizione (controllo obbligatorio, vedi sezione 9) — questo vale prima di tutto il resto;
-- ogni articolo, nessuno escluso, ha una propria immagine pertinente e distinta, senza ripetere una foto già usata oggi;
+- ESATTAMENTE UNA SOLA immagine per ogni articolo e per ciascuna delle tre prospettive del Confronto;
+- nessuna card/prospettiva può avere zero immagini o più di una immagine;
+- nessuna immagine ripetuta nella stessa edizione: ZERO duplicati, anche come stesso scatto riutilizzato con ritagli/varianti;
+- ogni articolo, nessuno escluso, ha una propria immagine pertinente e distinta;
+- sono ammesse foto reali oppure immagini IA realistiche pertinenti, nel rispetto delle regole della sezione 9;
 - tutte le immagini sono ricercate, selezionate e fornite autonomamente durante la preparazione dell’edizione; Mario non deve fornire immagini;
+- prima della consegna eseguire il controllo 1:1 articoli/prospettive ↔ immagini e bloccare la consegna se il conteggio non coincide;
 - nessuna fotografia di cronaca inventata o generata autonomamente;
 - nessun testo sopra le fotografie.
 
@@ -1143,6 +1157,24 @@ Oltre all'indice standard della sezione 5, il sito pubblicato include altre sezi
 - Dashboard "Petrolio Basilicata" (id `petrolio-basilicata`), con la sotto-lista "Le ultime notizie" — REGOLA ASSOLUTA E PERMANENTE (ribadita 20/9/2026): tutte le notizie di questa sotto-lista devono SEMPRE essere affiancate in orizzontale, per sempre, su ogni dispositivo, senza alcuna eccezione futura.
 
 Regola vincolante e assoluta (Mario, 16/9/2026, ribadita più volte): queste sezioni, e la dashboard "Dati Immigrazione" dell'indice standard, vanno copiate IDENTICHE da un'edizione all'altra — layout, HTML e CSS non vanno mai rigenerati, riscritti o "corretti" di propria iniziativa, nemmeno per sistemare un bug di stile evidente. Se emerge un problema (es. un layout che sembra rotto), or se Mario segnala che qualcosa in una di queste sezioni non va, si spiega la diagnosi e si PROPONE la correzione, ma si chiede sempre conferma esplicita prima di modificare il codice di queste sezioni. Aggiornare solo i dati/testo/date al loro interno quando esplicitamente richiesto.
+
+## Regola permanente — mappa cliccabile "Petrolio Basilicata"
+
+La mappa della dashboard **Petrolio Basilicata** deve essere una vera mappa geografica del **Sud Italia**, con Basilicata correttamente rappresentata nel contesto di Campania, Molise, Puglia e Calabria. Non usare sagome inventate, approssimative o cartine decorative che deformano i confini.
+
+La mappa deve essere **cliccabile e realmente funzionante con la stessa logica/interazione della mappa della pagina "Immigrazione in Europa"**: stesso principio di mappa SVG/territoriale interattiva, area geografica cliccabile, zoom/focus, pulsante di ritorno alla mappa intera e punti/marker cliccabili collegati alle relative informazioni.
+
+Requisiti obbligatori:
+- click/tap sulla **Basilicata** → zoom/focus sulla regione;
+- pulsante **"Torna alla mappa intera"** → ripristino completo della vista;
+- marker cliccabili almeno per **Potenza**, **Viggiano / Val d'Agri** e **Corleto Perticara / Tempa Rossa**;
+- click/tap su un marker → evidenzia e porta alla relativa scheda informativa;
+- funzionamento verificato sia con mouse sia con touch;
+- responsive su telefono, tablet, PC e TV;
+- la mappa deve restare nello stile grafico già approvato del sito, senza modificare il resto del layout della sezione;
+- prima della consegna verificare realmente che click, zoom, reset e marker funzionino.
+
+Questa regola è un'eccezione esplicitamente autorizzata alla precedente regola "sezioni fisse extra — mai toccare senza chiedere": per la mappa di Petrolio Basilicata il comportamento sopra descritto è da considerarsi ora il comportamento permanente approvato.
 
 ## Nota tecnica nota (17/9/2026): grid a 5 articoli
 
@@ -1612,12 +1644,3 @@ Regola vincolante e permanente dal 5 ottobre 2026.
 - Non generare automaticamente date dentro questi tre campi.
 - La data quotidiana deve continuare a essere aggiornata nella descrizione SEO, nelle descrizioni social, nella testata visibile, in `data-edition`, `data-published` e nei campi temporali JSON-LD.
 - Questa regola deve essere applicata al template ufficiale e a ogni `index.html` generato.
-
-## Regola permanente — immagini funzionanti e cartina Petrolio Basilicata
-
-- Nella sezione **Petrolio Basilicata**, la cartina deve essere **geograficamente fedele al vero Sud Italia**. La Basilicata deve essere rappresentata correttamente nel contesto reale di **Campania, Puglia, Calabria e Molise**, senza forme o posizioni geografiche approssimative. I punti e le località pertinenti alla sezione petrolio devono essere collocati correttamente.
-- **TUTTI gli articoli, nessuno escluso, devono avere un'immagine effettivamente visibile e funzionante nell'HTML.**
-- Non è sufficiente inserire un URL o un `src`: prima della consegna bisogna verificare che ogni immagine venga realmente caricata e visualizzata nel file HTML.
-- Ogni immagine deve essere pertinente alla specifica notizia, bella, nitida, di buona qualità e sufficientemente grande nel layout.
-- Le immagini devono essere tutte diverse tra loro nella stessa edizione e, per quanto possibile, diverse da quelle utilizzate nelle edizioni precedenti.
-- Se un'immagine non viene caricata, è rotta, bloccata dall'host o non è visibile nel browser, deve essere sostituita prima della consegna. Nessun articolo può essere consegnato con immagine mancante.
