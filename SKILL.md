@@ -140,15 +140,12 @@ L'ordine operativo corretto è:
 3. verifica dell'indice e delle sezioni;
 4. ricerca delle notizie;
 5. confronto e verifica delle fonti;
-6. selezione dei titoli;
-7. presentazione a Mario dell'elenco dei titoli;
-8. dopo il passaggio titoli, scrittura degli articoli;
-9. ricerca, selezione e inserimento autonomo delle immagini pertinenti agli articoli;
-10. aggiornamento ticker, mercati, citazioni, agenda, statistiche e dashboard;
-11. controllo finale di freschezza, fonti, lunghezza, layout e coerenza;
-12. generazione dell'HTML definitivo.
-
-Quando l'esecuzione è completamente automatica e non è disponibile un passaggio umano, la regola di approvazione dei titoli deve essere considerata un passaggio informativo non bloccante: non si deve fingere di aver ricevuto un'approvazione che non c'è.
+6. selezione dei titoli (in autonomia: NON chiedere a Mario conferma dei titoli — regola di Mario, 20/9/2026 e 9/10/2026);
+7. scrittura degli articoli;
+8. ricerca, selezione e inserimento autonomo delle immagini pertinenti agli articoli;
+9. aggiornamento ticker, mercati, citazioni, agenda, statistiche e dashboard;
+10. controllo finale di freschezza, fonti, lunghezza, layout e coerenza;
+11. generazione dell'HTML definitivo.
 
 ---
 
@@ -1067,10 +1064,6 @@ Prima della pubblicazione verificare:
 - traduzioni corrette;
 - nomi propri e numeri verificati.
 
-### Archivio
-- archivio.html aggiornato con l'edizione del giorno precedente (mai con quella di oggi, che vive su index.html finché non viene sostituita domani);
-- nessuna voce duplicata in archivio.html.
-
 ### Agenda
 - "Cosa succede oggi" contiene solo fatti della data di pubblicazione odierna, a livello mondiale, non scadenze future né eventi passati;
 - al massimo 5 voci, senza filler per raggiungere quel numero.
@@ -1183,19 +1176,18 @@ La "regola universale di layout" della sezione 6 (1 articolo pieno, 2 impilati, 
 ---
 
 # 42. PROCEDURA OPERATIVA QUOTIDIANA E CONSEGNA
-Regola vincolante (Mario, 16/9/2026), procedura obbligatoria ogni mattina, sempre in quest'ordine:
+Regola vincolante (Mario, 9/10/2026, sostituisce la procedura del 16/9/2026), ogni mattina:
 
-1. Creare l'edizione del giorno (contenuti e date aggiornate, stesso layout/template di sempre).
-2. Archiviare l'edizione del giorno precedente in `rassegne/` (e nella copia gemella `webapp/public/rassegne/`) con il nome `YYYY-MM-DD.html` corrispondente alla sua data.
-3. Aggiungere in `archivio.html` (e nella copia gemella `webapp/public/archivio.html`) la voce mancante che punta all'edizione del giorno precedente appena archiviata.
+1. Creare l'edizione del giorno nel nuovo `index.html` (contenuti e date aggiornate, stesso layout/template di sempre).
+2. Aggiornare gli approfondimenti: `SuperPotenze`, `sanzioni`, `immigrazioneEuropa`, `guerre`, `glossario` (nuovi termini comparsi nell'edizione, conteggi aggiornati), `dazi`, `conflittiMondo` — stessa struttura/codice, cambiano solo testi, dati e date.
+3. Pubblicare: il push su GitHub lo fa Claude (consenso esplicito e permanente di Mario), solo per `index.html` e le 7 cartelle sopra. Cloudflare pubblica il sito da solo dopo il push. Prima del push: `git fetch` + rebase; mai `push --force`.
+4. Mandare a Mario un mini report di quello che è stato fatto.
 
-Controlli obbligatori prima di consegnare, per non ripetere errori già fatti in passato:
+L'archivio delle edizioni NON si pubblica più: non creare file in `rassegne/`, non aggiornare `archivio.html`, non usare `webapp/`, `pubblica.sh` o `npm run build`.
 
-- Tutte le date sul sito pubblicato sono aggiornate: `data-edition`/`data-published` nel body, data nel masthead, footer — e `index.html`/gli asset di `dist/` sono stati rigenerati con `npm run build` e ricopiati, non solo `edition.json`.
-- Il link "Archivio edizioni" nel file HTML appena archiviato (dentro `rassegne/`) punta a `../archivio.html` (con `../`), mai a `archivio.html` senza prefisso.
-- Consegnare sempre insieme alla rassegna del giorno anche il glossario `glossario.html` aggiornato con gli eventuali nuovi termini comparsi in quell'edizione (regola del 31/8/2026), rispettando la struttura/codice esistente senza reinventarla.
+Controllo obbligatorio prima di pubblicare: tutte le date sono aggiornate (`data-edition`/`data-published` nel body, masthead, footer, meta description, JSON-LD).
 
-Il push su GitHub lo fa SEMPRE Mario manualmente: non va mai fatto in autonomia dalla rassegna automatica. Se il push automatico (o l'accesso al Mac) non dovesse riuscire per qualsiasi motivo, i file dell'edizione vanno comunque preparati e consegnati (in chat e/o sul Mac se raggiungibile) così che Mario possa pubblicarli lui stesso senza perdere tempo — non bloccarsi solo perché un passaggio automatico fallisce.
+Se il push non dovesse riuscire, i file vanno comunque preparati e consegnati a Mario in chat, così che possa pubblicarli lui senza perdere tempo.
 ---
 
 # 43. BACINO PERMANENTE DELLE FONTI — REGOLA VINCOLANTE
@@ -1583,7 +1575,6 @@ Aggiornare obbligatoriamente:
 - IA;
 - Immigrazione Italia;
 - Immigrazione Europa;
-- Petrolio Basilicata;
 - Agenda;
 - Citazione del giorno;
 - KPI e dati di mercato;
