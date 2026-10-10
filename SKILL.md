@@ -1635,3 +1635,16 @@ Regola vincolante e permanente dal 5 ottobre 2026.
 - Non generare automaticamente date dentro questi tre campi.
 - La data quotidiana deve continuare a essere aggiornata nella descrizione SEO, nelle descrizioni social, nella testata visibile, in `data-edition`, `data-published` e nei campi temporali JSON-LD.
 - Questa regola deve essere applicata al template ufficiale e a ogni `index.html` generato.
+
+---
+
+# 49. FOOTER — NOTA SULLE FOTOGRAFIE (OBBLIGATORIA)
+Regola vincolante e permanente (Mario, 10/10/2026).
+
+- Nel footer legale (`.footer-legal`) di ogni edizione deve SEMPRE essere presente, subito dopo il paragrafo «I contenuti pubblicati costituiscono sintesi originali…», questo paragrafo, identico:
+
+  `<p>Le fotografie sono di proprietà dei rispettivi autori, agenzie e testate, indicati nelle fonti di ogni articolo. Il Contribuente non le ospita sui propri server: vengono mostrate collegandosi alle pagine originali. Su richiesta del titolare, ogni immagine viene rimossa entro 24 ore.</p>`
+
+- Non va mai rimosso né modificato senza richiesta esplicita di Mario.
+- NON inserire alcuna frase (in giallo oro o in altro stile) sotto il sottotitolo della testata (`.masthead-sub`) a proposito delle immagini o dell'intelligenza artificiale: Mario l'ha fatta togliere il 10/10/2026.
+- Le immagini restano le og:image delle fonti, inserite come URL esterni con `referrerpolicy="no-referrer"` (nessuna copia sui server del sito).
