@@ -2193,6 +2193,29 @@
   }
 }
 </style>
+<script defer src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js"></script>
+<script>
+window.OneSignalDeferred = window.OneSignalDeferred || [];
+OneSignalDeferred.push(async function(OneSignal) {
+  await OneSignal.init({ appId: "b9a08918-01c9-4a87-9ca6-af72e8da7245", notifyButton: { enable: false } });
+  function aggiorna(){ var b=document.getElementById('notifyBtn'); if(b && OneSignal.User.PushSubscription.optedIn){ b.innerHTML='<span aria-hidden="true">🔔</span> Avvisi attivi ✓'; } }
+  aggiorna();
+  OneSignal.User.PushSubscription.addEventListener('change', aggiorna);
+});
+function attivaAvvisi(e){
+  e.preventDefault();
+  window.OneSignalDeferred.push(async function(OneSignal){
+    if(OneSignal.User.PushSubscription.optedIn){ return; }
+    await OneSignal.Notifications.requestPermission();
+    if(OneSignal.Notifications.permission){ await OneSignal.User.PushSubscription.optIn(); }
+  });
+}
+</script>
+<style>
+  .market-notify-btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;border-radius:999px;border:1px solid #d6ab4a;color:#f4d27a;background:rgba(214,171,74,.10);font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;font-weight:700;cursor:pointer}
+  .market-notify-btn:hover{background:rgba(214,171,74,.22)}
+  @media(max-width:760px){.market-notify-btn{width:100%;justify-content:center;height:48px}}
+</style>
 </head>
 <body data-edition="2026-10-11" data-published="2026-10-11T05:04:00+02:00" id="top">
 <!-- ===== OVERLAY INTRO — SEMPRE PRESENTE, IDENTICO OGNI GIORNO ===== -->
@@ -2344,6 +2367,7 @@
 <a aria-label="Il Contribuente su Facebook" class="market-social-link facebook" href="https://facebook.com/share/1FB8pWXg2R/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank" title="Facebook">
 <svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v1.8H8V14h2.2v7h3.3z"></path></svg>
 </a>
+<a aria-label="Ricevi un avviso ogni mattina quando esce la rassegna" class="market-notify-btn" href="#" id="notifyBtn" onclick="attivaAvvisi(event)" title="Avvisami ogni mattina"><span aria-hidden="true">🔔</span> Avvisami ogni mattina</a>
 </div>
 </div>
 <div class="wrap">
