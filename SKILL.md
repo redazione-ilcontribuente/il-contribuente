@@ -1671,7 +1671,9 @@ Da lunedì a domenica della settimana precedente. Le date vanno aggiornate sia n
 Ogni blocco: titolo, una foto, 1-5 paragrafi brevi, e in fondo la riga **«In poche parole»** che riassume il senso in una frase.
 
 ## Stile (vincolante)
-- Parole semplici, frasi corte, come un racconto che scorre: una cosa porta all'altra.
+- Scrittura semplice, facile e comprensibile ma PROFESSIONALE, frasi corte, come un racconto che scorre: una cosa porta all'altra.
+- MAI usare la parola «soldi» (usare termini professionali: bilancio, risorse, fondi, investitori, titoli di Stato) (Mario, 12/10/2026).
+- MAI scrivere «in parole semplici» (né sulla card né sulla pagina). Restano: sulla card «Cosa è successo nel mondo in sette giorni.»; sulla pagina il sottotitolo «Cosa è successo nel mondo in sette giorni, per chi non ha avuto tempo di seguire tutto.» (Mario, 12/10/2026).
 - NIENTE date precise e NIENTE nomi di città o luoghi che un italiano medio non conosce; niente sigle non spiegate.
 - Solo fatti realmente accaduti nella settimana indicata (verificati sulle edizioni quotidiane della settimana, recuperabili dalla cronologia git di `index.html`, e sulle fonti). Non inserire fatti di settimane precedenti spacciandoli per nuovi.
 - Non attribuire motivazioni o intenzioni come fatti (es. NON «Così Trump ha telefonato…» come spiegazione certa del perché).
