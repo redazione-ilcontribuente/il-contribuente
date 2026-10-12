@@ -1648,3 +1648,44 @@ Regola vincolante e permanente (Mario, 10/10/2026).
 - Non va mai rimosso né modificato senza richiesta esplicita di Mario.
 - NON inserire alcuna frase (in giallo oro o in altro stile) sotto il sottotitolo della testata (`.masthead-sub`) a proposito delle immagini o dell'intelligenza artificiale: Mario l'ha fatta togliere il 10/10/2026.
 - Le immagini restano le og:image delle fonti, inserite come URL esterni con `referrerpolicy="no-referrer"` (nessuna copia sui server del sito).
+
+---
+
+# 50. I FATTI DELLA SETTIMANA — PAGINA SETTIMANALE (OGNI LUNEDÌ)
+Regola vincolante e permanente (Mario, 12/10/2026).
+
+Ogni lunedì va aggiornata la pagina `settimana/fatti.html`, collegata alla prima pagina dalla card «I fatti della settimana» che sta subito sotto il riquadro «Seguici sui social» (stessa larghezza del riquadro social).
+
+## A chi è rivolta
+Al lettore medio: una persona che lavora tutto il giorno e non ha tempo di seguire le notizie. Deve capire in 5 minuti cosa è successo nel mondo nella settimana appena finita.
+
+## Periodo
+Da lunedì a domenica della settimana precedente. Le date vanno aggiornate sia nella pagina (`week-dates`, meta description) sia nella card di `index.html` (`week-card-dates`, es. «Lun 5 – Dom 11 ottobre 2026»).
+
+## Contenuto: 4 blocchi
+1. **Ucraina e Russia**
+2. **L'Europa** (politica europea, von der Leyen, bilancio, conti pubblici, commercio)
+3. **Il mondo** (quadro geopolitico mondiale con il filo che lega i fatti)
+4. **Israele** (cosa fa Israele a Gaza, in Medio Oriente e nel mondo)
+
+Ogni blocco: titolo, una foto, 1-5 paragrafi brevi, e in fondo la riga **«In poche parole»** che riassume il senso in una frase.
+
+## Stile (vincolante)
+- Parole semplici, frasi corte, come un racconto che scorre: una cosa porta all'altra.
+- NIENTE date precise e NIENTE nomi di città o luoghi che un italiano medio non conosce; niente sigle non spiegate.
+- Solo fatti realmente accaduti nella settimana indicata (verificati sulle edizioni quotidiane della settimana, recuperabili dalla cronologia git di `index.html`, e sulle fonti). Non inserire fatti di settimane precedenti spacciandoli per nuovi.
+- Non attribuire motivazioni o intenzioni come fatti (es. NON «Così Trump ha telefonato…» come spiegazione certa del perché).
+- Blocco Israele: tono deciso voluto da Mario, ma ancorato a fatti attribuiti a chi li ha stabiliti (Corte internazionale di giustizia sull'occupazione illegale, Corte penale internazionale sul mandato per Netanyahu, Commissione d'inchiesta Onu sul genocidio), senza la formula «Non lo diciamo noi». Riportare che Israele respinge le accuse. Ricontrollare ogni settimana lo stato aggiornato di queste decisioni.
+- La pagina è firmata «A cura della redazione»: è un riassunto della redazione, separato dalla rassegna quotidiana (che resta comparativa e neutra).
+
+## Foto (vincolante)
+- SOLO foto libere da usare: pubblico dominio o licenza libera (Creative Commons), preferibilmente da Wikimedia Commons (es. foto Casa Bianca, Parlamento/Commissione europea «© Unione europea», Nasa, Wafa/APAimages CC BY-SA, Kremlin.ru CC BY 4.0).
+- MAI foto di agenzie (Getty, AFP, Reuters, AP) o og:image dei giornali in questa pagina.
+- Inserite con `Special:FilePath/<nome file>?width=1280` e `referrerpolicy="no-referrer"`, una per blocco, pertinente al contenuto, diversa ogni settimana quando possibile.
+- Sotto ogni foto: didascalia + «Foto: autore, licenza» con link alla pagina del file.
+- Nel footer resta la nota: foto di pubblico dominio o con licenza libera da Wikimedia Commons, rimozione su richiesta entro 24 ore.
+
+## Struttura e pubblicazione
+- Mantenere identici HTML/CSS della pagina e della card: cambiano solo testi, foto e date.
+- Controllo con screenshot desktop e mobile (nessuno scroll orizzontale).
+- Commit e push solo di `settimana/fatti.html` e, per le date della card, di `index.html`. Prima del push: git fetch + rebase; mai push --force.
