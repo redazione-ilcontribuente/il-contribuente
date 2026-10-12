@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I fatti della settimana | Il Contribuente</title>
+<meta name="description" content="I fatti della settimana dal 5 all'11 ottobre 2026, raccontati in parole semplici: Ucraina e Russia, Europa, mondo, Israele.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9da;
+    --paper2:#e4dcc7;
+    --ink:#1b1e22;
+    --ink-soft:#565c64;
+    --rule:#c7bc9f;
+    --red:#a3291f;
+    --red-deep:#7c1d16;
+    --navy:#1f3a5f;
+    --navy-deep:#122438;
+    --gold:#a97a1f;
+    --gold-deep:#7d5a13;
+    --green:#3d6b4f;
+    --green-deep:#264734;
+    --wine:#6b2438;
+    --wine-deep:#481725;
+    --card:#fdfcf7;
+    --shadow-sm:0 1px 3px rgba(27,30,34,.12);
+    --shadow-md:0 4px 16px rgba(27,30,34,.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:900px; margin:0 auto; padding:0 6vw 80px 6vw; }
+  .topnav{ max-width:900px; margin:0 auto; padding:22px 6vw 0 6vw; }
+  .topnav a{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+  }
+  .topnav a:hover{ color:var(--ink); border-bottom-color:var(--ink); }
+  .masthead{ padding:30px 6vw 34px 6vw; border-bottom:3px solid var(--ink); max-width:900px; margin:0 auto; }
+  .dossier-kicker{
+    display:inline-block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#fff;
+    background:linear-gradient(160deg,#8a3350,var(--wine-deep));
+    padding:5px 12px;
+    border-radius:4px;
+    margin-bottom:16px;
+  }
+  h1.title{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(32px,5vw,50px);
+    line-height:1.08;
+    margin:0 0 14px 0;
+    color:var(--ink);
+  }
+  .subtitle{ font-family:'Inter',sans-serif; font-size:17px; color:var(--ink-soft); max-width:640px; margin:0; }
+  .brand-line{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:20px;
+  }
+  .brand-line em{ font-style:normal; color:var(--ink); font-weight:700; }
+  .intro{ margin:36px 0 8px 0; font-size:17.5px; color:var(--ink); }
+  .intro strong{ color:var(--wine); }
+  .updated-note{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft); margin:6px 0 32px 0; }
+  .explainer-box{
+    background:linear-gradient(160deg, #f3e6c4, #ecdcb2);
+    border-left:5px solid var(--gold);
+    border-radius:10px;
+    padding:22px 26px;
+    margin:0 0 48px 0;
+    box-shadow:var(--shadow-sm);
+  }
+  .explainer-box h2{ font-family:'Fraunces',serif; font-weight:800; font-size:21px; margin:0 0 12px 0; }
+  .explainer-box p{ font-size:15.5px; margin:0 0 10px 0; }
+  .explainer-box p:last-child{ margin-bottom:0; }
+  .explainer-box strong{ color:var(--gold-deep); }
+  .country-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin:56px 0 20px 0;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--ink);
+  }
+  .country-tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.1em;
+    padding:5px 11px;
+    border-radius:4px;
+    color:#fff;
+    text-transform:uppercase;
+  }
+  .country-head h2{ font-family:'Fraunces',serif; font-weight:800; font-size:clamp(24px,3vw,32px); margin:0; }
+  .timeline{ position:relative; margin:28px 0; padding-left:28px; border-left:3px solid var(--gold); }
+  .era{ position:relative; margin-bottom:32px; }
+  .era::before{
+    content:'';
+    position:absolute; left:-35px; top:4px;
+    width:14px; height:14px; border-radius:50%;
+    background:var(--gold); border:3px solid var(--paper); box-shadow:0 0 0 2px var(--gold);
+  }
+  .era.current::before{ background:var(--red-deep); box-shadow:0 0 0 2px var(--red-deep); }
+  .era-years{
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--gold-deep); font-weight:700; margin-bottom:6px;
+  }
+  .era.current .era-years{ color:var(--red-deep); }
+  .era-title{ font-family:'Fraunces',serif; font-weight:800; font-size:21px; margin:0 0 8px 0; color:var(--ink); }
+  .era-body{ font-size:15.5px; color:var(--ink); }
+  .era-body p{ margin:0 0 10px 0; }
+  .era-numbers{
+    background:var(--card); border-left:4px solid var(--gold); border-radius:6px;
+    padding:14px 18px; margin:12px 0; box-shadow:var(--shadow-sm);
+  }
+  .era.current .era-numbers{ border-left-color:var(--red-deep); }
+  .era-numbers-label{
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;
+  }
+  .era-numbers p{ margin:0; font-size:14.5px; }
+  .era-numbers strong{ color:var(--ink); }
+  .era-source{ font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--ink-soft); margin-top:8px; }
+  .note-box{
+    background:linear-gradient(160deg, #eef3f8, #e3ebf3);
+    border-left:4px solid var(--navy);
+    border-radius:8px; padding:16px 20px; margin:20px 0; font-size:14.5px;
+  }
+  .note-box .label{
+    font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--navy); font-weight:700; margin-bottom:8px;
+  }
+  .cumulative-box{
+    background:linear-gradient(160deg,#8a3350,var(--wine-deep));
+    color:#fff; border-radius:10px; padding:26px 30px; margin:52px 0; box-shadow:var(--shadow-md);
+  }
+  .cumulative-box .k{
+    font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:#e8c9d3; margin-bottom:10px;
+  }
+  .cumulative-box p{ margin:0 0 10px 0; font-size:16px; }
+  .cumulative-box p:last-child{ margin-bottom:0; }
+  .cumulative-box strong{ color:#fff; }
+  .sources-box{ margin:44px 0 0 0; padding-top:24px; border-top:1px solid var(--rule); }
+  .sources-box h3{
+    font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 12px 0;
+  }
+  .sources-box ul{ margin:0; padding-left:18px; font-size:13.5px; color:var(--ink-soft); }
+  .sources-box li{ margin-bottom:5px; }
+  footer{ max-width:900px; margin:60px auto 0 auto; padding:28px 6vw 40px 6vw; border-top:3px solid var(--ink); }
+  .footer-back{
+    display:inline-block; margin-bottom:22px; font-family:'JetBrains Mono',monospace;
+    font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft);
+    text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:2px;
+  }
+  .footer-legal p{ font-size:12px; color:var(--ink-soft); line-height:1.6; margin:0 0 8px 0; }
+  .footer-legal p:last-child{ margin-bottom:0; }
+  @media (max-width:640px){
+    .timeline{ padding-left:20px; }
+    .era::before{ left:-27px; width:11px; height:11px; }
+    .country-head{ flex-direction:column; align-items:flex-start; gap:8px; }
+  }
+
+  .wrap > .week-block:first-child{ margin-top:30px; }
+  .week-block{ background:var(--card); border:1px solid var(--rule); border-radius:12px; padding:26px 28px; margin:0 0 26px 0; box-shadow:var(--shadow-sm); }
+  .week-block h2{ font-family:'Fraunces',serif; font-weight:900; font-size:28px; margin:0 0 14px 0; color:var(--ink); }
+  .week-block p{ font-family:Georgia,'Times New Roman',serif; font-size:18px; line-height:1.7; margin:0 0 14px 0; }
+  .week-block .in-short{ border-top:1px solid var(--rule); padding-top:14px; margin-top:6px; margin-bottom:0; }
+  .week-block .in-short strong{ font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--red-deep); display:block; margin-bottom:4px; }
+  .week-dates{ font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold-deep); margin-top:10px; }
+  @media(max-width:640px){ .week-block{ padding:20px 18px; } .week-block h2{ font-size:23px; } .week-block p{ font-size:17px; } }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="../index.html">&larr; Il Contribuente</a>
+</div>
+
+<div class="masthead">
+  <span class="dossier-kicker">Ogni lunedì</span>
+  <h1 class="title">I fatti della settimana</h1>
+  <p class="subtitle">Cosa è successo nel mondo in sette giorni, raccontato in parole semplici, per chi non ha avuto tempo di seguire tutto.</p>
+  <div class="week-dates">Da lunedì 5 a domenica 11 ottobre 2026</div>
+  <div class="brand-line">A cura della redazione di <em>Il Contribuente</em></div>
+</div>
+
+<div class="wrap">
+<section class="week-block">
+  <h2>Ucraina e Russia</h2>
+  <p>L'America ha fatto un accordo con la Russia: compra il suo gasolio, anche se fino a poco prima lo vietava con le sanzioni. Poi Trump ha annunciato una tregua: niente più bombe su centrali elettriche e raffinerie. Gli ucraini l'hanno saputo dai social. Zelensky ha detto sì, ma solo se la Russia la rispetta. Mosca non ha confermato, e i bombardamenti sulle centrali ucraine non si sono fermati.</p>
+  <p class="in-short"><strong>In poche parole</strong>La pace la trattano americani e russi, l'Ucraina rischia di subire decisioni prese da altri.</p>
+</section>
+<section class="week-block">
+  <h2>L'Europa</h2>
+  <p>In Europa si litiga sui soldi. La Commissione di von der Leyen vuole un bilancio comune molto più grande per i prossimi sette anni: più spesa per energia, industria e difesa. La Germania, che paga più di tutti, dice no e chiede tagli forti. Con lei Olanda, Austria e Paesi del Nord. Dall'altra parte l'Italia e molti Paesi del Sud e dell'Est difendono i fondi per le regioni e per l'agricoltura. La decisione passa ai capi di governo, che si riuniscono questa settimana.</p>
+  <p>Intanto Francia e Germania chiedono armi commerciali più dure: poter chiudere il mercato europeo a chi fa concorrenza sleale, che sia la Cina o l'America. Bruxelles prepara un tetto alle auto ibride cinesi. E contro la Russia è stato approvato un nuovo pacchetto di sanzioni.</p>
+  <p>Sui conti pubblici l'aria è pesante. Chi presta soldi agli Stati europei chiede interessi più alti. La Francia è il Paese più in difficoltà: oggi i mercati la considerano più a rischio dell'Italia, e non succedeva da quando esiste l'euro. All'Italia Bruxelles ha detto sì su un punto tecnico, ma no a nuova flessibilità sul caro energia. Il governo ha tagliato all'ultimo una parte della spesa per la difesa.</p>
+  <p class="in-short"><strong>In poche parole</strong>L'Europa vuole contare di più nel mondo, ma i Paesi non sono d'accordo su chi deve pagare. E con il debito che costa di più, i soldi da spendere sono pochi.</p>
+</section>
+<section class="week-block">
+  <h2>Il mondo</h2>
+  <p>Il centro di tutto è la guerra tra America e Iran. Le navi americane bloccano i porti iraniani, e nello stretto da cui passa gran parte del petrolio del mondo quasi ogni giorno viene colpita una nave: a volte dagli iraniani, a volte dagli americani. Trump ha promesso di non attaccare direttamente l'Iran prima delle elezioni americane, ma intanto minaccia: «O ci date tutto o non esisterete più».</p>
+  <p>La guerra si allarga. Gli Houthi dello Yemen, alleati dell'Iran, lanciano missili e droni sull'Arabia Saudita: hanno colpito più volte l'aeroporto della capitale, con decine di morti e centinaia di feriti, e dicono di aver colpito anche impianti petroliferi. L'Arabia Saudita ha risposto con una grande offensiva in Yemen. Trump dice che l'America potrebbe unirsi.</p>
+  <p>Tutto questo fa salire il prezzo di petrolio e gasolio. Per questo l'America cerca gasolio altrove, anche dalla Russia, e trova un accordo con Putin sopra la testa dell'Ucraina.</p>
+  <p>A Gaza si continua a morire anche se c'è una tregua: i morti palestinesi superano i 74 mila. Il presidente palestinese ha rinviato le elezioni di un anno, dando la colpa a Israele. Israele dice che è una scusa.</p>
+  <p>Nel resto del mondo: in Brasile si va al ballottaggio tra Lula e il figlio di Bolsonaro. In Africa, migranti in fuga verso il Golfo sono morti a centinaia in mare. Negli Stati Uniti e in Messico due uragani hanno fatto morti e milioni di persone senza luce.</p>
+  <p class="in-short"><strong>In poche parole</strong>Una guerra in Medio Oriente sta cambiando tutto il resto. Fa salire i prezzi in tutto il mondo, spinge l'America a trattare con la Russia e lascia l'Europa e l'Ucraina a rincorrere.</p>
+</section>
+<section class="week-block">
+  <h2>Israele</h2>
+  <p>Israele occupa territori che non sono suoi: la Corte internazionale di giustizia dell'Onu ha giudicato illegale l'occupazione dei territori palestinesi. Netanyahu è ricercato dalla Corte penale internazionale per crimini di guerra e crimini contro l'umanità. Una commissione d'inchiesta dell'Onu ha concluso che a Gaza è in corso un genocidio. Israele respinge tutte queste accuse.</p>
+  <p>La settimana scorsa a Gaza si è continuato a morire. Nel giorno in cui Israele ricordava le vittime del 7 ottobre, i raid israeliani hanno ucciso cinque palestinesi, tra cui un ragazzo della protezione civile. Nel giorno in cui la tregua compiva un anno, ne sono stati uccisi altri otto, tra cui una bambina. In un anno di «tregua» i morti sono quasi 1.500; dall'inizio della guerra più di 74 mila.</p>
+  <p>Il presidente palestinese ha rinviato le elezioni di un anno: dice che con l'occupazione israeliana non si può votare. Il governo israeliano ha risposto che è «una ridicola menzogna».</p>
+  <p>Intanto Israele ha messo il Paese in massima allerta e ha chiesto ai suoi cittadini all'estero di stare attenti. E resta in guerra con l'Iran insieme all'America: la guerra che blocca il petrolio nel Golfo e fa salire i prezzi anche da noi.</p>
+  <p class="in-short"><strong>In poche parole</strong>A Gaza la tregua esiste solo sulla carta. I palestinesi continuano a morire ogni giorno, e nessuno ferma Israele.</p>
+</section>
+
+</div>
+
+<footer>
+  <a href="../index.html" class="footer-back">&larr; Torna a Il Contribuente</a>
+  <div class="footer-legal">
+    <p>Pubblicazione indipendente e personale, priva di finalità commerciali. Non sono presenti pubblicità, abbonamenti, sponsorizzazioni o finanziamenti di alcun tipo, pubblici o privati.</p>
+    <p>Questa pagina è un riassunto settimanale scritto dalla redazione sulla base delle notizie pubblicate ogni giorno nella rassegna, dove sono citate le fonti originali.</p>
+    <p>Eventuali richieste di rettifica o rimozione di contenuti possono essere inoltrate a <a href="mailto:ilcontribuente@gmail.com" style="color:var(--ink-soft);">ilcontribuente@gmail.com</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

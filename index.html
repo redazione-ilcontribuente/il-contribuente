@@ -2214,6 +2214,13 @@ function attivaAvvisi(e){
 <style>
   .market-notify-btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;border-radius:999px;border:1px solid #d6ab4a;color:#f4d27a;background:rgba(214,171,74,.10);font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;font-weight:700;cursor:pointer}
   .market-notify-btn:hover{background:rgba(214,171,74,.22)}
+  .week-card{max-width:1260px;margin:0 auto 24px;padding:18px 24px;display:flex;align-items:center;justify-content:center;gap:28px;border:1px solid #5b4a24;border-radius:14px;background:radial-gradient(500px 180px at 10% -20%, rgba(214,171,74,.10), transparent 60%),linear-gradient(160deg,#272b31 0%,#171a1f 100%);box-shadow:0 8px 22px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.04);text-decoration:none}
+  .week-card-title{font-family:'Fraunces',serif;font-weight:700;font-size:21px;color:#f0d083;white-space:nowrap}
+  .week-card-dates{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#c9c4b8}
+  .week-card-desc{font-family:'Inter',sans-serif;font-size:14px;color:#aeb3b9;max-width:420px}
+  .week-card-btn{display:inline-flex;align-items:center;height:44px;padding:0 18px;border-radius:999px;border:1px solid #d6ab4a;color:#f4d27a;background:rgba(214,171,74,.10);font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;white-space:nowrap}
+  .week-card:hover .week-card-btn{background:rgba(214,171,74,.22)}
+  @media (max-width:640px){.week-card{margin:0 12px 20px;padding:16px 14px;gap:10px;border-radius:12px;flex-direction:column;text-align:center}.week-card-title{font-size:18px}.week-card-btn{width:100%;justify-content:center;height:48px}}
   @media(max-width:760px){.market-notify-btn{width:100%;justify-content:center;height:48px}}
 </style>
 </head>
@@ -2369,6 +2376,7 @@ function attivaAvvisi(e){
 </a>
 <a aria-label="Ricevi un avviso ogni mattina quando esce la rassegna" class="market-notify-btn" href="#" id="notifyBtn" onclick="attivaAvvisi(event)" title="Avvisami ogni mattina"><span aria-hidden="true">🔔</span> Avvisami ogni mattina</a>
 </div>
+<a class="week-card" href="settimana/fatti.html" aria-label="I fatti della settimana"><span class="week-card-title">I fatti della settimana</span><span class="week-card-dates">Lun 5 – Dom 11 ottobre 2026</span><span class="week-card-desc">Cosa è successo nel mondo in sette giorni, in parole semplici.</span><span class="week-card-btn">Leggi →</span></a>
 </div>
 <div class="wrap">
 <div class="page-grid">
