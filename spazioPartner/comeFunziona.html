@@ -227,6 +227,13 @@
   .apply-list li{ font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.04em; text-transform:uppercase; background:rgba(255,255,255,.55); border:1px solid var(--rule); border-radius:999px; padding:6px 12px; }
   .apply-btn{ display:inline-flex; align-items:center; height:46px; padding:0 20px; border-radius:999px; background:var(--ink); color:#f4d27a; font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.04em; text-transform:uppercase; font-weight:700; text-decoration:none; }
   .free-badge{ display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--green-deep); background:#dfeadf; border:1px solid #b9d0bb; border-radius:4px; padding:4px 10px; margin-top:14px; }
+  .mail-row{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin:0 0 14px 0; }
+  .mail-addr{ font-family:'JetBrains Mono',monospace; font-size:14.5px; font-weight:700; color:var(--ink); background:rgba(255,255,255,.7); border:1px solid var(--rule); border-radius:8px; padding:9px 12px; user-select:all; -webkit-user-select:all; word-break:break-all; }
+  .mail-copy{ height:40px; padding:0 14px; border-radius:999px; border:1px solid var(--gold-deep); background:transparent; color:var(--gold-deep); font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.04em; text-transform:uppercase; font-weight:700; cursor:pointer; }
+  .apply-actions{ display:flex; flex-wrap:wrap; gap:10px; }
+  .apply-btn.alt{ background:transparent; color:var(--ink); border:1px solid var(--ink); }
+  .mail-note{ font-size:13px !important; color:var(--ink-soft); margin:12px 0 0 0 !important; }
+  @media(max-width:640px){ .mail-copy{ width:100%; } .apply-actions .apply-btn{ width:100%; justify-content:center; } }
   @media(max-width:640px){ .two-col{ grid-template-columns:1fr; } .steps{ grid-template-columns:1fr; } .rule-block{ padding:20px 18px; } .rule-block h2,.apply-box h2{ font-size:21px; } .apply-btn{ width:100%; justify-content:center; } }
 </style>
 </head>
@@ -301,7 +308,23 @@
   <h2>Come candidarsi</h2>
   <p>Scrivi alla redazione e manda queste quattro cose:</p>
   <ul class="apply-list"><li>Nome dell'attività</li><li>Logo</li><li>Una riga di descrizione</li><li>Link</li></ul>
-  <a class="apply-btn" href="mailto:redazione.ilcontribuente@protonmail.com?subject=Spazio%20partner%20%E2%80%93%20candidatura">Scrivi alla redazione →</a>
+  <div class="mail-row">
+    <span class="mail-addr" id="mailAddr">redazione.ilcontribuente@protonmail.com</span>
+    <button class="mail-copy" type="button" onclick="copiaEmail(this)">Copia indirizzo</button>
+  </div>
+  <div class="apply-actions">
+    <a class="apply-btn" href="mailto:redazione.ilcontribuente@protonmail.com?subject=Spazio%20partner%20%E2%80%93%20candidatura">Scrivi dalla tua posta →</a>
+    <a class="apply-btn alt" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=redazione.ilcontribuente@protonmail.com&amp;su=Spazio%20partner%20%E2%80%93%20candidatura" target="_blank" rel="noopener noreferrer">Scrivi con Gmail →</a>
+  </div>
+  <p class="mail-note">Se il pulsante non apre la posta, copia l'indirizzo e scrivi dal tuo programma di posta.</p>
+  <script>
+  function copiaEmail(btn){
+    var t='redazione.ilcontribuente@protonmail.com';
+    function ok(){ btn.textContent='Copiato ✓'; setTimeout(function(){btn.textContent='Copia indirizzo';},2500); }
+    if(navigator.clipboard&&window.isSecureContext){ navigator.clipboard.writeText(t).then(ok,function(){fallback();}); } else { fallback(); }
+    function fallback(){ var a=document.createElement('textarea'); a.value=t; a.setAttribute('readonly',''); a.style.position='fixed'; a.style.opacity='0'; document.body.appendChild(a); a.select(); try{document.execCommand('copy');ok();}catch(e){ var r=document.createRange(); r.selectNodeContents(document.getElementById('mailAddr')); var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);} document.body.removeChild(a); }
+  }
+  </script>
 </section>
 
 <section class="rule-block">
