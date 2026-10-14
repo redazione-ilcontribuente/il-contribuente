@@ -1146,6 +1146,7 @@ La struttura HTML/CSS/JS deve essere uniforme in tutte le sezioni, così l'utent
 Oltre all'indice standard della sezione 5, il sito pubblicato include altre sezioni/dashboard fisse che Mario ha aggiunto nel tempo direttamente nelle edizioni, e che NON fanno parte dell'indice/della lista di sezioni da riscrivere ogni giorno:
 
 - Sezione "Approfondimenti fissi" (sidebar, id `approfondimenti`) — link fissi (Geopolitica, Conflitti nel mondo, Immigrazione in Europa, Guerre, Dazi, Sanzioni, Glossario) e box "Termine del giorno"/statistiche;
+- Box "Spazio partner" (classe `partner-box`, sotto la card "I fatti della settimana") e pagina `spazioPartner/comeFunziona.html` — vedi sezione 51;
 - Dashboard "Sicurezza Pubblica" (id `sicurezza-pubblica`);
 - Dashboard "Petrolio Basilicata" (id `petrolio-basilicata`), con la sotto-lista "Le ultime notizie" — REGOLA ASSOLUTA E PERMANENTE (ribadita 20/9/2026): tutte le notizie di questa sotto-lista devono SEMPRE essere affiancate in orizzontale, per sempre, su ogni dispositivo, senza alcuna eccezione futura.
 
@@ -1691,3 +1692,46 @@ Ogni blocco: titolo, una foto, 1-5 paragrafi brevi, e in fondo la riga **«In po
 - Mantenere identici HTML/CSS della pagina e della card: cambiano solo testi, foto e date.
 - Controllo con screenshot desktop e mobile (nessuno scroll orizzontale).
 - Commit e push solo di `settimana/fatti.html` e, per le date della card, di `index.html`. Prima del push: git fetch + rebase; mai push --force.
+
+---
+
+# 51. SPAZIO PARTNER — VETRINA GRATUITA (BOX NELL'INDEX + PAGINA «COME FUNZIONA»)
+Regola vincolante e permanente (Mario, 14/10/2026).
+
+## Cos'è
+Una vetrina gratuita per chi vuole farsi conoscere: aziende, partite Iva, professionisti, artigiani, negozi, studi, ristoranti, servizi — di tutta Italia (non solo locali), con priorità alle aziende della zona. Gli annunci sono gratuiti, separati dalle notizie e non influenzano la redazione. Ogni annuncio resta pubblicato 30 giorni.
+
+## Posizione e layout nell'index (FISSO)
+- Il box `<div class="partner-box">` sta SUBITO SOTTO la card «I fatti della settimana» (`.week-card`), stessa larghezza (max 1260px).
+- CSS dedicato nel blocco `<style id="spazio-partner">` dentro `<head>`: non modificarlo senza richiesta di Mario.
+- Intestazione: «**Spazio partner** · una vetrina gratuita per farsi conoscere» + frase «Separati dalle notizie, non influenzano la redazione» + due pulsanti:
+  - «Come funziona →» → `spazioPartner/comeFunziona.html`;
+  - «Candidati →» (dorato pieno, classe `partner-apply`) → `spazioPartner/comeFunziona.html#candidati`.
+- Sotto: 3 spazi (`.partner-card.partner-empty`) con scritto SOLO «Spazio partner», tre colori diversi (oro, blu, verde), bordo tratteggiato; ognuno porta a `spazioPartner/comeFunziona.html#candidati`.
+- Desktop: 3 spazi affiancati su una riga. Mobile (≤640px): uno sotto l'altro, pulsanti a tutta larghezza, nessuno scroll orizzontale.
+- Quando arriverà un annuncio reale, si sostituisce il contenuto di uno spazio (logo, nome, una riga, link) mantenendo la stessa struttura; un annuncio dura 30 giorni.
+
+## Pagina `spazioPartner/comeFunziona.html` (stile delle pagine interne, come `settimana/fatti.html`)
+- Testata: etichetta «Spazio partner», titolo «Come funziona», sottotitolo «Una vetrina gratuita per chi vuole farsi conoscere, in tutta Italia. Priorità alle aziende della zona.», badge «Annunci gratuiti».
+- 01 · Cos'è — «Una vetrina per chi vuole farsi conoscere»: «Uno spazio gratuito aperto ad aziende, professionisti e partite Iva di tutta Italia.» + annunci sempre segnalati come «Spazio partner».
+- 02 · La nostra promessa (box blu) — gli annunci non toccano le notizie (4 punti).
+- 03 · Chi può partecipare — «Tutti» (aziende di ogni dimensione, partite Iva e liberi professionisti, artigiani/negozi, studi, ristoranti, servizi).
+- 04 · Chi non può partecipare — partiti/candidati/associazioni politiche, scommesse, prestiti facili e investimenti rischiosi, prodotti per la salute senza prove, attività illegali.
+- 05 · In pratica — «Annunci gratuiti, priorità alla zona»: «Gli annunci sono gratuiti e aperti a tutti, con priorità alle aziende della zona.» / «Ogni annuncio resta pubblicato 30 giorni.» / contenuto dell'annuncio (logo, nome, una riga, link).
+- Box «Come candidarsi» (`id="candidati"`): 4 voci da inviare, indirizzo email visibile, pulsante «Copia indirizzo», pulsanti «Scrivi dalla tua posta →» (mailto con oggetto «Spazio partner – candidatura») e «Scrivi con Gmail →».
+- 06 · Rimozione — «Quando un annuncio viene tolto»: se non rispetta le indicazioni della pagina o su richiesta dell'attività.
+
+## Divieti di testo (Mario, 14/10/2026)
+- NON scrivere nulla su costi, «0 €», «fase di prova», futuri pagamenti o termini economici: solo «annunci gratuiti».
+- NON usare «Le regole valgono sempre» né «per presentarsi ai lettori de Il Contribuente».
+- Email della redazione: SOLO redazione.ilcontribuente@protonmail.com.
+- Il footer legale dell'index resta com'è (Mario, 14/10/2026): la spiegazione sta tutta nella pagina Spazio partner.
+
+## Rassegna quotidiana
+Le attività notturne (parte 1 e parte 2) partono dall'index pubblicato: box e CSS «Spazio partner» vanno copiati IDENTICI ogni giorno, mai rimossi o modificati.
+
+---
+
+# 52. REPORT MATTUTINO — 3 NOTIZIE PRINCIPALI
+Regola permanente (Mario, 14/10/2026): il mini report mattutino a Mario deve aprirsi SEMPRE con le 3 principali notizie del giorno (una riga ciascuna), poi il resto del report.
+
