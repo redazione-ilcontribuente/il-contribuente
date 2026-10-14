@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spazio partner: come funziona | Il Contribuente</title>
+<meta name="description" content="Spazio partner de Il Contribuente: una vetrina gratuita per chi vuole farsi conoscere, in tutta Italia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9da;
+    --paper2:#e4dcc7;
+    --ink:#1b1e22;
+    --ink-soft:#565c64;
+    --rule:#c7bc9f;
+    --red:#a3291f;
+    --red-deep:#7c1d16;
+    --navy:#1f3a5f;
+    --navy-deep:#122438;
+    --gold:#a97a1f;
+    --gold-deep:#7d5a13;
+    --green:#3d6b4f;
+    --green-deep:#264734;
+    --wine:#6b2438;
+    --wine-deep:#481725;
+    --card:#fdfcf7;
+    --shadow-sm:0 1px 3px rgba(27,30,34,.12);
+    --shadow-md:0 4px 16px rgba(27,30,34,.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:900px; margin:0 auto; padding:0 6vw 80px 6vw; }
+  .topnav{ max-width:900px; margin:0 auto; padding:22px 6vw 0 6vw; }
+  .topnav a{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+  }
+  .topnav a:hover{ color:var(--ink); border-bottom-color:var(--ink); }
+  .masthead{ padding:30px 6vw 34px 6vw; border-bottom:3px solid var(--ink); max-width:900px; margin:0 auto; }
+  .dossier-kicker{
+    display:inline-block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#fff;
+    background:linear-gradient(160deg,#8a3350,var(--wine-deep));
+    padding:5px 12px;
+    border-radius:4px;
+    margin-bottom:16px;
+  }
+  h1.title{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(32px,5vw,50px);
+    line-height:1.08;
+    margin:0 0 14px 0;
+    color:var(--ink);
+  }
+  .subtitle{ font-family:'Inter',sans-serif; font-size:17px; color:var(--ink-soft); max-width:640px; margin:0; }
+  .brand-line{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:20px;
+  }
+  .brand-line em{ font-style:normal; color:var(--ink); font-weight:700; }
+  .intro{ margin:36px 0 8px 0; font-size:17.5px; color:var(--ink); }
+  .intro strong{ color:var(--wine); }
+  .updated-note{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft); margin:6px 0 32px 0; }
+  .explainer-box{
+    background:linear-gradient(160deg, #f3e6c4, #ecdcb2);
+    border-left:5px solid var(--gold);
+    border-radius:10px;
+    padding:22px 26px;
+    margin:0 0 48px 0;
+    box-shadow:var(--shadow-sm);
+  }
+  .explainer-box h2{ font-family:'Fraunces',serif; font-weight:800; font-size:21px; margin:0 0 12px 0; }
+  .explainer-box p{ font-size:15.5px; margin:0 0 10px 0; }
+  .explainer-box p:last-child{ margin-bottom:0; }
+  .explainer-box strong{ color:var(--gold-deep); }
+  .country-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin:56px 0 20px 0;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--ink);
+  }
+  .country-tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.1em;
+    padding:5px 11px;
+    border-radius:4px;
+    color:#fff;
+    text-transform:uppercase;
+  }
+  .country-head h2{ font-family:'Fraunces',serif; font-weight:800; font-size:clamp(24px,3vw,32px); margin:0; }
+  .timeline{ position:relative; margin:28px 0; padding-left:28px; border-left:3px solid var(--gold); }
+  .era{ position:relative; margin-bottom:32px; }
+  .era::before{
+    content:'';
+    position:absolute; left:-35px; top:4px;
+    width:14px; height:14px; border-radius:50%;
+    background:var(--gold); border:3px solid var(--paper); box-shadow:0 0 0 2px var(--gold);
+  }
+  .era.current::before{ background:var(--red-deep); box-shadow:0 0 0 2px var(--red-deep); }
+  .era-years{
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--gold-deep); font-weight:700; margin-bottom:6px;
+  }
+  .era.current .era-years{ color:var(--red-deep); }
+  .era-title{ font-family:'Fraunces',serif; font-weight:800; font-size:21px; margin:0 0 8px 0; color:var(--ink); }
+  .era-body{ font-size:15.5px; color:var(--ink); }
+  .era-body p{ margin:0 0 10px 0; }
+  .era-numbers{
+    background:var(--card); border-left:4px solid var(--gold); border-radius:6px;
+    padding:14px 18px; margin:12px 0; box-shadow:var(--shadow-sm);
+  }
+  .era.current .era-numbers{ border-left-color:var(--red-deep); }
+  .era-numbers-label{
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;
+  }
+  .era-numbers p{ margin:0; font-size:14.5px; }
+  .era-numbers strong{ color:var(--ink); }
+  .era-source{ font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--ink-soft); margin-top:8px; }
+  .note-box{
+    background:linear-gradient(160deg, #eef3f8, #e3ebf3);
+    border-left:4px solid var(--navy);
+    border-radius:8px; padding:16px 20px; margin:20px 0; font-size:14.5px;
+  }
+  .note-box .label{
+    font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--navy); font-weight:700; margin-bottom:8px;
+  }
+  .cumulative-box{
+    background:linear-gradient(160deg,#8a3350,var(--wine-deep));
+    color:#fff; border-radius:10px; padding:26px 30px; margin:52px 0; box-shadow:var(--shadow-md);
+  }
+  .cumulative-box .k{
+    font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:#e8c9d3; margin-bottom:10px;
+  }
+  .cumulative-box p{ margin:0 0 10px 0; font-size:16px; }
+  .cumulative-box p:last-child{ margin-bottom:0; }
+  .cumulative-box strong{ color:#fff; }
+  .sources-box{ margin:44px 0 0 0; padding-top:24px; border-top:1px solid var(--rule); }
+  .sources-box h3{
+    font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 12px 0;
+  }
+  .sources-box ul{ margin:0; padding-left:18px; font-size:13.5px; color:var(--ink-soft); }
+  .sources-box li{ margin-bottom:5px; }
+  footer{ max-width:900px; margin:60px auto 0 auto; padding:28px 6vw 40px 6vw; border-top:3px solid var(--ink); }
+  .footer-back{
+    display:inline-block; margin-bottom:22px; font-family:'JetBrains Mono',monospace;
+    font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft);
+    text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:2px;
+  }
+  .footer-legal p{ font-size:12px; color:var(--ink-soft); line-height:1.6; margin:0 0 8px 0; }
+  .footer-legal p:last-child{ margin-bottom:0; }
+  @media (max-width:640px){
+    .timeline{ padding-left:20px; }
+    .era::before{ left:-27px; width:11px; height:11px; }
+    .country-head{ flex-direction:column; align-items:flex-start; gap:8px; }
+  }
+
+  .wrap > .week-block:first-child{ margin-top:30px; }
+  .week-figure{ margin:0 0 18px 0; }
+  .week-figure img{ width:100%; height:300px; object-fit:cover; display:block; border-radius:8px; background:var(--paper2); }
+  .week-figure figcaption{ font-family:'Inter',sans-serif; font-size:12.5px; color:var(--ink-soft); margin-top:6px; line-height:1.45; }
+  .week-figure figcaption a{ color:var(--ink-soft); }
+  @media(max-width:640px){ .week-figure img{ height:200px; } }
+  .week-block{ background:var(--card); border:1px solid var(--rule); border-radius:12px; padding:26px 28px; margin:0 0 26px 0; box-shadow:var(--shadow-sm); }
+  .week-block h2{ font-family:'Fraunces',serif; font-weight:900; font-size:28px; margin:0 0 14px 0; color:var(--ink); }
+  .week-block p{ font-family:Georgia,'Times New Roman',serif; font-size:18px; line-height:1.7; margin:0 0 14px 0; }
+  .week-block .in-short{ border-top:1px solid var(--rule); padding-top:14px; margin-top:6px; margin-bottom:0; }
+  .week-block .in-short strong{ font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--red-deep); display:block; margin-bottom:4px; }
+  .week-dates{ font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold-deep); margin-top:10px; }
+  @media(max-width:640px){ .week-block{ padding:20px 18px; } .week-block h2{ font-size:23px; } .week-block p{ font-size:17px; } }
+
+  .rule-block{ background:var(--card); border:1px solid var(--rule); border-radius:12px; padding:24px 28px; margin:0 0 22px 0; box-shadow:var(--shadow-sm); }
+  .rule-num{ font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-deep); font-weight:700; margin-bottom:6px; }
+  .rule-block h2{ font-family:'Fraunces',serif; font-weight:800; font-size:24px; margin:0 0 10px 0; }
+  .rule-block p{ font-family:Georgia,'Times New Roman',serif; font-size:17.5px; line-height:1.65; margin:0 0 10px 0; }
+  .rule-block p:last-child{ margin-bottom:0; }
+  .rule-list{ list-style:none; margin:4px 0 0 0; padding:0; }
+  .rule-list li{ font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:1.55; padding:8px 0 8px 32px; position:relative; border-top:1px solid #ece5d3; }
+  .rule-list li:first-child{ border-top:none; }
+  .rule-list.yes li::before{ content:'✓'; position:absolute; left:4px; top:8px; color:var(--green); font-weight:700; font-family:'Inter',sans-serif; }
+  .rule-list.no li::before{ content:'✕'; position:absolute; left:4px; top:8px; color:var(--red); font-weight:700; font-family:'Inter',sans-serif; }
+  .rule-block.promise{ background:linear-gradient(160deg,#1f3a5f,var(--navy-deep)); border:none; color:#fff; }
+  .rule-block.promise .rule-num{ color:#c9d8ea; }
+  .rule-block.promise h2{ color:#fff; }
+  .rule-block.promise .rule-list li{ color:#eef3f8; border-top-color:rgba(255,255,255,.12); }
+  .rule-block.promise .rule-list li::before{ content:'●'; position:absolute; left:6px; top:12px; color:#f0d083; font-size:11px; }
+  .two-col{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin:0 0 22px 0; }
+  .two-col .rule-block{ margin:0; }
+  .steps{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:8px; }
+  .step{ background:var(--paper); border:1px solid var(--rule); border-radius:10px; padding:14px 16px; }
+  .step b{ display:block; font-family:'Fraunces',serif; font-size:28px; color:var(--gold-deep); line-height:1; margin-bottom:6px; }
+  .step span{ font-family:'Inter',sans-serif; font-size:14.5px; line-height:1.45; color:var(--ink); }
+  .apply-box{ background:linear-gradient(160deg, #f3e6c4, #ecdcb2); border-left:5px solid var(--gold); border-radius:10px; padding:22px 26px; margin:0 0 22px 0; box-shadow:var(--shadow-sm); }
+  .apply-box h2{ font-family:'Fraunces',serif; font-weight:800; font-size:24px; margin:0 0 10px 0; }
+  .apply-box p{ font-size:15.5px; margin:0 0 12px 0; }
+  .apply-list{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px 0; padding:0; list-style:none; }
+  .apply-list li{ font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.04em; text-transform:uppercase; background:rgba(255,255,255,.55); border:1px solid var(--rule); border-radius:999px; padding:6px 12px; }
+  .apply-btn{ display:inline-flex; align-items:center; height:46px; padding:0 20px; border-radius:999px; background:var(--ink); color:#f4d27a; font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.04em; text-transform:uppercase; font-weight:700; text-decoration:none; }
+  .free-badge{ display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--green-deep); background:#dfeadf; border:1px solid #b9d0bb; border-radius:4px; padding:4px 10px; margin-top:14px; }
+  @media(max-width:640px){ .two-col{ grid-template-columns:1fr; } .steps{ grid-template-columns:1fr; } .rule-block{ padding:20px 18px; } .rule-block h2,.apply-box h2{ font-size:21px; } .apply-btn{ width:100%; justify-content:center; } }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="../index.html">&larr; Il Contribuente</a>
+</div>
+
+<div class="masthead">
+  <span class="dossier-kicker" style="background:linear-gradient(160deg,#4a6b8a,var(--navy-deep));">Spazio partner</span>
+  <h1 class="title">Come funziona</h1>
+  <p class="subtitle">Una vetrina gratuita per chi vuole farsi conoscere, in tutta Italia. Priorità alle aziende della zona.</p>
+  <span class="free-badge">Annunci gratuiti</span>
+  <div class="brand-line">A cura della redazione di <em>Il Contribuente</em></div>
+</div>
+
+<div class="wrap" style="padding-top:34px;">
+
+<section class="rule-block">
+  <div class="rule-num">01 · Cos'è</div>
+  <h2>Una vetrina per chi vuole farsi conoscere</h2>
+  <p>Uno spazio gratuito aperto ad aziende, professionisti e partite Iva di tutta Italia, per presentarsi ai lettori de Il Contribuente.</p>
+  <p>Gli annunci sono sempre segnalati con la scritta «Spazio partner». Non si confondono mai con gli articoli.</p>
+</section>
+
+<section class="rule-block promise">
+  <div class="rule-num">02 · La nostra promessa</div>
+  <h2>Gli annunci non toccano le notizie</h2>
+  <ul class="rule-list">
+    <li>Gli annunci non influenzano gli articoli né la scelta delle notizie.</li>
+    <li>Se un partner finisce in una notizia, la trattiamo come tutte le altre.</li>
+    <li>Non scriviamo articoli a pagamento o «su richiesta».</li>
+    <li>Nessun annuncio compare accanto a una notizia che riguarda la stessa attività.</li>
+  </ul>
+</section>
+
+<div class="two-col">
+  <section class="rule-block">
+    <div class="rule-num">03 · Chi può partecipare</div>
+    <h2>Tutti</h2>
+    <ul class="rule-list yes">
+      <li>Aziende di ogni dimensione</li>
+      <li>Partite Iva e liberi professionisti</li>
+      <li>Artigiani, negozi e botteghe</li>
+      <li>Studi professionali</li>
+      <li>Ristoranti, bar e alimentari</li>
+      <li>Servizi per famiglie e imprese</li>
+    </ul>
+  </section>
+  <section class="rule-block">
+    <div class="rule-num">04 · Chi non può partecipare</div>
+    <h2>No</h2>
+    <ul class="rule-list no">
+      <li>Partiti, candidati e associazioni politiche</li>
+      <li>Scommesse e giochi d'azzardo</li>
+      <li>Prestiti facili e investimenti rischiosi</li>
+      <li>Prodotti per la salute senza prove serie</li>
+      <li>Attività che non rispettano la legge</li>
+    </ul>
+  </section>
+</div>
+
+<section class="rule-block">
+  <div class="rule-num">05 · In pratica</div>
+  <h2>Annunci gratuiti, priorità alla zona</h2>
+  <p>Gli annunci sono gratuiti e aperti a tutti, con priorità alle aziende della zona.</p>
+  <p>Ogni annuncio contiene il logo, il nome dell'attività, una riga di descrizione e un link al sito o alla pagina social.</p>
+</section>
+
+<section class="apply-box" id="candidati" style="scroll-margin-top:20px;">
+  <h2>Come candidarsi</h2>
+  <p>Scrivi alla redazione e manda queste quattro cose:</p>
+  <ul class="apply-list"><li>Nome dell'attività</li><li>Logo</li><li>Una riga di descrizione</li><li>Link</li></ul>
+  <a class="apply-btn" href="mailto:redazione.ilcontribuente@protonmail.com?subject=Spazio%20partner%20%E2%80%93%20candidatura">Scrivi alla redazione →</a>
+</section>
+
+<section class="rule-block">
+  <div class="rule-num">06 · Rimozione</div>
+  <h2>Quando un annuncio viene tolto</h2>
+  <p>Un annuncio viene tolto se non rispetta le indicazioni di questa pagina, oppure quando è l'attività stessa a chiederlo.</p>
+</section>
+
+</div>
+
+<footer>
+  <a href="../index.html" class="footer-back">&larr; Torna a Il Contribuente</a>
+  <div class="footer-legal">
+    <p>Lo Spazio partner ospita annunci gratuiti, chiaramente separati dai contenuti editoriali. La redazione non riceve compensi per la loro pubblicazione.</p>
+    <p>Per informazioni o richieste di rimozione: <a href="mailto:redazione.ilcontribuente@protonmail.com" style="color:var(--ink-soft);">redazione.ilcontribuente@protonmail.com</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
