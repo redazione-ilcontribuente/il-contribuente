@@ -989,6 +989,12 @@ Selezionare esattamente 5 voci: le 5 cose più importanti che accadono nel mondo
 
 Non forzare a 5 se davvero non ci sono 5 fatti mondiali abbastanza rilevanti nella giornata: meglio 3-4 voci solide che riempire con notizie minori (stessa logica anti-filler della sezione 10).
 
+FORMATO OBBLIGATORIO (Mario, 19/10/2026, "da oggi in poi sempre"): per ogni avvenimento il titolo (luogo · ora, es. «Pechino · 04:00», «Teheran · oggi») sta su una riga SOPRA, e sotto c'è il testo, MOLTO BREVE: una sola frase corta (circa 10-15 parole) con una sola fonte tra parentesi. Niente testi lunghi, niente seconde frasi. Esempio:
+
+`<div class="agenda-item"><span class="agenda-time">Pechino · 04:00</span><span class="agenda-event">Pil cinese +4,5% nel terzo trimestre, sopra le attese (Reuters).</span></div>`
+
+Il titolo sopra è ottenuto via CSS nell'index (`.agenda-item{display:flex; flex-direction:column; gap:2px; align-items:flex-start;}`): non riportarlo in riga.
+
 ---
 
 # 36. CITAZIONE DEL GIORNO
@@ -1183,6 +1189,8 @@ Regola vincolante (Mario, 9/10/2026, sostituisce la procedura del 16/9/2026), og
 2. Aggiornare gli approfondimenti: `SuperPotenze`, `sanzioni`, `immigrazioneEuropa`, `guerre`, `glossario` (nuovi termini comparsi nell'edizione, conteggi aggiornati), `dazi`, `conflittiMondo` — stessa struttura/codice, cambiano solo testi, dati e date.
 3. Pubblicare: il push su GitHub lo fa Claude (consenso esplicito e permanente di Mario), solo per `index.html` e le 7 cartelle sopra. Cloudflare pubblica il sito da solo dopo il push. Prima del push: `git fetch` + rebase; mai `push --force`.
 4. Mandare a Mario un mini report di quello che è stato fatto.
+
+OGNI LUNEDÌ (Mario, 19/10/2026): l'attività della parte 2 aggiorna anche «I fatti della settimana» (`settimana/fatti.html`, regole nella sezione 50, settimana da lunedì a domenica precedenti) e le date della card nell'index (`week-card-dates`). In quel giorno `settimana/fatti.html` rientra tra i file da pubblicare insieme a `index.html` e alle 7 cartelle.
 
 L'archivio delle edizioni NON si pubblica più: non creare file in `rassegne/`, non aggiornare `archivio.html`, non usare `webapp/`, `pubblica.sh` o `npm run build`.
 
@@ -1655,7 +1663,7 @@ Regola vincolante e permanente (Mario, 10/10/2026).
 # 50. I FATTI DELLA SETTIMANA — PAGINA SETTIMANALE (OGNI LUNEDÌ)
 Regola vincolante e permanente (Mario, 12/10/2026).
 
-Ogni lunedì va aggiornata la pagina `settimana/fatti.html`, collegata alla prima pagina dalla card «I fatti della settimana» che sta subito sotto il riquadro «Seguici sui social» (stessa larghezza del riquadro social).
+Ogni lunedì (nella parte 2 della rassegna notturna, vedi sezione 42) va aggiornata la pagina `settimana/fatti.html`, collegata alla prima pagina dalla card «I fatti della settimana» che sta subito sotto il riquadro «Seguici sui social» (stessa larghezza del riquadro social).
 
 ## A chi è rivolta
 Al lettore medio: una persona che lavora tutto il giorno e non ha tempo di seguire le notizie. Deve capire in 5 minuti cosa è successo nel mondo nella settimana appena finita.
