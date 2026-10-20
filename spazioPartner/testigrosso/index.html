@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michele Testigrosso Barber · Spazio partner | Il Contribuente</title>
+<meta name="description" content="Michele Testigrosso, barbiere dal 1988 a Brienza (PZ). Spazio partner de Il Contribuente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9da;
+    --paper2:#e4dcc7;
+    --ink:#1b1e22;
+    --ink-soft:#565c64;
+    --rule:#c7bc9f;
+    --red:#a3291f;
+    --red-deep:#7c1d16;
+    --navy:#1f3a5f;
+    --navy-deep:#122438;
+    --gold:#a97a1f;
+    --gold-deep:#7d5a13;
+    --green:#3d6b4f;
+    --green-deep:#264734;
+    --wine:#6b2438;
+    --wine-deep:#481725;
+    --card:#fdfcf7;
+    --shadow-sm:0 1px 3px rgba(27,30,34,.12);
+    --shadow-md:0 4px 16px rgba(27,30,34,.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:900px; margin:0 auto; padding:0 6vw 80px 6vw; }
+  .topnav{ max-width:900px; margin:0 auto; padding:22px 6vw 0 6vw; }
+  .topnav a{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+  }
+  .topnav a:hover{ color:var(--ink); border-bottom-color:var(--ink); }
+  .masthead{ padding:30px 6vw 34px 6vw; border-bottom:3px solid var(--ink); max-width:900px; margin:0 auto; }
+  .dossier-kicker{
+    display:inline-block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#fff;
+    background:linear-gradient(160deg,#8a3350,var(--wine-deep));
+    padding:5px 12px;
+    border-radius:4px;
+    margin-bottom:16px;
+  }
+  h1.title{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:clamp(32px,5vw,50px);
+    line-height:1.08;
+    margin:0 0 14px 0;
+    color:var(--ink);
+  }
+  .subtitle{ font-family:'Inter',sans-serif; font-size:17px; color:var(--ink-soft); max-width:640px; margin:0; }
+  .brand-line{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:20px;
+  }
+  .brand-line em{ font-style:normal; color:var(--ink); font-weight:700; }
+  .intro{ margin:36px 0 8px 0; font-size:17.5px; color:var(--ink); }
+  .intro strong{ color:var(--wine); }
+  .updated-note{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft); margin:6px 0 32px 0; }
+  .explainer-box{
+    background:linear-gradient(160deg, #f3e6c4, #ecdcb2);
+    border-left:5px solid var(--gold);
+    border-radius:10px;
+    padding:22px 26px;
+    margin:0 0 48px 0;
+    box-shadow:var(--shadow-sm);
+  }
+  .explainer-box h2{ font-family:'Fraunces',serif; font-weight:800; font-size:21px; margin:0 0 12px 0; }
+  .explainer-box p{ font-size:15.5px; margin:0 0 10px 0; }
+  .explainer-box p:last-child{ margin-bottom:0; }
+  .explainer-box strong{ color:var(--gold-deep); }
+  .country-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin:56px 0 20px 0;
+    padding-bottom:12px;
+    border-bottom:3px solid var(--ink);
+  }
+  .country-tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.1em;
+    padding:5px 11px;
+    border-radius:4px;
+    color:#fff;
+    text-transform:uppercase;
+  }
+  .country-head h2{ font-family:'Fraunces',serif; font-weight:800; font-size:clamp(24px,3vw,32px); margin:0; }
+  .timeline{ position:relative; margin:28px 0; padding-left:28px; border-left:3px solid var(--gold); }
+  .era{ position:relative; margin-bottom:32px; }
+  .era::before{
+    content:'';
+    position:absolute; left:-35px; top:4px;
+    width:14px; height:14px; border-radius:50%;
+    background:var(--gold); border:3px solid var(--paper); box-shadow:0 0 0 2px var(--gold);
+  }
+  .era.current::before{ background:var(--red-deep); box-shadow:0 0 0 2px var(--red-deep); }
+  .era-years{
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--gold-deep); font-weight:700; margin-bottom:6px;
+  }
+  .era.current .era-years{ color:var(--red-deep); }
+  .era-title{ font-family:'Fraunces',serif; font-weight:800; font-size:21px; margin:0 0 8px 0; color:var(--ink); }
+  .era-body{ font-size:15.5px; color:var(--ink); }
+  .era-body p{ margin:0 0 10px 0; }
+  .era-numbers{
+    background:var(--card); border-left:4px solid var(--gold); border-radius:6px;
+    padding:14px 18px; margin:12px 0; box-shadow:var(--shadow-sm);
+  }
+  .era.current .era-numbers{ border-left-color:var(--red-deep); }
+  .era-numbers-label{
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;
+  }
+  .era-numbers p{ margin:0; font-size:14.5px; }
+  .era-numbers strong{ color:var(--ink); }
+  .era-source{ font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--ink-soft); margin-top:8px; }
+  .note-box{
+    background:linear-gradient(160deg, #eef3f8, #e3ebf3);
+    border-left:4px solid var(--navy);
+    border-radius:8px; padding:16px 20px; margin:20px 0; font-size:14.5px;
+  }
+  .note-box .label{
+    font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--navy); font-weight:700; margin-bottom:8px;
+  }
+  .cumulative-box{
+    background:linear-gradient(160deg,#8a3350,var(--wine-deep));
+    color:#fff; border-radius:10px; padding:26px 30px; margin:52px 0; box-shadow:var(--shadow-md);
+  }
+  .cumulative-box .k{
+    font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:#e8c9d3; margin-bottom:10px;
+  }
+  .cumulative-box p{ margin:0 0 10px 0; font-size:16px; }
+  .cumulative-box p:last-child{ margin-bottom:0; }
+  .cumulative-box strong{ color:#fff; }
+  .sources-box{ margin:44px 0 0 0; padding-top:24px; border-top:1px solid var(--rule); }
+  .sources-box h3{
+    font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 12px 0;
+  }
+  .sources-box ul{ margin:0; padding-left:18px; font-size:13.5px; color:var(--ink-soft); }
+  .sources-box li{ margin-bottom:5px; }
+  footer{ max-width:900px; margin:60px auto 0 auto; padding:28px 6vw 40px 6vw; border-top:3px solid var(--ink); }
+  .footer-back{
+    display:inline-block; margin-bottom:22px; font-family:'JetBrains Mono',monospace;
+    font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft);
+    text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:2px;
+  }
+  .footer-legal p{ font-size:12px; color:var(--ink-soft); line-height:1.6; margin:0 0 8px 0; }
+  .footer-legal p:last-child{ margin-bottom:0; }
+  @media (max-width:640px){
+    .timeline{ padding-left:20px; }
+    .era::before{ left:-27px; width:11px; height:11px; }
+    .country-head{ flex-direction:column; align-items:flex-start; gap:8px; }
+  }
+
+  .wrap > .week-block:first-child{ margin-top:30px; }
+  .week-figure{ margin:0 0 18px 0; }
+  .week-figure img{ width:100%; height:300px; object-fit:cover; display:block; border-radius:8px; background:var(--paper2); }
+  .week-figure figcaption{ font-family:'Inter',sans-serif; font-size:12.5px; color:var(--ink-soft); margin-top:6px; line-height:1.45; }
+  .week-figure figcaption a{ color:var(--ink-soft); }
+  @media(max-width:640px){ .week-figure img{ height:200px; } }
+  .week-block{ background:var(--card); border:1px solid var(--rule); border-radius:12px; padding:26px 28px; margin:0 0 26px 0; box-shadow:var(--shadow-sm); }
+  .week-block h2{ font-family:'Fraunces',serif; font-weight:900; font-size:28px; margin:0 0 14px 0; color:var(--ink); }
+  .week-block p{ font-family:Georgia,'Times New Roman',serif; font-size:18px; line-height:1.7; margin:0 0 14px 0; }
+  .week-block .in-short{ border-top:1px solid var(--rule); padding-top:14px; margin-top:6px; margin-bottom:0; }
+  .week-block .in-short strong{ font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--red-deep); display:block; margin-bottom:4px; }
+  .week-dates{ font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold-deep); margin-top:10px; }
+  @media(max-width:640px){ .week-block{ padding:20px 18px; } .week-block h2{ font-size:23px; } .week-block p{ font-size:17px; } }
+
+  .rule-block{ background:var(--card); border:1px solid var(--rule); border-radius:12px; padding:24px 28px; margin:0 0 22px 0; box-shadow:var(--shadow-sm); }
+  .rule-num{ font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-deep); font-weight:700; margin-bottom:6px; }
+  .rule-block h2{ font-family:'Fraunces',serif; font-weight:800; font-size:24px; margin:0 0 10px 0; }
+  .rule-block p{ font-family:Georgia,'Times New Roman',serif; font-size:17.5px; line-height:1.65; margin:0 0 10px 0; }
+  .rule-block p:last-child{ margin-bottom:0; }
+  .rule-list{ list-style:none; margin:4px 0 0 0; padding:0; }
+  .rule-list li{ font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:1.55; padding:8px 0 8px 32px; position:relative; border-top:1px solid #ece5d3; }
+  .rule-list li:first-child{ border-top:none; }
+  .rule-list.yes li::before{ content:'✓'; position:absolute; left:4px; top:8px; color:var(--green); font-weight:700; font-family:'Inter',sans-serif; }
+  .rule-list.no li::before{ content:'✕'; position:absolute; left:4px; top:8px; color:var(--red); font-weight:700; font-family:'Inter',sans-serif; }
+  .rule-block.promise{ background:linear-gradient(160deg,#1f3a5f,var(--navy-deep)); border:none; color:#fff; }
+  .rule-block.promise .rule-num{ color:#c9d8ea; }
+  .rule-block.promise h2{ color:#fff; }
+  .rule-block.promise .rule-list li{ color:#eef3f8; border-top-color:rgba(255,255,255,.12); }
+  .rule-block.promise .rule-list li::before{ content:'●'; position:absolute; left:6px; top:12px; color:#f0d083; font-size:11px; }
+  .two-col{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin:0 0 22px 0; }
+  .two-col .rule-block{ margin:0; }
+  .steps{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:8px; }
+  .step{ background:var(--paper); border:1px solid var(--rule); border-radius:10px; padding:14px 16px; }
+  .step b{ display:block; font-family:'Fraunces',serif; font-size:28px; color:var(--gold-deep); line-height:1; margin-bottom:6px; }
+  .step span{ font-family:'Inter',sans-serif; font-size:14.5px; line-height:1.45; color:var(--ink); }
+  .apply-box{ background:linear-gradient(160deg, #f3e6c4, #ecdcb2); border-left:5px solid var(--gold); border-radius:10px; padding:22px 26px; margin:0 0 22px 0; box-shadow:var(--shadow-sm); }
+  .apply-box h2{ font-family:'Fraunces',serif; font-weight:800; font-size:24px; margin:0 0 10px 0; }
+  .apply-box p{ font-size:15.5px; margin:0 0 12px 0; }
+  .apply-list{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px 0; padding:0; list-style:none; }
+  .apply-list li{ font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.04em; text-transform:uppercase; background:rgba(255,255,255,.55); border:1px solid var(--rule); border-radius:999px; padding:6px 12px; }
+  .apply-btn{ display:inline-flex; align-items:center; height:46px; padding:0 20px; border-radius:999px; background:var(--ink); color:#f4d27a; font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.04em; text-transform:uppercase; font-weight:700; text-decoration:none; }
+  .free-badge{ display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--green-deep); background:#dfeadf; border:1px solid #b9d0bb; border-radius:4px; padding:4px 10px; margin-top:14px; }
+  .mail-row{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin:0 0 14px 0; }
+  .mail-addr{ font-family:'JetBrains Mono',monospace; font-size:14.5px; font-weight:700; color:var(--ink); background:rgba(255,255,255,.7); border:1px solid var(--rule); border-radius:8px; padding:9px 12px; user-select:all; -webkit-user-select:all; word-break:break-all; }
+  .mail-copy{ height:40px; padding:0 14px; border-radius:999px; border:1px solid var(--gold-deep); background:transparent; color:var(--gold-deep); font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.04em; text-transform:uppercase; font-weight:700; cursor:pointer; }
+  .apply-actions{ display:flex; flex-wrap:wrap; gap:10px; }
+  .apply-btn.alt{ background:transparent; color:var(--ink); border:1px solid var(--ink); }
+  .mail-note{ font-size:13px !important; color:var(--ink-soft); margin:12px 0 0 0 !important; }
+  @media(max-width:640px){ .mail-copy{ width:100%; } .apply-actions .apply-btn{ width:100%; justify-content:center; } }
+  @media(max-width:640px){ .two-col{ grid-template-columns:1fr; } .steps{ grid-template-columns:1fr; } .rule-block{ padding:20px 18px; } .rule-block h2,.apply-box h2{ font-size:21px; } .apply-btn{ width:100%; justify-content:center; } }
+
+  .sp-logo{ background:#fff; border:1px solid var(--rule); border-radius:12px; padding:14px 18px; display:inline-block; margin:4px 0 18px 0; box-shadow:var(--shadow-sm); }
+  .sp-logo img{ display:block; height:64px; width:auto; }
+  .site-btn{ display:inline-flex; align-items:center; height:48px; padding:0 22px; border-radius:999px; background:var(--navy); color:#fff; font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.05em; text-transform:uppercase; font-weight:700; text-decoration:none; margin-top:20px; box-shadow:var(--shadow-md); }
+  .site-btn:hover{ background:var(--navy-deep); }
+  .hero-photo{ margin:30px 0 26px 0; }
+  .hero-photo img{ width:100%; height:380px; object-fit:cover; display:block; border-radius:12px; box-shadow:var(--shadow-md); }
+  .num-row{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:6px 0 12px 0; }
+  .num-row .step b{ font-size:30px; }
+  .place{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:8px; }
+  .place .step b{ font-size:19px; color:var(--navy); margin-bottom:4px; }
+  .cert-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+  .cert{ font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.04em; background:#e3ebf3; border:1px solid #b9c9da; color:var(--navy-deep); border-radius:6px; padding:8px 11px; }
+  .cert b{ display:block; font-size:13px; }
+  .gallery{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:0 0 22px 0; }
+  .gallery img{ width:100%; height:190px; object-fit:cover; display:block; border-radius:8px; box-shadow:var(--shadow-sm); }
+  .contact-list{ list-style:none; margin:0 0 6px 0; padding:0; }
+  .contact-list li{ font-family:Georgia,'Times New Roman',serif; font-size:17px; padding:8px 0; border-top:1px solid #ece5d3; }
+  .contact-list li:first-child{ border-top:none; }
+  .contact-list span{ display:inline-block; min-width:120px; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
+  .contact-list a{ color:var(--navy); }
+  @media(max-width:640px){ .hero-photo img{ height:220px; } .num-row,.place{ grid-template-columns:1fr; } .gallery{ grid-template-columns:repeat(2,minmax(0,1fr)); } .gallery img{ height:130px; } .site-btn{ width:100%; justify-content:center; } .sp-logo img{ height:48px; } }
+
+  .round-logo{ display:inline-block; background:#fff; border-radius:14px; padding:8px; margin:4px 0 18px 0; box-shadow:var(--shadow-md); }
+  .round-logo img{ display:block; width:130px; height:130px; border-radius:8px; object-fit:contain; background:#fff; }
+  .hero-photo.portrait img{ height:460px; object-position:center 4%; }
+  .site-btn.wa{ background:#1f7a4a; } .site-btn.wa:hover{ background:#165c37; }
+  .btn-row{ display:flex; flex-wrap:wrap; gap:10px; }
+  .site-btn.ghost{ background:transparent; color:var(--ink); border:1px solid var(--ink); box-shadow:none; }
+  @media(max-width:640px){ .hero-photo.portrait img{ height:340px; } .round-logo img{ width:104px; height:104px; } }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="../../index.html">&larr; Il Contribuente</a>
+</div>
+
+<div class="masthead">
+  <span class="dossier-kicker" style="background:linear-gradient(160deg,#4a7a5c,var(--green-deep));">Spazio partner</span>
+  <div><span class="round-logo"><img src="logo.jpg" alt="Logo Barber Michele Testigrosso dal 1988"></span></div>
+  <h1 class="title">Michele Testigrosso</h1>
+  <p class="subtitle">Barbiere dal 1988 a Brienza (PZ). Campione del mondo a Londra nel 2025.</p>
+  <div class="btn-row"><a class="site-btn wa" href="https://wa.me/393281290186" target="_blank" rel="noopener">Prenota su WhatsApp →</a><a class="site-btn ghost" href="https://www.instagram.com/micheletestigrosso/" target="_blank" rel="noopener">Instagram →</a></div>
+</div>
+
+<div class="wrap">
+
+  <figure class="hero-photo portrait" style="margin-left:0;margin-right:0;"><img src="campione.jpg" alt="Michele Testigrosso con la coppa e il diploma di campione del mondo a Londra"></figure>
+
+  <div class="rule-block">
+    <div class="rule-num">01 · Chi è</div>
+    <h2>Barbiere dal 1988</h2>
+    <p>Michele Testigrosso fa il barbiere dal 1988. La sua bottega è a Brienza, in provincia di Potenza, in Via Aceronia.</p>
+    <p>Oltre al lavoro in salone, porta la sua arte nelle competizioni e negli eventi di moda in tutta Italia e all'estero.</p>
+  </div>
+
+  <div class="rule-block">
+    <div class="rule-num">02 · Riconoscimenti ed eventi</div>
+    <h2>Dal salone di Brienza al mondo</h2>
+    <ul class="rule-list yes">
+      <li>Campione del mondo a Londra nel 2025, categoria «Razor Low Fade»</li>
+      <li>Barber ufficiale della Fashion Night di Reggio Calabria</li>
+      <li>Official barber dell'evento «Cento» allo stadio Diego Armando Maradona di Napoli (2026)</li>
+      <li>Al Milano Fashion Show 2026</li>
+      <li>Nel team dei barbieri de «Il più bello d'Italia», in Liguria (2023)</li>
+    </ul>
+  </div>
+
+  <div class="rule-block">
+    <div class="rule-num">03 · Dove</div>
+    <h2>Brienza (PZ)</h2>
+    <div class="place">
+      <div class="step"><b>Il salone</b><span>Via Aceronia, 2 · 85050 Brienza (PZ)</span></div>
+      <div class="step"><b>Come arrivare</b><span><a href="https://www.google.com/maps/search/?api=1&query=Michele+Testigrosso+Barber+Via+Aceronia+2+85050+Brienza+PZ" target="_blank" rel="noopener" style="color:var(--navy);">Apri la mappa →</a></span></div>
+    </div>
+  </div>
+
+  <div class="gallery"><img src="milano.jpg" alt="Michele Testigrosso al Milano Fashion Show 2026"><img src="salone.jpg" alt="Al lavoro durante un evento"><img src="taglio2.jpg" alt="Taglio con sfumatura"><img src="taglio3.jpg" alt="Taglio e barba"><img src="fashionnight.jpg" alt="Barber ufficiale della Fashion Night di Reggio Calabria"><img src="cento.jpg" alt="Official barber dell'evento Cento allo stadio Maradona"></div>
+
+  <div class="apply-box">
+    <h2>Info e prenotazioni</h2>
+    <ul class="contact-list">
+      <li><span>Cellulare</span><a href="tel:+393281290186">328 1290186</a> · <a href="https://wa.me/393281290186" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><span>Telefono</span><a href="tel:+390975384039">0975 384039</a></li>
+      <li><span>Indirizzo</span>Via Aceronia, 2 · 85050 Brienza (PZ)</li>
+      <li><span>Social</span><a href="https://www.instagram.com/micheletestigrosso/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/michele.testigrosso/" target="_blank" rel="noopener">Facebook</a></li>
+      <li><span>Partita Iva</span>00975700766</li>
+    </ul>
+    <div class="apply-actions" style="margin-top:14px;"><a class="apply-btn" href="https://wa.me/393281290186" target="_blank" rel="noopener">Prenota su WhatsApp →</a><a class="apply-btn alt" href="https://www.google.com/maps/search/?api=1&query=Michele+Testigrosso+Barber+Via+Aceronia+2+85050+Brienza+PZ" target="_blank" rel="noopener">Indicazioni stradali →</a></div>
+  </div>
+
+</div>
+
+<footer>
+  <a href="../../index.html" class="footer-back">&larr; Torna a Il Contribuente</a>
+  <div class="footer-legal">
+    <p>Spazio partner: annuncio gratuito, separato dalle notizie. Non influenza in alcun modo il lavoro della redazione.</p>
+    <p>Testi, dati e fotografie provengono dall'attività e dai suoi profili social, che ne sono responsabili. Ogni annuncio resta pubblicato 30 giorni.</p>
+    <p>Richieste di rettifica o rimozione: <a href="mailto:redazione.ilcontribuente@protonmail.com" style="color:var(--ink-soft);">redazione.ilcontribuente@protonmail.com</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
