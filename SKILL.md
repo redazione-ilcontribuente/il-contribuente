@@ -256,7 +256,7 @@ Può contenere:
 
 Non deve diventare un resoconto del lavoro della redazione.
 
-REGOLA VINCOLANTE (Mario, 20/9/2026): il box "Da sapere per capire" di OGNI sezione deve essere corposo, non una singola riga stringata. Target: 3-5 frasi (un vero paragrafo), che diano al lettore un quadro reale del contesto e non un sottotitolo travestito da box. Vale per tutte le sezioni, ogni giorno.
+REGOLA VINCOLANTE (Mario, 20/10/2026, sostituisce la regola del 20/9/2026 sui 3-5 frasi): il box "Da sapere per capire" di OGNI sezione deve essere BREVE, non un articolo prima dell'articolo. LUNGHEZZA MASSIMA: 2-3 frasi e al massimo 60 parole. Solo il contesto indispensabile (un precedente, un dato, una definizione), niente cronaca e niente ripetizione degli articoli. Vale per tutte le sezioni della rassegna, ogni giorno.
 
 ---
 
@@ -404,11 +404,11 @@ MAI:
 ---
 
 # 12. LUNGHEZZA — GIORNALE CORPOSO
-Gli articoli devono essere più pieni della precedente versione.
+Gli articoli devono essere brevi e densi di fatti: meno parole, stesse informazioni essenziali.
 
 Obiettivo indicativo:
 
-**250-350 parole per articolo**, salvo casi in cui la natura della notizia richieda una lunghezza diversa.
+REGOLA VINCOLANTE (Mario, 20/10/2026, sostituisce i 250-350 parole): articoli più corti in TUTTA la rassegna del giorno (`index.html`: Ultime news, Confronto e le sue 3 prospettive, tutte le sezioni dell'indice). Lunghezza: **180-230 parole per articolo, MASSIMO 250**. La regola NON riguarda gli approfondimenti fissi (SuperPotenze, sanzioni, immigrazioneEuropa, guerre, glossario, dazi, conflittiMondo), le dashboard e «I fatti della settimana».
 
 La priorità non è raggiungere un numero artificiale di parole, ma fornire informazioni sufficienti.
 
@@ -416,7 +416,7 @@ Ogni articolo deve normalmente contenere:
 
 ### Lead
 
-Circa 70-100 parole.
+3-4 frasi, circa 60-80 parole.
 
 Deve rispondere rapidamente a:
 
@@ -429,7 +429,7 @@ Deve rispondere rapidamente a:
 
 ### Approfondimento
 
-Almeno 2 paragrafi aggiuntivi quando la notizia lo consente.
+1-2 paragrafi brevi, in tutto circa 100-140 parole.
 
 Devono sviluppare:
 
@@ -1130,15 +1130,15 @@ REGOLA AGGIORNATA E VINCOLANTE (Mario, 20/9/2026, sostituisce l'ordine precedent
 
 Ordine obbligatorio:
 
-1. **Da sapere per capire** — breve contesto indispensabile per comprendere la notizia (vedi anche sezione 7: deve essere un paragrafo corposo, non una riga).
-2. **Il fatto** — apertura immediata con **4-5 frasi** chiare e informative (sempre visibile).
+1. **Da sapere per capire** — breve contesto indispensabile per comprendere la notizia (vedi sezione 8: massimo 2-3 frasi e 60 parole).
+2. **Il fatto** — apertura immediata con **3-4 frasi** chiare e informative, circa 60-80 parole (sempre visibile; regola del 20/10/2026).
 3. **Approfondimento** — contenuto completo, dati, reazioni, contesto e confronto tra fonti (nascosto di default in `.body-extra`, compare quando l'articolo viene espanso).
 4. **Fonte/i** — in fondo al contenuto, sempre visibile.
 5. **Continua a leggere / Mostra meno** — UNICO pulsante, posizionato per ultimo, dopo la fonte: è l'ultimo elemento dell'articolo, non uno spartiacque a metà testo.
 
 Il testo completo NON deve essere visibile tutto nella card iniziale. L'obiettivo è mantenere la pagina leggibile e compatta, evitando articoli infiniti che occupano verticalmente tutta la sezione.
 
-Le 4-5 frasi iniziali devono essere sufficienti per capire subito cosa è successo. Il contenuto successivo deve aggiungere informazioni reali e non ripetere l'apertura.
+Le 3-4 frasi iniziali devono essere sufficienti per capire subito cosa è successo. Il contenuto successivo deve aggiungere informazioni reali e non ripetere l'apertura.
 
 **Da sapere per capire** non è un titolo ornamentale: deve contenere realmente il contesto necessario. **Il fatto** deve invece partire dall'aggiornamento attuale.
 
