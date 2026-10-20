@@ -256,7 +256,7 @@ Può contenere:
 
 Non deve diventare un resoconto del lavoro della redazione.
 
-REGOLA VINCOLANTE (Mario, 20/10/2026, sostituisce la regola del 20/9/2026 sui 3-5 frasi): il box "Da sapere per capire" di OGNI sezione deve essere BREVE, non un articolo prima dell'articolo. LUNGHEZZA MASSIMA: 2-3 frasi e al massimo 60 parole. Solo il contesto indispensabile (un precedente, un dato, una definizione), niente cronaca e niente ripetizione degli articoli. Vale per tutte le sezioni della rassegna, ogni giorno.
+REGOLA VINCOLANTE (Mario, 20/10/2026, sostituisce la regola del 20/9/2026 sui 3-5 frasi): il box "Da sapere per capire" di OGNI sezione deve essere BREVE, non un articolo prima dell'articolo. LUNGHEZZA MASSIMA: 2-3 frasi e al massimo 60 parole. Solo il contesto indispensabile (un precedente, un dato, una definizione), niente cronaca e niente ripetizione degli articoli. Vale SOLO per la rassegna stampa quotidiana (`index.html`: tutte le sue sezioni, Confronto incluso), ogni giorno; NON per gli approfondimenti fissi, le dashboard e «I fatti della settimana».
 
 ---
 
