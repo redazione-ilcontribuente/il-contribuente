@@ -1152,7 +1152,7 @@ La struttura HTML/CSS/JS deve essere uniforme in tutte le sezioni, così l'utent
 Oltre all'indice standard della sezione 5, il sito pubblicato include altre sezioni/dashboard fisse che Mario ha aggiunto nel tempo direttamente nelle edizioni, e che NON fanno parte dell'indice/della lista di sezioni da riscrivere ogni giorno:
 
 - Sezione "Approfondimenti fissi" (sidebar, id `approfondimenti`) — link fissi (Geopolitica, Conflitti nel mondo, Immigrazione in Europa, Guerre, Dazi, Sanzioni, Glossario) e box "Termine del giorno"/statistiche;
-- Box "Spazio partner" (classe `partner-box`, sotto la card "I fatti della settimana") e pagina `spazioPartner/comeFunziona.html` — vedi sezione 51;
+- Box "Spazio partner" (classe `partner-box`, sotto la card "I fatti della settimana"), pagina `spazioPartner/comeFunziona.html` e pagine sponsor `spazioPartner/bitetti/`, `lucana/`, `testigrosso/` — MAI TOCCARE, vedi sezione 51;
 - Dashboard "Sicurezza Pubblica" (id `sicurezza-pubblica`);
 - Dashboard "Petrolio Basilicata" (id `petrolio-basilicata`), con la sotto-lista "Le ultime notizie" — REGOLA ASSOLUTA E PERMANENTE (ribadita 20/9/2026): tutte le notizie di questa sotto-lista devono SEMPRE essere affiancate in orizzontale, per sempre, su ogni dispositivo, senza alcuna eccezione futura.
 
@@ -1734,6 +1734,16 @@ Una vetrina gratuita per chi vuole farsi conoscere: aziende, partite Iva, profes
 - NON usare «Le regole valgono sempre» né «per presentarsi ai lettori de Il Contribuente».
 - Email della redazione: SOLO redazione.ilcontribuente@protonmail.com.
 - Il footer legale dell'index resta com'è (Mario, 14/10/2026): la spiegazione sta tutta nella pagina Spazio partner.
+
+## Sponsor attivi (pubblicati il 20/10/2026)
+- I 3 spazi vuoti sono stati sostituiti dalle card dei 3 sponsor (logo, nome, una riga, «Scopri →»):
+  - **Autotrasporti Bitetti** → `spazioPartner/bitetti/` (oro);
+  - **La Lucana Infissi** → `spazioPartner/lucana/` (blu);
+  - **Michele Testigrosso Barber** → `spazioPartner/testigrosso/` (verde; immagine principale: locandina «Cento»).
+- Ogni sponsor ha la sua cartella con `index.html`, logo e foto. Nelle pagine sponsor NON c'è la riga «Annuncio gratuito · separato dalle notizie» (tolta su richiesta di Mario).
+
+## REGOLA ASSOLUTA (Mario, 20/10/2026) — MAI TOCCARE
+Dal 21/10/2026 il box «Spazio partner» dell'index (card dei 3 sponsor + CSS `<style id="spazio-partner">`) e le pagine `spazioPartner/bitetti/`, `spazioPartner/lucana/`, `spazioPartner/testigrosso/` NON vanno MAI toccati, modificati o rimossi. Si copiano IDENTICI in ogni edizione. Li toglierà Mario stesso (circa un mese dopo la pubblicazione).
 
 ## Rassegna quotidiana
 Le attività notturne (parte 1 e parte 2) partono dall'index pubblicato: box e CSS «Spazio partner» vanno copiati IDENTICI ogni giorno, mai rimossi o modificati.
