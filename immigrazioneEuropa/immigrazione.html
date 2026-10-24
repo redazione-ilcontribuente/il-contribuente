@@ -140,6 +140,39 @@
     color:var(--ink-soft);
     max-width:820px;
   }
+  /* ===== Blocco riepilogo leggibile sotto il titolo (Mario, 24/10/2026):
+     cifre chiave + Italia + rotte + vittime + ultimi fatti. Struttura fissa:
+     ogni giorno cambiano solo numeri, date e testi. ===== */
+  .im-brief{ max-width:900px; margin-top:18px; }
+  .im-stats{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:18px; }
+  .im-stat{ background:var(--card); border:1px solid var(--rule); border-top:3px solid var(--navy); border-radius:8px; padding:12px 14px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; gap:4px; }
+  .im-stat-red{ border-top-color:var(--red); }
+  .im-stat-label{ font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); }
+  .im-stat-value{ font-family:'Fraunces',serif; font-weight:800; font-size:26px; color:var(--ink); line-height:1.1; }
+  .im-stat-red .im-stat-value{ color:var(--red); }
+  .im-stat-note{ font-size:12.5px; line-height:1.4; color:var(--ink-soft); }
+  .im-block{ background:var(--card); border:1px solid var(--rule); border-radius:8px; padding:16px 20px; margin-bottom:14px; box-shadow:var(--shadow-sm); }
+  .im-h{ font-family:'Fraunces',serif; font-weight:700; font-size:19px; margin:0 0 10px 0; color:var(--navy-deep); }
+  .im-block ul{ margin:0; padding-left:20px; }
+  .im-block li{ font-size:15px; line-height:1.6; color:var(--ink); margin-bottom:6px; }
+  .im-text{ font-size:15px; line-height:1.6; color:var(--ink); margin:10px 0 0 0; }
+  .im-src{ font-size:12.5px; color:var(--ink-soft); font-style:italic; margin:8px 0 0 0; }
+  .im-routes{ width:100%; border-collapse:collapse; font-size:15px; }
+  .im-routes td{ padding:7px 6px; border-bottom:1px solid var(--rule); color:var(--ink); }
+  .im-routes td:nth-child(2){ text-align:right; white-space:nowrap; }
+  .im-routes td:nth-child(3){ text-align:right; font-weight:700; white-space:nowrap; width:70px; }
+  .im-down{ color:var(--green); }
+  .im-up{ color:var(--red); }
+  .im-block ul.im-timeline{ list-style:none; padding-left:0; }
+  .im-timeline li{ display:grid; grid-template-columns:86px minmax(0,1fr); gap:12px; padding:8px 0; border-bottom:1px dashed var(--rule); margin:0; }
+  .im-timeline li:last-child{ border-bottom:none; }
+  .im-date{ font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--navy); padding-top:3px; }
+  @media (max-width:760px){ .im-stats{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:640px){
+    .im-stat-value{ font-size:22px; }
+    .im-block{ padding:14px 14px; }
+    .im-timeline li{ grid-template-columns:1fr; gap:2px; }
+  }
   .neutral-note{
     display:flex;
     gap:12px;
@@ -475,7 +508,64 @@
   <div class="page-head">
     <span class="page-tag">Immigrazione in Europa</span>
     <h2 class="page-title">23 paesi di provenienza, cinque rotte verso l'Europa</h2>
-    <p class="page-note">Ogni paese colorato sulla mappa è oggi tra i principali paesi di origine dei flussi migratori irregolari verso l'Europa. I colori indicano la rotta prevalente utilizzata. I paesi in grigio non figurano oggi tra le principali origini dei flussi irregolari verso il continente. Per l'Italia, secondo il cruscotto statistico del Viminale ripreso dall'agenzia Sir, al 23 ottobre 2026 gli sbarchi da inizio anno sono 25.830 (25.660 al 21 ottobre, contro 57.021 nello stesso periodo del 2025), con oltre 2.800 arrivi a ottobre; la prima nazionalità dichiarata è il Bangladesh, seguita da Algeria, Somalia e Sudan. I rimpatri, forzati e volontari assistiti, erano 7.058 al 19 ottobre (6.048 forzati e 1.010 volontari), già più dei 6.772 di tutto il 2025. Secondo i dati preliminari di Frontex diffusi il 19 ottobre, nei primi nove mesi del 2026 gli attraversamenti irregolari verso l'Ue sono stati poco più di 91mila, quasi un terzo in meno: Mediterraneo orientale circa 31.800 (-15%), Mediterraneo centrale circa 22.500 (-56%), Mediterraneo occidentale circa 18.300 (+26%, unica grande rotta in crescita), Africa occidentale verso le Canarie circa 7.100 (-45%); Frontex conta rilevamenti, non persone, e il direttore Hans Leijtens avverte che «le reti di trafficanti non scompaiono quando i numeri calano» (Lovguiden). Il calo degli arrivi non corrisponde a un calo delle vittime: secondo i dati di Unhcr, Unicef e Oim ripresi dall'Agi, da gennaio a fine settembre circa mille persone sono morte o disperse nel Mediterraneo centrale, un morto ogni 23 arrivi contro uno ogni 60 nel 2025; per il Missing Migrants Project dell'Oim, dall'inizio del 2026 le persone morte o disperse nell'intero Mediterraneo sono almeno 1.982. Tra l'11 e il 12 ottobre le navi Sea-Watch 5 e Aurora 2 hanno soccorso 227 persone in acque internazionali: alla Sea-Watch 5 è stato assegnato il porto di Civitavecchia, a circa tre giorni di navigazione, e l'organizzazione chiede un porto più vicino. Il 13 ottobre a Genova il ministro dell'Interno Matteo Piantedosi ha rilanciato l'ipotesi di un Centro di permanenza per il rimpatrio (Cpr) in Liguria: la Regione si è detta pronta a collaborare, il Pd è contrario. Il 16 ottobre il Consiglio europeo di Bruxelles si è diviso sulla regolarizzazione straordinaria di circa 600mila migranti avviata dalla Spagna: Danimarca, Italia e Polonia chiedevano conclusioni più dure, Spagna e Francia si sono opposte, e secondo Euronews è passato un testo più breve che chiede alla Commissione di coordinare la risposta a «tutti i tipi di strumentalizzazione». Ursula von der Leyen ha annunciato un quadro europeo d'emergenza entro fine anno e una proposta per rafforzare Frontex; a margine Giorgia Meloni ha riunito con Danimarca e Paesi Bassi altri 15 Stati sulle «soluzioni innovative» per gestire i flussi (Agenzia Nova). Il 17 ottobre a Livorno la nave Solidaire ha sbarcato 11 migranti, otto pakistani e tre eritrei, subito avviati alla procedura di frontiera prevista dal Patto Ue (Ansa); la Humanity 1, con 80 persone soccorse il 14 ottobre, è attesa a Savona il 19 ottobre dopo oltre cinque giorni di navigazione in più, che l'Ong definisce frutto di «una decisione politica» (Ivg). In Grecia, secondo il ministro della Migrazione Thanos Plevris, nel 2026 a Creta sono arrivati oltre 19mila migranti partiti soprattutto dalla Libia, e un'ex fabbrica vicino a Heraklion diventerà un centro di accoglienza temporaneo (Ansa). Il 22 ottobre Italia e Spagna hanno deciso di togliere i controlli temporanei alle frontiere comuni introdotti dopo la crisi di Ceuta e di tornare alle regole di Schengen, dopo una telefonata tra i ministri dell'Interno Matteo Piantedosi e Fernando Grande-Marlaska, con l'impegno a un maggiore scambio di informazioni (Euronews). Secondo la portavoce del governo spagnolo Elma Saiz, dal 10 agosto circa 12.700 persone sono rientrate da Ceuta in Marocco: 12.142 ritorni volontari e 536 espulsioni (Ansa). Il 23 ottobre la Lega ha depositato in Consiglio regionale un ordine del giorno per un Cpr in Liguria, contestato dal Pd; il Viminale ha già avviato l'iter per sei nuovi centri (Liguria Notizie, Sanremonews).</p>
+    <p class="page-note">Ogni paese colorato sulla mappa è oggi tra i principali paesi di origine dei flussi migratori irregolari verso l'Europa. I colori indicano la rotta prevalente. I paesi in grigio non figurano tra le principali origini.</p>
+    <div class="im-brief">
+      <div class="im-stats">
+        <div class="im-stat"><span class="im-stat-label">Sbarchi in Italia nel 2026</span><span class="im-stat-value">25.830</span><span class="im-stat-note">al 23 ottobre · 57.021 nello stesso periodo del 2025</span></div>
+        <div class="im-stat"><span class="im-stat-label">Rimpatri in Italia</span><span class="im-stat-value">7.058</span><span class="im-stat-note">al 19 ottobre · già più dei 6.772 di tutto il 2025</span></div>
+        <div class="im-stat"><span class="im-stat-label">Ingressi irregolari nell'Ue</span><span class="im-stat-value">91mila</span><span class="im-stat-note">primi nove mesi 2026 · quasi un terzo in meno</span></div>
+        <div class="im-stat im-stat-red"><span class="im-stat-label">Morti e dispersi nel Mediterraneo</span><span class="im-stat-value">1.982</span><span class="im-stat-note">almeno, dall'inizio del 2026 · Oim</span></div>
+      </div>
+
+      <div class="im-block">
+        <h3 class="im-h">Italia</h3>
+        <ul>
+          <li>Al 23 ottobre gli sbarchi da inizio anno sono 25.830. Al 21 ottobre erano 25.660.</li>
+          <li>A ottobre sono arrivate oltre 2.800 persone.</li>
+          <li>Prima nazionalità dichiarata: Bangladesh. Seguono Algeria, Somalia e Sudan.</li>
+          <li>Rimpatri al 19 ottobre: 6.048 forzati e 1.010 volontari assistiti.</li>
+        </ul>
+        <p class="im-src">Fonte: cruscotto statistico del Viminale, ripreso dall'agenzia Sir.</p>
+      </div>
+
+      <div class="im-block">
+        <h3 class="im-h">Le rotte verso l'Europa (gennaio-settembre 2026)</h3>
+        <table class="im-routes">
+          <tr><td>Mediterraneo orientale</td><td>circa 31.800</td><td class="im-down">−15%</td></tr>
+          <tr><td>Mediterraneo centrale</td><td>circa 22.500</td><td class="im-down">−56%</td></tr>
+          <tr><td>Mediterraneo occidentale</td><td>circa 18.300</td><td class="im-up">+26%</td></tr>
+          <tr><td>Africa occidentale verso le Canarie</td><td>circa 7.100</td><td class="im-down">−45%</td></tr>
+        </table>
+        <p class="im-text">Il Mediterraneo occidentale è l'unica grande rotta in crescita. Frontex conta i rilevamenti, non le persone. Il direttore Hans Leijtens avverte: «le reti di trafficanti non scompaiono quando i numeri calano».</p>
+        <p class="im-src">Fonte: dati preliminari Frontex del 19 ottobre (Lovguiden).</p>
+      </div>
+
+      <div class="im-block">
+        <h3 class="im-h">Meno arrivi, non meno vittime</h3>
+        <ul>
+          <li>Da gennaio a fine settembre circa mille persone sono morte o disperse nel Mediterraneo centrale.</li>
+          <li>Oggi muore una persona ogni 23 arrivi. Nel 2025 era una ogni 60.</li>
+          <li>Nell'intero Mediterraneo, dall'inizio del 2026, i morti o dispersi sono almeno 1.982.</li>
+        </ul>
+        <p class="im-src">Fonti: Unhcr, Unicef e Oim via Agi; Missing Migrants Project dell'Oim.</p>
+      </div>
+
+      <div class="im-block">
+        <h3 class="im-h">Gli ultimi fatti</h3>
+        <ul class="im-timeline">
+          <li><span class="im-date">11-12 ott</span>Le navi Sea-Watch 5 e Aurora 2 soccorrono 227 persone in acque internazionali. Alla Sea-Watch 5 viene assegnato Civitavecchia, a circa tre giorni di navigazione. L'organizzazione chiede un porto più vicino.</li>
+          <li><span class="im-date">13 ott</span>A Genova il ministro dell'Interno Matteo Piantedosi rilancia l'ipotesi di un Cpr (Centro di permanenza per il rimpatrio) in Liguria. La Regione è pronta a collaborare, il Pd è contrario.</li>
+          <li><span class="im-date">14 ott</span>La Humanity 1 soccorre 80 persone. È attesa a Savona il 19 ottobre, dopo oltre cinque giorni di navigazione in più. Per l'Ong è «una decisione politica» (Ivg).</li>
+          <li><span class="im-date">16 ott</span>Il Consiglio europeo si divide sulla regolarizzazione di circa 600mila migranti avviata dalla Spagna. Danimarca, Italia e Polonia chiedono conclusioni più dure, Spagna e Francia si oppongono. Passa un testo più breve contro «tutti i tipi di strumentalizzazione» (Euronews).</li>
+          <li><span class="im-date">16 ott</span>Ursula von der Leyen annuncia un quadro europeo d'emergenza entro fine anno e una proposta per rafforzare Frontex. Giorgia Meloni riunisce con Danimarca e Paesi Bassi altri 15 Stati sulle «soluzioni innovative» (Agenzia Nova).</li>
+          <li><span class="im-date">17 ott</span>A Livorno la nave Solidaire sbarca 11 migranti: otto pakistani e tre eritrei. Sono subito avviati alla procedura di frontiera del Patto Ue (Ansa).</li>
+          <li><span class="im-date">Grecia</span>Nel 2026 a Creta sono arrivati oltre 19mila migranti, partiti soprattutto dalla Libia. Un'ex fabbrica vicino a Heraklion diventerà un centro di accoglienza temporaneo (ministro Thanos Plevris, Ansa).</li>
+          <li><span class="im-date">22 ott</span>Italia e Spagna tolgono i controlli temporanei alle frontiere comuni, introdotti dopo la crisi di Ceuta. Si torna alle regole di Schengen, con più scambio di informazioni (Euronews).</li>
+          <li><span class="im-date">Ceuta</span>Dal 10 agosto circa 12.700 persone sono rientrate in Marocco: 12.142 ritorni volontari e 536 espulsioni (portavoce del governo spagnolo Elma Saiz, Ansa).</li>
+          <li><span class="im-date">23 ott</span>La Lega deposita in Consiglio regionale un ordine del giorno per un Cpr in Liguria, contestato dal Pd. Il Viminale ha già avviato l'iter per sei nuovi centri (Liguria Notizie, Sanremonews).</li>
+        </ul>
+      </div>
+    </div>
     <div class="neutral-note">
       <span class="icon">&#9878;&#65039;</span>
       <p>Per ogni paese trovi tre chiavi di lettura distinte: le <strong>cause politiche</strong> (conflitti, repressione, instabilità istituzionale), gli <strong>accordi</strong> in vigore con l'Italia o l'Unione europea (memorandum, riammissioni, finanziamenti), e le <strong>cause sociali ed economiche</strong> (povertà, disoccupazione, clima, demografia). Le tre cause quasi sempre si intrecciano: raramente una persona parte per un solo motivo. Questa pagina descrive il contesto così come riportato da fonti giornalistiche, istituzionali e umanitarie, senza prendere posizione su alcuna politica migratoria.</p>

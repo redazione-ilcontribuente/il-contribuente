@@ -1151,7 +1151,7 @@ La struttura HTML/CSS/JS deve essere uniforme in tutte le sezioni, così l'utent
 # 41. SEZIONI FISSE EXTRA (fuori indice) — MAI TOCCARE SENZA CHIEDERE
 Oltre all'indice standard della sezione 5, il sito pubblicato include altre sezioni/dashboard fisse che Mario ha aggiunto nel tempo direttamente nelle edizioni, e che NON fanno parte dell'indice/della lista di sezioni da riscrivere ogni giorno:
 
-- Sezione "Approfondimenti fissi" (sidebar, id `approfondimenti`) — link fissi (Geopolitica, Conflitti nel mondo, Immigrazione in Europa, Guerre, Dazi, Sanzioni, Glossario) e box "Termine del giorno"/statistiche;
+- Sezione "Approfondimenti fissi" (sidebar, id `approfondimenti`) — link fissi (Geopolitica, Conflitti nel mondo, Guerre, Dazi, Sanzioni, Glossario) e box "Termine del giorno"/statistiche;
 - Box "Spazio partner" (classe `partner-box`, sotto la card "I fatti della settimana"), pagina `spazioPartner/comeFunziona.html` e pagine sponsor `spazioPartner/bitetti/`, `lucana/`, `testigrosso/` — MAI TOCCARE, vedi sezione 51;
 - Dashboard "Sicurezza Pubblica" (id `sicurezza-pubblica`);
 - Dashboard "Petrolio Basilicata" (id `petrolio-basilicata`), con la sotto-lista "Le ultime notizie" — REGOLA ASSOLUTA E PERMANENTE (ribadita 20/9/2026): tutte le notizie di questa sotto-lista devono SEMPRE essere affiancate in orizzontale, per sempre, su ogni dispositivo, senza alcuna eccezione futura.
@@ -1753,3 +1753,8 @@ Le attività notturne (parte 1 e parte 2) partono dall'index pubblicato: box e C
 # 52. REPORT MATTUTINO — 3 NOTIZIE PRINCIPALI
 Regola permanente (Mario, 14/10/2026): il mini report mattutino a Mario deve aprirsi SEMPRE con le 3 principali notizie del giorno (una riga ciascuna), poi il resto del report.
 
+
+
+## 53. Immigrazione in Europa (Mario, 24/10/2026)
+- Il link a `immigrazioneEuropa/immigrazione.html` NON sta più negli "Approfondimenti fissi" della sidebar: è una card `.toc-dashboard-card` (tag «Dashboard», etichetta «Immigrazione in Europa») sotto l'indice, subito DOPO «Dati Immigrazione». Ordine fisso: Dati Immigrazione, Immigrazione in Europa, Sicurezza Pubblica, Petrolio Basilicata.
+- Nella pagina `immigrazione.html`, sotto il titolo, il riepilogo NON è più un paragrafo unico. Struttura fissa `.im-brief`: 4 card cifre (sbarchi Italia, rimpatri, ingressi Ue, morti e dispersi), poi i blocchi «Italia», «Le rotte verso l'Europa» (tabella), «Meno arrivi, non meno vittime», «Gli ultimi fatti» (una riga per fatto con data a sinistra). Frasi brevi. Ogni giorno si aggiornano solo numeri, date e testi; la struttura e il CSS non si toccano.
