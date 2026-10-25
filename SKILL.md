@@ -1712,7 +1712,8 @@ Una vetrina gratuita per chi vuole farsi conoscere: aziende, partite Iva, profes
 ## Posizione e layout nell'index (FISSO)
 - Il box `<div class="partner-box">` sta SUBITO SOTTO la card «I fatti della settimana» (`.week-card`), stessa larghezza (max 1260px).
 - CSS dedicato nel blocco `<style id="spazio-partner">` dentro `<head>`: non modificarlo senza richiesta di Mario.
-- Intestazione: «**Spazio partner** · una vetrina gratuita per farsi conoscere» + frase «Separati dalle notizie, non influenzano la redazione» + due pulsanti:
+- AGGIORNAMENTO (Mario, 25/10/2026): l'intestazione con la scritta e i due pulsanti NON sta più nel box: è stata spostata nel FOOTER (`<div class="footer-note footer-partner">`, subito dopo la riga Redazione/email). Nel box sotto «I fatti della settimana» restano SOLO le 3 card degli sponsor, nella stessa posizione. Testo e pulsanti del footer (sotto) restano identici.
+- Intestazione (ora nel footer): «**Spazio partner** · una vetrina gratuita per farsi conoscere» + frase «Separati dalle notizie, non influenzano la redazione» + due pulsanti:
   - «Come funziona →» → `spazioPartner/comeFunziona.html`;
   - «Candidati →» (dorato pieno, classe `partner-apply`) → `spazioPartner/comeFunziona.html#candidati`.
 - Sotto: 3 spazi (`.partner-card.partner-empty`) con scritto SOLO «Spazio partner», tre colori diversi (oro, blu, verde), bordo tratteggiato; ognuno porta a `spazioPartner/comeFunziona.html#candidati`.
@@ -1762,3 +1763,4 @@ Regola permanente (Mario, 14/10/2026): il mini report mattutino a Mario deve apr
 ## 54. Ultime news e immagini grandi (Mario, 25/10/2026)
 - Ultime news (`#ultime-news`): da oggi UN SOLO articolo (`sciopero-1`, class `article lead`), la notizia che sceglie la redazione. Il 25/10 era la MotoGP annullata a Phillip Island: 2 righe di testo in grassetto, foto grande, fonti con data e ora, senza `.body-extra` né pulsante.
 - Immagini: 420 px desktop / 230 px mobile in tutta la rassegna (vedi sezione 9, blocco `<style id="immagini-grandi">`).
+- Spazio partner (25/10/2026): scritta e pulsanti «Come funziona →» / «Candidati →» spostati nel footer; le 3 card sponsor restano sotto «I fatti della settimana» (vedi sezione 51).
