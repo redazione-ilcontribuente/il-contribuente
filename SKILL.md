@@ -261,6 +261,15 @@ REGOLA VINCOLANTE (Mario, 20/10/2026, sostituisce la regola del 20/9/2026 sui 3-
 ---
 
 # 9. IMMAGINI — RICERCA E SELEZIONE AUTONOMA
+
+## REGOLA PRIORITARIA — SOLO FOTO LIBERE (Mario, 25/10/2026, prevale su tutto il resto della sezione e su ogni altra regola sulle immagini)
+- In TUTTA la rassegna (`index.html`: Ultime news, Confronto con le 3 prospettive, Dall'estero, Italia, Disagio città, Europa, Mondo, Finanza, Benessere, Tecnologia, IA, Immigrazione Italia) si usano SOLO fotografie libere: pubblico dominio, CC0, CC BY, CC BY-SA, da **Wikimedia Commons**.
+- VIETATO: og:image dei giornali, foto di agenzie (Ansa, Reuters, AP, AFP, Getty, LaPresse…), licenze NC/ND, "fair use", immagini IA.
+- Inserimento: `src="https://commons.wikimedia.org/wiki/Special:FilePath/<nome file codificato>?width=1280"` con `referrerpolicy="no-referrer"`, una per card, tutte diverse.
+- Attribuzione obbligatoria nel blocco `.source` di ogni card, subito prima di «Edizione GG/MM/AAAA»: `Foto: <a href="https://commons.wikimedia.org/wiki/File:<nome>" rel="noopener noreferrer" target="_blank">Wikimedia Commons (autore e licenza)</a> · `. Se autore e licenza sono stati verificati, si possono scrivere per esteso (es. «Foto: Mario Rossi, CC BY-SA 4.0»).
+- La foto può essere illustrativa (la persona protagonista, il luogo, l'istituzione, l'oggetto del tema) se non esiste una foto libera dell'evento. Mai foto fuori tema; niente loghi, mappe, stemmi, bandiere, SVG.
+- Metodo: WebSearch con `allowed_domains: ["commons.wikimedia.org"]`; usare solo nomi file usciti dai risultati, copiati esattamente.
+- Le altre regole di questa sezione (una foto per card, zero duplicati, controllo 1:1) restano valide; dove parlano di og:image o di foto delle fonti, sono SUPERATE da questa regola.
 Le immagini delle card degli articoli devono essere ricercate e selezionate autonomamente durante la preparazione dell’edizione: Mario non deve più fornirle.
 
 Per ogni articolo:
@@ -1652,11 +1661,13 @@ Regola vincolante e permanente (Mario, 10/10/2026).
 
 - Nel footer legale (`.footer-legal`) di ogni edizione deve SEMPRE essere presente, subito dopo il paragrafo «I contenuti pubblicati costituiscono sintesi originali…», questo paragrafo, identico:
 
-  `<p>Le fotografie sono di proprietà dei rispettivi autori, agenzie e testate, indicati nelle fonti di ogni articolo. Il Contribuente non le ospita sui propri server: vengono mostrate collegandosi alle pagine originali. Su richiesta del titolare, ogni immagine viene rimossa entro 24 ore.</p>`
+  `<p>Le fotografie della rassegna sono di pubblico dominio o pubblicate con licenza libera (Creative Commons) e provengono da Wikimedia Commons: accanto a ogni articolo c'è il collegamento alla pagina della foto, con autore e licenza. Hanno valore illustrativo e non ritraggono necessariamente il fatto descritto. Su richiesta del titolare, ogni immagine viene rimossa entro 24 ore.</p>`
+  (testo aggiornato da Mario il 25/10/2026 con il passaggio alle sole foto libere)
 
 - Non va mai rimosso né modificato senza richiesta esplicita di Mario.
 - NON inserire alcuna frase (in giallo oro o in altro stile) sotto il sottotitolo della testata (`.masthead-sub`) a proposito delle immagini o dell'intelligenza artificiale: Mario l'ha fatta togliere il 10/10/2026.
-- Le immagini restano le og:image delle fonti, inserite come URL esterni con `referrerpolicy="no-referrer"` (nessuna copia sui server del sito).
+- (25/10/2026) Le immagini NON sono più le og:image delle fonti: solo foto libere da Wikimedia Commons, vedi sezione 9, regola prioritaria.
+- Footer legale corretto il 25/10/2026 (Mario): primo paragrafo = «Pubblicazione indipendente e personale, priva di finalità commerciali. Non sono presenti abbonamenti né finanziamenti pubblici o privati. Lo «Spazio partner» ospita annunci gratuiti, separati dalle notizie, che non influenzano in alcun modo la redazione.»; nel secondo paragrafo tolta la parola «fotografia» («…alcun testo, titolo o altro materiale protetto…»). Mantenerli identici.
 
 ---
 
@@ -1764,3 +1775,6 @@ Regola permanente (Mario, 14/10/2026): il mini report mattutino a Mario deve apr
 - Ultime news (`#ultime-news`): da oggi UN SOLO articolo (`sciopero-1`, class `article lead`), la notizia che sceglie la redazione. Il 25/10 era la MotoGP annullata a Phillip Island: 2 righe di testo in grassetto, foto grande, fonti con data e ora, senza `.body-extra` né pulsante.
 - Immagini: 420 px desktop / 230 px mobile in tutta la rassegna (vedi sezione 9, blocco `<style id="immagini-grandi">`).
 - Spazio partner (25/10/2026): scritta e pulsanti «Come funziona →» / «Candidati →» spostati nel footer; le 3 card sponsor restano sotto «I fatti della settimana» (vedi sezione 51).
+
+## 55. Solo foto libere (Mario, 25/10/2026)
+- Dal 25/10/2026 tutte le foto della rassegna sono libere (Wikimedia Commons, pubblico dominio / CC0 / CC BY / CC BY-SA) con attribuzione nel blocco fonti. Mai più og:image dei giornali. Regole complete: sezione 9, regola prioritaria; footer: sezione 49.
