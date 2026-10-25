@@ -306,8 +306,8 @@ Resta fermo quanto segue:
 
 Le immagini degli articoli devono avere maggiore presenza visiva rispetto alle versioni precedenti della rassegna, senza alterare la struttura generale del template. Devono essere un poco più grandi in TUTTA la rassegna stampa, comprese le tre prospettive del Confronto e le card di Petrolio Basilicata.
 
-- Desktop/tablet: altezza indicativa delle `.article-image` circa 145 px.
-- Mobile: altezza indicativa circa 120 px.
+- REGOLA AGGIORNATA (Mario, 25/10/2026, sostituisce i 145/120 px): immagini GRANDI in tutta la rassegna, come la foto della notizia MotoGP del 25/10. Desktop/tablet: altezza `.article-image` **420 px**; mobile (≤640px): **230 px**.
+- Applicata nell'index con il blocco `<style id="immagini-grandi">` in `<head>`, che vale per le sezioni `#ultime-news`, `#confronto` (3 prospettive), `#estero`, `#italia`, `#disagio`, `#europa`, `#mondo`, `#finanza`, `#benessere`, `#tecnologia`, `#ia`, `#immigrazione-italia`. Va copiato IDENTICO ogni giorno, mai rimosso. Non riguarda le dashboard fisse (Dati Immigrazione, Sicurezza Pubblica, Petrolio Basilicata).
 - Usare `object-fit: cover` per mantenere la card ordinata e riempire correttamente lo spazio.
 - L'immagine non deve diventare sproporzionata o dominare il testo: deve valorizzare visivamente l'articolo mantenendo l'equilibrio del template.
 - La qualità estetica è parte del controllo finale: immagini brutte, sgranate, poco pertinenti o ripetitive devono essere sostituite prima della consegna.
@@ -1758,3 +1758,7 @@ Regola permanente (Mario, 14/10/2026): il mini report mattutino a Mario deve apr
 ## 53. Immigrazione in Europa (Mario, 24/10/2026)
 - Il link a `immigrazioneEuropa/immigrazione.html` NON sta più negli "Approfondimenti fissi" della sidebar: è una card `.toc-dashboard-card` (tag «Dashboard», etichetta «Immigrazione in Europa») sotto l'indice, subito DOPO «Dati Immigrazione». Ordine fisso: Dati Immigrazione, Immigrazione in Europa, Sicurezza Pubblica, Petrolio Basilicata.
 - Nella pagina `immigrazione.html`, sotto il titolo, il riepilogo NON è più un paragrafo unico. Struttura fissa `.im-brief`: 4 card cifre (sbarchi Italia, rimpatri, ingressi Ue, morti e dispersi), poi i blocchi «Italia», «Le rotte verso l'Europa» (tabella), «Meno arrivi, non meno vittime», «Gli ultimi fatti» (una riga per fatto con data a sinistra). Frasi brevi. Ogni giorno si aggiornano solo numeri, date e testi; la struttura e il CSS non si toccano.
+
+## 54. Ultime news e immagini grandi (Mario, 25/10/2026)
+- Ultime news (`#ultime-news`): da oggi UN SOLO articolo (`sciopero-1`, class `article lead`), la notizia che sceglie la redazione. Il 25/10 era la MotoGP annullata a Phillip Island: 2 righe di testo in grassetto, foto grande, fonti con data e ora, senza `.body-extra` né pulsante.
+- Immagini: 420 px desktop / 230 px mobile in tutta la rassegna (vedi sezione 9, blocco `<style id="immagini-grandi">`).
