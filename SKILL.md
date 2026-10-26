@@ -263,7 +263,7 @@ REGOLA VINCOLANTE (Mario, 20/10/2026, sostituisce la regola del 20/9/2026 sui 3-
 # 9. IMMAGINI — RICERCA E SELEZIONE AUTONOMA
 
 ## REGOLA PRIORITARIA — SOLO FOTO LIBERE (Mario, 25/10/2026, prevale su tutto il resto della sezione e su ogni altra regola sulle immagini)
-- In TUTTA la rassegna (`index.html`: Ultime news, Confronto con le 3 prospettive, Dall'estero, Italia, Disagio città, Europa, Mondo, Finanza, Benessere, Tecnologia, IA, Immigrazione Italia) si usano SOLO fotografie libere: pubblico dominio, CC0, CC BY, CC BY-SA, da **Wikimedia Commons**.
+- In TUTTA la rassegna (`index.html`: Confronto con le 3 prospettive, Dall'estero, Italia, Disagio città, Europa, Mondo, Finanza, Benessere, Tecnologia, IA, Immigrazione Italia) si usano SOLO fotografie libere: pubblico dominio, CC0, CC BY, CC BY-SA, da **Wikimedia Commons**.
 - VIETATO: og:image dei giornali, foto di agenzie (Ansa, Reuters, AP, AFP, Getty, LaPresse…), licenze NC/ND, "fair use", immagini IA.
 - Inserimento: `src="https://commons.wikimedia.org/wiki/Special:FilePath/<nome file codificato>?width=1280"` con `referrerpolicy="no-referrer"`, una per card, tutte diverse.
 - Attribuzione obbligatoria nel blocco `.source` di ogni card, subito prima di «Edizione GG/MM/AAAA»: `Foto: <a href="https://commons.wikimedia.org/wiki/File:<nome>" rel="noopener noreferrer" target="_blank">Wikimedia Commons (autore e licenza)</a> · `. Se autore e licenza sono stati verificati, si possono scrivere per esteso (es. «Foto: Mario Rossi, CC BY-SA 4.0»).
@@ -417,7 +417,7 @@ Gli articoli devono essere brevi e densi di fatti: meno parole, stesse informazi
 
 Obiettivo indicativo:
 
-REGOLA VINCOLANTE (Mario, 20/10/2026, sostituisce i 250-350 parole): articoli più corti in TUTTA la rassegna del giorno (`index.html`: Ultime news, Confronto e le sue 3 prospettive, tutte le sezioni dell'indice). Lunghezza: **180-230 parole per articolo, MASSIMO 250**. La regola NON riguarda gli approfondimenti fissi (SuperPotenze, sanzioni, immigrazioneEuropa, guerre, glossario, dazi, conflittiMondo), le dashboard e «I fatti della settimana».
+REGOLA VINCOLANTE (Mario, 20/10/2026, sostituisce i 250-350 parole): articoli più corti in TUTTA la rassegna del giorno (`index.html`: Confronto e le sue 3 prospettive, tutte le sezioni dell'indice). Lunghezza: **180-230 parole per articolo, MASSIMO 250**. La regola NON riguarda gli approfondimenti fissi (SuperPotenze, sanzioni, immigrazioneEuropa, guerre, glossario, dazi, conflittiMondo), le dashboard e «I fatti della settimana».
 
 La priorità non è raggiungere un numero artificiale di parole, ma fornire informazioni sufficienti.
 
@@ -1772,9 +1772,13 @@ Regola permanente (Mario, 14/10/2026): il mini report mattutino a Mario deve apr
 - Nella pagina `immigrazione.html`, sotto il titolo, il riepilogo NON è più un paragrafo unico. Struttura fissa `.im-brief`: 4 card cifre (sbarchi Italia, rimpatri, ingressi Ue, morti e dispersi), poi i blocchi «Italia», «Le rotte verso l'Europa» (tabella), «Meno arrivi, non meno vittime», «Gli ultimi fatti» (una riga per fatto con data a sinistra). Frasi brevi. Ogni giorno si aggiornano solo numeri, date e testi; la struttura e il CSS non si toccano.
 
 ## 54. Ultime news e immagini grandi (Mario, 25/10/2026)
-- Ultime news (`#ultime-news`): da oggi UN SOLO articolo (`sciopero-1`, class `article lead`), la notizia che sceglie la redazione. Il 25/10 era la MotoGP annullata a Phillip Island: 2 righe di testo in grassetto, foto grande, fonti con data e ora, senza `.body-extra` né pulsante.
+- [SUPERATO il 26/10/2026, vedi sezione 56: Ultime news eliminata] Ultime news (`#ultime-news`): da oggi UN SOLO articolo (`sciopero-1`, class `article lead`), la notizia che sceglie la redazione. Il 25/10 era la MotoGP annullata a Phillip Island: 2 righe di testo in grassetto, foto grande, fonti con data e ora, senza `.body-extra` né pulsante.
 - Immagini: 420 px desktop / 230 px mobile in tutta la rassegna (vedi sezione 9, blocco `<style id="immagini-grandi">`).
 - Spazio partner (25/10/2026): scritta e pulsanti «Come funziona →» / «Candidati →» spostati nel footer; le 3 card sponsor restano sotto «I fatti della settimana» (vedi sezione 51).
 
 ## 55. Solo foto libere (Mario, 25/10/2026)
 - Dal 25/10/2026 tutte le foto della rassegna sono libere (Wikimedia Commons, pubblico dominio / CC0 / CC BY / CC BY-SA) con attribuzione nel blocco fonti. Mai più og:image dei giornali. Regole complete: sezione 9, regola prioritaria; footer: sezione 49.
+
+## 56. Ultime news eliminata — Spazio partner sotto il Confronto (Mario, 26/10/2026)
+- REGOLA PERMANENTE: la sezione «Ultime news» (`#ultime-news`, riquadro rosso «Scioperi e mobilitazioni») è ELIMINATA per sempre dall'index, insieme alla sua voce nell'indice e alle voci «ULTIME NEWS» nel ticker. NON va mai ricreata, a meno che Mario non la chieda esplicitamente. Le regole precedenti su Ultime news (sezioni 9, 54 e memoria del 17/10 e 25/10) sono superate. Il blocco CSS `<style id="immagini-grandi">` resta identico (il selettore `#ultime-news` non fa danni).
+- Subito SOTTO la sezione Confronto (prima di «Dall'estero») c'è un box `<div class="partner-box partner-box-confronto">` con l'intestazione «Spazio partner · una vetrina gratuita per farsi conoscere», la frase «Separati dalle notizie, non influenzano la redazione», i pulsanti «Come funziona →» (`spazioPartner/comeFunziona.html`) e «Candidati →» (`spazioPartner/comeFunziona.html#candidati`), e 3 spazi vuoti `.partner-card.partner-empty` (oro, blu, verde) con scritto solo «Spazio partner», collegati a `spazioPartner/comeFunziona.html#candidati`. Usa il CSS esistente `<style id="spazio-partner">`. Va copiato IDENTICO ogni giorno; quando arriva uno sponsor si sostituisce il contenuto di uno spazio. Il box dei 3 sponsor sotto «I fatti della settimana» resta com'è.
