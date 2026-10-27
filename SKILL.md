@@ -1792,3 +1792,12 @@ Regola vincolante, permanente e IMPERATIVA dal 27/10/2026, con priorità su ogni
 - Didascalia/attribuzione sempre completa: autore, licenza, link alla pagina del file (vedi sezione 9). Mai la dicitura generica «(autore e licenza)».
 - Non modificare le foto in modo sostanziale (niente scritte sopra, fotomontaggi): restano come da sezione 9.
 - Nel report mattutino segnalare ogni foto per cui la verifica è stata incerta.
+
+## 58. RASSEGNA LEGGERA — RISPARMIO DEL LIMITE SETTIMANALE (Mario, 27/10/2026)
+Mario ha raggiunto il 78% del limite settimanale: le due attività notturne restano, ma più leggere. Questa sezione prevale sulle sezioni 11 (numero di articoli) e 42 (approfondimenti ogni giorno) e sulla regola «stesso numero di articoli del giorno prima».
+- Numero di articoli dal 28/10/2026: Italia, Disagio città, Europa, Mondo, Finanza, Benessere, Tecnologia → 3 articoli ciascuna; Dall'estero, IA, Immigrazione Italia → 2; Confronto sempre 3 voci. Il CSS gestisce da solo il layout a 3 e a 2.
+- Niente subagenti: ogni attività lavora da sola, in sequenza.
+- Tetto di ricerche: circa 80 WebSearch per attività (non 200).
+- Approfondimenti fissi (SuperPotenze, sanzioni, immigrazioneEuropa, guerre, glossario, dazi, conflittiMondo): si aggiornano SOLO il lunedì (parte 2). Gli altri giorni non si toccano.
+- Lettura economica: di SKILL.md leggere le sezioni utili al lavoro (7-15, 29-37, 47, 54-58), non tutto il file; di index.html estrarre solo le sezioni da rifare con script, senza leggerlo per intero.
+- Controllo finale: uno screenshot desktop e uno mobile della pagina, non uno per sezione.
