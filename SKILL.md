@@ -1813,4 +1813,4 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 - Sui temi controversi (guerre, Gaza, Russia-Ucraina) alternare voci diverse.
 - Titolo scritto dalla redazione (non copiato dal canale), una frase breve. Fonte: «Fonte: NOME CANALE · YouTube».
 - L'ID del video deve venire da un risultato di ricerca reale (es. WebSearch «site:youtube.com …»). Mai inventare un ID. Se non si trova un video nuovo verificato, lasciare quello del giorno prima.
-- Responsive già verificato: 4 colonne su schermi larghi, 2 su tablet, scorrimento laterale su telefono; nessuno sbordamento della pagina.
+- Responsive già verificato: 4 colonne su schermi larghi, 2 su tablet, su telefono UNO SOTTO L'ALTRO in verticale a piena larghezza (Mario, 10/11/2026: mai scorrimento laterale); nessuno sbordamento della pagina.
