@@ -1399,8 +1399,10 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 1000;
     padding: 20px;
     box-sizing: border-box;
@@ -1409,6 +1411,8 @@
     position: relative;
     width: min(460px, calc(100vw - 32px));
     max-width: 460px;
+    margin: auto;
+    max-height: calc(100vh - 32px);
     max-height: calc(100dvh - 32px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -1476,6 +1480,7 @@
     .overlay{ padding:12px; }
     .overlay-box{
       width:calc(100vw - 24px);
+      max-height:calc(100vh - 24px);
       max-height:calc(100dvh - 24px);
       padding:54px 22px 22px;
       border-radius:12px;
