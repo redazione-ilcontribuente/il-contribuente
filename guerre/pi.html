@@ -2,12 +2,44 @@
 
 <html lang="it">
 <head>
-<!-- Google tag -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NL949MJ5"></script>
+<!-- Google tag: si attiva solo dopo il consenso (banner cookie) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  (function(){
+    var KEY='ic_consenso_cookie';
+    function getC(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+    function setC(v){try{localStorage.setItem(KEY,v);}catch(e){}}
+    function loadGA(){
+      if(window.__icGA) return; window.__icGA=true;
+      gtag('js', new Date());
+      var s=document.createElement('script'); s.async=true;
+      s.src='https://www.googletagmanager.com/gtm.js?id=GTM-NL949MJ5';
+      document.head.appendChild(s);
+    }
+    function banner(){
+      if(document.getElementById('ic-cookie-banner')) return;
+      var b=document.createElement('div'); b.id='ic-cookie-banner';
+      b.setAttribute('role','dialog'); b.setAttribute('aria-label','Consenso ai cookie');
+      b.style.cssText='position:fixed;left:12px;right:12px;bottom:12px;z-index:99999;max-width:640px;margin:0 auto;background:#1b1e22;color:#efe9da;border-radius:10px;padding:16px 18px;box-shadow:0 6px 24px rgba(0,0,0,.35);font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.5;';
+      b.innerHTML='<div style="margin-bottom:12px;">Usiamo Google Analytics per contare le visite in forma anonima e migliorare il sito. Questi cookie si attivano solo se accetti. Puoi cambiare idea quando vuoi dal link «Cookie» in fondo alla pagina.</div>'+
+        '<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;">'+
+        '<button type="button" id="ic-cookie-no" style="cursor:pointer;padding:8px 16px;border-radius:6px;border:1px solid #c7bc9f;background:transparent;color:#efe9da;font:inherit;font-weight:600;">Rifiuta</button>'+
+        '<button type="button" id="ic-cookie-si" style="cursor:pointer;padding:8px 16px;border-radius:6px;border:1px solid #a97a1f;background:#a97a1f;color:#fff;font:inherit;font-weight:600;">Accetta</button></div>';
+      document.body.appendChild(b);
+      document.getElementById('ic-cookie-si').onclick=function(){setC('si');b.remove();loadGA();};
+      document.getElementById('ic-cookie-no').onclick=function(){setC('no');b.remove();};
+    }
+    function link(){
+      if(document.getElementById('ic-cookie-link')) return;
+      var a=document.createElement('a'); a.id='ic-cookie-link'; a.href='#'; a.textContent='Cookie';
+      a.style.cssText='display:block;text-align:center;margin:18px auto 24px;font-family:Inter,Arial,sans-serif;font-size:12px;color:#565c64;text-decoration:underline;';
+      a.onclick=function(e){e.preventDefault();banner();};
+      document.body.appendChild(a);
+    }
+    if(getC()==='si') loadGA();
+    document.addEventListener('DOMContentLoaded',function(){ if(!getC()) banner(); link(); });
+  })();
 </script>
 
 <meta charset="utf-8">
