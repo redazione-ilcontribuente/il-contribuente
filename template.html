@@ -1414,7 +1414,7 @@
     -webkit-overflow-scrolling: touch;
     background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(250,248,244,0.94));
     border-radius: 16px;
-    padding: 32px 30px 28px;
+    padding: 56px 30px 28px;
     box-shadow:
       0 1px 2px rgba(0,0,0,0.06),
       0 8px 16px rgba(0,0,0,0.12),
@@ -1427,7 +1427,9 @@
   .overlay-box .close-x{
     position: absolute;
     top: 10px;
-    right: 10px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
     font-size: 22px;
     color: #666;
     cursor: pointer;
@@ -1475,12 +1477,12 @@
     .overlay-box{
       width:calc(100vw - 24px);
       max-height:calc(100dvh - 24px);
-      padding:28px 22px 22px;
+      padding:54px 22px 22px;
       border-radius:12px;
     }
-    .overlay-box h3{ font-size:10px; letter-spacing:1.5px; padding-right:34px; }
+    .overlay-box h3{ font-size:10px; letter-spacing:1.5px; }
     .overlay-box p{ font-size:14px; line-height:1.42; }
-    .overlay-box .close-x{ top:8px; right:8px; width:38px; height:38px; font-size:24px; }
+    .overlay-box .close-x{ top:8px; left:50%; right:auto; transform:translateX(-50%); width:38px; height:38px; font-size:24px; }
   }
   /* ===== LAYOUT A DUE COLONNE — sidebar "Approfondimenti" a sinistra (Mario, 26/8/2026,
      ispirata alla colonna "Ultime notizie" di Cointelegraph.it). Stile fisso e permanente:
@@ -2286,6 +2288,7 @@ function attivaAvvisi(e){
 </head>
 <body data-edition="2026-10-23" data-published="2026-10-23T07:30:00+02:00" id="top">
 <!-- ===== OVERLAY INTRO — SEMPRE PRESENTE, IDENTICO OGNI GIORNO ===== -->
+<script>(function(){try{var b=document.body,ed=b.getAttribute("data-edition")||"ignota",p=b.getAttribute("data-published"),exp=p&&!isNaN(new Date(p).getTime())&&(Date.now()-new Date(p).getTime())>864e5,seen=localStorage.getItem("ilcontribuente_overlay_seen_"+ed)==="1";if(seen||exp){document.write('<style id="intro-overlay-early-hide">#introOverlay{display:none}</style>');}}catch(e){}})();</script>
 <div class="overlay" id="introOverlay">
 <div class="overlay-box">
 <button aria-label="Chiudi messaggio" class="close-x" id="closeOverlay" onclick="var o=document.getElementById('introOverlay');if(o){o.style.display='none';o.setAttribute('aria-hidden','true');}document.body.classList.remove('overlay-open');return false;" type="button">×</button>
