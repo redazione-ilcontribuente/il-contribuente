@@ -1802,6 +1802,8 @@ Mario ha raggiunto il 78% del limite settimanale: le due attività notturne rest
 - Lettura economica: di SKILL.md leggere le sezioni utili al lavoro (7-15, 29-37, 47, 54-58), non tutto il file; di index.html estrarre solo le sezioni da rifare con script, senza leggerlo per intero.
 - Controllo finale: uno screenshot desktop e uno mobile della pagina, non uno per sezione.
 
+- AGGIUNTA (Mario, 10/11/2026): il lunedì la parte 2 fa SEMPRE anche «I fatti della settimana» (sezione 50: settimana/fatti.html + date della card nell'index). Non va mai saltata. Il tag di Google Analytics e il banner cookie in `<head>` di ogni pagina non vanno mai toccati (sezione 60). Nessun editoriale del giorno prima resta nell'index (sezione 61).
+
 ## 59. VIDEO IN EVIDENZA (Mario, 10/11/2026)
 Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito dopo il box «Spazio partner» del Confronto, prima di «Dall'estero» (`<div class="section" id="estero">`).
 - Il blocco `<style id="video-evidenza-css">` e la struttura HTML di `#video-evidenza` si copiano IDENTICI ogni giorno. Mai toccare CSS o struttura.
@@ -1815,3 +1817,13 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 - L'ID del video deve venire da un risultato di ricerca reale (es. WebSearch «site:youtube.com …»). Mai inventare un ID. Se non si trova un video nuovo verificato, lasciare quello del giorno prima.
 - Responsive già verificato: 4 colonne su schermi larghi, 2 su tablet, su telefono UNO SOTTO L'ALTRO in verticale a piena larghezza (Mario, 10/11/2026: mai scorrimento laterale); nessuno sbordamento della pagina.
 - Collegamento fisso: nel riquadro delle card sotto l'indice (`.toc-dashboards`), PRIMA card prima di «Dati Immigrazione»: `<a class="toc-dashboard-card" href="#video-evidenza"><span class="toc-dashboard-tag">Video</span><span class="toc-dashboard-label">Video in evidenza</span></a>` (Mario, 10/11/2026). Copiarla identica ogni giorno.
+
+## 60. GOOGLE ANALYTICS E BANNER COOKIE (Mario, 10/11/2026)
+- Google Analytics è attivo su TUTTE le pagine HTML del sito (index.html, template.html, settimana/, approfondimenti, spazioPartner/, redazione.html, archivio.html, rassegne/). ID di misurazione: `G-M2CGSNEM9B` (stream «ilcontribuente.redazioneit.workers.dev»).
+- Il codice sta subito dopo `<head>`, nel blocco che inizia con il commento `<!-- Google tag: si attiva solo dopo il consenso (banner cookie) -->`. Contiene: il banner «Accetta / Rifiuta» (id `ic-cookie-banner`), il link «Cookie» in fondo alla pagina (id `ic-cookie-link`) e la funzione che carica `https://www.googletagmanager.com/gtag/js?id=G-M2CGSNEM9B` con `gtag('config','G-M2CGSNEM9B')` SOLO dopo «Accetta». La scelta è salvata nel browser (localStorage `ic_consenso_cookie` = `si`/`no`).
+- Regola GDPR: Analytics non deve MAI partire prima del consenso. Il blocco va copiato IDENTICO in ogni edizione e in ogni pagina nuova; non va tolto, spostato né modificato senza richiesta esplicita di Mario.
+- Ogni pagina nuova del sito deve avere lo stesso blocco subito dopo `<head>`.
+- Controllo: Google Analytics → Report → Tempo reale (conta solo chi clicca «Accetta»; le visite totali restano in Cloudflare Web Analytics).
+
+## 61. EDITORIALE (Mario, 10/11/2026)
+- Un editoriale della redazione (sezione `#editoriale`, prima del Confronto) vale SOLO per il giorno in cui è pubblicato. Nell'edizione del giorno dopo va eliminato insieme alla sua voce nel ticker, ai suoi badge e al conteggio delle fonti, a meno che Mario non ne scriva uno nuovo per quel giorno.
