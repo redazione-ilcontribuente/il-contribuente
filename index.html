@@ -12,10 +12,11 @@
     function setC(v){try{localStorage.setItem(KEY,v);}catch(e){}}
     function loadGA(){
       if(window.__icGA) return; window.__icGA=true;
-      gtag('js', new Date());
       var s=document.createElement('script'); s.async=true;
-      s.src='https://www.googletagmanager.com/gtm.js?id=GTM-NL949MJ5';
+      s.src='https://www.googletagmanager.com/gtag/js?id=G-M2CGSNEM9B';
       document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-M2CGSNEM9B');
     }
     function banner(){
       if(document.getElementById('ic-cookie-banner')) return;
