@@ -1814,3 +1814,4 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 - Titolo scritto dalla redazione (non copiato dal canale), una frase breve. Fonte: «Fonte: NOME CANALE · YouTube».
 - L'ID del video deve venire da un risultato di ricerca reale (es. WebSearch «site:youtube.com …»). Mai inventare un ID. Se non si trova un video nuovo verificato, lasciare quello del giorno prima.
 - Responsive già verificato: 4 colonne su schermi larghi, 2 su tablet, su telefono UNO SOTTO L'ALTRO in verticale a piena larghezza (Mario, 10/11/2026: mai scorrimento laterale); nessuno sbordamento della pagina.
+- Collegamento fisso: nel riquadro delle card sotto l'indice (`.toc-dashboards`), PRIMA card prima di «Dati Immigrazione»: `<a class="toc-dashboard-card" href="#video-evidenza"><span class="toc-dashboard-tag">Video</span><span class="toc-dashboard-label">Video in evidenza</span></a>` (Mario, 10/11/2026). Copiarla identica ogni giorno.
