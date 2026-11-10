@@ -1801,3 +1801,16 @@ Mario ha raggiunto il 78% del limite settimanale: le due attività notturne rest
 - Approfondimenti fissi (SuperPotenze, sanzioni, immigrazioneEuropa, guerre, glossario, dazi, conflittiMondo): si aggiornano SOLO il lunedì (parte 2). Gli altri giorni non si toccano.
 - Lettura economica: di SKILL.md leggere le sezioni utili al lavoro (7-15, 29-37, 47, 54-58), non tutto il file; di index.html estrarre solo le sezioni da rifare con script, senza leggerlo per intero.
 - Controllo finale: uno screenshot desktop e uno mobile della pagina, non uno per sezione.
+
+## 59. VIDEO IN EVIDENZA (Mario, 10/11/2026)
+Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito dopo il box «Spazio partner» del Confronto, prima di «Dall'estero» (`<div class="section" id="estero">`).
+- Il blocco `<style id="video-evidenza-css">` e la struttura HTML di `#video-evidenza` si copiano IDENTICI ogni giorno. Mai toccare CSS o struttura.
+- Ogni giorno cambiano solo i 4 riquadri: ID del video (nel link e nell'immagine), titolo, fonte.
+- Sempre 4 riquadri, mai di più né di meno.
+- Video SOLO da YouTube. Nessun video caricato: solo link `https://www.youtube.com/watch?v=ID` e anteprima `https://i.ytimg.com/vi/ID/hqdefault.jpg`.
+- Canali: ANSA, Rai News, Sky TG24, La7 Attualità, Il Fatto Quotidiano, Fanpage, Euronews Italiano, BBC News, DW News, France 24, Al Jazeera English, CGTN, APT (Associated Press) e TV locali per le notizie della Basilicata/Sud. Mai 2 video dello stesso canale nello stesso giorno.
+- Ogni video è legato a una notizia del giorno nel quotidiano. Caricato nelle ultime 24 ore (massimo 48 se non c'è altro).
+- Sui temi controversi (guerre, Gaza, Russia-Ucraina) alternare voci diverse.
+- Titolo scritto dalla redazione (non copiato dal canale), una frase breve. Fonte: «Fonte: NOME CANALE · YouTube».
+- L'ID del video deve venire da un risultato di ricerca reale (es. WebSearch «site:youtube.com …»). Mai inventare un ID. Se non si trova un video nuovo verificato, lasciare quello del giorno prima.
+- Responsive già verificato: 4 colonne su schermi larghi, 2 su tablet, scorrimento laterale su telefono; nessuno sbordamento della pagina.
