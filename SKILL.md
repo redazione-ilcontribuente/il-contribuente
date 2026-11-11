@@ -1827,3 +1827,23 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 
 ## 61. EDITORIALE (Mario, 10/11/2026)
 - Un editoriale della redazione (sezione `#editoriale`, prima del Confronto) vale SOLO per il giorno in cui è pubblicato. Nell'edizione del giorno dopo va eliminato insieme alla sua voce nel ticker, ai suoi badge e al conteggio delle fonti, a meno che Mario non ne scriva uno nuovo per quel giorno.
+
+## 62. VIDEO E CONFRONTO — REGOLE DELL'11/11/2026 (Mario)
+### Video in evidenza (#video-evidenza) — modifica alla sezione 59
+- A ogni rassegna (parte 2) i 4 video vanno cambiati TUTTI E 4. Mai lasciare un video del giorno prima: la frase della sezione 59 «se non si trova un video nuovo verificato, lasciare quello del giorno prima» è SUPERATA.
+- Ogni video è legato a una notizia pubblicata oggi nel Contribuente, possibilmente 4 notizie diverse. Se per una notizia non c'è un video, si sceglie un'altra notizia del giorno.
+- Controllo finale con script: nessun ID uguale a quelli dell'edizione precedente.
+
+### Video Disagio città (#video-disagio) — sezione nuova
+- Posizione FISSA: `<div class="section" id="video-disagio">` subito DOPO la sezione Disagio città e PRIMA di Europa. CSS proprio nel blocco `<style id="video-disagio-css">` (copia di quello di #video-evidenza). Struttura e CSS si copiano identici ogni giorno.
+- Titolo «Video Disagio città», 4 riquadri `.ve-card`, nota sotto: «Violenza e disagio nelle città italiane negli ultimi giorni. I video si aprono su YouTube e restano di proprietà dei rispettivi autori.»
+- Ogni giorno (parte 2) 4 video NUOVI su violenze e disagio nelle città italiane degli ultimi 2 giorni (accoltellamenti, risse, aggressioni, rapine, baby gang, degrado, spaccio, insicurezza in stazioni e quartieri), anche fatti non presenti negli articoli; meglio se quelli di Disagio città. Città diverse, mai uguali al giorno prima né a #video-evidenza.
+- Cambiano solo ID (link e anteprima i.ytimg.com), titolo `.ve-title` scritto dalla redazione e fonte `.ve-src` («Fonte: NOME CANALE · YouTube», o «Fonte: YouTube» se il canale non è noto). ID solo da URL YouTube usciti dalle ricerche, mai inventati.
+- La parte 1, quando rifà Disagio città, sostituisce solo quella sezione e NON cancella né sposta #video-disagio.
+- Card fissa nell'indice (`.toc-dashboards`), subito dopo «Video in evidenza»: `<a class="toc-dashboard-card" href="#video-disagio"><span class="toc-dashboard-tag">Video</span><span class="toc-dashboard-label">Video Disagio città</span></a>`. Copiarla identica ogni giorno.
+
+### Confronto — ricerca approfondita
+- Parte 1: almeno 8 ricerche dedicate al Confronto, fatte per prime, su agenzie italiane (Ansa, Adnkronos, Agi, Avvenire, Quotidiano Nazionale, Il Post) e straniere delle parti in causa (es. Tass, Interfax, Meduza, Kyiv Independent, Ukrainska Pravda, Reuters, Ap).
+- Usare per prime le notizie uscite dopo mezzanotte; riportare numeri e frasi testuali dei protagonisti, non formule generiche. Includere tutti gli attori principali (le parti, i mediatori, Europa e Italia se coinvolte) e le indiscrezioni dei grandi giornali con le eventuali smentite.
+- Prima di pubblicare: un'ultima ricerca sugli sviluppi delle ultime ore.
+- Parte 2: 2-3 ricerche di controllo sul tema del Confronto; se mancano fatti importanti li aggiunge ai testi e alle fonti, senza cambiare struttura, immagini o numero di voci.
