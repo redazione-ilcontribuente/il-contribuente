@@ -1864,3 +1864,4 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 
 ## 65. IMMAGINI SEMPRE INERENTI ALLA NOTIZIA (Mario, 11/11/2026, "sempre e ripeto sempre")
 - Ogni foto deve mostrare il fatto, le persone, il luogo o l'oggetto di cui parla l'articolo. Mai foto generiche o scollegate (es. viste dallo spazio, panorami notturni) quando la notizia riguarda persone o fatti precisi. Restano valide le regole sulle licenze libere (sezioni 9 e 57): se una foto pertinente non ha licenza verificabile, cercarne un'altra pertinente.
+- Immagine del Primo piano: blocco fisso `<style id="primo-piano-css">` (Mario, 11/11/2026), molto più grande delle altre (fino a 700px su computer, quasi quadrata su telefono). Va copiato identico ogni giorno, mai toccato.
