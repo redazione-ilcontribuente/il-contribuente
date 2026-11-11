@@ -3255,5 +3255,20 @@ redazione.ilcontribuente@protonmail.com
 
 </footer>
 
+
+<!-- Pulsante «Torna su» (come nella pagina principale) -->
+<style id="back-to-top-css">
+.back-to-top{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:linear-gradient(160deg,#2c333a,#14171b);color:#e9e4d6;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 10px 24px rgba(20,15,5,.16),0 22px 50px rgba(20,15,5,.14);text-decoration:none;z-index:50;opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;}
+.back-to-top.show{opacity:1;pointer-events:auto;}
+.back-to-top:active{transform:scale(0.92);}
+@media (max-width:640px){.back-to-top{width:44px;height:44px;bottom:16px;right:16px;font-size:18px;}}
+</style>
+<a aria-label="Torna su" class="back-to-top" href="#" id="backToTop">↑</a>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+function t(){if(window.scrollY>400){b.classList.add('show');}else{b.classList.remove('show');}}
+window.addEventListener('scroll',t,{passive:true});t();
+b.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});})();
+</script>
 </body>
 </html>

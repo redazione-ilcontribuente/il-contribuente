@@ -1525,6 +1525,7 @@
 <span>Aggiornato: 9 Novembre 2026</span>
 </div>
 <div class="footer-note">Le definizioni sono scritte in modo divulgativo e neutro, per orientare la lettura della rassegna: per un uso legale o tecnico rigoroso fai sempre riferimento alle fonti normative ufficiali. Il glossario viene aggiornato ogni volta che un termine nuovo, meritevole di spiegazione, compare nella rassegna quotidiana.</div>
+<div class="footer-back-wrap" style="max-width:1260px;margin:18px auto 34px auto;padding:0 6vw;"><a href="../index.html" class="footer-back-link" style="display:inline-block;font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--ink-soft);padding-bottom:2px;">&larr; Torna a Il Contribuente</a></div>
 <script>
   const searchInput = document.getElementById('searchInput');
   const termCards = document.querySelectorAll('.term-card');
@@ -1545,6 +1546,21 @@
     });
     noResults.classList.toggle('show', !anyVisible);
   });
+</script>
+
+<!-- Pulsante «Torna su» (come nella pagina principale) -->
+<style id="back-to-top-css">
+.back-to-top{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:linear-gradient(160deg,#2c333a,#14171b);color:#e9e4d6;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 10px 24px rgba(20,15,5,.16),0 22px 50px rgba(20,15,5,.14);text-decoration:none;z-index:50;opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;}
+.back-to-top.show{opacity:1;pointer-events:auto;}
+.back-to-top:active{transform:scale(0.92);}
+@media (max-width:640px){.back-to-top{width:44px;height:44px;bottom:16px;right:16px;font-size:18px;}}
+</style>
+<a aria-label="Torna su" class="back-to-top" href="#" id="backToTop">↑</a>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+function t(){if(window.scrollY>400){b.classList.add('show');}else{b.classList.remove('show');}}
+window.addEventListener('scroll',t,{passive:true});t();
+b.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});})();
 </script>
 </body>
 </html>
