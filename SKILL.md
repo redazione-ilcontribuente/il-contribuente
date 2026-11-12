@@ -1865,11 +1865,3 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 ## 65. IMMAGINI SEMPRE INERENTI ALLA NOTIZIA (Mario, 11/11/2026, "sempre e ripeto sempre")
 - Ogni foto deve mostrare il fatto, le persone, il luogo o l'oggetto di cui parla l'articolo. Mai foto generiche o scollegate (es. viste dallo spazio, panorami notturni) quando la notizia riguarda persone o fatti precisi. Restano valide le regole sulle licenze libere (sezioni 9 e 57): se una foto pertinente non ha licenza verificabile, cercarne un'altra pertinente.
 - Immagine del Primo piano: blocco fisso `<style id="primo-piano-css">` (Mario, 11/11/2026), molto più grande delle altre (fino a 700px su computer, quasi quadrata su telefono). Va copiato identico ogni giorno, mai toccato.
-
-## 66. VIDEO CONTROLLATI SULL'IMAC DI MARIO (Mario, 12/11/2026)
-- Il lavoro resta quello di sempre: ricerche, scrittura, commit e push su GitHub dal cloud. L'iMac di Mario serve SOLO per controllare i video di YouTube.
-- Le attività programmate hanno attiva l'opzione «Richiedi questo computer (Mario iMac)»: le rassegne partono solo se l'iMac è acceso e non in sospensione.
-- La parte 2, prima di inserire OGNI video (#video-evidenza e #video-disagio, 8 in tutto), lo apre su YouTube con Claude in Chrome sull'iMac, in una scheda nuova (mai toccare le schede di Mario), e controlla: 1) il video si apre e si vede (non «Video non disponibile», privato o rimosso); 2) la data di caricamento è degli ultimi 3 giorni (meglio 24-48 ore); 3) il nome del canale, da scrivere in `.ve-src`. Se un controllo fallisce, il video si scarta e se ne cerca un altro.
-- Sull'iMac niente altro: niente file locali, niente modifiche, niente altri siti.
-- Se l'iMac o Chrome non sono raggiungibili, la parte 2 procede come prima (video dalle ricerche) e lo scrive nel report: «video non verificati: iMac non raggiungibile».
-- La parte 1 non usa l'iMac.
