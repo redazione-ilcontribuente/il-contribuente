@@ -1206,6 +1206,7 @@ ARCHIVIO DELLE EDIZIONI — RIATTIVATO (Mario, 17/11/2026, sostituisce il diviet
 - Lo script copia `index.html` in `rassegne/AAAA-MM-GG.html` (stesso layout; cambiano solo link relativi, titolo, descrizione, canonical e og:url), tiene online solo le ultime 30 edizioni, riscrive l'elenco di `archivio.html` e la `sitemap.xml`.
 - Pubblicare insieme agli altri file anche `rassegne/`, `archivio.html` e `sitemap.xml`.
 - Non usare `webapp/`, `pubblica.sh` o `npm run build`. I vecchi file di ottobre in `rassegne/` (senza marcatore) non si toccano.
+- Link per i lettori (Mario, 17/11/2026): nell'index e nel template, subito dopo il pulsante «Vedi altri» dei badge, c'è `<a class="back-link" href="archivio.html">Archivio edizioni →</a>`. Deve restare VISIBILE (mai dentro un commento <!-- -->) e si copia identico ogni giorno.
 
 Controllo obbligatorio prima di pubblicare: tutte le date sono aggiornate (`data-edition`/`data-published` nel body, masthead, footer, meta description, JSON-LD).
 
