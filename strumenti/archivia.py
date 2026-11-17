@@ -14,7 +14,7 @@ Layout, CSS e struttura dell'edizione restano identici.
 """
 import html, os, re, sys
 
-N_EDIZIONI = 10          # quante edizioni tenere online (deciso da Mario)
+N_EDIZIONI = 30          # quante edizioni tenere online (deciso da Mario, 17/11/2026)
 BASE = "https://ilcontribuente.redazioneit.workers.dev/"
 MARCATORE = "<!-- ic-archivio -->"
 MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",

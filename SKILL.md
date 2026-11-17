@@ -1203,7 +1203,7 @@ OGNI LUNEDÌ (Mario, 19/10/2026): l'attività della parte 2 aggiorna anche «I f
 
 ARCHIVIO DELLE EDIZIONI — RIATTIVATO (Mario, 17/11/2026, sostituisce il divieto del 9/10/2026; serve per portare visite da Google):
 - Ogni giorno, alla fine della parte 2 e prima del push, lanciare dalla cartella del repo: `python3 strumenti/archivia.py`.
-- Lo script copia `index.html` in `rassegne/AAAA-MM-GG.html` (stesso layout; cambiano solo link relativi, titolo, descrizione, canonical e og:url), tiene online solo le ultime 10 edizioni, riscrive l'elenco di `archivio.html` e la `sitemap.xml`.
+- Lo script copia `index.html` in `rassegne/AAAA-MM-GG.html` (stesso layout; cambiano solo link relativi, titolo, descrizione, canonical e og:url), tiene online solo le ultime 30 edizioni, riscrive l'elenco di `archivio.html` e la `sitemap.xml`.
 - Pubblicare insieme agli altri file anche `rassegne/`, `archivio.html` e `sitemap.xml`.
 - Non usare `webapp/`, `pubblica.sh` o `npm run build`. I vecchi file di ottobre in `rassegne/` (senza marcatore) non si toccano.
 
