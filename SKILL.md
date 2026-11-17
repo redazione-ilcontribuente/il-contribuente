@@ -1202,9 +1202,9 @@ Regola vincolante (Mario, 9/10/2026, sostituisce la procedura del 16/9/2026), og
 OGNI LUNEDÌ (Mario, 19/10/2026): l'attività della parte 2 aggiorna anche «I fatti della settimana» (`settimana/fatti.html`, regole nella sezione 50, settimana da lunedì a domenica precedenti) e le date della card nell'index (`week-card-dates`). In quel giorno `settimana/fatti.html` rientra tra i file da pubblicare insieme a `index.html` e alle 7 cartelle.
 
 ARCHIVIO DELLE EDIZIONI — RIATTIVATO (Mario, 17/11/2026, sostituisce il divieto del 9/10/2026; serve per portare visite da Google):
-- Ogni giorno, alla fine della parte 2 e prima del push, lanciare dalla cartella del repo: `python3 strumenti/archivia.py`.
+- Ogni giorno alle 05:41 l'attività programmata «Il_Contribuente-archivio» (separata dalle parti 1 e 2) lancia dalla cartella del repo: `python3 strumenti/archivia.py`. Le parti 1 e 2 non toccano l'archivio.
 - Lo script copia `index.html` in `rassegne/AAAA-MM-GG.html` (stesso layout; cambiano solo link relativi, titolo, descrizione, canonical e og:url), tiene online solo le ultime 30 edizioni, riscrive l'elenco di `archivio.html` e la `sitemap.xml`.
-- Pubblicare insieme agli altri file anche `rassegne/`, `archivio.html` e `sitemap.xml`.
+- L'attività dell'archivio pubblica `rassegne/`, `archivio.html` e `sitemap.xml`.
 - Non usare `webapp/`, `pubblica.sh` o `npm run build`. I vecchi file di ottobre in `rassegne/` (senza marcatore) non si toccano.
 - Link per i lettori (Mario, 17/11/2026): nell'index e nel template, subito dopo il pulsante «Vedi altri» dei badge, c'è `<a class="back-link" href="archivio.html">Archivio edizioni →</a>`. Deve restare VISIBILE (mai dentro un commento <!-- -->) e si copia identico ogni giorno.
 
