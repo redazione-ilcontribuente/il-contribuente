@@ -87,6 +87,12 @@ def archivia(radice):
     a = re.sub(r'<meta content="[^"]*" property="og:title"/>', f'<meta content="{attr(titolo)}" property="og:title"/>', a, count=1)
     a = re.sub(r'<meta content="[^"]*" property="og:url"/>', f'<meta content="{url}" property="og:url"/>', a, count=1)
     a = a.replace("<head>", f'<head>\n{MARCATORE}\n<link rel="canonical" href="{url}"/>', 1)
+    barra = (f'<div id="ic-archivio-bar" style="background:#1b1e22;color:#efe9da;font-family:Inter,Arial,sans-serif;'
+             f'font-size:14px;line-height:1.4;padding:10px 16px;text-align:center;">'
+             f'Stai leggendo l\'edizione del {data_lunga(d)} · '
+             f'<a href="../" style="color:#e8c66a;font-weight:600;text-decoration:underline;white-space:nowrap;">← Torna all\'edizione di oggi</a>'
+             f' · <a href="../archivio.html" style="color:#efe9da;text-decoration:underline;white-space:nowrap;">Tutte le edizioni</a></div>')
+    a = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + "\n" + barra, a, count=1)
     os.makedirs(os.path.join(radice, "rassegne"), exist_ok=True)
     open(os.path.join(radice, "rassegne", f"{d}.html"), "w", encoding="utf-8").write(a)
     return d
