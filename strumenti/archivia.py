@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Archivia l'edizione del giorno di Il Contribuente.
 
-Uso (dalla cartella del repo, dopo aver finito index.html):
+Uso (dalla cartella del repo, clonato con almeno 3 giorni di storia):
     python3 strumenti/archivia.py
 
+Archivia l'EDIZIONE DEL GIORNO PRIMA (ultima versione pubblicata, presa da git):
+l'edizione di oggi e' gia' in prima pagina, quindi non va nell'archivio.
+
 Fa tre cose:
-1. copia index.html in rassegne/AAAA-MM-GG.html (link sistemati, titolo,
+1. copia l'edizione del giorno prima in rassegne/AAAA-MM-GG.html (link sistemati, titolo,
    descrizione e indirizzo propri per Google);
 2. tiene online solo le ultime N edizioni create da questo script
    (i vecchi file senza il marcatore non vengono mai toccati);
@@ -72,8 +75,23 @@ def prefissa_link(s):
     return re.sub(r'\b(href|src)="([^"]*)"', fix, s)
 
 
-def archivia(radice):
-    s = open(os.path.join(radice, "index.html"), encoding="utf-8").read()
+def edizione_precedente(radice):
+    """Ultima versione pubblicata dell'edizione precedente a quella di oggi, presa da git."""
+    import subprocess
+    oggi = re.search(r'data-edition="(\d{4}-\d{2}-\d{2})"',
+                     open(os.path.join(radice, "index.html"), encoding="utf-8").read()).group(1)
+    commit = subprocess.run(["git", "-C", radice, "log", "--format=%H", "-n", "200", "--", "index.html"],
+                            capture_output=True, text=True, check=True).stdout.split()
+    for h in commit:
+        t = subprocess.run(["git", "-C", radice, "show", f"{h}:index.html"],
+                           capture_output=True, check=True).stdout.decode("utf-8")
+        m = re.search(r'data-edition="(\d{4}-\d{2}-\d{2})"', t)
+        if m and m.group(1) < oggi:
+            return t
+    raise SystemExit("Edizione precedente non trovata nella cronologia git (clonare con piu' storia).")
+
+
+def archivia(radice, s):
     d = re.search(r'data-edition="(\d{4}-\d{2}-\d{2})"', s).group(1)
     url = f"{BASE}rassegne/{d}.html"
     titolo = f"Il Contribuente — Rassegna stampa del {data_lunga(d)}"
@@ -143,8 +161,10 @@ def aggiorna_sitemap(radice, eds, oggi):
 
 if __name__ == "__main__":
     radice = sys.argv[1] if len(sys.argv) > 1 else "."
-    oggi = archivia(radice)
+    s = edizione_precedente(radice)
+    fatta = archivia(radice, s)
+    oggi = __import__("datetime").date.today().isoformat()
     eds = pota(radice, edizioni(radice))
     aggiorna_archivio(radice, eds)
     aggiorna_sitemap(radice, eds, oggi)
-    print(f"Archiviata {oggi}. Edizioni online: {', '.join(eds)}")
+    print(f"Archiviata {fatta}. Edizioni online ({len(eds)}): {', '.join(eds)}")

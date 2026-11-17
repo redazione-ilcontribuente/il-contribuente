@@ -1203,7 +1203,7 @@ OGNI LUNEDÌ (Mario, 19/10/2026): l'attività della parte 2 aggiorna anche «I f
 
 ARCHIVIO DELLE EDIZIONI — RIATTIVATO (Mario, 17/11/2026, sostituisce il divieto del 9/10/2026; serve per portare visite da Google):
 - Ogni giorno alle 05:41 l'attività programmata «Il_Contribuente-archivio» (separata dalle parti 1 e 2) lancia dalla cartella del repo: `python3 strumenti/archivia.py`. Le parti 1 e 2 non toccano l'archivio.
-- Lo script copia `index.html` in `rassegne/AAAA-MM-GG.html` (stesso layout; cambiano solo link relativi, titolo, descrizione, canonical e og:url), tiene online solo le ultime 30 edizioni, riscrive l'elenco di `archivio.html` e la `sitemap.xml`.
+- Lo script archivia l'EDIZIONE DEL GIORNO PRIMA (Mario, 17/11/2026: quella di oggi è già in prima pagina e non va nell'archivio), presa dalla cronologia git nella sua ultima versione pubblicata, in `rassegne/AAAA-MM-GG.html` (stesso layout; cambiano solo link relativi, titolo, descrizione, canonical, og:url e una barra in cima «Torna all'edizione di oggi · Tutte le edizioni»). Tiene online solo le ultime 30 edizioni, riscrive l'elenco di `archivio.html` e la `sitemap.xml`.
 - L'attività dell'archivio pubblica `rassegne/`, `archivio.html` e `sitemap.xml`.
 - Non usare `webapp/`, `pubblica.sh` o `npm run build`. I vecchi file di ottobre in `rassegne/` (senza marcatore) non si toccano.
 - Link per i lettori (Mario, 17/11/2026): nell'index e nel template, subito dopo il pulsante «Vedi altri» dei badge, c'è `<a class="back-link" href="archivio.html">Archivio edizioni →</a>`. Deve restare VISIBILE (mai dentro un commento <!-- -->) e si copia identico ogni giorno.
