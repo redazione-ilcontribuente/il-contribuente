@@ -1201,7 +1201,11 @@ Regola vincolante (Mario, 9/10/2026, sostituisce la procedura del 16/9/2026), og
 
 OGNI LUNEDÌ (Mario, 19/10/2026): l'attività della parte 2 aggiorna anche «I fatti della settimana» (`settimana/fatti.html`, regole nella sezione 50, settimana da lunedì a domenica precedenti) e le date della card nell'index (`week-card-dates`). In quel giorno `settimana/fatti.html` rientra tra i file da pubblicare insieme a `index.html` e alle 7 cartelle.
 
-L'archivio delle edizioni NON si pubblica più: non creare file in `rassegne/`, non aggiornare `archivio.html`, non usare `webapp/`, `pubblica.sh` o `npm run build`.
+ARCHIVIO DELLE EDIZIONI — RIATTIVATO (Mario, 17/11/2026, sostituisce il divieto del 9/10/2026; serve per portare visite da Google):
+- Ogni giorno, alla fine della parte 2 e prima del push, lanciare dalla cartella del repo: `python3 strumenti/archivia.py`.
+- Lo script copia `index.html` in `rassegne/AAAA-MM-GG.html` (stesso layout; cambiano solo link relativi, titolo, descrizione, canonical e og:url), tiene online solo le ultime 10 edizioni, riscrive l'elenco di `archivio.html` e la `sitemap.xml`.
+- Pubblicare insieme agli altri file anche `rassegne/`, `archivio.html` e `sitemap.xml`.
+- Non usare `webapp/`, `pubblica.sh` o `npm run build`. I vecchi file di ottobre in `rassegne/` (senza marcatore) non si toccano.
 
 Controllo obbligatorio prima di pubblicare: tutte le date sono aggiornate (`data-edition`/`data-published` nel body, masthead, footer, meta description, JSON-LD).
 

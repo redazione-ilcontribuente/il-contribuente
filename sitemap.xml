@@ -79,6 +79,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ilcontribuente.redazioneit.workers.dev/archivio.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ilcontribuente.redazioneit.workers.dev/redazione.html</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -107,5 +113,11 @@
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://ilcontribuente.redazioneit.workers.dev/rassegne/2026-11-17.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
