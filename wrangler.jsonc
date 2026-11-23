@@ -1,0 +1,11 @@
+// Configurazione Cloudflare del sito Il Contribuente (Mario, 23/11/2026).
+// Serve solo ad attivare la pagina 404.html per gli indirizzi sbagliati.
+// Non modificare: un errore qui può bloccare la pubblicazione del sito.
+{
+  "name": "ilcontribuente",
+  "compatibility_date": "2026-11-19",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  }
+}
