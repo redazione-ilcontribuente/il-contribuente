@@ -1877,4 +1877,7 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 - REGOLA: nessuna attività (parte 1, parte 2, parte 3) deve MAI togliere o modificare queste righe né il resto di `<head>`: quando si aggiornano gli approfondimenti o «I fatti della settimana» cambiano solo testi, dati, date e foto nel `<body>` (più meta description e date previste).
 - archivio.html: lo script `strumenti/archivia.py` rimette da solo canonical e robots se mancano.
 - Le pagine Spazio partner non sono state toccate (sezione 51, MAI TOCCARE).
+- Edizioni archiviate (`rassegne/AAAA-MM-GG.html`): UN SOLO canonical, quello dell'edizione stessa. Il 23/11/2026 è stato tolto da tutte le 30 edizioni il secondo canonical copiato dalla prima pagina (puntava alla home e confondeva Google); `archivia.py` ora lo toglie da solo.
+- Prima pagina (`index.html`): canonical sempre `https://ilcontribuente.redazioneit.workers.dev/`, robots e googlebot «index, follow, …» (sezione 1).
+- Controllo: ogni mattina la parte 3 verifica canonical e robots su TUTTO il quotidiano (index, pagine interne, edizioni archiviate) e ripristina ciò che manca.
 

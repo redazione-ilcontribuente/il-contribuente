@@ -104,6 +104,8 @@ def archivia(radice, s):
     a = re.sub(r'<meta content="[^"]*" name="twitter:description"/>', f'<meta content="{attr(descr)}" name="twitter:description"/>', a, count=1)
     a = re.sub(r'<meta content="[^"]*" property="og:title"/>', f'<meta content="{attr(titolo)}" property="og:title"/>', a, count=1)
     a = re.sub(r'<meta content="[^"]*" property="og:url"/>', f'<meta content="{url}" property="og:url"/>', a, count=1)
+    # SEO (Mario, 23/11/2026): un solo canonical, quello dell'edizione (togli quello della prima pagina)
+    a = re.sub(r'<link\b[^>]*\brel="canonical"[^>]*>\s*', '', a)
     a = a.replace("<head>", f'<head>\n{MARCATORE}\n<link rel="canonical" href="{url}"/>', 1)
     barra = (f'<div id="ic-archivio-bar" style="background:#1b1e22;color:#efe9da;font-family:Inter,Arial,sans-serif;'
              f'font-size:18px;font-weight:600;line-height:1.5;padding:14px 16px;text-align:center;">'
