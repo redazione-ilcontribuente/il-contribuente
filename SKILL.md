@@ -1872,13 +1872,12 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 - Ogni foto deve mostrare il fatto, le persone, il luogo o l'oggetto di cui parla l'articolo. Mai foto generiche o scollegate (es. viste dallo spazio, panorami notturni) quando la notizia riguarda persone o fatti precisi. Restano valide le regole sulle licenze libere (sezioni 9 e 57): se una foto pertinente non ha licenza verificabile, cercarne un'altra pertinente.
 - Immagine del Primo piano: blocco fisso `<style id="primo-piano-css">` (Mario, 11/11/2026), molto più grande delle altre (fino a 700px su computer, quasi quadrata su telefono). Va copiato identico ogni giorno, mai toccato.
 
-## 66. SEO DELLE PAGINE INTERNE — CANONICAL E ROBOTS (Mario, 23/11/2026)
-- Le pagine interne (settimana/fatti.html, archivio.html, SuperPotenze, sanzioni, immigrazioneEuropa, guerre con le 4 sottopagine, dazi, conflittiMondo, glossario, redazione.html) hanno in fondo a `<head>`, sotto il commento `<!-- SEO: canonical e robots, non rimuovere (Mario, 23/11/2026) -->`, il proprio `<link rel="canonical">` e le meta `robots` e `googlebot` («index, follow, …»).
-- REGOLA: nessuna attività (parte 1, parte 2, parte 3) deve MAI togliere o modificare queste righe né il resto di `<head>`: quando si aggiornano gli approfondimenti o «I fatti della settimana» cambiano solo testi, dati, date e foto nel `<body>` (più meta description e date previste).
-- archivio.html: lo script `strumenti/archivia.py` rimette da solo canonical e robots se mancano.
-- Spazio partner (Mario, 23/11/2026, ECCEZIONE esplicita alla sezione 51): le pagine sponsor `spazioPartner/bitetti/`, `spazioPartner/lucana/`, `spazioPartner/testigrosso/` hanno in `<head>` il proprio canonical (`https://ilcontribuente.redazioneit.workers.dev/spazioPartner/<nome>/`) e le meta robots e googlebot. Restano così per sempre. Il resto delle pagine sponsor resta MAI TOCCARE.
-- REGOLA PER IL FUTURO: ogni NUOVA pagina sponsor dello Spazio partner deve nascere con le stesse due cose in `<head>`: canonical con il proprio indirizzo e meta robots/googlebot «index, follow, …» (stesso blocco con il commento «SEO: canonical e robots, non rimuovere»).
-- Edizioni archiviate (`rassegne/AAAA-MM-GG.html`): UN SOLO canonical, quello dell'edizione stessa. Il 23/11/2026 è stato tolto da tutte le 30 edizioni il secondo canonical copiato dalla prima pagina (puntava alla home e confondeva Google); `archivia.py` ora lo toglie da solo.
-- Prima pagina (`index.html`): canonical sempre `https://ilcontribuente.redazioneit.workers.dev/`, robots e googlebot «index, follow, …» (sezione 1).
-- Controllo: ogni mattina la parte 3 verifica canonical e robots su TUTTO il quotidiano (index, pagine interne, edizioni archiviate) e ripristina ciò che manca.
-
+## 66. CANONICAL E ROBOTS SU OGNI PAGINA — REGOLA UNICA E PERMANENTE (Mario, 23/11/2026)
+- OGNI pagina HTML del sito, presente e futura (prima pagina, edizioni archiviate, archivio, «I fatti della settimana», approfondimenti e sottopagine, glossario, redazione, Spazio partner con «Come funziona» e pagine sponsor), deve avere in `<head>`:
+  - UN SOLO `<link rel="canonical">` con il proprio indirizzo (prima pagina: `https://ilcontribuente.redazioneit.workers.dev/`; pagine sponsor: `…/spazioPartner/<nome>/`; edizioni: `…/rassegne/AAAA-MM-GG.html`);
+  - `<meta name="robots">` e `<meta name="googlebot">` con «index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1».
+- Una volta inserite, queste righe NON si toccano MAI PIÙ: nessuna attività (parte 1, parte 2, parte 3) le toglie o le modifica. Quando si aggiorna una pagina cambiano solo testi, dati, date e foto nel `<body>` (più meta description e date previste).
+- Ogni pagina nuova (nuovo sponsor, nuovo approfondimento, ecc.) nasce già con canonical e robots.
+- Eccezione unica alla sezione 51: nelle pagine dello Spazio partner si può toccare solo questo blocco SEO in `<head>`; il resto resta MAI TOCCARE.
+- `strumenti/archivia.py` garantisce un solo canonical nelle edizioni archiviate e canonical e robots in archivio.html.
+- Controllo: ogni mattina la parte 3 verifica tutte le pagine e rimette ciò che manca.
