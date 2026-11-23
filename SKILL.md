@@ -1199,7 +1199,7 @@ Regola vincolante (Mario, 9/10/2026, sostituisce la procedura del 16/9/2026), og
 3. Pubblicare: il push su GitHub lo fa Claude (consenso esplicito e permanente di Mario), solo per `index.html` e le 7 cartelle sopra. Cloudflare pubblica il sito da solo dopo il push. Prima del push: `git fetch` + rebase; mai `push --force`.
 4. Mandare a Mario un mini report di quello che è stato fatto.
 
-OGNI LUNEDÌ (Mario, 19/10/2026): l'attività della parte 2 aggiorna anche «I fatti della settimana» (`settimana/fatti.html`, regole nella sezione 50, settimana da lunedì a domenica precedenti) e le date della card nell'index (`week-card-dates`). In quel giorno `settimana/fatti.html` rientra tra i file da pubblicare insieme a `index.html` e alle 7 cartelle.
+OGNI LUNEDÌ (Mario, 19/10/2026; AGGIORNATO 23/11/2026): «I fatti della settimana» NON li fa più la parte 2: li fa per sempre la parte 3 (archivio del mattino). La parte 3 aggiorna «I fatti della settimana» (`settimana/fatti.html`, regole nella sezione 50, settimana da lunedì a domenica precedenti) e le date della card nell'index (`week-card-dates`). In quel giorno `settimana/fatti.html` rientra tra i file da pubblicare insieme a `index.html` e alle 7 cartelle.
 
 ARCHIVIO DELLE EDIZIONI — RIATTIVATO (Mario, 17/11/2026, sostituisce il divieto del 9/10/2026; serve per portare visite da Google):
 - Ogni giorno alle 05:41 l'attività programmata «Il_Contribuente-archivio» (separata dalle parti 1 e 2) lancia dalla cartella del repo: `python3 strumenti/archivia.py`. Le parti 1 e 2 non toccano l'archivio.
@@ -1679,7 +1679,7 @@ Regola vincolante e permanente (Mario, 10/10/2026).
 # 50. I FATTI DELLA SETTIMANA — PAGINA SETTIMANALE (OGNI LUNEDÌ)
 Regola vincolante e permanente (Mario, 12/10/2026).
 
-Ogni lunedì (nella parte 2 della rassegna notturna, vedi sezione 42) va aggiornata la pagina `settimana/fatti.html`, collegata alla prima pagina dalla card «I fatti della settimana» che sta subito sotto il riquadro «Seguici sui social» (stessa larghezza del riquadro social).
+Ogni lunedì (nella PARTE 3, l'attività del mattino che archivia l'edizione di ieri, alle 5:41; NON più nella parte 2 — Mario, 23/11/2026) va aggiornata la pagina `settimana/fatti.html`, collegata alla prima pagina dalla card «I fatti della settimana» che sta subito sotto il riquadro «Seguici sui social» (stessa larghezza del riquadro social).
 
 ## A chi è rivolta
 Al lettore medio: una persona che lavora tutto il giorno e non ha tempo di seguire le notizie. Deve capire in 5 minuti cosa è successo nel mondo nella settimana appena finita.
@@ -1807,7 +1807,7 @@ Mario ha raggiunto il 78% del limite settimanale: le due attività notturne rest
 - Lettura economica: di SKILL.md leggere le sezioni utili al lavoro (7-15, 29-37, 47, 54-58), non tutto il file; di index.html estrarre solo le sezioni da rifare con script, senza leggerlo per intero.
 - Controllo finale: uno screenshot desktop e uno mobile della pagina, non uno per sezione.
 
-- AGGIUNTA (Mario, 10/11/2026): il lunedì la parte 2 fa SEMPRE anche «I fatti della settimana» (sezione 50: settimana/fatti.html + date della card nell'index). Non va mai saltata. Il tag di Google Analytics e il banner cookie in `<head>` di ogni pagina non vanno mai toccati (sezione 60). Nessun editoriale del giorno prima resta nell'index (sezione 61).
+- AGGIUNTA (Mario, 10/11/2026; AGGIORNATA 23/11/2026): il lunedì la parte 3 (archivio del mattino, non più la parte 2) fa SEMPRE anche «I fatti della settimana» (sezione 50: settimana/fatti.html + date della card nell'index). Non va mai saltata. Il tag di Google Analytics e il banner cookie in `<head>` di ogni pagina non vanno mai toccati (sezione 60). Nessun editoriale del giorno prima resta nell'index (sezione 61).
 
 ## 59. VIDEO IN EVIDENZA (Mario, 10/11/2026)
 Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito dopo il box «Spazio partner» del Confronto, prima di «Dall'estero» (`<div class="section" id="estero">`).
