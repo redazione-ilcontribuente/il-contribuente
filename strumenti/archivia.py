@@ -144,6 +144,13 @@ def aggiorna_archivio(radice, eds):
     i = s.index('<div class="list">') + len('<div class="list">')
     j = s.index("</div>", i)
     s = s[:i] + "\n" + voci + s[j:]
+    # SEO (Mario, 23/11/2026): archivio.html deve avere sempre canonical e robots
+    if 'rel="canonical"' not in s:
+        r = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        s = s.replace("</head>",
+                      '<!-- SEO: canonical e robots, non rimuovere (Mario, 23/11/2026) -->\n'
+                      '<link rel="canonical" href="https://ilcontribuente.redazioneit.workers.dev/archivio.html">\n'
+                      f'<meta name="robots" content="{r}">\n<meta name="googlebot" content="{r}">\n</head>', 1)
     open(p, "w", encoding="utf-8").write(s)
 
 

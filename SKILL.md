@@ -1871,3 +1871,10 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 ## 65. IMMAGINI SEMPRE INERENTI ALLA NOTIZIA (Mario, 11/11/2026, "sempre e ripeto sempre")
 - Ogni foto deve mostrare il fatto, le persone, il luogo o l'oggetto di cui parla l'articolo. Mai foto generiche o scollegate (es. viste dallo spazio, panorami notturni) quando la notizia riguarda persone o fatti precisi. Restano valide le regole sulle licenze libere (sezioni 9 e 57): se una foto pertinente non ha licenza verificabile, cercarne un'altra pertinente.
 - Immagine del Primo piano: blocco fisso `<style id="primo-piano-css">` (Mario, 11/11/2026), molto più grande delle altre (fino a 700px su computer, quasi quadrata su telefono). Va copiato identico ogni giorno, mai toccato.
+
+## 66. SEO DELLE PAGINE INTERNE — CANONICAL E ROBOTS (Mario, 23/11/2026)
+- Le pagine interne (settimana/fatti.html, archivio.html, SuperPotenze, sanzioni, immigrazioneEuropa, guerre con le 4 sottopagine, dazi, conflittiMondo, glossario, redazione.html) hanno in fondo a `<head>`, sotto il commento `<!-- SEO: canonical e robots, non rimuovere (Mario, 23/11/2026) -->`, il proprio `<link rel="canonical">` e le meta `robots` e `googlebot` («index, follow, …»).
+- REGOLA: nessuna attività (parte 1, parte 2, parte 3) deve MAI togliere o modificare queste righe né il resto di `<head>`: quando si aggiornano gli approfondimenti o «I fatti della settimana» cambiano solo testi, dati, date e foto nel `<body>` (più meta description e date previste).
+- archivio.html: lo script `strumenti/archivia.py` rimette da solo canonical e robots se mancano.
+- Le pagine Spazio partner non sono state toccate (sezione 51, MAI TOCCARE).
+
