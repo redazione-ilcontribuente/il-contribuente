@@ -1697,6 +1697,7 @@ Ogni blocco: titolo, una foto, 1-5 paragrafi brevi, e in fondo la riga **«In po
 
 ## Stile (vincolante)
 - Scrittura semplice, facile e comprensibile ma PROFESSIONALE, frasi corte, come un racconto che scorre: una cosa porta all'altra.
+- AGGIORNAMENTO (Mario, 23/11/2026, "dalla prossima settimana va scritto così"): NON frasette staccate ("sembra scritto da un ragazzino"). Stile da quotidiano, professionale e facilmente comprensibile: periodi scorrevoli collegati da connettivi («La settimana si è aperta con…», «Poco dopo…», «Intanto…», «Nelle stesse ore…», «A fine settimana…»); nomi completi con ruolo alla prima citazione («il presidente Volodymyr Zelensky»); istituzioni per esteso («Nazioni Unite»); verbi di attribuzione precisi («sostiene», «afferma», «ha dichiarato»); niente aggettivi di giudizio della redazione. Le righe «In poche parole» restano come sono (a Mario piacciono). Modello approvato: la pagina della settimana 16-22 novembre 2026, in particolare il blocco «Ucraina e Russia».
 - MAI usare la parola «soldi» (usare termini professionali: bilancio, risorse, fondi, investitori, titoli di Stato) (Mario, 12/10/2026).
 - MAI scrivere «in parole semplici» (né sulla card né sulla pagina). Restano: sulla card «Cosa è successo nel mondo in sette giorni.»; sulla pagina il sottotitolo «Cosa è successo nel mondo in sette giorni, per chi non ha avuto tempo di seguire tutto.» (Mario, 12/10/2026).
 - NIENTE date precise e NIENTE nomi di città o luoghi che un italiano medio non conosce; niente sigle non spiegate.
