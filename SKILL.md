@@ -289,7 +289,12 @@ Regola vincolante e ASSOLUTA: OGNI articolo di OGNI sezione a formato articoli, 
 
 Regola vincolante e PRIORITARIA: NON RIPETERE MAI LA STESSA IMMAGINE NELLA STESSA EDIZIONE. Tutte le immagini devono essere diverse tra loro, senza duplicati, né identici file/URL né riuso dello stesso scatto con ritagli o varianti che lo rendano sostanzialmente la stessa immagine. Se una prima ricerca non produce un'immagine pertinente e non ancora usata, continuare la ricerca fino a reperirne una adatta. Non lasciare articoli senza immagine e non riutilizzare immagini già assegnate ad altre card.
 
-La selezione delle immagini deve variare nel tempo: NON usare ogni giorno le stesse fotografie o gli stessi scatti per temi, persone o luoghi ricorrenti. Ogni nuova edizione deve cercare immagini diverse rispetto alle edizioni precedenti quando esistono alternative pertinenti, privilegiando fotografie più belle, nitide, curate e visivamente efficaci.
+REGOLA VINCOLANTE E PERMANENTE — IMMAGINI TUTTE NUOVE OGNI GIORNO (Mario, 26/11/2026, sostituisce la regola precedente sulla varietà delle immagini nel tempo):
+- A ogni nuova edizione vanno cambiate le immagini di TUTTI gli articoli, nessuno escluso: Primo piano, le 3 prospettive del Confronto, Dall'estero, Italia, Cronaca dalle città, Europa, Mondo, Finanza, Benessere, Tecnologia, IA, Immigrazione Italia.
+- Nessuna foto (stesso file di Wikimedia Commons) già usata nelle edizioni dei 7 giorni precedenti.
+- Anche quando la persona, il luogo o l'istituzione è lo stesso (es. Zelensky, Meloni, la Borsa di Milano), usare uno scatto diverso.
+- Controllo obbligatorio con script prima del push: confrontare i nomi file delle foto di oggi con quelli delle edizioni degli ultimi 7 giorni (`rassegne/AAAA-MM-GG.html` e cronologia git di `index.html`). Se anche una sola foto coincide, sostituirla prima di pubblicare.
+- Restano valide le regole su licenze libere, autore e licenza verificati e foto inerenti alla notizia (sezioni 57 e 65). Non riguarda dashboard fisse, Petrolio Basilicata, Spazio partner e anteprime dei video.
 
 Controllo obbligatorio prima di pubblicare: verificare tutte le immagini effettivamente usate nell'edizione e assicurarsi che non ci siano duplicati. Se un doppione emerge, sostituirlo con un'altra immagine pertinente e distinta. Non rimuovere l'immagine dal secondo articolo: continuare la ricerca finché ogni articolo dispone di una propria immagine distinta e pertinente.
 
@@ -319,7 +324,7 @@ Le immagini degli articoli devono avere maggiore presenza visiva rispetto alle v
 - Applicata nell'index con il blocco `<style id="immagini-grandi">` in `<head>`, che vale per le sezioni `#ultime-news`, `#confronto` (3 prospettive), `#estero`, `#italia`, `#disagio`, `#europa`, `#mondo`, `#finanza`, `#benessere`, `#tecnologia`, `#ia`, `#immigrazione-italia`. Va copiato IDENTICO ogni giorno, mai rimosso. Non riguarda le dashboard fisse (Dati Immigrazione, Sicurezza Pubblica, Petrolio Basilicata).
 - Usare `object-fit: cover` per mantenere la card ordinata e riempire correttamente lo spazio.
 - L'immagine non deve diventare sproporzionata o dominare il testo: deve valorizzare visivamente l'articolo mantenendo l'equilibrio del template.
-- La qualità estetica è parte del controllo finale: immagini brutte, sgranate, poco pertinenti o ripetitive devono essere sostituite prima della consegna.
+- La qualità estetica è parte del controllo finale: immagini brutte, sgranate o poco pertinenti devono essere sostituite prima della consegna (per le foto ripetute vale la regola «Immagini tutte nuove ogni giorno» qui sopra).
 
 ## Hero di sezione
 
@@ -1067,6 +1072,7 @@ Prima della pubblicazione verificare:
 - ESATTAMENTE UNA SOLA immagine per ogni articolo e per ciascuna delle tre prospettive del Confronto;
 - nessuna card/prospettiva può avere zero immagini o più di una immagine;
 - nessuna immagine ripetuta nella stessa edizione: ZERO duplicati, anche come stesso scatto riutilizzato con ritagli/varianti;
+- nessuna immagine già usata nelle edizioni dei 7 giorni precedenti: tutte le foto cambiano ogni giorno (sezione 9, Mario 26/11/2026);
 - ogni articolo, nessuno escluso, ha una propria immagine pertinente e distinta;
 - sono ammesse foto reali oppure immagini IA realistiche pertinenti, nel rispetto delle regole della sezione 9;
 - tutte le immagini sono ricercate, selezionate e fornite autonomamente durante la preparazione dell’edizione; Mario non deve fornire immagini;
