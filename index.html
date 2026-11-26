@@ -2300,7 +2300,7 @@ function attivaAvvisi(e){
 <style id="primo-piano-css">#primo-piano .article-image{height:clamp(460px,62vw,700px) !important;}#primo-piano .article-image img{width:100%;height:100%;object-fit:cover;object-position:center;}@media (max-width:640px){#primo-piano .article-image{height:clamp(300px,92vw,480px) !important;}}</style></head>
 <body data-edition="2026-11-26" data-published="2026-11-26T04:00:00+01:00" id="top">
 <!-- ===== OVERLAY INTRO — SEMPRE PRESENTE, IDENTICO OGNI GIORNO ===== -->
-<script>(function(){try{var b=document.body,ed=b.getAttribute("data-edition")||"ignota",p=b.getAttribute("data-published"),exp=p&&!isNaN(new Date(p).getTime())&&(Date.now()-new Date(p).getTime())>864e5,seen=localStorage.getItem("ilcontribuente_overlay_seen_"+ed)==="1";if(seen||exp){document.write('<style id="intro-overlay-early-hide">#introOverlay{display:none}</style>');}}catch(e){}})();</script>
+<script>(function(){try{var b=document.body,ed=b.getAttribute("data-edition")||"ignota",p=b.getAttribute("data-published"),exp=p&&!isNaN(new Date(p).getTime())&&(Date.now()-new Date(p).getTime())>864e5,seen=localStorage.getItem("ilcontribuente_overlay_seen_"+ed)==="1";if(seen||exp){document.write('<style id="intro-overlay-early-hide">#introOverlay{display:none}</style>');}else{document.write('<style id="intro-overlay-wait">#introOverlay{display:none}</style>');}}catch(e){}})();</script>
 <div class="overlay" id="introOverlay">
 <div class="overlay-box">
 <button aria-label="Chiudi messaggio" class="close-x" id="closeOverlay" onclick="var o=document.getElementById('introOverlay');if(o){o.style.display='none';o.setAttribute('aria-hidden','true');}document.body.classList.remove('overlay-open');return false;" type="button">×</button>
@@ -3315,8 +3315,18 @@ function attivaAvvisi(e){
       return;
     }
 
-    overlay.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('overlay-open');
+    /* La finestra compare alla prima interazione del lettore (scorrimento, tocco, tasto),
+       non all'apertura: così Google legge subito le notizie (Mario, 26/11/2026). */
+    var shown = false, EVTS = ['scroll','wheel','touchstart','pointerdown','keydown'];
+    function showOverlay(){
+      if (shown) return; shown = true;
+      EVTS.forEach(function(t){ window.removeEventListener(t, showOverlay, true); });
+      var w = document.getElementById('intro-overlay-wait'); if (w && w.parentNode) w.parentNode.removeChild(w);
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('overlay-open');
+    }
+    overlay.setAttribute('aria-hidden', 'true');
+    EVTS.forEach(function(t){ window.addEventListener(t, showOverlay, {capture:true, passive:true}); });
 
     closeBtn.addEventListener('click', closeOverlay, false);
     closeBtn.addEventListener('touchend', closeOverlay, {passive:false});
