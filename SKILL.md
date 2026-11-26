@@ -891,7 +891,7 @@ Ogni dato deve riportare:
 
 Non usare un dato vecchio facendolo sembrare corrente.
 
-I dati periodici della dashboard non sono notizie editoriali e possono essere più vecchi di 8 ore se sono gli ultimi dati ufficiali disponibili, purché siano chiaramente datati.
+I dati periodici della dashboard non sono notizie editoriali e possono essere più vecchi di 12 ore se sono gli ultimi dati ufficiali disponibili, purché siano chiaramente datati.
 
 ---
 
@@ -1639,15 +1639,18 @@ La nuova edizione deve quindi essere una vera rassegna aggiornata del giorno, no
 
 ---
 
-# 47. FRESCHEZZA ASSOLUTA — SOLO NOTIZIE DELLE ULTIME 8 ORE
+# 47. FRESCHEZZA ASSOLUTA — SOLO NOTIZIE DELLE ULTIME 12 ORE
 Regola vincolante e permanente dal 5 ottobre 2026.
 
-- Ogni edizione quotidiana de **Il Contribuente** deve contenere **SOLO notizie pubblicate o aggiornate nelle ultime 8 ore** rispetto all’orario reale di preparazione dell’edizione.
+- Ogni edizione quotidiana de **Il Contribuente** deve contenere **SOLO notizie pubblicate o aggiornate nelle ultime 12 ore** (MASSIMO 12 ore: Mario, 26/11/2026, sostituisce le 8 ore) rispetto all’orario reale di preparazione dell’edizione.
 - La regola vale per **tutte le sezioni e tutti gli articoli**, senza eccezioni.
-- Un dossier ancora aperto, una notizia importante o un fatto del giorno precedente **non giustificano** l’inserimento se l’ultimo aggiornamento verificabile supera le 8 ore.
-- Non basta che una pagina sia stata ripubblicata o che riporti una data recente: deve esistere un **aggiornamento giornalistico sostanziale e verificabile** entro la finestra delle 8 ore.
+- Un dossier ancora aperto, una notizia importante o un fatto del giorno precedente **non giustificano** l’inserimento se l’ultimo aggiornamento verificabile supera le 12 ore.
+- Non basta che una pagina sia stata ripubblicata o che riporti una data recente: deve esistere un **aggiornamento giornalistico sostanziale e verificabile** entro la finestra delle 12 ore.
 - Prima della consegna dell’HTML deve essere eseguito un **controllo finale articolo per articolo** su data e ora delle fonti.
-- Qualsiasi articolo fuori dalla finestra delle 8 ore deve essere **eliminato e sostituito** con una notizia più fresca e verificata.
+- Qualsiasi articolo fuori dalla finestra delle 12 ore deve essere **eliminato e sostituito** con una notizia più fresca e verificata.
+- La regola vale per TUTTI gli articoli, compresi Primo piano e Confronto con le sue 3 prospettive (Mario, 26/11/2026).
+- Ogni fonte nel blocco `.source` riporta la sua data (es. «Ansa · 26/11»), così l'età di ogni articolo si vede subito.
+- L'edizione NON si blocca MAI per questa regola (Mario, 26/11/2026): gli articoli fuori dalle 12 ore si sostituiscono durante la preparazione, ma la rassegna va sempre pubblicata.
 - Non utilizzare articoli vecchi come riempitivo per mantenere il numero previsto di card. Se non esiste una notizia sufficientemente fresca e verificabile, cercare ulteriormente nel bacino permanente delle fonti.
 - L’utente non deve dover richiedere ogni mattina la sostituzione di notizie vecchie: questo controllo è parte obbligatoria della produzione quotidiana.
 
