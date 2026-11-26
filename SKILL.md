@@ -93,6 +93,7 @@ Prima di costruire l'edizione quotidiana:
    - `.article-image`;
    - la logica di layout dinamico già prevista dal template;
    - l'overlay "Un modo diverso di leggere le notizie";
+     (dal 26/11/2026 la finestra compare alla prima interazione del lettore — scorrimento, tocco, tasto — e non all'apertura, così Google legge subito le notizie: lo script `intro-overlay-wait` va copiato identico, Mario 26/11/2026);
    - il blocco `.footer-legal`;
    - gli script permanenti del template.
 5. Se il template manca o è chiaramente incompleto, NON inventare una nuova struttura HTML.
@@ -266,6 +267,9 @@ REGOLA VINCOLANTE (Mario, 20/10/2026, sostituisce la regola del 20/9/2026 sui 3-
 - In TUTTA la rassegna (`index.html`: Confronto con le 3 prospettive, Dall'estero, Italia, Disagio città, Europa, Mondo, Finanza, Benessere, Tecnologia, IA, Immigrazione Italia) si usano SOLO fotografie libere: pubblico dominio, CC0, CC BY, CC BY-SA, da **Wikimedia Commons**.
 - VIETATO: og:image dei giornali, foto di agenzie (Ansa, Reuters, AP, AFP, Getty, LaPresse…), licenze NC/ND, "fair use", immagini IA.
 - Inserimento: `src="https://commons.wikimedia.org/wiki/Special:FilePath/<nome file codificato>?width=1280"` con `referrerpolicy="no-referrer"`, una per card, tutte diverse.
+- AGGIORNAMENTO (Mario, 26/11/2026, prevale sulla riga sopra per `index.html` e `template.html`): Google non può aprire gli indirizzi «Special:FilePath» (vietati dal robots.txt di Wikimedia), quindi le foto non risultano a Google. Nell'index si usa l'indirizzo diretto di upload.wikimedia.org con la riserva automatica sul vecchio indirizzo:
+  `src="https://upload.wikimedia.org/wikipedia/commons/thumb/<h[0]>/<h[0:2]>/<NOME>/1280px-<NOME>" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/<NOME>?width=1280'"`
+  dove `<NOME>` è il nome del file con gli spazi sostituiti da `_` e codificato per URL (`urllib.parse.quote(nome, safe="(),-_.")`, apostrofo compreso come %27), e `h = hashlib.md5(nome_con_underscore.encode('utf-8')).hexdigest()`. Solo per jpg, jpeg, png, gif, webp; per altri formati resta Special:FilePath. Il link «Foto:» alla pagina File: di Commons resta invariato. Mai togliere l'`onerror`: se l'indirizzo diretto non carica, il browser usa da solo quello vecchio.
 - Attribuzione obbligatoria nel blocco `.source` di ogni card, subito prima di «Edizione GG/MM/AAAA», con AUTORE e LICENZA VERIFICATI scritti per esteso (dal 27/10/2026, vedi sezione 57): `Foto: <a href="https://commons.wikimedia.org/wiki/File:<nome>" rel="noopener noreferrer" target="_blank">Autore, CC BY-SA 4.0 — Wikimedia Commons</a> · ` (per il pubblico dominio: «Pubblico dominio — Wikimedia Commons»). La dicitura generica «Wikimedia Commons (autore e licenza)» NON è più ammessa.
 - La foto può essere illustrativa (la persona protagonista, il luogo, l'istituzione, l'oggetto del tema) se non esiste una foto libera dell'evento. Mai foto fuori tema; niente loghi, mappe, stemmi, bandiere, SVG.
 - Metodo: WebSearch con `allowed_domains: ["commons.wikimedia.org"]`; usare solo nomi file usciti dai risultati, copiati esattamente.
