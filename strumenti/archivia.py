@@ -18,7 +18,7 @@ Layout, CSS e struttura dell'edizione restano identici.
 import html, os, re, sys
 
 N_EDIZIONI = 30          # quante edizioni tenere online (deciso da Mario, 17/11/2026)
-BASE = "https://ilcontribuente.redazioneit.workers.dev/"
+BASE = "https://ilcontribuente.com/"
 MARCATORE = "<!-- ic-archivio -->"
 MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
         "agosto", "settembre", "ottobre", "novembre", "dicembre"]
@@ -151,7 +151,7 @@ def aggiorna_archivio(radice, eds):
         r = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         s = s.replace("</head>",
                       '<!-- SEO: canonical e robots, non rimuovere (Mario, 23/11/2026) -->\n'
-                      '<link rel="canonical" href="https://ilcontribuente.redazioneit.workers.dev/archivio.html">\n'
+                      '<link rel="canonical" href="https://ilcontribuente.com/archivio.html">\n'
                       f'<meta name="robots" content="{r}">\n<meta name="googlebot" content="{r}">\n</head>', 1)
     open(p, "w", encoding="utf-8").write(s)
 

@@ -7,8 +7,9 @@ description: "Rassegna stampa giornaliera che confronta fonti giornalistiche ita
 # 1. CONTROLLO SEO E INDICIZZAZIONE — PRIMA DI TUTTO
 Prima di qualsiasi aggiornamento editoriale dell’edizione quotidiana, verificare SEMPRE che la homepage mantenga invariati questi elementi:
 
-- **URL della homepage:** `https://ilcontribuente.redazioneit.workers.dev/`
-- **Canonical:** `https://ilcontribuente.redazioneit.workers.dev/`
+- **URL della homepage:** `https://ilcontribuente.com/`
+- **Canonical:** `https://ilcontribuente.com/`
+- **DOMINIO UFFICIALE (Mario, 27/11/2026):** il sito è su `https://ilcontribuente.com/` (dominio proprio, comprato su Cloudflare). Il vecchio indirizzo `ilcontribuente.redazioneit.workers.dev` NON va più usato in nessun file: canonical, og:url, JSON-LD, sitemap, robots.txt, link interni. Se lo trovi, sostituiscilo con `https://ilcontribuente.com`.
 - **Titolo SEO fisso:** `Il Contribuente — Rassegna stampa quotidiana`
 - lo stesso titolo fisso deve essere usato anche in `og:title` e `twitter:title`;
 - `robots` e `googlebot` devono restare configurati per consentire indicizzazione e scansione;
@@ -1838,7 +1839,7 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 - Collegamento fisso: nel riquadro delle card sotto l'indice (`.toc-dashboards`), PRIMA card prima di «Dati Immigrazione»: `<a class="toc-dashboard-card" href="#video-evidenza"><span class="toc-dashboard-tag">Video</span><span class="toc-dashboard-label">Video in evidenza</span></a>` (Mario, 10/11/2026). Copiarla identica ogni giorno.
 
 ## 60. GOOGLE ANALYTICS E BANNER COOKIE (Mario, 10/11/2026)
-- Google Analytics è attivo su TUTTE le pagine HTML del sito (index.html, template.html, settimana/, approfondimenti, spazioPartner/, redazione.html, archivio.html, rassegne/). ID di misurazione: `G-M2CGSNEM9B` (stream «ilcontribuente.redazioneit.workers.dev»).
+- Google Analytics è attivo su TUTTE le pagine HTML del sito (index.html, template.html, settimana/, approfondimenti, spazioPartner/, redazione.html, archivio.html, rassegne/). ID di misurazione: `G-M2CGSNEM9B` (stream «ilcontribuente.com»).
 - Il codice sta subito dopo `<head>`, nel blocco che inizia con il commento `<!-- Google tag: si attiva solo dopo il consenso (banner cookie) -->`. Contiene: il banner «Accetta / Rifiuta» (id `ic-cookie-banner`), il link «Cookie» in fondo alla pagina (id `ic-cookie-link`) e la funzione che carica `https://www.googletagmanager.com/gtag/js?id=G-M2CGSNEM9B` con `gtag('config','G-M2CGSNEM9B')` SOLO dopo «Accetta». La scelta è salvata nel browser (localStorage `ic_consenso_cookie` = `si`/`no`).
 - Regola GDPR: Analytics non deve MAI partire prima del consenso. Il blocco va copiato IDENTICO in ogni edizione e in ogni pagina nuova; non va tolto, spostato né modificato senza richiesta esplicita di Mario.
 - Ogni pagina nuova del sito deve avere lo stesso blocco subito dopo `<head>`.
@@ -1887,7 +1888,7 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 
 ## 66. CANONICAL E ROBOTS SU OGNI PAGINA — REGOLA UNICA E PERMANENTE (Mario, 23/11/2026)
 - OGNI pagina HTML del sito, presente e futura (prima pagina, edizioni archiviate, archivio, «I fatti della settimana», approfondimenti e sottopagine, glossario, redazione, Spazio partner con «Come funziona» e pagine sponsor), deve avere in `<head>`:
-  - UN SOLO `<link rel="canonical">` con il proprio indirizzo (prima pagina: `https://ilcontribuente.redazioneit.workers.dev/`; pagine sponsor: `…/spazioPartner/<nome>/`; edizioni: `…/rassegne/AAAA-MM-GG.html`);
+  - UN SOLO `<link rel="canonical">` con il proprio indirizzo (prima pagina: `https://ilcontribuente.com/`; pagine sponsor: `…/spazioPartner/<nome>/`; edizioni: `…/rassegne/AAAA-MM-GG.html`);
   - `<meta name="robots">` e `<meta name="googlebot">` con «index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1».
 - Una volta inserite, queste righe NON si toccano MAI PIÙ: nessuna attività (parte 1, parte 2, parte 3) le toglie o le modifica. Quando si aggiorna una pagina cambiano solo testi, dati, date e foto nel `<body>` (più meta description e date previste).
 - Ogni pagina nuova (nuovo sponsor, nuovo approfondimento, ecc.) nasce già con canonical e robots.
