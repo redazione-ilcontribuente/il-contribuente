@@ -411,7 +411,7 @@ Se ci sono soltanto 2 notizie solide:
 1. effettuare ulteriori ricerche;
 2. cercare altre fonti;
 3. cercare altri fatti realmente rilevanti nella finestra temporale;
-4. continuare a cercare finché la sezione è completa: la sezione esce SEMPRE con il numero previsto di articoli, mai con meno (Mario, 28/11/2026).
+4. solo dopo valutare se la sezione può essere mantenuta con meno contenuti.
 
 MAI:
 
@@ -1654,11 +1654,8 @@ Regola vincolante e permanente dal 5 ottobre 2026.
 - Prima della consegna dell’HTML deve essere eseguito un **controllo finale articolo per articolo** su data e ora delle fonti.
 - Qualsiasi articolo fuori dalla finestra delle 12 ore deve essere **eliminato e sostituito** con una notizia più fresca e verificata.
 - La regola vale per TUTTI gli articoli, compresi Primo piano e Confronto con le sue 3 prospettive (Mario, 26/11/2026).
-- Ogni fonte nel blocco `.source` riporta giorno E ORA (es. «Ansa · 27/11 18:40», Mario 28/11/2026), così l'età di ogni articolo si vede subito. Una fonte senza data, senza ora o con data incompleta (es. «11/2026») NON si usa.
+- Ogni fonte nel blocco `.source` riporta giorno E ORA (es. «Ansa · 27/11 18:40», Mario 28/11/2026), così l'età di ogni articolo si vede subito.
 - L'edizione NON si blocca MAI per questa regola (Mario, 26/11/2026): gli articoli fuori dalle 12 ore si sostituiscono durante la preparazione, ma la rassegna va sempre pubblicata.
-- REGOLA ASSOLUTA (Mario, 28/11/2026): una notizia con più di 12 ore NON si pubblica MAI, in nessuna sezione, Primo piano e Confronto compresi. «Pubblicare è la priorità» vuol dire pubblicare l'edizione, MAI una notizia vecchia. Se una notizia è vecchia si fanno altre ricerche (anche oltre il tetto di ricerche, anche su fonti straniere) finché se ne trova una fresca: ogni sezione si pubblica SEMPRE con il numero completo di articoli. Non esiste «un articolo in meno».
-- Primo piano: la notizia più importante DELLE ULTIME 12 ORE, con tutte le fonti delle ultime 12 ore. «Diversa dall'edizione precedente» non basta: deve essere anche delle ultime 12 ore.
-- Controllo finale obbligatorio prima del push: verificare giorno e ora di ogni fonte; ogni fonte o articolo oltre le 12 ore si sostituisce prima di pubblicare. Nel report «notizie oltre le 12 ore» deve essere sempre «nessuna».
 - Non utilizzare articoli vecchi come riempitivo per mantenere il numero previsto di card. Se non esiste una notizia sufficientemente fresca e verificabile, cercare ulteriormente nel bacino permanente delle fonti.
 - L’utente non deve dover richiedere ogni mattina la sostituzione di notizie vecchie: questo controllo è parte obbligatoria della produzione quotidiana.
 
@@ -1834,7 +1831,7 @@ Sezione fissa dell'index, approvata da Mario il 10/11/2026. Posizione: subito do
 - Sempre 4 riquadri, mai di più né di meno.
 - Video SOLO da YouTube. Nessun video caricato: solo link `https://www.youtube.com/watch?v=ID` e anteprima `https://i.ytimg.com/vi/ID/hqdefault.jpg`.
 - Canali: ANSA, Rai News, Sky TG24, La7 Attualità, Il Fatto Quotidiano, Fanpage, Euronews Italiano, BBC News, DW News, France 24, Al Jazeera English, CGTN, APT (Associated Press) e TV locali per le notizie della Basilicata/Sud. Mai 2 video dello stesso canale nello stesso giorno.
-- Ogni video è legato a una notizia del giorno nel quotidiano. Caricato nelle ultime 12-24 ore (massimo 24, Mario 28/11/2026).
+- Ogni video è legato a una notizia del giorno nel quotidiano. Caricato nelle ultime 12-24 ore, MAI oltre le 24 ore (Mario, 28/11/2026). Vale per tutti i video (Video in evidenza e Cronaca dalle città · I video).
 - Sui temi controversi (guerre, Gaza, Russia-Ucraina) alternare voci diverse.
 - Titolo scritto dalla redazione (non copiato dal canale), una frase breve. Fonte: «Fonte: NOME CANALE · YouTube».
 - L'ID del video deve venire da un risultato di ricerca reale (es. WebSearch «site:youtube.com …»). Mai inventare un ID. Se non si trova un video nuovo verificato, lasciare quello del giorno prima.
