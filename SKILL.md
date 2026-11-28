@@ -411,7 +411,7 @@ Se ci sono soltanto 2 notizie solide:
 1. effettuare ulteriori ricerche;
 2. cercare altre fonti;
 3. cercare altri fatti realmente rilevanti nella finestra temporale;
-4. solo dopo valutare se la sezione può essere mantenuta con meno contenuti.
+4. continuare a cercare finché la sezione è completa: la sezione esce SEMPRE con il numero previsto di articoli, mai con meno (Mario, 28/11/2026).
 
 MAI:
 
